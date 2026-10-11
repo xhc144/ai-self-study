@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+book/build/
+qa/render/
+.cache/
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+book/elegantbook-original-adapter.cls
+dist/*.bundle
+qa/style-check/

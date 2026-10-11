@@ -1,0 +1,26 @@
+ai-self-study license scope
+
+Original educational text in book/chapters, book/references.tex, README.md,
+docs/, research/, original experimental figures in book/generated/, and the
+original portions of the compiled PDF: Creative Commons Attribution 4.0
+International (CC BY 4.0), see licenses/CC-BY-4.0.txt.
+Attribution: ai-self-study contributors, repository ai-self-study.
+
+Original Python, Shell, and test code in experiments/, scripts/, and tests/:
+MIT License, see licenses/MIT.txt.
+
+Generated numerical data in results/ and original QA findings may be reused
+under CC BY 4.0. Attribution and a record of modifications help preserve
+scientific provenance.
+
+The fixed typesetting adapter embedded in book/main.tex was supplied through
+the user's explicitly requested math-latex-typesetting skill and is distributed
+in this deliverable under the user's source-delivery authorization. It is not
+the official ElegantBook class. Its original provider's rights are retained;
+this project does not independently assert that this inherited template is
+covered by the project's MIT or CC BY grant. See docs/third-party.md.
+
+External papers, course material, fonts, software dependencies, model weights
+and datasets retain their own licenses. This repository contains no third-party
+paper/book full text, downloaded model, copied course assignment, or bundled
+font. Linking to a source does not relicense it.

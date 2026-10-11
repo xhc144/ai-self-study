@@ -1,0 +1,42 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "device": "CPU",
+  "dtype": "float64",
+  "cpu_count": 5,
+  "seed": null,
+  "elapsed_seconds": 7.389006196000082,
+  "code_sha256": "59501a54f6b10d13763f988fee16e60d4a9cfc76aa0bf40db9e8d5767b8e6aeb",
+  "source_sha256": {
+    "attention_walkthrough.py": "796fd5c254e0a83686737ec577801beba181dde2e8a1eab2acb01b7d3b3ade56",
+    "micro_research.py": "7bd93ff031701003495aa1813f31d1b3b224ccc7b1c5cbc509351bf8aa184beb",
+    "run_all.py": "59501a54f6b10d13763f988fee16e60d4a9cfc76aa0bf40db9e8d5767b8e6aeb"
+  },
+  "executed_parameters": {
+    "micro_research": {
+      "design": null,
+      "seeds": null,
+      "steps": null,
+      "lr": null,
+      "width": null
+    }
+  },
+  "metrics_sha256": "ddaa16e4a9fe47fc18fb091c921c5a8a4db7a94e5c936295778b71e6194b8c4f",
+  "cli_arguments": {
+    "out": "results/micro_research",
+    "experiment": "micro_research",
+    "seed": 144,
+    "steps": null,
+    "lr": null,
+    "width": null,
+    "design": null,
+    "seeds": null
+  },
+  "thread_settings": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": null
+  }
+}

@@ -1,0 +1,141 @@
+\originalchapter{注意力与 Transformer 数学}\label{ch:attention}
+\originalsection{从固定特征到内容检索}
+一个 token 的含义依赖上下文. 句子中“它”需要选择前面某个实体, 固定线性混合无法按当前内容改变检索权重. 注意力把问题拆成三个对象: 当前位置提出查询, 上下文各位置提供键用于匹配, 同时提供值作为取回的信息. 键和值可以不同, 如数据库索引与记录内容并不是一回事.
+
+\begin{definition}
+令 $X\in\R^{T\times d}$ 包含 $T$ 个 token 的行向量表示. 设 $W_Q,W_K\in\R^{d\times d_k}$, $W_V\in\R^{d\times d_v}$. 定义
+\[
+Q=XW_Q,\quad K=XW_K,\quad V=XW_V,\quad
+S=QK^\top/\sqrt{d_k}+M,\quad A=\softmax_{\rm row}(S),\quad C=AV.
+\]
+$M\in\R^{T\times T}$ 是掩码, 输出 $C\in\R^{T\times d_v}$. Softmax 逐行作用.
+\end{definition}
+第 $i$ 行 $C_i=\sum_j A_{ij}V_j$ 是值向量的凸组合, 因为权重非负且行和为 1. 这说明注意力怎样聚合信息, 却不意味着 $A_{ij}$ 是因果重要性或语义解释. 后面还有线性映射、残差和其他层, 信息也可能通过不同位置路径传递.
+
+缩放因子 $1/\sqrt{d_k}$ 可以这样理解: 若查询和键各坐标独立、均值零、方差一, 并且两个向量独立, 点积的方差为 $d_k$. 除以 $\sqrt{d_k}$ 后方差为 1, 可减少 softmax 过早饱和. 实际训练后的坐标不必满足这些假设, 但这给出初始化时合理的尺度依据\cite{attention}.
+
+\begin{example}
+单个查询与两个键得到分数 $(0,\log3)$, 对应值为 $(2,0)$ 与 $(0,4)$. 求输出. 若只允许读取第一个位置又如何?
+\end{example}
+\begin{solution}
+权重为 $(1/4,3/4)$, 输出为 $(1/2,3)$. 若第二位置掩码为 $-\infty$, 它的指数为零, 第一位置权重为 1, 输出变为 $(2,0)$. 实现中须确保每一行至少有一个允许位置, 否则整行均为 $-\infty$ 会产生未定义归一化.
+\end{solution}
+
+\originalsection{因果性、位置与多头}
+自回归生成要求当前位置只能读取已出现的 token. 对下标 $i,j\in\{1,\ldots,T\}$, 因果掩码设 $M_{ij}=0$ 当 $j\le i$, 否则为 $-\infty$. 训练时输入当前位置 $x_i$ 的输出预测 $x_{i+1}$, 所以读自身不等于偷看目标. 若目标错位或未掩码, 训练损失会异常低, 实际生成却失效.
+
+没有位置表示、且没有掩码的自注意力具有排列等变性. 对置换矩阵 $\Pi$, $Q'=\Pi Q,K'=\Pi K,V'=\Pi V$, 所以 $S'=\Pi S\Pi^\top$, 逐行 softmax 给 $A'=\Pi A\Pi^\top$, 最终 $C'=\Pi C$. 因此单凭 token 内容无法区分交换顺序. 令 $E:\{1,\ldots,V_{\rm vocab}\}\to\R^d$ 为可学习的 token 查表映射, $V_{\rm vocab}$ 为词表大小, 等价于从词表矩阵取对应行; $P_i\in\R^d$ 为位置向量. 表示 $X_i=E(x_i)+P_i$ 提供顺序信息. 正弦位置编码、可学习位置向量、旋转位置编码都是不同设计; 旋转方法让点积包含相对位置的旋转关系, 并不自动保证无限长度外推.
+
+多头注意力用多组 $W_Q,W_K,W_V$ 各自计算 $C^{(h)}$, 然后拼接成 $[C^{(1)}|\cdots|C^{(H)}]W_O$. 多头允许不同子空间有不同匹配, 但一个头未必对应一个固定语言学功能. 标准 Transformer 块还包含逐 token 前馈层、残差与归一化. 编码器可双向读取输入; 解码器的自注意力有因果掩码; 原始编码器--解码器架构还含读取编码器输出的交叉注意力. 现代常见语言模型只使用解码器\cite{attention,d2l}.
+
+\originalsection{注意力的完整反向传播}
+设损失对 $C$ 的梯度为 $G_C$. 对矩阵梯度统一用 Frobenius 内积. 由 $dC=dA\,V+A\,dV$ 得
+\[
+G_A=G_CV^\top,\qquad G_V=A^\top G_C.
+\]
+对每行 softmax, 第 3 章的 Jacobian 给出
+\[
+(G_S)_{ij}=A_{ij}\left((G_A)_{ij}-\sum_l A_{il}(G_A)_{il}\right).
+\]
+掩码禁止位置的权重为零, 因而其分数梯度为零; 掩码本身是常量, 不更新. 再由 $S=QK^\top/\sqrt{d_k}+M$ 得
+\[
+G_Q=G_SK/\sqrt{d_k},\qquad G_K=G_S^\top Q/\sqrt{d_k}.
+\]
+三条输入路径相加, 得
+\begin{align*}
+G_{W_Q}&=X^\top G_Q,&G_{W_K}&=X^\top G_K,&G_{W_V}&=X^\top G_V,\\
+G_X&=G_QW_Q^\top+G_KW_K^\top+G_VW_V^\top.
+\end{align*}
+若注意力后有输出投影、残差或前馈层, 再按第 6 章规则组合. 本项目 \texttt{TinyDecoder} 手写了这些式子, 对每个参数组抽样核对有限差分. 查看代码时要先对应数学对象, 再看批次轴; 不应把张量维度的交换理解成另一种数学理论.
+
+\originalsection{两位置的一次完整更新}\label{sec:attention-numeric}
+公式链容易在转置处失去直觉. 用 $B=1,T=2,D=1$ 把所有量压成可手算的矩阵, 输入 $X=(1,2)^\top$, 三个投影权重均为标量 1. 这里只含因果注意力, 没有前馈层、残差或输出分类器. 标量损失是末位置输出与目标 $1.5$ 的平方误差 $\ell=(C_2-1.5)^2/2$, 第一位置不直接计入损失.
+
+前向有 $Q=K=V=(1,2)^\top$, 未掩码分数为 $\left(\begin{smallmatrix}1&2\\2&4\end{smallmatrix}\right)$. 掩码删除第一行的第二个候选. 记 $a=1/(1+e^2)\approx0.119203$, 则
+\[
+A=\begin{pmatrix}1&0\\a&1-a\end{pmatrix},\qquad
+C=\begin{pmatrix}1\\2-a\end{pmatrix},\qquad
+r=C_2-1.5\approx0.380797.
+\]
+由 $d\ell=r\,dC_2$ 得 $G_C=(0,r)^\top$. 再回到乘法与 softmax:
+\[
+G_A=\begin{pmatrix}0&0\\r&2r\end{pmatrix},\quad
+G_V=\begin{pmatrix}ar\\(1-a)r\end{pmatrix},\quad
+G_S=\begin{pmatrix}0&0\\-a(1-a)r&a(1-a)r\end{pmatrix}.
+\]
+第一行虽影响第一位置输出, 该输出没有下游损失, 所以它的梯度全为零. 第二行的两个分数梯度和为零, 符合 softmax 对整体平移不敏感. 令 $u=a(1-a)r\approx0.0399813$, 有 $G_Q=G_SK=(0,u)^\top$, $G_K=G_S^\top Q=(-2u,2u)^\top$. 所以
+\[
+G_{W_Q}=X^\top G_Q=2u,\qquad G_{W_K}=X^\top G_K=2u,
+\qquad G_{W_V}=X^\top G_V=(2-a)r.
+\]
+三个数分别约为 $0.0799625,0.0799625,0.716202$. 即使输入不更新, 它对上游模型的梯度仍可算出: $G_X=G_Q+G_K+G_V\approx(-0.0345704,0.455349)^\top$. 若 $X$ 本身由查表产生, 这个量才能继续传回词表与位置参数.
+
+取学习率 $0.1$, 同时用当前梯度更新三个投影, 而固定输入 $X$. 所有更新必须使用同一次前向得到的旧权重与梯度, 不能更新一个权重后再用新值计算另一权重的梯度. 更新与重新前向的实际数值如下; \texttt{attention\_walkthrough} 还输出每个中间矩阵, 并对全部三个参数作中心差分.
+\input{generated/v02-attention.tex}
+
+\originalsection{公式与批量实现}\label{sec:attention-code}
+第 \ref{sec:tensor} 节已解释查表、广播与展平. 在 \texttt{TinyDecoder} 中, \texttt{q,k,v} 都是 $(B,T,D)$, 每个批次独立做注意力. 分数的定义是 $s_{bij}=\sum_dq_{bid}k_{bjd}/\sqrt D$: 一边保留查询位置 $i$, 另一边保留键位置 $j$, 只收缩特征轴. 因而要把 \texttt{k} 的最后两轴交换成 $(B,D,T)$.
+
+\texttt{k.transpose(0,2,1)} 表示新数组的第 $(b,d,t)$ 项是原数组的第 $(b,t,d)$ 项; 批次轴仍在最前. 三维数组的 \texttt{k.T} 会反转全部轴, 得 $(D,T,B)$, 它不是所需的逐批转置. NumPy 的 \texttt{@} 对最后两个轴执行矩阵乘法, 对前面的批次轴匹配或广播. 如下代码逐行对应数学对象:
+\begin{verbatim}
+x = E[ids] + P[:T]             # (B,T,D)
+q, k, v = (x @ W for W in (WQ, WK, WV))
+s = q @ k.transpose(0,2,1) / np.sqrt(D)
+s = np.where(mask, s, -np.inf) # mask: (T,T)
+a = softmax(s)                 # (B,T,T), last axis
+c = a @ v                      # (B,T,D)
+h = x + c @ WO                 # attention residual
+f = np.tanh(h @ WF + bF)        # (B,T,2D)
+z = h + f @ WG + bG            # FFN residual
+logits = z @ WU + bU           # (B,T,V0)
+\end{verbatim}
+这里 \texttt{mask} 的形状 $(T,T)$ 沿 $B$ 广播, 每行至少保留自身. \texttt{softmax} 沿最后一轴归一化, 所以固定查询位置与批次后, 在允许的键位置之间分配权重. 表中的代码变量 \texttt{WQ} 等在实际程序中存于 \texttt{p['Q']} 等参数字典, \texttt{dl} 是平均交叉熵对 \texttt{logits} 的梯度.
+
+反向的对象、形状与关键代码可以从输出逐级核对:
+\begin{center}
+\begin{tabular}{lll}\toprule
+对象 & 形状 & \texttt{loss\_grad} 中的运算 \\\midrule
+$G_U$ & $D\times V_0$ & \texttt{mm(z,dl)} \\
+$G_z$ & $B\times T\times D$ & \texttt{dl@p['U'].T} \\
+$G_F$ & $D\times 2D$ & \texttt{mm(h,df)} \\
+$G_O$ & $D\times D$ & \texttt{mm(c,dh)} \\
+$G_A$ & $B\times T\times T$ & \texttt{dc@v.transpose(0,2,1)} \\
+$G_V$ & $B\times T\times D$ & \texttt{a.transpose(0,2,1)@dc} \\
+$G_Q$ & $B\times T\times D$ & \texttt{ds@k/np.sqrt(self.d)} \\
+$G_{W_Q}$ & $D\times D$ & \texttt{mm(x,dq)} \\
+$G_P$ & $T\times D$ & \texttt{dx.sum(0)} \\\bottomrule
+\end{tabular}
+\end{center}
+矩阵参数的 $G_U$ 指输出投影权重, 与上节单头 $G_V$ 的值激活梯度不要混淆. \texttt{df} 已包含 $\tanh$ 的导数, \texttt{dh} 已把 $z=h+fW_G+b_G$ 的直接路径和前馈路径相加. 对 $h=x+CW_O$ 又有一条直接路径, 所以
+\[
+G_x=G_h+G_QW_Q^\top+G_KW_K^\top+G_VW_V^\top.
+\]
+这一行的 $G_h$ 不能漏掉. 矩阵梯度按批次与位置求和, 激活梯度则保留它们; 只记形状而不记共享关系仍会写错.
+
+\begin{exercise}
+运行 \texttt{residual\_debug} 实验. 它只在反向中漏掉上述 $G_h$ 项, 前向完全不变. 先预测哪些参数组的有限差分会失败, 再根据输出定位, 最后给出修复. 为什么这比只看损失是否下降更有诊断力?
+\end{exercise}
+\begin{solution}
+故障在回到输入 $x$ 时发生, 因此继续依赖 $G_x$ 的词表 $E$ 与位置表 $P$ 会失败; 此前已算出的注意力投影、前馈层与输出层参数梯度仍正确. 修复是把 \texttt{dh} 加回 \texttt{dx}. 程序用 $B=2,T=3,D=4$, 词表 6, 种子 19, 对 206 个参数坐标全部检查. 本次结果如下:
+\input{generated/v02-residual.tex}
+漏梯度仍可能产生下降方向, 所以损失变小不能确认反向实现. 有限差分按参数组定位可将问题缩到共享输入的上游, 再通过计算图确定漏掉的恒等路径. 它仍是此输入与初始化上的数值诊断, 不是对所有情形的正确性证明.
+\end{solution}
+
+\originalsection{计算代价与实验检查}
+构造 $QK^\top$ 约需 $O(T^2d_k)$ 运算, 注意力矩阵的显式存储为 $O(T^2)$. 长序列因此很昂贵. FlashAttention 的主要思想是分块计算并减少高带宽内存与片上存储之间的数据搬运, 在不改变精确注意力目标的情况下避免把完整矩阵写回. 它改善实际内存与速度, 不把精确稠密注意力的全部算术复杂度一般降为线性\cite{flash}.
+
+程序通过修改未来 token, 检查之前输出 logits 是否保持不变. 在单层网络中由三角掩码可直接证明; 多层时逐层归纳也成立, 前提是所有其他操作均逐 token 或保持同样因果性. 这个检查能发现某类未来泄漏, 不能发现错误标签划分等全部数据问题.
+
+\begin{exercise}
+$X$ 有形状 $12\times32$, $W_Q,W_K$ 有形状 $32\times8$, $W_V$ 有形状 $32\times16$. 求所有中间形状及 $G_Q,G_V$ 的形状.
+\end{exercise}
+\begin{solution}
+$Q,K$ 为 $12\times8$, $V$ 为 $12\times16$, $S,A$ 为 $12\times12$, $C$ 为 $12\times16$. 相应梯度与被求导对象同形, 所以 $G_Q$ 为 $12\times8$, $G_V$ 为 $12\times16$. $G_CV^\top$ 的乘法恰为 $(12\times16)(16\times12)$.
+\end{solution}
+\begin{exercise}
+为什么“最大注意力权重所在位置”不能单独证明该位置导致了预测? 设计一个必要的补充检验.
+\end{exercise}
+\begin{solution}
+值向量可能很小, 输出投影可能取消该方向, 其他路径还可能提供同样信息. 可以保持其他输入不变, 替换或移除该位置, 再测量目标 logit 或概率变化; 也可对中间激活作受控替换. 这种干预仍需控制分布外输入和其他变量改变, 因而不是一次替换就得到完整解释.
+\end{solution}
+\label{ch:end:07}

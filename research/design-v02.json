@@ -1,0 +1,66 @@
+{
+  "release": "0.2",
+  "frozen_at_utc": "2026-10-11T17:11:18.702946+00:00",
+  "question": "Finite eight-document grammar: speaker retrieval or nearest-animal shortcut under fixed combination holdouts?",
+  "seeds": [
+    144,
+    145,
+    146,
+    147,
+    148
+  ],
+  "splits": {
+    "mismatch_blue_red": [
+      3,
+      4
+    ],
+    "mismatch_red_blue": [
+      1,
+      6
+    ],
+    "match_red_blue": [
+      0,
+      7
+    ]
+  },
+  "steps": 1400,
+  "lr": 0.01,
+  "width": 16,
+  "interventions": [
+    "flip_distractor_keep_sound",
+    "flip_speaker_change_sound"
+  ],
+  "baselines": [
+    "nearest_animal_rule",
+    "training_sound_frequency_after_says"
+  ],
+  "primary_metrics": [
+    "sound_accuracy",
+    "all_test_sounds_correct",
+    "full_token_nll",
+    "distractor_accuracy",
+    "speaker_flip_accuracy",
+    "original_sound_probability_change"
+  ],
+  "selection_rule": "All 15 runs are reported; no tuning on holdouts or rerunning until good. Default task/data/optimizer reuse v0.1.",
+  "uncertainty_unit": "Training initialization within each fixed split; documents, interventions, overlapping splits are not independent replicates.",
+  "uncertainty_method": "Exact equal-tail binomial inversion on all-two-test-sounds-correct indicators across five initializations, conditional on independent identically distributed initialization assumption. No bootstrap.",
+  "predictions": [
+    "Subject-flip should reverse the predicted sound; other-flip should preserve it if speaker-dependent rule is stable.",
+    "Nearest-animal rule fails on two mismatch splits and succeeds on match split; last-word frequency achieves 1/2."
+  ],
+  "limits": [
+    "All interventions return to training combinations in all six test documents; intervention accuracy alone cannot identify a learned mechanism.",
+    "No natural-language generalization; five seeds and three preselected overlapping splits do not estimate arbitrary split robustness."
+  ],
+  "clarified_at_utc": "2026-10-11T17:16:21.046679+00:00",
+  "previous_design_sha256": "e29cd5508d5b76b8ef4a769bbab4d5385aef54642c2652c47ac2bed182386c5e",
+  "initialization": "Each (seed, split) creates a fresh model and zero Adam states; the same seed gives identical initial weights across splits. Record initial parameter SHA256 before training.",
+  "confidence": {
+    "level": 0.95,
+    "alpha": 0.05,
+    "scope": "Pointwise within each fixed split for the all-two-test-sounds-correct run indicator only; no simultaneous coverage, no interval for mean accuracy, NLL, or interventions."
+  },
+  "probability_change_definition": "Delta = p_patch(original_sound) - p_original(original_sound), separately for speaker and distractor flips; store each document prediction.",
+  "intervention_evaluation": "Sound after says using input positions 0..5; speaker flip recalculates true sound and full patched document. All six patched test documents for either intervention belong to their corresponding training split. Baselines predict sound only; no full-token NLL comparison."
+}

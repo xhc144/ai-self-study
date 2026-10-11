@@ -1,0 +1,97 @@
+\originalchapter{微分、梯度与优化}\label{ch:opt}
+\originalsection{导数作为局部线性变化}
+模型包含许多参数, 调整它们需要知道每个微小变化怎样影响损失. 单变量导数给出曲线斜率; 多变量导数则是一个线性映射. 对 $f:\R^d\to\R$, 若
+\[
+f(w+h)=f(w)+g^\top h+o(\norm{h}),
+\]
+则向量 $g$ 是梯度 $\nabla f(w)$. 符号 $o(\norm{h})$ 表示余项除以 $\norm{h}$ 在 $h\to0$ 时趋于零. 因而梯度并非“输出的变化”, 而是把参数增量映成一阶输出变化的系数.
+
+若固定增量长度为 $\epsilon$, 由 Cauchy--Schwarz 有 $g^\top h\ge-\epsilon\norm{g}$, 等号在 $h=-\epsilon g/\norm{g}$ 时成立. 梯度不为零时, 负梯度是欧氏长度约束下最快的局部下降方向. 这里强调局部: 走得太远后, 一阶近似可能失效.
+
+\begin{definition}
+若 $F:\R^d\to\R^m$ 可微, Jacobian $J_F$ 的元素为 $(J_F)_{ij}=\partial F_i/\partial w_j$. 若 $f=g\circ F$, 则链式法则给出 $\nabla_w f=J_F(w)^\top\nabla g(F(w))$.
+\end{definition}
+理由是先用 $F(w+h)=F(w)+J_Fh+o(\norm h)$, 再把这个输出增量代入 $g$ 的线性近似, 一次项变成 $\nabla g^\top J_Fh$. 这也是网络反向传播需要转置的原因: 参数方向的变化向前传播, 损失的系数向后传播.
+
+\originalsection{矩阵梯度与 Frobenius 内积}\label{sec:frobenius}
+参数往往是一张矩阵, 不能把矩阵变化直接与一个标量损失相等. 所需桥梁是与向量点积同样的“逐坐标系数乘增量, 再求和”. 对同形矩阵 $U,V\in\R^{m\times n}$, 定义 Frobenius 内积
+\[
+\langle U,V\rangle_F=\sum_{i=1}^m\sum_{j=1}^n U_{ij}V_{ij}
+=\operatorname{tr}(U^\top V),\qquad \norm U_F=\sqrt{\langle U,U\rangle_F}.
+\]
+$\operatorname{tr}$ 是方阵对角元素之和; $(U^\top V)_{jj}=\sum_iU_{ij}V_{ij}$, 所以两个定义一致. 对矩阵参数 $W$, 梯度 $G_W$ 的定义是
+\[
+\ell(W+H)=\ell(W)+\langle G_W,H\rangle_F+o(\norm H_F).
+\]
+令 $H$ 只有第 $(i,j)$ 个元素非零, 即可确定 $(G_W)_{ij}=\partial\ell/\partial W_{ij}$. 因而梯度与 $W$ 同形且唯一. 它并不是整个矩阵函数的 Jacobian; 已给定标量损失后, 才把下游变化的系数收集成这个矩阵.
+
+例如行批量线性层 $Y=XW$, $X\in\R^{B\times d}$, $W\in\R^{d\times r}$. 已知 $G_Y\in\R^{B\times r}$, 展开一次微分为
+\begin{align*}
+d\ell&=\sum_{b,j}(G_Y)_{bj}\,dY_{bj}\\
+&=\sum_{b,j,i}(G_Y)_{bj}\bigl(dX_{bi}W_{ij}+X_{bi}dW_{ij}\bigr)\\
+&=\sum_{b,i}\left(\sum_j(G_Y)_{bj}W_{ij}\right)dX_{bi}
+ +\sum_{i,j}\left(\sum_bX_{bi}(G_Y)_{bj}\right)dW_{ij}.
+\end{align*}
+比较每个独立增量的系数便得 $G_X=G_YW^\top$ 与 $G_W=X^\top G_Y$. 转置由指标收缩决定, 而非凭记忆摆放. 若加上各行共享的偏置 $b\in\R^r$, 则 $dY_{bj}$ 含同一个 $db_j$, 所以 $(G_b)_j=\sum_b(G_Y)_{bj}$. 前向复制到多少条路径, 反向就累加多少条路径.
+
+\begin{example}
+取 $X=(1,2)$, $W=(3,4)^\top$, $\ell=(XW-10)^2/2$. 求 $G_W,G_X$.
+\end{example}
+\begin{solution}
+$Y=11$, $G_Y=Y-10=1$. 所以 $G_W=(1,2)^\top$, $G_X=(3,4)$. 独立扰动 $dW=(a,b)^\top$ 时损失一次变化为 $a+2b=\langle G_W,dW\rangle_F$. 这与直接展开 $\ell=(w_1+2w_2-10)^2/2$ 求偏导一致.
+\end{solution}
+
+\originalsection{步长与二次目标}
+对第 2 章的岭目标, 写 $H=X^\top X/n+\lambda I$, $b=X^\top y/n$, 则 $\nabla J(w)=Hw-b$. 假设 $H$ 正定, 最优点满足 $Hw_*=b$. 梯度下降 $w_{t+1}=w_t-\eta(Hw_t-b)$ 的误差 $e_t=w_t-w_*$ 满足 $e_{t+1}=(I-\eta H)e_t$.
+
+\begin{proposition}
+设 $H$ 的特征值满足 $0<\mu\le\lambda_j\le L$. 若 $0<\eta<2/L$, 则二次目标的梯度下降收敛到唯一最优点. 取 $\eta=1/L$ 时, $\norm{e_t}\le(1-\mu/L)^t\norm{e_0}$.
+\end{proposition}
+\begin{proof}
+用正交特征基令 $a_t=U^\top e_t$, 得每个分量 $a_{t+1,j}=(1-\eta\lambda_j)a_{t,j}$. 给定步长范围使 $|1-\eta\lambda_j|<1$, 因而各分量趋于零. 当 $\eta=1/L$ 时, 每个因子落在 $[0,1-\mu/L]$ 内, 逐分量平方求和再开方即得误差界.
+\end{proof}
+当 $\mu/L$ 很小时, 收敛很慢, 这与病态矩阵的方向差异相同. 超过 $2/L$ 时, 最大特征方向会放大误差. 在一般非凸网络中 $L$ 往往未知且随区域变化, 不能直接把这个二次结论当作全局保证.
+
+定积分 $\int_a^b g(t)\,dt$ 可以理解为把区间切成许多小段, 对每段“函数值乘小段宽度”求和, 再在分割变细时取极限. 对连续函数该极限存在. 本书调用一元微积分基本定理: 若 $G$ 在闭区间上连续可微, 则 $G(b)-G(a)=\int_a^bG'(t)\,dt$. 它把局部变化率累积成总变化, 是接下来的下降估计和第 12 章积分归因所需工具. 此处不重证实数极限与积分存在理论; 不熟悉者可先用 $G(t)=t^2$ 检验: 从 0 到 1 的变化为 $\int_0^1 2t\,dt=1$.
+
+对一般可微函数, 若梯度满足 $\norm{\nabla f(u)-\nabla f(v)}\le L\norm{u-v}$, 则沿线段积分得到
+\[
+f(w+h)\le f(w)+\nabla f(w)^\top h+\frac L2\norm h^2.
+\]
+具体地, 写差值为 $\int_0^1\nabla f(w+th)^\top h\,dt$, 减去 $\nabla f(w)^\top h$, 再用梯度差上界 $Lt\norm h^2$, 积分便得 $L\norm h^2/2$. 代入 $h=-\eta\nabla f(w)$, 当 $0<\eta<2/L$ 时得到下降. 它保证一次更新下降, 仍不保证全局最优.
+
+\originalsection{随机梯度与 Adam}
+若目标为 $J(\theta)=n^{-1}\sum_i\ell_i(\theta)$, 均匀抽取样本得到的 $g=\nabla\ell_I(\theta)$ 满足 $\E[g\mid\theta]=\nabla J(\theta)$. 抽取 $B$ 个独立样本后平均, 在方差有限时每个分量的方差除以 $B$. 若不放回抽样则还有有限总体修正. 随机梯度的噪声与抽样有关, 并不自动是有利的探索机制.
+
+\Needspace{9\baselineskip}
+动量把过去梯度的指数平均用于更新. Adam 同时维护一阶与逐坐标二阶平均\cite{adam}. 取 $\beta_1,\beta_2\in[0,1)$, $\epsilon>0$, $m_0=v_0=0$; $\odot$ 表示对应坐标相乘:
+\[\begin{aligned}
+m_t&=\beta_1m_{t-1}+(1-\beta_1)g_t,\\
+v_t&=\beta_2v_{t-1}+(1-\beta_2)(g_t\odot g_t),\\
+\hat m_t&=m_t/(1-\beta_1^t),\qquad \hat v_t=v_t/(1-\beta_2^t),\\
+\theta_{t+1}&=\theta_t-\eta\hat m_t/(\sqrt{\hat v_t}+\epsilon).
+\end{aligned}\]
+平方、开方与除法逐坐标进行. 若梯度的期望固定, 零初始化使 $m_t$ 的期望为 $(1-\beta_1^t)\E[g]$, 因而分母作启动偏差修正. 二阶量有同样解释. 它不是 Hessian 逆, 也不是任意非凸问题全局收敛的证据. 权重衰减是否与梯度中的 $L^2$ 惩罚等价, 取决于优化器; 自适应逐坐标缩放下二者通常不同.
+
+\originalsection{梯度检查与练习}
+对参数坐标 $j$, 中心有限差分为 $[f(\theta+he_j)-f(\theta-he_j)]/(2h)$. 足够光滑时截断误差为 $O(h^2)$, 但极小 $h$ 会放大浮点消减. 所以使用双精度与中等的 $h=10^{-5}$, 再检查多个坐标. 有限差分是实现诊断, 不是对所有参数、输入与边界的证明. ReLU 的零点不可微, 应避开该点或明确采用的次梯度.
+
+本项目 MLP 与注意力网络都手写梯度, 在训练前比较有限差分. 误差指标定义为
+\[
+e=\frac{|g_{\rm num}-g_{\rm ana}|}{\max(1,|g_{\rm num}|,|g_{\rm ana}|)},
+\]
+其中分母让较小梯度按绝对误差衡量. 程序若超过阈值会停止, 不让错误的梯度继续生成“研究结果”.
+
+\begin{exercise}
+对 $f(w)=5w^2$, 梯度下降的哪些常数步长能使任意初值收敛到零? 步长恰为端点时发生什么?
+\end{exercise}
+\begin{solution}
+更新为 $w_{t+1}=(1-10\eta)w_t$, 所以要求 $|1-10\eta|<1$, 即 $0<\eta<0.2$. $\eta=0$ 不更新; $\eta=0.2$ 在非零初值下正负振荡, 并不收敛. 零初值是平凡例外.
+\end{solution}
+\begin{exercise}
+设 $F(w)=Aw+b$, 下游损失对 $F$ 的梯度是 $u$. 推导对 $w,A,b$ 的梯度, 核对它们的维度.
+\end{exercise}
+\begin{solution}
+微分为 $d\ell=u^\top(dA\,w+A\,dw+db)$. 所以 $\nabla_w\ell=A^\top u\in\R^d$, $\nabla_A\ell=uw^\top\in\R^{m\times d}$, $\nabla_b\ell=u\in\R^m$. 对矩阵参数, 梯度由 Frobenius 内积 $\sum_{ij}(\nabla_A\ell)_{ij}dA_{ij}$ 定义.
+\end{solution}
+\label{ch:end:04}

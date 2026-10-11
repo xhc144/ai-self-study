@@ -1,0 +1,8 @@
+{
+  "deterministic_metrics_match": true,
+  "metrics_sha256": "7423b006e93853409e08793b246db281cf1df3df2f3dd7346a1779798d07dafe",
+  "code_sha256": "c9bc556fcadbdc7ab24c05808a69856281518a16b171c9bbdaa5a8f0e8e4738e",
+  "comparison": "second execution; same code, seed, NumPy and one-thread settings; elapsed times excluded",
+  "release": "0.1",
+  "scope": "Historical baseline rerun; current v0.2 reproducibility is in the final source ZIP receipt and independent reviews."
+}

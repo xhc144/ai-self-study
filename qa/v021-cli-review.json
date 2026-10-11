@@ -1,0 +1,105 @@
+{
+  "release": "0.2.1",
+  "status": "PASS",
+  "at_utc": "2026-10-11T17:44:59.015822+00:00",
+  "scope": "Custom-design exploratory provenance only; no numerical training change; frozen design, default results and PDF remain v0.2.",
+  "regression_tests": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "tests_passed": 14,
+    "new_test": "test_cli_explicit_design_is_exploratory",
+    "actual_cases": [
+      {
+        "design": "temporary replacement",
+        "config_steps": 1,
+        "config_seeds": [
+          149
+        ],
+        "other_cli_overrides": null,
+        "actual_training_runs": 3,
+        "assertions": "Resolved design path, raw design SHA256, exploratory flag and executed config"
+      },
+      {
+        "design": "explicit frozen design path",
+        "cli_steps": 1,
+        "cli_seeds": [
+          149
+        ],
+        "actual_training_runs": 3,
+        "assertions": "Explicit path/hash marked exploratory even when design bytes are frozen"
+      }
+    ]
+  },
+  "default_15_run_verification": {
+    "command": [
+      "python",
+      "experiments/run_all.py",
+      "--experiment",
+      "micro_research",
+      "--out",
+      "temporary-directory"
+    ],
+    "actual_runs": 15,
+    "metrics_bytes_identical": true,
+    "metrics_sha256": "ddaa16e4a9fe47fc18fb091c921c5a8a4db7a94e5c936295778b71e6194b8c4f",
+    "design_sha256": "ada4758c7bd7b5d039803716f0ea4fc166d66560bd9bf7ab14776c1ca4e4bbbb",
+    "exploratory_overrides": {}
+  },
+  "original7_rerun_this_patch": false,
+  "pdf_recompiled_this_patch": false,
+  "pdf_sha256": "53795a888ab79e1160c8ed08c7fd0820c892c1497692fc54fc596908fffea690",
+  "unchanged_tracked_book_results_research_files": {
+    "book/chapters/01.tex": "6808b825a746ff344c3b3a7474d41a2bb4a11a3dc812c6923c4f026450aff082",
+    "book/chapters/02.tex": "8e4f7539bf6eef3617b9c88e4c0422511b43992e5828f2732f4ff2b1e1e6b616",
+    "book/chapters/03.tex": "175a84ae14a680dbd4f93b692af3ff9866e9516143724e6b2e4cfd344c11b5dc",
+    "book/chapters/04.tex": "bd9414bf80c5be45e1daac6d6ea26678fe034c029132e1cf6eaf4557eb363b4c",
+    "book/chapters/05.tex": "5e435a4bf0ea7eb3610cd184501d38e0bbc6d2e8dbfaa86c94db7bf27952937d",
+    "book/chapters/06.tex": "56da307fdd2761f8690ce829421f506952235d372bbf8cc41be7b212bbd70597",
+    "book/chapters/07.tex": "415048889637c0c08fff7f968a5ea35293993770fe72064e927f35fc674732a7",
+    "book/chapters/08.tex": "4fa70288fc191df88b80acaf614d5b321d32aa0b1779f715d3551f5cbdda3fa9",
+    "book/chapters/09.tex": "2995f4ca4975f190159631bac0a73098a3236de626449d84add54a3f0ed63930",
+    "book/chapters/10.tex": "b4aa4b269962f08fb0787fb1983583726afca0c205316c3ea2a55e02674d2630",
+    "book/chapters/11.tex": "67ba181bb7e4773598caaedaf3988a7289639467330f06d3ae62a15fb361a141",
+    "book/chapters/12.tex": "f4493d221a1562ea75f324fc84e65a98a11b09e6e2fe00d129766476e4ea61b8",
+    "book/chapters/13.tex": "8779d5e23f29fc4e1f83ef103a385bbe5103d636ea0f9feb26f9ef98fa4aae32",
+    "book/generated/language_model.pdf": "b034148f97aed68e41e70ffd0fa037dee0ef0fe7b1664ceee1ee32a1b4c26f40",
+    "book/generated/mlp.pdf": "e015dc23a01a1cdbf197bea14f147230f83081bf04d21a0c540f07a0efd6b6a5",
+    "book/generated/spurious.pdf": "ed9eee12bec6b4e409978aa2fae52a459c48a3d7e6ce405d759a91106905bd8b",
+    "book/generated/summary.tex": "154d77b0a5e064602e1d67972fa47be0767000205810a4e27501ab3710b4b505",
+    "book/generated/v02-attention.tex": "1420afdeae979363fc31434a893ad98f9825f96ff282cdd05eab0fc540b4bf24",
+    "book/generated/v02-research-effects.tex": "07db24b0c1e193a3c327c8f9e3c0be6071b20437fb22517212fde2524a1bee0e",
+    "book/generated/v02-research-positions.tex": "531eccacad7389964e1cb478ed1dbc7a7721f408916d0dc6f7735f4c21e38bb4",
+    "book/generated/v02-research-runs.tex": "9a0a0788870b43a345dc6a46ba4ca9536a5da05b5b792e871b4ea5fb77382d0f",
+    "book/generated/v02-research-summary.tex": "9d7071ba330366387be9ed3572442881ec28708ccb9d8650414e35165d12f68c",
+    "book/generated/v02-residual.tex": "85675283c96571891c451ca3b862f9216546ff4d062f6464f1e697cf2bfd8788",
+    "book/main.tex": "c8f9449f97a34fa2ce7f1c97e38e2cf800f3ba2a780ccc1d84856a3729f21391",
+    "book/references.tex": "6515f9db4f4a844804ded948958545f2e2a7f9d81ed9da357040ed70aa9a47bd",
+    "research/design-v02-freeze.md": "bbe5896932955bf5db58401aa74f8dd709a1b96f0226ef2908bee5bbdd3f2b02",
+    "research/design-v02.json": "ada4758c7bd7b5d039803716f0ea4fc166d66560bd9bf7ab14776c1ca4e4bbbb",
+    "research/micro-study-v02.md": "ebcdea1c4af98eaa016be1e8a4dbf8c5f9f8c8dcc3a92efbcffac0d83cccdf55",
+    "research/notebook.md": "245a9c8e7e5fb5f49738ebd8789c9d200c2576962b4a9454c5c16c469a9c2532",
+    "research/questions.md": "14d787fcf1c6e5ea9d1bd38baf30991f7e1d0749461986fa3a106db02ffe4516",
+    "results/attention_walkthrough/environment.json": "e60649bf519356f3b3e3a7c466158dabed2f13ed1fc628a32a1cf218ab5d8794",
+    "results/attention_walkthrough/metrics.json": "a52e4ee5453a03504a7715d5a3c2fbdc21ef7542ca462be147b5220f839a3257",
+    "results/environment.json": "8eec84b8edf9b83ae6f3b284fe93047c85d8c58867609f836a04c7b4a2545e5c",
+    "results/metrics.json": "7423b006e93853409e08793b246db281cf1df3df2f3dd7346a1779798d07dafe",
+    "results/micro_research/environment.json": "46e1cf5e6469bc2d20da1d8a76c18a3122cb54c1aaf61a049252b016be57dc53",
+    "results/micro_research/metrics.json": "ddaa16e4a9fe47fc18fb091c921c5a8a4db7a94e5c936295778b71e6194b8c4f",
+    "results/residual_debug/environment.json": "8c728730378ff66154c87c0088b6f26e279ca7a68dd264081d9dc2001b60a1a9",
+    "results/residual_debug/metrics.json": "7620e2080450ae36ad9f149286d39b41cbe6cc893ce7fcb8b26e51986097fa67"
+  },
+  "changed_source_hashes": {
+    "experiments/micro_research.py": "80b02bb63e4b0a0b7f4ff65db728607576dfcf8c181b29a32cae8d360dc7c75f",
+    "tests/test_v02.py": "1b5626a19952611fc9106d5887125023b78c00941bfccab435e5f680c89374d8",
+    "scripts/package_source.py": "7bf62c4232286f010d006cf44e267f812cf812b35169f10b62aa2bccf87d4a6e",
+    "README.md": "92df4ea2ea2703297d58c9adf5a88c94262098208675409e9f343596b26f1532"
+  },
+  "historical_review_scope": "qa/v02-* and results/*/environment.json describe their actual v0.2 snapshots; this delta does not rewrite their execution provenance."
+}

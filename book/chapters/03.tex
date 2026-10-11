@@ -1,0 +1,68 @@
+\originalchapter{概率、信息与预测损失}\label{ch:prob}
+\originalsection{不确定性与条件分布}
+同样的输入可能有多个合理输出. 与其强迫模型永远给一个确定值, 可以让它报告概率. 离散随机变量 $Y$ 取值于有限集合 $\{1,\ldots,V\}$, 其分布 $p_i=P(Y=i)$ 满足 $p_i\ge0$ 和 $\sum_i p_i=1$. 条件分布 $P(Y=i\mid X=x)$ 表示在给定输入之后的不确定性. 这里的 $x$ 可以是图像, 也可以是文本前缀.
+
+\begin{definition}
+离散随机变量的期望为 $\E[f(Y)]=\sum_i p_i f(i)$. 当实随机变量 $Z$ 满足 $\E[Z^2]<\infty$ 时, 方差为 $\operatorname{Var}(Z)=\E[(Z-\E Z)^2]$, 衡量围绕均值的平方偏离; 有限取值时可按期望的求和定义计算. 两事件 $A,B$ 在 $P(B)>0$ 时满足 $P(A\mid B)=P(A\cap B)/P(B)$. 联合概率分解为 $P(A\cap B)=P(A\mid B)P(B)$.
+\end{definition}
+Bayes 公式由交换交集得到: $P(A\mid B)=P(B\mid A)P(A)/P(B)$, 前提是 $P(B)>0$. 分母可通过一组互斥且穷尽的事件求和. 例如疾病率为 $0.01$, 检测真阳性率 $0.9$, 假阳性率 $0.05$, 那么阳性概率为 $0.9\cdot0.01+0.05\cdot0.99=0.0585$, 阳性后患病概率约为 $0.154$. 单看真阳性率很高, 不能判断一次阳性有多可信. 模型评估中的类别不平衡也有同样结构.
+
+概率独立意味着 $P(A\cap B)=P(A)P(B)$, 不意味着两个事件在同一个时间发生或不发生. 训练样本独立同分布是常用数学假设; 同一文档切出的相邻窗口通常不满足独立性. 后面讨论泛化时要记住假设的边界.
+
+\originalsection{似然与交叉熵}
+\begin{definition}
+对独立样本 $y_1,\ldots,y_n$, 参数模型 $q_\theta$ 的似然为 $L(\theta)=\prod_i q_\theta(y_i)$. 最大似然寻找使已观测数据概率最大的参数. 平均负对数似然是 $\ell(\theta)=-n^{-1}\sum_i\log q_\theta(y_i)$, 本书所有信息量使用自然对数.
+\end{definition}
+对数把乘积变成和, 方便稳定计算和逐样本求导. 若 $\hat p_j$ 是类别 $j$ 的经验频率, 就有 $\ell=-\sum_j\hat p_j\log q_j$. 这不是任意选择的“分数”, 而是把整个训练样本似然写成平均损失. 对条件模型, 只需改为 $-n^{-1}\sum_i\log q_\theta(y_i\mid x_i)$.
+
+\begingroup\widowpenalty=10000
+\begin{definition}
+熵为 $H(p)=-\sum_i p_i\log p_i$, 交叉熵为 $H(p,q)=-\sum_i p_i\log q_i$, 相对熵为 $\KL(p\Vert q)=\sum_{i:p_i>0}p_i\log(p_i/q_i)$. 约定 $0\log0=0$; 若 $p_i>0$ 而 $q_i=0$, 相对熵与交叉熵取 $+\infty$.
+\end{definition}
+\begin{proposition}
+对有限概率分布有 $H(p,q)=H(p)+\KL(p\Vert q)$, 且 $\KL(p\Vert q)\ge0$, 等号当且仅当 $p=q$.
+\end{proposition}
+\begin{proof}
+在共同正概率位置拆开 $\log(p_i/q_i)$ 即得恒等式; 无穷情形按约定处理. 对 $u>0$, $\log u\le u-1$, 因为 $u-1-\log u$ 在 $u=1$ 处达到唯一最小值零. 对 $p_i>0$ 应用 $u=q_i/p_i$, 得
+\[
+\KL(p\Vert q)\ge\sum_{i:p_i>0}(p_i-q_i)=1-\sum_{i:p_i>0}q_i\ge0.
+\]
+若等号成立, 每个正 $p_i$ 的位置须有 $q_i=p_i$, 且 $q$ 在其他位置无剩余质量, 故 $p=q$. 反之直接代入即为零.
+\end{proof}
+因此在固定真实分布 $p$ 上, 最小交叉熵的模型分布就是 $p$. 但真实分布通常未知, 模型族也可能无法表示它. 经验最优与总体最优之间还隔着采样误差和模型误设. 交叉熵低意味着概率预测更吻合评估分布, 不直接等于事实可靠、任务正确或推理严谨.\par
+\endgroup
+
+\originalsection{Softmax 与稳定计算}
+\begin{definition}
+对实向量 $z\in\R^V$, softmax 定义为 $q_i=\exp(z_i)/\sum_j\exp(z_j)$. $z_i$ 称为 logit, 它不是概率. 所有概率都严格为正且总和为 1.
+\end{definition}
+任意常数 $c$ 都满足 $\softmax(z+c\mathbf1)=\softmax(z)$. 因此先减去最大 logit 可使指数落在 $(0,1]$, 避免大正数溢出. 实现负对数似然时也可以使用 $\log\sum_j e^{z_j}=m+\log\sum_j e^{z_j-m}$, 其中 $m=\max_jz_j$. 这叫 log-sum-exp 稳定形式.
+
+求导用商法则得到
+\[
+\frac{\partial q_i}{\partial z_j}=q_i(\delta_{ij}-q_j),\qquad
+J_q=\diag(q)-qq^\top.
+\]
+其中 $\delta_{ij}$ 在 $i=j$ 时为 1, 否则为 0. 若目标类别是 $y$, 损失为 $-\log q_y=-z_y+\log\sum_j e^{z_j}$, 所以 $\partial\ell/\partial z_j=q_j-\delta_{jy}$. 对软标签分布 $p$, 导数同样为 $q_j-p_j$. “预测减目标”不是经验口诀, 它依赖 softmax 与交叉熵配对.
+
+\begin{example}
+两个类别的 logit 为 $(0,\log3)$, 真标签为第一类. 求预测、损失与梯度.
+\end{example}
+\begin{solution}
+指数为 $(1,3)$, 所以预测为 $(1/4,3/4)$, 损失为 $\log4$, 梯度为 $(-3/4,3/4)$. 沿负梯度更新会提高第一类 logit, 降低第二类 logit. 两梯度之和为零, 与整体平移不改变预测一致.
+\end{solution}
+
+\originalsection{练习与解答}
+\begin{exercise}
+若真实分布为 $(1/2,1/2)$, 比较模型 $(1/2,1/2)$ 与 $(0.9,0.1)$ 的交叉熵. 二者在任意固定平局规则下的最可能类别判断, 能否充分反映差别?
+\end{exercise}
+\begin{solution}
+第一模型交叉熵为 $\log2\approx0.6931$, 第二模型为 $-\tfrac12\log0.09\approx1.2040$. 若第一模型平局选第一类, 两者都始终预测第一类, 准确率均为 $1/2$. 但第二模型错误地把不确定性压低, 交叉熵对此施加惩罚.
+\end{solution}
+\begin{exercise}
+证明 softmax Jacobian 对任意向量 $a$ 满足 $a^\top J_q a\ge0$, 并解释为何 $\mathbf1$ 位于其核中.
+\end{exercise}
+\begin{solution}
+有 $a^\top J_q a=\sum_iq_ia_i^2-(\sum_iq_ia_i)^2=\sum_iq_i(a_i-\bar a)^2\ge0$, 其中 $\bar a=\sum_iq_ia_i$. 当所有 $a_i=1$ 时该式为零, 且直接计算 $J_q\mathbf1=q-q(q^\top\mathbf1)=0$. 这是平移不变性的微分表达.
+\end{solution}
+\label{ch:end:03}

@@ -1,0 +1,63 @@
+\originalchapter{向量、矩阵与最小二乘}\label{ch:linear}
+\originalsection{从特征到线性映射}
+预测问题先需要一种可计算的输入表示. 房屋的面积、房龄和房间数可组成向量 $x=(x_1,x_2,x_3)^\top\in\R^3$. 特征选择把现实对象映到数值空间, 并不保留现实中的全部信息. 线性预测 $\hat y=x^\top w$ 把各特征按权重相加. 若需截距, 可在 $x$ 前面添一个恒为 1 的分量.
+
+\begin{definition}
+向量 $x,y\in\R^d$ 的内积是 $x^\top y=\sum_jx_jy_j$, 欧氏范数是 $\norm{x}=\sqrt{x^\top x}$; 内积为零称正交. 矩阵 $A\in\R^{m\times d}$ 表示从 $\R^d$ 到 $\R^m$ 的线性映射, 其第 $i$ 个输出为 $(Ax)_i=\sum_j A_{ij}x_j$. 转置 $A^\top$ 满足 $u^\top Av=(A^\top u)^\top v$.
+\end{definition}
+维度是计算前最便宜的检查. 若 $X\in\R^{n\times d}$ 的每行是一个样本, $w\in\R^d$, 那么 $Xw\in\R^n$ 才能与标签向量 $y\in\R^n$ 相减. $XX^\top$ 与 $X^\top X$ 分别是 $n\times n$ 和 $d\times d$, 不能因二者都含“平方”就互换.
+
+内积刻画方向匹配. 对任何实数 $t$, $\norm{x-ty}^2\ge0$. 若 $y\ne0$, 取 $t=(x^\top y)/\norm{y}^2$ 得 $(x^\top y)^2\le\norm{x}^2\norm{y}^2$. 这就是 Cauchy--Schwarz 不等式; $y=0$ 时结论直接成立. 因而归一化点积位于 $[-1,1]$. 注意力使用的点积评分与此相连, 但通常不先归一化成余弦.
+
+\originalsection{投影与正规方程}
+\begin{definition}
+给定 $X\in\R^{n\times d}$ 和 $y\in\R^n$, 最小二乘目标为 $J(w)=\norm{Xw-y}^2/(2n)$. 残差定义为 $r=y-Xw$. 矩阵 $X$ 的列空间是所有可表示预测 $Xw$ 的集合.
+\end{definition}
+最小二乘的目的不是让每个样本残差都为零, 而是选择列空间中离 $y$ 最近的向量. 沿任意方向 $h$ 改变 $w$, 有
+\begin{align*}
+J(w+th)-J(w)
+ &=\frac{t}{n}h^\top X^\top(Xw-y)+\frac{t^2}{2n}\norm{Xh}^2.
+\end{align*}
+若 $w$ 是最小值, 一次项必须对所有 $h$ 为零, 否则选足够小且符号相反的 $t$ 就可降低目标. 所以 $X^\top(Xw-y)=0$. 这表明残差与每一个特征列正交.
+
+列线性无关是指 $Xh=0$ 只在 $h=0$ 时成立. 实对称矩阵 $H$ 正定是指每个非零 $h$ 均满足 $h^\top Hh>0$. 单位矩阵 $I$ 满足 $Iv=v$; 方阵可逆指存在 $A^{-1}$ 使 $AA^{-1}=A^{-1}A=I$. 正定矩阵没有非零核向量, 因而可逆.
+\begin{proposition}
+若 $X$ 的列线性无关, 则 $X^\top X$ 正定, 最小二乘具有唯一解 $w_*=(X^\top X)^{-1}X^\top y$.
+\end{proposition}
+\begin{proof}
+对 $h\ne0$, 列无关给出 $Xh\ne0$, 因而 $h^\top X^\top Xh=\norm{Xh}^2>0$. 所以 $X^\top X$ 可逆, 正规方程有唯一解. 将任意 $w=w_*+h$ 代入上述展开, 一次项为零, 得 $J(w)=J(w_*)+\norm{Xh}^2/(2n)$. 对非零 $h$ 第二项为正, 因而此解为唯一全局最小值.
+\end{proof}
+如果列相关, 最优预测仍存在且唯一, 权重却可能不唯一. 例如 $X$ 的两列相同, 则权重 $(a,b)$ 与 $(a+c,b-c)$ 产生相同预测. 有限维列空间是闭集, 正交投影可以通过其一组正交基构造; 这保证最优预测存在. 本书不把“能写逆矩阵”当成所有最小二乘问题的默认条件.
+
+\begin{example}
+两样本一特征为 $X=(1,2)^\top$, 标签 $y=(1,0)^\top$. 求最优权重与残差.
+\end{example}
+\begin{solution}
+正规方程为 $5w=1$, 故 $w_*=1/5$, 预测为 $(1/5,2/5)^\top$, 残差为 $(4/5,-2/5)^\top$. 检验 $X^\top r=4/5-4/5=0$. 残差没有消失, 但它在模型能改变的方向上已经没有分量.
+\end{solution}
+
+\originalsection{特征方向与病态}
+实对称矩阵可取正交特征基: $H=U\diag(\lambda_1,\ldots,\lambda_d)U^\top$. $\diag$ 是仅对角线上放指定数、其他位置为零的矩阵; $U$ 的各列 $u_j$ 是单位长度且两两正交的向量, 满足 $U^\top U=I$, $Hu_j=\lambda_ju_j$. 后式定义特征值与特征向量. 本书调用有限维实对称矩阵的谱定理, 不证明完整的线性代数定理; 之后的优化结论会把它的用途全部展开. 对 $H=X^\top X/n$, 特征值非负, 因为 $h^\top Hh=\norm{Xh}^2/n\ge0$.
+
+小特征值意味着某个权重方向几乎不改变预测. 若正规方程右端受到扰动 $\delta b$, 则对应特征方向上的权重变化是 $(u_j^\top\delta b)/\lambda_j$. 因此很小的 $\lambda_j$ 会放大数据噪声或舍入误差. 条件数 $\kappa(H)=\lambda_{\max}/\lambda_{\min}$ 在正定情形量化了最坏的方向差异.
+
+给目标加上 $\lambda\norm{w}^2/2$, 其中 $\lambda>0$, 得岭回归. 正规方程变为 $(X^\top X/n+\lambda I)w=X^\top y/n$. 每个特征值都增加 $\lambda$, 不可辨识方向也得到控制. 代价是权重向零收缩, 会带来偏差. 若使用未惩罚截距, 应将对应对角惩罚设为零; 本项目实验的五个特征没有单独截距.
+
+实际实现优先使用线性方程求解器而不是显式求逆. 一般最小二乘可使用 QR 或 SVD; 形成 $X^\top X$ 会使二范数条件数平方化, 在严重病态时尤其危险. 小实验保留正规方程, 是为了直接观察这里的数学对象.
+
+\originalsection{CPU 实验与练习}
+实验 \texttt{ridge} 生成 80 个五维训练样本和 400 个测试样本, 第五列几乎等于第一列. 固定种子后比较不同 $\lambda$ 的条件数、权重范数和均方误差, 并把梯度下降预测与方程解预测比较. 原始输出见 \texttt{results/metrics.json}. 正则化是否改善某一次测试误差由实际结果决定, 不存在对每份有限数据都成立的保证. 实验里的测试扫描仅用于解释, 不能把最小测试误差的 $\lambda$ 再当作无偏评估.
+
+\begin{exercise}
+令 $X$ 的两列相同且非零. 说明为什么 $X^\top X$ 不可逆, 又为什么 $X^\top X+\lambda I$ 在 $\lambda>0$ 时可逆.
+\end{exercise}
+\begin{solution}
+取 $h=(1,-1)^\top$, 则 $Xh=0$, 所以 $X^\top Xh=0$, 存在非零核向量. 而对任意 $v\ne0$, $v^\top(X^\top X+\lambda I)v=\norm{Xv}^2+\lambda\norm{v}^2>0$, 因而加惩罚后的矩阵正定且可逆.
+\end{solution}
+\begin{exercise}
+若把一个特征放大 100 倍, 不带惩罚时的预测集合会改变吗? 带相同岭惩罚时会怎样?
+\end{exercise}
+\begin{solution}
+非零列缩放不改变列空间, 可以把相应权重除以 100, 所以不带惩罚时的可表示预测集合相同. 相同的欧氏惩罚则不等价: 该方向为了产生同样预测只需更小权重, 受到的惩罚减轻. 因而标准化特征不只是代码习惯, 它会影响正则化所表达的先验.
+\end{solution}
+\label{ch:end:02}

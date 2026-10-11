@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "source": "/workspace/ai-self-study/book/main.tex",
+  "automated_status": "PASS",
+  "mathematical_verification": false,
+  "pedagogy_assessed": false,
+  "visual_review": "not_performed",
+  "errors": [],
+  "warnings": [],
+  "stages": {
+    "source": "passed",
+    "compile": "passed",
+    "log": "passed",
+    "pdf": "passed",
+    "inline_diagnostic": "not_requested; log and page review remain required",
+    "render": "generated_not_inspected"
+  },
+  "policy": {
+    "title_soft_limit": 20,
+    "inline_warning_ratio": 0.5,
+    "overflow_tolerance_pt": 0.5,
+    "page_size": [
+      612,
+      792
+    ],
+    "reviewed_warnings": []
+  },
+  "sources": [
+    {
+      "path": "main.tex",
+      "sha256": "c8f9449f97a34fa2ce7f1c97e38e2cf800f3ba2a780ccc1d84856a3729f21391"
+    },
+    {
+      "path": "chapters/01.tex",
+      "sha256": "6808b825a746ff344c3b3a7474d41a2bb4a11a3dc812c6923c4f026450aff082"
+    },
+    {
+      "path": "chapters/02.tex",
+      "sha256": "8e4f7539bf6eef3617b9c88e4c0422511b43992e5828f2732f4ff2b1e1e6b616"
+    },
+    {
+      "path": "chapters/03.tex",
+      "sha256": "175a84ae14a680dbd4f93b692af3ff9866e9516143724e6b2e4cfd344c11b5dc"
+    },
+    {
+      "path": "chapters/04.tex",
+      "sha256": "bd9414bf80c5be45e1daac6d6ea26678fe034c029132e1cf6eaf4557eb363b4c"
+    },
+    {
+      "path": "chapters/05.tex",
+      "sha256": "5e435a4bf0ea7eb3610cd184501d38e0bbc6d2e8dbfaa86c94db7bf27952937d"
+    },
+    {
+      "path": "chapters/06.tex",
+      "sha256": "56da307fdd2761f8690ce829421f506952235d372bbf8cc41be7b212bbd70597"
+    },
+    {
+      "path": "chapters/07.tex",
+      "sha256": "415048889637c0c08fff7f968a5ea35293993770fe72064e927f35fc674732a7"
+    },
+    {
+      "path": "generated/v02-attention.tex",
+      "sha256": "1420afdeae979363fc31434a893ad98f9825f96ff282cdd05eab0fc540b4bf24"
+    },
+    {
+      "path": "generated/v02-residual.tex",
+      "sha256": "85675283c96571891c451ca3b862f9216546ff4d062f6464f1e697cf2bfd8788"
+    },
+    {
+      "path": "chapters/08.tex",
+      "sha256": "4fa70288fc191df88b80acaf614d5b321d32aa0b1779f715d3551f5cbdda3fa9"
+    },
+    {
+      "path": "generated/summary.tex",
+      "sha256": "154d77b0a5e064602e1d67972fa47be0767000205810a4e27501ab3710b4b505"
+    },
+    {
+      "path": "chapters/09.tex",
+      "sha256": "2995f4ca4975f190159631bac0a73098a3236de626449d84add54a3f0ed63930"
+    },
+    {
+      "path": "chapters/10.tex",
+      "sha256": "b4aa4b269962f08fb0787fb1983583726afca0c205316c3ea2a55e02674d2630"
+    },
+    {
+      "path": "chapters/11.tex",
+      "sha256": "67ba181bb7e4773598caaedaf3988a7289639467330f06d3ae62a15fb361a141"
+    },
+    {
+      "path": "chapters/12.tex",
+      "sha256": "f4493d221a1562ea75f324fc84e65a98a11b09e6e2fe00d129766476e4ea61b8"
+    },
+    {
+      "path": "chapters/13.tex",
+      "sha256": "8779d5e23f29fc4e1f83ef103a385bbe5103d636ea0f9feb26f9ef98fa4aae32"
+    },
+    {
+      "path": "generated/v02-research-summary.tex",
+      "sha256": "9d7071ba330366387be9ed3572442881ec28708ccb9d8650414e35165d12f68c"
+    },
+    {
+      "path": "generated/v02-research-runs.tex",
+      "sha256": "9a0a0788870b43a345dc6a46ba4ca9536a5da05b5b792e871b4ea5fb77382d0f"
+    },
+    {
+      "path": "generated/v02-research-effects.tex",
+      "sha256": "07db24b0c1e193a3c327c8f9e3c0be6071b20437fb22517212fde2524a1bee0e"
+    },
+    {
+      "path": "generated/v02-research-positions.tex",
+      "sha256": "531eccacad7389964e1cb478ed1dbc7a7721f408916d0dc6f7735f4c21e38bb4"
+    },
+    {
+      "path": "references.tex",
+      "sha256": "6515f9db4f4a844804ded948958545f2e2a7f9d81ed9da357040ed70aa9a47bd"
+    }
+  ],
+  "layout_source": {
+    "findings": [],
+    "metrics": {
+      "heading_count": 76,
+      "inline_math_count": 823,
+      "proof_count": 5,
+      "solution_count": 35,
+      "content_depth_assessed": false
+    },
+    "style_errors": []
+  },
+  "build_record": "/workspace/ai-self-study/qa/style-check/main.build.json",
+  "pdf_path": "/workspace/ai-self-study/qa/style-check/main.pdf",
+  "passes": 3,
+  "log": {
+    "issues": [],
+    "warnings": []
+  },
+  "pdf": {
+    "pages": 41,
+    "issues": [],
+    "warnings": [],
+    "mathematical_verification": false,
+    "visual_review": "not_performed"
+  },
+  "render_record": "/workspace/ai-self-study/qa/style-check/main.render.json"
+}

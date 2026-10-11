@@ -1,0 +1,3766 @@
+{
+  "micro_research": {
+    "baselines": {
+      "match_red_blue": {
+        "nearest_animal_rule": {
+          "distractor": {
+            "accuracy": 0.0,
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 0.0,
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        },
+        "training_sound_frequency_after_says": {
+          "distractor": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      "mismatch_blue_red": {
+        "nearest_animal_rule": {
+          "distractor": {
+            "accuracy": 1.0,
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 0.0,
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        },
+        "training_sound_frequency_after_says": {
+          "distractor": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      "mismatch_red_blue": {
+        "nearest_animal_rule": {
+          "distractor": {
+            "accuracy": 1.0,
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 0.0,
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        },
+        "training_sound_frequency_after_says": {
+          "distractor": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 0.5,
+            "predicted_sound": [
+              7,
+              7
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      }
+    },
+    "design_sha256": "ada4758c7bd7b5d039803716f0ea4fc166d66560bd9bf7ab14776c1ca4e4bbbb",
+    "documents": [
+      [
+        0,
+        1,
+        3,
+        4,
+        1,
+        6,
+        7,
+        9
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        2,
+        6,
+        7,
+        9
+      ],
+      [
+        0,
+        1,
+        3,
+        5,
+        1,
+        6,
+        7,
+        9
+      ],
+      [
+        0,
+        1,
+        3,
+        5,
+        2,
+        6,
+        7,
+        9
+      ],
+      [
+        0,
+        2,
+        3,
+        4,
+        1,
+        6,
+        8,
+        9
+      ],
+      [
+        0,
+        2,
+        3,
+        4,
+        2,
+        6,
+        8,
+        9
+      ],
+      [
+        0,
+        2,
+        3,
+        5,
+        1,
+        6,
+        8,
+        9
+      ],
+      [
+        0,
+        2,
+        3,
+        5,
+        2,
+        6,
+        8,
+        9
+      ]
+    ],
+    "executed_config": {
+      "baselines": [
+        "nearest_animal_rule",
+        "training_sound_frequency_after_says"
+      ],
+      "clarified_at_utc": "2026-10-11T17:16:21.046679+00:00",
+      "confidence": {
+        "alpha": 0.05,
+        "level": 0.95,
+        "scope": "Pointwise within each fixed split for the all-two-test-sounds-correct run indicator only; no simultaneous coverage, no interval for mean accuracy, NLL, or interventions."
+      },
+      "frozen_at_utc": "2026-10-11T17:11:18.702946+00:00",
+      "initialization": "Each (seed, split) creates a fresh model and zero Adam states; the same seed gives identical initial weights across splits. Record initial parameter SHA256 before training.",
+      "intervention_evaluation": "Sound after says using input positions 0..5; speaker flip recalculates true sound and full patched document. All six patched test documents for either intervention belong to their corresponding training split. Baselines predict sound only; no full-token NLL comparison.",
+      "interventions": [
+        "flip_distractor_keep_sound",
+        "flip_speaker_change_sound"
+      ],
+      "limits": [
+        "All interventions return to training combinations in all six test documents; intervention accuracy alone cannot identify a learned mechanism.",
+        "No natural-language generalization; five seeds and three preselected overlapping splits do not estimate arbitrary split robustness."
+      ],
+      "lr": 0.01,
+      "predictions": [
+        "Subject-flip should reverse the predicted sound; other-flip should preserve it if speaker-dependent rule is stable.",
+        "Nearest-animal rule fails on two mismatch splits and succeeds on match split; last-word frequency achieves 1/2."
+      ],
+      "previous_design_sha256": "e29cd5508d5b76b8ef4a769bbab4d5385aef54642c2652c47ac2bed182386c5e",
+      "primary_metrics": [
+        "sound_accuracy",
+        "all_test_sounds_correct",
+        "full_token_nll",
+        "distractor_accuracy",
+        "speaker_flip_accuracy",
+        "original_sound_probability_change"
+      ],
+      "probability_change_definition": "Delta = p_patch(original_sound) - p_original(original_sound), separately for speaker and distractor flips; store each document prediction.",
+      "question": "Finite eight-document grammar: speaker retrieval or nearest-animal shortcut under fixed combination holdouts?",
+      "release": "0.2",
+      "seeds": [
+        144,
+        145,
+        146,
+        147,
+        148
+      ],
+      "selection_rule": "All 15 runs are reported; no tuning on holdouts or rerunning until good. Default task/data/optimizer reuse v0.1.",
+      "splits": {
+        "match_red_blue": [
+          0,
+          7
+        ],
+        "mismatch_blue_red": [
+          3,
+          4
+        ],
+        "mismatch_red_blue": [
+          1,
+          6
+        ]
+      },
+      "steps": 1400,
+      "uncertainty_method": "Exact equal-tail binomial inversion on all-two-test-sounds-correct indicators across five initializations, conditional on independent identically distributed initialization assumption. No bootstrap.",
+      "uncertainty_unit": "Training initialization within each fixed split; documents, interventions, overlapping splits are not independent replicates.",
+      "width": 16
+    },
+    "exploratory_overrides": {},
+    "paired_seed_means": [
+      {
+        "mean_accuracy_fixed_splits": 1.0,
+        "seed": 144
+      },
+      {
+        "mean_accuracy_fixed_splits": 1.0,
+        "seed": 145
+      },
+      {
+        "mean_accuracy_fixed_splits": 1.0,
+        "seed": 146
+      },
+      {
+        "mean_accuracy_fixed_splits": 1.0,
+        "seed": 147
+      },
+      {
+        "mean_accuracy_fixed_splits": 1.0,
+        "seed": 148
+      }
+    ],
+    "runs": [
+      {
+        "distractor_effect_original_sound_probability": [
+          4.801838310641848e-06,
+          6.9790820119708386e-06
+        ],
+        "full_token_nll": 1.506582484199625,
+        "gradient_errors": {
+          "E": 3.9439285171027905e-11,
+          "F": 3.3682546769081556e-11,
+          "G": 1.3307773286119762e-11,
+          "K": 3.954851458256789e-11,
+          "O": 5.3809273443256034e-11,
+          "P": 2.763676093531231e-11,
+          "Q": 2.568593124654961e-11,
+          "U": 2.678379046328061e-11,
+          "V": 3.697982805389577e-11,
+          "bF": 4.3101704497172655e-11,
+          "bG": 4.0302379489265405e-11,
+          "bU": 2.0766208197464664e-11
+        },
+        "initial_parameters_sha256": "d7f5ab81d40e7c04cd2b5bf4286fb5287eeb3234c5a13f34d6d41feef1a88919",
+        "parameter_count": 2538,
+        "seed": 144,
+        "sound_nll": 1.976894734781664e-05,
+        "split": "mismatch_blue_red",
+        "subject_effect_original_sound_probability": [
+          -0.9999748334964639,
+          -0.9999746112133786
+        ],
+        "test_ids": [
+          3,
+          4
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.693149668144887,
+          1.0851799206106244e-05,
+          1.0986367939569508,
+          8.754242496520229,
+          1.0368876609786548e-05,
+          1.976894734781664e-05,
+          7.441152143700846e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "train_nll": 0.255984969647661,
+        "train_trace": [
+          [
+            1,
+            1.9968878663166543
+          ],
+          [
+            100,
+            0.25653053993696645
+          ],
+          [
+            200,
+            0.2563518144681454
+          ],
+          [
+            300,
+            0.2565323543737307
+          ],
+          [
+            400,
+            0.2560475451945208
+          ],
+          [
+            500,
+            0.2560766724572396
+          ],
+          [
+            600,
+            0.2560349920792959
+          ],
+          [
+            700,
+            0.2560034799205641
+          ],
+          [
+            800,
+            0.25654161036972417
+          ],
+          [
+            900,
+            0.25601513602379505
+          ],
+          [
+            1000,
+            0.25599392026928336
+          ],
+          [
+            1100,
+            0.25598584573272326
+          ],
+          [
+            1200,
+            0.2560575430382051
+          ],
+          [
+            1300,
+            0.25599547738347583
+          ],
+          [
+            1400,
+            0.255984969647661
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999824022539027,
+              0.9999898411694544
+            ],
+            "patched_document_ids": [
+              2,
+              5
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999824022539027,
+              0.9999898411694544
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.999977600415592,
+              0.9999828620874425
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.999977600415592,
+              0.9999828620874425
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              2.766919128196592e-06,
+              8.250874063878092e-06
+            ],
+            "patched_document_ids": [
+              7,
+              0
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999965000103068,
+              0.9999839623680946
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          -2.957123084734725e-06,
+          7.717681901775464e-06
+        ],
+        "full_token_nll": 1.538307615543193,
+        "gradient_errors": {
+          "E": 3.000068943270762e-11,
+          "F": 4.430087546802852e-11,
+          "G": 1.9423007473207132e-11,
+          "K": 3.288473353419883e-11,
+          "O": 2.1076583620743827e-11,
+          "P": 3.040571266987868e-11,
+          "Q": 3.398956725071071e-11,
+          "U": 2.997941304927476e-11,
+          "V": 3.815141475307926e-11,
+          "bF": 4.0923836368278455e-11,
+          "bG": 2.6190842897233502e-11,
+          "bU": 3.174634166658308e-11
+        },
+        "initial_parameters_sha256": "37ee8c7adfd8d6b0478de65f59df0a8c767a12aa329f71ef65c2ca47bdcee29a",
+        "parameter_count": 2538,
+        "seed": 145,
+        "sound_nll": 1.4261750060724721e-05,
+        "split": "mismatch_blue_red",
+        "subject_effect_original_sound_probability": [
+          -0.9999890419238828,
+          -0.9999819067109078
+        ],
+        "test_ids": [
+          3,
+          4
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931502119098835,
+          1.2559212599696892e-05,
+          1.0986273914200648,
+          8.976337825402588,
+          4.3214897754003034e-06,
+          1.4261750060724721e-05,
+          6.737617381671085e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "train_nll": 0.25598164541551,
+        "train_trace": [
+          [
+            1,
+            2.0984623126246027
+          ],
+          [
+            100,
+            0.25616892348832304
+          ],
+          [
+            200,
+            0.2564013289283776
+          ],
+          [
+            300,
+            0.25800440058013724
+          ],
+          [
+            400,
+            0.25602148619475623
+          ],
+          [
+            500,
+            0.25601598250919094
+          ],
+          [
+            600,
+            0.2560202189483728
+          ],
+          [
+            700,
+            0.2560663506649912
+          ],
+          [
+            800,
+            0.25599417206059444
+          ],
+          [
+            900,
+            0.2560021211431106
+          ],
+          [
+            1000,
+            0.2566190008363066
+          ],
+          [
+            1100,
+            0.255993136912077
+          ],
+          [
+            1200,
+            0.25598278250665885
+          ],
+          [
+            1300,
+            0.2559945439352956
+          ],
+          [
+            1400,
+            0.25598164541551
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999866041488853,
+              0.9999896331278217
+            ],
+            "patched_document_ids": [
+              2,
+              5
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999866041488853,
+              0.9999896331278217
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.99998956127197,
+              0.99998191544592
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.99998956127197,
+              0.99998191544592
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              5.193480872037951e-07,
+              8.735012201808762e-09
+            ],
+            "patched_document_ids": [
+              7,
+              0
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999886437947894,
+              0.9999858909081486
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          7.734494389954882e-06,
+          3.8179680403649385e-05
+        ],
+        "full_token_nll": 1.3603036494258103,
+        "gradient_errors": {
+          "E": 2.9047923788549923e-11,
+          "F": 1.4666378788524836e-11,
+          "G": 1.1731685067850606e-11,
+          "K": 1.885078440458203e-11,
+          "O": 4.1850176102364856e-11,
+          "P": 2.8507227828322712e-11,
+          "Q": 2.1926525682326682e-11,
+          "U": 3.642948095960996e-11,
+          "V": 2.290834189011548e-11,
+          "bF": 1.5805468045471116e-11,
+          "bG": 2.4864357968390483e-11,
+          "bU": 3.006896120982816e-11
+        },
+        "initial_parameters_sha256": "1e09ccce1691db8b779b2a948d315845adb800a27baa70181a8059fd802635c9",
+        "parameter_count": 2538,
+        "seed": 146,
+        "sound_nll": 4.76201248929686e-05,
+        "split": "mismatch_blue_red",
+        "subject_effect_original_sound_probability": [
+          -0.9999633883141335,
+          -0.9999182631481799
+        ],
+        "test_ids": [
+          3,
+          4
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931581664565356,
+          6.11748067210186e-06,
+          1.0985069788678703,
+          7.730385688686207,
+          1.5592568322963813e-05,
+          4.76201248929686e-05,
+          5.381796173053899e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "train_nll": 0.256007215835223,
+        "train_trace": [
+          [
+            1,
+            2.184424456499381
+          ],
+          [
+            100,
+            0.25633124779676447
+          ],
+          [
+            200,
+            0.25613778825593436
+          ],
+          [
+            300,
+            0.2561071500931625
+          ],
+          [
+            400,
+            0.25613268788844135
+          ],
+          [
+            500,
+            0.2560856604240317
+          ],
+          [
+            600,
+            0.2560339233843172
+          ],
+          [
+            700,
+            0.2560589128469152
+          ],
+          [
+            800,
+            0.25601815087648155
+          ],
+          [
+            900,
+            0.25752105460194386
+          ],
+          [
+            1000,
+            0.25600939018155017
+          ],
+          [
+            1100,
+            0.2571504612202197
+          ],
+          [
+            1200,
+            0.25600991651762317
+          ],
+          [
+            1300,
+            0.25599064804391614
+          ],
+          [
+            1400,
+            0.256007215835223
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999764141638021,
+              0.9999742622945005
+            ],
+            "patched_document_ids": [
+              2,
+              5
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999764141638021,
+              0.9999742622945005
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999686796694122,
+              0.9999360826140968
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999686796694122,
+              0.9999360826140968
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              5.2913552787648695e-06,
+              1.7819465916957318e-05
+            ],
+            "patched_document_ids": [
+              7,
+              0
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999703454748186,
+              0.9999790925789276
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          0.0003501575454064598,
+          3.397271204130803e-05
+        ],
+        "full_token_nll": 1.5432254292600458,
+        "gradient_errors": {
+          "E": 2.250499786526916e-11,
+          "F": 1.198025879889375e-11,
+          "G": 3.149610823885429e-11,
+          "K": 1.795681550502415e-11,
+          "O": 2.3573010297234243e-11,
+          "P": 2.6757374094188435e-11,
+          "Q": 1.87135510267087e-11,
+          "U": 3.3295657897447484e-11,
+          "V": 3.3253393094678785e-11,
+          "bF": 2.526773668770632e-11,
+          "bG": 3.3747116212623496e-11,
+          "bU": 2.7638280553077266e-11
+        },
+        "initial_parameters_sha256": "85dd588d34ec0c41dbdadba2b7e056e32fcdc6d26713383d89d7977b94b85db7",
+        "parameter_count": 2538,
+        "seed": 147,
+        "sound_nll": 0.00021079376980405722,
+        "split": "mismatch_blue_red",
+        "subject_effect_original_sound_probability": [
+          -0.9996286877609007,
+          -0.9999409956557821
+        ],
+        "test_ids": [
+          3,
+          4
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931518957446684,
+          7.329361275070804e-06,
+          1.098562507327858,
+          9.010639349220416,
+          4.183090061820722e-06,
+          0.00021079376980405722,
+          1.946306235515945e-06
+        ],
+        "token_predictions": [
+          [
+            1,
+            3,
+            4,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            1,
+            3,
+            5,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "train_nll": 0.25598209656546034,
+        "train_trace": [
+          [
+            1,
+            2.120279954019659
+          ],
+          [
+            100,
+            0.25642328857960617
+          ],
+          [
+            200,
+            0.2561176971125788
+          ],
+          [
+            300,
+            0.25611041495692344
+          ],
+          [
+            400,
+            0.25648055985248114
+          ],
+          [
+            500,
+            0.25603379812277816
+          ],
+          [
+            600,
+            0.256004221800636
+          ],
+          [
+            700,
+            0.2560273681258273
+          ],
+          [
+            800,
+            0.25599799263999873
+          ],
+          [
+            900,
+            0.26194800249170996
+          ],
+          [
+            1000,
+            0.2560016014228565
+          ],
+          [
+            1100,
+            0.2559875488813179
+          ],
+          [
+            1200,
+            0.25868128527517903
+          ],
+          [
+            1300,
+            0.25599147778057557
+          ],
+          [
+            1400,
+            0.25598209656546034
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999873641612146,
+              0.9999752461065406
+            ],
+            "patched_document_ids": [
+              2,
+              5
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999873641612146,
+              0.9999752461065406
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9996372066158081,
+              0.9999412733944993
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9996372066158081,
+              0.9999412733944993
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              8.51885490737795e-06,
+              2.777387172907389e-07
+            ],
+            "patched_document_ids": [
+              7,
+              0
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999869460149193,
+              0.9999820074730403
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          -8.758419848264865e-07,
+          -9.240883567240843e-07
+        ],
+        "full_token_nll": 1.4223219183732732,
+        "gradient_errors": {
+          "E": 2.1736779043379784e-11,
+          "F": 2.59601957985911e-11,
+          "G": 2.285284461667203e-11,
+          "K": 2.0941747034403102e-11,
+          "O": 3.376713839098322e-11,
+          "P": 3.0758667314556565e-11,
+          "Q": 2.67018234779981e-11,
+          "U": 4.790089852546586e-11,
+          "V": 2.7141103600691885e-11,
+          "bF": 5.3271543426491874e-11,
+          "bG": 3.906710371870403e-11,
+          "bU": 4.6178852408651494e-11
+        },
+        "initial_parameters_sha256": "83a0719fbdbb802ec5484404dc85deb3652657d7d431a9d38c2f49328c649734",
+        "parameter_count": 2538,
+        "seed": 148,
+        "sound_nll": 1.0871720175175302e-05,
+        "split": "mismatch_blue_red",
+        "subject_effect_original_sound_probability": [
+          -0.9999917642969576,
+          -0.9999847530432958
+        ],
+        "test_ids": [
+          3,
+          4
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931549925513327,
+          1.2521267309033054e-05,
+          1.0985822441723332,
+          8.164484420768321,
+          6.22823020709407e-06,
+          1.0871720175175302e-05,
+          2.1499032328546556e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "train_nll": 0.25599266708718754,
+        "train_trace": [
+          [
+            1,
+            1.9970622970153393
+          ],
+          [
+            100,
+            0.25628172163744195
+          ],
+          [
+            200,
+            0.2571863752302215
+          ],
+          [
+            300,
+            0.25619490766284553
+          ],
+          [
+            400,
+            0.2561290725380521
+          ],
+          [
+            500,
+            0.2563289770928944
+          ],
+          [
+            600,
+            0.25600229104441163
+          ],
+          [
+            700,
+            0.2560045786521344
+          ],
+          [
+            800,
+            0.2566658662771569
+          ],
+          [
+            900,
+            0.25599232079306056
+          ],
+          [
+            1000,
+            0.2581613381534628
+          ],
+          [
+            1100,
+            0.2559940787231206
+          ],
+          [
+            1200,
+            0.25598365694461905
+          ],
+          [
+            1300,
+            0.2559792136568304
+          ],
+          [
+            1400,
+            0.25599266708718754
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999924310291048,
+              0.9999840257358574
+            ],
+            "patched_document_ids": [
+              2,
+              5
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999924310291048,
+              0.9999840257358574
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999933068710897,
+              0.9999849498242142
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999933068710897,
+              0.9999849498242142
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              1.5425741320754715e-06,
+              1.9678091829498644e-07
+            ],
+            "patched_document_ids": [
+              7,
+              0
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999859848857691,
+              0.9999940601560326
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          2.361667724903871e-05,
+          6.518679369182934e-06
+        ],
+        "full_token_nll": 1.476742844392953,
+        "gradient_errors": {
+          "E": 1.2851136821367959e-11,
+          "F": 2.402817441543581e-11,
+          "G": 3.0077017265650596e-11,
+          "K": 2.3000875170957856e-11,
+          "O": 2.1287120503810097e-11,
+          "P": 1.8700407487717147e-11,
+          "Q": 1.486363287360676e-11,
+          "U": 2.856342939949741e-11,
+          "V": 3.5676971142997727e-11,
+          "bF": 2.389789754975169e-11,
+          "bG": 3.9777847682387346e-11,
+          "bU": 2.024751200035979e-11
+        },
+        "initial_parameters_sha256": "d7f5ab81d40e7c04cd2b5bf4286fb5287eeb3234c5a13f34d6d41feef1a88919",
+        "parameter_count": 2538,
+        "seed": 144,
+        "sound_nll": 3.313636285462356e-05,
+        "split": "mismatch_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999589171920324,
+          -0.9999702697489347
+        ],
+        "test_ids": [
+          1,
+          6
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931496471523689,
+          9.603748350159726e-06,
+          1.0986278018756281,
+          8.545363648047879,
+          7.87882765087437e-06,
+          3.313636285462356e-05,
+          8.194735937899271e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            5,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            4,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "train_nll": 0.2559878311579708,
+        "train_trace": [
+          [
+            1,
+            1.9991547005379773
+          ],
+          [
+            100,
+            0.261927122743184
+          ],
+          [
+            200,
+            0.267308779520067
+          ],
+          [
+            300,
+            0.25605442814476176
+          ],
+          [
+            400,
+            0.256898156813241
+          ],
+          [
+            500,
+            0.2560240527429193
+          ],
+          [
+            600,
+            0.2560015535673805
+          ],
+          [
+            700,
+            0.2560314479372289
+          ],
+          [
+            800,
+            0.2559989384811402
+          ],
+          [
+            900,
+            0.2559984435943389
+          ],
+          [
+            1000,
+            0.2560007548350521
+          ],
+          [
+            1100,
+            0.2560153382676929
+          ],
+          [
+            1200,
+            0.2559910174989656
+          ],
+          [
+            1300,
+            0.2560804248882437
+          ],
+          [
+            1400,
+            0.2559878311579708
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999838394839357,
+              0.9999800242890895
+            ],
+            "patched_document_ids": [
+              0,
+              7
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999838394839357,
+              0.9999800242890895
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999602228066866,
+              0.9999735056097203
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999602228066866,
+              0.9999735056097203
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              1.3056146541440842e-06,
+              3.2358607856264852e-06
+            ],
+            "patched_document_ids": [
+              5,
+              2
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999903009975201,
+              0.9999929852788492
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          -3.461264921011953e-06,
+          1.8867692008761594e-07
+        ],
+        "full_token_nll": 1.1614778928273393,
+        "gradient_errors": {
+          "E": 1.959311358989968e-11,
+          "F": 1.5339634944211422e-11,
+          "G": 1.2271937372548836e-11,
+          "K": 1.500330889798833e-11,
+          "O": 3.230170558116141e-11,
+          "P": 2.2361192758557635e-11,
+          "Q": 2.4122562867839262e-11,
+          "U": 1.561817862538728e-11,
+          "V": 1.44909084731637e-11,
+          "bF": 2.5040011730759204e-11,
+          "bG": 2.0574146553098416e-11,
+          "bU": 2.550307187654255e-11
+        },
+        "initial_parameters_sha256": "37ee8c7adfd8d6b0478de65f59df0a8c767a12aa329f71ef65c2ca47bdcee29a",
+        "parameter_count": 2538,
+        "seed": 145,
+        "sound_nll": 9.288413142865284e-06,
+        "split": "mismatch_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999903719136736,
+          -0.999990173433463
+        ],
+        "test_ids": [
+          1,
+          6
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6938797641919939,
+          1.787288965435694e-05,
+          1.101122658810334,
+          6.335302533861011,
+          5.50622823351697e-06,
+          9.288413142865284e-06,
+          7.625397003962942e-06
+        ],
+        "token_predictions": [
+          [
+            1,
+            3,
+            5,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            1,
+            3,
+            4,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "train_nll": 0.25627963134395065,
+        "train_trace": [
+          [
+            1,
+            2.104027102309215
+          ],
+          [
+            100,
+            0.2565628944576938
+          ],
+          [
+            200,
+            0.2561919749568031
+          ],
+          [
+            300,
+            0.2561512456874783
+          ],
+          [
+            400,
+            0.2568902716325657
+          ],
+          [
+            500,
+            0.25602209029589695
+          ],
+          [
+            600,
+            0.2560744065527112
+          ],
+          [
+            700,
+            0.2560042158755597
+          ],
+          [
+            800,
+            0.2562444956313789
+          ],
+          [
+            900,
+            0.2559975349264701
+          ],
+          [
+            1000,
+            0.25598685690394335
+          ],
+          [
+            1100,
+            0.25601473426491905
+          ],
+          [
+            1200,
+            0.2559863686590764
+          ],
+          [
+            1300,
+            0.25598063908572105
+          ],
+          [
+            1400,
+            0.25627963134395065
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999877235294038,
+              0.9999904271428077
+            ],
+            "patched_document_ids": [
+              0,
+              7
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999877235294038,
+              0.9999904271428077
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999911847943248,
+              0.9999902384658876
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999911847943248,
+              0.9999902384658876
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              8.128806512241513e-07,
+              6.503242462204886e-08
+            ],
+            "patched_document_ids": [
+              5,
+              2
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999864224970371,
+              0.9999826855436941
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          9.234769639876461e-06,
+          7.836046908016314e-05
+        ],
+        "full_token_nll": 1.4961332478884193,
+        "gradient_errors": {
+          "E": 2.0232983691248485e-11,
+          "F": 3.0267681590256945e-11,
+          "G": 3.4724275538300375e-11,
+          "K": 4.282932331272499e-11,
+          "O": 5.3445498027215876e-11,
+          "P": 2.7518144013471968e-11,
+          "Q": 3.099353532067667e-11,
+          "U": 5.83129920422149e-11,
+          "V": 4.775015799429738e-11,
+          "bF": 2.4087877525946766e-11,
+          "bG": 1.804972837859964e-11,
+          "bU": 3.8624922704677545e-11
+        },
+        "initial_parameters_sha256": "1e09ccce1691db8b779b2a948d315845adb800a27baa70181a8059fd802635c9",
+        "parameter_count": 2538,
+        "seed": 146,
+        "sound_nll": 6.103316661291847e-05,
+        "split": "mismatch_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999732567556777,
+          -0.9998939088902994
+        ],
+        "test_ids": [
+          1,
+          6
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931474289187941,
+          9.316135356205335e-06,
+          1.0985591809345556,
+          8.681145131777942,
+          6.511030378293885e-06,
+          6.103316661291847e-05,
+          4.133255295668499e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            5,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            4,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "train_nll": 0.25598746824739727,
+        "train_trace": [
+          [
+            1,
+            2.195326034508849
+          ],
+          [
+            100,
+            0.2565778968027164
+          ],
+          [
+            200,
+            0.25611095299167436
+          ],
+          [
+            300,
+            0.2561059824573559
+          ],
+          [
+            400,
+            0.2560411663228197
+          ],
+          [
+            500,
+            0.25612931774417735
+          ],
+          [
+            600,
+            0.25601891465533905
+          ],
+          [
+            700,
+            0.25615682435330056
+          ],
+          [
+            800,
+            0.2563364270963405
+          ],
+          [
+            900,
+            0.25599950733309246
+          ],
+          [
+            1000,
+            0.2560246910843932
+          ],
+          [
+            1100,
+            0.2560094410827089
+          ],
+          [
+            1200,
+            0.25600387890566445
+          ],
+          [
+            1300,
+            0.25599878006286575
+          ],
+          [
+            1400,
+            0.25598746824739727
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999843811282975,
+              0.9999811528110243
+            ],
+            "patched_document_ids": [
+              0,
+              7
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999843811282975,
+              0.9999811528110243
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999751463586576,
+              0.9999027923419441
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999751463586576,
+              0.9999027923419441
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              1.8896029798691303e-06,
+              8.883451644787263e-06
+            ],
+            "patched_document_ids": [
+              5,
+              2
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999568710506452,
+              0.9999853975689132
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          0.00029488529569965394,
+          5.8233077830371904e-05
+        ],
+        "full_token_nll": 1.531220517409022,
+        "gradient_errors": {
+          "E": 2.7628139359636705e-11,
+          "F": 2.276104131559986e-11,
+          "G": 2.573230821131811e-11,
+          "K": 9.984137214896771e-12,
+          "O": 2.61865754774826e-11,
+          "P": 2.071209176390809e-11,
+          "Q": 1.3302391631796195e-11,
+          "U": 2.6944764128233878e-11,
+          "V": 2.2053695675205987e-11,
+          "bF": 1.9287137859036463e-11,
+          "bG": 1.88923321431389e-11,
+          "bU": 3.397054859632931e-11
+        },
+        "initial_parameters_sha256": "85dd588d34ec0c41dbdadba2b7e056e32fcdc6d26713383d89d7977b94b85db7",
+        "parameter_count": 2538,
+        "seed": 147,
+        "sound_nll": 0.00019667633242184752,
+        "split": "mismatch_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9996767760592573,
+          -0.9999129373183634
+        ],
+        "test_ids": [
+          1,
+          6
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931519359337994,
+          8.146503467003637e-06,
+          1.0985414295204419,
+          8.926641718011584,
+          2.1671659809301087e-06,
+          0.00019667633242184752,
+          1.548395460186581e-06
+        ],
+        "token_predictions": [
+          [
+            1,
+            3,
+            5,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            1,
+            3,
+            4,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "train_nll": 0.2559837886520325,
+        "train_trace": [
+          [
+            1,
+            2.121449986802975
+          ],
+          [
+            100,
+            0.2562699233826317
+          ],
+          [
+            200,
+            0.25610548306131325
+          ],
+          [
+            300,
+            0.2560660537501916
+          ],
+          [
+            400,
+            0.25607050057339026
+          ],
+          [
+            500,
+            0.2685293987982444
+          ],
+          [
+            600,
+            0.2560215117123259
+          ],
+          [
+            700,
+            0.25599777971207915
+          ],
+          [
+            800,
+            0.2560163468869265
+          ],
+          [
+            900,
+            0.25600520640240915
+          ],
+          [
+            1000,
+            0.2572687140498472
+          ],
+          [
+            1100,
+            0.25599588078430857
+          ],
+          [
+            1200,
+            0.2560123983162117
+          ],
+          [
+            1300,
+            0.2560008144382929
+          ],
+          [
+            1400,
+            0.2559837886520325
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999885791315951,
+              0.9999712372827597
+            ],
+            "patched_document_ids": [
+              0,
+              7
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999885791315951,
+              0.9999712372827597
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9996936938358955,
+              0.9999130042049293
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9996936938358955,
+              0.9999130042049293
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              1.6917776638106484e-05,
+              6.688656593691037e-08
+            ],
+            "patched_document_ids": [
+              5,
+              2
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999754677752248,
+              0.9999816076523119
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          2.4146730884799794e-06,
+          0.000327908511102315
+        ],
+        "full_token_nll": 1.5852684149521965,
+        "gradient_errors": {
+          "E": 3.2060160082281186e-11,
+          "F": 2.1177906650571288e-11,
+          "G": 4.0319320798731795e-11,
+          "K": 2.696579797564075e-11,
+          "O": 2.5960841115724165e-11,
+          "P": 2.809439833550975e-11,
+          "Q": 1.9256205462635234e-11,
+          "U": 3.1234449488631855e-11,
+          "V": 2.3989212417745154e-11,
+          "bF": 2.1185553311653393e-11,
+          "bG": 3.921721281052726e-11,
+          "bU": 1.9116618010794895e-11
+        },
+        "initial_parameters_sha256": "83a0719fbdbb802ec5484404dc85deb3652657d7d431a9d38c2f49328c649734",
+        "parameter_count": 2538,
+        "seed": 148,
+        "sound_nll": 0.00018326365806681878,
+        "split": "mismatch_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999883819641844,
+          -0.9996422952315034
+        ],
+        "test_ids": [
+          1,
+          6
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931512975329415,
+          8.471741780618584e-06,
+          1.0986167656713353,
+          9.304913225184771,
+          4.4714716261318835e-06,
+          0.00018326365806681878,
+          1.409404856038642e-06
+        ],
+        "token_predictions": [
+          [
+            1,
+            3,
+            5,
+            1,
+            6,
+            7,
+            9
+          ],
+          [
+            1,
+            3,
+            4,
+            2,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "train_nll": 0.2559782942640529,
+        "train_trace": [
+          [
+            1,
+            1.983715436315199
+          ],
+          [
+            100,
+            0.2565166432442415
+          ],
+          [
+            200,
+            0.25618668099705044
+          ],
+          [
+            300,
+            0.2607997145075309
+          ],
+          [
+            400,
+            0.25602510298490777
+          ],
+          [
+            500,
+            0.2560165083223665
+          ],
+          [
+            600,
+            0.2560550090538885
+          ],
+          [
+            700,
+            0.25599568389673655
+          ],
+          [
+            800,
+            0.2559989819673871
+          ],
+          [
+            900,
+            0.2559873755465985
+          ],
+          [
+            1000,
+            0.25599383647201757
+          ],
+          [
+            1100,
+            0.25598362933075464
+          ],
+          [
+            1200,
+            0.2560074627002135
+          ],
+          [
+            1300,
+            0.2559829536525857
+          ],
+          [
+            1400,
+            0.2559782942640529
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999911697435953,
+              0.9999726892929777
+            ],
+            "patched_document_ids": [
+              0,
+              7
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999911697435953,
+              0.9999726892929777
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999887550705068,
+              0.9996447807818754
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999887550705068,
+              0.9996447807818754
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              3.731063224068525e-07,
+              2.4855503719642446e-06
+            ],
+            "patched_document_ids": [
+              5,
+              2
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999833134502217,
+              0.9999973596901023
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          1.5500585512917553e-06,
+          -8.270765661233526e-08
+        ],
+        "full_token_nll": 1.473264428894869,
+        "gradient_errors": {
+          "E": 2.1012662096420165e-11,
+          "F": 2.5512601579957828e-11,
+          "G": 1.6947467734729216e-11,
+          "K": 1.8005880369608568e-11,
+          "O": 2.4087101860607515e-11,
+          "P": 4.604870651458981e-11,
+          "Q": 3.289693009374348e-11,
+          "U": 2.0347792895059058e-11,
+          "V": 1.9622411334685452e-11,
+          "bF": 3.207779875058492e-11,
+          "bG": 3.038706786195888e-11,
+          "bU": 4.155838173591775e-11
+        },
+        "initial_parameters_sha256": "d7f5ab81d40e7c04cd2b5bf4286fb5287eeb3234c5a13f34d6d41feef1a88919",
+        "parameter_count": 2538,
+        "seed": 144,
+        "sound_nll": 8.271957074454437e-06,
+        "split": "match_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999927071936122,
+          -0.9999895088438961
+        ],
+        "test_ids": [
+          0,
+          7
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931531514087593,
+          8.982529156356007e-06,
+          1.098646984705625,
+          8.52095348584583,
+          5.847898380455671e-05,
+          8.271957074454437e-06,
+          2.1646833835030024e-05
+        ],
+        "token_predictions": [
+          [
+            1,
+            3,
+            5,
+            2,
+            6,
+            7,
+            9
+          ],
+          [
+            1,
+            3,
+            4,
+            1,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "train_nll": 0.2559894926890952,
+        "train_trace": [
+          [
+            1,
+            1.9985144422259342
+          ],
+          [
+            100,
+            0.2586319549548059
+          ],
+          [
+            200,
+            0.25628989665901447
+          ],
+          [
+            300,
+            0.25604709294027234
+          ],
+          [
+            400,
+            0.2560397956770189
+          ],
+          [
+            500,
+            0.25962539203053187
+          ],
+          [
+            600,
+            0.25601505571978134
+          ],
+          [
+            700,
+            0.2559988780738287
+          ],
+          [
+            800,
+            0.25599911227717675
+          ],
+          [
+            900,
+            0.25608617433818154
+          ],
+          [
+            1000,
+            0.2559923300624997
+          ],
+          [
+            1100,
+            0.2560107787486512
+          ],
+          [
+            1200,
+            0.25598781201010357
+          ],
+          [
+            1300,
+            0.2565451929013057
+          ],
+          [
+            1400,
+            0.2559894926890952
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999954570886773,
+              0.9999894664212414
+            ],
+            "patched_document_ids": [
+              1,
+              6
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999954570886773,
+              0.9999894664212414
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.999993907030126,
+              0.999989549128898
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.999993907030126,
+              0.999989549128898
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              1.199836513778386e-06,
+              4.028500186467795e-08
+            ],
+            "patched_document_ids": [
+              4,
+              3
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999942338130453,
+              0.9999930922428717
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          6.544331670021997e-06,
+          -5.9095659408203716e-06
+        ],
+        "full_token_nll": 1.434868773746791,
+        "gradient_errors": {
+          "E": 3.747883860899526e-11,
+          "F": 1.2748095331097109e-11,
+          "G": 3.070091750267956e-11,
+          "K": 3.487373519302228e-11,
+          "O": 2.2357431552801066e-11,
+          "P": 1.809474792224819e-11,
+          "Q": 3.68740640777597e-11,
+          "U": 1.9767881775933915e-11,
+          "V": 2.917717630002148e-11,
+          "bF": 2.9065476588041594e-11,
+          "bG": 3.642329493569463e-11,
+          "bU": 2.3477941812899417e-11
+        },
+        "initial_parameters_sha256": "37ee8c7adfd8d6b0478de65f59df0a8c767a12aa329f71ef65c2ca47bdcee29a",
+        "parameter_count": 2538,
+        "seed": 145,
+        "sound_nll": 1.4459788285113894e-05,
+        "split": "match_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999777003352527,
+          -0.9999914562392832
+        ],
+        "test_ids": [
+          0,
+          7
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931553365525985,
+          9.641829094686434e-06,
+          1.0986454862928223,
+          8.25224849174306,
+          3.077991926387138e-06,
+          1.4459788285113894e-05,
+          4.922029750555558e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "train_nll": 0.2559890376169842,
+        "train_trace": [
+          [
+            1,
+            2.1015095740747998
+          ],
+          [
+            100,
+            0.2563056090412452
+          ],
+          [
+            200,
+            0.25654322187404655
+          ],
+          [
+            300,
+            0.256029548582452
+          ],
+          [
+            400,
+            0.2560762874548528
+          ],
+          [
+            500,
+            0.2560078767091375
+          ],
+          [
+            600,
+            0.26001309312426857
+          ],
+          [
+            700,
+            0.2560065519386268
+          ],
+          [
+            800,
+            0.25605426320221436
+          ],
+          [
+            900,
+            0.25603773910116073
+          ],
+          [
+            1000,
+            0.25598774143329106
+          ],
+          [
+            1100,
+            0.2560963944883178
+          ],
+          [
+            1200,
+            0.2559882013291438
+          ],
+          [
+            1300,
+            0.25598392384878743
+          ],
+          [
+            1400,
+            0.2559890376169842
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999859983573152,
+              0.999985717077972
+            ],
+            "patched_document_ids": [
+              1,
+              6
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999859983573152,
+              0.999985717077972
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999794540256451,
+              0.9999916266439128
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999794540256451,
+              0.9999916266439128
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              1.7536903925036847e-06,
+              1.7040462961512359e-07
+            ],
+            "patched_document_ids": [
+              4,
+              3
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999931766124095,
+              0.9999922388363719
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          -4.581216860310988e-07,
+          4.062544386784772e-06
+        ],
+        "full_token_nll": 1.5063959701435412,
+        "gradient_errors": {
+          "E": 3.623803167263073e-11,
+          "F": 2.0575294506358643e-11,
+          "G": 2.3489130779319467e-11,
+          "K": 3.101625759612675e-11,
+          "O": 2.5696376450279335e-11,
+          "P": 3.0214241698856004e-11,
+          "Q": 1.492612023562545e-11,
+          "U": 2.389715595546571e-11,
+          "V": 2.1066219949017473e-11,
+          "bF": 1.9474373502692544e-11,
+          "bG": 1.1609383593347289e-11,
+          "bU": 4.964260252871e-11
+        },
+        "initial_parameters_sha256": "1e09ccce1691db8b779b2a948d315845adb800a27baa70181a8059fd802635c9",
+        "parameter_count": 2538,
+        "seed": 146,
+        "sound_nll": 3.096817078182026e-05,
+        "split": "match_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999705563330147,
+          -0.9999501801344377
+        ],
+        "test_ids": [
+          0,
+          7
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931490485147832,
+          1.2023714935069057e-05,
+          1.0985922226195406,
+          8.752973541315752,
+          7.877474571491284e-06,
+          3.096817078182026e-05,
+          6.109194424151375e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "train_nll": 0.25598774241313005,
+        "train_trace": [
+          [
+            1,
+            2.1834661483407403
+          ],
+          [
+            100,
+            0.2568273173784501
+          ],
+          [
+            200,
+            0.25621309621388566
+          ],
+          [
+            300,
+            0.2560983101337491
+          ],
+          [
+            400,
+            0.2560829248230678
+          ],
+          [
+            500,
+            0.25638828483402304
+          ],
+          [
+            600,
+            0.2560906319179167
+          ],
+          [
+            700,
+            0.25600986803722775
+          ],
+          [
+            800,
+            0.2560154061839994
+          ],
+          [
+            900,
+            0.2560118800717177
+          ],
+          [
+            1000,
+            0.2560073570360382
+          ],
+          [
+            1100,
+            0.2559934714226368
+          ],
+          [
+            1200,
+            0.2560227856222149
+          ],
+          [
+            1300,
+            0.2574400488661148
+          ],
+          [
+            1400,
+            0.25598774241313005
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999782342936413,
+              0.9999634348398332
+            ],
+            "patched_document_ids": [
+              1,
+              6
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999782342936413,
+              0.9999634348398332
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999786924153273,
+              0.9999593722954464
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999786924153273,
+              0.9999593722954464
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              8.136082312626948e-06,
+              9.19216100874809e-06
+            ],
+            "patched_document_ids": [
+              4,
+              3
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.999982395127035,
+              0.9999814033168298
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          0.0074464815878741986,
+          -9.334034307029171e-06
+        ],
+        "full_token_nll": 1.2883582225717276,
+        "gradient_errors": {
+          "E": 2.7628139359636705e-11,
+          "F": 2.2167540183028536e-11,
+          "G": 2.056410922622598e-11,
+          "K": 3.0535411330544215e-11,
+          "O": 3.7382595283186326e-11,
+          "P": 2.988384539825972e-11,
+          "Q": 1.1131037040576714e-11,
+          "U": 2.7095027610446465e-11,
+          "V": 3.036938525636211e-11,
+          "bF": 1.6187051699034782e-11,
+          "bG": 3.355560967976956e-11,
+          "bU": 3.221962974198078e-11
+        },
+        "initial_parameters_sha256": "85dd588d34ec0c41dbdadba2b7e056e32fcdc6d26713383d89d7977b94b85db7",
+        "parameter_count": 2538,
+        "seed": 147,
+        "sound_nll": 0.0037474398906516323,
+        "split": "match_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9925366768457341,
+          -0.9999776049518688
+        ],
+        "test_ids": [
+          0,
+          7
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931833875670051,
+          1.3477286391315986e-05,
+          1.0983882670012495,
+          7.223018751139152,
+          0.0001537226866999334,
+          0.0037474398906516323,
+          2.512430943065776e-06
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "train_nll": 0.25603104712507424,
+        "train_trace": [
+          [
+            1,
+            2.119264174409791
+          ],
+          [
+            100,
+            0.2563866857758654
+          ],
+          [
+            200,
+            0.256299365070609
+          ],
+          [
+            300,
+            0.2562199958042359
+          ],
+          [
+            400,
+            0.2560980099425847
+          ],
+          [
+            500,
+            0.2560507772375566
+          ],
+          [
+            600,
+            0.25647847791695405
+          ],
+          [
+            700,
+            0.2560261708186743
+          ],
+          [
+            800,
+            0.2673156153372014
+          ],
+          [
+            900,
+            0.2560215130318741
+          ],
+          [
+            1000,
+            0.25599936125670814
+          ],
+          [
+            1100,
+            0.2560456626310619
+          ],
+          [
+            1200,
+            0.2560010593264136
+          ],
+          [
+            1300,
+            0.2559896891824649
+          ],
+          [
+            1400,
+            0.25603104712507424
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999905722076748,
+              0.9999796298544995
+            ],
+            "patched_document_ids": [
+              1,
+              6
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999905722076748,
+              0.9999796298544995
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9925440906198006,
+              0.9999889638888065
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9925440906198006,
+              0.9999889638888065
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              7.413774066554018e-06,
+              1.1358936937687735e-05
+            ],
+            "patched_document_ids": [
+              4,
+              3
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999836089202642,
+              0.99998722800333
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      },
+      {
+        "distractor_effect_original_sound_probability": [
+          1.7432764698455117e-07,
+          3.5107504299247694e-06
+        ],
+        "full_token_nll": 1.497475270091779,
+        "gradient_errors": {
+          "E": 2.3283444616772897e-11,
+          "F": 3.179033945810428e-11,
+          "G": 7.720345196471357e-12,
+          "K": 2.416960560728057e-11,
+          "O": 1.6483288692303866e-11,
+          "P": 3.01709698891095e-11,
+          "Q": 2.6908464497397977e-11,
+          "U": 1.2811758381622851e-11,
+          "V": 2.1411998910036978e-11,
+          "bF": 1.8314336158731237e-11,
+          "bG": 4.371862594165776e-11,
+          "bU": 2.7802218860450978e-11
+        },
+        "initial_parameters_sha256": "83a0719fbdbb802ec5484404dc85deb3652657d7d431a9d38c2f49328c649734",
+        "parameter_count": 2538,
+        "seed": 148,
+        "sound_nll": 1.028338845243643e-05,
+        "split": "match_red_blue",
+        "subject_effect_original_sound_probability": [
+          -0.9999923141132079,
+          -0.9999800859099072
+        ],
+        "test_ids": [
+          0,
+          7
+        ],
+        "token_accuracy_by_position": [
+          0.5,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "token_nll_by_position": [
+          0.6931512869153467,
+          6.502984024658122e-06,
+          1.0952530537801772,
+          8.693874990630945,
+          7.552336350928819e-06,
+          1.028338845243643e-05,
+          2.3220607155816127e-05
+        ],
+        "token_predictions": [
+          [
+            2,
+            3,
+            5,
+            2,
+            6,
+            7,
+            9
+          ],
+          [
+            2,
+            3,
+            4,
+            1,
+            6,
+            8,
+            9
+          ]
+        ],
+        "train_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "train_nll": 0.2559940266196869,
+        "train_trace": [
+          [
+            1,
+            1.996984710166975
+          ],
+          [
+            100,
+            0.25629727556013765
+          ],
+          [
+            200,
+            0.260515293541306
+          ],
+          [
+            300,
+            0.2560451609563266
+          ],
+          [
+            400,
+            0.25603664936937737
+          ],
+          [
+            500,
+            0.2566004773786147
+          ],
+          [
+            600,
+            0.2560102300267414
+          ],
+          [
+            700,
+            0.25684653689449816
+          ],
+          [
+            800,
+            0.25599733032536465
+          ],
+          [
+            900,
+            0.25605385194877023
+          ],
+          [
+            1000,
+            0.2559913767397992
+          ],
+          [
+            1100,
+            0.2561469851084878
+          ],
+          [
+            1200,
+            0.25598670775663007
+          ],
+          [
+            1300,
+            0.2560461151388247
+          ],
+          [
+            1400,
+            0.2559940266196869
+          ]
+        ],
+        "variants": {
+          "distractor": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999962864701204,
+              0.9999868319777017
+            ],
+            "patched_document_ids": [
+              1,
+              6
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999962864701204,
+              0.9999868319777017
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "original": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              0.9999961121424734,
+              0.9999833212272717
+            ],
+            "predicted_sound": [
+              7,
+              8
+            ],
+            "target_probability": [
+              0.9999961121424734,
+              0.9999833212272717
+            ],
+            "target_sound": [
+              7,
+              8
+            ]
+          },
+          "speaker": {
+            "accuracy": 1.0,
+            "all_correct": true,
+            "original_sound_probability": [
+              3.7980292654931338e-06,
+              3.2353173645370977e-06
+            ],
+            "patched_document_ids": [
+              4,
+              3
+            ],
+            "patched_is_training": [
+              true,
+              true
+            ],
+            "predicted_sound": [
+              8,
+              7
+            ],
+            "target_probability": [
+              0.9999871599424803,
+              0.9999966838203281
+            ],
+            "target_sound": [
+              8,
+              7
+            ]
+          }
+        }
+      }
+    ],
+    "selection": "All configured runs included; no test-based tuning/retries.",
+    "summary": [
+      {
+        "all_test_sounds_correct_runs": 5,
+        "conditional_95pct_interval": [
+          0.4781762498950185,
+          1.0
+        ],
+        "mean_distractor_accuracy": 1.0,
+        "mean_sound_accuracy": 1.0,
+        "mean_speaker_flip_accuracy": 1.0,
+        "mean_token_nll": 1.4741482193603894,
+        "seeds": 5,
+        "split": "mismatch_blue_red"
+      },
+      {
+        "all_test_sounds_correct_runs": 5,
+        "conditional_95pct_interval": [
+          0.4781762498950185,
+          1.0
+        ],
+        "mean_distractor_accuracy": 1.0,
+        "mean_sound_accuracy": 1.0,
+        "mean_speaker_flip_accuracy": 1.0,
+        "mean_token_nll": 1.450168583493986,
+        "seeds": 5,
+        "split": "mismatch_red_blue"
+      },
+      {
+        "all_test_sounds_correct_runs": 5,
+        "conditional_95pct_interval": [
+          0.4781762498950185,
+          1.0
+        ],
+        "mean_distractor_accuracy": 1.0,
+        "mean_sound_accuracy": 1.0,
+        "mean_speaker_flip_accuracy": 1.0,
+        "mean_token_nll": 1.4400725330897415,
+        "seeds": 5,
+        "split": "match_red_blue"
+      }
+    ],
+    "uncertainty_scope": "Each interval is conditional on its fixed split and IID initializations; separate intervals are not simultaneous; no bootstrap or IID test-document claim.",
+    "vocabulary": [
+      "<bos>",
+      "cat",
+      "dog",
+      "sees",
+      "red",
+      "blue",
+      "says",
+      "meow",
+      "woof",
+      "<eos>"
+    ]
+  }
+}
