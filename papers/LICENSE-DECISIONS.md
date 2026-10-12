@@ -2,7 +2,7 @@
 
 核验日期 2026-10-12；原索引快照 `b239828c8b5199c0faf10e34c899e97e49b1e0a6`。独立许可调研逐篇检查官方 arXiv 的 view license、Nature 的 Rights and permissions；本表记录具体版本，编辑选择以教学作用为依据。
 
-本轮完整译本：DPO、推理时计算、R1 Nature、CHIVE、DGM、STARS。其他可译论文未选入本轮，不以许可可用或英文链接冒充译文交付。IH-Challenge 和 Anthropic 浏览器防御采用原创中文研究说明。
+本轮指定版本完整译本共九篇：DPO、推理时计算、R1 Nature、CHIVE、DGM、STARS、AlphaProof、Engram、CaT。完整范围包括指定论文本体中包含的附录与扩展数据；AlphaProof的独立9页Supplementary Information及Supplementary Data1 ZIP、R1 Nature的独立83页Supplementary均未纳入译本，单独附件不借用正文许可。其他可译论文未选入本轮，不以许可可用或英文链接冒充译文交付。IH-Challenge 和 Anthropic 浏览器防御采用原创中文研究说明。
 
 |ID|原文与指定版本|许可|本轮用途|
 |---|---|---|---|

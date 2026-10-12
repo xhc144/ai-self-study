@@ -1,0 +1,8 @@
+{
+  "archive_sha256": "2afd163dc3684d3a8b720fa7b0967943ffe1e1dae53ac16f9e76f89541f30383",
+  "archive_bytes": 58743118,
+  "manifest_files": 478,
+  "all_file_sha_and_size_valid": true,
+  "no_unlisted_zip_members": true,
+  "safe_fresh_extraction": true
+}

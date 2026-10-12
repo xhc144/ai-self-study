@@ -1,6 +1,6 @@
 \begin{table}[htbp]
 \centering\begingroup\setlength{\tabcolsep}{3pt}
-\caption{原文表2: 长上下文性能,32k长度. 译稿把原模型行与指标列转置,每个数据单元保留. 括号为扩展训练前的预训练步数及损失. LongPPL越低越好,RULER准确率越高越好;粗体和下划线保留作者标记.}\label{engram-tab-2}
+\caption{原文表2: 长上下文性能比较,32k长度. 括号内的值（如50k,1.62）表示长上下文扩展前的预训练步数及对应损失. 两项主要发现: (1)仅用82\%的预训练FLOPs（41k相比50k）,Engram-27B达到基线的LongPPL\cite{engram-fangwrong}表现,同时在RULER\cite{engram-hsiehruler}上准确率显著更高; (2)在等预训练损失（46k）和等预训练FLOPs（50k）两种设置下,Engram-27B在全部指标上显著优于基线. 粗体表示最好,下划线表示第二好. \textit{译注: 原模型行与指标列转置,全部单元及作者标记保留;LongPPL越低越好,RULER准确率越高越好. 原文“全部指标”及部分最优标记有数据例外,见文末译注.}}\label{engram-tab-2}
 \begin{tabular}{lrrrr}\toprule
 指标 & \shortstack{MoE-27B\\(50k,1.63)} & \shortstack{Engram-27B\\(41k,1.66)} & \shortstack{Engram-27B\\(46k,1.63)} & \shortstack{Engram-27B\\(50k,1.62)} \\
 \midrule

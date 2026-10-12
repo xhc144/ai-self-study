@@ -340,7 +340,7 @@ MoE通过每token条件激活少数专家, 分离容量与计算成本, 由Shaze
 
 \phantomsection
 \noindent\textbf{知识存储机制.}\paperlabel{7}{engram-sec-7-5}
-容量扩展之外, 许多研究考察Transformer如何编码、取回事实知识. FFN被广泛假设为键值记忆\cite{engram-geva2021transformer}: 第一层探测模式作“键”, 第二层把特定信息作“值”投到残差流. 特定“知识神经元”的识别\cite{engram-dai2022knowledge}支持模块性. 因果跟踪\cite{engram-meng2022locating}把事实回忆信息流定位到特定FFN层, 提供进一步证据, 并启发ROME\cite{engram-meng2022locating}、MEMIT\cite{engram-meng2022mass}等无需重训直接更新事实关联的编辑算法. Othello-GPT等内部表示研究\cite{engram-li2024emergentworldrepresentationsexploring}还提示, 这些存储机制可能帮助形成结构化“世界模型”.
+容量扩展之外, 许多研究考察Transformer如何编码、取回事实知识. FFN被广泛假设为键值记忆\cite{engram-geva2021transformer}: 第一层探测模式作“键”, 第二层把特定信息作“值”投到残差流. 特定“知识神经元”的识别\cite{engram-dai2022knowledge}支持模块性. 因果跟踪\cite{engram-meng2022locating}把事实回忆信息流定位到特定FFN层, 提供进一步证据, 并启发ROME\cite{engram-meng2022locating}、MEMIT\cite{engram-meng2022mass}等无需重训直接更新事实关联的编辑算法. Othello-GPT等内部表示研究\cite{engram-li2024emergentworldrepresentationsexploring}还提示, 这些存储机制可能帮助形成结构化“世界模型”, 而非仅仅进行统计记忆.
 
 \originalsection{8 结论}\paperlabel{8}{engram-sec-8}
 本工作提出条件记忆, 作为主流条件计算MoE的互补稀疏轴, 解决动态计算模拟知识检索的低效. Engram把经典$N$-gram embedding现代化, 实现对静态模式可扩展、常数时间$O(1)$查找.

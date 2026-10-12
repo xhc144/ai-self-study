@@ -23,10 +23,10 @@ def main():
     paths.extend((ROOT / "dist/papers").glob("*.pdf"))
     for folder in DIRECTORIES:
         paths.extend(p for p in (ROOT / folder).rglob("*") if p.is_file()
-                     and not any(part in {"__pycache__", "render", "style-check", "reproduction-logs-v03"}
+                     and not any(part in {"__pycache__", "render", "style-check", "reproduction-logs-v03", "reproduction-logs-v031"}
                                  for part in p.relative_to(ROOT).parts)
                      and p.suffix not in {".pyc", ".log"}
-                     and p.name not in {"v03-reproducibility.json"})
+                     and p.name not in {"v03-reproducibility.json", "v031-reproducibility.json"})
     paths = sorted(set(paths))
     if any(not p.is_file() for p in paths):
         raise FileNotFoundError("An explicitly required delivery file is missing")
@@ -34,7 +34,7 @@ def main():
         "sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
         "size_bytes": p.stat().st_size,
     } for p in paths}
-    manifest = json.dumps({"format": 1, "release": "0.3.0", "scope": "Editable sources, actual results and all component PDFs. Combined PDFs are reproducibly assembled, not redundantly packed. Archive-bound final verification is a repository sidecar.", "files": files},
+    manifest = json.dumps({"format": 1, "release": "0.3.1", "scope": "Editable sources, actual results and all component PDFs. Combined PDFs are reproducibly assembled, not redundantly packed. Archive-bound final verification is a repository sidecar.", "files": files},
                           ensure_ascii=False, indent=2).encode() + b"\n"
     out = ROOT / "dist/ai-self-study-source.zip"
     out.parent.mkdir(exist_ok=True)

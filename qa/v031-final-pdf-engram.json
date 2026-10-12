@@ -1,0 +1,4845 @@
+{
+  "pdf_path": "/workspace/ai-self-study/dist/papers/engram.pdf",
+  "sha256": "62e2bf8b1dce159f6ce339e7e8764af66e9e048fdc88f3aa4402dbe0875142fa",
+  "pages": 34,
+  "old_pdf_path": "/tmp/ai-self-study-v03-public-clone/dist/papers/engram.pdf",
+  "old_sha256": "f9d5ed12246ea59f27a528fb8838295c65c699263cf075ea7d3a5f6c7c2f046e",
+  "old_pages": 34,
+  "pixel_changed_pages": [
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19
+  ],
+  "text_changed_pages": [
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19
+  ],
+  "unchanged_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    15,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "high_pages": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "page_data": [
+    {
+      "page": 1,
+      "text_begin": "条件记忆与稀疏查找 非官方中文研究资料·0.3 ·来源与许可逐篇注明 目录 1 通过可扩展查找实现条件记忆 2 1.1 摘要. . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
+      "chars": 1518,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 2,
+      "text_begin": "1 通过可扩展查找实现条件记忆 1 通过可扩展查找实现条件记忆 通过可扩展查找实现条件记忆: 大语言模型的新稀疏轴 Conditional Memory via Scalable Lookup: A New Axis of Sparsity",
+      "chars": 1625,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 3,
+      "text_begin": "1.2 1 引言 1 通过可扩展查找实现条件记忆 1.2 1 引言 稀疏性是智能系统中反复出现的设计原则, 从生物神经电路[95, 77] 到现代大语言模型都能看到它. 目前, 这一 原则主要通过MoE[107, 24] 实现, 即用条件计",
+      "chars": 1669,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 4,
+      "text_begin": "1.3 2 架构 1 通过可扩展查找实现条件记忆 文还讨论多分支集成和系统层设计. Vocab Embedding Alexander the Great Only could tame the horse Bucephalus Trans",
+      "chars": 1222,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 5,
+      "text_begin": "1.3 2 架构 1 通过可扩展查找实现条件记忆 实际的ϕn,k 用轻量乘法–异或哈希实现. 最终记忆向量et ∈Rdmem 拼接所有检索到的embedding: et ≜ N ∥ n=2 K ∥ k=1 et,n,k. (1.2) 2.3",
+      "chars": 1213,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 6,
+      "text_begin": "1.3 2 架构 1 通过可扩展查找实现条件记忆 2.5 系统效率: 计算与记忆解耦 参数扩展常受GPU 高带宽显存(HBM) 容量限制. MoE 基于运行时隐状态动态路由, Engram 则仅依赖输入token ID 确定性检索, 因而自",
+      "chars": 1280,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 7,
+      "text_begin": "1.4 3 扩展规律与稀疏分配 1 通过可扩展查找实现条件记忆 1.4 3 扩展规律与稀疏分配 条件记忆的Engram 与条件计算的MoE 专家在结构上互补. 本节研究这种双重结构的扩展性质及最优稀疏容 量分配, 关注两个问题: 总参数和训",
+      "chars": 1649,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 8,
+      "text_begin": "1.5 4 大规模预训练 1 通过可扩展查找实现条件记忆 20%–25% 分给Engram 时最好. 10B 设置、6 × 1020 FLOPs 中, 损失由纯MoE 的1.7248 降为接近ρ = 80% 最优 点的1.7109, 差为0",
+      "chars": 1512,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 9,
+      "text_begin": "1.5 4 大规模预训练 1 通过可扩展查找实现条件记忆 • Engram-40B 保持相同骨干和计算预算, 稀疏embedding 扩至18.5B, 总参数39.5B, 用于研究Engram 扩展性 质. 评价协议. 评价覆盖语言建模、知",
+      "chars": 1324,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 10,
+      "text_begin": "1.5 4 大规模预训练 1 通过可扩展查找实现条件记忆 ARC-Challenge (准确率) 25-shot 59.3 70.1 73.8 76.4 TriviaQA (EM) 5-shot 33.0 48.8 50.7 51.8 Tr",
+      "chars": 1279,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 11,
+      "text_begin": "1.6 5 长上下文训练 1 通过可扩展查找实现条件记忆 Engram-40B 进一步降低预训练损失, 改善大多数基准, 但并非每项任务严格优于27B. 作者推测原因是训练不 足: 40B 与基线的训练损失差在训练末期仍扩大, 暗示当前to",
+      "chars": 1586,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 12,
+      "text_begin": "1.7 6 分析 1 通过可扩展查找实现条件记忆 1. 不只由注意力机制决定的长上下文能力. 注意力和位置编码提供上下文处理结构基础[111, 100, 127, 125], 但结 果表明长上下文性能不只由架构先验决定. 原文称, Engr",
+      "chars": 1490,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 13,
+      "text_begin": "1.7 6 分析 1 通过可扩展查找实现条件记忆 表1.3: 原文表3: 从Ghandeharioun 等的Patchscopes[41] 转引的实体解析例子. 多层注意力与FFN 逐渐构 建“Diana, Princess of Wale",
+      "chars": 1752,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 14,
+      "text_begin": "1.7 6 分析 1 通过可扩展查找实现条件记忆 0 5 10 15 20 25 Layer Index 0 2 4 6 8 10 KL Divergence (a) Layer-wise KL Divergence by LogitLen",
+      "chars": 1321,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 15,
+      "text_begin": "1.7 6 分析 1 通过可扩展查找实现条件记忆 1.808 3B MoE Baseline 1 2 3 4 5 6 7 8 9 10 11 12 Ablation Variations Layer Index 1.768 1.770 1.",
+      "chars": 1258,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 16,
+      "text_begin": "1.7 6 分析 1 通过可扩展查找实现条件记忆 实验设置. 推断测试程序基于nano-vLLM1, 是vLLM[72] 的精简原型. 为排除MoE 专家并行通信混杂, 使用Dense- 4B 与Dense-8B 两种稠密骨干. 第二个Tr",
+      "chars": 1491,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 17,
+      "text_begin": "1.8 7 相关工作 1 通过可扩展查找实现条件记忆 只给这些可视化序列, 没有另外公布逐字评测提示模板. 1. <bos> Only Alexander the Great could tame the horse Bucephalus.",
+      "chars": 1846,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 18,
+      "text_begin": "1.9 8 结论 1 通过可扩展查找实现条件记忆 构, 总参数达数百十亿规模. 记忆网络. 记忆增强研究旨在增加容量而不同比例增加计算, 大体分参数与非参数方法. 参数记忆如PKM[74]、 PEER[50]、Selfmem[16]、Mem",
+      "chars": 1156,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 19,
+      "text_begin": "1.10 附录A: 完整架构与超参数 1 通过可扩展查找实现条件记忆 负载均衡方式 - 无辅助损失[122] 注意力模块 MLA [26] RoPE θ 10000 mHC 扩张率 4 序列长度 4096 词表大小 129280 批量大小 ",
+      "chars": 481,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": true
+    },
+    {
+      "page": 20,
+      "text_begin": "1.11 附录B: 全部基准曲线 1 通过可扩展查找实现条件记忆 1.11 附录B: 全部基准曲线 42k 46k 50k 1.96 1.98 2.00 Pile-test 42k 46k 50k 0.56 0.58 0.60 MMLU 4",
+      "chars": 1494,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 21,
+      "text_begin": "1.12 附录C: 分词器压缩案例 1 通过可扩展查找实现条件记忆 1.12 附录C: 分词器压缩案例 表1.6: 原文表6: 分词器压缩合并数最多的5 个token. 128k 分词器总体压缩率为23.43%. 以下保留原文列出的所 有原",
+      "chars": 1695,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 22,
+      "text_begin": "参考文献 它当成无需学习或可任意编辑而无需验证的外部事实库. 卷积零初始化在式(1.5) 中给Y = ˜V, 故仅凭卷积为零不 能推出整个Engram 残差输出为零; 原文恒等映射表述须区分卷积子模块与整模块. 第八, 官方arXiv 作者",
+      "chars": 2614,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 23,
+      "text_begin": "参考文献 [11] T. Brants, A. C. Popat, P. Xu, F. J. Och, and J. Dean. Large language models in machine translation. In J. Eis",
+      "chars": 2966,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 24,
+      "text_begin": "参考文献 E. Rosen, et al. Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next ge",
+      "chars": 2913,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 25,
+      "text_begin": "参考文献 [30] N. Du, Y. Huang, A. M. Dai, S. Tong, D. Lepikhin, Y. Xu, M. Krikun, Y. Zhou, A. W. Yu, O. Firat, et al. Glam: ",
+      "chars": 2783,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 26,
+      "text_begin": "参考文献 2021. [41] A. Ghandeharioun, A. Caciularu, A. Pearce, L. Dixon, and M. Geva. Patchscopes: A unifying framework for ",
+      "chars": 2786,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 27,
+      "text_begin": "参考文献 of the Neural Information Processing Systems Track on Datasets and Benchmarks 1, NeurIPS Datasets and Benchmarks 20",
+      "chars": 2941,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 28,
+      "text_begin": "参考文献 4, Volume 1: Long Papers, pages 1601–1611. Association for Computational Linguistics, 2017. doi: 10.18653 /V1/P17-1",
+      "chars": 2881,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 29,
+      "text_begin": "参考文献 Methods in Natural Language Processing, EMNLP 2017, Copenhagen, Denmark, September 9-11, 2017, pages 785–794. Assoc",
+      "chars": 2702,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 30,
+      "text_begin": "参考文献 U. Bhattacharyya, W. Yu, S. Singh, S. Luccioni, P. Villegas, M. Kunakov, F. Zhdanov, M. Romero, T. Lee, N. Timor, J",
+      "chars": 2802,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 31,
+      "text_begin": "参考文献 [96] A. Pagnoni, R. Pasunuru, P. Rodriguez, J. Nguyen, B. Muller, M. Li, C. Zhou, L. Yu, J. E. Weston, L. Zettle- m",
+      "chars": 2883,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 32,
+      "text_begin": "参考文献 [107] N. Shazeer, A. Mirhoseini, K. Maziarz, A. Davis, Q. Le, G. Hinton, and J. Dean. Outrageously large neural net",
+      "chars": 2868,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 33,
+      "text_begin": "参考文献 [120] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin. Attenti",
+      "chars": 2901,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    },
+    {
+      "page": 34,
+      "text_begin": "参考文献 [132] C. Zhang, Y. Liu, Y. Xie, S. I. Ktena, A. Tejani, A. Gupta, P. K. Myana, D. Dilipkumar, S. Paul, I. Ihara, et",
+      "chars": 1062,
+      "replacement_characters": 0,
+      "double_question_marks": 0,
+      "pixel_changed": false
+    }
+  ],
+  "links": [
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        56.69300079345703,
+        180.843994140625,
+        201.1510009765625,
+        193.24798583984375
+      ],
+      "to_page": 2,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "chapter.1"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        199.99298095703125,
+        115.47200012207031,
+        211.7979736328125
+      ],
+      "to_page": 2,
+      "to_point": [
+        56.69,
+        397.3
+      ],
+      "nameddest": "section.1.1"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        219.1209716796875,
+        123.77100372314453,
+        230.927001953125
+      ],
+      "to_page": 3,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "section.1.2"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        238.2490234375,
+        123.77100372314453,
+        250.05499267578125
+      ],
+      "to_page": 3,
+      "to_point": [
+        56.69,
+        598.09
+      ],
+      "nameddest": "section.1.3"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        257.37799072265625,
+        193.50999450683594,
+        269.1829833984375
+      ],
+      "to_page": 7,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "section.1.4"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        276.5059814453125,
+        163.6219940185547,
+        288.31201171875
+      ],
+      "to_page": 8,
+      "to_point": [
+        56.69,
+        407.23
+      ],
+      "nameddest": "section.1.5"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        295.6340026855469,
+        163.6219940185547,
+        307.44000244140625
+      ],
+      "to_page": 11,
+      "to_point": [
+        56.69,
+        135.01999999999998
+      ],
+      "nameddest": "section.1.6"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        314.76300048828125,
+        123.77100372314453,
+        326.5690002441406
+      ],
+      "to_page": 12,
+      "to_point": [
+        56.69,
+        326.43
+      ],
+      "nameddest": "section.1.7"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        333.8909912109375,
+        143.69700622558594,
+        345.6969909667969
+      ],
+      "to_page": 17,
+      "to_point": [
+        56.69,
+        268.91999999999996
+      ],
+      "nameddest": "section.1.8"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        353.0190124511719,
+        123.77100372314453,
+        364.82501220703125
+      ],
+      "to_page": 18,
+      "to_point": [
+        56.69,
+        288.05
+      ],
+      "nameddest": "section.1.9"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        372.14801025390625,
+        212.0399932861328,
+        383.9540100097656
+      ],
+      "to_page": 18,
+      "to_point": [
+        56.69,
+        454.03
+      ],
+      "nameddest": "section.1.10"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        391.2760009765625,
+        191.69700622558594,
+        403.0820007324219
+      ],
+      "to_page": 20,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "section.1.11"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        410.4049987792969,
+        201.7989959716797,
+        422.2099914550781
+      ],
+      "to_page": 21,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "section.1.12"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        71.63700103759766,
+        429.5329895019531,
+        145.36000061035156,
+        441.3389892578125
+      ],
+      "to_page": 21,
+      "to_point": [
+        56.69,
+        259.86
+      ],
+      "nameddest": "section.1.13"
+    },
+    {
+      "from_page": 1,
+      "kind": 4,
+      "from_rect": [
+        56.69300079345703,
+        459.1719970703125,
+        96.54299926757812,
+        469.1340026855469
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        215.07000000000005
+      ],
+      "nameddest": "section*.22"
+    },
+    {
+      "from_page": 2,
+      "kind": 2,
+      "from_rect": [
+        319.95599365234375,
+        299.885009765625,
+        499.14898681640625,
+        313.156005859375
+      ],
+      "uri": "https://arxiv.org/abs/2601.07372v2"
+    },
+    {
+      "from_page": 2,
+      "kind": 2,
+      "from_rect": [
+        164.5330047607422,
+        319.0140075683594,
+        395.7049865722656,
+        332.28399658203125
+      ],
+      "uri": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "from_page": 2,
+      "kind": 2,
+      "from_rect": [
+        316.2699890136719,
+        638.0189819335938,
+        510.2919921875,
+        651.2890014648438
+      ],
+      "uri": "https://github.com/deepseek-ai/Engram"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        338.927001953125,
+        118.801025390625,
+        348.8900146484375,
+        130.60699462890625
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        697.87
+      ],
+      "nameddest": "cite.engram-olshausen1997sparse"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        355.1709899902344,
+        118.801025390625,
+        365.1340026855469,
+        130.60699462890625
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        308.24
+      ],
+      "nameddest": "cite.engram-lennie2003cost"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        143.73199462890625,
+        137.92901611328125,
+        158.67599487304688,
+        149.7349853515625
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-shazeer2017outrageously"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        164.93099975585938,
+        137.92901611328125,
+        174.8939971923828,
+        149.7349853515625
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        272.48
+      ],
+      "nameddest": "cite.engram-dai2024deepseekmoe"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        152.44400024414062,
+        157.0579833984375,
+        162.406005859375,
+        168.86297607421875
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        412.14
+      ],
+      "nameddest": "cite.engram-guo2025deepseek"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        168.48399353027344,
+        157.0579833984375,
+        178.4459991455078,
+        168.86297607421875
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        707.79
+      ],
+      "nameddest": "cite.engram-comanici2025gemini"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        184.5240020751953,
+        157.0579833984375,
+        194.48599243164062,
+        168.86297607421875
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        310.52
+      ],
+      "nameddest": "cite.engram-kimi-k2"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        93.27799987792969,
+        214.4429931640625,
+        103.24099731445312,
+        226.24798583984375
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        307.3
+      ],
+      "nameddest": "cite.engram-erman2000idiom"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        109.8010025024414,
+        214.4429931640625,
+        119.76399993896484,
+        226.24798583984375
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        129.16999999999996
+      ],
+      "nameddest": "cite.engram-constant2017survey"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        219.89100646972656,
+        214.4429931640625,
+        229.85400390625,
+        226.24798583984375
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        310.45
+      ],
+      "nameddest": "cite.engram-liu2024infini"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        236.41400146484375,
+        214.4429931640625,
+        246.3769989013672,
+        226.24798583984375
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        615.38
+      ],
+      "nameddest": "cite.engram-nguyen2024understanding"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        252.93699645996094,
+        214.4429931640625,
+        262.8999938964844,
+        226.24798583984375
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-brants-etal-2007-large"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        112.69300079345703,
+        233.57098388671875,
+        127.63700103759766,
+        245.37701416015625
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-vaswani2017attention"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        183.49099731445312,
+        252.698974609375,
+        193.45399475097656,
+        264.5050048828125
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        108.21000000000004
+      ],
+      "nameddest": "cite.engram-ghandeharioun2024patchscopes"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        200.00599670410156,
+        252.698974609375,
+        209.968994140625,
+        264.5050048828125
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        450.39
+      ],
+      "nameddest": "cite.engram-DBLP:conf/coling/JinYHZWH0MMDYDZ25"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        59.4630012512207,
+        310.0840148925781,
+        74.40599822998047,
+        321.8900146484375
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-shazeer2017outrageously"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        82.1050033569336,
+        310.0840148925781,
+        87.08599853515625,
+        321.8900146484375
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        453.19
+      ],
+      "nameddest": "cite.engram-bengio2013estimatingpropagatinggradientsstochastic"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        106.46600341796875,
+        329.2130126953125,
+        111.447998046875,
+        341.01800537109375
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        637.0699999999999
+      ],
+      "nameddest": "cite.engram-bojanowski2017enriching"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        422.4330139160156,
+        329.2130126953125,
+        437.3760070800781,
+        341.01800537109375
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        632.45
+      ],
+      "nameddest": "cite.engram-tito2017hash"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        443.20599365234375,
+        329.2130126953125,
+        453.16900634765625,
+        341.01800537109375
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        189.54999999999995
+      ],
+      "nameddest": "cite.engram-huang2025over"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        458.99798583984375,
+        329.2130126953125,
+        468.96099853515625,
+        341.01800537109375
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-pagnoni2025byte"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        474.7909851074219,
+        329.2130126953125,
+        489.7349853515625,
+        341.01800537109375
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        554.77
+      ],
+      "nameddest": "cite.engram-yu2025scaling"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        146.44200134277344,
+        482.239013671875,
+        156.40499877929688,
+        494.0450134277344
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        656.39
+      ],
+      "nameddest": "cite.engram-nostalgebraist2020logitlens"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        202.52699279785156,
+        482.239013671875,
+        212.49000549316406,
+        494.0450134277344
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        618.58
+      ],
+      "nameddest": "cite.engram-hendrycks2020measuring"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        529.2130126953125,
+        501.3680114746094,
+        539.176025390625,
+        513.1740112304688
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        348.42
+      ],
+      "nameddest": "cite.engram-fangwrong"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        94.3219985961914,
+        520.4959716796875,
+        104.28399658203125,
+        532.302001953125
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        148.46000000000004
+      ],
+      "nameddest": "cite.engram-hsiehruler"
+    },
+    {
+      "from_page": 3,
+      "kind": 4,
+      "from_rect": [
+        80.51300048828125,
+        671.7540283203125,
+        93.24500274658203,
+        683.5599975585938
+      ],
+      "to_page": 4,
+      "to_point": [
+        89.7,
+        414.99
+      ],
+      "nameddest": "figure.1.1"
+    },
+    {
+      "from_page": 4,
+      "kind": 4,
+      "from_rect": [
+        271.0039978027344,
+        588.906005859375,
+        280.9670104980469,
+        600.7109985351562
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        497.38
+      ],
+      "nameddest": "cite.engram-kudo2018sentencepiecesimplelanguageindependent"
+    },
+    {
+      "from_page": 4,
+      "kind": 4,
+      "from_rect": [
+        288.52301025390625,
+        588.906005859375,
+        298.4859924316406,
+        600.7109985351562
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        653.64
+      ],
+      "nameddest": "cite.engram-li2023starcodersourceyou"
+    },
+    {
+      "from_page": 4,
+      "kind": 4,
+      "from_rect": [
+        285.1130065917969,
+        608.0339965820312,
+        300.0570068359375,
+        619.8399658203125
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        291.16
+      ],
+      "nameddest": "cite.engram-UAX15-NFKC"
+    },
+    {
+      "from_page": 4,
+      "kind": 4,
+      "from_rect": [
+        374.71099853515625,
+        665.4190063476562,
+        389.6549987792969,
+        677.2249755859375
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        632.45
+      ],
+      "nameddest": "cite.engram-tito2017hash"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        539.8049926757812,
+        182.9849853515625,
+        549.7680053710938,
+        194.791015625
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        494.4
+      ],
+      "nameddest": "cite.engram-haber-poesio-2024-polysemy"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        350.17999267578125,
+        202.114013671875,
+        365.1239929199219,
+        213.91998291015625
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-vaswani2017attention"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        371.6189880371094,
+        202.114013671875,
+        376.6000061035156,
+        213.91998291015625
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        290.97
+      ],
+      "nameddest": "cite.engram-bahdanau2014neural"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        276.69000244140625,
+        272.2509765625,
+        286.65301513671875,
+        284.0570068359375
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        415.13
+      ],
+      "nameddest": "cite.engram-pmlr-v202-dehghani23a"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        89.63899993896484,
+        291.3789978027344,
+        104.58300018310547,
+        303.18499755859375
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        694.88
+      ],
+      "nameddest": "cite.engram-zhang2019root"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        348.3009948730469,
+        375.8630065917969,
+        358.2640075683594,
+        387.66900634765625
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        272.03999999999996
+      ],
+      "nameddest": "cite.engram-gu2021efficiently"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        365.0260009765625,
+        375.8630065917969,
+        374.989013671875,
+        387.66900634765625
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        148.74
+      ],
+      "nameddest": "cite.engram-peng2023rwkv"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        284.8169860839844,
+        394.9909973144531,
+        294.7799987792969,
+        406.7969970703125
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        266.48
+      ],
+      "nameddest": "cite.engram-elfwing2018sigmoid"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        173.38099670410156,
+        526.9219970703125,
+        183.343994140625,
+        538.72802734375
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        555.01
+      ],
+      "nameddest": "cite.engram-he2016deep"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        359.5270080566406,
+        526.9219970703125,
+        369.489990234375,
+        538.72802734375
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        228.96000000000004
+      ],
+      "nameddest": "cite.engram-larsson2016fractalnet"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        376.0050048828125,
+        526.9219970703125,
+        390.9490051269531,
+        538.72802734375
+      ],
+      "to_page": 34,
+      "to_point": [
+        56.69,
+        269.04999999999995
+      ],
+      "nameddest": "cite.engram-zhu2025hyperconnections"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        397.4639892578125,
+        526.9219970703125,
+        412.4079895019531,
+        538.72802734375
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        412.07
+      ],
+      "nameddest": "cite.engram-xie2025mhcmanifoldconstrainedhyperconnections"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        418.9230041503906,
+        526.9219970703125,
+        433.86700439453125,
+        538.72802734375
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        491.41
+      ],
+      "nameddest": "cite.engram-szegedy2015going"
+    },
+    {
+      "from_page": 5,
+      "kind": 4,
+      "from_rect": [
+        521.9730224609375,
+        680.0540161132812,
+        536.9169921875,
+        691.8599853515625
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        412.07
+      ],
+      "nameddest": "cite.engram-xie2025mhcmanifoldconstrainedhyperconnections"
+    },
+    {
+      "from_page": 6,
+      "kind": 4,
+      "from_rect": [
+        472.4540100097656,
+        140.3699951171875,
+        485.1860046386719,
+        152.176025390625
+      ],
+      "to_page": 6,
+      "to_point": [
+        91.04,
+        465.75
+      ],
+      "nameddest": "figure.1.2"
+    },
+    {
+      "from_page": 6,
+      "kind": 4,
+      "from_rect": [
+        254.80299377441406,
+        662.06103515625,
+        264.7659912109375,
+        673.8670043945312
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        345.72
+      ],
+      "nameddest": "cite.engram-piantadosi2014zipf"
+    },
+    {
+      "from_page": 6,
+      "kind": 4,
+      "from_rect": [
+        271.0060119628906,
+        662.06103515625,
+        280.968994140625,
+        673.8670043945312
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        227.78999999999996
+      ],
+      "nameddest": "cite.engram-Chao1950HumanBA"
+    },
+    {
+      "from_page": 7,
+      "kind": 4,
+      "from_rect": [
+        129.63800048828125,
+        703.7669677734375,
+        142.3699951171875,
+        715.572998046875
+      ],
+      "to_page": 7,
+      "to_point": [
+        89.61,
+        367.91
+      ],
+      "nameddest": "figure.1.3"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        393.6340026855469,
+        272.2509765625,
+        403.59698486328125,
+        284.0570068359375
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        189.54999999999995
+      ],
+      "nameddest": "cite.engram-huang2025over"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        191.31199645996094,
+        291.3789978027344,
+        206.25599670410156,
+        303.18499755859375
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        554.77
+      ],
+      "nameddest": "cite.engram-yu2025scaling"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        98.5530014038086,
+        329.635986328125,
+        111.28500366210938,
+        341.4419860839844
+      ],
+      "to_page": 7,
+      "to_point": [
+        89.61,
+        367.91
+      ],
+      "nameddest": "figure.1.3"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        419.0570068359375,
+        538.2789916992188,
+        429.0190124511719,
+        550.0850219726562
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        227.66999999999996
+      ],
+      "nameddest": "cite.engram-liu2024deepseek"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        90.01799774169922,
+        576.5360107421875,
+        99.98100280761719,
+        588.3419799804688
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        373.88
+      ],
+      "nameddest": "cite.engram-deepseekai2024deepseekv2strongeconomicalefficient"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        198.36300659179688,
+        576.5360107421875,
+        213.3070068359375,
+        588.3419799804688
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        412.07
+      ],
+      "nameddest": "cite.engram-xie2025mhcmanifoldconstrainedhyperconnections"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        339.2959899902344,
+        576.5360107421875,
+        349.25799560546875,
+        588.3419799804688
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        628.3
+      ],
+      "nameddest": "cite.engram-jordan2024muon"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        355.0870056152344,
+        576.5360107421875,
+        365.04901123046875,
+        588.3419799804688
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        370.89
+      ],
+      "nameddest": "cite.engram-liu2025muon"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        199.3489990234375,
+        614.79296875,
+        209.31100463867188,
+        626.5980224609375
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        272.48
+      ],
+      "nameddest": "cite.engram-dai2024deepseekmoe"
+    },
+    {
+      "from_page": 8,
+      "kind": 4,
+      "from_rect": [
+        542.5750122070312,
+        672.177978515625,
+        552.5380249023438,
+        683.9830322265625
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        351.77
+      ],
+      "nameddest": "cite.engram-kingma2014adam"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        179.66200256347656,
+        153.072998046875,
+        189.62399291992188,
+        164.87799072265625
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        491.41
+      ],
+      "nameddest": "cite.engram-gao2020pile"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        184.2220001220703,
+        172.20098876953125,
+        194.1840057373047,
+        184.00701904296875
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        618.58
+      ],
+      "nameddest": "cite.engram-hendrycks2020measuring"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        272.2430114746094,
+        172.20098876953125,
+        282.20599365234375,
+        184.00701904296875
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        612.6
+      ],
+      "nameddest": "cite.engram-gema2025we"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        347.85101318359375,
+        172.20098876953125,
+        362.7950134277344,
+        184.00701904296875
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        231.01999999999998
+      ],
+      "nameddest": "cite.engram-wang2024mmlu"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        416.66400146484375,
+        172.20098876953125,
+        426.62701416015625,
+        184.00701904296875
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        472.52
+      ],
+      "nameddest": "cite.engram-li2024cmmlu"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        471.35101318359375,
+        172.20098876953125,
+        481.31298828125,
+        184.00701904296875
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        269.28
+      ],
+      "nameddest": "cite.engram-huang2023c"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        534.1270141601562,
+        172.20098876953125,
+        549.0700073242188,
+        184.00701904296875
+      ],
+      "to_page": 34,
+      "to_point": [
+        56.69,
+        209.11
+      ],
+      "nameddest": "cite.engram-zhong2024agieval"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        172.91700744628906,
+        191.3289794921875,
+        182.8800048828125,
+        203.135009765625
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        564.94
+      ],
+      "nameddest": "cite.engram-clark2018think"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        239.60699462890625,
+        191.3289794921875,
+        249.57000732421875,
+        203.135009765625
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        669.78
+      ],
+      "nameddest": "cite.engram-joshi2017triviaqa"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        406.864013671875,
+        191.3289794921875,
+        416.82598876953125,
+        203.135009765625
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        453.04
+      ],
+      "nameddest": "cite.engram-mallen2023not"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        462.614990234375,
+        191.3289794921875,
+        472.5769958496094,
+        203.135009765625
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        186.78999999999996
+      ],
+      "nameddest": "cite.engram-li2021ccpm"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        509.6579895019531,
+        191.3289794921875,
+        524.6019897460938,
+        203.135009765625
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        431.03
+      ],
+      "nameddest": "cite.engram-suzgun2023challenging"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        109.53500366210938,
+        210.4580078125,
+        124.47899627685547,
+        222.26300048828125
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        596.02
+      ],
+      "nameddest": "cite.engram-zellers2019hellaswag"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        165.56500244140625,
+        210.4580078125,
+        170.54600524902344,
+        222.26300048828125
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        595.8199999999999
+      ],
+      "nameddest": "cite.engram-bisk2020piqa"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        241.718994140625,
+        210.4580078125,
+        256.6629943847656,
+        222.26300048828125
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        631.29
+      ],
+      "nameddest": "cite.engram-sakaguchi2021winogrande"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        171.65199279785156,
+        229.58599853515625,
+        181.61399841308594,
+        241.39202880859375
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        148.29999999999995
+      ],
+      "nameddest": "cite.engram-dua2019drop"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        298.0580139160156,
+        229.58599853515625,
+        308.0199890136719,
+        241.39202880859375
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        697.64
+      ],
+      "nameddest": "cite.engram-lai2017race"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        352.29400634765625,
+        229.58599853515625,
+        367.2380065917969,
+        241.39202880859375
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        390.02
+      ],
+      "nameddest": "cite.engram-sun2020investigating"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        203.74099731445312,
+        248.7139892578125,
+        213.70399475097656,
+        260.52001953125
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        269.28
+      ],
+      "nameddest": "cite.engram-chen2021evaluatinglargelanguagemodels"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        258.93499755859375,
+        248.7139892578125,
+        263.9159851074219,
+        260.52001953125
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        250.01
+      ],
+      "nameddest": "cite.engram-austin2021program"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        320.77301025390625,
+        248.7139892578125,
+        330.7349853515625,
+        260.52001953125
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        332.57
+      ],
+      "nameddest": "cite.engram-gu2024cruxeval"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        381.42498779296875,
+        248.7139892578125,
+        391.38800048828125,
+        260.52001953125
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        606.19
+      ],
+      "nameddest": "cite.engram-cobbe2021training"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        438.4809875488281,
+        248.7139892578125,
+        453.42498779296875,
+        260.52001953125
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        129.16999999999996
+      ],
+      "nameddest": "cite.engram-shi2022language"
+    },
+    {
+      "from_page": 9,
+      "kind": 4,
+      "from_rect": [
+        505.99798583984375,
+        248.7139892578125,
+        515.9609985351562,
+        260.52001953125
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        697.86
+      ],
+      "nameddest": "cite.engram-hendrycks2021measuring"
+    },
+    {
+      "from_page": 10,
+      "kind": 4,
+      "from_rect": [
+        70.01000213623047,
+        578.35400390625,
+        82.74299621582031,
+        590.1600341796875
+      ],
+      "to_page": 9,
+      "to_point": [
+        56.69,
+        272.48
+      ],
+      "nameddest": "table.1.1"
+    },
+    {
+      "from_page": 10,
+      "kind": 4,
+      "from_rect": [
+        189.22500610351562,
+        578.35400390625,
+        204.16799926757812,
+        590.1600341796875
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-shazeer2017outrageously"
+    },
+    {
+      "from_page": 10,
+      "kind": 4,
+      "from_rect": [
+        210.2830047607422,
+        578.35400390625,
+        220.24600219726562,
+        590.1600341796875
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        596.02
+      ],
+      "nameddest": "cite.engram-he2024mixture"
+    },
+    {
+      "from_page": 10,
+      "kind": 4,
+      "from_rect": [
+        226.36000061035156,
+        578.35400390625,
+        236.322998046875,
+        590.1600341796875
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        678.3
+      ],
+      "nameddest": "cite.engram-borgeaud2022improving"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        513.1110229492188,
+        166.02398681640625,
+        523.073974609375,
+        177.83001708984375
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        549.96
+      ],
+      "nameddest": "cite.engram-gao2025train"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        529.2230224609375,
+        166.02398681640625,
+        539.1859741210938,
+        177.83001708984375
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        285.61
+      ],
+      "nameddest": "cite.engram-peng2023yarn"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        192.13400268554688,
+        246.94598388671875,
+        202.0970001220703,
+        258.75201416015625
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        227.66999999999996
+      ],
+      "nameddest": "cite.engram-liu2024deepseek"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        394.0589904785156,
+        246.94598388671875,
+        404.0220031738281,
+        258.75201416015625
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        285.61
+      ],
+      "nameddest": "cite.engram-peng2023yarn"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        150.34100341796875,
+        342.5880126953125,
+        160.3040008544922,
+        354.39300537109375
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        348.42
+      ],
+      "nameddest": "cite.engram-fangwrong"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        444.125,
+        342.5880126953125,
+        454.0880126953125,
+        354.39300537109375
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        148.46000000000004
+      ],
+      "nameddest": "cite.engram-hsiehruler"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        516.8140258789062,
+        425.1780090332031,
+        526.7769775390625,
+        436.9840087890625
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        348.42
+      ],
+      "nameddest": "cite.engram-fangwrong"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        127.31800079345703,
+        437.13299560546875,
+        137.27999877929688,
+        448.9389953613281
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        148.46000000000004
+      ],
+      "nameddest": "cite.engram-hsiehruler"
+    },
+    {
+      "from_page": 11,
+      "kind": 4,
+      "from_rect": [
+        99.86100006103516,
+        723.5139770507812,
+        112.59300231933594,
+        735.3200073242188
+      ],
+      "to_page": 11,
+      "to_point": [
+        89.25,
+        410.58
+      ],
+      "nameddest": "table.1.2"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        447.04901123046875,
+        95.68798828125,
+        461.9930114746094,
+        107.49298095703125
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        329.42
+      ],
+      "nameddest": "cite.engram-su2023roformerenhancedtransformerrotary"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        468.4079895019531,
+        95.68798828125,
+        483.35198974609375,
+        107.49298095703125
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        387.25
+      ],
+      "nameddest": "cite.engram-press2021train"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        489.7659912109375,
+        95.68798828125,
+        504.7099914550781,
+        107.49298095703125
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        472.52
+      ],
+      "nameddest": "cite.engram-yang2025path"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        511.125,
+        95.68798828125,
+        526.0689697265625,
+        107.49298095703125
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        351.41
+      ],
+      "nameddest": "cite.engram-xiao2023efficient"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        452.41900634765625,
+        306.0989990234375,
+        465.1510009765625,
+        317.9049987792969
+      ],
+      "to_page": 11,
+      "to_point": [
+        89.25,
+        410.58
+      ],
+      "nameddest": "table.1.2"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        330.0589904785156,
+        438.22900390625,
+        342.7909851074219,
+        450.0350036621094
+      ],
+      "to_page": 13,
+      "to_point": [
+        94.77,
+        100.84000000000003
+      ],
+      "nameddest": "table.1.3"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        239.80999755859375,
+        457.3580017089844,
+        249.7729949951172,
+        469.1629943847656
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        611.77
+      ],
+      "nameddest": "cite.engram-li2025echoesbertmodernlanguage"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        255.9550018310547,
+        457.3580017089844,
+        265.9179992675781,
+        469.1629943847656
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        108.21000000000004
+      ],
+      "nameddest": "cite.engram-ghandeharioun2024patchscopes"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        272.0989990234375,
+        457.3580017089844,
+        282.06201171875,
+        469.1629943847656
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        450.39
+      ],
+      "nameddest": "cite.engram-DBLP:conf/coling/JinYHZWH0MMDYDZ25"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        318.22198486328125,
+        476.4859924316406,
+        328.18499755859375,
+        488.2919921875
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        656.39
+      ],
+      "nameddest": "cite.engram-nostalgebraist2020logitlens"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        334.2619934082031,
+        476.4859924316406,
+        339.2430114746094,
+        488.2919921875
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        368.53
+      ],
+      "nameddest": "cite.engram-belrose2023eliciting"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        451.2929992675781,
+        476.4859924316406,
+        461.2560119628906,
+        488.2919921875
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        414.9
+      ],
+      "nameddest": "cite.engram-kornblith2019similarity"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        467.3330078125,
+        476.4859924316406,
+        477.2959899902344,
+        488.2919921875
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        313.28
+      ],
+      "nameddest": "cite.engram-davari2022reliability"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        163.57899475097656,
+        514.7430419921875,
+        173.54200744628906,
+        526.5479736328125
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        596.44
+      ],
+      "nameddest": "cite.engram-kullback1951information"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        349.739990234375,
+        514.7430419921875,
+        359.7030029296875,
+        526.5479736328125
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        170.86
+      ],
+      "nameddest": "cite.engram-csordas2025language"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        365.9110107421875,
+        514.7430419921875,
+        370.8919982910156,
+        526.5479736328125
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        368.53
+      ],
+      "nameddest": "cite.engram-belrose2023eliciting"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        394.65899658203125,
+        514.7430419921875,
+        407.3909912109375,
+        526.5479736328125
+      ],
+      "to_page": 14,
+      "to_point": [
+        90.28,
+        271.72
+      ],
+      "nameddest": "figure.1.4"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        81.86900329589844,
+        591.2559814453125,
+        91.83100128173828,
+        603.06201171875
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        414.9
+      ],
+      "nameddest": "cite.engram-kornblith2019similarity"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        97.90799713134766,
+        591.2559814453125,
+        107.87100219726562,
+        603.06201171875
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        456.15
+      ],
+      "nameddest": "cite.engram-kriegeskorte2008representational"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        433.6210021972656,
+        643.8489990234375,
+        443.5830078125,
+        655.655029296875
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        231.23000000000002
+      ],
+      "nameddest": "cite.engram-gretton2005measuring"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        109.81400299072266,
+        662.9769897460938,
+        119.7760009765625,
+        674.7830200195312
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        313.28
+      ],
+      "nameddest": "cite.engram-davari2022reliability"
+    },
+    {
+      "from_page": 12,
+      "kind": 4,
+      "from_rect": [
+        194.45599365234375,
+        662.9769897460938,
+        204.41900634765625,
+        674.7830200195312
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        648.48
+      ],
+      "nameddest": "cite.engram-ding2021few"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        312.66900634765625,
+        103.47802734375,
+        322.6319885253906,
+        115.28399658203125
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        108.21000000000004
+      ],
+      "nameddest": "cite.engram-ghandeharioun2024patchscopes"
+    },
+    {
+      "from_page": 13,
+      "kind": 2,
+      "from_rect": [
+        398.39599609375,
+        138.5369873046875,
+        555.3070068359375,
+        151.8070068359375
+      ],
+      "uri": "https://proceedings.mlr.press/v235/ghandeharioun24a.html"
+    },
+    {
+      "from_page": 13,
+      "kind": 2,
+      "from_rect": [
+        56.69300079345703,
+        150.49200439453125,
+        192.68299865722656,
+        163.76202392578125
+      ],
+      "uri": "https://proceedings.mlr.press/v235/ghandeharioun24a.html"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        91.177001953125,
+        460.8399963378906,
+        103.90899658203125,
+        472.64599609375
+      ],
+      "to_page": 14,
+      "to_point": [
+        90.28,
+        271.72
+      ],
+      "nameddest": "figure.1.4"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        509.3009948730469,
+        560.8900146484375,
+        522.0330200195312,
+        572.6959838867188
+      ],
+      "to_page": 15,
+      "to_point": [
+        90.61,
+        381.14
+      ],
+      "nameddest": "figure.1.5"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        247.843994140625,
+        656.531982421875,
+        262.7879943847656,
+        668.3380126953125
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        574.34
+      ],
+      "nameddest": "cite.engram-tenney2019bert"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        268.677001953125,
+        656.531982421875,
+        278.6390075683594,
+        668.3380126953125
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        108.21000000000004
+      ],
+      "nameddest": "cite.engram-ghandeharioun2024patchscopes"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        284.5270080566406,
+        656.531982421875,
+        294.489990234375,
+        668.3380126953125
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        611.77
+      ],
+      "nameddest": "cite.engram-li2025echoesbertmodernlanguage"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        300.37799072265625,
+        656.531982421875,
+        310.34100341796875,
+        668.3380126953125
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        450.39
+      ],
+      "nameddest": "cite.engram-DBLP:conf/coling/JinYHZWH0MMDYDZ25"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        222.73500061035156,
+        675.6600341796875,
+        237.6790008544922,
+        687.4660034179688
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        412.07
+      ],
+      "nameddest": "cite.engram-xie2025mhcmanifoldconstrainedhyperconnections"
+    },
+    {
+      "from_page": 13,
+      "kind": 4,
+      "from_rect": [
+        243.9429931640625,
+        675.6600341796875,
+        258.885986328125,
+        687.4660034179688
+      ],
+      "to_page": 34,
+      "to_point": [
+        56.69,
+        269.04999999999995
+      ],
+      "nameddest": "cite.engram-zhu2025hyperconnections"
+    },
+    {
+      "from_page": 14,
+      "kind": 4,
+      "from_rect": [
+        278.6520080566406,
+        418.6780090332031,
+        293.59600830078125,
+        430.4840087890625
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        412.07
+      ],
+      "nameddest": "cite.engram-xie2025mhcmanifoldconstrainedhyperconnections"
+    },
+    {
+      "from_page": 14,
+      "kind": 4,
+      "from_rect": [
+        90.86799621582031,
+        576.113037109375,
+        103.5999984741211,
+        587.9190063476562
+      ],
+      "to_page": 15,
+      "to_point": [
+        90.02,
+        673.59
+      ],
+      "nameddest": "figure.1.6"
+    },
+    {
+      "from_page": 16,
+      "kind": 4,
+      "from_rect": [
+        237.5970001220703,
+        94.86700439453125,
+        241.08399963378906,
+        103.1309814453125
+      ],
+      "to_page": 16,
+      "to_point": [
+        71.04,
+        702.09
+      ],
+      "nameddest": "Hfootnote.1"
+    },
+    {
+      "from_page": 16,
+      "kind": 4,
+      "from_rect": [
+        289.4360046386719,
+        95.68798828125,
+        299.39801025390625,
+        107.49298095703125
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        637.14
+      ],
+      "nameddest": "cite.engram-kwon2023efficient"
+    },
+    {
+      "from_page": 16,
+      "kind": 4,
+      "from_rect": [
+        97.68599700927734,
+        331.4679870605469,
+        110.41899871826172,
+        343.27398681640625
+      ],
+      "to_page": 16,
+      "to_point": [
+        165.7,
+        162.95000000000005
+      ],
+      "nameddest": "table.1.4"
+    },
+    {
+      "from_page": 16,
+      "kind": 4,
+      "from_rect": [
+        362.1969909667969,
+        450.6470031738281,
+        374.92999267578125,
+        462.4530029296875
+      ],
+      "to_page": 16,
+      "to_point": [
+        90.57,
+        657.44
+      ],
+      "nameddest": "figure.1.7"
+    },
+    {
+      "from_page": 16,
+      "kind": 4,
+      "from_rect": [
+        545.3079833984375,
+        449.82598876953125,
+        548.7949829101562,
+        458.0899963378906
+      ],
+      "to_page": 16,
+      "to_point": [
+        71.04,
+        711.73
+      ],
+      "nameddest": "Hfootnote.2"
+    },
+    {
+      "from_page": 16,
+      "kind": 2,
+      "from_rect": [
+        71.03900146484375,
+        703.4769897460938,
+        253.5189971923828,
+        714.1090087890625
+      ],
+      "uri": "https://github.com/GeeeekExplorer/nano-vllm"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        348.12799072265625,
+        299.9219970703125,
+        363.0719909667969,
+        311.7279968261719
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        672.97
+      ],
+      "nameddest": "cite.engram-shannon1948mathematical"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        59.4630012512207,
+        319.0509948730469,
+        69.42500305175781,
+        330.85699462890625
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        374.09
+      ],
+      "nameddest": "cite.engram-kneser1995improved"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        75.50199890136719,
+        319.0509948730469,
+        85.46499633789062,
+        330.85699462890625
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        249.91999999999996
+      ],
+      "nameddest": "cite.engram-DBLP:journals/tsp/Katz87"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        224.38400268554688,
+        319.0509948730469,
+        229.36500549316406,
+        330.85699462890625
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        411.71
+      ],
+      "nameddest": "cite.engram-bengio2003neural"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        541.1060180664062,
+        319.0509948730469,
+        546.0880126953125,
+        330.85699462890625
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        637.0699999999999
+      ],
+      "nameddest": "cite.engram-bojanowski2017enriching"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        357.7650146484375,
+        338.1789855957031,
+        372.7090148925781,
+        349.9849853515625
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        551.79
+      ],
+      "nameddest": "cite.engram-gemma_3n_2025"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        415.5429992675781,
+        338.1789855957031,
+        430.48699951171875,
+        349.9849853515625
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        589.9300000000001
+      ],
+      "nameddest": "cite.engram-sadhukhan2026stem"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        455.906005859375,
+        338.1789855957031,
+        470.8500061035156,
+        349.9849853515625
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        716.65
+      ],
+      "nameddest": "cite.engram-tseng20263"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        537.593994140625,
+        338.1789855957031,
+        552.5369873046875,
+        349.9849853515625
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        548.8
+      ],
+      "nameddest": "cite.engram-rwkv_deepembed_wiki_2025"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        464.2749938964844,
+        357.3070068359375,
+        479.218994140625,
+        369.1130065917969
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        507.43
+      ],
+      "nameddest": "cite.engram-roy2022n"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        257.47900390625,
+        376.4360046386719,
+        267.4419860839844,
+        388.24200439453125
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        450.61
+      ],
+      "nameddest": "cite.engram-feng2023memory"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        418.2860107421875,
+        376.4360046386719,
+        428.2489929199219,
+        388.24200439453125
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        268.92999999999995
+      ],
+      "nameddest": "cite.engram-liu2025superbpe"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        124.02799987792969,
+        395.5639953613281,
+        138.9720001220703,
+        407.3699951171875
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        554.77
+      ],
+      "nameddest": "cite.engram-yu2025scaling"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        296.5360107421875,
+        395.5639953613281,
+        306.4989929199219,
+        407.3699951171875
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        189.54999999999995
+      ],
+      "nameddest": "cite.engram-huang2025over"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        449.0870056152344,
+        395.5639953613281,
+        459.04901123046875,
+        407.3699951171875
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-pagnoni2025byte"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        59.4630012512207,
+        548.5910034179688,
+        74.40599822998047,
+        560.39697265625
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        554.77
+      ],
+      "nameddest": "cite.engram-yu2025scaling"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        80.61699676513672,
+        548.5910034179688,
+        90.58000183105469,
+        560.39697265625
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        189.54999999999995
+      ],
+      "nameddest": "cite.engram-huang2025over"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        539.8049926757812,
+        586.8480224609375,
+        549.7680053710938,
+        598.6530151367188
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        647.4300000000001
+      ],
+      "nameddest": "cite.engram-coleman2023unified"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        206.41900634765625,
+        605.9760131835938,
+        221.36199951171875,
+        617.781982421875
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        632.45
+      ],
+      "nameddest": "cite.engram-tito2017hash"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        228.97799682617188,
+        605.9760131835938,
+        243.9219970703125,
+        617.781982421875
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        208.83000000000004
+      ],
+      "nameddest": "cite.engram-shi2020compositional"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        376.0880126953125,
+        605.9760131835938,
+        391.0320129394531,
+        617.781982421875
+      ],
+      "to_page": 34,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-zhang2020model"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        398.64801025390625,
+        605.9760131835938,
+        413.5920104980469,
+        617.781982421875
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        675.52
+      ],
+      "nameddest": "cite.engram-tsang2022clustering"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        421.2070007324219,
+        605.9760131835938,
+        436.1510009765625,
+        617.781982421875
+      ],
+      "to_page": 34,
+      "to_point": [
+        56.69,
+        148.29999999999995
+      ],
+      "nameddest": "cite.engram-zhang2024cafe"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        59.4630012512207,
+        625.10400390625,
+        69.42500305175781,
+        636.9100341796875
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        170.41999999999996
+      ],
+      "nameddest": "cite.engram-ginart2021mixed"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        75.01599884033203,
+        625.10400390625,
+        84.97799682617188,
+        636.9100341796875
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        568.16
+      ],
+      "nameddest": "cite.engram-joglekar2020neural"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        90.56900024414062,
+        625.10400390625,
+        100.53199768066406,
+        636.9100341796875
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        411.91
+      ],
+      "nameddest": "cite.engram-liu2021learnable"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        319.4219970703125,
+        625.10400390625,
+        329.385009765625,
+        636.9100341796875
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        129.59000000000003
+      ],
+      "nameddest": "cite.engram-kang2020learning"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        334.9750061035156,
+        625.10400390625,
+        349.91900634765625,
+        636.9100341796875
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        513.53
+      ],
+      "nameddest": "cite.engram-yin2021tt"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        355.510009765625,
+        625.10400390625,
+        365.47198486328125,
+        636.9100341796875
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        590.27
+      ],
+      "nameddest": "cite.engram-desai2021random"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        132.7689971923828,
+        644.2330322265625,
+        142.7310028076172,
+        656.0379638671875
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        647.4300000000001
+      ],
+      "nameddest": "cite.engram-coleman2023unified"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        264.85198974609375,
+        644.2330322265625,
+        274.8139953613281,
+        656.0379638671875
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        189.54999999999995
+      ],
+      "nameddest": "cite.engram-kang2021learning"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        460.9389953613281,
+        644.2330322265625,
+        475.88299560546875,
+        656.0379638671875
+      ],
+      "to_page": 31,
+      "to_point": [
+        56.69,
+        447.34
+      ],
+      "nameddest": "cite.engram-rajput2023recommender"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        482.1000061035156,
+        644.2330322265625,
+        497.04400634765625,
+        656.0379638671875
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        269.04999999999995
+      ],
+      "nameddest": "cite.engram-singh2024better"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        455.0610046386719,
+        682.489013671875,
+        470.0050048828125,
+        694.2949829101562
+      ],
+      "to_page": 32,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-shazeer2017outrageously"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        539.1079711914062,
+        682.489013671875,
+        549.0700073242188,
+        694.2949829101562
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        332.85
+      ],
+      "nameddest": "cite.engram-lepikhin2020gshard"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        86.29199981689453,
+        701.6179809570312,
+        96.25499725341797,
+        713.4229736328125
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        390.95
+      ],
+      "nameddest": "cite.engram-pmlr-v139-lewis21a"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        191.6580047607422,
+        701.6179809570312,
+        201.62100219726562,
+        713.4229736328125
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        408.8
+      ],
+      "nameddest": "cite.engram-fedus2022switch"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        240.6300048828125,
+        701.6179809570312,
+        250.5919952392578,
+        713.4229736328125
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        95.03999999999996
+      ],
+      "nameddest": "cite.engram-du2022glam"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        542.5750122070312,
+        701.6179809570312,
+        552.5369873046875,
+        713.4229736328125
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        272.48
+      ],
+      "nameddest": "cite.engram-dai2024deepseekmoe"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        421.2359924316406,
+        720.7459716796875,
+        431.1990051269531,
+        732.552001953125
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        227.66999999999996
+      ],
+      "nameddest": "cite.engram-liu2024deepseek"
+    },
+    {
+      "from_page": 17,
+      "kind": 4,
+      "from_rect": [
+        489.010986328125,
+        720.7459716796875,
+        498.9739990234375,
+        732.552001953125
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        310.52
+      ],
+      "nameddest": "cite.engram-kimi-k2"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        539.1079711914062,
+        114.81597900390625,
+        549.0700073242188,
+        126.62200927734375
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        148.52999999999997
+      ],
+      "nameddest": "cite.engram-lample2019large"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        87.11900329589844,
+        133.9439697265625,
+        97.08100128173828,
+        145.75
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        596.02
+      ],
+      "nameddest": "cite.engram-he2024mixture"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        148.51199340820312,
+        133.9439697265625,
+        158.47500610351562,
+        145.75
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        523.9200000000001
+      ],
+      "nameddest": "cite.engram-cheng2023lift"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        216.85899353027344,
+        133.9439697265625,
+        221.84100341796875,
+        145.75
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        494.43
+      ],
+      "nameddest": "cite.engram-berges2024memory"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        281.3210144042969,
+        133.9439697265625,
+        291.28399658203125,
+        145.75
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        389.67
+      ],
+      "nameddest": "cite.engram-huang2024ultra"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        297.17401123046875,
+        133.9439697265625,
+        307.135986328125,
+        145.75
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        329.41
+      ],
+      "nameddest": "cite.engram-huang2025ultramemv2"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        216.4510040283203,
+        153.072998046875,
+        226.41299438476562,
+        164.87799072265625
+      ],
+      "to_page": 26,
+      "to_point": [
+        56.69,
+        453.16
+      ],
+      "nameddest": "cite.engram-guu2020retrieval"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        277.864990234375,
+        153.072998046875,
+        287.8280029296875,
+        164.87799072265625
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        678.3
+      ],
+      "nameddest": "cite.engram-borgeaud2022improving"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        293.87298583984375,
+        153.072998046875,
+        308.8169860839844,
+        164.87799072265625
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        129.15999999999997
+      ],
+      "nameddest": "cite.engram-wang2023shall"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        344.1579895019531,
+        153.072998046875,
+        354.1210021972656,
+        164.87799072265625
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        189.53999999999996
+      ],
+      "nameddest": "cite.engram-lan2023copy"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        360.1659851074219,
+        153.072998046875,
+        370.1289978027344,
+        164.87799072265625
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        185.33000000000004
+      ],
+      "nameddest": "cite.engram-caoretrieval"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        420.88299560546875,
+        153.072998046875,
+        430.84600830078125,
+        164.87799072265625
+      ],
+      "to_page": 23,
+      "to_point": [
+        56.69,
+        425.29
+      ],
+      "nameddest": "cite.engram-cheng2023decouple"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        59.4630012512207,
+        210.4580078125,
+        69.42500305175781,
+        222.26300048828125
+      ],
+      "to_page": 25,
+      "to_point": [
+        56.69,
+        692.1
+      ],
+      "nameddest": "cite.engram-geva2021transformer"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        499.16900634765625,
+        210.4580078125,
+        509.1319885253906,
+        222.26300048828125
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        211.52999999999997
+      ],
+      "nameddest": "cite.engram-dai2022knowledge"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        119.47699737548828,
+        229.58599853515625,
+        129.44000244140625,
+        241.39202880859375
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        513.97
+      ],
+      "nameddest": "cite.engram-meng2022locating"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        449.3659973144531,
+        229.58599853515625,
+        459.3280029296875,
+        241.39202880859375
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        513.97
+      ],
+      "nameddest": "cite.engram-meng2022locating"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        509.60101318359375,
+        229.58599853515625,
+        519.5640258789062,
+        241.39202880859375
+      ],
+      "to_page": 30,
+      "to_point": [
+        56.69,
+        554.77
+      ],
+      "nameddest": "cite.engram-meng2022mass"
+    },
+    {
+      "from_page": 18,
+      "kind": 4,
+      "from_rect": [
+        352.3169860839844,
+        248.7139892578125,
+        362.27899169921875,
+        260.52001953125
+      ],
+      "to_page": 29,
+      "to_point": [
+        56.69,
+        532.6600000000001
+      ],
+      "nameddest": "cite.engram-li2024emergentworldrepresentationsexploring"
+    },
+    {
+      "from_page": 19,
+      "kind": 4,
+      "from_rect": [
+        433.77301025390625,
+        99.114990234375,
+        448.7170104980469,
+        110.91998291015625
+      ],
+      "to_page": 33,
+      "to_point": [
+        56.69,
+        189.54999999999995
+      ],
+      "nameddest": "cite.engram-wang2024auxiliarylossfreeloadbalancingstrategy"
+    },
+    {
+      "from_page": 19,
+      "kind": 4,
+      "from_rect": [
+        406.8290100097656,
+        123.239013671875,
+        416.7919921875,
+        135.04498291015625
+      ],
+      "to_page": 24,
+      "to_point": [
+        56.69,
+        373.88
+      ],
+      "nameddest": "cite.engram-deepseekai2024deepseekv2strongeconomicalefficient"
+    },
+    {
+      "from_page": 19,
+      "kind": 4,
+      "from_rect": [
+        408.0,
+        257.13800048828125,
+        417.9620056152344,
+        268.9429931640625
+      ],
+      "to_page": 27,
+      "to_point": [
+        56.69,
+        628.3
+      ],
+      "nameddest": "cite.engram-jordan2024muon"
+    },
+    {
+      "from_page": 19,
+      "kind": 4,
+      "from_rect": [
+        408.4179992675781,
+        276.2659912109375,
+        418.3810119628906,
+        288.0719909667969
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        351.77
+      ],
+      "nameddest": "cite.engram-kingma2014adam"
+    },
+    {
+      "from_page": 19,
+      "kind": 4,
+      "from_rect": [
+        417.8330078125,
+        314.52301025390625,
+        422.8139953613281,
+        326.3280029296875
+      ],
+      "to_page": 22,
+      "to_point": [
+        56.69,
+        554.8
+      ],
+      "nameddest": "cite.engram-bi2024deepseek"
+    },
+    {
+      "from_page": 19,
+      "kind": 4,
+      "from_rect": [
+        439.7309875488281,
+        549.0590209960938,
+        449.6929931640625,
+        560.864013671875
+      ],
+      "to_page": 28,
+      "to_point": [
+        56.69,
+        351.77
+      ],
+      "nameddest": "cite.engram-kingma2014adam"
+    },
+    {
+      "from_page": 22,
+      "kind": 4,
+      "from_rect": [
+        392.9289855957031,
+        95.68798828125,
+        405.6610107421875,
+        107.49298095703125
+      ],
+      "to_page": 5,
+      "to_point": [
+        212.29,
+        410.68
+      ],
+      "nameddest": "equation.1.5"
+    },
+    {
+      "from_page": 22,
+      "kind": 2,
+      "from_rect": [
+        435.00799560546875,
+        336.177001953125,
+        555.3070068359375,
+        349.4469909667969
+      ],
+      "uri": "http://arxiv.org/abs/1409.0473"
+    },
+    {
+      "from_page": 22,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        355.30499267578125,
+        118.7699966430664,
+        368.57501220703125
+      ],
+      "uri": "http://arxiv.org/abs/1409.0473"
+    },
+    {
+      "from_page": 22,
+      "kind": 2,
+      "from_rect": [
+        216.80299377441406,
+        437.7959899902344,
+        431.24798583984375,
+        451.0660095214844
+      ],
+      "uri": "https://jmlr.org/papers/v3/bengio03a.html"
+    },
+    {
+      "from_page": 22,
+      "kind": 2,
+      "from_rect": [
+        245.85400390625,
+        479.0409851074219,
+        407.9960021972656,
+        492.31201171875
+      ],
+      "uri": "https://arxiv.org/abs/1308.3432"
+    },
+    {
+      "from_page": 22,
+      "kind": 2,
+      "from_rect": [
+        237.61399841308594,
+        539.4149780273438,
+        457.2909851074219,
+        552.6849975585938
+      ],
+      "uri": "https://openreview.net/forum?id=ATqGm1WyDj"
+    },
+    {
+      "from_page": 23,
+      "kind": 2,
+      "from_rect": [
+        394.8689880371094,
+        152.2659912109375,
+        555.3070068359375,
+        165.5360107421875
+      ],
+      "uri": "https://aclanthology.org/D07-1090/"
+    },
+    {
+      "from_page": 23,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        171.39398193359375,
+        103.0790023803711,
+        184.66400146484375
+      ],
+      "uri": "https://aclanthology.org/D07-1090/"
+    },
+    {
+      "from_page": 23,
+      "kind": 2,
+      "from_rect": [
+        252.1999969482422,
+        253.885009765625,
+        508.489013671875,
+        267.155029296875
+      ],
+      "uri": "https://api.semanticscholar.org/CorpusID:10182796"
+    },
+    {
+      "from_page": 23,
+      "kind": 2,
+      "from_rect": [
+        159.3280029296875,
+        409.8999938964844,
+        326.70001220703125,
+        423.1709899902344
+      ],
+      "uri": "https://arxiv.org/abs/2107.03374"
+    },
+    {
+      "from_page": 23,
+      "kind": 2,
+      "from_rect": [
+        407.6130065917969,
+        489.40301513671875,
+        555.3070068359375,
+        502.6730041503906
+      ],
+      "uri": "https://aclanthology.org/2023.findings-acl.901/"
+    },
+    {
+      "from_page": 23,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        508.531005859375,
+        182.0330047607422,
+        521.801025390625
+      ],
+      "uri": "https://aclanthology.org/2023.findings-acl.901/"
+    },
+    {
+      "from_page": 24,
+      "kind": 2,
+      "from_rect": [
+        321.5,
+        358.4930114746094,
+        541.176025390625,
+        371.76300048828125
+      ],
+      "uri": "https://openreview.net/forum?id=8HRvyxc606"
+    },
+    {
+      "from_page": 24,
+      "kind": 2,
+      "from_rect": [
+        106.50599670410156,
+        399.739013671875,
+        273.87799072265625,
+        413.0090026855469
+      ],
+      "uri": "https://arxiv.org/abs/2405.04434"
+    },
+    {
+      "from_page": 24,
+      "kind": 2,
+      "from_rect": [
+        522.8920288085938,
+        555.7540283203125,
+        555.3070068359375,
+        569.0239868164062
+      ],
+      "uri": "https://proceedings.mlr.press/v202/dehghani23a.html"
+    },
+    {
+      "from_page": 24,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        574.8820190429688,
+        317.5249938964844,
+        588.1530151367188
+      ],
+      "uri": "https://proceedings.mlr.press/v202/dehghani23a.html"
+    },
+    {
+      "from_page": 24,
+      "kind": 2,
+      "from_rect": [
+        429.12701416015625,
+        616.1279907226562,
+        555.3070068359375,
+        629.3980102539062
+      ],
+      "uri": "https://arxiv.org/abs/2108.02191"
+    },
+    {
+      "from_page": 24,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        635.2559814453125,
+        124.0009994506836,
+        648.5260009765625
+      ],
+      "uri": "https://arxiv.org/abs/2108.02191"
+    },
+    {
+      "from_page": 25,
+      "kind": 2,
+      "from_rect": [
+        214.9199981689453,
+        250.89599609375,
+        403.7120056152344,
+        264.166015625
+      ],
+      "uri": "https://doi.org/10.18653/v1/n19-1246"
+    },
+    {
+      "from_page": 26,
+      "kind": 2,
+      "from_rect": [
+        211.16400146484375,
+        317.24798583984375,
+        436.07000732421875,
+        330.51800537109375
+      ],
+      "uri": "https://openreview.net/forum?id=uYLFoz1vlAC"
+    },
+    {
+      "from_page": 26,
+      "kind": 2,
+      "from_rect": [
+        427.3819885253906,
+        377.6210021972656,
+        555.3070068359375,
+        390.8919982910156
+      ],
+      "uri": "https://openreview.net/forum?id=Ffpg52swvg"
+    },
+    {
+      "from_page": 26,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        396.75,
+        176.3040008544922,
+        410.0199890136719
+      ],
+      "uri": "https://openreview.net/forum?id=Ffpg52swvg"
+    },
+    {
+      "from_page": 26,
+      "kind": 2,
+      "from_rect": [
+        522.7919921875,
+        520.4859619140625,
+        555.3070068359375,
+        533.7559814453125
+      ],
+      "uri": "https://aclanthology.org/2024.cl-1.10/"
+    },
+    {
+      "from_page": 26,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        539.614013671875,
+        250.0279998779297,
+        552.885009765625
+      ],
+      "uri": "https://aclanthology.org/2024.cl-1.10/"
+    },
+    {
+      "from_page": 26,
+      "kind": 2,
+      "from_rect": [
+        387.93499755859375,
+        663.3510131835938,
+        555.3070068359375,
+        676.6209716796875
+      ],
+      "uri": "https://openreview.net/forum?id=d7KBjmI3GmQ"
+    },
+    {
+      "from_page": 26,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        682.47900390625,
+        139.69200134277344,
+        695.7490234375
+      ],
+      "uri": "https://openreview.net/forum?id=d7KBjmI3GmQ"
+    },
+    {
+      "from_page": 27,
+      "kind": 2,
+      "from_rect": [
+        328.93701171875,
+        114.00897216796875,
+        555.3070068359375,
+        127.27899169921875
+      ],
+      "uri": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html"
+    },
+    {
+      "from_page": 27,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        133.13702392578125,
+        485.89300537109375,
+        146.40802001953125
+      ],
+      "uri": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html"
+    },
+    {
+      "from_page": 27,
+      "kind": 2,
+      "from_rect": [
+        408.0329895019531,
+        234.75701904296875,
+        555.3070068359375,
+        248.0269775390625
+      ],
+      "uri": "https://openreview.net/forum?id=gbeZKej40m"
+    },
+    {
+      "from_page": 27,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        253.885009765625,
+        155.38299560546875,
+        267.155029296875
+      ],
+      "uri": "https://openreview.net/forum?id=gbeZKej40m"
+    },
+    {
+      "from_page": 27,
+      "kind": 2,
+      "from_rect": [
+        215.58700561523438,
+        435.0060119628906,
+        435.26300048828125,
+        448.2770080566406
+      ],
+      "uri": "https://openreview.net/forum?id=zjeHLSiNv1"
+    },
+    {
+      "from_page": 27,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        552.7650146484375,
+        318.02301025390625,
+        566.0350341796875
+      ],
+      "uri": "https://aclanthology.org/2025.coling-main.37/"
+    },
+    {
+      "from_page": 27,
+      "kind": 2,
+      "from_rect": [
+        280.85198974609375,
+        654.385009765625,
+        500.52899169921875,
+        667.655029296875
+      ],
+      "uri": "https://kellerjordan.github.io/posts/muon/"
+    },
+    {
+      "from_page": 28,
+      "kind": 2,
+      "from_rect": [
+        176.58299255371094,
+        114.00897216796875,
+        365.375,
+        127.27899169921875
+      ],
+      "uri": "https://doi.org/10.18653/v1/P17-1147"
+    },
+    {
+      "from_page": 28,
+      "kind": 2,
+      "from_rect": [
+        133.61399841308594,
+        295.1300048828125,
+        353.2909851074219,
+        308.4010009765625
+      ],
+      "uri": "https://doi.org/10.1109/TASSP.1987.1165125"
+    },
+    {
+      "from_page": 28,
+      "kind": 2,
+      "from_rect": [
+        106.50599670410156,
+        336.3760070800781,
+        320.9519958496094,
+        349.64599609375
+      ],
+      "uri": "https://doi.org/10.48550/arXiv.2507.20534"
+    },
+    {
+      "from_page": 28,
+      "kind": 2,
+      "from_rect": [
+        215.0489959716797,
+        580.8599853515625,
+        403.84100341796875,
+        594.1300048828125
+      ],
+      "uri": "https://doi.org/10.18653/v1/d18-2012"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        521.593017578125,
+        114.00897216796875,
+        555.3070068359375,
+        127.27899169921875
+      ],
+      "uri": "https://doi.org/10.18653/v1/d17-1082"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        133.13702392578125,
+        239.56700134277344,
+        146.40802001953125
+      ],
+      "uri": "https://doi.org/10.18653/v1/d17-1082"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        346.0920104980469,
+        276.00201416015625,
+        555.3070068359375,
+        289.2720031738281
+      ],
+      "uri": "https://openreview.net/forum?id=S1VaB4cex"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        295.1300048828125,
+        87.38800048828125,
+        308.4010009765625
+      ],
+      "uri": "https://openreview.net/forum?id=S1VaB4cex"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        150.33200073242188,
+        457.1239929199219,
+        401.3900146484375,
+        470.3940124511719
+      ],
+      "uri": "https://proceedings.mlr.press/v139/lewis21a.html"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        491.87701416015625,
+        577.8709716796875,
+        555.3070068359375,
+        591.1409912109375
+      ],
+      "uri": "https://openreview.net/forum?id=DeG07_TcZvT"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        597.0,
+        244.2989959716797,
+        610.27001953125
+      ],
+      "uri": "https://openreview.net/forum?id=DeG07_TcZvT"
+    },
+    {
+      "from_page": 29,
+      "kind": 2,
+      "from_rect": [
+        133.61399841308594,
+        638.2449951171875,
+        300.98699951171875,
+        651.5150146484375
+      ],
+      "uri": "https://arxiv.org/abs/2506.02132"
+    },
+    {
+      "from_page": 30,
+      "kind": 2,
+      "from_rect": [
+        251.322998046875,
+        171.39398193359375,
+        470.9989929199219,
+        184.66400146484375
+      ],
+      "uri": "https://openreview.net/forum?id=KoFOg41haE"
+    },
+    {
+      "from_page": 30,
+      "kind": 2,
+      "from_rect": [
+        332.8609924316406,
+        295.1300048828125,
+        552.5369873046875,
+        308.4010009765625
+      ],
+      "uri": "https://openreview.net/forum?id=lcDRvffeNP"
+    },
+    {
+      "from_page": 30,
+      "kind": 2,
+      "from_rect": [
+        450.6990051269531,
+        336.3760070800781,
+        555.3070068359375,
+        349.64599609375
+      ],
+      "uri": "https://openreview.net/forum?id=u2vAyMeLMm"
+    },
+    {
+      "from_page": 30,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        355.5039978027344,
+        197.2259979248047,
+        368.77398681640625
+      ],
+      "uri": "https://openreview.net/forum?id=u2vAyMeLMm"
+    },
+    {
+      "from_page": 30,
+      "kind": 2,
+      "from_rect": [
+        237.61399841308594,
+        599.988037109375,
+        462.52099609375,
+        613.259033203125
+      ],
+      "uri": "https://openreview.net/forum?id=MkbcAHIYgyS"
+    },
+    {
+      "from_page": 30,
+      "kind": 2,
+      "from_rect": [
+        396.5790100097656,
+        663.3510131835938,
+        555.3070068359375,
+        676.6209716796875
+      ],
+      "uri": "https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens"
+    },
+    {
+      "from_page": 30,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        682.47900390625,
+        350.8999938964844,
+        695.7490234375
+      ],
+      "uri": "https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens"
+    },
+    {
+      "from_page": 31,
+      "kind": 2,
+      "from_rect": [
+        253.82400512695312,
+        270.02398681640625,
+        521.072021484375,
+        283.2950134277344
+      ],
+      "uri": "https://doi.org/10.18653/v1/2023.findings-emnlp.936"
+    },
+    {
+      "from_page": 31,
+      "kind": 2,
+      "from_rect": [
+        285.4849853515625,
+        330.39801025390625,
+        505.1610107421875,
+        343.66900634765625
+      ],
+      "uri": "https://openreview.net/forum?id=wHBfxhZu1u"
+    },
+    {
+      "from_page": 31,
+      "kind": 2,
+      "from_rect": [
+        325.44500732421875,
+        432.01800537109375,
+        545.1209716796875,
+        445.2879943847656
+      ],
+      "uri": "https://openreview.net/forum?id=R8sQPpGCv0"
+    },
+    {
+      "from_page": 31,
+      "kind": 2,
+      "from_rect": [
+        276.5710144042969,
+        555.7540283203125,
+        525.3900146484375,
+        569.0239868164062
+      ],
+      "uri": "https://wiki.rwkv.com/basic/architecture.html"
+    },
+    {
+      "from_page": 32,
+      "kind": 2,
+      "from_rect": [
+        133.61399841308594,
+        193.510986328125,
+        359.0190124511719,
+        206.781005859375
+      ],
+      "uri": "https://openreview.net/forum?id=fR3wGCk-IXp"
+    },
+    {
+      "from_page": 32,
+      "kind": 2,
+      "from_rect": [
+        82.15699768066406,
+        374.63299560546875,
+        312.29400634765625,
+        387.90301513671875
+      ],
+      "uri": "https://doi.org/10.1016/j.neucom.2023.127063"
+    },
+    {
+      "from_page": 32,
+      "kind": 2,
+      "from_rect": [
+        233.58999633789062,
+        558.7429809570312,
+        448.53399658203125,
+        572.0130004882812
+      ],
+      "uri": "https://ai.google.dev/gemma/docs/gemma-3n"
+    },
+    {
+      "from_page": 32,
+      "kind": 2,
+      "from_rect": [
+        348.8240051269531,
+        723.7249755859375,
+        516.1959838867188,
+        736.9949951171875
+      ],
+      "uri": "https://arxiv.org/abs/2601.21461"
+    },
+    {
+      "from_page": 33,
+      "kind": 2,
+      "from_rect": [
+        176.26499938964844,
+        215.62799072265625,
+        343.6369934082031,
+        228.89801025390625
+      ],
+      "uri": "https://arxiv.org/abs/2408.15664"
+    },
+    {
+      "from_page": 33,
+      "kind": 2,
+      "from_rect": [
+        253.552001953125,
+        317.24798583984375,
+        515.0490112304688,
+        330.51800537109375
+      ],
+      "uri": "https://www.unicode.org/reports/tr15/tr15-57.html"
+    },
+    {
+      "from_page": 33,
+      "kind": 2,
+      "from_rect": [
+        263.0690002441406,
+        396.75,
+        482.7449951171875,
+        410.0199890136719
+      ],
+      "uri": "https://openreview.net/forum?id=NG7sS51zVF"
+    },
+    {
+      "from_page": 33,
+      "kind": 2,
+      "from_rect": [
+        133.61399841308594,
+        457.1239929199219,
+        300.98699951171875,
+        470.3940124511719
+      ],
+      "uri": "https://arxiv.org/abs/2512.24880"
+    },
+    {
+      "from_page": 33,
+      "kind": 2,
+      "from_rect": [
+        106.50599670410156,
+        679.489990234375,
+        295.2980041503906,
+        692.760986328125
+      ],
+      "uri": "https://doi.org/10.18653/v1/p19-1472"
+    },
+    {
+      "from_page": 34,
+      "kind": 2,
+      "from_rect": [
+        211.16400146484375,
+        314.2590026855469,
+        430.8399963378906,
+        327.52899169921875
+      ],
+      "uri": "https://openreview.net/forum?id=9FqARW7dwB"
+    }
+  ],
+  "invalid_links": [],
+  "all_named_destinations_resolved": true,
+  "log_path": "/workspace/ai-self-study/book/build/engram/engram.log",
+  "log_sha256": "0e9d2d367d7c23b6a34c16180aa83c6792b883c697714756c46f7fce5ef8fc77",
+  "log_warnings": [
+    "Underfull \\hbox (badness 1152) in paragraph at lines 7--8",
+    "Underfull \\hbox (badness 10000) in paragraph at lines 158--159"
+  ],
+  "log_completed": true,
+  "dist_equals_build": true,
+  "toc": [
+    [
+      1,
+      "1 通过可扩展查找实现条件记忆",
+      2
+    ],
+    [
+      2,
+      " 1.1 摘要",
+      2
+    ],
+    [
+      2,
+      " 1.2 1 引言",
+      3
+    ],
+    [
+      2,
+      " 1.3 2 架构",
+      3
+    ],
+    [
+      2,
+      " 1.4 3 扩展规律与稀疏分配",
+      7
+    ],
+    [
+      2,
+      " 1.5 4 大规模预训练",
+      8
+    ],
+    [
+      2,
+      " 1.6 5 长上下文训练",
+      11
+    ],
+    [
+      2,
+      " 1.7 6 分析",
+      12
+    ],
+    [
+      2,
+      " 1.8 7 相关工作",
+      17
+    ],
+    [
+      2,
+      " 1.9 8 结论",
+      18
+    ],
+    [
+      2,
+      " 1.10 附录 A: 完整架构与超参数",
+      18
+    ],
+    [
+      2,
+      " 1.11 附录 B: 全部基准曲线",
+      20
+    ],
+    [
+      2,
+      " 1.12 附录 C: 分词器压缩案例",
+      21
+    ],
+    [
+      2,
+      " 1.13 译者核查注",
+      21
+    ],
+    [
+      1,
+      "参考文献",
+      22
+    ]
+  ],
+  "reviewed_on": "2026-10-12",
+  "reviewer_identity": "Independent machine-assisted Codex reviewer, not Engram translator; not human bilingual or domain-expert certification",
+  "scope": "Direct comparison of the two small restorations with the fixed arXivv2 source, all34 current PDF pages actually viewed, every changed page plus neighbors at2x, all internal links/TOC and final compilation log. No model execution/retranslation.",
+  "direct_semantic_comparison": [
+    {
+      "source_file": "/tmp/engram-source/unpacked/sections/long_context_exp.tex",
+      "source_sha256": "863ec7c6a01fcdcfeeaefb767ac8d10159796058a7d2b97f4f686c08c4a4ba53",
+      "source_scope": "Original Table2 full caption",
+      "translation_file": "papers/translations/engram/tables/long_context.tex",
+      "translation_sha256": "562256522386a8788d11a4328a22c69cb25c50815e4924874ad906465f8aeab6",
+      "result": "Two key findings, 82% with41k/50k, iso-loss46k/iso-FLOPs50k, all-metrics author wording, parenthetical checkpoint/loss definition, best/second markers and two original citations fully restored. Added italic translator note remains distinct and points to unchanged data exceptions."
+    },
+    {
+      "source_file": "/tmp/engram-source/unpacked/sections/related_work.tex",
+      "source_sha256": "fdf0ff7d0a1f9c9ff05dcfd3552a0835bd029e97f5c27f3b3024634119a61bd5",
+      "source_scope": "Last sentence under Mechanisms of Knowledge Storage",
+      "translation_file": "papers/translations/engram/body.tex",
+      "translation_sha256": "90f3e9b4fc715179d69d61164198c336346f46278b46e5e1488e42bfaf504a73",
+      "result": "Original rather-than-mere-statistical-memorization clause retained faithfully as 而非仅仅进行统计记忆; preceding possible/suggest language and original citation remain. Not strengthened to a proved world-model claim."
+    }
+  ],
+  "table2_checks": {
+    "transposed_data_cells": 48,
+    "all_values_original_bold_and_underline_markers_match": true,
+    "original_citation_order": [
+      "fangwrong",
+      "hsiehruler"
+    ],
+    "translated_citation_order": [
+      "engram-fangwrong",
+      "engram-hsiehruler"
+    ],
+    "caption_complete_and_table_together_page": 11,
+    "no_clipping_collision_or_bad_caption_separation": true,
+    "data_exception_note_retained_pdf_page": 21,
+    "examples_retained": [
+      "S97.6 below baseline100.0",
+      "CWE4.3 below4.5",
+      "QA44.0/37.5/40.5 nonmonotonic",
+      "FWE99.6/98.6/99.3 nonmonotonic"
+    ]
+  },
+  "actual_visual_review": {
+    "render_scale_all_pages": 1.5,
+    "all_pages_actually_viewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "method": "Every contact-sheet panel actually viewed; not inferred solely from extracted text.",
+    "high_resolution_scale": 2,
+    "changed_and_neighbor_pages_actually_viewed": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "changed_page_descriptions": {
+      "11": "Restored full Table2 caption with two author conclusions, original citations and marker explanation; complete caption and all48 cells together.",
+      "12": "Following prose and CKA discussion reflow; no substantive addition beyond restored caption.",
+      "13": "Patchscopes table3 and soft-alignment formula reflow; complete caption/table and formula retained.",
+      "14": "Representation plot and body reflow; no clipping or figure-caption split.",
+      "16": "System prototype paragraph/footnote and gating section reflow; all content and two footnotes retained.",
+      "17": "Five complete gating examples and Related Work reflow; original paragraph hierarchy retained.",
+      "18": "Original final Related Work clause restored, preserves tentative may interpretation; architecture table5 pagination reflows.",
+      "19": "Continuation of complete architecture table5 reflows; no lost row."
+    },
+    "observations": [
+      "Expanded Table2 caption and full table fit together on page11; subsection5.2 heading has introductory prose before continued text on page12.",
+      "Table3 complete on page13; source output lines and credit retained.",
+      "Table5 begins page18 and continues19 with no missing row; paragraph/figure reflow is readable.",
+      "No overlap, clipped text, footer collision or lost source output."
+    ]
+  },
+  "internal_links_checked": 215,
+  "toc_checks": {
+    "entries": 15,
+    "identical_to_baseline": true,
+    "all_target_pages_valid": true,
+    "all_toc_links_included_in_link_validation": true,
+    "pdf_page1_actually_viewed": true
+  },
+  "log_assessment": {
+    "no_overfull_missing_glyph_unresolved_reference_error": true,
+    "rerun_requested": false,
+    "existing_underfull_warnings_preserved": [
+      "Underfull \\hbox (badness 1152) in paragraph at lines 7--8",
+      "Underfull \\hbox (badness 10000) in paragraph at lines 158--159"
+    ],
+    "existing_warning_visual_assessment": "Same author-list and benchmark-list spacing warnings as prior v03; pages2/9 viewed, readable without clipping.",
+    "other_nonblocking_warning": "Fixed class filecontents writes/overwrites elegantbook-original-adapter.cls; ordinary template-generation warning.",
+    "out_status": "rerunfilecheck reports engram.out unchanged."
+  },
+  "current_source_and_build_sha256": {
+    "papers/translations/engram/body.tex": "90f3e9b4fc715179d69d61164198c336346f46278b46e5e1488e42bfaf504a73",
+    "papers/translations/engram/tables/long_context.tex": "562256522386a8788d11a4328a22c69cb25c50815e4924874ad906465f8aeab6",
+    "book/engram.tex": "52e76adfc0a4bf73807630752f556b872c643d2550a1152aed50b4675de6dba1",
+    "book/build/engram/engram.aux": "74d8b2316e9c099c7b748bdd2e8acdacafbb46f824cda8cd19b77a9853be8bc8",
+    "book/build/engram/engram.toc": "51e4031ee2e49a81c194c8cfe2e8d92e28291cc3c819588f643d73c1771d9165",
+    "book/build/engram/engram.log": "0e9d2d367d7c23b6a34c16180aa83c6792b883c697714756c46f7fce5ef8fc77"
+  },
+  "page_image_sha256": {
+    "page-01.png": "57410fdebf422223884f054a3a877099264e121bf860b94fe0371583b18aafc6",
+    "page-02.png": "e7ac1f7951ad67e58aa1b7ee6e483d5f5d53db40c6b1573f6c2f745eb58a8abf",
+    "page-03.png": "d613e57e671d173b395cf340bb8fb50f62ad17880ea74a7436092e13c5918078",
+    "page-04.png": "44d7b169a0840660e30a19f7f18e45523309aafe57f8d0167759bf0d4182c46e",
+    "page-05.png": "07170e5d97cc88d6ac09de6b409e644ffbc3259f71e5266a0cb21de5c4e0f35f",
+    "page-06.png": "5251c40e0cc055383d93ca05375af471d0d6c4d49cf69ac63e9073286d90df23",
+    "page-07.png": "fefe8e8343232c47b2d892a4f5c9a188e1477bb61843d7f733644857c63d083c",
+    "page-08.png": "a33d0f0916ae632f0834b98b9bbe07558d6c787ebe292995774f40bc092688c2",
+    "page-09.png": "e7e9da35708bffe08fdb0207a0c03d4cbdfcccf9573d612e0d9db07d3cd33241",
+    "page-10.png": "3dc8f5e10dee3491a67404ada3ed17ed69780ae8a884bcd63b7d7cef2b5f4e9b",
+    "page-11.png": "d299412439d00181e060ade5ce5e0df896ecb622bc0becfc5206bde1e87eed0e",
+    "page-12.png": "8c4eb7fbae9b7ddf803b16306c8a4e40dd7ac7f92e266f13f01ee7d24c628c0c",
+    "page-13.png": "f0177c1445bdd75b3b72a588290fe33cbd78483936cc2b2b68245523e50ed6cc",
+    "page-14.png": "ce41bd78302986df44fba71ef6fe69d8213f0d6089ffd3cdd85261d5acfdb76c",
+    "page-15.png": "138acd32206dd26a4c7c179dba1319e49e4077c55a1bfbbb1db78d3c35000eb8",
+    "page-16.png": "470011cdaf5211b25069c0133608cde7529a1bc5e765cf11452b55e94cfe4261",
+    "page-17.png": "64128545698f19b685eb1093a0ce875b83ce6a068f749bfad6fa8a9afbb6c4ae",
+    "page-18.png": "728a7e1524bcd66098a77837570e54d65190e1f6acf6706d047a357ca8bc9a24",
+    "page-19.png": "4c4e952e08799c3fb7408908db061595658c35e47c055743c33e9506299a11ab",
+    "page-20.png": "9b125451da6154634d636dfc964be04f0cd58770359fb50f6fc5f61d6f234795",
+    "page-21.png": "7cb1d6c05a80e52b36894170ea3f133e4614f00c582ef3344a8f9d76a987c443",
+    "page-22.png": "8f1dd8f18eb71fae8ff8fa54362ffb01618e3c6fb728b9eda011cc5dc7377c30",
+    "page-23.png": "e305b0b49df1c18d75c0890486cbef19899182e86d1c566c15910db24f45725d",
+    "page-24.png": "68accecf82814946dccedc64fa2d6abaf1960ddf3412c5c6fe19f0c38b37a6e9",
+    "page-25.png": "2e6028e52ad765367d1ef7edf6460d13aecc0dcc4faddf281f872fd3b628ca0e",
+    "page-26.png": "20a6239546348982936fe28bf909f6b339741cd43b1dfe4ad75399a3473891d5",
+    "page-27.png": "b306a8027169fcc1efadbb4d5b32fe9ea308c7ae86dff220f91b917d63d52854",
+    "page-28.png": "92959e6c8c36da8a6a812e266c4ed1806737764ffaf072713ae68c5671048c1a",
+    "page-29.png": "03b0e520ffaa535af5708d70b1a5996ad9a467bb2c88316b4e30592bef78f9de",
+    "page-30.png": "1e507c875ddfbe5b1df4be8290496bb0512a88cb299a45b82b22fd04545de448",
+    "page-31.png": "71e0d0ca7adbf88645a1c0afe642a8271a04a4732a198d49a49b54214a7a68aa",
+    "page-32.png": "cc9cdfcbf3338372ef69b4c4cf4d866923c605afcadd9b20935f4783cebb67d5",
+    "page-33.png": "bafffea66d7b900766c03c4442cfacb52db7a1be9eba0889361fe0f1adad017a",
+    "page-34.png": "ae806a356b9fa37517530d2d224c3c8719665b905be9ce30c414cc4f6de6adc6"
+  },
+  "high_image_sha256": {
+    "page-10.png": "4452c5ac5bb975eb07035c4f8ba4d42bd96d4572049bc63e2bdd540ade9cb56d",
+    "page-11.png": "00fa9d61ca8da5722762353b384164b700097455074df8bfa761f2bfa5eec041",
+    "page-12.png": "f7dba16969bb1be08bbf6e42ba5903bc0416906e5d0ec5ab856ec40cd378e2db",
+    "page-13.png": "c73eb4a81a98044da7b512fcf07e5f46531a8529904f0e559228e648617f495d",
+    "page-14.png": "f70a47ef3cb0077cee2202a6d60ceb4c08cb95e6635f19118a4b5260e7939876",
+    "page-15.png": "85593af7f90d09a058e9d49775824280115ba574e7d3d9f95d339dc22676a6ec",
+    "page-16.png": "7a55670ddd3946b185ea1614773e1543594f47bf392228e5a3d41585706c2801",
+    "page-17.png": "7906b5e2dcf9097802f65dfd68e67f27843023b07b0ef2721b6486579481a55e",
+    "page-18.png": "3696919070ca5fd9be83b08d14aa3e1a2ea205e54e768cbf98f77115d262d46d",
+    "page-19.png": "b7edfaa1bbadc323987c79d11fbb15867759cb85800619632c64c7d307444d84",
+    "page-20.png": "16841fe297a47ea158eba03ff44d265acf301d3361cf774761532651fd6a1c2b"
+  },
+  "prior_qa_preserved": true,
+  "blocking_findings": [],
+  "remaining_blockers": [],
+  "conclusion": "Pass for the two requested source restorations and the precisely bound current34page PDF. This incremental independent machine-assisted review does not certify every scientific claim or replace expert bilingual review."
+}

@@ -57,9 +57,16 @@
     "review": "AI source comparison; human expert review not completed",
     "compile": "Passed direct XeLaTeX fixed-template compilation, two converged final runs; 35 pages; no undefined references, missing characters or Overfull boxes.",
     "visual_review": "All 35 pages visually inspected across build iterations; modified pages rerendered and rechecked. Native QED placement and sample-table caption pagination repaired without content deletion.",
-    "typesetting_skill": "AUTOMATED PASS on project-contained snapshot; only static relative asset path prefix normalized. Warnings reviewed: source-required subsection headings explicitly allowed by task, and inline-height reminders concern diagram arrows."
+    "typesetting_skill": "AUTOMATED PASS on project-contained snapshot; only static relative asset path prefix normalized. Warnings reviewed: source-required subsection headings explicitly allowed by task, and inline-height reminders concern diagram arrows.",
+    "snapshot_role": "Historical author-stage 35-page isolated build; retained as evidence, not final component snapshot. Final36-page root build reviewed in qa/v03-final-pdf-dpo-r1-stars.md; see integration-snapshot.json."
   },
   "deliverable_hashes": {
+    "body.tex": "db017b264e47b90d8b422df24438df4e7d1452d9d8b4b3795559c59b5fec9505"
+  },
+  "author_stage_deliverable_hashes": {
     "body.tex": "3ba5c8f3532ad262e7defe5ccce82f6f570324200fad20befaa7fb5423581880"
+  },
+  "previous_integration_hashes_before_v031": {
+    "deliverable_hashes.body.tex": "0582a9c1a0e64d9c607537036f93aaa6068e8ad8ac9d999828f2cdef851ec06c"
   }
 }

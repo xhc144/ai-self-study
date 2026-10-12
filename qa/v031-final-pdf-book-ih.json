@@ -1,0 +1,4487 @@
+{
+  "status": "PASS",
+  "reviewed_at": "2026-10-12T03:24:50.711741+00:00",
+  "reviewer": "Independent model agent; not human peer review",
+  "scope": "Final book and IH PDF delta against v0.3.0 public clone; all pages rendered, changed pages and neighbors reviewed at high resolution. No model execution or compilation.",
+  "render_dpi": 100,
+  "files": {
+    "book": {
+      "path": "dist/ai-self-study.pdf",
+      "sha256": "cf9caf59c171d04b3c85141e467145c54e975216044bd1640d541d5e8c13b6fb",
+      "baseline_path": "/tmp/ai-self-study-v03-public-clone/dist/ai-self-study.pdf",
+      "baseline_sha256": "c9bdf9aa359158ce80fea766aabb35d3796adefa36364283b3bdb03491edd4d9",
+      "pages": 99,
+      "baseline_pages": 99,
+      "page_records": [
+        {
+          "page": 1,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-001.png",
+          "png_sha256": "9c5d0af0583b3e54e27eb835be37fabc630969d301b8e8ebf234b583401d59fb",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 14,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 2,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-002.png",
+          "png_sha256": "71842d742a6df7244575c640d5d1377c7874fcfcc8ffe6104cb041ff382660ef",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 31,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 3,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-003.png",
+          "png_sha256": "eb8bbf5a47559e9d2d5e4a7fa3ad4578035ceacb3babd171716acb9e8ac3b279",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            757,
+            495,
+            771,
+            906
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 32,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 4,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-004.png",
+          "png_sha256": "f50ff4b4047e3874df41f426cb9397bbcc70528b59f0854dd41f63173c9d9329",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 32,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 5,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-005.png",
+          "png_sha256": "6e8d431f75ee09998a7b9d063e6ee21f5024cec4c6bbe446888b225b655921b8",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 20,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 6,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-006.png",
+          "png_sha256": "2fde734dd5202be1de387b1612ccb2804340a47850fdd52e8e6f227c9e7eceba",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 7,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-007.png",
+          "png_sha256": "0251b630a51d0f66497c7f39e70f984e708effc9f1ea19c9cbe78e87d31360ec",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 10,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 8,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-008.png",
+          "png_sha256": "0cd90c4fa6bf041eb39aedb8b15fd91c318e0a08c7029bfefa9bb584d7ab4cb3",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 9,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-009.png",
+          "png_sha256": "553623307e5527aa615db37021f33a93c20a0f0fdb891714179ad3ab03c6d002",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 10,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-010.png",
+          "png_sha256": "176ea307158245412956677f985ed8c35dfd4db60eb665d5f10e0a6fc52086fb",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 11,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-011.png",
+          "png_sha256": "27289f7458dc164fed5a91b20011eacb19663aaa29f17000e8dfec7f7a72479d",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 12,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-012.png",
+          "png_sha256": "b3cf9fd12373d4a234cb9c8ea66fc0d6e244275e30e58514bf00a0e7bfaaf059",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 13,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-013.png",
+          "png_sha256": "3214b173561215d351911f29823cf640a7a606041e35026fcf5b88ce5b1d6153",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 14,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-014.png",
+          "png_sha256": "547fd025fa86ac3c73f0436228950c9e78f2ae80df5857524bbd0b5ed4e60d1d",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 15,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-015.png",
+          "png_sha256": "116ac4b89fd82e70f2eac50494b324769c5e48555ba81b5dab30e4c6bf7c3dc2",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 16,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-016.png",
+          "png_sha256": "a4ef015c148a8df1d339f5a740afdf154d97d411be6aa03e18e054444dfe19db",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 17,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-017.png",
+          "png_sha256": "036c925b0aeff88c11da7179075b79cdd6936a9f01a4a07f2bb6013f8653c26e",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 18,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-018.png",
+          "png_sha256": "821719f52e3c42082e6b2871b183528f2acab91d10e133f8442cf4a4c45378bf",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 19,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-019.png",
+          "png_sha256": "5b42f8b10e0629bc05d78c57a993119f857c99cc2886988348ccd9820e246836",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 20,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-020.png",
+          "png_sha256": "937eb04fda285df31dd0a2429907a5281e69fca24ce27bee26520f92eb2bdb03",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 21,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-021.png",
+          "png_sha256": "ea5b8eb45be3fa793f9a15a684ba62d73780bae1035835e97332822c479cfa63",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 22,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-022.png",
+          "png_sha256": "187149d01da513ef951c578e7fa39cad8e1b73bb8a6e7391bcbffec23b226961",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 23,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-023.png",
+          "png_sha256": "84f31de3f7ba70118b74aa66a6f143b4d7819fe76e742db8cfc095bc308945ce",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 24,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-024.png",
+          "png_sha256": "310073a967528439fa683e0a6fea65ac07fb987438c5cf612f4371db54046368",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 25,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-025.png",
+          "png_sha256": "d9240ba6b28499754843671427838bd9388d20b87942cf366e5acd1a49ce6fb0",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 26,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-026.png",
+          "png_sha256": "24ce927b791c075b6bb59ae8170c9b5dd03ace41584d7741bcb3135bd6fac377",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 27,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-027.png",
+          "png_sha256": "a8bddd2b8a1d0ee6227876669ec6b5319b927e2bb99551995bff2127b3f490d1",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 28,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-028.png",
+          "png_sha256": "4dc96cead00e379128f12cb9891cc11c99817080b9ee1f6d21d0a3699ea8984b",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 29,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-029.png",
+          "png_sha256": "828960c1709c110d59dfa626d9e07795ec056aa196bc508d9250a95217bc1db2",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 30,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-030.png",
+          "png_sha256": "865d208f9f25510bd7fd7213df46e42abf741ebcf66af262d0c993967686916c",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 31,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-031.png",
+          "png_sha256": "fd25343d603987c769268da50b9862b127696e0b271421f89df311f4b9033e9d",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 32,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-032.png",
+          "png_sha256": "179c9780fd513d8c07df90bb457afe3a6e68661b75f650ebaf64212de031a80a",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 33,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-033.png",
+          "png_sha256": "56ec2fbe7a130938ae9d77355c96760694c6cd477148d64353f02c9a1a7a84f5",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 34,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-034.png",
+          "png_sha256": "fb96aeded5088258177e61fa514466e007bd96ff4142c852c4cc05f752c10f6c",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 35,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-035.png",
+          "png_sha256": "2950b34cce147e201bdb791bdf6f230349fcda186c6f15c22f629baf1efd7d4f",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 36,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-036.png",
+          "png_sha256": "79e5579c69cc3969d421a59858c4b9c415f8636c574bf195099a0b7281369b97",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 37,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-037.png",
+          "png_sha256": "1b391ce2cebc76097b44b139b75ec6837bba42c4b1cca2d267fd5c812c4a37d6",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 38,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-038.png",
+          "png_sha256": "6e7f534f30d9bfb7fd202d6d192ce693490476f6e7f3b46e0c7d3bc447cc05ae",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 39,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-039.png",
+          "png_sha256": "46d4308b798f0ecfd2be5a84dfab06f7672592701c7660830eabe28af0e4dc71",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 40,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-040.png",
+          "png_sha256": "de78526fb73e168a226db87dfe62e1845348cbd18b1e6f96122156298748589e",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 41,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-041.png",
+          "png_sha256": "3634deb88a0f098da127c8ffbe11a0015e70854d5bf05ce4819c62b6e20add5b",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 42,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-042.png",
+          "png_sha256": "d8aaa9d2c0dbfa7c1919dc357692b791b6a7186a00164dbb91e1c54cdf26f0df",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 43,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-043.png",
+          "png_sha256": "d4700986c3bcf8b122155d6cca822086f71dd9c5a0765a6b999d3986320f5585",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 44,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-044.png",
+          "png_sha256": "f11c1e3336d96009a6df5d81ff73123ff0597de03a956947d4a65d6d0b8fe34c",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 45,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-045.png",
+          "png_sha256": "f9ae1c26432d75e5bc39ed671dee18e60a1194cdcbd0f6fecc9507cf7ac4cd06",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 46,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-046.png",
+          "png_sha256": "c95b4dd9167396dcfc3744b95edbde04af6240cd1b8ce1509b21a5bbde4ad480",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 6,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 47,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-047.png",
+          "png_sha256": "95a081afc1c1607c6825d129a8f42435c54c9b3d2597a33475aba1c9a37d9991",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 48,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-048.png",
+          "png_sha256": "e483baef8659b613db00778d3275cd3b075b4e73ef0c7223e887cc97272ce48d",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            81,
+            772,
+            1001
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 49,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-049.png",
+          "png_sha256": "4f2969989412a1a42d0aeb998195fa5325f2a9ff69f2004fba0bf8a72d2e1659",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            81,
+            772,
+            1004
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 50,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-050.png",
+          "png_sha256": "551691d6470011b539aada9f4d48c01ea35e85d1f51df9014d2f64b05e4e7c84",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            78,
+            81,
+            772,
+            1023
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 51,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-051.png",
+          "png_sha256": "f222864aef1c5d4f11a74b45d1bd6c170a19df05f9e56cc5a538d785694a5af8",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            78,
+            134,
+            772,
+            1018
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 52,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-052.png",
+          "png_sha256": "98ec80950b6ddf74e561b81dd1583eb6d707bf7b84de5a4853d3270d27caa4ad",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            78,
+            135,
+            772,
+            1020
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 53,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-053.png",
+          "png_sha256": "e42c94396c031c519b253902b66fe0da32e43f2277270779e269cf923055b312",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            135,
+            772,
+            1017
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 54,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-054.png",
+          "png_sha256": "58e6b4eac7c2738883b1c5aad5ee79cf75e125b79e713d9a0da8c6e603b9d091",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            133,
+            772,
+            971
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 55,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-055.png",
+          "png_sha256": "8bb60d8fd772e989a36625680cc1f249c1a157e2887a92bec773d7c10b9fd2f8",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            78,
+            133,
+            772,
+            1024
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 56,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-056.png",
+          "png_sha256": "097dd16c176a5cb55e0fc0ec4fd3156ac8b4023488725032d1340e03b9504f2f",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            78,
+            134,
+            772,
+            979
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 57,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-057.png",
+          "png_sha256": "e9023a94d980a7c516d7265630be5a4b77969492923135f0f11838f0370eead1",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            132,
+            772,
+            1003
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 58,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-058.png",
+          "png_sha256": "333f08fc03b5cc4b4235ce202722d0dc92cb9ab4ca13ad6cb3845a7ce72fbb60",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            81,
+            772,
+            1024
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 59,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-059.png",
+          "png_sha256": "0b406500cea9b14d9afc96d1be6b8a7095bc985d13bc2a87f016339d88c3b963",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            135,
+            772,
+            1018
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 60,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-060.png",
+          "png_sha256": "8d686ba5cf0aa0c3c1dccaf8ce2c66fa6dc9cbf3ab821155f6a809bad2b6033d",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            78,
+            135,
+            772,
+            1009
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 61,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-061.png",
+          "png_sha256": "50b5e70bd5af804bf7cbd6db5260cec253b15c44766f1ea95286470563ea1eaf",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            78,
+            132,
+            772,
+            992
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 62,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-062.png",
+          "png_sha256": "277aa568aaa76a94bfb79b00edcb62df9f142e0f4a171cfae7a8f4bd75c2b6b7",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            131,
+            772,
+            1021
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 63,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-063.png",
+          "png_sha256": "95d961f3b91b36680a5267d600d51dffa4a7e099bf5954f1b34a5449b71f94bf",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            134,
+            772,
+            1020
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 64,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-064.png",
+          "png_sha256": "0ad4c1125cac2aa43dfcd59fc70ad3405d98b963b0b2848afaa30dc7bc9f6a46",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            133,
+            771,
+            1021
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 65,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-065.png",
+          "png_sha256": "8c4e08ee14e5c2078871f9e5fcf1be32abd49ac4949a9e928db2feccdfca0cf6",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            134,
+            771,
+            986
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 66,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-066.png",
+          "png_sha256": "b9a7c88d18197cd95c8c1e200b21800c1c55963508e6864e195a455d6486c0a7",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            131,
+            771,
+            970
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 67,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-067.png",
+          "png_sha256": "0eb51d94395a08abd743e1026d30ace77d4dc1d2e0a16cb8d6bfe21b8d8741d7",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 68,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-068.png",
+          "png_sha256": "7089bf360224473788eaacb71e71d9addc73ae1262f56302e0ab4c248cd43b1c",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 69,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-069.png",
+          "png_sha256": "79c6e0a78813ddfc9aff720a618b3cb149c57d8109cb334bd9185e84d2062f6e",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 70,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-070.png",
+          "png_sha256": "eea2235ebe7396707e0e87bd85ee86e7ae76a6644f1d7f0af3492d62ea007ac5",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 71,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-071.png",
+          "png_sha256": "eb5da4421085a14d7801dfcfcfba315ef99155f93e3e5f733a23fa5240b1a570",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 72,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-072.png",
+          "png_sha256": "1c1443eab0ed307fefd432416cd39c94deb78c1342e067bf2745a871a801eb72",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 73,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-073.png",
+          "png_sha256": "5e001f6deeeceea5163c85fbfccac607017671d7d73ef020096d1e29fff3218b",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 74,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-074.png",
+          "png_sha256": "4763598fd431dcb69db8020ab3debb113e6c0c5ab9281a8ef820b3b8d441461c",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 75,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-075.png",
+          "png_sha256": "33ce990138184e6b2cecd215dcd66fb72aef26df15969bee1d62062874acf5d0",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 76,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-076.png",
+          "png_sha256": "a745460901807f35bd00c6cefb47ea94318c38ced4c57e13fc704926d2d7e3e9",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 77,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-077.png",
+          "png_sha256": "b5d84255a3d65f69b4c3061e7eba0b8a099717b7f7466865c5cab9414a259f51",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 78,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-078.png",
+          "png_sha256": "28907f331822146fa5976c222fa49796fcac7c2b6b50d71ef2503d99cacaaef9",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 79,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-079.png",
+          "png_sha256": "0b7442e4db7c49a30f8cab5228dd1505196948c37460473453e39a7df1068cdc",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            773,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 80,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-080.png",
+          "png_sha256": "3374a1c087ca90ada5dd6b7152ddd36a6331adab5a4a82748177b116048d690a",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 81,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-081.png",
+          "png_sha256": "1278a433372676eb55b963e8670110ab7c0d0b01eab65a2c9b908dfeb4ec8eeb",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 82,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-082.png",
+          "png_sha256": "79229e3065fdb6ddf4c7bf2f8481688a243b70779f1baf04004ffcd691ab12fe",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 83,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-083.png",
+          "png_sha256": "cf98283317d7157851037e80a1837edc47b49262fc16116f3dfab91cde9d7fde",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 84,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-084.png",
+          "png_sha256": "c9c34e0359aff0c4f0624048ab1ded5c2d77af9507d2f1f0529067a6c5fea969",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 85,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-085.png",
+          "png_sha256": "5eee5891f9138a76b0b730258f1a8933d24a767ce8ab5bc720dc7f60a134bb8c",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 86,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-086.png",
+          "png_sha256": "7e3acec57dc91dc1c233cc956a5e549e7e9a283d30826e283d21db1a153f88b5",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 87,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-087.png",
+          "png_sha256": "29bfe968a124daab45461432c9ab2db150b7f7e870eb319fbbc8c43e01173641",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 88,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-088.png",
+          "png_sha256": "f42a948b09a370dd9273295cbd4cff7e0856c607b6ca885227fc917138981066",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 89,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-089.png",
+          "png_sha256": "eacb687a33172560aeaed460bf70e5f24299f9c00fe24a8ceea400a28321ab48",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 90,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-090.png",
+          "png_sha256": "8b9527788c77ed797642896092f549b749de97eec9c3864db44419a31fce67fc",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 91,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-091.png",
+          "png_sha256": "0eeb1161f093de08e1b5e17a923926121f224c4d30bcc2bd7ebd02e936bb7a0b",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 92,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-092.png",
+          "png_sha256": "a153f553c320ec7673aeb481e46219f4da60b39b451c2dc7a4ba88ed205dcf1a",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 93,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-093.png",
+          "png_sha256": "822b8e55c6462a0a61541dd286a3642ff7209ca2b9377ba304e8b31eff5327d4",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 94,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-094.png",
+          "png_sha256": "9d92ff9d180a32ca1fc748182048abb3d2ff8f86ae94dd2307ea906972c39540",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 95,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-095.png",
+          "png_sha256": "97eab6d240619ef6671458db79a46c7511a37482eb88cf098f11501c22c2a348",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 1,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 96,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-096.png",
+          "png_sha256": "3933b59e8f0f9fb869dbc1924135e5edf7852c7d9c70e1c2afb9f1fad90f049f",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 9,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 97,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-097.png",
+          "png_sha256": "d1eecfecc0df27324b4c04bb15d7a8f89f0486957b85ea18dd9686f1301b93af",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 23,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 98,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-098.png",
+          "png_sha256": "d618530aa5bbe78a5428127da4993f8e2daf21c653743ec16a0321de9db550d0",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 23,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 99,
+          "png": "/tmp/v031-final-pdf-book-ih/book/page-099.png",
+          "png_sha256": "3c56e9303dbb37321134dcc1b325085784e0a90cbd0d0d869c3cee70745b9d4a",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 16,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        }
+      ],
+      "changed_pages": [
+        3,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "link_count": 297,
+      "internal_link_count": 226,
+      "external_link_count": 71,
+      "link_anomalies": [],
+      "toc_count": 129,
+      "toc_anomalies": [],
+      "contact_sheets": [
+        "/tmp/v031-final-pdf-book-ih/book/contact-001-006.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-007-012.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-013-018.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-019-024.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-025-030.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-031-036.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-037-042.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-043-048.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-049-054.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-055-060.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-061-066.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-067-072.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-073-078.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-079-084.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-085-090.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-091-096.png",
+        "/tmp/v031-final-pdf-book-ih/book/contact-097-099.png"
+      ],
+      "highres_pages": [
+        {
+          "page": 2,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-002.png",
+          "png_sha256": "8dca684c4d2fca874b77a6f0f0c6710b3da1f5bbbcc382bf43a11d2250eec8fd",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 3,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-003.png",
+          "png_sha256": "02e2501f12d91d1c405cc69c0f626f6f039965d1718dbd782300e1129cf3f7c9",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 4,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-004.png",
+          "png_sha256": "38ccffa5d91638385edf2816a46930b87e5be8985508eb19b940bce1e2e4f397",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 47,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-047.png",
+          "png_sha256": "6493590e2c594baf69cde56ed30999e31ff62f192ada5933d4dff0b6b464a708",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 48,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-048.png",
+          "png_sha256": "b27f41479d9710430db35fddef4287315c56ea63b6d3006fa74ea60bdb0ba1e2",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 49,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-049.png",
+          "png_sha256": "6fcb016b82f7f5e1615da54958f88aa773634c61af2f18fcc4890a543deefaaa",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 50,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-050.png",
+          "png_sha256": "a30faa7c7cfb127f785503cc2555d6169bf6bd09910049cc925d859f6218a68a",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 51,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-051.png",
+          "png_sha256": "2a06e4615dc6c68d97336ace7ee1f486c84afe2437590886dd9306fa25073bd5",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 52,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-052.png",
+          "png_sha256": "f3e1444562f73bd2cdb221957bd97f54154449a283e90d45b6e8c0baba6504e3",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 53,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-053.png",
+          "png_sha256": "9ad2a8018c957fe3e2c5ee1cf73d4764beb3ddd4e47d2bb388317345ce9dbee0",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 54,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-054.png",
+          "png_sha256": "235ff26d669c9cfc5d2be35975ce91e8aee8fc0de20b4ef479751ea41dc8be7b",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 55,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-055.png",
+          "png_sha256": "91b5cb9a5d7a6afeac38e5047c3234d518f028c5db58041114f9eb0b89c1632b",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 56,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-056.png",
+          "png_sha256": "09a7557df99b4851a8c8c111dea6b3d32343959d61d16b2c057a9278343f0fb0",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 57,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-057.png",
+          "png_sha256": "cd3e0958e605a5859820c5164e26031762edc4f0c8c1b8c06ccacc180bb68f25",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 58,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-058.png",
+          "png_sha256": "c69ff780923d8e2b7c5479de44e9bf8f7215e95c30958a8e81798d39ea23b199",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 59,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-059.png",
+          "png_sha256": "04106d1918d17898f459e7f02db7ff1a51b3d85384a8513ff9517c52d7b2c433",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 60,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-060.png",
+          "png_sha256": "723ffc6c34ccf23f638ef6858d104dc08c627eb470437d603be07072d99f07ec",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 61,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-061.png",
+          "png_sha256": "7ffbb336729ee85b5e8e5523296248ae7bc54e57dab8202593aa27114510f40b",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 62,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-062.png",
+          "png_sha256": "e13a280e3295007cff0c66623a032042172156fa9dc72439a331f6675dcc7035",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 63,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-063.png",
+          "png_sha256": "1639c8ca65b178fe7fa1e89b0f9a49b6c64703010e325c60098d27bc46890c87",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 64,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-064.png",
+          "png_sha256": "4bcca41f060bd6135e7218a024caac1b37a44e537a65b66b9cff7b37248fa6e7",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 65,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-065.png",
+          "png_sha256": "0a2804783d21ff399b843f3feaea9cdd3ddb125ac7c8979760f6235143d2a98e",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 66,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-066.png",
+          "png_sha256": "ff02637bdb4bc17d62811270f6500af434b339fc36a68ac9e97c6fdf94e95340",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 67,
+          "png": "/tmp/v031-final-pdf-book-ih/book/highres-067.png",
+          "png_sha256": "8876a2fed823dd0effc33e4e79c9150897c1ecd5980f23ad5e80704d8d724186",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        }
+      ],
+      "all_contact_sheets_actually_opened": true,
+      "toc_title_target_checks": [
+        {
+          "level": 1,
+          "title": "1 现代人工智能的问题与证据",
+          "target_page": 6,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.1 从一个预测器到一个工作系统",
+          "target_page": 6,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.2 进步需要拆成可比较的问题",
+          "target_page": 6,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.3 阅读顺序与能力递进",
+          "target_page": 7,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.4 怎样读一篇方法论文",
+          "target_page": 8,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.5 从复算到研究问题",
+          "target_page": 8,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.6 练习与解答",
+          "target_page": 8,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "2 文本预测、生成与上下文学习",
+          "target_page": 9,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.1 文本怎样成为概率对象",
+          "target_page": 9,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.2 因果错位与交叉熵",
+          "target_page": 10,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.3 数据划分与训练迭代",
+          "target_page": 11,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.4 小语言模型的代码桥梁",
+          "target_page": 12,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.5 上下文学习与条件任务推断",
+          "target_page": 13,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.6 采样分布与序列决策",
+          "target_page": 14,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.7 KV 缓存的等价性与成本",
+          "target_page": 15,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 2.8 复算与练习",
+          "target_page": 15,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "3 表征网络与反向传播",
+          "target_page": 16,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 3.1 从标量函数到可学习表征",
+          "target_page": 16,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 3.2 矩阵梯度由坐标系数决定",
+          "target_page": 17,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 3.3 批次、位置与查表共享",
+          "target_page": 18,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 3.4 从平均损失到参数更新",
+          "target_page": 19,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 3.5 残差、初始化与梯度尺度",
+          "target_page": 20,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 3.6 LayerNorm 的数值与完整导数",
+          "target_page": 20,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 3.7 从公式到诊断实验",
+          "target_page": 21,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "4 注意力与 Transformer 表征",
+          "target_page": 23,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.1 把上下文匹配写成概率",
+          "target_page": 23,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.2 因果掩码与训练目标",
+          "target_page": 24,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.3 位置表征与旋转位置编码",
+          "target_page": 24,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.4 多头、残差与逐 token 网络",
+          "target_page": 25,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.5 注意力的完整反向传播",
+          "target_page": 26,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.6 两位置的一次完整更新",
+          "target_page": 27,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.7 公式与批量实现",
+          "target_page": 28,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.8 计算代价与缓存",
+          "target_page": 29,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.9 分块在线 softmax 的公式与证明",
+          "target_page": 30,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.10 完整标准 Transformer 的 CPU 配对训练",
+          "target_page": 31,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 4.11 实验、机制假说与练习",
+          "target_page": 32,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "5 语言模型的数据与可信评估",
+          "target_page": 33,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 5.1 学到的是哪一种分布",
+          "target_page": 33,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 5.2 数据划分、污染与开发过程",
+          "target_page": 34,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 5.3 预训练数据的受控比较",
+          "target_page": 35,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 5.4 有限样本能够保证什么",
+          "target_page": 36,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 5.5 正则化与选择偏差的实测",
+          "target_page": 37,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 5.6 概率、校准与任务指标",
+          "target_page": 37,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 5.7 分布外表现与因果限制",
+          "target_page": 38,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "6 模型进步的数据与计算条件",
+          "target_page": 39,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 6.1 把进步拆成可检验的变化",
+          "target_page": 39,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 6.2 训练 FLOPs 的近似账本",
+          "target_page": 40,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 6.3 规模损失与预算最优点",
+          "target_page": 40,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 6.4 部署成本改变预算选择",
+          "target_page": 42,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 6.5 资料质量改变同一 token 预算",
+          "target_page": 42,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 6.6 阈值、涌现与行为边界",
+          "target_page": 43,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 6.7 练习与解答",
+          "target_page": 43,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "7 后训练的目标与反馈",
+          "target_page": 44,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 7.1 监督微调与奖励模型",
+          "target_page": 44,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 7.2 KL 正则奖励与 DPO",
+          "target_page": 44,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 7.3 可验证奖励与多阶段后训练",
+          "target_page": 46,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 7.4 LoRA 的秩约束与梯度",
+          "target_page": 47,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 7.5 公开小模型的评分与生成诊断",
+          "target_page": 47,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 7.6 复算与练习",
+          "target_page": 49,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "8 推理、验证与推理时计算",
+          "target_page": 49,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.1 中间序列怎样参与条件预测",
+          "target_page": 49,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.2 精确验证器与错误接受",
+          "target_page": 50,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.3 覆盖率与实际选择率",
+          "target_page": 50,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.4 搜索结构与预算分配",
+          "target_page": 51,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.5 从序列奖励到策略梯度",
+          "target_page": 52,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.6 组内比较与可验证奖励",
+          "target_page": 53,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.7 奖励漏洞与优化目标",
+          "target_page": 54,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 8.8 练习与解答",
+          "target_page": 54,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "9 工具代理、外部记忆与信任边界",
+          "target_page": 55,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.1 从下一词预测到行动系统",
+          "target_page": 55,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.2 多步错误为什么会放大",
+          "target_page": 56,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.3 检索增强与持久记忆",
+          "target_page": 57,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.4 间接注入的威胁模型",
+          "target_page": 58,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.5 能力集合与执行器保证",
+          "target_page": 58,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.6 安全与可用性的共同评价",
+          "target_page": 59,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.7 指令层级训练的实证主线",
+          "target_page": 59,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.8 浏览器注入防御与攻击预算",
+          "target_page": 60,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.9 可执行的信任边界实验",
+          "target_page": 60,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 9.10 练习与解答",
+          "target_page": 61,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "10 表征、归因与因果机制",
+          "target_page": 62,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.1 解释的对象必须先确定",
+          "target_page": 62,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.2 线性探针测量的是可解码性",
+          "target_page": 62,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.3 叠加表征为何难以按神经元命名",
+          "target_page": 63,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.4 稀疏自编码器与字典非唯一性",
+          "target_page": 64,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.5 梯度归因的局部条件",
+          "target_page": 64,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.6 积分梯度的完整推导与基线",
+          "target_page": 65,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.7 激活替换如何检验因果假说",
+          "target_page": 66,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.8 可解码但未使用的实测对照",
+          "target_page": 67,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.9 前沿解释研究如何接受检验",
+          "target_page": 68,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 10.10 练习与解答",
+          "target_page": 68,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "11 生成、验证与研究闭环",
+          "target_page": 69,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.1 研究问题怎样进入可检验循环",
+          "target_page": 69,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.2 评估器是研究对象的一部分",
+          "target_page": 70,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.3 程序搜索的冻结留出实验",
+          "target_page": 70,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.4 FunSearch 与 AlphaEvolve 的可验证发现",
+          "target_page": 71,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.5 自我改进到底更新了什么",
+          "target_page": 72,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.6 改变记忆结构: 选择性状态递推",
+          "target_page": 73,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.7 改变生成顺序: 离散去噪目标",
+          "target_page": 74,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.8 改变计算深度: 潜状态循环",
+          "target_page": 74,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.9 稳定状态为何仍能给错答案",
+          "target_page": 75,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.10 已有小语言模型研究的证据链",
+          "target_page": 76,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.11 成功指标与失败指标可以同时成立",
+          "target_page": 77,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.12 初始化与样本不确定性",
+          "target_page": 78,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.13 条件记忆怎样分开容量与计算",
+          "target_page": 79,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.14 推理预算怎样转成下一轮监督",
+          "target_page": 79,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.15 形式核验把研究闭环推进到哪里",
+          "target_page": 80,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 11.16 练习与解答",
+          "target_page": 81,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "A 向量、矩阵与表示空间",
+          "target_page": 82,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " A.1 从 token 到线性层",
+          "target_page": 82,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " A.2 内积、长度与投影",
+          "target_page": 83,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " A.3 最小二乘作为可辨识性的工具",
+          "target_page": 84,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " A.4 奇异方向、低秩更新与稳定性",
+          "target_page": 84,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " A.5 稳定化工具与 CPU 实验",
+          "target_page": 85,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "B 序列概率、交叉熵与不确定性",
+          "target_page": 86,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " B.1 联合分布与下一个 token",
+          "target_page": 86,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " B.2 期望、方差与训练平均",
+          "target_page": 87,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " B.3 从序列似然到 token 交叉熵",
+          "target_page": 88,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " B.4 Softmax 与损失梯度",
+          "target_page": 89,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " B.5 估计误差与概率校准",
+          "target_page": 89,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " B.6 练习与解答",
+          "target_page": 90,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "C 反向传播与优化的数学工具",
+          "target_page": 91,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " C.1 增量、偏导与梯度",
+          "target_page": 91,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " C.2 矩阵梯度与共享路径",
+          "target_page": 91,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " C.3 Hessian、凸性与局部模型",
+          "target_page": 92,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " C.4 下降引理与步长边界",
+          "target_page": 93,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " C.5 随机梯度与噪声下限",
+          "target_page": 94,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " C.6 Adam、偏差修正与失败边界",
+          "target_page": 95,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " C.7 梯度检查与练习",
+          "target_page": 95,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "参考文献",
+          "target_page": 96,
+          "title_found_on_target": true
+        }
+      ],
+      "blank_text_pages": [],
+      "out_of_page_spans": [],
+      "replacement_character_total": 0
+    },
+    "ih": {
+      "path": "dist/papers/study-ih-challenge.pdf",
+      "sha256": "c0b0a35c3c031802a50d137dc56fec1a6f2d8637b1d7c8b7dcc0ab17c501cfe8",
+      "baseline_path": "/tmp/ai-self-study-v03-public-clone/dist/papers/study-ih-challenge.pdf",
+      "baseline_sha256": "093f8c958dcf4770f475074b519c1b19f0f37003ba19f6ed074a1e36160734fd",
+      "pages": 4,
+      "baseline_pages": 4,
+      "page_records": [
+        {
+          "page": 1,
+          "png": "/tmp/v031-final-pdf-book-ih/ih/page-001.png",
+          "png_sha256": "ecd1c089b133051a2ef3f02f9a0545547a45ea5aab928c8c54916e59fd7d4c2e",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 6,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 2,
+          "png": "/tmp/v031-final-pdf-book-ih/ih/page-002.png",
+          "png_sha256": "6dd1deb94944ec548ed40547887bd1fb9cc91277ad57b49db000d7e0fab9fe46",
+          "raster_changed": false,
+          "difference_bbox_px": null,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 2,
+          "visual_status": "actually_inspected_in_current_contact_sheet"
+        },
+        {
+          "page": 3,
+          "png": "/tmp/v031-final-pdf-book-ih/ih/page-003.png",
+          "png_sha256": "8fa29753df5fde232903a0f6452dd6034599e43adcf55a29d9e50c6db61cd470",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            541,
+            772,
+            972
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            773,
+            1064
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 0,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        },
+        {
+          "page": 4,
+          "png": "/tmp/v031-final-pdf-book-ih/ih/page-004.png",
+          "png_sha256": "b1028403395aa6110190386e8d3c7396566a24db831eada6a67a874ee8d6067e",
+          "raster_changed": true,
+          "difference_bbox_px": [
+            79,
+            135,
+            771,
+            395
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "blank_text": false,
+          "replacement_chars": 0,
+          "out_of_page_spans": [],
+          "link_count": 3,
+          "visual_status": "actually_inspected_in_current_contact_sheet; also_opened_at_high_resolution"
+        }
+      ],
+      "changed_pages": [
+        3,
+        4
+      ],
+      "link_count": 11,
+      "internal_link_count": 8,
+      "external_link_count": 3,
+      "link_anomalies": [],
+      "toc_count": 6,
+      "toc_anomalies": [],
+      "contact_sheets": [
+        "/tmp/v031-final-pdf-book-ih/ih/contact-001-004.png"
+      ],
+      "highres_pages": [
+        {
+          "page": 2,
+          "png": "/tmp/v031-final-pdf-book-ih/ih/highres-002.png",
+          "png_sha256": "d7f83c70dbfb54e52ee45b084d1d97f53b09fa56eb23d5164ff427ee3ccfd86a",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 3,
+          "png": "/tmp/v031-final-pdf-book-ih/ih/highres-003.png",
+          "png_sha256": "bb01878586c0f7bc1bc589cff672958720794cf6dd1c300ae156b7e641bfd14f",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        },
+        {
+          "page": 4,
+          "png": "/tmp/v031-final-pdf-book-ih/ih/highres-004.png",
+          "png_sha256": "578fa342a62a962f094d14d8910d437b15206a2b85a30ce8c4f213265438a3b7",
+          "dpi": 180,
+          "actually_opened": true,
+          "visual_status": "PASS: readable, no collisions or clipping"
+        }
+      ],
+      "all_contact_sheets_actually_opened": true,
+      "toc_title_target_checks": [
+        {
+          "level": 1,
+          "title": "1 指令层级怎样成为可训练的问题",
+          "target_page": 2,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.1 先把三个不同的失败拆开",
+          "target_page": 2,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.2 固定评分骨架为何有用",
+          "target_page": 2,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.3 论文结果的含义与实验身份",
+          "target_page": 3,
+          "title_found_on_target": true
+        },
+        {
+          "level": 2,
+          "title": " 1.4 如何设计下一次研究",
+          "target_page": 3,
+          "title_found_on_target": true
+        },
+        {
+          "level": 1,
+          "title": "参考文献",
+          "target_page": 4,
+          "title_found_on_target": true
+        }
+      ],
+      "blank_text_pages": [],
+      "out_of_page_spans": [],
+      "replacement_character_total": 0
+    }
+  },
+  "logs": {
+    "book": {
+      "path": "book/build/main.log",
+      "sha256": "539387156f9a61f9babf6be05eca5a3e6643974fed00387a2d185a20bf0df668",
+      "build_pdf_path": "book/build/main.pdf",
+      "build_pdf_sha256": "cf9caf59c171d04b3c85141e467145c54e975216044bd1640d541d5e8c13b6fb",
+      "build_equals_dist": true,
+      "findings": {
+        "overfull": [],
+        "missing_character": [],
+        "undefined_reference": [],
+        "latex_error": [],
+        "underfull": [
+          "Underfull \\hbox (badness 1087) in paragraph at lines 116--117",
+          "Underfull \\hbox (badness 1371) in paragraph at lines 68--69"
+        ],
+        "warning": [
+          "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'.",
+          "LaTeX Font Warning: Font shape `TU/FandolSong-Regular(1)/m/it' undefined",
+          "Package amsmath Warning: Foreign command \\atopwithdelims;",
+          "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+        ],
+        "undefined_font_shape": [
+          "LaTeX Font Warning: Font shape `TU/FandolSong-Regular(1)/m/it' undefined"
+        ]
+      },
+      "output_line": [
+        "Output written on build/main.pdf (99 pages)."
+      ],
+      "pass3_stdout_path": "book/build/pass-3.stdout",
+      "pass3_stdout_sha256": "9b171da542332eb344a4fffc615c5317c58d27e38722edeb5f7bdeaf0f0f989e"
+    },
+    "ih": {
+      "path": "book/build/study-ih-challenge/study-ih-challenge.log",
+      "sha256": "a2c5312d25ca0f00c309a489bc116897c9be9ae5f73854545a33b39c7f80b7f2",
+      "build_pdf_path": "book/build/study-ih-challenge/study-ih-challenge.pdf",
+      "build_pdf_sha256": "c0b0a35c3c031802a50d137dc56fec1a6f2d8637b1d7c8b7dcc0ab17c501cfe8",
+      "build_equals_dist": true,
+      "findings": {
+        "overfull": [],
+        "missing_character": [],
+        "undefined_reference": [],
+        "latex_error": [],
+        "underfull": [],
+        "warning": [
+          "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'."
+        ],
+        "undefined_font_shape": []
+      },
+      "output_line": [
+        "Output written on /workspace/ai-self-study/book/build/study-ih-challenge/study-"
+      ],
+      "pass3_stdout_path": "book/build/study-ih-challenge/pass-3.stdout",
+      "pass3_stdout_sha256": "e3febe195c4df4962e1a4e3c5a59193adc4800b0d6730c7ef8f9eaca753cbb0d"
+    }
+  },
+  "visual_review_method": "All 103 current pages opened in 18 contact sheets from fresh 100 dpi renders; all 22 changed pages and their adjacent pages (27 total) opened from 180 dpi renders. Tool presentation resized 1530x1980 to 1376x1780; review is not a claim of unscaled pixel reading.",
+  "baseline_is_only_comparison_not_inherited_approval": true,
+  "pdfs_unchanged_during_review": true,
+  "source_snapshot": {
+    "book/alphaproof.tex": "c8bb0972495a4a2e91800537bc93597ed7bc0a3555807e871c832ad61cee9953",
+    "book/cat.tex": "3927fb9ef1a9151cfdc4a6e0862c4b8418a008962321d293fd3a852dc99aff14",
+    "book/chapters/01.tex": "0fa88d765b6089acabbe1d5bdf60549ec9bdd8c9b390a6644ec0686e38f7b1d7",
+    "book/chapters/02.tex": "9fdbf5ff16efb0b2883e93c91649b0a616e7559fcb2310eac938190ba8f7accf",
+    "book/chapters/03.tex": "db77613bd0d3a8ffd788aef0fd00d00994938fb8eb5e9b863386decd88be4dea",
+    "book/chapters/04.tex": "b23179240e0f090be6874934ab8dc36981069fb1147d84cf1c8ab0d5561418df",
+    "book/chapters/05.tex": "afc7dcdd55c69241c4fb6a5be976060244bbeb5c47c459f2ea305d126408a9bb",
+    "book/chapters/06.tex": "36c12f508dbfffdcd7b2f01683128ef70a7100ae3b87fe643c513839d15cb503",
+    "book/chapters/07.tex": "1fb1c730cd83eab2954fa55f19382151f8dcc940e3e983fb24e14a8c962488bf",
+    "book/chapters/09.tex": "b6201c62bbdff859e54214fb80ed1b79d1f69df6c0ffb3bc561fb1c7a1d066d4",
+    "book/chapters/10.tex": "d218e48baf81c17bd8e98908e5feaeaeaed190a6adff496543546e30d67bd9fd",
+    "book/chapters/11.tex": "700f3b3dfc56c51b147b5c595216cfae4f3d1dd521425452ae602322137bd8ae",
+    "book/chapters/12.tex": "802b32f06f48b56a3c34581b2fbe201eea28220522c42c6ab4d239873e94edc9",
+    "book/chapters/13.tex": "55eaf93e06641a63851d88bc0c8c4359d2fdd52e9480e9e4bac07d546e90c1d6",
+    "book/chapters/language-prediction.tex": "20d8efe61bea6ddd774c2e9b9377f4a3df3c847ab04b18db628793f13e0bbce5",
+    "book/chapters/posttraining.tex": "61b7c793755e44b180390d3cdc4d0619d9980d26d2427f124575727d1b1524dc",
+    "book/chive.tex": "aabb5637b5f721f9e521550a30bbcb295eeb3cb29cf9a26e3bf1cdded69814cc",
+    "book/dgm.tex": "1bddc598b5b51478b28127a2b531f696debcc0c9b4256585daa04db2abfc2478",
+    "book/dpo.tex": "9b10a2f4c67da8801bd30c2f46c0ad105252ba3f90c462c1b1a4fa26d5de293f",
+    "book/engram.tex": "52e76adfc0a4bf73807630752f556b872c643d2550a1152aed50b4675de6dba1",
+    "book/generated/summary.tex": "154d77b0a5e064602e1d67972fa47be0767000205810a4e27501ab3710b4b505",
+    "book/generated/v02-attention.tex": "1420afdeae979363fc31434a893ad98f9825f96ff282cdd05eab0fc540b4bf24",
+    "book/generated/v02-research-effects.tex": "07db24b0c1e193a3c327c8f9e3c0be6071b20437fb22517212fde2524a1bee0e",
+    "book/generated/v02-research-positions.tex": "531eccacad7389964e1cb478ed1dbc7a7721f408916d0dc6f7735f4c21e38bb4",
+    "book/generated/v02-research-runs.tex": "9a0a0788870b43a345dc6a46ba4ca9536a5da05b5b792e871b4ea5fb77382d0f",
+    "book/generated/v02-research-summary.tex": "9d7071ba330366387be9ed3572442881ec28708ccb9d8650414e35165d12f68c",
+    "book/generated/v02-residual.tex": "85675283c96571891c451ca3b862f9216546ff4d062f6464f1e697cf2bfd8788",
+    "book/generated/v03-public-table.tex": "2c5bb0772c1a8f1394aea2329577c907b414fc2c34314237a55e4b048cd18aee",
+    "book/generated/v03-standard-table.tex": "4dc309404a021d336065c8e0ee65b0db507df881f57634876d7e5392c0596882",
+    "book/main.tex": "ef575198f84c7b2060f2d954c24df12183b744cfecb8d9099bd6f6cb85d454a3",
+    "book/r1-nature.tex": "953c20c2fe60541e8ec0ff3780e8ce5b1cdc636b999340b928f55ca674d8b5e2",
+    "book/references.tex": "2cf035a1d74ed30e1806c8d32b0a633d5899db9ac09f265fb441b16018c00c82",
+    "book/sections/public-models.tex": "35853479733fb27787aad4d4ddd94476235eed844f2b2f355f3ccd8e38132558",
+    "book/sections/research-bridges.tex": "6da733fedc6705569c7378690b1dd33dfec57f2387be548336fcd505faf28be4",
+    "book/sections/standard-model.tex": "223d4ad098190257bd47d1bbf869bed324092e4a7236c83ad6dd688bd703ee70",
+    "book/stars.tex": "326fe21db458f4026e41b4e9e88721d2f4fa1b26aa2c08f7782f6edfe927e7b4",
+    "book/study-browser-injection.tex": "b5644134fc18fed46f1729e7ecfc114822e6f5a384dd6a1a312552c4a73a9010",
+    "book/study-ih-challenge.tex": "a4b648a2e6d4f3878603ab7fdd545b8e4f20a777a4ec49f136ba8ea632ed51b8",
+    "book/study-r1-reading.tex": "48d83aee8bc9c85094a020b0db75887798dfbf9a84216924e5e29eee6a5db543",
+    "book/testcompute.tex": "4721a97b90dfd562530d353c9a747c4a90d97431ab29e2a99a4781376147914b",
+    "papers/studies/ih-challenge.tex": "8a71d3b679460f4f12e7824b24fd75e046b32ea9d1fcc0506e6bc3749b8a4552"
+  },
+  "disclosure_visual_findings": [
+    {
+      "file": "book",
+      "page": 48,
+      "status": "PASS",
+      "finding": "18 record slots, 12 unique inputs (6/4/2), 54 output rows and 36 unique input-condition combinations readable together. Original table 10/18,0/18,0/18 retained for three conditions; immediately following prose identifies weighted always-A baseline and post-hoc non-preregistered 6/12 (3/6,2/4,1/2). Deterministic repeats do not add independent samples or attack coverage."
+    },
+    {
+      "file": "ih",
+      "page": 3,
+      "status": "PASS",
+      "finding": "Six conflict slots are two distinct prompts, each occurring three times; 3/6 raw and 1/2 deduplicated results are readable. 54 rows/36 combinations and limits of coverage stated. Paragraph does not collide with following research-design section."
+    },
+    {
+      "file": "book",
+      "pages": [
+        3,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "PASS",
+      "finding": "Changed TOC and downstream reflow inspected with neighbors; formulas, tables, headings and page transitions remain separated and inside page."
+    },
+    {
+      "file": "ih",
+      "page": 4,
+      "status": "PASS",
+      "finding": "Sparse last page is an exercise answer plus two references, not accidental blank or missing content."
+    }
+  ],
+  "remaining_blockers": [],
+  "limitations": [
+    "Independent model-agent layout review, not human peer review.",
+    "No fresh model execution, mathematical audit, or PDF compilation performed by reviewer.",
+    "External URL annotation structure checked, but network reachability and destination content not rechecked.",
+    "Book retains two mild Underfull hboxes, native CJK italic font fallback, and amsmath foreign-command warning; no overfull, missing character, unresolved reference/citation or LaTeX error.",
+    "Only these two PDFs approved under the exact current hashes; historical QA remains untouched."
+  ]
+}

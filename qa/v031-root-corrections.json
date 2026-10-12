@@ -1,0 +1,54 @@
+{
+  "status": "PASS: all source corrections and changed-PDF independent checks complete; final archive validation separately bound",
+  "published_base_commit": "4bf4b4e2f7deb97150d722c9ebc4f357e72779a5",
+  "target": "Normal corrective commit; preserve existing public history and tags",
+  "findings": [
+    {
+      "finding": "18record slots contain12different inputs; deterministic repeated cases overstated conflict coverage",
+      "correction": "Book/IH/README/docs/notebook disclose6arithmetic4mapping2conflict;54records36different combinations; original10/18 retained; post-hoc6/12 not preregistered",
+      "evidence": "research/public-model-input-audit-v03.json",
+      "frozen_design_sha256": "4672ccf5cf18422c751ffee4a722a02e9f9c9713775d7a31d0433bc8b8d8058e",
+      "frozen_metrics_sha256": "f4681922622d8c218f434db82aebf8f60103833d0294a95e2db4df11047e49d0"
+    },
+    {
+      "finding": "R1 Nature original author copyright line omitted",
+      "correction": "Retained exact © The Author(s) 2025 statement adjacent to existing CC BY4 license paragraph",
+      "primary_evidence": "Official article PDF page5, SHA916fdaafc3b44143a9744481d079744f773d73d06372f82b1dba1076525927f2",
+      "source": "papers/translations/r1-nature/body.tex"
+    },
+    {
+      "finding": "Current translation metadata/coverage hashes retained pre-integration author snapshots under current keys",
+      "correction": "Synchronize all declared existing-local-file current hash fields across nine metadata/coverage files; explicitly retain prior author-stage values; final integration snapshots update after compilation",
+      "dpo_current_body_sha256": "db017b264e47b90d8b422df24438df4e7d1452d9d8b4b3795559c59b5fec9505"
+    }
+  ],
+  "new_model_runs": 0,
+  "experiment_code_results_tests_and_frozen_designs_changed": false,
+  "target_release": "0.3.1",
+  "additional_parent_findings_fixed": [
+    {
+      "source": "papers/translations/r1-nature/body.tex",
+      "fix": "Original Table1 rethink translated as重新思考; ExtendedDataTable1 original underlines on13base digits6and3 restored"
+    },
+    {
+      "source": "papers/translations/dpo/body.tex",
+      "fix": "Table3 one-month dating context translated as才开始交往不久"
+    },
+    {
+      "source": "papers/translations/engram/tables/long_context.tex",
+      "fix": "Restore both author conclusions and original references in full caption, best/second markup meaning; existing data-exception translator note retained"
+    },
+    {
+      "source": "papers/translations/engram/body.tex",
+      "fix": "Restore related-work final rather-than-statistical-memorization clause"
+    },
+    {
+      "source": "papers/LICENSE-DECISIONS.md",
+      "fix": "Opening lists all nine selected translations and separate excluded Nature supplementary scope"
+    }
+  ],
+  "review_scope_note": "Parent final audit deeply compared DPO/R1/Engram and did bounded structural/permission comparison for six others; does not claim nine word-perfect expert translations or new all-page PDF acceptance.",
+  "PDF_rebuild_performed": true,
+  "archive_report": "qa/v031-reproducibility.json (repository sidecar, excluded from archive)",
+  "current_primary_source_hash_fields_verified": true
+}

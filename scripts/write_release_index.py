@@ -11,7 +11,12 @@ def main():
     paths=[(title,ROOT/'dist/papers'/('study-'+key+'.pdf')) for key,title in STUDIES.items()]+[(title,ROOT/'dist/papers'/(key+'.pdf')) for key,title in PAPERS.items()]
     merge(paths,ROOT/'dist/ai-papers-zh.pdf','现代AI中文论文研究资料')
     merge([('现代人工智能研究学习教材',ROOT/'dist/ai-self-study.pdf'),('中文论文与原创研究说明',ROOT/'dist/ai-papers-zh.pdf')],ROOT/'dist/ai-self-study-complete.pdf','现代人工智能研究学习合订本')
-    book_pages=len(fitz.open(ROOT/'dist/ai-self-study.pdf'));offset=0;mapping=[]
+    with fitz.open(ROOT/'dist/ai-self-study.pdf') as book:
+        book_pages=len(book)
+        chapter_starts={title.split(' ',1)[0]:page for level,title,page in book.get_toc() if level==1}
+    trust_span=f'{chapter_starts["9"]}–{chapter_starts["10"]-1}'
+    reasoning_span=f'{chapter_starts["7"]}–{chapter_starts["9"]-1}'
+    offset=0;mapping=[]
     for (title,path),key in zip(paths,['study-'+x for x in STUDIES]+list(PAPERS)):
         with fitz.open(path) as d:pages=len(d)
         mapping.append({'id':key,'title':title,'pdf':path.relative_to(ROOT).as_posix(),'component_pages':pages,'collection_pages':[offset+1,offset+pages],'complete_pages':[book_pages+offset+1,book_pages+offset+pages],'sha256':sha(path)})
@@ -24,12 +29,13 @@ def main():
     text+='\nR1 Nature的独立83页Supplementary与AlphaProof的独立9页Supplementary/伪代码ZIP未确认单独再分发许可，未镜像，未纳入“全文”完成范围；原文仍保留指向附件的引用。Nature许可不借给不同arXiv版本。\n\n## 原创研究说明\n\n'
     for key,title in STUDIES.items():text+=f'- [{title}](../dist/papers/study-{key}.pdf) · [可编辑源码](studies/{key}.tex)：原创问题、数学、实际CPU机制和练习；不是未许可原文的全文译本。\n'
     text+='\n## 三项重点来源的定位\n\n| 原始研究来源 | 教材 | 本项目资料/论文资料页码 |\n|---|---|---|\n'
-    text+='| [OpenAI IH-Challenge官方说明](https://openai.com/index/instruction-hierarchy-challenge/)（2026-03-10）及v1论文 | 第9章，55–61页 | `studies/ih-challenge.tex`；研究说明PDF4页；论文资料1–4页 |\n'
-    text+='| [Anthropic浏览器注入防御](https://www.anthropic.com/research/prompt-injection-defenses)（2025-11-24） | 第9章，55–61页 | `studies/browser-injection.tex`；研究说明PDF4页；论文资料5–8页 |\n'
-    r1=next(x for x in mapping if x['id']=='r1-nature');text+=f'| [R1 Nature正式论文](https://www.nature.com/articles/s41586-025-09422-z)（2025-09-17） | 第7–8章，44–54页 | `translations/r1-nature/body.tex`；正式译文18页；论文资料{r1["collection_pages"][0]}–{r1["collection_pages"][1]}页；另有原创R1说明9–11页 |\n'
+    for key,label,url,date in [('ih-challenge','OpenAI IH-Challenge官方说明','https://openai.com/index/instruction-hierarchy-challenge/','2026-03-10'),('browser-injection','Anthropic浏览器注入防御','https://www.anthropic.com/research/prompt-injection-defenses','2025-11-24')]:
+        row=next(x for x in mapping if x['id']=='study-'+key)
+        text+=f'| [{label}]({url})（{date}） | 第9章，{trust_span}页 | `studies/{key}.tex`；研究说明PDF{row["component_pages"]}页；论文资料{row["collection_pages"][0]}–{row["collection_pages"][1]}页 |\n'
+    r1=next(x for x in mapping if x['id']=='r1-nature');reading=next(x for x in mapping if x['id']=='study-r1-reading');text+=f'| [R1 Nature正式论文](https://www.nature.com/articles/s41586-025-09422-z)（2025-09-17） | 第7–8章，{reasoning_span}页 | `translations/r1-nature/body.tex`；正式译文{r1["component_pages"]}页；论文资料{r1["collection_pages"][0]}–{r1["collection_pages"][1]}页；另有原创R1说明{reading["collection_pages"][0]}–{reading["collection_pages"][1]}页 |\n'
     text+='\n## 全部组件实际页码\n\n| 组件 | 独立PDF页数 | 论文资料PDF | 合订本PDF |\n|---|---:|---|---|\n'
     for a in mapping:text+=f'| {a["title"]} | {a["component_pages"]} | {a["collection_pages"][0]}–{a["collection_pages"][1]} | {a["complete_pages"][0]}–{a["complete_pages"][1]} |\n'
     text+='\n[合订资料PDF](../dist/ai-papers-zh.pdf) · [教材与资料完整合订PDF](../dist/ai-self-study-complete.pdf) · [机器可读页码](page-map.json) · [许可判定](LICENSE-DECISIONS.md)。源代码的相对输入以 `book/` 为工作目录，统一构建见[构建说明](../docs/build.md)。\n'
-    (ROOT/'papers/README.md').write_text(text);(ROOT/'papers/page-map.json').write_text(json.dumps({'release':'0.3.0','book_pages':book_pages,'paper_collection_pages':offset,'complete_pages':book_pages+offset,'components':mapping},ensure_ascii=False,indent=2)+'\n')
+    (ROOT/'papers/README.md').write_text(text);(ROOT/'papers/page-map.json').write_text(json.dumps({'release':'0.3.1','book_pages':book_pages,'paper_collection_pages':offset,'complete_pages':book_pages+offset,'components':mapping},ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({'book':book_pages,'papers':offset,'complete':book_pages+offset,'components':len(mapping)}))
 if __name__=='__main__':main()

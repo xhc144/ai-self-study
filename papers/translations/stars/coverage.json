@@ -1,7 +1,7 @@
 {
   "scope": "指定版已发表可见论文全部实质内容;源码中的注释草稿、ICML模板说明和未用示例参考不属发表内容",
   "source_pages": 13,
-  "translation_body_sha256": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0",
+  "translation_body_sha256": "3e08a347cf9fd2d8c8501a19cd416f306069d99ebb387465878eb8fcb00efd01",
   "completion": {
     "abstract": true,
     "main_sections": 7,
@@ -900,5 +900,6 @@
     "参考文献的作者、英文题名、年份与出版信息完整保留用于检索",
     "新增译者核查注与原作者内容分开"
   ],
-  "verification_limit": "章节映射、数值检查和编译证明文件覆盖与机械一致性;不是独立数学专家或独立翻译专家审校"
+  "verification_limit": "章节映射、数值检查和编译证明文件覆盖与机械一致性;不是独立数学专家或独立翻译专家审校",
+  "author_stage_translation_body_sha256": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0"
 }

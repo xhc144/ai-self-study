@@ -853,6 +853,10 @@
     "Figure 5 is a complete visible-content redraw, not a reproduction of SurveyMonkey visual appearance."
   ],
   "omissions": [],
-  "translation_sha256": "3ba5c8f3532ad262e7defe5ccce82f6f570324200fad20befaa7fb5423581880",
-  "validation_file": "validation.json"
+  "translation_sha256": "db017b264e47b90d8b422df24438df4e7d1452d9d8b4b3795559c59b5fec9505",
+  "validation_file": "validation.json",
+  "author_stage_translation_sha256": "3ba5c8f3532ad262e7defe5ccce82f6f570324200fad20befaa7fb5423581880",
+  "previous_integration_hashes_before_v031": {
+    "translation_sha256": "0582a9c1a0e64d9c607537036f93aaa6068e8ad8ac9d999828f2cdef851ec06c"
+  }
 }

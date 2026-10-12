@@ -1,0 +1,423 @@
+{
+  "prior_archive_sha256": "8633d6bc81e57e7675e2840b693c5fb16b2c632746a5a294fa319d73a0094f84",
+  "prior_report_sha256": "c77b458083174e54ee2ca06fdb646ce1753f5b3bef5af4d07786dfeb6fa91e22",
+  "prior_full_replay_classes": [
+    "original seven",
+    "attention_walkthrough",
+    "residual_debug",
+    "micro_research",
+    "v03-foundations",
+    "v03-networks",
+    "v03-language",
+    "v03-research",
+    "research-bridges-v03",
+    "standard-transformer-v03",
+    "public-models-v03 cached only"
+  ],
+  "frozen_experiment_result_test_design_files_identical": 65,
+  "changed_components": [
+    "textbook",
+    "study-ih-challenge",
+    "dpo",
+    "r1-nature",
+    "engram"
+  ],
+  "unchanged_components": [
+    "study-browser-injection",
+    "study-r1-reading",
+    "testcompute",
+    "chive",
+    "dgm",
+    "stars",
+    "alphaproof",
+    "cat"
+  ],
+  "unchanged_component_dependency_checks": [
+    {
+      "component": "study-browser-injection",
+      "pdf_sha256": "0a6efedc3f747c5352af34977975219cac6b7c3ccd1b5966e228cf04c01651f0",
+      "wrapper_sha256": "b5644134fc18fed46f1729e7ecfc114822e6f5a384dd6a1a312552c4a73a9010",
+      "compiled_dependency_files_identical": [
+        "papers/studies/browser-injection.tex"
+      ]
+    },
+    {
+      "component": "study-r1-reading",
+      "pdf_sha256": "db9301f9d3195169740cc63852a60daae1e92e7c19592289c5ef1797a582694b",
+      "wrapper_sha256": "48d83aee8bc9c85094a020b0db75887798dfbf9a84216924e5e29eee6a5db543",
+      "compiled_dependency_files_identical": [
+        "papers/studies/r1-reading.tex"
+      ]
+    },
+    {
+      "component": "testcompute",
+      "pdf_sha256": "2def43e5ed63b670ae9fb929f5e38bf5965b69ad1ccadf4d40d2bd6642d265e1",
+      "wrapper_sha256": "4721a97b90dfd562530d353c9a747c4a90d97431ab29e2a99a4781376147914b",
+      "compiled_dependency_files_identical": [
+        "papers/translations/testcompute/body.tex",
+        "papers/translations/testcompute/figure-sources.json",
+        "papers/translations/testcompute/figures/PRM_ex1.png",
+        "papers/translations/testcompute/figures/PRM_ex2.png",
+        "papers/translations/testcompute/figures/PRM_ex3.png",
+        "papers/translations/testcompute/figures/PRM_ex4.png",
+        "papers/translations/testcompute/figures/PRM_ex5.png",
+        "papers/translations/testcompute/figures/PRM_ex6.png",
+        "papers/translations/testcompute/figures/Revisions_descriptive_fig.pdf",
+        "papers/translations/testcompute/figures/Search_Figure-2.pdf",
+        "papers/translations/testcompute/figures/bon_unsupervised_difficulty_output.pdf",
+        "papers/translations/testcompute/figures/comparing_test_pretrain_v8.pdf",
+        "papers/translations/testcompute/figures/compute_optimal_revisions_v4.pdf",
+        "papers/translations/testcompute/figures/compute_optimal_search_v4.pdf",
+        "papers/translations/testcompute/figures/iso_gens_majority_difficulty.pdf",
+        "papers/translations/testcompute/figures/maj_unsupervised_difficulty_output.pdf",
+        "papers/translations/testcompute/figures/pass1_and_comparing_seq_parallel.pdf",
+        "papers/translations/testcompute/figures/prm_agg_comparing_output.pdf",
+        "papers/translations/testcompute/figures/prm_comparing_output3.pdf",
+        "papers/translations/testcompute/figures/prm_fig1.pdf",
+        "papers/translations/testcompute/figures/rest_em_revision_model_iso_gens_output.pdf",
+        "papers/translations/testcompute/figures/revision_model_with_prm_verses_revision_orm_output.pdf",
+        "papers/translations/testcompute/figures/revision_model_with_without_history_output.pdf",
+        "papers/translations/testcompute/figures/revisions_ex1.png",
+        "papers/translations/testcompute/figures/revisions_ex2.png",
+        "papers/translations/testcompute/figures/revisions_ex3.png",
+        "papers/translations/testcompute/figures/revisions_ex4.png",
+        "papers/translations/testcompute/figures/revisions_ex5.png",
+        "papers/translations/testcompute/figures/revisions_ex6.png",
+        "papers/translations/testcompute/figures/revisions_ex7.png",
+        "papers/translations/testcompute/figures/revisions_fig1.pdf",
+        "papers/translations/testcompute/figures/revisions_varing_ratio_and_with_difficulty.pdf",
+        "papers/translations/testcompute/figures/search_comparing_and_bins3.pdf",
+        "papers/translations/testcompute/figures/search_unsup_difficulty_output.pdf",
+        "papers/translations/testcompute/glossary.json",
+        "papers/translations/testcompute/qa/local-render.json",
+        "papers/translations/testcompute/qa/visual-review.md",
+        "papers/translations/testcompute/references.tex",
+        "papers/translations/testcompute/source-reading.md",
+        "papers/translations/testcompute/translation-audit.json"
+      ]
+    },
+    {
+      "component": "chive",
+      "pdf_sha256": "02bd760d1e1681c5d7a91f7032d07a2fd4d06cff0d6425968513829c863e355e",
+      "wrapper_sha256": "aabb5637b5f721f9e521550a30bbcb295eeb3cb29cf9a26e3bf1cdded69814cc",
+      "compiled_dependency_files_identical": [
+        "papers/translations/chive/bibliography-map.json",
+        "papers/translations/chive/body.tex",
+        "papers/translations/chive/figures/direct_counterfactual_evaluation_fig_auroc.png",
+        "papers/translations/chive/figures/direct_counterfactual_hint_pooled_fig.png",
+        "papers/translations/chive/figures/figure_selfexpl_397b.png",
+        "papers/translations/chive/figures/figure_selfexpl_by_target.png",
+        "papers/translations/chive/figures/gemma_overall_score.png",
+        "papers/translations/chive/figures/gemma_unfiltered_overall_score.png",
+        "papers/translations/chive/figures/privileged_access_traditional.png",
+        "papers/translations/chive/figures/qwen8b_overall_score.png",
+        "papers/translations/chive/figures/self_explanation_hint_pooled_accuracy.png",
+        "papers/translations/chive/figures/thinking_overall_score.png",
+        "papers/translations/chive/figures/unfiltered_direct_cf_auroc.png",
+        "papers/translations/chive/glossary.json",
+        "papers/translations/chive/parts/appendix-a.tex",
+        "papers/translations/chive/parts/appendix-b.tex",
+        "papers/translations/chive/parts/appendix-c.tex",
+        "papers/translations/chive/parts/appendix-d.tex",
+        "papers/translations/chive/parts/appendix-e.tex",
+        "papers/translations/chive/parts/appendix-fg.tex",
+        "papers/translations/chive/parts/main.tex",
+        "papers/translations/chive/parts/references.tex",
+        "papers/translations/chive/source-reading.md",
+        "papers/translations/chive/table-number-check.json",
+        "papers/translations/chive/translation-check.json"
+      ]
+    },
+    {
+      "component": "dgm",
+      "pdf_sha256": "ec10565950209ebfd70a8d73908ec5efbb8ae864fe030267f50747914ea6f7a0",
+      "wrapper_sha256": "1bddc598b5b51478b28127a2b531f696debcc0c9b4256585daa04db2abfc2478",
+      "compiled_dependency_files_identical": [
+        "papers/translations/dgm/body.tex",
+        "papers/translations/dgm/code/best_discovered_agent-diff0.txt",
+        "papers/translations/dgm/code/best_discovered_agent-diff1.txt",
+        "papers/translations/dgm/code/best_discovered_agent-diff2.txt",
+        "papers/translations/dgm/code/best_discovered_agent-diff3.txt",
+        "papers/translations/dgm/code/best_discovered_agent-diff4.txt",
+        "papers/translations/dgm/code/best_discovered_agent-diff5.txt",
+        "papers/translations/dgm/code/best_discovered_agent_polyglot-diff0.txt",
+        "papers/translations/dgm/code/best_discovered_agent_polyglot-diff1.txt",
+        "papers/translations/dgm/code/best_discovered_agent_polyglot-diff2.txt",
+        "papers/translations/dgm/code/best_discovered_agent_polyglot-diff3.txt",
+        "papers/translations/dgm/code/diff_implementations-node24_implementation.txt",
+        "papers/translations/dgm/code/diff_implementations-node6_implementation.txt",
+        "papers/translations/dgm/code/initial_agent-bash_tool.txt",
+        "papers/translations/dgm/code/initial_agent-edit_tool.txt",
+        "papers/translations/dgm/code/solve_halluc-halluc_hack.txt",
+        "papers/translations/dgm/figure-credits.json",
+        "papers/translations/dgm/figures/conceptual.pdf",
+        "papers/translations/dgm/figures/dgm_archive.pdf",
+        "papers/translations/dgm/figures/dgm_comparisons.pdf",
+        "papers/translations/dgm/figures/dgm_comparisons_polyglot.pdf",
+        "papers/translations/dgm/figures/dgm_halluc.pdf",
+        "papers/translations/dgm/figures/dgm_progress.pdf",
+        "papers/translations/dgm/figures/dgm_wo_openended.pdf",
+        "papers/translations/dgm/figures/dgm_wo_selfimprove.pdf",
+        "papers/translations/dgm/figures/transfer_model_polyglot.pdf",
+        "papers/translations/dgm/figures/transfer_model_task.pdf",
+        "papers/translations/dgm/glossary.json",
+        "papers/translations/dgm/glossary.tex",
+        "papers/translations/dgm/prompts/halluc-example-zh.txt",
+        "papers/translations/dgm/prompts/initial-task-zh.txt",
+        "papers/translations/dgm/prompts/polyglot-additional-zh.txt",
+        "papers/translations/dgm/prompts/selfimprove-swebench-zh.txt",
+        "papers/translations/dgm/references.tex",
+        "papers/translations/dgm/sections/01-main.tex",
+        "papers/translations/dgm/sections/02-appendices.tex",
+        "papers/translations/dgm/sections/03-prompts.tex",
+        "papers/translations/dgm/source-reading.json",
+        "papers/translations/dgm/tasks/polyglot-medium.txt",
+        "papers/translations/dgm/tasks/polyglot-small.txt",
+        "papers/translations/dgm/tasks/swebench-big.txt",
+        "papers/translations/dgm/tasks/swebench-medium.txt",
+        "papers/translations/dgm/tasks/swebench-small.txt",
+        "papers/translations/dgm/translation-check.json"
+      ]
+    },
+    {
+      "component": "stars",
+      "pdf_sha256": "31a853ab98ec68d74fd763679b33a8efefa8b21c2b32db0fa2d104af5e493443",
+      "wrapper_sha256": "326fe21db458f4026e41b4e9e88721d2f4fa1b26aa2c08f7782f6edfe927e7b4",
+      "compiled_dependency_files_identical": [
+        "papers/translations/stars/body.tex",
+        "papers/translations/stars/figures/ablation_with_compare.pdf",
+        "papers/translations/stars/figures/amc23_ablation.pdf",
+        "papers/translations/stars/figures/intro.pdf",
+        "papers/translations/stars/figures/main_addition.pdf",
+        "papers/translations/stars/figures/norm.pdf",
+        "papers/translations/stars/figures/norm_anal.pdf",
+        "papers/translations/stars/figures/pre_post_random.pdf",
+        "papers/translations/stars/figures/prelude_coda.pdf",
+        "papers/translations/stars/figures/random.pdf",
+        "papers/translations/stars/figures/weight.pdf",
+        "papers/translations/stars/glossary.json",
+        "papers/translations/stars/manifest.json",
+        "papers/translations/stars/references.tex",
+        "papers/translations/stars/source-reading.json",
+        "papers/translations/stars/validation.json"
+      ]
+    },
+    {
+      "component": "alphaproof",
+      "pdf_sha256": "59b2f6ddfcc8c75fb30c28edf25ed30e6dfeb6f36702dcb8b7d5363e43470193",
+      "wrapper_sha256": "c8bb0972495a4a2e91800537bc93597ed7bc0a3555807e871c832ad61cee9953",
+      "compiled_dependency_files_identical": [
+        "papers/translations/alphaproof/assets/edfig1.pdf",
+        "papers/translations/alphaproof/assets/edfig2.pdf",
+        "papers/translations/alphaproof/assets/edfig3.pdf",
+        "papers/translations/alphaproof/assets/edfig4.pdf",
+        "papers/translations/alphaproof/assets/edfig5.pdf",
+        "papers/translations/alphaproof/assets/edfig6.pdf",
+        "papers/translations/alphaproof/assets/edfig7.pdf",
+        "papers/translations/alphaproof/assets/edfig8.pdf",
+        "papers/translations/alphaproof/assets/edfig9.pdf",
+        "papers/translations/alphaproof/assets/edtable1.pdf",
+        "papers/translations/alphaproof/assets/edtable2.pdf",
+        "papers/translations/alphaproof/assets/fig1.pdf",
+        "papers/translations/alphaproof/assets/fig2.pdf",
+        "papers/translations/alphaproof/assets/fig3.pdf",
+        "papers/translations/alphaproof/assets/fig4.pdf",
+        "papers/translations/alphaproof/assets/fig5.pdf",
+        "papers/translations/alphaproof/authors.tex",
+        "papers/translations/alphaproof/backmatter.tex",
+        "papers/translations/alphaproof/body.tex",
+        "papers/translations/alphaproof/extended-data.tex",
+        "papers/translations/alphaproof/extended-tables.tex",
+        "papers/translations/alphaproof/fig1.tex",
+        "papers/translations/alphaproof/fig2.tex",
+        "papers/translations/alphaproof/fig3.tex",
+        "papers/translations/alphaproof/fig4.tex",
+        "papers/translations/alphaproof/fig5.tex",
+        "papers/translations/alphaproof/glossary.json",
+        "papers/translations/alphaproof/methods.tex",
+        "papers/translations/alphaproof/references.tex",
+        "papers/translations/alphaproof/source-reading.md",
+        "papers/translations/alphaproof/table-data.json",
+        "papers/translations/alphaproof/table1.tex",
+        "papers/translations/alphaproof/verification.json"
+      ]
+    },
+    {
+      "component": "cat",
+      "pdf_sha256": "d2bf4e3ed62fac3eaa5823480bf5c185c0719979043d11079ed516dbff1e2039",
+      "wrapper_sha256": "3927fb9ef1a9151cfdc4a6e0862c4b8418a008962321d293fd3a852dc99aff14",
+      "compiled_dependency_files_identical": [
+        "papers/translations/cat/body.tex",
+        "papers/translations/cat/figure-credits.json",
+        "papers/translations/cat/figures/cat_comparison.pdf",
+        "papers/translations/cat/figures/catrl_vs_catrl_with_cat.pdf",
+        "papers/translations/cat/figures/framework.pdf",
+        "papers/translations/cat/figures/healthbench_ablation.pdf",
+        "papers/translations/cat/figures/inference_methods_comparison.pdf",
+        "papers/translations/cat/figures/rubric.pdf",
+        "papers/translations/cat/glossary.json",
+        "papers/translations/cat/glossary.tex",
+        "papers/translations/cat/numeric-check.json",
+        "papers/translations/cat/prompts/freeform-synthesis-zh.txt",
+        "papers/translations/cat/prompts/model-as-judge-zh.txt",
+        "papers/translations/cat/prompts/reasoning-synthesis-zh.txt",
+        "papers/translations/cat/prompts/rubric-generation-zh.txt",
+        "papers/translations/cat/prompts/rubric-judge-zh.txt",
+        "papers/translations/cat/references.tex",
+        "papers/translations/cat/sections/01-main.tex",
+        "papers/translations/cat/sections/02-appendices.tex",
+        "papers/translations/cat/source-reading.json",
+        "papers/translations/cat/tables/RLtrainingparams.tex",
+        "papers/translations/cat/tables/SFTtrainingparams.tex",
+        "papers/translations/cat/tables/cat-qual.tex",
+        "papers/translations/cat/tables/disagreement.tex",
+        "papers/translations/cat/tables/healthbench-cat.tex",
+        "papers/translations/cat/tables/healthbench-rubrics.tex",
+        "papers/translations/cat/tables/judge-sensitivity.tex",
+        "papers/translations/cat/tables/results-inf.tex",
+        "papers/translations/cat/tables/results-table.tex",
+        "papers/translations/cat/tables/rlbaselines.tex",
+        "papers/translations/cat/tables/samplingparams.tex",
+        "papers/translations/cat/tables/sqrubric.tex",
+        "papers/translations/cat/translation-check.json"
+      ]
+    }
+  ],
+  "noncompiled_disclosure_exclusions": [
+    {
+      "component": "testcompute",
+      "path": "papers/translations/testcompute/integration-snapshot.json",
+      "old": {
+        "sha256": "d0493046b228519883b8d8957959413e62dd87facbf3fcbaa3457310618e1570",
+        "size_bytes": 6157
+      },
+      "new": {
+        "sha256": "c94b86db62d1b56fc3fe2565b8515a61df23e2bc38e8b3d5feaf0d67c3082d2b",
+        "size_bytes": 12763
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "chive",
+      "path": "papers/translations/chive/integration-snapshot.json",
+      "old": {
+        "sha256": "0160c536c8f9461041d2f7d6a3bf2af0b8abe2740b2b6fa5d7a0e819b0500002",
+        "size_bytes": 3882
+      },
+      "new": {
+        "sha256": "92b39151c7f11b5e9fea3252fdca8e1b2aa2f9effdda6baee3c81331a5ac864e",
+        "size_bytes": 8055
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "chive",
+      "path": "papers/translations/chive/metadata.json",
+      "old": {
+        "sha256": "c0bff2caf28f750059e9a9ca4256935336149af8db4f1fe35eae346e04c04df3",
+        "size_bytes": 3726
+      },
+      "new": {
+        "sha256": "c3bd3fb0db77f81a43661b46fb26329c96fb44250f7bb62ca7fbfb43eb98a531",
+        "size_bytes": 4444
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "dgm",
+      "path": "papers/translations/dgm/integration-snapshot.json",
+      "old": {
+        "sha256": "29b9184620bbd0580c845d22332072cb5c50832ca57410d5b210ad4aae8b5ec3",
+        "size_bytes": 6323
+      },
+      "new": {
+        "sha256": "291a7e8489663a437cc9c8aa25b4502856c73f116bb9a1575a90bc03634ec0bb",
+        "size_bytes": 12975
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "stars",
+      "path": "papers/translations/stars/coverage.json",
+      "old": {
+        "sha256": "8db4deb6dc70de7accf52faa9c538328e1548171f286edf9d04106dd43e1fa3c",
+        "size_bytes": 29533
+      },
+      "new": {
+        "sha256": "592cec4f5c171be02e91bdf26930158c6b8a67356604288502b5baf15ad63a79",
+        "size_bytes": 29643
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "stars",
+      "path": "papers/translations/stars/integration-snapshot.json",
+      "old": {
+        "sha256": "668e0e323165155e6438c50aaf4017c33d9a50456a505c8bc9fd651e56b27134",
+        "size_bytes": 2573
+      },
+      "new": {
+        "sha256": "1b0b949b1503d643c9f708be2d9548bf6c5b8c79f5603942699bd2c950142430",
+        "size_bytes": 5539
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "stars",
+      "path": "papers/translations/stars/metadata.json",
+      "old": {
+        "sha256": "b0db85612eb4107afd8751f5cad023b77397e6f3da4f6b2f9238a1abcd151df1",
+        "size_bytes": 6823
+      },
+      "new": {
+        "sha256": "5cb5adc1d01b63365b9b594a30bea983d108575d22052a55356ba92880767db6",
+        "size_bytes": 6933
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "alphaproof",
+      "path": "papers/translations/alphaproof/coverage.json",
+      "old": {
+        "sha256": "cd80c1e77533e68d0ad3959741a3035e1ab7e9d9dacfa0ef7e52acd24bcc4122",
+        "size_bytes": 37673
+      },
+      "new": {
+        "sha256": "84f82374d6c669b1c12146d2606805425951984a0ddeeb48b0dad1d12c8fed53",
+        "size_bytes": 38602
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "alphaproof",
+      "path": "papers/translations/alphaproof/integration-snapshot.json",
+      "old": {
+        "sha256": "52d845750dae0a60084b9389f6624e232b6fd52217f9b618df29ca383b0c40dd",
+        "size_bytes": 4647
+      },
+      "new": {
+        "sha256": "e41a74c86b23d66d5e292e25029d407cfc1e5d5626b27ec3a5525ebb91e80c84",
+        "size_bytes": 9601
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    },
+    {
+      "component": "cat",
+      "path": "papers/translations/cat/integration-snapshot.json",
+      "old": {
+        "sha256": "22434ac128c412acb560ef79619fc99266eb5343f14d0dab551e03c6af8e2110",
+        "size_bytes": 4721
+      },
+      "new": {
+        "sha256": "516c79b9da83e049570fa795a82ea9a42025d77a4f0a03b7e524c639d6b1e373",
+        "size_bytes": 9749
+      },
+      "reason": "metadata/coverage/snapshot, not compiled body/asset"
+    }
+  ],
+  "common_build_dependency_files_unchanged": [
+    "book/main.tex",
+    "book/references.tex",
+    "scripts/build_collection.py"
+  ]
+}

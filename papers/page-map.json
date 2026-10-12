@@ -1,5 +1,5 @@
 {
-  "release": "0.3.0",
+  "release": "0.3.1",
   "book_pages": 99,
   "paper_collection_pages": 393,
   "complete_pages": 492,
@@ -17,7 +17,7 @@
         100,
         103
       ],
-      "sha256": "093f8c958dcf4770f475074b519c1b19f0f37003ba19f6ed074a1e36160734fd"
+      "sha256": "c0b0a35c3c031802a50d137dc56fec1a6f2d8637b1d7c8b7dcc0ab17c501cfe8"
     },
     {
       "id": "study-browser-injection",
@@ -62,7 +62,7 @@
         111,
         146
       ],
-      "sha256": "0a81f624e502bb93c0365c14cd0d5f0a856fc9d6f1346ffb696ee7f596d2e0c9"
+      "sha256": "affcf1c62c3f6b2ee99b34a6cc68ff49046a30fc2ba7f7831bfa53a76189e9fd"
     },
     {
       "id": "testcompute",
@@ -92,7 +92,7 @@
         190,
         207
       ],
-      "sha256": "682aea649c1bfae85f5422c2444d3af0e901f113b92049d2e5596e850dc9c9bf"
+      "sha256": "471c51815c4deacaf64eaabf3963baa0b1d7e53329e2f01970c2a39041f81e64"
     },
     {
       "id": "chive",
@@ -167,7 +167,7 @@
         428,
         461
       ],
-      "sha256": "f9d5ed12246ea59f27a528fb8838295c65c699263cf075ea7d3a5f6c7c2f046e"
+      "sha256": "62e2bf8b1dce159f6ce339e7e8764af66e9e048fdc88f3aa4402dbe0875142fa"
     },
     {
       "id": "cat",

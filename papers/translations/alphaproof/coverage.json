@@ -879,8 +879,27 @@
     "assets/fig4.pdf": "62cdddba39a9f7a6e0de43bbd0730d49d07e19a063987cdf9233db54da552cf8",
     "assets/fig5.pdf": "d62ad83d8c7bd38b916e7083d439e8fd04e5a3b4822035e43fdb19b008011c92",
     "authors.tex": "b2f3bd72eca092578fcbbc31bd825523fc9f151809a3095de4991d03e02749b5",
-    "backmatter.tex": "e5968da5e3187cb8a820b05b677c5bec542192f4933982cd0327038e8f2a8f5a",
+    "backmatter.tex": "c94525b364f5f469977f8f26ba8872d530135ea5b779eb2b88a011e8154d4efc",
     "body.tex": "fbe6e3db3479cf9c0132ba5dd8e8cd2b2641a51c6776d3b3af958c3aee82d23f",
+    "extended-data.tex": "2b2c7d9c549530b8666458319ecd3b002b50486c5db8880dcdb0d764e5467aba",
+    "extended-tables.tex": "e00ba392ea0ceb552e86aa6e1c120960dd307c4b9a3127b2173ef0f79f692e87",
+    "fig1.tex": "e66c78c7e041f31d67f8cb6f5bafd24ff0e70af5eb3f5e027a3a42bca16c8ae1",
+    "fig2.tex": "8d8a79d0f02156a25d0ef988146f555fab736da59572c79e4700558816a603d9",
+    "fig3.tex": "3ac00beefb9c3388b67d9c38f6ec2e7857bcd7c242bdf6068fe8b9fc57c8389d",
+    "fig4.tex": "11f5a46e7a03d9e30a7ec477ff274d83bd9bbdf422e955937a1c838dd25d9505",
+    "fig5.tex": "3e9da01f0c09e8eb53b0c1631c92fed9e1df2f6982735adf44642ebcd477e353",
+    "glossary.json": "e45c4ddfafcf1b2f5fd935ebc2156fefb19c4b958eb036e9aa4dca46824558c3",
+    "metadata.json": "74f4594df09b5a741cc1c189a7842a44d83895bc010cbe887854eafe59bba05a",
+    "methods.tex": "4e2288b57aa64d00882da997ee272732bff4b80a73d2acbccb110fb8f2a6e5d2",
+    "references.tex": "07a4f5a495f83e1ad6abf2feb85bb4412dda038fd4b937eed361f1ba5dce1732",
+    "source-reading.md": "c493f1cdf46013bf19731b89e27fbb5702102d042615b387ac90b5437c133b49",
+    "table-data.json": "fbac36db9af4b4fb4bc8d51a865be24002783beeea18cf9ac145f3c5fd4fea3c",
+    "table1.tex": "b9dd2bb09f2e41d90060970a7f0fe03cd803fdf4dab378f797d6502d2cf3a447",
+    "verification.json": "2394856bd396f2c0ba2a87dd2fb39efb00d10d113a41df039f61ce90974b897f"
+  },
+  "author_verification": "verification.json; 38-page isolated build, every page visually viewed; no independent review claimed.",
+  "author_stage_translation_file_sha256_updates": {
+    "backmatter.tex": "e5968da5e3187cb8a820b05b677c5bec542192f4933982cd0327038e8f2a8f5a",
     "extended-data.tex": "655940801c9d39db4e2adec2b73b4a620c61d56852f14452070cdfba901228d2",
     "extended-tables.tex": "3264f9d663eaeba75e62366d932984d86bfe0adf9840bedf6dd400e834bc015e",
     "fig1.tex": "39a20ec47d7d7f732d6ae2b3c99846989a6de132ff4ba345b7d02c2ae3ea8327",
@@ -888,14 +907,7 @@
     "fig3.tex": "3f7f9ae08d74126c5a1dbf8536971f9750a95fbd5d1cd99d1ea5670ebd012cd7",
     "fig4.tex": "59696c84848686355c114567d4c92e0ce21c627484bf639826b4c01ae955a231",
     "fig5.tex": "f6d76c85afa18902dd283c3b2f1fee1a6f1b2a18dda6060e2c3da3155f8222ca",
-    "glossary.json": "e45c4ddfafcf1b2f5fd935ebc2156fefb19c4b958eb036e9aa4dca46824558c3",
     "metadata.json": "1a5347f8ea1a2ddb5367379fe8dcc59eb1775255869bcf0abc2159b7f8d085dc",
-    "methods.tex": "4e2288b57aa64d00882da997ee272732bff4b80a73d2acbccb110fb8f2a6e5d2",
-    "references.tex": "07a4f5a495f83e1ad6abf2feb85bb4412dda038fd4b937eed361f1ba5dce1732",
-    "source-reading.md": "c493f1cdf46013bf19731b89e27fbb5702102d042615b387ac90b5437c133b49",
-    "table-data.json": "fbac36db9af4b4fb4bc8d51a865be24002783beeea18cf9ac145f3c5fd4fea3c",
-    "table1.tex": "c5ce37b6617f6d0e12dbd57374bd68f88b9bcef52c3f58ca2712682f5e0e19d3",
-    "verification.json": "2394856bd396f2c0ba2a87dd2fb39efb00d10d113a41df039f61ce90974b897f"
-  },
-  "author_verification": "verification.json; 38-page isolated build, every page visually viewed; no independent review claimed."
+    "table1.tex": "c5ce37b6617f6d0e12dbd57374bd68f88b9bcef52c3f58ca2712682f5e0e19d3"
+  }
 }

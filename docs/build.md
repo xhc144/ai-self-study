@@ -32,4 +32,4 @@ python scripts/verify_source_zip.py dist/ai-self-study-source.zip --report /tmp/
 
 源码ZIP含所有编辑源码、授权图件、实际结果及教材/各组件参考PDF。两个较大的合订PDF由组件重建，不重复塞进ZIP。校验器比较全部组件的文本/逐页像素/书签/链接，以及合订本的全部链接；同一记录的环境与脚本线程设置下重新跑基础和新增NumPy实验。安装可选CPU依赖后，还重新训练六次标准Transformer并对已有模型缓存复跑54条公开诊断；不自动下载模型。纯NumPy环境会报告可选项未执行，不能称为全部模型复现。
 
-`qa/v03-reproducibility.json`和`dist/ai-self-study-source-check.json`是对已冻结ZIP的闭环证据，位于仓库旁证，避免把含ZIP自身哈希的报告递归打包。PDF二进制中的日期可能不同；验收比较实际文本、栅格像素、书签和链接，而不是要求PDF文件时间字段相同。结果JSON只在记录的依赖、硬件和线程范围内承诺本次逐字节一致。
+`qa/v03-reproducibility.json`绑定首次0.3.0的全量重建与实际实验复现；`qa/v031-reproducibility.json`和当前`dist/ai-self-study-source-check.json`绑定0.3.1的干净增量重编、测试和不变实验文件哈希。后者没有重跑冻结模型，旧全量证据保留其原版本范围。这些闭环报告位于仓库旁证，避免把含ZIP自身哈希的报告递归打包。PDF二进制中的日期可能不同；验收比较实际文本、栅格像素、书签和链接，而不是要求PDF文件时间字段相同。结果JSON只在记录的依赖、硬件和线程范围内承诺已实际检查的逐字节一致。

@@ -1,0 +1,6485 @@
+{
+  "reviewer": "write_language_v03",
+  "date": "2026-10-12",
+  "scope": "v031小修原件有界语义核对；当前正式DPO/R1全部54页实际渲染并与指定public clone同路径比较；所有变页及邻页高清视觉检查；全部链接及TOC和最终日志复查",
+  "status": "PASS，无发布阻断",
+  "documents": {
+    "dpo": {
+      "pdf": "dist/papers/dpo.pdf",
+      "sha256": "affcf1c62c3f6b2ee99b34a6cc68ff49046a30fc2ba7f7831bfa53a76189e9fd",
+      "baseline_pdf": "/tmp/ai-self-study-v03-public-clone/dist/papers/dpo.pdf",
+      "baseline_sha256": "0a81f624e502bb93c0365c14cd0d5f0a856fc9d6f1346ffb696ee7f596d2e0c9",
+      "pages": 36,
+      "page_comparisons": [
+        {
+          "page": 1,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "直接偏好优化\n非官方中文研究资料·0.3 ·来源与许可逐篇注明\n目录\n1\n直接偏好优化：语言模型其实也是奖励模型\n2\n1.1\n1 引言. . . . . . . . . . . . . . . . .",
+          "render_sha256": "9625d09654de6c95e1be369ed32649a06e4bbddb7069131d640b329ab0703adb"
+        },
+        {
+          "page": 2,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1\n直接偏好优化：语言模型其实也是奖励模型\n1\n直接偏好优化：语言模型其实也是奖励模型\n原作：Rafael Rafailov，Archit Sharma，Eric Mitchell，Stefano E",
+          "render_sha256": "4b0f27c0958a7dc0898fc815dd8c5efbbde2f1fe88e5397497129659b8fb8169"
+        },
+        {
+          "page": 3,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.2\n2 相关工作\n1\n直接偏好优化：语言模型其实也是奖励模型\n基于人类反馈的强化学习（RLHF）\n提示x：“为我写一首关于爵士乐历史的诗”\n偏好数据：yw ≻yl\n偏好数据\n最大似然\n−−−−−→",
+          "render_sha256": "4c92b05e8518c0fd156f14d99ee3b4b164c35aef4b8469aeaff82746f11c1e1b"
+        },
+        {
+          "page": 4,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.3\n3 预备知识\n1\n直接偏好优化：语言模型其实也是奖励模型\n利用经过人类反馈指令微调的大语言模型，为安全性或无害性等特定属性生成额外的合成偏好数据[2]；人类只需为\n模型的标注提供文本评分准则，",
+          "render_sha256": "11b8cf4acc1ea7be7fe1c74fac13b8c2ac4a77c9b6d47d3ffcd3e443eeeeb3cc"
+        },
+        {
+          "page": 5,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.4\n4 直接偏好优化\n1\n直接偏好优化：语言模型其实也是奖励模型\n为：\nmax\nπθ Ex∼D,y∼πθ(y|x)\n\u0002\nrϕ(x, y)\n\u0003\n−βDKL\n\u0002\nπθ(y | x) || πref(y",
+          "render_sha256": "86a972fe8c831b899e24912a33f8bde1df1d7fb80cf117a2b258c12cda60a5de"
+        },
+        {
+          "page": 6,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.5\n5 DPO 的理论分析\n1\n直接偏好优化：语言模型其实也是奖励模型\n这样，我们以另一种参数化方式拟合隐式奖励，其最优策略就是πθ。此外，因为该过程等价于拟合重参数化的\nBradley–Terr",
+          "render_sha256": "9d55e3886471ee9d2f3a7a014be72bd4b537efb638d5ef71153a0f6bd1305ec7"
+        },
+        {
+          "page": 7,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.5\n5 DPO 的理论分析\n1\n直接偏好优化：语言模型其实也是奖励模型\n引理1.2 在Plackett–Luce 偏好框架下，特别是在Bradley–Terry 框架下，同一等价类中的两个奖励函数",
+          "render_sha256": "07aa311806516b36fdf914bf2ecc2ed493cce18810b03772a1ce5795bc22baf7"
+        },
+        {
+          "page": 8,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.6\n6 实验\n1\n直接偏好优化：语言模型其实也是奖励模型\n数变形，得到优化目标：\nmax\nπθ Eπθ(y|x)\n\u0014\nrϕ(x, y) −β log\nX\ny\nπref(y | x) exp\n\u0012 1",
+          "render_sha256": "3a95b3a4489c1aa15c7db07cbba011749714a931989230eb0215f84347142e32"
+        },
+        {
+          "page": 9,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.6\n6 实验\n1\n直接偏好优化：语言模型其实也是奖励模型\n0.0\n2.5\n5.0\n7.5\n10.0\n12.5\n15.0\n17.5\n20.0\nKL(\nref)\n0.4\n0.5\n0.6\n0.7\n0.8",
+          "render_sha256": "028c620312dcec10ced010bcddcc3cf461fbea77bf489b9c8fb4fa2dda74851a"
+        },
+        {
+          "page": 10,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.6\n6 实验\n1\n直接偏好优化：语言模型其实也是奖励模型\n0.25\n0.50\n0.75\n1.00\nSampling temperature\n0.1\n0.2\n0.3\n0.4\n0.5\n0.6\nWin ",
+          "render_sha256": "01e97138d3e01d75568b245e16c413e2fb9a58d62276598843671e1fbc0677ad"
+        },
+        {
+          "page": 11,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.6\n6 实验\n1\n直接偏好优化：语言模型其实也是奖励模型\n及采用双样本提示的基础Pythia-2.8B 比较；在各方法各自表现最好的温度下，DPO 达到或超过它们。我们也评价\n了来自知名来源8、在",
+          "render_sha256": "32932819c5ed30397a8446b988cc9c129571af79f3bea5d32b5edf4ba3de131d"
+        },
+        {
+          "page": 12,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.7\n7 讨论\n1\n直接偏好优化：语言模型其实也是奖励模型\n表1.2: 比较TL;DR 摘要样本中人类与GPT-4 的胜率，以及逐次判断的一致程度。人类与GPT-4 的一致程\n度，约等于人类彼此的一",
+          "render_sha256": "d392edb90bedd9cf94ca11ceae779c77cb26450c09465ff893ec43c3968747a1"
+        },
+        {
+          "page": 13,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\n致谢\nEM 感谢Knight-Hennessy 研究生奖学金的资助。CF 和CM 是CIFAR Fellow。本研究获得斯坦福学习加速器\n（SAL）与斯坦福以人为本人工智能研究院（HAI）“",
+          "render_sha256": "55b2c9fe21a51234a02db4e28fecbef85fe08e9eb6ee1446ada00116ed1d7aae"
+        },
+        {
+          "page": 14,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\naper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf.\n[7] T. Brown, B. Mann, N. Ryder, M. ",
+          "render_sha256": "4fc6fbfee18830e003af33b770b9873581d0e069708a320b9b83c27f87b5b599"
+        },
+        {
+          "page": 15,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\nNeural Information Processing Systems, volume 26. Curran Associates, Inc., 2013. URL https://pr",
+          "render_sha256": "601fc14840ade0afdcdfd4c9d4bd56e1be9993d33256858b9ad4dfe25f58cc1e"
+        },
+        {
+          "page": 16,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\nguistics. doi: 10.18653/v1/K16-1028. URL https://aclanthology.org/K16-1028.\n[27] D. Narayanan, ",
+          "render_sha256": "a9c30862032ae949e18b86f0886b750c0eaac49ed9f70983f9bc0a508f46e1cb"
+        },
+        {
+          "page": 17,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\nJ. Dy, and J.-W. van de Meent, editors, Proceedings of The 26th International Conference on Art",
+          "render_sha256": "48db53486e9d4ed5b9a06ff88a488fa1416f9403e381b810a2e2687a4a20aea3"
+        },
+        {
+          "page": 18,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1\n直接偏好优化：语言模型其实也是奖励模型\nURL https://doi.org/10.5281/zenodo.7790115.\n[45] B. Wang and A. Komatsuzaki. G",
+          "render_sha256": "489e5961e01d5e329bc0913ca5298a3dc3c1acc5a1cbbc0cecabd24bd99e3107"
+        },
+        {
+          "page": 19,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.8\n附录A 数学推导\n1\n直接偏好优化：语言模型其实也是奖励模型\nEM 为学习自回归奖励函数的早期讨论提供意见；撰写第一个DPO 实现并进行首批DPO 实验；训练论文实\n验所用的大规模摘要与对话D",
+          "render_sha256": "3f7aa081796884b79b2307f3af96d422eed0c502bf6d91152daab19b69870616"
+        },
+        {
+          "page": 20,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.8\n附录A 数学推导\n1\n直接偏好优化：语言模型其实也是奖励模型\n对所有x ∈D 都成立。推导完成。\nA.2 Bradley–Terry 模型下的DPO 目标\nBradley–Terry 偏好模型",
+          "render_sha256": "9e479678e3dc8f5a785559fd7ec5575bf941d4792eec09dbc3b3700d98bf99fa"
+        },
+        {
+          "page": 21,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.8\n附录A 数学推导\n1\n直接偏好优化：语言模型其实也是奖励模型\nA.4 DPO 目标的梯度\n本节推导DPO 目标的梯度：\n∇θLDPO(πθ; πref) = −∇θE(x,yw,yl)∼D\n\u0014",
+          "render_sha256": "b9a4a10dbaa805aebb42cda6537424c7022cfb67da9b7ec494a7ac3baab58902"
+        },
+        {
+          "page": 22,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.8\n附录A 数学推导\n1\n直接偏好优化：语言模型其实也是奖励模型\n原文引理2（重述）。同一等价类的两个奖励函数，在受约束强化学习问题下诱导相同的最优策略。\n证明. 考虑同一等价类中的两个奖励函数，",
+          "render_sha256": "1d808c0b9f590e55c8d3c2152cf572688ae3ec871d11f857afd4885daeaba196"
+        },
+        {
+          "page": 23,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.9\n附录B 实现细节与超参数\n1\n直接偏好优化：语言模型其实也是奖励模型\n命题1.5 假设参考模型对所有提示x 和回答y 满足πref(y|x) > 0，参数β > 0。那么，第5 节定义的每个奖",
+          "render_sha256": "a8f69078cd4aef9f16e41b1d019469674914b8d2923b3260bce71d73b7a8aa06"
+        },
+        {
+          "page": 24,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.10\n附录C 实验设置补充\n1\n直接偏好优化：语言模型其实也是奖励模型\nlosses = -F.logsigmoid(beta * (pi_logratios - ref_logratios))\n",
+          "render_sha256": "3ca4ec97325113f0e72e8a1362f37b5126f92a0de7ff98cd596c97908b41fef4"
+        },
+        {
+          "page": 25,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.10\n附录C 实验设置补充\n1\n直接偏好优化：语言模型其实也是奖励模型\n<摘要B>\n首先，用一句话比较两个摘要，说明你偏好哪一个以及原因。\n其次，在新的一行只写\"A\" 或\"B\"，表示你的选择。\n回",
+          "render_sha256": "573599696ea478950349c1169b9bc389d18785909dadfcc63ff947cde02913fd"
+        },
+        {
+          "page": 26,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.10\n附录C 实验设置补充\n1\n直接偏好优化：语言模型其实也是奖励模型\n回复B：\n<另一个回复>\n首先，用一句话比较两个回复，解释你认为哪一个更有帮助。\n其次，在新的一行只写\"A\" 或\"B\"，表示",
+          "render_sha256": "05aea1a7f8b20f8297541e9a72e47d8b8d37544ea001671aa961150e542a936e"
+        },
+        {
+          "page": 27,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": true,
+          "difference_bbox_pixels": [
+            98,
+            510,
+            390,
+            549
+          ],
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.10\n附录C 实验设置补充\n1\n直接偏好优化：语言模型其实也是奖励模型\n表1.3: 以温度1.0 从TL;DR 提示生成的Unlikelihood 样本。总体而言，在摘要和对话等更复杂任务中，Un",
+          "render_sha256": "dddd9fbae793f9502f86ba04b2e58afdaccf6228dbb0a4ee64ce7bdc77a24cf9"
+        },
+        {
+          "page": 28,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n论坛：r/tifu\n标题：今天我搞砸了：不小心踢到一位老妇人。\n帖子：事情不是今天发生的，而是大约一两年前。\n我当时在祖父的",
+          "render_sha256": "c5fd59f65e5f0054f6f59866d5ee937b73f2d09cfe62d40cb7ed4e2faa781af4"
+        },
+        {
+          "page": 29,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n0.25\n0.50\n0.75\n1.00\nSampling temperature\n0.20\n0.25\n0.30\n0.35\n0",
+          "render_sha256": "c1e7b96426a67743ecf23efee805b355c9146b6d976238dc530c2e179de85913"
+        },
+        {
+          "page": 30,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n判断\n摘要B [DPO] 着重于在特殊场合用行动让父母高兴，更有效地抓住了帖子的主要内容；摘要\nA 则显得重复、不够清楚。\n",
+          "render_sha256": "cacdbe368cd32dc32c8e6940feddc276b85cb6f5626991099ce1971e19667ff8"
+        },
+        {
+          "page": 31,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n表1.6: TL;DR 测试集帖子的摘要样例。DPO 样本生成温度为0.25；PPO 样本生成温度为0。GPT-4 评价时\n",
+          "render_sha256": "3d587e265bf68f458e508671c2d1e65f7c6aaf7efe6e3c0154b4ccc1f2cc3368"
+        },
+        {
+          "page": 32,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n表1.7: GPT-4 选择DPO 而非GT。Anthropic-HH 测试集提示的回复样例。DPO 生成温度为0.7；GT",
+          "render_sha256": "2f1557a77818ab3bb9fe59ee32aead32b1036c4b17c04a7fbd88f1bb96b9a43e"
+        },
+        {
+          "page": 33,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n表1.8: GPT-4 选择DPO 而非GT。Anthropic-HH 测试集提示的回复样例。DPO 生成温度为1.0；GT",
+          "render_sha256": "d70085ed778a43df0ff834761fdc12890948ed208507251c3cca98b7df81bbe5"
+        },
+        {
+          "page": 34,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n表1.9: GPT-4 选择GT 而非DPO。DPO 回复冗长而貌似可信，但包含事实错误：“自愿联盟”并非指二战事\n件，“全",
+          "render_sha256": "f6e5c4c244a4b8e1136823ae3a8f6da9bb015b37ebb53df5893ee80ec3cbb8fa"
+        },
+        {
+          "page": 35,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n表1.10: GPT-4 选择GT 而非DPO。GPT-4 错误地声称真实参考答案正确，而DPO 更冗长的输出错误。译\n注：",
+          "render_sha256": "80ffa4e586bd739a67e45aa85081243ad9a9bf7cae5532fb380eb273a717eb11"
+        },
+        {
+          "page": 36,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.11\n附录D 补充实验结果\n1\n直接偏好优化：语言模型其实也是奖励模型\n摘要评价[id ZHBvX3RlbXAwLjAx; group 5; key 18209903]\n以下哪个摘要更好地概括了所",
+          "render_sha256": "61a9ad4176da934efbe258f06f4193ea89c023f8eaa8f6958be351ffa36a8c9e"
+        }
+      ],
+      "changed_pages": [
+        27
+      ],
+      "high_resolution_changed_and_neighbor_pages": [
+        26,
+        27,
+        28
+      ],
+      "links": [
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            180.593017578125,
+            260.927001953125,
+            192.99700927734375
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "chapter.1"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            199.74200439453125,
+            123.77100372314453,
+            211.5469970703125
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            550.09
+          ],
+          "named_destination": "section.1.1"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            218.8699951171875,
+            143.69700622558594,
+            230.676025390625
+          ],
+          "target_page": 3,
+          "target_point": [
+            56.69,
+            570.15
+          ],
+          "named_destination": "section.1.2"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            237.99798583984375,
+            143.69700622558594,
+            249.80401611328125
+          ],
+          "target_page": 4,
+          "target_point": [
+            56.69,
+            307.74
+          ],
+          "named_destination": "section.1.3"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            257.12701416015625,
+            163.6219940185547,
+            268.9320068359375
+          ],
+          "target_page": 5,
+          "target_point": [
+            56.69,
+            220.42999999999995
+          ],
+          "named_destination": "section.1.4"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            276.2550048828125,
+            179.093994140625,
+            288.0610046386719
+          ],
+          "target_page": 6,
+          "target_point": [
+            56.69,
+            434.57
+          ],
+          "named_destination": "section.1.5"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            295.38299560546875,
+            123.77100372314453,
+            307.1889953613281
+          ],
+          "target_page": 8,
+          "target_point": [
+            56.69,
+            263.87
+          ],
+          "named_destination": "section.1.6"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            314.5119934082031,
+            123.77100372314453,
+            326.3169860839844
+          ],
+          "target_page": 12,
+          "target_point": [
+            56.69,
+            457.96
+          ],
+          "named_destination": "section.1.7"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            344.1510009765625,
+            96.54299926757812,
+            354.1130065917969
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            201.64999999999998
+          ],
+          "named_destination": "section*.11"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            362.7309875488281,
+            169.42999267578125,
+            374.5369873046875
+          ],
+          "target_page": 19,
+          "target_point": [
+            56.69,
+            173.27999999999997
+          ],
+          "named_destination": "section.1.8"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            381.8590087890625,
+            208.86199951171875,
+            393.6650085449219
+          ],
+          "target_page": 23,
+          "target_point": [
+            56.69,
+            324.34
+          ],
+          "named_destination": "section.1.9"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            400.9880065917969,
+            189.0760040283203,
+            412.7929992675781
+          ],
+          "target_page": 24,
+          "target_point": [
+            56.69,
+            238.49
+          ],
+          "named_destination": "section.1.10"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            420.1159973144531,
+            189.48500061035156,
+            431.9219970703125
+          ],
+          "target_page": 28,
+          "target_point": [
+            56.69,
+            396.43
+          ],
+          "named_destination": "section.1.11"
+        },
+        {
+          "source_page": 2,
+          "kind": 2,
+          "source_rect": [
+            124.68399810791016,
+            199.5050048828125,
+            302.51800537109375,
+            212.7750244140625
+          ],
+          "uri": "https://arxiv.org/abs/2305.18290v3"
+        },
+        {
+          "source_page": 2,
+          "kind": 2,
+          "source_rect": [
+            349.8340148925781,
+            257.697021484375,
+            398.5369873046875,
+            269.50201416015625
+          ],
+          "uri": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            383.3139953613281,
+            581.1099853515625,
+            393.2770080566406,
+            592.916015625
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            332.83
+          ],
+          "named_destination": "cite.dpo-chowdhery2022palm"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            399.7139892578125,
+            581.1099853515625,
+            404.69500732421875,
+            592.916015625
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            110.20000000000005
+          ],
+          "named_destination": "cite.dpo-brown2020language"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            411.1319885253906,
+            581.1099853515625,
+            421.0950012207031,
+            592.916015625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            504.45
+          ],
+          "named_destination": "cite.dpo-touvron2023llama"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            427.5320129394531,
+            581.1099853515625,
+            432.5140075683594,
+            592.916015625
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            170.28999999999996
+          ],
+          "named_destination": "cite.dpo-bubeck2023sparks"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            170.25,
+            676.7520141601562,
+            180.21299743652344,
+            688.5570068359375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            225.86
+          ],
+          "named_destination": "cite.dpo-ouyang2022training"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            59.4630012512207,
+            301.5639953613281,
+            69.42500305175781,
+            313.3689880371094
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            373.66
+          ],
+          "named_destination": "cite.dpo-christiano2017deep"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            75.375,
+            301.5639953613281,
+            80.35600280761719,
+            313.3689880371094
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            335.52
+          ],
+          "named_destination": "cite.dpo-bai2022constitutional"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            166.84100341796875,
+            435.4620056152344,
+            171.82200622558594,
+            447.26800537109375
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            574.14
+          ],
+          "named_destination": "cite.dpo-bradley1952rankanalysis"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            311.52099609375,
+            601.4400024414062,
+            321.4840087890625,
+            613.2459716796875
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            510.98
+          ],
+          "named_destination": "cite.dpo-radford2019language"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            393.3160095214844,
+            601.4400024414062,
+            398.2969970703125,
+            613.2459716796875
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            615.84
+          ],
+          "named_destination": "cite.dpo-gpt3"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            404.3160095214844,
+            601.4400024414062,
+            414.27801513671875,
+            613.2459716796875
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            110.46000000000004
+          ],
+          "named_destination": "cite.dpo-megatron"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            420.2959899902344,
+            601.4400024414062,
+            430.2590026855469,
+            613.2459716796875
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            332.83
+          ],
+          "named_destination": "cite.dpo-chowdhery2022palm"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            491.00201416015625,
+            620.5689697265625,
+            500.9649963378906,
+            632.3740234375
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            593.26
+          ],
+          "named_destination": "cite.dpo-mishra-etal-2022-cross"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            507.010986328125,
+            620.5689697265625,
+            516.9730224609375,
+            632.3740234375
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            148.52999999999997
+          ],
+          "named_destination": "cite.dpo-sanh2022multitask"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            523.0189819335938,
+            620.5689697265625,
+            532.9819946289062,
+            632.3740234375
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            472.45
+          ],
+          "named_destination": "cite.dpo-chung2022scaling"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            539.0280151367188,
+            620.5689697265625,
+            548.9910278320312,
+            632.3740234375
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            348.55
+          ],
+          "named_destination": "cite.dpo-thoppilan2022lamda"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            452.6600036621094,
+            639.697021484375,
+            462.62298583984375,
+            651.5029907226562
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            472.45
+          ],
+          "named_destination": "cite.dpo-chung2022scaling"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            141.65199279785156,
+            677.9539794921875,
+            151.61399841308594,
+            689.759033203125
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            329.58
+          ],
+          "named_destination": "cite.dpo-kreutzer-etal-2018-reliability"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            189.5290069580078,
+            677.9539794921875,
+            199.49200439453125,
+            689.759033203125
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            305.47
+          ],
+          "named_destination": "cite.dpo-stiennon2022learning"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            205.41799926757812,
+            677.9539794921875,
+            215.38099670410156,
+            689.759033203125
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            510.54
+          ],
+          "named_destination": "cite.dpo-ziegler2020finetuning"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            273.22100830078125,
+            677.9539794921875,
+            283.1839904785156,
+            689.759033203125
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            510.54
+          ],
+          "named_destination": "cite.dpo-ziegler2020finetuning"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            344.8699951171875,
+            677.9539794921875,
+            354.8330078125,
+            689.759033203125
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            225.86
+          ],
+          "named_destination": "cite.dpo-ouyang2022training"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            360.7590026855469,
+            677.9539794921875,
+            370.72198486328125,
+            689.759033203125
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            551.67
+          ],
+          "named_destination": "cite.dpo-ramamurthy2023is"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            233.41099548339844,
+            697.08203125,
+            238.39199829101562,
+            708.8880004882812
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            574.14
+          ],
+          "named_destination": "cite.dpo-bradley1952rankanalysis"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            211.84500122070312,
+            716.2100219726562,
+            221.80799865722656,
+            728.0159912109375
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            192.52999999999997
+          ],
+          "named_destination": "cite.dpo-williams1992reinforce"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            336.45098876953125,
+            716.2100219726562,
+            346.41400146484375,
+            728.0159912109375
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            266.22
+          ],
+          "named_destination": "cite.dpo-schulman2017proximal"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            404.33099365234375,
+            716.2100219726562,
+            414.2929992675781,
+            728.0159912109375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            551.67
+          ],
+          "named_destination": "cite.dpo-ramamurthy2023is"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            489.3070068359375,
+            95.68798828125,
+            494.28900146484375,
+            107.49298095703125
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            335.52
+          ],
+          "named_destination": "cite.dpo-bai2022constitutional"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            92.36699676513672,
+            133.9439697265625,
+            102.33000183105469,
+            145.75
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            631.51
+          ],
+          "named_destination": "cite.dpo-Ranzato2015SequenceLT"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            108.10600280761719,
+            133.9439697265625,
+            118.06800079345703,
+            145.75
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            345.72
+          ],
+          "named_destination": "cite.dpo-paulus2018a"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            123.84400177001953,
+            133.9439697265625,
+            133.8070068359375,
+            145.75
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            251.67999999999995
+          ],
+          "named_destination": "cite.dpo-wu2018learning"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            320.3340148925781,
+            133.9439697265625,
+            330.2959899902344,
+            145.75
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            373.66
+          ],
+          "named_destination": "cite.dpo-christiano2017deep"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            336.0719909667969,
+            133.9439697265625,
+            346.0350036621094,
+            145.75
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            409.34
+          ],
+          "named_destination": "cite.dpo-kupcsik2018learning"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            429.2139892578125,
+            191.3289794921875,
+            439.1759948730469,
+            203.135009765625
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            429.1
+          ],
+          "named_destination": "cite.dpo-yue2012karmed"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            445.19500732421875,
+            191.3289794921875,
+            455.1579895019531,
+            203.135009765625
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            551.79
+          ],
+          "named_destination": "cite.dpo-dudik2015contextual"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            539.0280151367188,
+            210.4580078125,
+            548.9910278320312,
+            222.26300048828125
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            551.79
+          ],
+          "named_destination": "cite.dpo-dudik2015contextual"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            539.0280151367188,
+            229.58599853515625,
+            548.9910278320312,
+            241.39202880859375
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            332.83
+          ],
+          "named_destination": "cite.dpo-yan2022human"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            527.8309936523438,
+            248.7139892578125,
+            532.81201171875,
+            260.52001953125
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            230.66999999999996
+          ],
+          "named_destination": "cite.dpo-BusaFekete2014"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            539.0280151367188,
+            248.7139892578125,
+            548.9910278320312,
+            260.52001953125
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            714.22
+          ],
+          "named_destination": "cite.dpo-ruiz2023dueling"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            102.63099670410156,
+            286.97100830078125,
+            112.59300231933594,
+            298.7770080566406
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            691.66
+          ],
+          "named_destination": "cite.dpo-jain2013learning"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            118.6709976196289,
+            286.97100830078125,
+            123.6520004272461,
+            298.7770080566406
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            230.66999999999996
+          ],
+          "named_destination": "cite.dpo-BusaFekete2014"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            129.72900390625,
+            286.97100830078125,
+            139.69200134277344,
+            298.7770080566406
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            373.66
+          ],
+          "named_destination": "cite.dpo-christiano2017deep"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            145.7689971923828,
+            286.97100830078125,
+            155.73199462890625,
+            298.7770080566406
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            672.95
+          ],
+          "named_destination": "cite.dpo-sadigh2017active"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            161.8090057373047,
+            286.97100830078125,
+            171.77099609375,
+            298.7770080566406
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            409.34
+          ],
+          "named_destination": "cite.dpo-kupcsik2018learning"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            177.02200317382812,
+            338.1789855957031,
+            186.98399353027344,
+            349.9849853515625
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            510.54
+          ],
+          "named_destination": "cite.dpo-ziegler2020finetuning"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            248.0229949951172,
+            338.1789855957031,
+            257.9849853515625,
+            349.9849853515625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            305.47
+          ],
+          "named_destination": "cite.dpo-stiennon2022learning"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            263.5880126953125,
+            338.1789855957031,
+            268.5690002441406,
+            349.9849853515625
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            237.29999999999995
+          ],
+          "named_destination": "cite.dpo-bai2022training"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            274.1719970703125,
+            338.1789855957031,
+            284.1340026855469,
+            349.9849853515625
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            225.86
+          ],
+          "named_destination": "cite.dpo-ouyang2022training"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            83.38600158691406,
+            472.0780029296875,
+            88.36699676513672,
+            483.88299560546875
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            574.14
+          ],
+          "named_destination": "cite.dpo-bradley1952rankanalysis"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            461.8429870605469,
+            472.0780029296875,
+            471.8059997558594,
+            483.88299560546875
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            469.3
+          ],
+          "named_destination": "cite.dpo-plackett1975analysis"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            478.4849853515625,
+            472.0780029296875,
+            488.447998046875,
+            483.88299560546875
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            491.85
+          ],
+          "named_destination": "cite.dpo-luce2012individual"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            293.72601318359375,
+            633.4439697265625,
+            303.6889953613281,
+            645.2490234375
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            510.54
+          ],
+          "named_destination": "cite.dpo-ziegler2020finetuning"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            249.65699768066406,
+            651.7509765625,
+            253.1439971923828,
+            660.0150146484375
+          ],
+          "target_page": 4,
+          "target_point": [
+            71.04,
+            689.8
+          ],
+          "named_destination": "Hfootnote.1"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            468.35198974609375,
+            671.7000122070312,
+            478.31500244140625,
+            683.5059814453125
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            129.33000000000004
+          ],
+          "named_destination": "cite.dpo-jaques2017sequence"
+        },
+        {
+          "source_page": 4,
+          "kind": 4,
+          "source_rect": [
+            484.10198974609375,
+            671.7000122070312,
+            494.06500244140625,
+            683.5059814453125
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            189.54999999999995
+          ],
+          "named_destination": "cite.dpo-jaques2020human"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            92.66799926757812,
+            199.29901123046875,
+            102.63099670410156,
+            211.10498046875
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            510.54
+          ],
+          "named_destination": "cite.dpo-ziegler2020finetuning"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            108.70800018310547,
+            199.29901123046875,
+            118.6709976196289,
+            211.10498046875
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            305.47
+          ],
+          "named_destination": "cite.dpo-stiennon2022learning"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            124.74800109863281,
+            199.29901123046875,
+            129.72900390625,
+            211.10498046875
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            237.29999999999995
+          ],
+          "named_destination": "cite.dpo-bai2022training"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            135.80599975585938,
+            199.29901123046875,
+            145.7689971923828,
+            211.10498046875
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            225.86
+          ],
+          "named_destination": "cite.dpo-ouyang2022training"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            491.5929870605469,
+            199.29901123046875,
+            501.55499267578125,
+            211.10498046875
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            266.22
+          ],
+          "named_destination": "cite.dpo-schulman2017proximal"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            354.90899658203125,
+            346.14898681640625,
+            367.6419982910156,
+            357.9549865722656
+          ],
+          "target_page": 5,
+          "target_point": [
+            175.54,
+            108.19000000000005
+          ],
+          "named_destination": "equation.1.3"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            59.4630012512207,
+            365.27801513671875,
+            69.42500305175781,
+            377.0830078125
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            428.05
+          ],
+          "named_destination": "cite.dpo-peters2007reinforcement"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            75.50199890136719,
+            365.27801513671875,
+            85.46499633789062,
+            377.0830078125
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            387.04
+          ],
+          "named_destination": "cite.dpo-peng2019advantage"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            91.54199981689453,
+            365.27801513671875,
+            101.50499725341797,
+            377.0830078125
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            230.78999999999996
+          ],
+          "named_destination": "cite.dpo-korbak2022reinforcement"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            107.58200073242188,
+            365.27801513671875,
+            117.54499816894531,
+            377.0830078125
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            631.52
+          ],
+          "named_destination": "cite.dpo-go2023aligning"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            193.3699951171875,
+            365.27801513671875,
+            206.10299682617188,
+            377.0830078125
+          ],
+          "target_page": 5,
+          "target_point": [
+            175.54,
+            108.19000000000005
+          ],
+          "named_destination": "equation.1.3"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            235.51699829101562,
+            435.4150085449219,
+            245.47999572753906,
+            447.22100830078125
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            230.78999999999996
+          ],
+          "named_destination": "cite.dpo-korbak2022reinforcement"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            252.0330047607422,
+            435.4150085449219,
+            261.9960021972656,
+            447.22100830078125
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            631.52
+          ],
+          "named_destination": "cite.dpo-go2023aligning"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            69.94200134277344,
+            454.5429992675781,
+            82.67400360107422,
+            466.3489990234375
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            532.6119995117188,
+            454.5429992675781,
+            545.343994140625,
+            466.3489990234375
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            308.385009765625,
+            539.0269775390625,
+            321.11700439453125,
+            550.83203125
+          ],
+          "target_page": 5,
+          "target_point": [
+            223.51,
+            486.17
+          ],
+          "named_destination": "equation.1.5"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            492.9339904785156,
+            539.0269775390625,
+            505.6659851074219,
+            550.83203125
+          ],
+          "target_page": 4,
+          "target_point": [
+            197.84,
+            506.9
+          ],
+          "named_destination": "equation.1.1"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            168.09500122070312,
+            634.8580322265625,
+            180.82699584960938,
+            646.6629638671875
+          ],
+          "target_page": 5,
+          "target_point": [
+            180.98,
+            592.97
+          ],
+          "named_destination": "equation.1.6"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            443.635986328125,
+            634.8580322265625,
+            453.5989990234375,
+            646.6629638671875
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            469.3
+          ],
+          "named_destination": "cite.dpo-plackett1975analysis"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            459.6570129394531,
+            634.8580322265625,
+            469.6199951171875,
+            646.6629638671875
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            491.85
+          ],
+          "named_destination": "cite.dpo-luce2012individual"
+        },
+        {
+          "source_page": 5,
+          "kind": 4,
+          "source_rect": [
+            199.48699951171875,
+            692.2429809570312,
+            212.22000122070312,
+            704.0479736328125
+          ],
+          "target_page": 4,
+          "target_point": [
+            186.25,
+            579.0
+          ],
+          "named_destination": "equation.1.2"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            456.7330017089844,
+            114.81597900390625,
+            461.7139892578125,
+            126.62200927734375
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            532.9100000000001
+          ],
+          "named_destination": "cite.dpo-bong2022generalized"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            388.77801513671875,
+            318.8059997558594,
+            401.510009765625,
+            330.61199951171875
+          ],
+          "target_page": 27,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "table.1.3"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            443.5669860839844,
+            356.24200439453125,
+            447.0539855957031,
+            364.5060119628906
+          ],
+          "target_page": 6,
+          "target_point": [
+            71.04,
+            716.2
+          ],
+          "named_destination": "Hfootnote.2"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            512.6740112304688,
+            465.656005859375,
+            522.6370239257812,
+            477.4620056152344
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            266.22
+          ],
+          "named_destination": "cite.dpo-schulman2017proximal"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            452.9110107421875,
+            546.5780029296875,
+            465.64300537109375,
+            558.384033203125
+          ],
+          "target_page": 5,
+          "target_point": [
+            223.51,
+            486.17
+          ],
+          "named_destination": "equation.1.5"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            522.6270141601562,
+            565.7059936523438,
+            535.3599853515625,
+            577.511962890625
+          ],
+          "target_page": 4,
+          "target_point": [
+            186.25,
+            579.0
+          ],
+          "named_destination": "equation.1.2"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            216.09500122070312,
+            603.1419677734375,
+            219.58200073242188,
+            611.406005859375
+          ],
+          "target_page": 6,
+          "target_point": [
+            71.04,
+            725.84
+          ],
+          "named_destination": "Hfootnote.3"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            217.15499877929688,
+            727.8499755859375,
+            227.34100341796875,
+            737.2949829101562
+          ],
+          "target_page": 5,
+          "target_point": [
+            223.51,
+            486.17
+          ],
+          "named_destination": "equation.1.5"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            397.36700439453125,
+            727.8499755859375,
+            407.5530090332031,
+            737.2949829101562
+          ],
+          "target_page": 5,
+          "target_point": [
+            136.99,
+            707.9300000000001
+          ],
+          "named_destination": "equation.1.7"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            484.1510009765625,
+            169.01300048828125,
+            494.1130065917969,
+            180.8189697265625
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            469.3
+          ],
+          "named_destination": "cite.dpo-plackett1975analysis"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            299.3590087890625,
+            188.1409912109375,
+            312.09100341796875,
+            199.947021484375
+          ],
+          "target_page": 4,
+          "target_point": [
+            186.25,
+            579.0
+          ],
+          "named_destination": "equation.1.2"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            427.91900634765625,
+            188.1409912109375,
+            432.8999938964844,
+            199.947021484375
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            532.9100000000001
+          ],
+          "named_destination": "cite.dpo-bong2022generalized"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            374.47100830078125,
+            301.71600341796875,
+            387.2030029296875,
+            313.52099609375
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            159.72300720214844,
+            394.5190124511719,
+            172.4550018310547,
+            406.32501220703125
+          ],
+          "target_page": 5,
+          "target_point": [
+            223.51,
+            486.17
+          ],
+          "named_destination": "equation.1.5"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            139.33999633789062,
+            458.87799072265625,
+            152.07200622558594,
+            470.6839904785156
+          ],
+          "target_page": 7,
+          "target_point": [
+            56.69,
+            241.69000000000005
+          ],
+          "named_destination": "theorem.1.4"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            314.427001953125,
+            526.91796875,
+            323.3399963378906,
+            535.1820068359375
+          ],
+          "target_page": 7,
+          "target_point": [
+            56.69,
+            241.69000000000005
+          ],
+          "named_destination": "theorem.1.4"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            375.38800048828125,
+            540.4620361328125,
+            388.1199951171875,
+            552.2680053710938
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            429.1369934082031,
+            540.4620361328125,
+            441.8689880371094,
+            552.2680053710938
+          ],
+          "target_page": 7,
+          "target_point": [
+            232.09,
+            490.51
+          ],
+          "named_destination": "equation.1.9"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            391.3659973144531,
+            578.718994140625,
+            404.0989990234375,
+            590.5239868164062
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            180.17300415039062,
+            678.7689819335938,
+            192.906005859375,
+            690.573974609375
+          ],
+          "target_page": 5,
+          "target_point": [
+            175.54,
+            108.19000000000005
+          ],
+          "named_destination": "equation.1.3"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            419.093994140625,
+            678.7689819335938,
+            429.0570068359375,
+            690.573974609375
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            469.57
+          ],
+          "named_destination": "cite.dpo-levine2018reinforcement"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            449.10699462890625,
+            697.89697265625,
+            461.8389892578125,
+            709.7030029296875
+          ],
+          "target_page": 5,
+          "target_point": [
+            136.99,
+            707.9300000000001
+          ],
+          "named_destination": "equation.1.7"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            531.39697265625,
+            697.0759887695312,
+            534.8839721679688,
+            705.3399658203125
+          ],
+          "target_page": 7,
+          "target_point": [
+            71.04,
+            716.42
+          ],
+          "named_destination": "Hfootnote.4"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            240.15699768066406,
+            718.4359741210938,
+            250.34300231933594,
+            727.8809814453125
+          ],
+          "target_page": 5,
+          "target_point": [
+            136.99,
+            707.9300000000001
+          ],
+          "named_destination": "equation.1.7"
+        },
+        {
+          "source_page": 7,
+          "kind": 4,
+          "source_rect": [
+            404.4289855957031,
+            718.4359741210938,
+            414.614990234375,
+            727.8809814453125
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            122.53500366210938,
+            167.25,
+            132.4980010986328,
+            179.0560302734375
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            510.54
+          ],
+          "named_destination": "cite.dpo-ziegler2020finetuning"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            138.5540008544922,
+            167.25,
+            148.51699829101562,
+            179.0560302734375
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            305.47
+          ],
+          "named_destination": "cite.dpo-stiennon2022learning"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            154.572998046875,
+            167.25,
+            159.55499267578125,
+            179.0560302734375
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            237.29999999999995
+          ],
+          "named_destination": "cite.dpo-bai2022training"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            165.61099243164062,
+            167.25,
+            175.57400512695312,
+            179.0560302734375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            225.86
+          ],
+          "named_destination": "cite.dpo-ouyang2022training"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            232.93299865722656,
+            409.74200439453125,
+            242.89599609375,
+            421.5480041503906
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            513.97
+          ],
+          "named_destination": "cite.dpo-maas-EtAl:2011:ACL-HLT2011"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            446.8630065917969,
+            467.12701416015625,
+            456.82501220703125,
+            478.9330139160156
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            563.11
+          ],
+          "named_destination": "cite.dpo-volske-etal-2017-tl"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            542.5750122070312,
+            467.12701416015625,
+            552.5369873046875,
+            478.9330139160156
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            305.47
+          ],
+          "named_destination": "cite.dpo-stiennon2022learning"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            384.65899658203125,
+            485.43499755859375,
+            388.14599609375,
+            493.6990051269531
+          ],
+          "target_page": 8,
+          "target_point": [
+            71.04,
+            714.2
+          ],
+          "named_destination": "Hfootnote.5"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            463.6189880371094,
+            486.2550048828125,
+            473.5820007324219,
+            498.0610046386719
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            644.67
+          ],
+          "named_destination": "cite.dpo-leandro_von_werra_2023_7790115"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            319.11199951171875,
+            543.6400146484375,
+            324.0929870605469,
+            555.4459838867188
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            237.29999999999995
+          ],
+          "named_destination": "cite.dpo-bai2022training"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            468.34600830078125,
+            677.5390014648438,
+            478.3080139160156,
+            689.344970703125
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            291.58
+          ],
+          "named_destination": "cite.dpo-Chen2023ExploringTU"
+        },
+        {
+          "source_page": 8,
+          "kind": 2,
+          "source_rect": [
+            71.03900146484375,
+            715.583984375,
+            312.27099609375,
+            726.2160034179688
+          ],
+          "uri": "https://huggingface.co/CarperAI/openai_summarize_tldr_sft"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            65.37999725341797,
+            424.46600341796875,
+            75.34300231933594,
+            436.2720031738281
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            110.26999999999998
+          ],
+          "named_destination": "cite.dpo-gpt-j"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            287.04998779296875,
+            424.46600341796875,
+            292.031005859375,
+            436.2720031738281
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            472.41
+          ],
+          "named_destination": "cite.dpo-biderman2023pythia"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            176.7239990234375,
+            462.72198486328125,
+            186.68699645996094,
+            474.52801513671875
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            151.51999999999998
+          ],
+          "named_destination": "cite.dpo-welleck2019neural"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            426.0069885253906,
+            481.85101318359375,
+            435.9700012207031,
+            493.6570129394531
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            266.22
+          ],
+          "named_destination": "cite.dpo-schulman2017proximal"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            504.0360107421875,
+            500.97900390625,
+            513.9979858398438,
+            512.7850341796875
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            644.67
+          ],
+          "named_destination": "cite.dpo-leandro_von_werra_2023_7790115"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            472.5929870605469,
+            658.4140014648438,
+            485.32501220703125,
+            670.219970703125
+          ],
+          "target_page": 9,
+          "target_point": [
+            89.95,
+            291.98
+          ],
+          "named_destination": "figure.1.2"
+        },
+        {
+          "source_page": 10,
+          "kind": 4,
+          "source_rect": [
+            253.25,
+            385.4580078125,
+            256.73699951171875,
+            393.72198486328125
+          ],
+          "target_page": 10,
+          "target_point": [
+            71.04,
+            714.34
+          ],
+          "named_destination": "Hfootnote.6"
+        },
+        {
+          "source_page": 10,
+          "kind": 4,
+          "source_rect": [
+            82.47200012207031,
+            505.4570007324219,
+            92.43499755859375,
+            517.2630004882812
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            305.47
+          ],
+          "named_destination": "cite.dpo-stiennon2022learning"
+        },
+        {
+          "source_page": 10,
+          "kind": 4,
+          "source_rect": [
+            99.4540023803711,
+            543.7139892578125,
+            112.18599700927734,
+            555.52001953125
+          ],
+          "target_page": 9,
+          "target_point": [
+            89.95,
+            291.98
+          ],
+          "named_destination": "figure.1.2"
+        },
+        {
+          "source_page": 10,
+          "kind": 4,
+          "source_rect": [
+            395.6700134277344,
+            542.8930053710938,
+            399.1570129394531,
+            551.156982421875
+          ],
+          "target_page": 10,
+          "target_point": [
+            71.04,
+            724.04
+          ],
+          "named_destination": "Hfootnote.7"
+        },
+        {
+          "source_page": 10,
+          "kind": 4,
+          "source_rect": [
+            293.2749938964844,
+            639.3560180664062,
+            298.2560119628906,
+            651.1610107421875
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            237.29999999999995
+          ],
+          "named_destination": "cite.dpo-bai2022training"
+        },
+        {
+          "source_page": 10,
+          "kind": 4,
+          "source_rect": [
+            516.4450073242188,
+            696.740966796875,
+            529.177001953125,
+            708.5460205078125
+          ],
+          "target_page": 29,
+          "target_point": [
+            89.51,
+            288.25
+          ],
+          "named_destination": "figure.1.4"
+        },
+        {
+          "source_page": 10,
+          "kind": 2,
+          "source_rect": [
+            71.03900146484375,
+            725.4199829101562,
+            312.27099609375,
+            736.052001953125
+          ],
+          "uri": "https://huggingface.co/CarperAI/openai_summarize_tldr_sft"
+        },
+        {
+          "source_page": 11,
+          "kind": 4,
+          "source_rect": [
+            126.43099975585938,
+            113.9949951171875,
+            129.91799926757812,
+            122.25897216796875
+          ],
+          "target_page": 11,
+          "target_point": [
+            71.04,
+            716.2
+          ],
+          "named_destination": "Hfootnote.8"
+        },
+        {
+          "source_page": 11,
+          "kind": 4,
+          "source_rect": [
+            377.635009765625,
+            113.9949951171875,
+            381.12200927734375,
+            122.25897216796875
+          ],
+          "target_page": 11,
+          "target_point": [
+            71.04,
+            725.83
+          ],
+          "named_destination": "Hfootnote.9"
+        },
+        {
+          "source_page": 11,
+          "kind": 4,
+          "source_rect": [
+            260.9169921875,
+            172.20098876953125,
+            273.64898681640625,
+            184.00701904296875
+          ],
+          "target_page": 10,
+          "target_point": [
+            89.99,
+            291.98
+          ],
+          "named_destination": "figure.1.3"
+        },
+        {
+          "source_page": 11,
+          "kind": 4,
+          "source_rect": [
+            186.78799438476562,
+            404.4209899902344,
+            196.75100708007812,
+            416.22601318359375
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            672.95
+          ],
+          "named_destination": "cite.dpo-nallapati-etal-2016-abstractive"
+        },
+        {
+          "source_page": 11,
+          "kind": 4,
+          "source_rect": [
+            70.15499877929688,
+            423.54901123046875,
+            82.88700103759766,
+            435.3550109863281
+          ],
+          "target_page": 11,
+          "target_point": [
+            56.69,
+            238.16999999999996
+          ],
+          "named_destination": "table.1.1"
+        },
+        {
+          "source_page": 11,
+          "kind": 2,
+          "source_rect": [
+            71.03900146484375,
+            717.5830078125,
+            299.5740051269531,
+            728.2150268554688
+          ],
+          "uri": "https://github.com/CarperAI/trlx/tree/main/examples/hh"
+        },
+        {
+          "source_page": 11,
+          "kind": 2,
+          "source_rect": [
+            71.03900146484375,
+            727.2160034179688,
+            287.3760070800781,
+            737.8480224609375
+          ],
+          "uri": "https://huggingface.co/reciprocate/ppo_hh_pythia-6B"
+        },
+        {
+          "source_page": 12,
+          "kind": 4,
+          "source_rect": [
+            492.7619934082031,
+            622.8619995117188,
+            505.4939880371094,
+            634.66796875
+          ],
+          "target_page": 10,
+          "target_point": [
+            89.99,
+            291.98
+          ],
+          "named_destination": "figure.1.3"
+        },
+        {
+          "source_page": 13,
+          "kind": 2,
+          "source_rect": [
+            321.73699951171875,
+            717.9959716796875,
+            555.3070068359375,
+            731.2659912109375
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf"
+        },
+        {
+          "source_page": 13,
+          "kind": 2,
+          "source_rect": [
+            301.0190124511719,
+            755.8800048828125,
+            310.9809875488281,
+            767.6859741210938
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            515.4569702148438,
+            57.780029296875,
+            555.3070068359375,
+            67.74200439453125
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            94.8809814453125,
+            375.8059997558594,
+            108.1510009765625
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            296.0060119628906,
+            276.00201416015625,
+            511.9460144042969,
+            289.2720031738281
+          ],
+          "uri": "https://doi.org/10.1007/s10994-014-5458-8"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            129.71499633789062,
+            437.9949951171875,
+            555.3070068359375,
+            451.2650146484375
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            457.1239929199219,
+            187.51199340820312,
+            470.3940124511719
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            616.1279907226562,
+            317.77398681640625,
+            629.3980102539062
+          ],
+          "uri": "https://proceedings.mlr.press/v40/Dudik15.html"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            461.1600036621094,
+            94.8809814453125,
+            555.3070068359375,
+            108.1510009765625
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2013/file/c058f544c737782deacefa532d9add4c-Paper.pdf"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            114.00897216796875,
+            511.7959899902344,
+            127.27899169921875
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2013/file/c058f544c737782deacefa532d9add4c-Paper.pdf"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            324.7359924316406,
+            295.1300048828125,
+            555.3070068359375,
+            308.4010009765625
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2022/file/67496dfa96afddab795530cc7c69b57a-Paper-Conference.pdf"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            314.2590026855469,
+            433.8389892578125,
+            327.52899169921875
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2022/file/67496dfa96afddab795530cc7c69b57a-Paper-Conference.pdf"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            365.14599609375,
+            393.760986328125,
+            538.2470092773438,
+            407.031005859375
+          ],
+          "uri": "https://aclanthology.org/P18-1165"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            155.39300537109375,
+            577.8709716796875,
+            365.1059875488281,
+            591.1409912109375
+          ],
+          "uri": "http://www.aclweb.org/anthology/P11-1015"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            300.98699951171875,
+            657.3729858398438,
+            521.1610107421875,
+            670.6439819335938
+          ],
+          "uri": "https://aclanthology.org/2022.acl-long.244"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            267.7909851074219,
+            94.8809814453125,
+            440.8919982910156,
+            108.1510009765625
+          ],
+          "uri": "https://aclanthology.org/K16-1028"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            395.75299072265625,
+            193.510986328125,
+            555.3070068359375,
+            206.781005859375
+          ],
+          "uri": "https://doi.org/10.1145/3458817.3476209"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            212.63897705078125,
+            124.25,
+            225.90997314453125
+          ],
+          "uri": "https://doi.org/10.1145/3458817.3476209"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            376.1650085449219,
+            311.2699890136719,
+            555.3070068359375,
+            324.5400085449219
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            330.39801025390625,
+            486.1419982910156,
+            343.66900634765625
+          ],
+          "uri": "https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            310.45098876953125,
+            371.6440124511719,
+            524.89697265625,
+            384.91400146484375
+          ],
+          "uri": "https://openreview.net/forum?id=HkAClQgA-"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            128.63299560546875,
+            616.1279907226562,
+            353.5400085449219,
+            629.3980102539062
+          ],
+          "uri": "https://openreview.net/forum?id=8aHzds2uUyB"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            177.07200622558594,
+            133.13702392578125,
+            422.8999938964844,
+            146.40802001953125
+          ],
+          "uri": "https://proceedings.mlr.press/v206/saha23a.html"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            310.45098876953125,
+            250.89599609375,
+            530.1279907226562,
+            264.166015625
+          ],
+          "uri": "https://openreview.net/forum?id=9Vrb9D0WI4"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            449.97698974609375,
+            610.1500244140625,
+            555.3070068359375,
+            623.4199829101562
+          ],
+          "uri": "https://aclanthology.org/W17-4508"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            629.2789916992188,
+            145.66900634765625,
+            642.5490112304688
+          ],
+          "uri": "https://aclanthology.org/W17-4508"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            101.5250015258789,
+            94.8809814453125,
+            300.27899169921875,
+            108.1510009765625
+          ],
+          "uri": "https://doi.org/10.5281/zenodo.7790115"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            522.8870239257812,
+            116.99798583984375,
+            555.3070068359375,
+            130.26800537109375
+          ],
+          "uri": "https://github.com/kingoflolz/mesh-transformer-jax"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            136.1259765625,
+            308.3089904785156,
+            149.39599609375
+          ],
+          "uri": "https://github.com/kingoflolz/mesh-transformer-jax"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            450.5119934082031,
+            218.61700439453125,
+            555.3070068359375,
+            231.88702392578125
+          ],
+          "uri": "https://doi.org/10.1007/BF00992696"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            237.7449951171875,
+            150.40199279785156,
+            251.0159912109375
+          ],
+          "uri": "https://doi.org/10.1007/BF00992696"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            395.75299072265625,
+            396.75,
+            555.3070068359375,
+            410.0199890136719
+          ],
+          "uri": "https://doi.org/10.1145/3477495.3531991"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            415.87799072265625,
+            124.25,
+            429.14801025390625
+          ],
+          "uri": "https://doi.org/10.1145/3477495.3531991"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            101.92900085449219,
+            476.25201416015625,
+            461.26800537109375,
+            489.5220031738281
+          ],
+          "uri": "https://www.sciencedirect.com/science/article/pii/S0022000012000281"
+        },
+        {
+          "source_page": 19,
+          "kind": 4,
+          "source_rect": [
+            119.78600311279297,
+            246.94598388671875,
+            132.5189971923828,
+            258.75201416015625
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 19,
+          "kind": 4,
+          "source_rect": [
+            165.7239990234375,
+            246.94598388671875,
+            178.45599365234375,
+            258.75201416015625
+          ],
+          "target_page": 5,
+          "target_point": [
+            175.54,
+            108.19000000000005
+          ],
+          "named_destination": "equation.1.3"
+        },
+        {
+          "source_page": 19,
+          "kind": 4,
+          "source_rect": [
+            384.73699951171875,
+            492.0660095214844,
+            391.71099853515625,
+            500.3299865722656
+          ],
+          "target_page": 19,
+          "target_point": [
+            71.04,
+            710.58
+          ],
+          "named_destination": "Hfootnote.10"
+        },
+        {
+          "source_page": 19,
+          "kind": 4,
+          "source_rect": [
+            507.65301513671875,
+            543.89599609375,
+            525.3670043945312,
+            555.7009887695312
+          ],
+          "target_page": 19,
+          "target_point": [
+            529.86,
+            397.94
+          ],
+          "named_destination": "equation.1.12"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            99.86100006103516,
+            259.4990234375,
+            117.57499694824219,
+            271.30499267578125
+          ],
+          "target_page": 20,
+          "target_point": [
+            225.37,
+            224.17999999999995
+          ],
+          "named_destination": "equation.1.17"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            150.77999877929688,
+            259.4990234375,
+            168.49400329589844,
+            271.30499267578125
+          ],
+          "target_page": 20,
+          "target_point": [
+            201.99,
+            173.16999999999996
+          ],
+          "named_destination": "equation.1.16"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            139.71200561523438,
+            385.59600830078125,
+            152.44400024414062,
+            397.4020080566406
+          ],
+          "target_page": 5,
+          "target_point": [
+            136.99,
+            707.9300000000001
+          ],
+          "named_destination": "equation.1.7"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            232.14500427246094,
+            384.7760009765625,
+            239.11900329589844,
+            393.0400085449219
+          ],
+          "target_page": 20,
+          "target_point": [
+            71.04,
+            704.99
+          ],
+          "named_destination": "Hfootnote.11"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            148.406005859375,
+            447.3900146484375,
+            158.3679962158203,
+            459.1960144042969
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            469.3
+          ],
+          "named_destination": "cite.dpo-plackett1975analysis"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            164.92100524902344,
+            447.3900146484375,
+            174.88299560546875,
+            459.1960144042969
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            491.85
+          ],
+          "named_destination": "cite.dpo-luce2012individual"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            467.72900390625,
+            465.6969909667969,
+            474.7019958496094,
+            473.96099853515625
+          ],
+          "target_page": 20,
+          "target_point": [
+            71.04,
+            714.63
+          ],
+          "named_destination": "Hfootnote.12"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            154.42599487304688,
+            541.8619995117188,
+            172.13900756835938,
+            553.6669921875
+          ],
+          "target_page": 20,
+          "target_point": [
+            201.77,
+            503.91
+          ],
+          "named_destination": "equation.1.18"
+        },
+        {
+          "source_page": 20,
+          "kind": 4,
+          "source_rect": [
+            512.6640014648438,
+            541.8619995117188,
+            525.39599609375,
+            553.6669921875
+          ],
+          "target_page": 5,
+          "target_point": [
+            223.51,
+            486.17
+          ],
+          "named_destination": "equation.1.5"
+        },
+        {
+          "source_page": 21,
+          "kind": 4,
+          "source_rect": [
+            89.89800262451172,
+            172.2509765625,
+            107.61199951171875,
+            184.0560302734375
+          ],
+          "target_page": 21,
+          "target_point": [
+            529.86,
+            133.94000000000005
+          ],
+          "named_destination": "equation.1.21"
+        },
+        {
+          "source_page": 21,
+          "kind": 4,
+          "source_rect": [
+            379.0719909667969,
+            322.52398681640625,
+            386.0459899902344,
+            330.7879943847656
+          ],
+          "target_page": 21,
+          "target_point": [
+            71.04,
+            694.25
+          ],
+          "named_destination": "Hfootnote.13"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            539.5059814453125,
+            121.67401123046875,
+            552.239013671875,
+            133.47900390625
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            149.6739959716797,
+            393.5199890136719,
+            162.406005859375,
+            405.32598876953125
+          ],
+          "target_page": 7,
+          "target_point": [
+            56.69,
+            241.69000000000005
+          ],
+          "named_destination": "theorem.1.4"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            427.23699951171875,
+            430.95599365234375,
+            434.21099853515625,
+            439.2200012207031
+          ],
+          "target_page": 22,
+          "target_point": [
+            71.04,
+            706.74
+          ],
+          "named_destination": "Hfootnote.14"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            466.489990234375,
+            457.7619934082031,
+            479.22198486328125,
+            469.5679931640625
+          ],
+          "target_page": 5,
+          "target_point": [
+            211.56,
+            380.97
+          ],
+          "named_destination": "equation.1.4"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            539.5059814453125,
+            457.7619934082031,
+            552.239013671875,
+            469.5679931640625
+          ],
+          "target_page": 5,
+          "target_point": [
+            223.51,
+            486.17
+          ],
+          "named_destination": "equation.1.5"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            169.44900512695312,
+            670.25,
+            182.18099975585938,
+            682.0549926757812
+          ],
+          "target_page": 7,
+          "target_point": [
+            56.69,
+            135.09000000000003
+          ],
+          "named_destination": "theorem.1.3"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            249.30099487304688,
+            689.3779907226562,
+            262.0329895019531,
+            701.1840209960938
+          ],
+          "target_page": 7,
+          "target_point": [
+            56.69,
+            241.69000000000005
+          ],
+          "named_destination": "theorem.1.4"
+        },
+        {
+          "source_page": 22,
+          "kind": 4,
+          "source_rect": [
+            421.43499755859375,
+            688.5570068359375,
+            428.40899658203125,
+            696.8209838867188
+          ],
+          "target_page": 22,
+          "target_point": [
+            71.04,
+            725.84
+          ],
+          "named_destination": "Hfootnote.15"
+        },
+        {
+          "source_page": 23,
+          "kind": 4,
+          "source_rect": [
+            347.0610046386719,
+            284.44000244140625,
+            359.79400634765625,
+            296.2460021972656
+          ],
+          "target_page": 7,
+          "target_point": [
+            56.69,
+            241.69000000000005
+          ],
+          "named_destination": "theorem.1.4"
+        },
+        {
+          "source_page": 26,
+          "kind": 4,
+          "source_rect": [
+            203.96200561523438,
+            310.50799560546875,
+            213.9250030517578,
+            322.31298828125
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            151.51999999999998
+          ],
+          "named_destination": "cite.dpo-welleck2019neural"
+        },
+        {
+          "source_page": 26,
+          "kind": 4,
+          "source_rect": [
+            118.48500061035156,
+            348.7640075683594,
+            131.2169952392578,
+            360.57000732421875
+          ],
+          "target_page": 27,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "table.1.3"
+        },
+        {
+          "source_page": 28,
+          "kind": 4,
+          "source_rect": [
+            250.86500549316406,
+            489.2279968261719,
+            263.59698486328125,
+            501.03399658203125
+          ],
+          "target_page": 29,
+          "target_point": [
+            89.51,
+            288.25
+          ],
+          "named_destination": "figure.1.4"
+        },
+        {
+          "source_page": 28,
+          "kind": 4,
+          "source_rect": [
+            119.6719970703125,
+            570.1500244140625,
+            132.4040069580078,
+            581.9559936523438
+          ],
+          "target_page": 29,
+          "target_point": [
+            56.69,
+            357.92
+          ],
+          "named_destination": "table.1.4"
+        },
+        {
+          "source_page": 28,
+          "kind": 4,
+          "source_rect": [
+            137.38600158691406,
+            570.1500244140625,
+            150.1179962158203,
+            581.9559936523438
+          ],
+          "target_page": 31,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "table.1.6"
+        },
+        {
+          "source_page": 28,
+          "kind": 4,
+          "source_rect": [
+            222.5449981689453,
+            570.1500244140625,
+            235.27699279785156,
+            581.9559936523438
+          ],
+          "target_page": 32,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "table.1.7"
+        },
+        {
+          "source_page": 28,
+          "kind": 4,
+          "source_rect": [
+            240.25799560546875,
+            570.1500244140625,
+            257.97198486328125,
+            581.9559936523438
+          ],
+          "target_page": 35,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "table.1.10"
+        },
+        {
+          "source_page": 35,
+          "kind": 4,
+          "source_rect": [
+            243.71200561523438,
+            602.0809936523438,
+            250.68600463867188,
+            610.344970703125
+          ],
+          "target_page": 35,
+          "target_point": [
+            71.04,
+            710.94
+          ],
+          "named_destination": "Hfootnote.16"
+        },
+        {
+          "source_page": 36,
+          "kind": 4,
+          "source_rect": [
+            139.71200561523438,
+            376.7720031738281,
+            152.44400024414062,
+            388.5780029296875
+          ],
+          "target_page": 36,
+          "target_point": [
+            90.23,
+            330.37
+          ],
+          "named_destination": "figure.1.5"
+        }
+      ],
+      "invalid_links": [],
+      "destination_probes": [
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            180.593017578125,
+            260.927001953125,
+            192.99700927734375
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "chapter.1",
+          "actual_target_text": "1 直接偏好优化：语言模型其实也是奖励模型 原作：Rafael Rafailov，Archit Sharma，Eric Mitchell，Stefano Ermon，Christopher D. Manning，Chelsea Finn。 前 位作者同等贡献 资历较浅者列在前面 作者单位为斯坦福大学 亦隶属 原作通 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            199.74200439453125,
+            123.77100372314453,
+            211.5469970703125
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            550.09
+          ],
+          "named_destination": "section.1.1",
+          "actual_target_text": "1.1 1 引言 在极大数据集上训练的大型无监督语言模型能够获得令人惊讶的能力[11, 7, 42, 8]。但是，这些模型所用的训 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            218.8699951171875,
+            143.69700622558594,
+            230.676025390625
+          ],
+          "target_page": 3,
+          "target_point": [
+            56.69,
+            570.15
+          ],
+          "named_destination": "section.1.2",
+          "actual_target_text": "1.2 2 相关工作 规模日益增大的自监督语言模型，能够以零样本方式[33] 或少样本提示[6, 27, 11] 完成一些任务。但是，在包 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            237.99798583984375,
+            143.69700622558594,
+            249.80401611328125
+          ],
+          "target_page": 4,
+          "target_point": [
+            56.69,
+            307.74
+          ],
+          "named_destination": "section.1.3",
+          "actual_target_text": "1.3 3 预备知识 我们回顾Ziegler 等人[51] 及后续工作[40, 1, 28] 中的RLHF 流程。它通常包含三个阶段：1）监督微调（SFT）； "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            257.12701416015625,
+            163.6219940185547,
+            268.9320068359375
+          ],
+          "target_page": 5,
+          "target_point": [
+            56.69,
+            220.42999999999995
+          ],
+          "named_destination": "section.1.4",
+          "actual_target_text": "1.4 4 直接偏好优化 在语言模型微调等大规模问题中应用强化学习算法面临诸多挑战，因此我们的目标是推导一种直接使用偏好优 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            276.2550048828125,
+            179.093994140625,
+            288.0610046386719
+          ],
+          "target_page": 6,
+          "target_point": [
+            56.69,
+            434.57
+          ],
+          "named_destination": "section.1.5",
+          "actual_target_text": "1.5 5 DPO 的理论分析 本节进一步解释DPO，给出理论依据，并把其优点与RLHF 中所用演员—评论家算法（例如PPO[39]）的问 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            295.38299560546875,
+            123.77100372314453,
+            307.1889953613281
+          ],
+          "target_page": 8,
+          "target_point": [
+            56.69,
+            263.87
+          ],
+          "named_destination": "section.1.6",
+          "actual_target_text": "1.6 6 实验 本节通过实验评估DPO 直接从偏好训练策略的能力。首先，在可控的文本生成场景中，我们考察：与PPO 等 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            314.5119934082031,
+            123.77100372314453,
+            326.3169860839844
+          ],
+          "target_page": 12,
+          "target_point": [
+            56.69,
+            457.96
+          ],
+          "named_destination": "section.1.7",
+          "actual_target_text": "1.7 7 讨论 从偏好学习是训练能力强、对齐良好的语言模型的一种强大且可扩展的框架。我们提出DPO，一种无需强化学 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            344.1510009765625,
+            96.54299926757812,
+            354.1130065917969
+          ],
+          "target_page": 13,
+          "target_point": [
+            56.69,
+            201.64999999999998
+          ],
+          "named_destination": "section*.11",
+          "actual_target_text": "参考文献 [1] Y Bai A Jones K Ndousse A Askell A Chen N DasSarma D Drain S Fort D Ganguli T Henighan "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            362.7309875488281,
+            169.42999267578125,
+            374.5369873046875
+          ],
+          "target_page": 19,
+          "target_point": [
+            56.69,
+            173.27999999999997
+          ],
+          "named_destination": "section.1.8",
+          "actual_target_text": "1.8 附录A 数学推导 A 1 KL 约束奖励最大化的最优解 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            381.8590087890625,
+            208.86199951171875,
+            393.6650085449219
+          ],
+          "target_page": 23,
+          "target_point": [
+            56.69,
+            324.34
+          ],
+          "named_destination": "section.1.9",
+          "actual_target_text": "1.9 附录B 实现细节与超参数 DPO 实现较为直接，下面给出DPO 损失的PyTorch 代码。代码作为原文资料展示，未执行；标识符和运算 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            400.9880065917969,
+            189.0760040283203,
+            412.7929992675781
+          ],
+          "target_page": 24,
+          "target_point": [
+            56.69,
+            238.49
+          ],
+          "named_destination": "section.1.10",
+          "actual_target_text": "1.10 附录C 实验设置补充 本节补充实验设计的相关细节。 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            420.1159973144531,
+            189.48500061035156,
+            431.9219970703125
+          ],
+          "target_page": 28,
+          "target_point": [
+            56.69,
+            396.43
+          ],
+          "named_destination": "section.1.11",
+          "actual_target_text": "1.11 附录D 补充实验结果 D 1 不同N 的选优基线 "
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            388.77801513671875,
+            318.8059997558594,
+            401.510009765625,
+            330.61199951171875
+          ],
+          "target_page": 27,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "table.1.3",
+          "actual_target_text": "表1.3: 以温度1.0 从TL;DR 提示生成的Unlikelihood 样本。总体而言，在摘要和对话等更复杂任务中，Un- likelihood 无法生成有意义的回复。重复token 全数保留，提示已完整翻译。 "
+        },
+        {
+          "source_page": 26,
+          "kind": 4,
+          "source_rect": [
+            118.48500061035156,
+            348.7640075683594,
+            131.2169952392578,
+            360.57000732421875
+          ],
+          "target_page": 27,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "table.1.3",
+          "actual_target_text": "表1.3: 以温度1.0 从TL;DR 提示生成的Unlikelihood 样本。总体而言，在摘要和对话等更复杂任务中，Un- likelihood 无法生成有意义的回复。重复token 全数保留，提示已完整翻译。 "
+        }
+      ],
+      "final_log": "book/build/dpo/dpo.log",
+      "log_sha256": "e5961fdb0356faf5eb00979e8a0930a2606cca95c68a977a68c64ba3308e5d8e",
+      "log_warnings": [],
+      "final_log_completed": true,
+      "build_pdf_byte_identical": true,
+      "render_directory": "/tmp/v031-final-pdf-review/dpo",
+      "actual_rendered_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "high_resolution_visual_review_completed_pages": [
+        26,
+        27,
+        28
+      ],
+      "unchanged_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "render_comparison_matrix": [
+        1.3,
+        1.3
+      ],
+      "readable_view_matrix": [
+        2,
+        2
+      ],
+      "high_resolution_sha256": {
+        "26": "bb3185d9e30cf2554b09edf7ca5039f3ef28fb2d4bcd7bbb0c1a6cd0d86ad0aa",
+        "27": "124731699ff55c8819945694ab72e9f3d32215c0a42b2c2a2e770612e0d05220",
+        "28": "287c001fc303afada7407e1c442b430c1864521998d5e7e4916dfd395ce16602"
+      },
+      "visual_findings": {
+        "clipping": false,
+        "overlap": false,
+        "visible_missing_glyph": false,
+        "unexpected_blank_page": false
+      },
+      "internal_link_annotations": 176,
+      "external_link_annotations": 40,
+      "unique_external_urls": [
+        "http://www.aclweb.org/anthology/P11-1015",
+        "https://aclanthology.org/2022.acl-long.244",
+        "https://aclanthology.org/K16-1028",
+        "https://aclanthology.org/P18-1165",
+        "https://aclanthology.org/W17-4508",
+        "https://arxiv.org/abs/2305.18290v3",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://doi.org/10.1007/BF00992696",
+        "https://doi.org/10.1007/s10994-014-5458-8",
+        "https://doi.org/10.1145/3458817.3476209",
+        "https://doi.org/10.1145/3477495.3531991",
+        "https://doi.org/10.5281/zenodo.7790115",
+        "https://github.com/CarperAI/trlx/tree/main/examples/hh",
+        "https://github.com/kingoflolz/mesh-transformer-jax",
+        "https://huggingface.co/CarperAI/openai_summarize_tldr_sft",
+        "https://huggingface.co/reciprocate/ppo_hh_pythia-6B",
+        "https://openreview.net/forum?id=8aHzds2uUyB",
+        "https://openreview.net/forum?id=9Vrb9D0WI4",
+        "https://openreview.net/forum?id=HkAClQgA-",
+        "https://proceedings.mlr.press/v206/saha23a.html",
+        "https://proceedings.mlr.press/v40/Dudik15.html",
+        "https://proceedings.neurips.cc/paper_files/paper/2013/file/c058f544c737782deacefa532d9add4c-Paper.pdf",
+        "https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf",
+        "https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf",
+        "https://proceedings.neurips.cc/paper_files/paper/2022/file/67496dfa96afddab795530cc7c69b57a-Paper-Conference.pdf",
+        "https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0022000012000281"
+      ],
+      "all_toc_destinations_checked": true,
+      "current_body_sha256": "db017b264e47b90d8b422df24438df4e7d1452d9d8b4b3795559c59b5fec9505"
+    },
+    "r1-nature": {
+      "pdf": "dist/papers/r1-nature.pdf",
+      "sha256": "471c51815c4deacaf64eaabf3963baa0b1d7e53329e2f01970c2a39041f81e64",
+      "baseline_pdf": "/tmp/ai-self-study-v03-public-clone/dist/papers/r1-nature.pdf",
+      "baseline_sha256": "682aea649c1bfae85f5422c2444d3af0e901f113b92049d2e5596e850dc9c9bf",
+      "pages": 18,
+      "page_comparisons": [
+        {
+          "page": 1,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "DeepSeek-R1 Nature 正式论文\n非官方中文研究资料·0.3 ·来源与许可逐篇注明\n目录\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n2\n1.1\n摘要. . . . .",
+          "render_sha256": "b88487f4ee323144323b5c8b192b8d3a9e29f677103fc4f3077998235bc12b8b"
+        },
+        {
+          "page": 2,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\nDeepSeek-R1 incentivizes reasoning in ",
+          "render_sha256": "8415e4da4bf111f5c852cce4bd58a9313fc6a10983155e8bab193730a629aac0"
+        },
+        {
+          "page": 3,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.3\nDeepSeek-R1-Zero\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n为应对这些问题, 我们探索LLM 在RL 框架下通过自我演化发展推理能力的潜力, 尽量减少对人工",
+          "render_sha256": "d026b0325a23700a3df5750d3ac55cea8c55aa4ea0e783643ff845f490746126"
+        },
+        {
+          "page": 4,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.3\nDeepSeek-R1-Zero\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n0\n2,000\n4,000\n6,000\n8,000\n10,000\nSteps\n0.2\n0.3\n0",
+          "render_sha256": "6d820cf556a3efc4c8ad49c78871594745b33aad9181d2be9815b7ede9af88d3"
+        },
+        {
+          "page": 5,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": true,
+          "difference_bbox_pixels": [
+            252,
+            411,
+            682,
+            425
+          ],
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.4\nDeepSeek-R1\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n重新排列, 将里面的平方根项单独放在一边:\n(a −x2)2 = a + x ⇒a2 −2ax2 + (x",
+          "render_sha256": "c2d4ae18dc95393a9b7917412af48c26f39d9c8b53e840bdd96c46d94b8649c1"
+        },
+        {
+          "page": 6,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.4\nDeepSeek-R1\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\nDeepSeek-V3\nBase\nCold-start long CoT\nSFT\nReasoning pr",
+          "render_sha256": "c69537c5ce912487661ec45445e1b7582aeea6eb5ba070a8da85f057e954631d"
+        },
+        {
+          "page": 7,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.4\nDeepSeek-R1\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n原文表2. DeepSeek-R1 各阶段的实验结果.\n基准(指标)\nR1-Zero\nR1 Dev1\nR1",
+          "render_sha256": "2a888ef42e2b69e9e0f26d0ac95f15b6d3f62998e98ad8476f361a7d6baad328"
+        },
+        {
+          "page": 8,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.5\n伦理与安全声明\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\nDeepSeek-R1 Dev3 将推理和非推理数据共同纳入SFT 流程, 从而增强模型在推理和一般语言生成任务中",
+          "render_sha256": "b11bbe417bd9af4a1c4df157a8349dd053c64d10e5a741a793a53b593d093d64"
+        },
+        {
+          "page": 9,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.7\n方法: GRPO\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n相较DeepSeek-V3, 在软件工程基准上没有表现出巨大提升. 未来版本将通过对软件工程数据实施拒绝采样, ",
+          "render_sha256": "ee20de0258850688a127832a96ea26e7bd2f826ba6e4816c0eb42f86a3fda0a5"
+        },
+        {
+          "page": 10,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.8\n方法: 奖励设计\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n1.8\n方法: 奖励设计\n奖励是训练信号的来源, 决定RL 优化方向. 对DeepSeek-R1-Zero, 我",
+          "render_sha256": "b44ed536fec1c531fdb0c6503611b28f791e78e85854208bdb95aee671244884"
+        },
+        {
+          "page": 11,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.10\n方法: 安全奖励模型\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n1.10\n方法: 安全奖励模型\n为评估和改善模型安全, 我们整理了包含106,000 条提示的数据集. 模",
+          "render_sha256": "7abcc41a5f4391e1f03a1bb6ebd3e696aa7290d1a221f75394ae82a52ad48283"
+        },
+        {
+          "page": 12,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.12\n数据与代码可用性\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n其中\nRewardreasoning = Rewardrule,\n(9)\nRewardgeneral = Re",
+          "render_sha256": "a2a76a1f356494606befab23f7b8419fc5a1cd81377cb90a68f86b3e356ab960"
+        },
+        {
+          "page": 13,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": true,
+          "difference_bbox_pixels": [
+            398,
+            762,
+            424,
+            770
+          ],
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.13\n扩展数据\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n别和整理. 每位专家独立提出一组能表示反思式推理的词, 随后通过共识合并为最终词表. b, 训练期间模型输出中\n单词w",
+          "render_sha256": "2bf8216205787754f58246e1b45145867c6d23f9578c89be4bb5e8d106b528e4"
+        },
+        {
+          "page": 14,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": true,
+          "difference_bbox_pixels": [
+            74,
+            803,
+            722,
+            915
+          ],
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.14\n致谢、作者信息与出版声明\n1\nDeepSeek-R1 通过强化学习激励大语言模型的推理\n1.14\n致谢、作者信息与出版声明\n致谢. 本研究由DeepSeek-AI 支持.\n作者现地址说明. ",
+          "render_sha256": "1a6656ee891cd00c2eb7a41163ffac06aa006967bcbc75683f114bae2a57f550"
+        },
+        {
+          "page": 15,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "1.15\n完整作者署名\n参考文献\n1.15\n完整作者署名\nDaya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Peiyi Wang, Qihao Zh",
+          "render_sha256": "1e930d1bb4f4b7b6e14fb70c5701bc86ce4ac1c60d6b18f60ff4c82fb7cccaaf"
+        },
+        {
+          "page": 16,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\n发大语言模型中的推理.\n[4] Wei, J. et al. Emergent abilities of large language models. In Transactions on ",
+          "render_sha256": "985b2065b129141e17baabdc488549c57547b587eb31bb4c4aef71e8c10409f8"
+        },
+        {
+          "page": 17,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\n[16] Zhou, J. et al. Instruction-following evaluation for large language models. Preprint at ht",
+          "render_sha256": "1854f18133683e9c39f1b9cc8a83301831a1df479daff7d85d8da0cf8c19fee4"
+        },
+        {
+          "page": 18,
+          "size_pt": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "changed": false,
+          "difference_bbox_pixels": null,
+          "replacement_characters": 0,
+          "unresolved_question_marks": 0,
+          "text_begin": "参考文献\n[29] Mathematical Association of America. American Invitational Mathematics Examination; https:",
+          "render_sha256": "ff427b42f8f15eb1ccac9b19b752708d01b1e2d250a95eba72ac397c9ec49c9e"
+        }
+      ],
+      "changed_pages": [
+        5,
+        13,
+        14
+      ],
+      "high_resolution_changed_and_neighbor_pages": [
+        4,
+        5,
+        6,
+        12,
+        13,
+        14,
+        15
+      ],
+      "links": [
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            180.64697265625,
+            301.5150146484375,
+            193.051025390625
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "chapter.1"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            199.79498291015625,
+            115.47200012207031,
+            211.60101318359375
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            414.24
+          ],
+          "named_destination": "section.1.1"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            218.92401123046875,
+            115.47200012207031,
+            230.72998046875
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            580.14
+          ],
+          "named_destination": "section.1.2"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            238.052001953125,
+            175.48699951171875,
+            249.85797119140625
+          ],
+          "target_page": 3,
+          "target_point": [
+            56.69,
+            421.95
+          ],
+          "named_destination": "section.1.3"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            257.1810302734375,
+            152.7830047607422,
+            268.98602294921875
+          ],
+          "target_page": 5,
+          "target_point": [
+            56.69,
+            439.2
+          ],
+          "named_destination": "section.1.4"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            276.30902099609375,
+            165.28599548339844,
+            288.114990234375
+          ],
+          "target_page": 8,
+          "target_point": [
+            56.69,
+            249.78999999999996
+          ],
+          "named_destination": "section.1.5"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            295.43701171875,
+            195.1739959716797,
+            307.2430114746094
+          ],
+          "target_page": 8,
+          "target_point": [
+            56.69,
+            397.21
+          ],
+          "named_destination": "section.1.6"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            314.5660095214844,
+            152.31399536132812,
+            326.3710021972656
+          ],
+          "target_page": 9,
+          "target_point": [
+            56.69,
+            364.56
+          ],
+          "named_destination": "section.1.7"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            333.6940002441406,
+            162.50599670410156,
+            345.5
+          ],
+          "target_page": 10,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.8"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            352.8219909667969,
+            192.3939971923828,
+            364.62799072265625
+          ],
+          "target_page": 10,
+          "target_point": [
+            56.69,
+            500.05
+          ],
+          "named_destination": "section.1.9"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            371.95098876953125,
+            182.43099975585938,
+            383.7560119628906
+          ],
+          "target_page": 11,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.10"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            391.0790100097656,
+            162.50599670410156,
+            402.885009765625
+          ],
+          "target_page": 11,
+          "target_point": [
+            56.69,
+            242.39
+          ],
+          "named_destination": "section.1.11"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            410.2070007324219,
+            175.2480010986328,
+            422.01300048828125
+          ],
+          "target_page": 12,
+          "target_point": [
+            56.69,
+            227.47000000000003
+          ],
+          "named_destination": "section.1.12"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            429.33599853515625,
+            135.3979949951172,
+            441.1409912109375
+          ],
+          "target_page": 12,
+          "target_point": [
+            56.69,
+            432.28
+          ],
+          "named_destination": "section.1.13"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            448.4639892578125,
+            215.0989990234375,
+            460.2699890136719
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.14"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            467.5920104980469,
+            155.322998046875,
+            479.39801025390625
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.15"
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            497.2309875488281,
+            96.54299926757812,
+            507.1940002441406
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            582.3
+          ],
+          "named_destination": "section*.18"
+        },
+        {
+          "source_page": 2,
+          "kind": 2,
+          "source_rect": [
+            275.156005859375,
+            189.16802978515625,
+            496.32598876953125,
+            202.43798828125
+          ],
+          "uri": "https://doi.org/10.1038/s41586-025-09422-z"
+        },
+        {
+          "source_page": 2,
+          "kind": 2,
+          "source_rect": [
+            136.2010040283203,
+            255.344970703125,
+            368.14599609375,
+            268.61602783203125
+          ],
+          "uri": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            447.7070007324219,
+            445.2439880371094,
+            452.68798828125,
+            457.04998779296875
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            616.9
+          ],
+          "named_destination": "cite.r1n-ref1"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            459.2040100097656,
+            445.2439880371094,
+            464.18499755859375,
+            457.04998779296875
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            658.3
+          ],
+          "named_destination": "cite.r1n-ref2"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            73.29900360107422,
+            464.37200927734375,
+            78.27999877929688,
+            476.1780090332031
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            698.86
+          ],
+          "named_destination": "cite.r1n-ref3"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            380.0769958496094,
+            630.3499755859375,
+            385.0589904785156,
+            642.156005859375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            109.83000000000004
+          ],
+          "named_destination": "cite.r1n-ref4"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            391.67401123046875,
+            630.3499755859375,
+            396.6549987792969,
+            642.156005859375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            151.73000000000002
+          ],
+          "named_destination": "cite.r1n-ref5"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            371.4700012207031,
+            668.6069946289062,
+            376.4519958496094,
+            680.4130249023438
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            698.86
+          ],
+          "named_destination": "cite.r1n-ref3"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            383.18798828125,
+            668.6069946289062,
+            388.1700134277344,
+            680.4130249023438
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            192.97000000000003
+          ],
+          "named_destination": "cite.r1n-ref6"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            59.4630012512207,
+            706.864013671875,
+            64.44400024414062,
+            718.6690063476562
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            658.3
+          ],
+          "named_destination": "cite.r1n-ref2"
+        },
+        {
+          "source_page": 2,
+          "kind": 4,
+          "source_rect": [
+            70.81900024414062,
+            706.864013671875,
+            75.8010025024414,
+            718.6690063476562
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            252.70000000000005
+          ],
+          "named_destination": "cite.r1n-ref7"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            258.96099853515625,
+            114.81597900390625,
+            263.9419860839844,
+            126.62200927734375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            293.94
+          ],
+          "named_destination": "cite.r1n-ref8"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            92.98699951171875,
+            133.9439697265625,
+            97.96800231933594,
+            145.75
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            335.84
+          ],
+          "named_destination": "cite.r1n-ref9"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            494.239013671875,
+            452.9490051269531,
+            499.2200012207031,
+            464.7550048828125
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            335.84
+          ],
+          "named_destination": "cite.r1n-ref9"
+        },
+        {
+          "source_page": 3,
+          "kind": 4,
+          "source_rect": [
+            445.5799865722656,
+            644.2330322265625,
+            455.5429992675781,
+            656.0379638671875
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            395.4
+          ],
+          "named_destination": "cite.r1n-ref10"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            238.05299377441406,
+            533.4660034179688,
+            248.01499938964844,
+            545.27099609375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            437.46
+          ],
+          "named_destination": "cite.r1n-ref11"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            326.66900634765625,
+            533.4660034179688,
+            336.6319885253906,
+            545.27099609375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            478.7
+          ],
+          "named_destination": "cite.r1n-ref12"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            402.87200927734375,
+            533.4660034179688,
+            412.8349914550781,
+            545.27099609375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            539.08
+          ],
+          "named_destination": "cite.r1n-ref13"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            457.3269958496094,
+            533.4660034179688,
+            467.2900085449219,
+            545.27099609375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            598.71
+          ],
+          "named_destination": "cite.r1n-ref14"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            512.6079711914062,
+            533.4660034179688,
+            522.5709838867188,
+            545.27099609375
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            678.27
+          ],
+          "named_destination": "cite.r1n-ref15"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            72.17500305175781,
+            552.593994140625,
+            82.13700103759766,
+            564.4000244140625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "cite.r1n-ref16"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            137.69700622558594,
+            552.593994140625,
+            147.65899658203125,
+            564.4000244140625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            129.61
+          ],
+          "named_destination": "cite.r1n-ref17"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            232.69200134277344,
+            552.593994140625,
+            242.65499877929688,
+            564.4000244140625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            208.38
+          ],
+          "named_destination": "cite.r1n-ref18"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            299.99700927734375,
+            552.593994140625,
+            309.9599914550781,
+            564.4000244140625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            250.36
+          ],
+          "named_destination": "cite.r1n-ref19"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            377.81298828125,
+            552.593994140625,
+            387.7760009765625,
+            564.4000244140625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            291.05
+          ],
+          "named_destination": "cite.r1n-ref20"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            451.2250061035156,
+            552.593994140625,
+            461.18798828125,
+            564.4000244140625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            351.98
+          ],
+          "named_destination": "cite.r1n-ref21"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            539.1079711914062,
+            552.593994140625,
+            549.0700073242188,
+            564.4000244140625
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            412.35
+          ],
+          "named_destination": "cite.r1n-ref22"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            110.95899963378906,
+            571.7219848632812,
+            120.9219970703125,
+            583.5280151367188
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            472.17
+          ],
+          "named_destination": "cite.r1n-ref23"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            218.18699645996094,
+            571.7219848632812,
+            228.14999389648438,
+            583.5280151367188
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            532.22
+          ],
+          "named_destination": "cite.r1n-ref24"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            302.17401123046875,
+            571.7219848632812,
+            312.1369934082031,
+            583.5280151367188
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            574.34
+          ],
+          "named_destination": "cite.r1n-ref25"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            390.1570129394531,
+            571.7219848632812,
+            400.1189880371094,
+            583.5280151367188
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            614.94
+          ],
+          "named_destination": "cite.r1n-ref26"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            539.1079711914062,
+            571.7219848632812,
+            549.0700073242188,
+            583.5280151367188
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            675.3199999999999
+          ],
+          "named_destination": "cite.r1n-ref27"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            244.83700561523438,
+            590.8510131835938,
+            254.8000030517578,
+            602.656005859375
+          ],
+          "target_page": 17,
+          "target_point": [
+            56.69,
+            698.08
+          ],
+          "named_destination": "cite.r1n-ref28"
+        },
+        {
+          "source_page": 6,
+          "kind": 4,
+          "source_rect": [
+            327.14898681640625,
+            590.8510131835938,
+            337.1109924316406,
+            602.656005859375
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "cite.r1n-ref29"
+        },
+        {
+          "source_page": 8,
+          "kind": 4,
+          "source_rect": [
+            251.11399841308594,
+            376.4360046386719,
+            261.07598876953125,
+            388.24200439453125
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            129.61
+          ],
+          "named_destination": "cite.r1n-ref30"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            109.0469970703125,
+            395.5639953613281,
+            114.02799987792969,
+            407.3699951171875
+          ],
+          "target_page": 16,
+          "target_point": [
+            56.69,
+            335.84
+          ],
+          "named_destination": "cite.r1n-ref9"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            88.48400115966797,
+            414.6919860839844,
+            98.44599914550781,
+            426.49798583984375
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            151.73000000000002
+          ],
+          "named_destination": "cite.r1n-ref31"
+        },
+        {
+          "source_page": 9,
+          "kind": 4,
+          "source_rect": [
+            408.9020080566406,
+            414.6919860839844,
+            418.864990234375,
+            426.49798583984375
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            192.97000000000003
+          ],
+          "named_destination": "cite.r1n-ref32"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            147.6790008544922,
+            257.6710205078125,
+            369.37200927734375,
+            270.94097900390625
+          ],
+          "uri": "https://github.com/deepseek-ai/DeepSeek-R1"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            376.6319885253906,
+            257.6710205078125,
+            555.3070068359375,
+            270.94097900390625
+          ],
+          "uri": "https://doi.org/10.5281/zenodo.15753193"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            56.69300079345703,
+            276.79901123046875,
+            82.84500122070312,
+            290.0690002441406
+          ],
+          "uri": "https://doi.org/10.5281/zenodo.15753193"
+        },
+        {
+          "source_page": 12,
+          "kind": 4,
+          "source_rect": [
+            89.4800033569336,
+            277.60601806640625,
+            99.44300079345703,
+            289.4119873046875
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            252.70000000000005
+          ],
+          "named_destination": "cite.r1n-ref33"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            415.52301025390625,
+            295.927001953125,
+            555.3070068359375,
+            309.197998046875
+          ],
+          "uri": "https://github.com/deepseek-ai/DeepSeek-R1"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            56.69300079345703,
+            315.0559997558594,
+            142.8350067138672,
+            328.32598876953125
+          ],
+          "uri": "https://github.com/deepseek-ai/DeepSeek-R1"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            150.3300018310547,
+            315.0559997558594,
+            358.2760009765625,
+            328.32598876953125
+          ],
+          "uri": "https://doi.org/10.5281/zenodo.15753193"
+        },
+        {
+          "source_page": 12,
+          "kind": 4,
+          "source_rect": [
+            364.9110107421875,
+            315.8630065917969,
+            374.8739929199219,
+            327.6679992675781
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            252.70000000000005
+          ],
+          "named_destination": "cite.r1n-ref33"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            459.38800048828125,
+            315.0559997558594,
+            555.3070068359375,
+            328.32598876953125
+          ],
+          "uri": "https://github.com/deepseek-ai/DeepSeek-V3"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            56.69300079345703,
+            334.1839904785156,
+            184.74400329589844,
+            347.4540100097656
+          ],
+          "uri": "https://github.com/deepseek-ai/DeepSeek-V3"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            192.13499450683594,
+            334.1839904785156,
+            398.7550048828125,
+            347.4540100097656
+          ],
+          "uri": "https://doi.org/10.5281/zenodo.15753347"
+        },
+        {
+          "source_page": 12,
+          "kind": 4,
+          "source_rect": [
+            405.3900146484375,
+            334.9909973144531,
+            415.35198974609375,
+            346.7969970703125
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            294.57
+          ],
+          "named_destination": "cite.r1n-ref34"
+        },
+        {
+          "source_page": 12,
+          "kind": 4,
+          "source_rect": [
+            529.0869750976562,
+            334.9909973144531,
+            539.0490112304688,
+            346.7969970703125
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            335.82
+          ],
+          "named_destination": "cite.r1n-ref35"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            269.2770080566406,
+            353.31201171875,
+            492.3219909667969,
+            366.5830078125
+          ],
+          "uri": "https://www.high-flyer.cn/en/blog/hai-llm"
+        },
+        {
+          "source_page": 12,
+          "kind": 4,
+          "source_rect": [
+            100.22699737548828,
+            373.24798583984375,
+            110.19000244140625,
+            385.0530090332031
+          ],
+          "target_page": 18,
+          "target_point": [
+            56.69,
+            395.56
+          ],
+          "named_destination": "cite.r1n-ref36"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            250.78799438476562,
+            372.4410095214844,
+            375.8949890136719,
+            385.71099853515625
+          ],
+          "uri": "https://www.python.org/"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            468.3429870605469,
+            372.4410095214844,
+            555.3070068359375,
+            385.71099853515625
+          ],
+          "uri": "https://github.com/numpy/numpy"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            56.69300079345703,
+            391.5690002441406,
+            131.64300537109375,
+            404.8389892578125
+          ],
+          "uri": "https://github.com/numpy/numpy"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            231.4929962158203,
+            391.5690002441406,
+            446.1700134277344,
+            404.8389892578125
+          ],
+          "uri": "https://github.com/matplotlib/matplotlib"
+        },
+        {
+          "source_page": 12,
+          "kind": 2,
+          "source_rect": [
+            60.55799865722656,
+            410.6969909667969,
+            275.0039978027344,
+            423.9679870605469
+          ],
+          "uri": "https://github.com/tensorflow/tensorboard"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            426.7239990234375,
+            481.4330139160156,
+            555.3070068359375,
+            494.7030029296875
+          ],
+          "uri": "https://www.nature.com/articles/s41586-025-09422-z#MOESM1"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            56.69300079345703,
+            500.5610046386719,
+            230.7899932861328,
+            513.8309936523438
+          ],
+          "uri": "https://www.nature.com/articles/s41586-025-09422-z#MOESM1"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            56.69300079345703,
+            596.2030029296875,
+            286.8299865722656,
+            609.4730224609375
+          ],
+          "uri": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            461.1600036621094,
+            672.7160034179688,
+            555.3070068359375,
+            685.9860229492188
+          ],
+          "uri": "https://doi.org/10.1038/s41586-025-09422-z"
+        },
+        {
+          "source_page": 14,
+          "kind": 2,
+          "source_rect": [
+            56.69300079345703,
+            691.843994140625,
+            183.7169952392578,
+            705.114013671875
+          ],
+          "uri": "https://doi.org/10.1038/s41586-025-09422-z"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            180.86700439453125,
+            557.9459838867188,
+            375.885986328125,
+            571.2160034179688
+          ],
+          "uri": "https://orcid.org/0000-0002-5715-3011"
+        },
+        {
+          "source_page": 15,
+          "kind": 2,
+          "source_rect": [
+            300.7130126953125,
+            664.8109741210938,
+            521.1170043945312,
+            678.0809936523438
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2303.08774"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            385.6300048828125,
+            158.24298095703125,
+            555.3070068359375,
+            171.51300048828125
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2001.08361"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            177.37200927734375,
+            124.25,
+            190.64202880859375
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2001.08361"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            340.8609924316406,
+            301.1080017089844,
+            555.3070068359375,
+            314.37799072265625
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2412.19437"
+        },
+        {
+          "source_page": 16,
+          "kind": 2,
+          "source_rect": [
+            89.59200286865234,
+            361.48199462890625,
+            307.3900146484375,
+            374.75201416015625
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2402.03300"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            450.6990051269531,
+            94.8809814453125,
+            555.3070068359375,
+            108.1510009765625
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2311.07911"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            114.00897216796875,
+            187.01400756835938,
+            127.27899169921875
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2311.07911"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            440.239013671875,
+            215.62799072265625,
+            555.3070068359375,
+            228.89801025390625
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2311.12022"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            234.75701904296875,
+            176.55299377441406,
+            248.0269775390625
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2311.12022"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            221.16200256347656,
+            256.8740234375,
+            462.25799560546875,
+            270.14398193359375
+          ],
+          "uri": "https://openai.com/index/introducing-simpleqa/"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            257.95098876953125,
+            437.9949951171875,
+            475.14300537109375,
+            451.2650146484375
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2404.04475"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            130.51100158691406,
+            498.3689880371094,
+            354.6990051269531,
+            511.6390075683594
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.2406.11939"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            260.9110107421875,
+            539.614013671875,
+            555.3070068359375,
+            552.885009765625
+          ],
+          "uri": "https://openai.com/index/introducing-swe-bench-verified/"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            220.625,
+            580.8599853515625,
+            414.14898681640625,
+            594.1300048828125
+          ],
+          "uri": "https://aider.chat/docs/leaderboards/"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            201.98800659179688,
+            682.47900390625,
+            322.2869873046875,
+            695.7490234375
+          ],
+          "uri": "https://codeforces.com/"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            491.7720031738281,
+            704.5960083007812,
+            555.3070068359375,
+            717.8670043945312
+          ],
+          "uri": "https://www.cms.org.cn/Home/comp/comp/cid/12.html"
+        },
+        {
+          "source_page": 17,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            723.7249755859375,
+            270.70001220703125,
+            736.9949951171875
+          ],
+          "uri": "https://www.cms.org.cn/Home/comp/comp/cid/12.html"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            470.15399169921875,
+            94.8809814453125,
+            555.3070068359375,
+            108.1510009765625
+          ],
+          "uri": "https://maa.org/maa-invitational-competitions"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            77.1760025024414,
+            114.00897216796875,
+            229.85400390625,
+            127.27899169921875
+          ],
+          "uri": "https://maa.org/maa-invitational-competitions"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            184.6929931640625,
+            136.1259765625,
+            384.4440002441406,
+            149.39599609375
+          ],
+          "uri": "https://openai.com/index/hello-gpt-4o/"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            129.052001953125,
+            177.37200927734375,
+            343.49700927734375,
+            190.64202880859375
+          ],
+          "uri": "https://doi.org/10.48550/arXiv.1707.06347"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            315.36199951171875,
+            259.86297607421875,
+            521.4019775390625,
+            273.13299560546875
+          ],
+          "uri": "https://doi.org/10.5281/zenodo.15753192"
+        },
+        {
+          "source_page": 18,
+          "kind": 2,
+          "source_rect": [
+            317.89599609375,
+            301.1080017089844,
+            521.8809814453125,
+            314.37799072265625
+          ],
+          "uri": "https://doi.org/10.5281/zenodo.15753346"
+        }
+      ],
+      "invalid_links": [],
+      "destination_probes": [
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            180.64697265625,
+            301.5150146484375,
+            193.051025390625
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "chapter.1",
+          "actual_target_text": "1 DeepSeek-R1 通过强化学习激励大语言模型的推理 DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            199.79498291015625,
+            115.47200012207031,
+            211.60101318359375
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            414.24
+          ],
+          "named_destination": "section.1.1",
+          "actual_target_text": "1.1 摘要 通用推理是人工智能(AI) 中一个长期存在且十分艰巨的挑战. 以大语言模型(LLM)[1, 2] 和思维链(CoT) 提 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            218.92401123046875,
+            115.47200012207031,
+            230.72998046875
+          ],
+          "target_page": 2,
+          "target_point": [
+            56.69,
+            580.14
+          ],
+          "named_destination": "section.1.2",
+          "actual_target_text": "1.2 正文 推理能力是人类智能的基石, 使数学问题求解、逻辑推导和编程等复杂认知任务成为可能. AI 的近期进展表明, "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            238.052001953125,
+            175.48699951171875,
+            249.85797119140625
+          ],
+          "target_page": 3,
+          "target_point": [
+            56.69,
+            421.95
+          ],
+          "named_destination": "section.1.3",
+          "actual_target_text": "1.3 DeepSeek-R1-Zero 为实现DeepSeek-R1-Zero 的大规模RL, 我们采用高效的RL 流程. 具体而言, 我们使用GRPO[9] 作为RL 算 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            257.1810302734375,
+            152.7830047607422,
+            268.98602294921875
+          ],
+          "target_page": 5,
+          "target_point": [
+            56.69,
+            439.2
+          ],
+          "named_destination": "section.1.4",
+          "actual_target_text": "1.4 DeepSeek-R1 DeepSeek-R1-Zero 虽然具有很强的推理能力, 但也存在一些问题. 由于DeepSeek-V3 Base 使用多种语言训练, "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            276.30902099609375,
+            165.28599548339844,
+            288.114990234375
+          ],
+          "target_page": 8,
+          "target_point": [
+            56.69,
+            249.78999999999996
+          ],
+          "named_destination": "section.1.5",
+          "actual_target_text": "1.5 伦理与安全声明 随着DeepSeek-R1 推理能力提高, 我们深切认识到潜在伦理风险. 例如, R1 可能遭到越狱攻击, 导致产生危险 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            295.43701171875,
+            195.1739959716797,
+            307.2430114746094
+          ],
+          "target_page": 8,
+          "target_point": [
+            56.69,
+            397.21
+          ],
+          "named_destination": "section.1.6",
+          "actual_target_text": "1.6 结论、局限与未来工作 我们提出DeepSeek-R1-Zero 和DeepSeek-R1, 依靠大规模RL 激励模型推理行为. 结果表明, 预训练检查点 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            314.5660095214844,
+            152.31399536132812,
+            326.3710021972656
+          ],
+          "target_page": 9,
+          "target_point": [
+            56.69,
+            364.56
+          ],
+          "named_destination": "section.1.7",
+          "actual_target_text": "1.7 方法: GRPO GRPO[9] 是我们用于训练DeepSeek-R1-Zero 和DeepSeek-R1 的RL 算法. 它最初为简化近端策略优化 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            333.6940002441406,
+            162.50599670410156,
+            345.5
+          ],
+          "target_page": 10,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.8",
+          "actual_target_text": "1.8 方法: 奖励设计 奖励是训练信号的来源, 决定RL 优化方向. 对DeepSeek-R1-Zero, 我们用基于规则的奖励, 为数学、编程和逻 辑推理领域的数据提供精确反馈 对DeepSeek-R1 则将这种方法扩展为同时对推理数据使用基于规则的奖励 对 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            352.8219909667969,
+            192.3939971923828,
+            364.62799072265625
+          ],
+          "target_page": 10,
+          "target_point": [
+            56.69,
+            500.05
+          ],
+          "named_destination": "section.1.9",
+          "actual_target_text": "1.9 方法: 有用性奖励模型 训练有用性奖励模型时, 我们首先采用补充信息第2.2 节列出的Arena-Hard 提示格式向DeepSeek-V3 提示, 生 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            371.95098876953125,
+            182.43099975585938,
+            383.7560119628906
+          ],
+          "target_page": 11,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.10",
+          "actual_target_text": "1.10 方法: 安全奖励模型 为评估和改善模型安全, 我们整理了包含106,000 条提示的数据集. 模型生成的回复按预定义安全准则标为“安 全”或“不安全” 不同于有用性奖励模型使用成对损失安全奖励模型采用逐点方法训练区分安全与不安全回复 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            391.0790100097656,
+            162.50599670410156,
+            402.885009765625
+          ],
+          "target_page": 11,
+          "target_point": [
+            56.69,
+            242.39
+          ],
+          "named_destination": "section.1.11",
+          "actual_target_text": "1.11 方法: 训练细节 DeepSeek-R1-Zero 的训练细节. 为训练DeepSeek-R1-Zero, 我们将学习率设为3 × 10−6, KL 系数设为0.001, "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            410.2070007324219,
+            175.2480010986328,
+            422.01300048828125
+          ],
+          "target_page": 12,
+          "target_point": [
+            56.69,
+            227.47000000000003
+          ],
+          "named_destination": "section.1.12",
+          "actual_target_text": "1.12 数据与代码可用性 数据可用性. 我们在https://github.com/deepseek-ai/DeepSeek-R1 (https://doi.org/10.5281/zenodo.157 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            429.33599853515625,
+            135.3979949951172,
+            441.1409912109375
+          ],
+          "target_page": 12,
+          "target_point": [
+            56.69,
+            432.28
+          ],
+          "named_destination": "section.1.13",
+          "actual_target_text": "1.13 扩展数据 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            448.4639892578125,
+            215.0989990234375,
+            460.2699890136719
+          ],
+          "target_page": 14,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.14",
+          "actual_target_text": "1.14 致谢、作者信息与出版声明 致谢. 本研究由DeepSeek-AI 支持. 作者现地址说明 Fuli Luo: 中国北京独立研究者Jinhao Tu: 中国上海建平中学Kai Hu: 中国合肥中国科学 "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            71.63700103759766,
+            467.5920104980469,
+            155.322998046875,
+            479.39801025390625
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            95.03999999999996
+          ],
+          "named_destination": "section.1.15",
+          "actual_target_text": "1.15 完整作者署名 Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Peiyi Wang, Qihao Zhu, Runxin Xu, Ruoyu Zhang, Shirong Ma Xiao Bi Xiaokang Zhang Xingkai Yu Yu Wu Z F Wu Zhibin Gou Zhihong Shao Zhuoshu "
+        },
+        {
+          "source_page": 1,
+          "kind": 4,
+          "source_rect": [
+            56.69300079345703,
+            497.2309875488281,
+            96.54299926757812,
+            507.1940002441406
+          ],
+          "target_page": 15,
+          "target_point": [
+            56.69,
+            582.3
+          ],
+          "named_destination": "section*.18",
+          "actual_target_text": "参考文献 [1] Brown T B et al Language models are few-shot learners In Advances in Neural Information Processing "
+        }
+      ],
+      "final_log": "book/build/r1-nature/r1-nature.log",
+      "log_sha256": "1bce39450cd3b007b5b4ef250fba70db2927df5282a548a72e39bdb7249af0c9",
+      "log_warnings": [],
+      "final_log_completed": true,
+      "build_pdf_byte_identical": true,
+      "render_directory": "/tmp/v031-final-pdf-review/r1-nature",
+      "graph_table_anchor_probes": [
+        {
+          "aux": "\\newlabel{r1n-fig1}{{1}{4}{}{section*.1}{}}",
+          "named_destination": "section*.1",
+          "page": 4,
+          "point": [
+            56.69,
+            328.13
+          ],
+          "text": "原文图1. DeepSeek-R1-Zero 在训练过程中的准确率与输出长度. a, DeepSeek-R1-Zero 训练中的AIME 准确率. AIME 以数学问题为输入、以一个数为输出, 扩展数据表1 给出示例. pass@1 与cons@16 见补充信息第4.1 节. 基 线为AIME 参赛者的平均分数. b, RL 过程中Dee"
+        },
+        {
+          "aux": "\\newlabel{r1n-table1}{{1}{4}{}{section*.2}{}}",
+          "named_destination": "section*.2",
+          "page": 4,
+          "point": [
+            56.69,
+            616.99
+          ],
+          "text": "扩展数据图1b. 这 时刻标志着推理模式的明显变化, 清楚展示DeepSeek-R1-Zero 的自我演化过程. 原文表1. DeepSeek-R1-Zero 中间版本一个有趣的“顿悟时刻”. 问题: 若a > 1, 则方程 √ a −√a + x = x 的所有实数解之和等于多少? 回复: <think> 为解方程 √ a −√a + "
+        },
+        {
+          "aux": "\\newlabel{r1n-fig2}{{2}{6}{}{section*.3}{}}",
+          "named_destination": "section*.3",
+          "page": 6,
+          "point": [
+            56.69,
+            351.5
+          ],
+          "text": "原文图2. DeepSeek-R1 的多阶段流程. DeepSeek-V3 Base 与DeepSeek-V3 的详细背景见补充信息第1.1 节. 模 型DeepSeek-R1 Dev1、Dev2、Dev3 为该流程中的中间检查点. 图中文字对应. Base: 基础模型; RL: 强化学习; SFT: 监督微调; Reasoning pr"
+        },
+        {
+          "aux": "\\newlabel{r1n-table2}{{2}{7}{}{section*.4}{}}",
+          "named_destination": "section*.4",
+          "page": 7,
+          "point": [
+            56.69,
+            95.03999999999996
+          ],
+          "text": "原文表2. DeepSeek-R1 各阶段的实验结果. 基准(指标) R1-Zero R1 Dev1 R1 Dev2 R1 Dev3 R1 英文 "
+        },
+        {
+          "aux": "\\newlabel{r1n-edfig1}{{扩展数据 1}{12}{}{section*.15}{}}",
+          "named_destination": "section*.15",
+          "page": 12,
+          "point": [
+            56.69,
+            675.4300000000001
+          ],
+          "text": "扩展数据图1. 模型输出中与推理有关的语言特征随训练步数的演变. a, 整个训练过程模型生成输出中具有代表性 的反思词语的频数. 这些反思词语包括wait (等等)、mistake (错误)、however (然而)、but (但是)、retry (重试)、 error (错误)、verify (验证)、wrong (错了)、evalua"
+        },
+        {
+          "aux": "\\newlabel{r1n-edfig2}{{扩展数据 2}{13}{}{section*.16}{}}",
+          "named_destination": "section*.16",
+          "page": 13,
+          "point": [
+            56.69,
+            359.71
+          ],
+          "text": "扩展数据图2. 所提出的、用于基于RL 训练的GRPO 示意图. 在所提框架中, LLM 作为策略模型, 在给定查询 q 的条件下生成回复{o1, o2, . . . , oG}. 组内每条回复由奖励模型评估: 奖励模型可以是学习得到的(基于模型), 也可 以是人工指定的(基于规则), 从而分配一个标量奖励信号. 随后, GRPO 按各组"
+        },
+        {
+          "aux": "\\newlabel{r1n-edtable1}{{扩展数据 1}{13}{}{section*.17}{}}",
+          "named_destination": "section*.17",
+          "page": 13,
+          "point": [
+            56.69,
+            534.36
+          ],
+          "text": "KL、q, o, oi, r, ri, v, A, Ai 与图中的运算、箭头按原样保留. GAE 为原图缩写, 指广义优势估计(中文说明为译注). 扩展数据表1. AIME 数据集的说明性示例. 提示. 设b ≥2 为整数. 若正整数n 在b 进制下恰有两位, 且两位数字之和为√n, 则称n 为b-beautiful (在b 进制 下“美"
+        }
+      ],
+      "actual_rendered_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "high_resolution_visual_review_completed_pages": [
+        4,
+        5,
+        6,
+        12,
+        13,
+        14,
+        15
+      ],
+      "unchanged_pages": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18
+      ],
+      "render_comparison_matrix": [
+        1.3,
+        1.3
+      ],
+      "readable_view_matrix": [
+        2,
+        2
+      ],
+      "high_resolution_sha256": {
+        "4": "ec05f0b4a43ccadcfa8113a3686560f89e5385ab583802d686d811fad5f98500",
+        "5": "8bae0c8df2667ed030514027b29fcbd64e2dbc040d0111db5adee45be5ee56a1",
+        "6": "9c76271fa1abb1f6bf1ffc99b32fb68c32474a93d54f4b2ff21bd52c2e3aa0f7",
+        "12": "7f74006f40adf8b329988c749a724331ca700be67719580c6269909b31c77d04",
+        "13": "98edd9f53f52d10ffd828a16c0ebb68d345c7d072670fa708baf257eb95be569",
+        "14": "e3bb538d7921fc9378b8beb54c379eeaa213cc92035fb3a5eaaa6cfb861e0836",
+        "15": "b8158f83dd35881ff04ac0921639919e89dcfc5bd65c422667d41a0ae2fc76c4"
+      },
+      "visual_findings": {
+        "clipping": false,
+        "overlap": false,
+        "visible_missing_glyph": false,
+        "unexpected_blank_page": false
+      },
+      "internal_link_annotations": 58,
+      "external_link_annotations": 46,
+      "unique_external_urls": [
+        "https://aider.chat/docs/leaderboards/",
+        "https://codeforces.com/",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://doi.org/10.1038/s41586-025-09422-z",
+        "https://doi.org/10.48550/arXiv.1707.06347",
+        "https://doi.org/10.48550/arXiv.2001.08361",
+        "https://doi.org/10.48550/arXiv.2303.08774",
+        "https://doi.org/10.48550/arXiv.2311.07911",
+        "https://doi.org/10.48550/arXiv.2311.12022",
+        "https://doi.org/10.48550/arXiv.2402.03300",
+        "https://doi.org/10.48550/arXiv.2404.04475",
+        "https://doi.org/10.48550/arXiv.2406.11939",
+        "https://doi.org/10.48550/arXiv.2412.19437",
+        "https://doi.org/10.5281/zenodo.15753192",
+        "https://doi.org/10.5281/zenodo.15753193",
+        "https://doi.org/10.5281/zenodo.15753346",
+        "https://doi.org/10.5281/zenodo.15753347",
+        "https://github.com/deepseek-ai/DeepSeek-R1",
+        "https://github.com/deepseek-ai/DeepSeek-V3",
+        "https://github.com/matplotlib/matplotlib",
+        "https://github.com/numpy/numpy",
+        "https://github.com/tensorflow/tensorboard",
+        "https://maa.org/maa-invitational-competitions",
+        "https://openai.com/index/hello-gpt-4o/",
+        "https://openai.com/index/introducing-simpleqa/",
+        "https://openai.com/index/introducing-swe-bench-verified/",
+        "https://orcid.org/0000-0002-5715-3011",
+        "https://www.cms.org.cn/Home/comp/comp/cid/12.html",
+        "https://www.high-flyer.cn/en/blog/hai-llm",
+        "https://www.nature.com/articles/s41586-025-09422-z#MOESM1",
+        "https://www.python.org/"
+      ],
+      "all_toc_destinations_checked": true,
+      "current_body_sha256": "412a67f3526b08e8819dc796493182d33de9e65ee57c66b9253d376fb23e9686"
+    }
+  },
+  "semantic_checks": [
+    {
+      "item": "DPO Table3关系语境",
+      "source": "/tmp/dpo-v3/main.tex:668–672",
+      "result": "pretty early指已交往一个月的关系阶段，改为才开始交往不久符合上下文，不再误导为当日时间很早。"
+    },
+    {
+      "item": "R1 Table1原表注",
+      "source": "/tmp/r1-nature-translation-source/table1.html:607",
+      "result": "rethink应含再次思考的动作，重新思考忠实；拟人语气及作者感想保留。"
+    },
+    {
+      "item": "R1 ED Table1的6、3下划线",
+      "source": "/tmp/r1-nature-2025.pdf p11",
+      "result": "原件分别为下划线数字6、3，右下标13是基数。译文实际下划线可见，6与3未被读作乘数，数值81=6×13+3=81。"
+    },
+    {
+      "item": "R1版权行",
+      "source": "/tmp/r1-nature-2025.pdf p5",
+      "source_pdf_sha256": "916fdaafc3b44143a9744481d079744f773d73d06372f82b1dba1076525927f2",
+      "result": "原件© The Author(s) 2025；译文完整保留且清楚与译者署名区分。"
+    }
+  ],
+  "final_stdout_checks": [
+    {
+      "file": "book/build/dpo/pass-3.stdout",
+      "sha256": "ca008e96a02ed4d61ad25b884c455f96d5ddf078ffabe645fb3f73ec0ed84545",
+      "completed": true
+    },
+    {
+      "file": "book/build/r1-nature/pass-3.stdout",
+      "sha256": "6c5641052440457f6b3767d213c703822b72bdf6de2a56383d1b84ffe0c26f8a",
+      "completed": true
+    }
+  ],
+  "prior_qa_preserved": true,
+  "external_url_scope": "真实注释URI语法核验，不声称远端全在线可达",
+  "render_directory": "/tmp/v031-final-pdf-review",
+  "executed_model_or_paper_code": false,
+  "translation_or_pdf_modified": false,
+  "remaining_blockers": []
+}

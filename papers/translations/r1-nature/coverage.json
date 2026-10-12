@@ -345,17 +345,25 @@
     "references.tex": "a8d64defeef9efda890762bf797ca2dfc82b9e076e7e23113b55b4e7a914f36a",
     "glossary.json": "16ab6f9d506b10cfd7300a6f63f75b6195981f355cc75f0e1b3a6ceab5aa3d22",
     "authors.tex": "661f3c6689830f2694ce96ee92a9fcd8e04aad52bfaa0cd58c9da17903aa3186",
-    "table2.tex": "8b472e7956ae6887a207e928188e1fb23fda93c54e31aef6dd1bee91fd132720",
+    "table2.tex": "d4a0b737b7ebf9fffed4c76b77d14083b5e38a39dcc7b3e402ca5e5d7d5b6f14",
     "verification.json": "48422491ce3f0cd04189956e312fa5dc84e58c5efd6691da5c8baf4f5f7fe859",
-    "body.tex": "b85f9c9a65e035422b1cc78686326bf47334ef178ae1f9ca2455199941ea2b56",
+    "body.tex": "412a67f3526b08e8819dc796493182d33de9e65ee57c66b9253d376fb23e9686",
     "table2-data.json": "39ef0b2d67f1c2ffef38688f13bf45f1fb8f9dae6fd6837b10468684bbad6e59",
     "source-reading.md": "ffdcca589862139c49f14b614b0ccf79e33f60c237941cd19c53b8801f4fbb2a",
-    "metadata.json": "d65c2698bcb80917a77622dfd14fd758e7413c57cc80c6d41bf95d6ad214c8dd",
+    "metadata.json": "4974b2cb4f0124556dd7c6048d06ee0c6246720ad04b9320d3d819aa7c863d92",
     "assets/fig2.pdf": "977278afc2ea5bbb1ee41d5982cf7d211fc78039e7a80bf6ed22968ea34d7918",
     "assets/fig1.pdf": "7fae7e44651af3e20112b549ceea3a3a8a2dc445dc337a783e7abb0976997bc8",
     "assets/edfig1.pdf": "b576aeeb26cd351f746489ecdb99f15fe16ee609649734b4aef09e7dfab1c7b8",
     "assets/edfig2.pdf": "1f81b0efbbfc6ccca4f0c639a26ccab48316927425a16d13f159bcb5bee93b19"
   },
   "verification_file": "verification.json",
-  "isolated_pdf_pages": 17
+  "isolated_pdf_pages": 17,
+  "author_stage_translation_file_sha256_updates": {
+    "table2.tex": "8b472e7956ae6887a207e928188e1fb23fda93c54e31aef6dd1bee91fd132720",
+    "body.tex": "b85f9c9a65e035422b1cc78686326bf47334ef178ae1f9ca2455199941ea2b56",
+    "metadata.json": "d65c2698bcb80917a77622dfd14fd758e7413c57cc80c6d41bf95d6ad214c8dd"
+  },
+  "previous_integration_hashes_before_v031": {
+    "translation_file_sha256.body.tex": "98e27b969d179869acafefbe5468d2dfc808612651e465b9da7d8a6846ec0f69"
+  }
 }

@@ -128,8 +128,9 @@
       "third_party_credit_found": false
     }
   ],
-  "translation_body_sha256": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0",
+  "translation_body_sha256": "3e08a347cf9fd2d8c8501a19cd416f306069d99ebb387465878eb8fcb00efd01",
   "translation_references_sha256": "3d8104490f9d9156426de4795e33472e2ef678ec57879aedb2ef76de471cc0fb",
   "deliverable_status": "完整翻译已完成,隔离两轮编译和18页视觉审查完成;最终PDF由根代理集成",
-  "unrecovered_content": []
+  "unrecovered_content": [],
+  "author_stage_translation_body_sha256": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0"
 }

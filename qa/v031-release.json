@@ -1,0 +1,113 @@
+{
+  "release": "0.3.1",
+  "date": "2026-10-12",
+  "previous_public_commit": "4bf4b4e2f7deb97150d722c9ebc4f357e72779a5",
+  "scope": "11 modern core units +3 math toolkits; 9 exact-version full translations; 3 original studies; no separately unlicensed supplementary files",
+  "history_policy": "One new normal corrective commit; preserve v0.2.1/v0.3.0 and all prior public commits; no amend or force push",
+  "corrections": "qa/v031-root-corrections.json",
+  "tests": {
+    "run": 58,
+    "skipped": 0,
+    "environment": "CPU torch2.8.0+cpu numpy2.3.5 transformers4.57.3 PyMuPDF1.26.6 Python3.12",
+    "actual_log": "qa/reproduction-logs-v031/tests.txt"
+  },
+  "actual_standard_transformer_runs": 6,
+  "actual_public_model_records": 54,
+  "public_model_input_audit": {
+    "frozen_record_slots": 18,
+    "unique_inputs": 12,
+    "unique_by_kind": [
+      6,
+      4,
+      2
+    ],
+    "unique_input_model_format_combinations": 36,
+    "repeated_outputs_identical": true,
+    "original_always_A": "10/18",
+    "post_hoc_unique_input_always_A": "6/12",
+    "preregistered_dedup_metric": false,
+    "evidence": "research/public-model-input-audit-v03.json"
+  },
+  "new_model_runs_for_documentation_correction": 0,
+  "frozen_model_design_and_metrics_preserved": true,
+  "prior_full_replay_evidence": "qa/v03-reproducibility.json at v0.3.0 (11 suites including all six training runs and54cached diagnostics)",
+  "license_decisions": "papers/rights.json",
+  "pdfs": {
+    "dist/ai-self-study.pdf": {
+      "pages": 99,
+      "bytes": 1398978,
+      "sha256": "cf9caf59c171d04b3c85141e467145c54e975216044bd1640d541d5e8c13b6fb"
+    },
+    "dist/ai-papers-zh.pdf": {
+      "pages": 393,
+      "bytes": 28853514,
+      "sha256": "060ea452ba3c39919042c67f95d5186936dd9db6b3453cfb14d657f765be33cc"
+    },
+    "dist/ai-self-study-complete.pdf": {
+      "pages": 492,
+      "bytes": 30322919,
+      "sha256": "12009dbef24ce6b3b183505106691e56604c6fefec67d1cd83956f35ea249a76"
+    },
+    "dist/papers/alphaproof.pdf": {
+      "pages": 39,
+      "bytes": 9848599,
+      "sha256": "59b2f6ddfcc8c75fb30c28edf25ed30e6dfeb6f36702dcb8b7d5363e43470193"
+    },
+    "dist/papers/cat.pdf": {
+      "pages": 31,
+      "bytes": 1701055,
+      "sha256": "d2bf4e3ed62fac3eaa5823480bf5c185c0719979043d11079ed516dbff1e2039"
+    },
+    "dist/papers/chive.pdf": {
+      "pages": 34,
+      "bytes": 1433743,
+      "sha256": "02bd760d1e1681c5d7a91f7032d07a2fd4d06cff0d6425968513829c863e355e"
+    },
+    "dist/papers/dgm.pdf": {
+      "pages": 128,
+      "bytes": 3657798,
+      "sha256": "ec10565950209ebfd70a8d73908ec5efbb8ae864fe030267f50747914ea6f7a0"
+    },
+    "dist/papers/dpo.pdf": {
+      "pages": 36,
+      "bytes": 878113,
+      "sha256": "affcf1c62c3f6b2ee99b34a6cc68ff49046a30fc2ba7f7831bfa53a76189e9fd"
+    },
+    "dist/papers/engram.pdf": {
+      "pages": 34,
+      "bytes": 971541,
+      "sha256": "62e2bf8b1dce159f6ce339e7e8764af66e9e048fdc88f3aa4402dbe0875142fa"
+    },
+    "dist/papers/r1-nature.pdf": {
+      "pages": 18,
+      "bytes": 3093394,
+      "sha256": "471c51815c4deacaf64eaabf3963baa0b1d7e53329e2f01970c2a39041f81e64"
+    },
+    "dist/papers/stars.pdf": {
+      "pages": 19,
+      "bytes": 5941172,
+      "sha256": "31a853ab98ec68d74fd763679b33a8efefa8b21c2b32db0fa2d104af5e493443"
+    },
+    "dist/papers/study-browser-injection.pdf": {
+      "pages": 4,
+      "bytes": 267916,
+      "sha256": "0a6efedc3f747c5352af34977975219cac6b7c3ccd1b5966e228cf04c01651f0"
+    },
+    "dist/papers/study-ih-challenge.pdf": {
+      "pages": 4,
+      "bytes": 250146,
+      "sha256": "c0b0a35c3c031802a50d137dc56fec1a6f2d8637b1d7c8b7dcc0ab17c501cfe8"
+    },
+    "dist/papers/study-r1-reading.pdf": {
+      "pages": 3,
+      "bytes": 240483,
+      "sha256": "db9301f9d3195169740cc63852a60daae1e92e7c19592289c5ef1797a582694b"
+    },
+    "dist/papers/testcompute.pdf": {
+      "pages": 43,
+      "bytes": 4891184,
+      "sha256": "2def43e5ed63b670ae9fb929f5e38bf5965b69ad1ccadf4d40d2bd6642d265e1"
+    }
+  },
+  "validation_closure": "Final corrected archive is checked by fresh extraction and changed-component rebuild; unchanged experiment bytes and remaining component proofs bind to prior full replay. Archive-bound report is external to its manifest in qa/v031-reproducibility.json."
+}

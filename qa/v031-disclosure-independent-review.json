@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "scope": "Source disclosure delta and archive-only input audit; no model execution, no compilation, no PDF approval for changed source.",
+  "reviewer": "Independent model agent; not human peer review",
+  "reviewed_at": "2026-10-12T03:12:06.137882+00:00",
+  "source_snapshot": {
+    "book/sections/public-models.tex": "35853479733fb27787aad4d4ddd94476235eed844f2b2f355f3ccd8e38132558",
+    "papers/studies/ih-challenge.tex": "8a71d3b679460f4f12e7824b24fd75e046b32ea9d1fcc0506e6bc3749b8a4552",
+    "README.md": "ef7b86c1cc57198a4b87aad924a65e42b65f929b6ee3d380efd0aee0e587b23f",
+    "docs/experiments.md": "b360564e5cb0a00acc5c035df00d73ca9525bac4cb32843ff2209babcdf08eef",
+    "research/model-study-v03.md": "2df381f10bff29a07b1cbc3daf4277643acbcd217510279b2d1f5d364a22882c",
+    "scripts/audit_public_model_inputs.py": "0b84506b60907ced848dd2cc53500e774fd8967e0001c01785ffa27188878784",
+    "research/public-model-input-audit-v03.json": "69531201f1766e4b849f7e6da7824011693e0685b396d2e9cd03552fe0a255cb",
+    "research/design-public-models-v03.json": "4672ccf5cf18422c751ffee4a722a02e9f9c9713775d7a31d0433bc8b8d8058e",
+    "results/public-models-v03/metrics.json": "f4681922622d8c218f434db82aebf8f60103833d0294a95e2db4df11047e49d0"
+  },
+  "frozen_artifact_hashes_match_requested": true,
+  "all_reviewed_files_unchanged_by_audit": true,
+  "actual_executions": [
+    "Imported current audit_public_model_inputs.py and called audit(); no __main__ output write.",
+    "Separate recount grouped actual stored (model,condition,prompt), computed correctness from truth and generated_text."
+  ],
+  "independent_counts": {
+    "record_slots": 18,
+    "unique_system_user_inputs": 12,
+    "unique_inputs_by_kind": {
+      "arithmetic": 6,
+      "context_mapping": 4,
+      "role_conflict": 2
+    },
+    "duplicate_case_groups": [
+      [
+        "mapping-0",
+        "mapping-2"
+      ],
+      [
+        "mapping-3",
+        "mapping-5"
+      ],
+      [
+        "conflict-0",
+        "conflict-2",
+        "conflict-4"
+      ],
+      [
+        "conflict-1",
+        "conflict-3",
+        "conflict-5"
+      ]
+    ],
+    "stored_output_rows": 54,
+    "unique_actual_stored_prompt_model_format_combinations": 36,
+    "identical_duplicate_rows_except_case_id": true
+  },
+  "condition_summary": [
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "record_slots": 18,
+      "original_forced_choice_correct": 10,
+      "unique_inputs": 12,
+      "unique_forced_choice_correct": 6
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "record_slots": 18,
+      "original_forced_choice_correct": 10,
+      "unique_inputs": 12,
+      "unique_forced_choice_correct": 6
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "record_slots": 18,
+      "original_forced_choice_correct": 10,
+      "unique_inputs": 12,
+      "unique_forced_choice_correct": 6
+    }
+  ],
+  "independent_recount": [
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "all",
+      "unique_inputs": 12,
+      "forced_choice_correct": 6,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "arithmetic",
+      "unique_inputs": 6,
+      "forced_choice_correct": 3,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "context_mapping",
+      "unique_inputs": 4,
+      "forced_choice_correct": 2,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "role_conflict",
+      "unique_inputs": 2,
+      "forced_choice_correct": 1,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "all",
+      "unique_inputs": 12,
+      "forced_choice_correct": 6,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "arithmetic",
+      "unique_inputs": 6,
+      "forced_choice_correct": 3,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "context_mapping",
+      "unique_inputs": 4,
+      "forced_choice_correct": 2,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "role_conflict",
+      "unique_inputs": 2,
+      "forced_choice_correct": 1,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "all",
+      "unique_inputs": 12,
+      "forced_choice_correct": 6,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "arithmetic",
+      "unique_inputs": 6,
+      "forced_choice_correct": 3,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "context_mapping",
+      "unique_inputs": 4,
+      "forced_choice_correct": 2,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "role_conflict",
+      "unique_inputs": 2,
+      "forced_choice_correct": 1,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    }
+  ],
+  "script_return_equals_saved_audit": true,
+  "independent_prompt_based_recount_equals_saved_audit": true,
+  "resolved_wording_findings": [
+    {
+      "severity": "low",
+      "problem": "重复两次/三次 could be misread as extra copies",
+      "resolution": "Current source says 出现两次/三次."
+    },
+    {
+      "severity": "low",
+      "problem": "Post-hoc 6/12 could be mistaken for planned endpoint when next to frozen design description",
+      "resolution": "Book, docs/experiments and model-study explicitly say 后验/非预注册; audit JSON says post-hoc/not preregistered."
+    }
+  ],
+  "remaining_source_blockers": [],
+  "limitations": [
+    "12 unique inputs were a fixed constructed set, not independently sampled population data.",
+    "36 unique input-model-format combinations share the same12 tasks and are not36 independent tasks.",
+    "This review does not improve model performance or retroactively preregister the deduplicated endpoint.",
+    "Earlier PDF QA hashes apply to earlier PDFs; revised PDFs still need compilation and review."
+  ],
+  "readme_version_footer_increment": {
+    "reviewed_at": "2026-10-12T03:15:13.059701+00:00",
+    "previous_reviewed_whole_file_sha256": "0d4bcd74615df17afbe3657f3dcab63e071e22ec074a1b064faf1ecdd3196ddd",
+    "current_whole_file_sha256": "ef7b86c1cc57198a4b87aad924a65e42b65f929b6ee3d380efd0aee0e587b23f",
+    "actual_read_footer": "本版为 **0.3.1**，补充公开模型输入重复与后验计数披露、原作者版权行及现行源码哈希。旧版源码与 PDF 保留在 Git 历史及 `v0.2.1`、`v0.3.0` 标签；采用新增提交更新，保留原始版本。[独立审查与复现证据](qa/README.md)区分内容核对、编译、全页布局巡视与可读抽查。",
+    "status": "PASS",
+    "scope": "Only version footer checked: 0.3.1 disclosure/copyright/source-hash update and retained v0.3.0 history. No new mathematics, model execution, compilation or PDF review.",
+    "previous_whole_file_hash_superseded": true
+  }
+}

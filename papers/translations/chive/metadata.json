@@ -58,6 +58,15 @@
   "translation_sha256": {
     "body.tex": "18851bef310f9295e1739132fb9a54abd4ee7b5a3bb33402bf2301a43de51fce",
     "parts/references.tex": "4f634ea8da7af5d2efcd14a329ef6654a91771d2e7132a7fc5461b611926f173",
+    "parts/appendix-fg.tex": "5f81973fe1d4cff6a60e611dd4cc4d9cc1d4268916a3b7147f456281147fc190",
+    "parts/appendix-e.tex": "dcd2d046fb9d89624cd7bc6c10391005e9e112a231b0c9bd2d920c72b77a2260",
+    "parts/main.tex": "a6df57221f5ef9feda898f24f86bdab3ddafe369df0d939b8bb3f393404f01ab",
+    "parts/appendix-c.tex": "aed454469a4486dd6690f65a86ddd8c1366e273aa989b36184d4acda7f0caf24",
+    "parts/appendix-d.tex": "b27fb1226e7b819e69d13243ae349d11245759fca55931cac4c2a7ed43285412",
+    "parts/appendix-a.tex": "3a3a8b5eba4ee9255ee3e9296b9e9fea7d72ff183cb41e5acfd650bebb203b58",
+    "parts/appendix-b.tex": "994212fd300faa222b9452248756947f25e9bd1874b0437c90e8e3750723f168"
+  },
+  "author_stage_translation_sha256_updates": {
     "parts/appendix-fg.tex": "4f4f88f7fe6b06282997c175337c7f99d4c881d57e6dd173cf3f75401be1db9b",
     "parts/appendix-e.tex": "0b718c18fc709c8b58904447aa781711f65d46f92b6e7ab0a2ab403947389d3e",
     "parts/main.tex": "821f8a938ab75bce72027f8fd87b52e998b6b4113e73d811e77f43dbf3179279",

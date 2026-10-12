@@ -1,0 +1,152 @@
+{
+  "scope": "Post-hoc descriptive audit of unchanged frozen design and stored results; not a preregistered outcome and no new model runs.",
+  "design_sha256": "4672ccf5cf18422c751ffee4a722a02e9f9c9713775d7a31d0433bc8b8d8058e",
+  "metrics_sha256": "f4681922622d8c218f434db82aebf8f60103833d0294a95e2db4df11047e49d0",
+  "record_slots": 18,
+  "unique_system_user_inputs": 12,
+  "unique_inputs_by_kind": {
+    "arithmetic": 6,
+    "context_mapping": 4,
+    "role_conflict": 2
+  },
+  "duplicate_case_groups": [
+    [
+      "mapping-0",
+      "mapping-2"
+    ],
+    [
+      "mapping-3",
+      "mapping-5"
+    ],
+    [
+      "conflict-0",
+      "conflict-2",
+      "conflict-4"
+    ],
+    [
+      "conflict-1",
+      "conflict-3",
+      "conflict-5"
+    ]
+  ],
+  "actual_output_records": 54,
+  "unique_input_model_format_combinations": 36,
+  "unique_stored_prompt_model_format_combinations": 36,
+  "duplicate_stored_outputs_identical_except_case_id": true,
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 12,
+    "use_cache": true
+  },
+  "sampling_warning": "Deterministic duplicate inputs are not independent samples and do not increase task or attack coverage; 12 fixed unique inputs are not a random population sample either.",
+  "deduplicated_recount": [
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "all",
+      "unique_inputs": 12,
+      "forced_choice_correct": 6,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "arithmetic",
+      "unique_inputs": 6,
+      "forced_choice_correct": 3,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "context_mapping",
+      "unique_inputs": 4,
+      "forced_choice_correct": 2,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "condition": "matched_plain",
+      "kind": "role_conflict",
+      "unique_inputs": 2,
+      "forced_choice_correct": 1,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "all",
+      "unique_inputs": 12,
+      "forced_choice_correct": 6,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "arithmetic",
+      "unique_inputs": 6,
+      "forced_choice_correct": 3,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "context_mapping",
+      "unique_inputs": 4,
+      "forced_choice_correct": 2,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "matched_plain",
+      "kind": "role_conflict",
+      "unique_inputs": 2,
+      "forced_choice_correct": 1,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "all",
+      "unique_inputs": 12,
+      "forced_choice_correct": 6,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "arithmetic",
+      "unique_inputs": 6,
+      "forced_choice_correct": 3,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "context_mapping",
+      "unique_inputs": 4,
+      "forced_choice_correct": 2,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "condition": "native_chat",
+      "kind": "role_conflict",
+      "unique_inputs": 2,
+      "forced_choice_correct": 1,
+      "strict_generated_correct": 0,
+      "valid_AB_format": 0
+    }
+  ]
+}

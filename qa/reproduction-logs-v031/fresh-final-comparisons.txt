@@ -1,0 +1,111 @@
+{
+  "components": [
+    {
+      "path": "dist/ai-self-study.pdf",
+      "pages": 99,
+      "rebuilt": true,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "cf9caf59c171d04b3c85141e467145c54e975216044bd1640d541d5e8c13b6fb"
+    },
+    {
+      "path": "dist/papers/alphaproof.pdf",
+      "pages": 39,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "59b2f6ddfcc8c75fb30c28edf25ed30e6dfeb6f36702dcb8b7d5363e43470193"
+    },
+    {
+      "path": "dist/papers/cat.pdf",
+      "pages": 31,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "d2bf4e3ed62fac3eaa5823480bf5c185c0719979043d11079ed516dbff1e2039"
+    },
+    {
+      "path": "dist/papers/chive.pdf",
+      "pages": 34,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "02bd760d1e1681c5d7a91f7032d07a2fd4d06cff0d6425968513829c863e355e"
+    },
+    {
+      "path": "dist/papers/dgm.pdf",
+      "pages": 128,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "ec10565950209ebfd70a8d73908ec5efbb8ae864fe030267f50747914ea6f7a0"
+    },
+    {
+      "path": "dist/papers/dpo.pdf",
+      "pages": 36,
+      "rebuilt": true,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "affcf1c62c3f6b2ee99b34a6cc68ff49046a30fc2ba7f7831bfa53a76189e9fd"
+    },
+    {
+      "path": "dist/papers/engram.pdf",
+      "pages": 34,
+      "rebuilt": true,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "62e2bf8b1dce159f6ce339e7e8764af66e9e048fdc88f3aa4402dbe0875142fa"
+    },
+    {
+      "path": "dist/papers/r1-nature.pdf",
+      "pages": 18,
+      "rebuilt": true,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "471c51815c4deacaf64eaabf3963baa0b1d7e53329e2f01970c2a39041f81e64"
+    },
+    {
+      "path": "dist/papers/stars.pdf",
+      "pages": 19,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "31a853ab98ec68d74fd763679b33a8efefa8b21c2b32db0fa2d104af5e493443"
+    },
+    {
+      "path": "dist/papers/study-browser-injection.pdf",
+      "pages": 4,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "0a6efedc3f747c5352af34977975219cac6b7c3ccd1b5966e228cf04c01651f0"
+    },
+    {
+      "path": "dist/papers/study-ih-challenge.pdf",
+      "pages": 4,
+      "rebuilt": true,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "c0b0a35c3c031802a50d137dc56fec1a6f2d8637b1d7c8b7dcc0ab17c501cfe8"
+    },
+    {
+      "path": "dist/papers/study-r1-reading.pdf",
+      "pages": 3,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "db9301f9d3195169740cc63852a60daae1e92e7c19592289c5ef1797a582694b"
+    },
+    {
+      "path": "dist/papers/testcompute.pdf",
+      "pages": 43,
+      "rebuilt": false,
+      "text_pixels_size_toc_links_identical": true,
+      "reference_pdf_sha256": "2def43e5ed63b670ae9fb929f5e38bf5965b69ad1ccadf4d40d2bd6642d265e1"
+    }
+  ],
+  "collections": [
+    {
+      "path": "dist/ai-papers-zh.pdf",
+      "pages": 393,
+      "text_pixels_toc_links_identical": true
+    },
+    {
+      "path": "dist/ai-self-study-complete.pdf",
+      "pages": 492,
+      "text_pixels_toc_links_identical": true
+    }
+  ],
+  "input_audit_byte_identical": true,
+  "audit_record_slots": 18,
+  "audit_unique_inputs": 12,
+  "archive_unchanged": true
+}

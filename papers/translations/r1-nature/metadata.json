@@ -226,7 +226,8 @@
     "re-typesetting",
     "source-numbered formula layout; temporary ratio symbol for line wrapping in equation 1",
     "separate translator notes",
-    "figure extraction and complete Chinese label correspondence"
+    "figure extraction and complete Chinese label correspondence",
+    "Original official article page5 author copyright notice retained verbatim in the rights paragraph."
   ],
   "scope": {
     "main_pdf_pages": 11,
@@ -504,5 +505,6 @@
     "Xu, Zhipeng",
     "Zhang, Zhongyu",
     "Zhang, Zhen"
-  ]
+  ],
+  "copyright_notice": "© The Author(s) 2025"
 }

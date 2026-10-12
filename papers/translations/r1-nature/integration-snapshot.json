@@ -1,21 +1,42 @@
 {
-  "release": "0.3.0",
+  "release": "0.3.1",
   "source_files_sha256": {
-    "papers/translations/r1-nature/references.tex": "a8d64defeef9efda890762bf797ca2dfc82b9e076e7e23113b55b4e7a914f36a",
-    "papers/translations/r1-nature/glossary.json": "16ab6f9d506b10cfd7300a6f63f75b6195981f355cc75f0e1b3a6ceab5aa3d22",
-    "papers/translations/r1-nature/authors.tex": "661f3c6689830f2694ce96ee92a9fcd8e04aad52bfaa0cd58c9da17903aa3186",
-    "papers/translations/r1-nature/table2.tex": "d4a0b737b7ebf9fffed4c76b77d14083b5e38a39dcc7b3e402ca5e5d7d5b6f14",
-    "papers/translations/r1-nature/verification.json": "48422491ce3f0cd04189956e312fa5dc84e58c5efd6691da5c8baf4f5f7fe859",
-    "papers/translations/r1-nature/coverage.json": "2e90363d1fc8a18134d0297670d6b2594be61ec30e8b36d2608b2bef94b5b96e",
-    "papers/translations/r1-nature/body.tex": "8b6a7614b878bf30e95fdf6062554016f973e6444432cc40f917ce6516b475c4",
-    "papers/translations/r1-nature/table2-data.json": "39ef0b2d67f1c2ffef38688f13bf45f1fb8f9dae6fd6837b10468684bbad6e59",
-    "papers/translations/r1-nature/source-reading.md": "ffdcca589862139c49f14b614b0ccf79e33f60c237941cd19c53b8801f4fbb2a",
-    "papers/translations/r1-nature/metadata.json": "d65c2698bcb80917a77622dfd14fd758e7413c57cc80c6d41bf95d6ad214c8dd",
-    "papers/translations/r1-nature/assets/fig2.pdf": "977278afc2ea5bbb1ee41d5982cf7d211fc78039e7a80bf6ed22968ea34d7918",
-    "papers/translations/r1-nature/assets/fig1.pdf": "7fae7e44651af3e20112b549ceea3a3a8a2dc445dc337a783e7abb0976997bc8",
     "papers/translations/r1-nature/assets/edfig1.pdf": "b576aeeb26cd351f746489ecdb99f15fe16ee609649734b4aef09e7dfab1c7b8",
-    "papers/translations/r1-nature/assets/edfig2.pdf": "1f81b0efbbfc6ccca4f0c639a26ccab48316927425a16d13f159bcb5bee93b19"
+    "papers/translations/r1-nature/assets/edfig2.pdf": "1f81b0efbbfc6ccca4f0c639a26ccab48316927425a16d13f159bcb5bee93b19",
+    "papers/translations/r1-nature/assets/fig1.pdf": "7fae7e44651af3e20112b549ceea3a3a8a2dc445dc337a783e7abb0976997bc8",
+    "papers/translations/r1-nature/assets/fig2.pdf": "977278afc2ea5bbb1ee41d5982cf7d211fc78039e7a80bf6ed22968ea34d7918",
+    "papers/translations/r1-nature/authors.tex": "661f3c6689830f2694ce96ee92a9fcd8e04aad52bfaa0cd58c9da17903aa3186",
+    "papers/translations/r1-nature/body.tex": "412a67f3526b08e8819dc796493182d33de9e65ee57c66b9253d376fb23e9686",
+    "papers/translations/r1-nature/coverage.json": "91afc9a3ce2f4300317528d199648ae1f7427738bd66b9ecb46d85bf232913ed",
+    "papers/translations/r1-nature/glossary.json": "16ab6f9d506b10cfd7300a6f63f75b6195981f355cc75f0e1b3a6ceab5aa3d22",
+    "papers/translations/r1-nature/metadata.json": "4974b2cb4f0124556dd7c6048d06ee0c6246720ad04b9320d3d819aa7c863d92",
+    "papers/translations/r1-nature/references.tex": "a8d64defeef9efda890762bf797ca2dfc82b9e076e7e23113b55b4e7a914f36a",
+    "papers/translations/r1-nature/source-reading.md": "ffdcca589862139c49f14b614b0ccf79e33f60c237941cd19c53b8801f4fbb2a",
+    "papers/translations/r1-nature/table2-data.json": "39ef0b2d67f1c2ffef38688f13bf45f1fb8f9dae6fd6837b10468684bbad6e59",
+    "papers/translations/r1-nature/table2.tex": "d4a0b737b7ebf9fffed4c76b77d14083b5e38a39dcc7b3e402ca5e5d7d5b6f14",
+    "papers/translations/r1-nature/verification.json": "48422491ce3f0cd04189956e312fa5dc84e58c5efd6691da5c8baf4f5f7fe859"
   },
-  "scope": "Root integration snapshot after independent corrections; author isolated checks retain their original snapshot. Final PDF and independent evidence in qa/v03-*",
-  "integration_changes": "Original heading identity/reference anchors restored where needed; source equations/data unchanged; explicit original inconsistency notes retained"
+  "scope": "Current root integration source snapshot after final bounded parent-review corrections. Author-stage and v0.3.0 hashes retained explicitly and in public history. PDF evidence in qa/v031-* for changed components; unchanged component PDF proofs stay bound to their v0.3.0 hashes.",
+  "previous_integration_snapshot": {
+    "release": "0.3.0",
+    "source_files_sha256": {
+      "papers/translations/r1-nature/references.tex": "a8d64defeef9efda890762bf797ca2dfc82b9e076e7e23113b55b4e7a914f36a",
+      "papers/translations/r1-nature/glossary.json": "16ab6f9d506b10cfd7300a6f63f75b6195981f355cc75f0e1b3a6ceab5aa3d22",
+      "papers/translations/r1-nature/authors.tex": "661f3c6689830f2694ce96ee92a9fcd8e04aad52bfaa0cd58c9da17903aa3186",
+      "papers/translations/r1-nature/table2.tex": "d4a0b737b7ebf9fffed4c76b77d14083b5e38a39dcc7b3e402ca5e5d7d5b6f14",
+      "papers/translations/r1-nature/verification.json": "48422491ce3f0cd04189956e312fa5dc84e58c5efd6691da5c8baf4f5f7fe859",
+      "papers/translations/r1-nature/coverage.json": "2e90363d1fc8a18134d0297670d6b2594be61ec30e8b36d2608b2bef94b5b96e",
+      "papers/translations/r1-nature/body.tex": "8b6a7614b878bf30e95fdf6062554016f973e6444432cc40f917ce6516b475c4",
+      "papers/translations/r1-nature/table2-data.json": "39ef0b2d67f1c2ffef38688f13bf45f1fb8f9dae6fd6837b10468684bbad6e59",
+      "papers/translations/r1-nature/source-reading.md": "ffdcca589862139c49f14b614b0ccf79e33f60c237941cd19c53b8801f4fbb2a",
+      "papers/translations/r1-nature/metadata.json": "d65c2698bcb80917a77622dfd14fd758e7413c57cc80c6d41bf95d6ad214c8dd",
+      "papers/translations/r1-nature/assets/fig2.pdf": "977278afc2ea5bbb1ee41d5982cf7d211fc78039e7a80bf6ed22968ea34d7918",
+      "papers/translations/r1-nature/assets/fig1.pdf": "7fae7e44651af3e20112b549ceea3a3a8a2dc445dc337a783e7abb0976997bc8",
+      "papers/translations/r1-nature/assets/edfig1.pdf": "b576aeeb26cd351f746489ecdb99f15fe16ee609649734b4aef09e7dfab1c7b8",
+      "papers/translations/r1-nature/assets/edfig2.pdf": "1f81b0efbbfc6ccca4f0c639a26ccab48316927425a16d13f159bcb5bee93b19"
+    },
+    "scope": "Root integration snapshot after independent corrections; author isolated checks retain their original snapshot. Final PDF and independent evidence in qa/v03-*",
+    "integration_changes": "Original heading identity/reference anchors restored where needed; source equations/data unchanged; explicit original inconsistency notes retained"
+  },
+  "integration_changes": "Metadata/coverage source hashes synchronized; DPO dating wording, R1 rethink/digit underlines/copyright, Engram complete table caption/final related-work clause restored; no source equation/data/code payload changes."
 }

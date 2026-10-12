@@ -42,7 +42,7 @@ python -m unittest discover -s tests -v
 
 结果与实际执行环境在 [results](results/)。所有数据是原创有限任务。输出目录用 `/tmp` 可保留仓库中的参考结果。基础套件还包含注意力逐步更新、残差漏梯度调试与 15 次小研究；[实验说明](docs/experiments.md)列出精确命令和证据范围。
 
-另有两类可选的真实模型实验：完整 **18,026 参数标准因果 Transformer** 的六次 CPU 配对训练，以及两份固定版本 **SmolLM2-135M** 的 54 条 CPU 诊断。使用独立环境：
+另有两类可选的真实模型实验：完整 **18,026 参数标准因果 Transformer** 的六次 CPU 配对训练，以及两份固定版本 **SmolLM2-135M** 的 54 条 CPU 诊断记录。后者是 18 个记录位×3 条件，实际只有 12 个不同 `(system, user)` 输入、36 个不同输入—条件组合；冲突部分只有两种提示各出现三次。确定性贪心重复不增加独立样本或攻击覆盖，见[输入审计](research/public-model-input-audit-v03.json)。使用独立环境：
 
 ```bash
 python -m venv .venv-models
@@ -68,4 +68,4 @@ python experiments/public_model_diagnostics.py --allow-download --cache /tmp/ai-
 
 原创教学文本和数据用 CC BY 4.0，原创实验代码用 MIT。九篇译文及论文图件按逐篇 CC BY 4.0 署名，DGM 论文内代码属于其论文许可范围；外部软件、模型、数据和继承模板保留各自权利，详见 [LICENSE](LICENSE) 与[权利说明](docs/third-party.md)。
 
-本版为 **0.3.0**。旧版源码与 PDF 保留在 Git 历史及 `v0.2.1` 标签；采用新增提交更新，保留原始版本。[独立审查与复现证据](qa/README.md)区分内容核对、编译、全页布局巡视与可读抽查。
+本版为 **0.3.1**，补充公开模型输入重复与后验计数披露、原作者版权行及现行源码哈希。旧版源码与 PDF 保留在 Git 历史及 `v0.2.1`、`v0.3.0` 标签；采用新增提交更新，保留原始版本。[独立审查与复现证据](qa/README.md)区分内容核对、编译、全页布局巡视与可读抽查。

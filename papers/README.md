@@ -30,7 +30,7 @@ R1 Nature的独立83页Supplementary与AlphaProof的独立9页Supplementary/伪�
 
 | 原始研究来源 | 教材 | 本项目资料/论文资料页码 |
 |---|---|---|
-| [OpenAI IH-Challenge官方说明](https://openai.com/index/instruction-hierarchy-challenge/)（2026-03-10）及v1论文 | 第9章，55–61页 | `studies/ih-challenge.tex`；研究说明PDF4页；论文资料1–4页 |
+| [OpenAI IH-Challenge官方说明](https://openai.com/index/instruction-hierarchy-challenge/)（2026-03-10） | 第9章，55–61页 | `studies/ih-challenge.tex`；研究说明PDF4页；论文资料1–4页 |
 | [Anthropic浏览器注入防御](https://www.anthropic.com/research/prompt-injection-defenses)（2025-11-24） | 第9章，55–61页 | `studies/browser-injection.tex`；研究说明PDF4页；论文资料5–8页 |
 | [R1 Nature正式论文](https://www.nature.com/articles/s41586-025-09422-z)（2025-09-17） | 第7–8章，44–54页 | `translations/r1-nature/body.tex`；正式译文18页；论文资料91–108页；另有原创R1说明9–11页 |
 

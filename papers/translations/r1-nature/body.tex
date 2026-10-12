@@ -79,7 +79,7 @@ a-\sqrt{a+x}=x^2\quad\Rightarrow\quad\sqrt{a+x}=a-x^2.
 
 ……
 
-\noindent\textbf{原表注.} 模型学会以拟人的语气思考. 对我们而言, 这同样是一个顿悟时刻, 让我们见证 RL 的力量与美.
+\noindent\textbf{原表注.} 模型学会以拟人的语气重新思考. 对我们而言, 这同样是一个顿悟时刻, 让我们见证 RL 的力量与美.
 
 \begin{remark}
 译注: 表中的省略号均来自正式原文. 原表是模型输出摘录, 并未给出完整解题过程或最后答案; 本译文不补写答案, 也不将这段输出改写为经过验证的数学证明. “在心中思考”“拟人的语气”是原作者与原提示的措辞.
@@ -273,7 +273,7 @@ a, 整个训练过程模型生成输出中具有代表性的反思词语的频�
 \phantomsection
 \noindent\textbf{扩展数据表 1. AIME 数据集的说明性示例.}\paperlabel{扩展数据 1}{r1n-edtable1}
 
-\noindent\textbf{提示.} 设 $b\ge2$ 为整数. 若正整数 $n$ 在 $b$ 进制下恰有两位, 且两位数字之和为 $\sqrt n$, 则称 $n$ 为 $b$-beautiful (在 $b$ 进制下“美丽”). 例如, 81 在 13 进制下是美丽的, 因为 $81=6\,3_{13}$ 且 $6+3=\sqrt{81}$. 求使 $b$ 进制下美丽整数超过十个的最小整数 $b\ge2$. 请一步一步推理, 并将最后答案放在 \texttt{\textbackslash boxed\{\}} 中.
+\noindent\textbf{提示.} 设 $b\ge2$ 为整数. 若正整数 $n$ 在 $b$ 进制下恰有两位, 且两位数字之和为 $\sqrt n$, 则称 $n$ 为 $b$-beautiful (在 $b$ 进制下“美丽”). 例如, 81 在 13 进制下是美丽的, 因为 $81=\underline{6}\,\underline{3}_{13}$ 且 $6+3=\sqrt{81}$. 求使 $b$ 进制下美丽整数超过十个的最小整数 $b\ge2$. 请一步一步推理, 并将最后答案放在 \texttt{\textbackslash boxed\{\}} 中.
 
 \noindent\textbf{评估.} 解析 \texttt{\textbackslash boxed\{\}} 中的最终答案, 使用基于规则的评分器判断它是否等于标准答案. 按需要对数值取舍入值, 并用 SymPy 解析表达式.
 
@@ -299,6 +299,8 @@ a, 整个训练过程模型生成输出中具有代表性的反思词语的频�
 \noindent\textbf{补充信息条目.} 原文章另附 Supplementary Information, 含补充章节 1--11、补充表 1--29、补充图 1--16, 详见其目录; 另附 Peer Review file. 这两个独立文件未在本译文中镜像或全文翻译, 读者可从 \url{https://www.nature.com/articles/s41586-025-09422-z#MOESM1} 的文章页面相关条目访问.
 
 \noindent\textbf{权利与许可.} 本文为开放获取, 按 Creative Commons Attribution 4.0 International License 许可发布. 该许可允许以任何媒介和格式使用、分享、改编、分发和复制, 条件是适当署名原作者与来源、提供许可链接并说明是否作出修改. 本文中的图像或其他第三方材料纳入文章的 Creative Commons 许可, 除非该材料的署名说明另有声明. 如果某材料未纳入文章许可, 且预期使用不受法律许可或超过法律允许范围, 则须直接向著作权人取得许可. 许可副本见 \url{https://creativecommons.org/licenses/by/4.0/}.
+
+\noindent\textbf{原作者版权声明.} \copyright{} The Author(s) 2025.
 
 \noindent\textbf{文章信息.} 投稿日期: 2025 年 2 月 14 日. 接受日期: 2025 年 7 月 17 日. 发表日期与正式记录版本日期: 2025 年 9 月 17 日. 期刊期次日期: 2025 年 9 月 18 日. 正式引文为 Guo, D., Yang, D., Zhang, H. et al. \textit{DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning}. \textit{Nature} 645, 633--638 (2025). \url{https://doi.org/10.1038/s41586-025-09422-z}.
 
