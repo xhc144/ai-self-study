@@ -1,0 +1,160 @@
+{
+  "paper_id": "arXiv:2601.07372v2",
+  "source_files_read": [
+    {
+      "file": "sections/intro.tex",
+      "sha256": "6eac7a90e584f1df9db61716edab78a34faf3f7f19f73d511e113645a66a10e3",
+      "lines": 17,
+      "read": "full",
+      "coverage": "all active prose, captions, formulas, footnotes, tables and citations"
+    },
+    {
+      "file": "sections/arch.tex",
+      "sha256": "a90409627cea7b726e0e2842d9a5fb266846254252258530b4ba1000909f4d5f",
+      "lines": 107,
+      "read": "full",
+      "coverage": "all active prose, captions, formulas, footnotes, tables and citations"
+    },
+    {
+      "file": "sections/scaling_law_exp.tex",
+      "sha256": "f19cb4cb4c9a89e0f1ceee2a6be115261a156ed83a1539789ad1a752d9a19af6",
+      "lines": 84,
+      "read": "full",
+      "coverage": "all active prose, captions, formulas, footnotes, tables and citations"
+    },
+    {
+      "file": "sections/large_scale_exp.tex",
+      "sha256": "93f7d339e0062574e3fdad352b706b5f46ff6bf491d93219a75ff5a1d2a1986d",
+      "lines": 109,
+      "read": "full",
+      "coverage": "all active prose, captions, formulas, footnotes, tables and citations"
+    },
+    {
+      "file": "sections/long_context_exp.tex",
+      "sha256": "863ec7c6a01fcdcfeeaefb767ac8d10159796058a7d2b97f4f686c08c4a4ba53",
+      "lines": 62,
+      "read": "full",
+      "coverage": "all active prose, captions, formulas, footnotes, tables and citations"
+    },
+    {
+      "file": "sections/analysis.tex",
+      "sha256": "4a41c0df2b0ae6ba0749c221160d6dfc4f6f1dda3196f889928ad3f3ebc8b79f",
+      "lines": 223,
+      "read": "full",
+      "coverage": "all active prose, captions, formulas, footnotes, tables and citations"
+    },
+    {
+      "file": "sections/related_work.tex",
+      "sha256": "fdf0ff7d0a1f9c9ff05dcfd3552a0835bd029e97f5c27f3b3024634119a61bd5",
+      "lines": 43,
+      "read": "full",
+      "coverage": "all active prose, captions, formulas, footnotes, tables and citations"
+    },
+    {
+      "file": "main.tex",
+      "sha256": "c6d4eda1de4d4045887532559a17eac80206b2a054312c59e476496af35f93da",
+      "lines": 229,
+      "read": "full",
+      "coverage": "author metadata, abstract, conclusion, appendix A-C and all displayed compression examples"
+    },
+    {
+      "file": "tabs/appendix_detailed_arch.tex",
+      "sha256": "73a4b0bbdf4815a348d641992c4cc55a6b9e4e2ffbb6ccc3ec7c913c328059b0",
+      "read": "full"
+    },
+    {
+      "file": "ref.bib",
+      "sha256": "119a9b321959df4aae2903b76ec0003df59d43b5cd9294ff13851cfd03123f8d",
+      "read": "all actual cited entries used to generate original abbrvnat bibliography"
+    }
+  ],
+  "source_pdf_read": {
+    "pages": 35,
+    "path": "/tmp/engram-source/paper.pdf",
+    "vector_figures": 8,
+    "figure_text": "All eight vector assets inspected/extracted for labels, complete examples and axes."
+  },
+  "source_issues": [
+    {
+      "id": "mmlu-gain",
+      "source": "Abstract/Introduction vs Table 1/Results",
+      "observation": "MMLU +3.4 in abstract/intro; table 57.4 to 60.4 gives +3.0; MMLU-Redux 60.6 to 64.0 gives +3.4.",
+      "treatment": "All author statements and cells retained; separate translator note."
+    },
+    {
+      "id": "long-context-summary",
+      "source": "Section 5 and Table 2",
+      "observation": "All/monotonic/highest prose does not hold cellwise (S,CWE,QA,FWE); source bold/underline marks are not consistently maxima.",
+      "treatment": "Values and markers preserved; counterexamples explicitly recorded."
+    },
+    {
+      "id": "constant-time",
+      "source": "Architecture and system efficiency",
+      "observation": "O(1) for fixed N/hash-head retrieval is not a universal hardware latency theorem; 100B offload measured only under stated dense H800 prototype workload.",
+      "treatment": "Actual setup and values preserved, extrapolation distinguished."
+    },
+    {
+      "id": "infinite-power-law",
+      "source": "Section 3.2",
+      "observation": "Finite slots 2.58e5 to 1e7; log-linear original loss on log x differs from a strict power law in original loss.",
+      "treatment": "Original descriptions retained; finite evidence and fit ambiguity noted."
+    },
+    {
+      "id": "mechanistic-depth",
+      "source": "Section 6.1",
+      "observation": "LogitLens consistency and CKA similarity do not establish semantic correctness or unique causal architecture equivalence; unbiased finite-sample HSIC ratio has boundary concerns.",
+      "treatment": "Original claims translated with separate scope note."
+    },
+    {
+      "id": "selected-gates",
+      "source": "Section 6.5 footnote",
+      "observation": "Best semantic-match gates selected among eight, not all gates or random branch sample.",
+      "treatment": "Complete source footnote translated."
+    },
+    {
+      "id": "ablation-shift",
+      "source": "Section 6.3",
+      "observation": "Post-hoc memory suppression changes train/inference distribution and is not retrained iso-budget ablation.",
+      "treatment": "Author caveat retained."
+    },
+    {
+      "id": "zero-init",
+      "source": "Section 4 vs equation 5",
+      "observation": "Zero convolution gives Y=vtilde; whole Engram module identity does not follow from convolution zero alone.",
+      "treatment": "Both source formulations preserved; submodule scope clarified."
+    },
+    {
+      "id": "author-spelling",
+      "source": "Official abs vs PDF/source",
+      "observation": "Abs Yixu Wei; PDF/source Yixuan Wei.",
+      "treatment": "Both recorded, PDF/source spelling used in translated author list."
+    },
+    {
+      "id": "asset-case",
+      "source": "Architecture source include vs archive",
+      "observation": "Engram_system.pdf source asset vs lowercase include.",
+      "treatment": "Output filename canonicalized only."
+    },
+    {
+      "id": "bibliography-fields",
+      "source": "Original ref.bib / abbrvnat",
+      "observation": "Missing years in caoretrieval,fangwrong,hsiehruler; empty journal gemma_3n_2025; volume/number warning bisk2020piqa. Original BibTeX emits eight warnings.",
+      "treatment": "Original information retained, no guessed repairs."
+    },
+    {
+      "id": "cka-intro-cite",
+      "source": "Introduction",
+      "observation": "CKA attached to hendrycks2020measuring (MMLU paper); detailed section supplies actual CKA references.",
+      "treatment": "Source citation preserved; discrepancy recorded here."
+    },
+    {
+      "id": "c3-curve-scale",
+      "source": "Appendix B vs Table 1",
+      "observation": "C3 chart visible ticks approximately .75-.81; MoE/Engram Table 1 values 60.1/63.6 use a different numerical interval without source explanation.",
+      "treatment": "Original vector asset and cells retained; no fabricated harmonization."
+    }
+  ],
+  "source_limitations": "No independent limitations section, formal proof/theorem/algorithm block, or verbatim full benchmark prompt templates is supplied. Translation includes every supplied substantive item; missing author material is not invented.",
+  "review_scope": "Machine-assisted full source reading plus mechanical numerical/asset checks and final rendered page review. No model training reproduction or independent subject expert certification claimed.",
+  "unrecoverable_material": []
+}

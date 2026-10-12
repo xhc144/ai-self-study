@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "release": "0.3.0",
+  "archive_sha256": "8633d6bc81e57e7675e2840b693c5fb16b2c632746a5a294fa319d73a0094f84",
+  "manifest_files": 464,
+  "all_component_pdfs": 13,
+  "component_text_pixels_toc_links_identical": true,
+  "collection_text_pixels_toc_links_identical": true,
+  "pages": {
+    "book": 99,
+    "papers": 393,
+    "complete": 492
+  },
+  "tests_run": 58,
+  "tests_skipped": 0,
+  "actual_metrics_byte_comparisons": [
+    "original seven",
+    "attention_walkthrough",
+    "residual_debug",
+    "micro_research",
+    "v03-foundations",
+    "v03-networks",
+    "v03-language",
+    "v03-research",
+    "research-bridges-v03",
+    "standard-transformer-v03",
+    "public-models-v03 cached only"
+  ],
+  "model_runs_included": true,
+  "model_downloads": false,
+  "numeric_fragments_regenerated_identically": true,
+  "scope": "Fresh extraction; same recorded fonts/TeX, Python/NumPy/Torch and recorded script-specific CPU thread settings. PDF time/IDs may differ; content pixels/text/bookmarks/links compared. No code inside translated papers executed."
+}

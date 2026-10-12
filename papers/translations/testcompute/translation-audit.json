@@ -1,0 +1,223 @@
+{
+  "body_sha256": "2f7e19cd10d41bb480d5ab4632b7f9cf6d7cece4b1828cad3e79cd92c9e438ec",
+  "references_sha256": "b319128b37c38bfd2edc025a3e1ba8bd604fe58da860fb903859b432e8e8a5eb",
+  "source_comparison": "all sections, footnote, acknowledgements, appendices and figures manually compared to the v1 LaTeX/PDF; all 13 screenshots opened with the image tool",
+  "duplicate_labels": 0,
+  "unresolved_citations": [],
+  "unresolved_cross_references": [],
+  "citation_prefix": "testcompute-",
+  "source_label_count": 54,
+  "source_label_missing": [],
+  "figure_count": 29,
+  "figure_assets": 32,
+  "bibliography_entries": 51,
+  "prm_score_audit": [
+    {
+      "figure": 24,
+      "original_scores": [
+        "0.085",
+        "0.11",
+        "0.10",
+        "0.10",
+        "0.10",
+        "0.15",
+        "0.15",
+        "0.30"
+      ],
+      "translated_scores": [
+        "0.085",
+        "0.11",
+        "0.10",
+        "0.10",
+        "0.10",
+        "0.15",
+        "0.15",
+        "0.30"
+      ],
+      "exact_sequence_match": true
+    },
+    {
+      "figure": 25,
+      "original_scores": [
+        "0.09",
+        "0.09",
+        "0.11",
+        "0.14",
+        "0.10",
+        "0.14",
+        "0.16",
+        "0.30",
+        "0.80",
+        "0.78",
+        "0.83",
+        "0.69"
+      ],
+      "translated_scores": [
+        "0.09",
+        "0.09",
+        "0.11",
+        "0.14",
+        "0.10",
+        "0.14",
+        "0.16",
+        "0.30",
+        "0.80",
+        "0.78",
+        "0.83",
+        "0.69"
+      ],
+      "exact_sequence_match": true
+    },
+    {
+      "figure": 26,
+      "original_scores": [
+        "0.33",
+        "0.49",
+        "0.56",
+        "0.90",
+        "0.94",
+        "0.95",
+        "0.93",
+        "0.93",
+        "0.93",
+        "0.94",
+        "0.91"
+      ],
+      "translated_scores": [
+        "0.33",
+        "0.49",
+        "0.56",
+        "0.90",
+        "0.94",
+        "0.95",
+        "0.93",
+        "0.93",
+        "0.93",
+        "0.94",
+        "0.91"
+      ],
+      "exact_sequence_match": true
+    },
+    {
+      "figure": 27,
+      "original_scores": [
+        "0.01",
+        "0.01",
+        "0.01",
+        "0.02",
+        "0.02",
+        "0.03",
+        "0.12",
+        "0.22",
+        "0.24",
+        "0.36",
+        "0.35",
+        "0.39"
+      ],
+      "translated_scores": [
+        "0.01",
+        "0.01",
+        "0.01",
+        "0.02",
+        "0.02",
+        "0.03",
+        "0.12",
+        "0.22",
+        "0.24",
+        "0.36",
+        "0.35",
+        "0.39"
+      ],
+      "exact_sequence_match": true
+    },
+    {
+      "figure": 28,
+      "original_scores": [
+        "0.01",
+        "0.01",
+        "0.01",
+        "0.02",
+        "0.02",
+        "0.03",
+        "0.12",
+        "0.30",
+        "0.12"
+      ],
+      "translated_scores": [
+        "0.01",
+        "0.01",
+        "0.01",
+        "0.02",
+        "0.02",
+        "0.03",
+        "0.12",
+        "0.30",
+        "0.12"
+      ],
+      "exact_sequence_match": true
+    },
+    {
+      "figure": 29,
+      "original_scores": [
+        "0.21",
+        "0.32",
+        "0.31",
+        "0.60",
+        "0.87",
+        "0.92",
+        "0.91",
+        "0.90",
+        "0.91",
+        "0.90",
+        "0.91",
+        "0.90",
+        "0.64",
+        "0.78",
+        "0.83"
+      ],
+      "translated_scores": [
+        "0.21",
+        "0.32",
+        "0.31",
+        "0.60",
+        "0.87",
+        "0.92",
+        "0.91",
+        "0.90",
+        "0.91",
+        "0.90",
+        "0.91",
+        "0.90",
+        "0.64",
+        "0.78",
+        "0.83"
+      ],
+      "exact_sequence_match": true
+    }
+  ],
+  "first_compile": {
+    "status": "blocked_dependency",
+    "engine": "XeLaTeX (TeX Live 2025/dev/Debian)",
+    "missing": "ctex.sty",
+    "log": "/tmp/testcompute-v1/build/check.log",
+    "body_parsed": false
+  },
+  "visual_review_original_output_screenshots": "all 13 inspected",
+  "visual_review_final_pdf": "all 42 body-layout pages inspected; last header-only update rechecked on affected header samples; official root publication pending",
+  "fonts_bundled": false,
+  "final_local_compile": {
+    "status": "passed",
+    "pages": 42,
+    "pdf_path": "/tmp/testcompute-v1/build/check.pdf",
+    "pdf_sha256": "61b085c108a71d89f149cf43f572f370d7fdd826cc747f97957f32128ca31fb8",
+    "log": "qa/compile-final.log",
+    "overfull_boxes": 0,
+    "missing_characters": 0,
+    "unresolved_references": 0,
+    "out_of_paper_text_spans": 0,
+    "remaining_warnings": [
+      "TU/FandolSong-Regular(1)/m/it undefined; fixed-template fallback to upright",
+      "Underfull hbox in one longtable row; visually checked"
+    ]
+  }
+}

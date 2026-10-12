@@ -1,0 +1,122 @@
+[
+  {
+    "file": "figures/catrl_vs_catrl_with_cat.pdf",
+    "authors": [
+      "Dulhan Jayalath",
+      "Shashwat Goel",
+      "Thomas Foster",
+      "Parag Jain",
+      "Suchin Gururangan",
+      "Cheng Zhang",
+      "Anirudh Goyal",
+      "Alan Schelten"
+    ],
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "figures/catrl_vs_catrl_with_cat.pdf",
+    "changes": "Original vector PDF unchanged; original English labels retained",
+    "sha256": "c79e7b9133d854510391f6f93fc3a5a7dd822585ca52e5c27ab92bed551bf718",
+    "third_party_credit_found": false,
+    "rights_check": "Official v3 CC BY 4.0 verified; source captions/TikZ inspected. No independent third-party figure credit found. Source company logo and font files excluded."
+  },
+  {
+    "file": "figures/healthbench_ablation.pdf",
+    "authors": [
+      "Dulhan Jayalath",
+      "Shashwat Goel",
+      "Thomas Foster",
+      "Parag Jain",
+      "Suchin Gururangan",
+      "Cheng Zhang",
+      "Anirudh Goyal",
+      "Alan Schelten"
+    ],
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "figures/healthbench_ablation.pdf",
+    "changes": "Original vector PDF unchanged; original English labels retained",
+    "sha256": "5a09021a6219f3d906d7a450ee42ce21c2a8dad7eef6228a94b93693d51e2f66",
+    "third_party_credit_found": false,
+    "rights_check": "Official v3 CC BY 4.0 verified; source captions/TikZ inspected. No independent third-party figure credit found. Source company logo and font files excluded."
+  },
+  {
+    "file": "figures/framework.pdf",
+    "authors": [
+      "Dulhan Jayalath",
+      "Shashwat Goel",
+      "Thomas Foster",
+      "Parag Jain",
+      "Suchin Gururangan",
+      "Cheng Zhang",
+      "Anirudh Goyal",
+      "Alan Schelten"
+    ],
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "paper.tex TikZ diagram",
+    "changes": "Re-exported author diagram as vector PDF with system fonts and cropped canvas; original English diagram labels and included mascot retained",
+    "sha256": "8ee001d7ab2c30f96c45e8370a1256db17b9de06d81e438a3b7fa8be09f0b5b6",
+    "third_party_credit_found": false,
+    "rights_check": "Official v3 CC BY 4.0 verified; source captions/TikZ inspected. No independent third-party figure credit found. Source company logo and font files excluded."
+  },
+  {
+    "file": "figures/rubric.pdf",
+    "authors": [
+      "Dulhan Jayalath",
+      "Shashwat Goel",
+      "Thomas Foster",
+      "Parag Jain",
+      "Suchin Gururangan",
+      "Cheng Zhang",
+      "Anirudh Goyal",
+      "Alan Schelten"
+    ],
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "paper.tex TikZ diagram",
+    "changes": "Re-exported author diagram as vector PDF with system fonts and cropped canvas; original English diagram labels and included mascot retained",
+    "sha256": "feeee6847c4cd8b8a8eacc26ac912dcd4eb8631e0bd1cf860d204a5cb299985f",
+    "third_party_credit_found": false,
+    "rights_check": "Official v3 CC BY 4.0 verified; source captions/TikZ inspected. No independent third-party figure credit found. Source company logo and font files excluded."
+  },
+  {
+    "file": "figures/cat_comparison.pdf",
+    "authors": [
+      "Dulhan Jayalath",
+      "Shashwat Goel",
+      "Thomas Foster",
+      "Parag Jain",
+      "Suchin Gururangan",
+      "Cheng Zhang",
+      "Anirudh Goyal",
+      "Alan Schelten"
+    ],
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "figures/cat_comparison.pdf",
+    "changes": "Original vector PDF unchanged; original English labels retained",
+    "sha256": "b1e5e7fa1b85621aa34a51686572d02084683f9356fb5e4dae641a0f5f20e606",
+    "third_party_credit_found": false,
+    "rights_check": "Official v3 CC BY 4.0 verified; source captions/TikZ inspected. No independent third-party figure credit found. Source company logo and font files excluded."
+  },
+  {
+    "file": "figures/inference_methods_comparison.pdf",
+    "authors": [
+      "Dulhan Jayalath",
+      "Shashwat Goel",
+      "Thomas Foster",
+      "Parag Jain",
+      "Suchin Gururangan",
+      "Cheng Zhang",
+      "Anirudh Goyal",
+      "Alan Schelten"
+    ],
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "figures/inference_methods_comparison.pdf",
+    "changes": "Original vector PDF unchanged; original English labels retained",
+    "sha256": "fe71c79aacca8bd0a931e09c31bd6029d922e72a6a8dbf8f8f0dfe102f52f919",
+    "third_party_credit_found": false,
+    "rights_check": "Official v3 CC BY 4.0 verified; source captions/TikZ inspected. No independent third-party figure credit found. Source company logo and font files excluded."
+  }
+]

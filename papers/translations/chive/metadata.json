@@ -1,0 +1,69 @@
+{
+  "title": "Would this change your answer? Evaluating Explanations of LLM Behavior In The Wild with Counterfactual Experiments",
+  "translated_title": "这会改变你的答案吗? 用反事实实验评估真实场景中大语言模型行为的解释",
+  "authors": [
+    "Adam Karvonen",
+    "Euan Ong",
+    "Subhash Kantamneni",
+    "Samuel Marks"
+  ],
+  "original_version": "arXiv:2608.16747v1",
+  "original_date": "2026-08-17",
+  "original_url": "https://arxiv.org/abs/2608.16747v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16747v1",
+  "source_url": "https://arxiv.org/src/2608.16747v1",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence": "The version-specific arXiv page view-license link was followed directly and resolves to CC BY 4.0; parent also independently confirmed.",
+  "translator": "ai-self-study contributors",
+  "translation_method": "machine-assisted; non-official; translating agent reviewed source section by section",
+  "modifications": [
+    "Chinese translation",
+    "Fixed book template layout",
+    "Three text figures rebuilt in Chinese with unchanged code identifiers",
+    "Eleven original PNG charts retained byte-for-byte with translated captions and legends",
+    "Appendix contents and bibliography moved for book layout",
+    "Clarified Appendix D.2 freeform responses as the original sampled responses, consistent with the Yes/No training-target definition"
+  ],
+  "original_pdf_sha256": "c16c6f5ee52d4250417df4773e8e9bfc7511e0aac7df63ace40d2cdb1a1243a9",
+  "original_source_archive_sha256": "452ea64ed9a40ec7dfab822aaca865b0c471c40bd4c70dd8834a1f131a3db3de",
+  "original_main_tex_sha256": "d11eaef2e7ef09f122e9de2c50024ee5518761a18d5917170fd0710b33d63f3f",
+  "original_html_sha256": "bc6468eb14f408c2293260e5f31699691f5ca4a6e2a3fe2d46223284196204d7",
+  "source_scope": {
+    "pdf_pages": 35,
+    "body_sections": 6,
+    "appendices": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "figures": 14,
+    "tables": 10,
+    "source_labels": 72,
+    "printed_bibliography_items": 35,
+    "source_bib_entries": 36,
+    "numbered_equations": 0
+  },
+  "translation_scope": "Abstract, complete main text, acknowledgments, author contributions, complete printed bibliography, appendix contents, all appendices, complete displayed prompts and report examples, all figures and tables",
+  "source_retrieved_on": "2026-10-12",
+  "third_party_figures": {
+    "creditline_exceptions_found": [],
+    "check": "All 14 source figure captions and the source figure files were inspected; no third-party credit-line exception found. Text discussions of other works are citations, not reproduced external figures."
+  },
+  "independent_translation_review": "not performed in this delegated task; root integration review remains",
+  "translation_sha256": {
+    "body.tex": "18851bef310f9295e1739132fb9a54abd4ee7b5a3bb33402bf2301a43de51fce",
+    "parts/references.tex": "4f634ea8da7af5d2efcd14a329ef6654a91771d2e7132a7fc5461b611926f173",
+    "parts/appendix-fg.tex": "4f4f88f7fe6b06282997c175337c7f99d4c881d57e6dd173cf3f75401be1db9b",
+    "parts/appendix-e.tex": "0b718c18fc709c8b58904447aa781711f65d46f92b6e7ab0a2ab403947389d3e",
+    "parts/main.tex": "821f8a938ab75bce72027f8fd87b52e998b6b4113e73d811e77f43dbf3179279",
+    "parts/appendix-c.tex": "a573c86619b7138527cf4da64bd9a6f8ae0b9817d600f902fc61da40075b70f0",
+    "parts/appendix-d.tex": "a206033d181a970014dc30898558668298d0bc5187fd0f28a3c8baa8b596c251",
+    "parts/appendix-a.tex": "fc0b4d62918b659ee84ac851601566aba498f781577f096068a88f44dfe8b088",
+    "parts/appendix-b.tex": "c8a5379899bffb396233305fa298403bf743e250c3ff76320af084c14ef0cd7e"
+  }
+}

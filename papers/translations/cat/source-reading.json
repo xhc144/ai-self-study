@@ -1,0 +1,39 @@
+{
+  "retrieved_on": "2026-10-12",
+  "version": "arXiv:2509.14234v3",
+  "official_metadata_url": "https://arxiv.org/abs/2509.14234v3",
+  "license_check": {
+    "action": "Clicked exact v3 page view-license",
+    "resolved_url": "https://creativecommons.org/licenses/by/4.0/",
+    "result": "CC BY 4.0"
+  },
+  "date_checks": {
+    "arxiv_version": "2026-05-09",
+    "first_submission": "2025-09-17",
+    "downloaded_pdf_first_page": "May 12, 2026",
+    "official_html_internal": "August 24, 2026",
+    "source_macro": "\\date{\\today}"
+  },
+  "source_reading": [
+    {
+      "file": "paper.tex",
+      "scope": "All 1103 source lines through end-of-document inspected in source segments, including the final SFT/RL fine-tuning paragraphs. All main/appendix prose, equation, table, algorithm, prompt and example content translated; no formal theorem/proof environment exists in the source."
+    },
+    {
+      "file": "paper.bbl",
+      "scope": "All 46 original bibliography entries retained with cat- prefix; no independent audit of every cited paper claimed."
+    },
+    {
+      "file": "figures/*.pdf; paper.tex TikZ figures",
+      "scope": "Four original result PDFs retained; two source TikZ diagrams exported as vector PDFs in isolated temp files. Captions and source asset use checked for third-party credit; no separate third-party figure credit found."
+    }
+  ],
+  "conference_version": {
+    "url": "https://proceedings.mlr.press/v306/jayalath26a.html",
+    "use": "Metadata comparison only; not translation source or license basis."
+  },
+  "limits": [
+    "Source reading is not independent bilingual peer review.",
+    "Author numerical inconsistencies and notation limitations are explicitly preserved and separately annotated."
+  ]
+}

@@ -1,0 +1,40 @@
+\phantomsection
+\noindent\textbf{原文表 2. DeepSeek-R1 各阶段的实验结果.}\paperlabel{2}{r1n-table2}
+\begin{longtable}{p{5.2cm}rrrrr}
+\toprule
+基准 (指标) & R1-Zero & R1 Dev1 & R1 Dev2 & R1 Dev3 & R1 \\
+\midrule
+\endfirsthead
+\toprule
+基准 (指标) & R1-Zero & R1 Dev1 & R1 Dev2 & R1 Dev3 & R1 \\
+\midrule
+\endhead
+\multicolumn{6}{l}{\textbf{英文}} \\
+MMLU (EM) & 88.8 & 89.1 & \textbf{91.2} & 91.0 & 90.8 \\
+MMLU-Redux (EM) & 85.6 & 90.0 & 93.0 & 93.1 & 92.9 \\
+MMLU-Pro (EM) & 68.9 & 74.1 & 83.8 & 83.1 & \textbf{84.0} \\
+DROP (3-shot F1) & 89.1 & 89.8 & 91.1 & 88.7 & \textbf{92.2} \\
+IF-Eval (Prompt Strict) & 46.6 & 71.7 & 72.0 & 78.1 & \textbf{83.3} \\
+GPQA Diamond (Pass@1) & \textbf{75.8} & 66.1 & 70.7 & 71.2 & 71.5 \\
+SimpleQA (Correct) & 30.3 & 17.8 & 28.2 & 24.9 & 30.1 \\
+FRAMES (Acc.) & 82.3 & 78.5 & 81.8 & 81.9 & \textbf{82.5} \\
+AlpacaEval 2.0 (LC-winrate) & 24.7 & 50.1 & 55.8 & 62.1 & \textbf{87.6} \\
+Arena-Hard (GPT-4-1106) & 53.6 & 77.0 & 73.2 & 75.6 & \textbf{92.3} \\
+\multicolumn{6}{l}{\textbf{编程}} \\
+LiveCodeBench (Pass@1-COT) & 50.0 & 57.5 & 63.5 & 64.6 & \textbf{65.9} \\
+Codeforces (Percentile) & 80.4 & 84.5 & 90.5 & 92.1 & \textbf{96.3} \\
+Codeforces (Rating) & 1,444 & 1,534 & 1,687 & 1,746 & \textbf{2,029} \\
+SWE-bench Verified (Resolved) & 43.2 & 39.6 & 44.6 & 45.6 & \textbf{49.2} \\
+Aider-Polyglot (Acc.) & 12.2 & 6.7 & 25.6 & 44.8 & \textbf{53.3} \\
+\multicolumn{6}{l}{\textbf{数学}} \\
+AIME 2024 (Pass@1) & 77.9 & 59.0 & 74.0 & 78.1 & \textbf{79.8} \\
+MATH-500 (Pass@1) & 95.9 & 94.2 & 95.9 & 95.4 & \textbf{97.3} \\
+CNMO 2024 (Pass@1) & \textbf{88.1} & 58.0 & 73.9 & 77.3 & 78.8 \\
+\multicolumn{6}{l}{\textbf{中文}} \\
+CLUEWSC (EM) & 93.1 & 92.8 & 92.6 & 91.6 & 92.8 \\
+C-Eval (EM) & \textbf{92.8} & 85.7 & 91.9 & 86.4 & 91.8 \\
+C-SimpleQA (Correct) & 66.4 & 58.8 & 64.2 & 66.9 & 63.7 \\
+\bottomrule
+\end{longtable}
+\noindent\textbf{原表注.} 粗体数字表示性能具有统计显著性 ($t$ 检验, $P<0.01$).
+\noindent\textbf{指标文字对应.} EM: 完全匹配; 3-shot F1: 三样本提示下的 F1; Prompt Strict: 提示级严格判定; Correct: 正确率; Acc.: 准确率; LC-winrate: 长度控制胜率; Percentile: 百分位; Rating: 评级分; Resolved: 问题解决率. Pass@1、Pass@1-COT 和 GPT-4-1106 为原表指标标签, 原样保留.

@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\begingroup\setlength{\tabcolsep}{3pt}
+\caption{原文表2: 长上下文性能,32k长度. 译稿把原模型行与指标列转置,每个数据单元保留. 括号为扩展训练前的预训练步数及损失. LongPPL越低越好,RULER准确率越高越好;粗体和下划线保留作者标记.}\label{engram-tab-2}
+\begin{tabular}{lrrrr}\toprule
+指标 & \shortstack{MoE-27B\\(50k,1.63)} & \shortstack{Engram-27B\\(41k,1.66)} & \shortstack{Engram-27B\\(46k,1.63)} & \shortstack{Engram-27B\\(50k,1.62)} \\
+\midrule
+LongPPL:书籍 & 4.38 & 4.37 & \underline{4.19} & \textbf{4.14} \\
+LongPPL:论文 & 2.91 & 2.92 & \underline{2.84} & \textbf{2.82} \\
+LongPPL:代码 & 2.49 & 2.50 & \underline{2.45} & \textbf{2.44} \\
+LongPPL:长思维链 & 14.16 & 14.26 & \underline{13.59} & \textbf{13.41} \\
+RULER:S & \textbf{100.0} & \underline{99.6} & 97.6 & 99.3 \\
+RULER:MK & 88.0 & 88.3 & \underline{89.0} & \textbf{89.3} \\
+RULER:MV & 92.7 & 93.0 & \underline{95.5} & \textbf{96.5} \\
+RULER:MQ & 84.2 & 89.5 & \textbf{97.0} & \textbf{97.0} \\
+RULER:VT & 77.0 & 83.2 & \underline{87.2} & \textbf{89.0} \\
+RULER:CWE & \underline{4.5} & 3.8 & 4.3 & \textbf{5.9} \\
+RULER:FWE & 73.0 & 99.6 & \underline{98.6} & \textbf{99.3} \\
+RULER:QA & 34.5 & \textbf{44.0} & 37.5 & \underline{40.5} \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{table}

@@ -1,91 +1,221 @@
-\originalchapter{神经网络与反向传播}\label{ch:nn}
-\originalsection{非线性组合的必要性}
-线性层叠加仍是线性层. 若 $h=A_1x+b_1$, $z=A_2h+b_2$, 则 $z=A_2A_1x+A_2b_1+b_2$. 因而单纯增加线性层数不会扩大可表示的函数族. 神经网络在层间插入非线性, 让不同输入激活不同的局部运算. 其价值是函数表示与可训练的组合结构, 不是“神经”一词本身.
+\originalchapter{表征网络与反向传播}\label{ch:nn}
+\originalsection{从标量函数到可学习表征}
+语言模型并不直接在词编号上做算术. 它先把离散编号换成向量, 再让这些向量在多层运算中随上下文改变, 最后映成下一个 token 的概率. 中间向量称为表征: 它是后续计算使用的数值状态, 不要求每个坐标都有一个可命名的语义. 本章学习这些数值状态怎样由参数产生, 又怎样把预测误差传回所有共享参数. 下一章会把局部运算组合为注意力和 Transformer.
+
+先用一个只有两个参数的网络说明反向传播. 输入 $x$ 是固定实数, 定义 $a=wx$, $h=\tanh a$, $z=vh$, 目标为 $y$, 损失 $\ell=(z-y)^2/2$. 三个中间变量让我们无须每次重新展开整个复合函数. 记 $g_z=\partial\ell/\partial z=z-y$. 从 $z=vh$ 得 $g_v=g_zh$, $g_h=g_zv$; 从 $h=\tanh a$ 得 $g_a=g_h(1-h^2)$; 最后从 $a=wx$ 得 $g_w=g_ax$. 合起来是
+\[
+\frac{\partial\ell}{\partial v}=(z-y)h,\qquad
+\frac{\partial\ell}{\partial w}=(z-y)v(1-h^2)x.
+\]
+每一步只需知道当前节点的局部导数和下游传来的系数. 为何这能算出整体导数? 因为 $d\ell=g_z\,dz$, 而 $dz=h\,dv+v\,dh$, $dh=(1-h^2)\,da$, $da=x\,dw$; 代入后 $dw,dv$ 的系数恰是上述结果. 这里 $d$ 表示围绕当前数值的一阶线性变化, 如 $d(wx)=x\,dw$ 表示当 $w$ 有小增量时, 输出的一阶变化系数为 $x$. 对一般非线性函数, 微分等式描述线性主项, 不是声称任意有限增量都没有余项. 这就是链式法则在计算图上的组织方式.
+
+若一个变量通向多条路径, 微分的系数必须相加. 比如 $z=vh+uh$, 则 $dz=h\,dv+h\,du+(v+u)\,dh$, 因而 $g_h=(v+u)g_z$. 只沿其中一条边返回会漏掉另一项. 查表、共享矩阵、残差和注意力都会重复出现这一原则.
+
+层间非线性改变了网络能表示的函数. 两个仿射层 $h=A_1x+b_1,z=A_2h+b_2$ 合并后仍是 $z=A_2A_1x+A_2b_1+b_2$. 只增加仿射层数没有增加函数族. 逐坐标非线性可以让输入在不同区域走过不同的运算. 对二元输入, XOR 的正例是 $(1,0),(0,1)$, 负例是 $(0,0),(1,1)$. 若 $w_1x_1+w_2x_2+b$ 能严格分开它们, 则正例给 $w_1+w_2+2b>0$, 两个负例相加却给同一量小于零, 矛盾. 但
+$h_1=\operatorname{ReLU}(x_1-x_2)$ 与 $h_2=\operatorname{ReLU}(x_2-x_1)$ 使 $h_1+h_2$ 在正例为 1, 负例为 0. 这是一个可直接检查的非线性表征.
 
 \begin{definition}
-两层多层感知机在列向量记号下写为 $a=W_1x+b_1$, $h=\phi(a)$, $z=W_2h+b_2$. $W_1\in\R^{r\times d}$, $W_2\in\R^{V\times r}$, 激活 $\phi$ 逐坐标作用. 标量激活可取 $\tanh a=(e^a-e^{-a})/(e^a+e^{-a})$ 或 $\operatorname{ReLU}(a)=\max(0,a)$.
+本章的逐坐标激活使用 $\tanh a=(e^a-e^{-a})/(e^a+e^{-a})$, 或 $\operatorname{ReLU}(a)=\max(0,a)$. 前者处处可微, 导数为 $1-\tanh^2a$; 后者在 $a<0$ 导数为 0, 在 $a>0$ 导数为 1, 在 $a=0$ 没有普通导数.
 \end{definition}
-对二元输入的 XOR, 标签为 $y=x_1+x_2-2x_1x_2$. 若线性分类器能分开它, 对 $(1,0),(0,1)$ 要有 $w_1+b>0,w_2+b>0$, 而对 $(0,0),(1,1)$ 要有 $b<0,w_1+w_2+b<0$. 前两式相加给 $w_1+w_2+2b>0$, 后两式相加给同一量小于零, 矛盾. 非线性特征 $h_1=\operatorname{ReLU}(x_1-x_2)$, $h_2=\operatorname{ReLU}(x_2-x_1)$ 则使 $h_1+h_2$ 在 XOR 正例上为 1, 负例上为 0. 这构造了可分表示, 不依赖“网络足够大”的泛称.
+实现通常把 ReLU 在零点的反传值约定为 0, 有些理论讨论允许在 $[0,1]$ 中选择一个次梯度. 这个约定不是证明它在零点可微. 若有限差分跨过拐点, 中心差分可能得到 $1/2$, 与实现约定不同; 这类差异应先检查不可微位置, 不能直接断言反传有错. $\tanh$ 便于本书的平滑梯度实验; 现代 Transformer 的前馈层也会使用其他平滑或门控激活, 其反向仍服从同一局部求导规则.
 
-\originalsection{单样本完整梯度}
-令输出概率 $q=\softmax(z)$, 真实类别的 one-hot 向量为 $e_y$, 损失为 $\ell=-\log q_y$. 第 3 章已给出 $\delta_2=\nabla_z\ell=q-e_y$. 用第 4 章仿射映射的微分,
+\originalsection{矩阵梯度由坐标系数决定}
+本章统一采用“样本或 token 在行上, 特征在列上”的代码记号. 单 token 输入 $x\in\R^{1\times d}$, 两层网络为
+\[
+a=xW_1+b_1,\quad h=\tanh a,\quad z=hW_2+b_2,
+\]
+其中 $W_1\in\R^{d\times r}$, $b_1\in\R^{1\times r}$, $W_2\in\R^{r\times V_0}$, $b_2\in\R^{1\times V_0}$. $z$ 是 logits, 还不是概率; $\softmax(z)$ 才是 $V_0$ 类的概率. 行记号的权重与常见列记号转置, 不能把两种约定的式子直接混用.
+
+矩阵梯度的定义如下: 对实标量损失 $L$, 梯度 $G_W$ 与参数 $W$ 同形, 并满足
+\[dL=\langle G_W,dW\rangle_F=\sum_{i,j}(G_W)_{ij}(dW)_{ij}.\] 这里 Frobenius 内积就是“逐项相乘再求和”. 梯度不是为了凑出合法乘法而猜来的, 是每个独立坐标增量的系数.
+
+以 $Y=XW$ 为例, $X\in\R^{N\times d}$, $W\in\R^{d\times r}$, $Y\in\R^{N\times r}$. 给定 $G_Y$, 用分量展开:
 \begin{align*}
-\nabla_{W_2}\ell&=\delta_2h^\top,&\nabla_{b_2}\ell&=\delta_2,\\
-\nabla_h\ell&=W_2^\top\delta_2,&
-\delta_1=\nabla_a\ell&=(W_2^\top\delta_2)\odot\phi'(a),\\
-\nabla_{W_1}\ell&=\delta_1x^\top,&\nabla_{b_1}\ell&=\delta_1.
+dL&=\sum_{n,j}(G_Y)_{nj}\,dY_{nj}\\
+&=\sum_{n,j}(G_Y)_{nj}\left(\sum_i dX_{ni}W_{ij}+\sum_iX_{ni}dW_{ij}\right)\\
+&=\sum_{n,i}\left(\sum_j(G_Y)_{nj}W_{ij}\right)dX_{ni}
++\sum_{i,j}\left(\sum_nX_{ni}(G_Y)_{nj}\right)dW_{ij}.
 \end{align*}
-$\odot$ 为逐坐标乘积. 对 $\tanh$, $\phi'(a)=1-\tanh^2a=1-h^2$. 先计算下游梯度再乘局部 Jacobian 的转置, 是反向传播的全套原则. 如果一个变量同时影响多条路径, 必须把路径贡献相加.
+因此 $G_X=G_YW^\top$, $G_W=X^\top G_Y$. 前者保留每行自己的误差信号, 后者把所有行对同一个权重的贡献汇总. 偏置若广播到每行, $dY_{nj}$ 还含 $db_j$, 故 $G_{b_j}=\sum_n(G_Y)_{nj}$. 广播的反向不是复制, 而是对使用该参数的所有位置求和.
 
-批量实现常把样本放在行上, 写 $H=\tanh(XW_1+b_1)$, $Z=HW_2+b_2$. 此时权重尺寸与列记号转置. 若 $D_2$ 已含平均损失的 $1/B$ 因子, 则 $\nabla W_2=H^\top D_2$, $\nabla b_2=\sum_i(D_2)_{i,:}$, $D_1=(D_2W_2^\top)\odot(1-H^2)$, $\nabla W_1=X^\top D_1$. 梯度中只能平均一次; 把所有层都再除以 $B$ 会错误缩小更新.
-
-\begin{example}
-一维隐层网络为 $a=wx$, $h=\tanh a$, $z=vh$, 损失为 $\ell=(z-y)^2/2$. 求对 $w,v$ 的导数.
-\end{example}
-\begin{solution}
-输出处梯度为 $z-y$. 对 $v$ 得 $(z-y)h$; 对 $w$ 的路径依次经过 $v$, $1-h^2$ 和 $x$, 得 $(z-y)v(1-h^2)x$. 若先把网络完全展开为 $(v\tanh(wx)-y)^2/2$ 再求导, 会得到同样结果. 反向传播只是避免重复展开公共子表达式.
-\end{solution}
-
-\originalsection{批次轴与共享参数}\label{sec:tensor}
-语言模型让每个样本含多个 token, 从二维表进入三维数组. 用 $B$ 表示文档数, $T$ 表示输入位置数, $D$ 表示特征数, $V_0$ 表示词表大小. 本节代码采用 Python 的零起下标: $b=0,\ldots,B-1$, $t=0,\ldots,T-1$, 词编号取 $0,\ldots,V_0-1$. 数组 \texttt{ids} 的形状是 $(B,T)$, 元素是整数编号; \texttt{E} 的形状是 $(V_0,D)$, \texttt{P} 是 $(T,D)$. 查表 \texttt{E[ids]} 把每个编号换成一行特征, 得到 $(B,T,D)$. 位置向量对每个文档共享, 因此
-\[
-x_{bti}=E_{\mathrm{ids}_{bt},i}+P_{ti}.
-\]
-代码 \texttt{x=E[ids]+P[:T]} 把 $P$ 的前面补一个长度为 1 的批次轴, 再沿 $B$ 复制使用. 这称为广播. 反向对共享的 $P_{ti}$ 收集所有文档的贡献: $(G_P)_{ti}=\sum_b(G_x)_{bti}$, 对应 \texttt{dx.sum(0)}. 偏置 $b_i$ 同时对所有文档和位置广播, 则 $G_{b_i}=\sum_{b,t}(G_y)_{bti}$, 对应 \texttt{dy.sum(axis=(0,1))}.
-
-对于权重 $W\in\R^{D\times R}$, \texttt{x@W} 在每个 $(b,t)$ 的特征行上使用同一权重, 输出形状 $(B,T,R)$. 换成分量即 $y_{btr}=\sum_i x_{bti}W_{ir}$. 第 \ref{sec:frobenius} 节的系数比较现在多一个求和轴:
-\[
-(G_W)_{ir}=\sum_{b,t}x_{bti}(G_y)_{btr},\qquad G_x=G_yW^\top.
-\]
-\texttt{x.reshape(-1,D)} 把前两个轴合并成 $BT$ 行, 第 $bT+t$ 行就是原来的 $(b,t)$ 行, 保留最后的特征轴. 它没有求和、没有交换特征. 这样 \texttt{x.reshape(-1,D).T @ dy.reshape(-1,R)} 一次矩阵乘法完成上式的双重求和. 两个数组必须用相同的行顺序. 本项目的 \texttt{mm(x,y)} 就是这一操作. 平均交叉熵的 $1/(BT)$ 已进入 \texttt{dl}, 因而这里不再除以批次大小.
-
-查表有相反方向的汇总: 若同一词在两个位置出现, 两条梯度路径属于同一参数行. 其数学定义为
-\[
-(G_E)_{vi}=\sum_{b,t:\,\mathrm{ids}_{bt}=v}(G_x)_{bti}.
-\]
-代码先创建零数组, 再用 \texttt{np.add.at(g['E'],ids,dx)} 按编号累加. 普通高级索引 \texttt{gE[ids] += dx} 可能先取出副本再写回, 重复编号的贡献不会可靠地逐次积累. 与位置向量求和一样, 本质是共享参数的所有路径都须相加.
+对一个真实类别 $y$, 损失 $\ell=-\log\softmax(z)_y$. 把损失写成 $\ell=\log\sum_v e^{z_v}-z_y$, 对 $z_j$ 求导即得 $q_j-\mathbf1\{j=y\}$. 因而 logits 梯度是行向量 $D_2=q-e_y$, 后续为
+\begin{align*}
+G_{W_2}&=h^\top D_2,&G_{b_2}&=D_2,&G_h&=D_2W_2^\top,\\
+D_1=G_a&=G_h\odot(1-h^2),&G_{W_1}&=x^\top D_1,&G_{b_1}&=D_1.
+\end{align*}
+$\odot$ 表示同形数组逐项相乘. $h^2$ 也逐项计算. $G_h$ 与 $h$ 同形, $D_1$ 与 $a$ 同形; 每一层的参数梯度才在另一轴上收集所有样本的贡献.
 
 \begin{exercise}
-词表大小为 3, 特征维为 2. 两个位置的编号都是 1, 上游梯度分别为 $(2,-1)$ 和 $(3,4)$. 写出正确的词表梯度, 并实际比较高级索引与 \texttt{np.add.at}.
+令 $X=\left(\begin{smallmatrix}1&2\\3&4\end{smallmatrix}\right)$, $W\in\R^{2\times1}$, 上游梯度 $G_Y=(2,-1)^\top$. 求 $G_W$, 并解释为何不能只取第一行的贡献.
 \end{exercise}
 \begin{solution}
-编号为 1 的行, 即数组的第二行, 应为 $(5,3)$, 其他行为零. 可运行如下代码; 本项目测试也检查这个共享路径不变量:
+$G_W=X^\top G_Y=(1\cdot2+3\cdot(-1),2\cdot2+4\cdot(-1))^\top=(-1,0)^\top$. 第一行单独贡献 $(2,4)^\top$, 第二行贡献 $(-3,-4)^\top$, 同一个权重列在两行都被使用, 因而必须相加. 激活梯度 $G_X=G_YW^\top$ 则分别保留两行, 它与参数梯度的汇总目的不同.
+\end{solution}
+
+\originalsection{批次、位置与查表共享}\label{sec:tensor}
+语言模型的批次是三维数组. 用 $B$ 表示文档数, $T$ 表示输入位置数, $D$ 表示特征数, $V_0$ 表示词表大小. 为直接对应 Python, 下标从零开始. 整数数组 \texttt{ids} 形状为 $(B,T)$, 元素在 $0,\ldots,V_0-1$ 中; 词表矩阵 $E\in\R^{V_0\times D}$ 的一行是一个 token 的初始表征, 位置矩阵 $P\in\R^{T\times D}$ 为不同位置提供向量. 查表称为 gather, 前向定义为
+\[
+X_{bti}=E_{\mathrm{ids}_{bt},i}+P_{ti}.
+\]
+因此 \texttt{E[ids]} 的形状为 $(B,T,D)$, 而 \texttt{P[:T]} 的形状为 $(T,D)$. 相加时 NumPy 把后者看成 $(1,T,D)$, 沿批次轴重复使用. 这就是广播: 形状允许共享使用一个参数, 不需要在参数表中真的存 $B$ 份副本.
+
+对应的反向先得到 $G_X\in\R^{B\times T\times D}$, 再收集路径:
+\[
+(G_P)_{ti}=\sum_b(G_X)_{bti},\qquad
+(G_E)_{vi}=\sum_{b,t:\,\mathrm{ids}_{bt}=v}(G_X)_{bti}.
+\]
+第一式是沿批次轴的普通求和, 第二式是按词编号分组求和. 同一个 token 重复出现, 它对同一参数行的贡献必须全部保留. 整数编号自身不是本书中需要求导的连续参数; 反向更新的是选中的词表向量, 不是把编号 2 改成 2.1.
+
+\begin{example}
+词表有 3 行、每行 2 维, 两个位置的词编号均为 1. 上游梯度分别为 $(2,-1)$ 和 $(3,4)$. 写出正确词表梯度, 并比较两种代码.
+\end{example}
+\begin{solution}
+编号 1 指第二行, 其梯度为 $(5,3)$, 其余行是零. 代码为
 \begin{verbatim}
-import numpy as np
 ids = np.array([1, 1])
 dx = np.array([[2., -1.], [3., 4.]])
 good = np.zeros((3, 2)); bad = good.copy()
 np.add.at(good, ids, dx)
 bad[ids] += dx
-print(good[1], bad[1])
 \end{verbatim}
-在本次 NumPy 环境中分别输出 \texttt{[5. 3.]} 与 \texttt{[3. 4.]}. 第二条语句不足以表达逐出现次数累加, 所以不应用它实现查表反向传播.
+本项目 NumPy 环境中, 第二行分别得到 \texttt{[5. 3.]} 和 \texttt{[3. 4.]}. 高级索引的增量赋值可能先操作临时取出的数组, 重复索引不能表达逐出现次数的可靠累加. \texttt{np.add.at} 明确执行按索引的无缓冲累加, 因而适合这里的反传. 若所有编号互异, 错误代码可能暂时给出相同结果; 测试必须包含重复词.
 \end{solution}
 
-\originalsection{计算图、初始化与残差}
-对含共享子图的网络, 反向传播每条边只处理局部导数, 通常代价与前向同一数量级. 它需要保存前向中用于局部导数的激活, 因而训练内存通常大于单次推理. 自动微分框架实现的是运算图的求导规则, 不是自动判断数学目标是否适合任务. 错误的数据划分与损失定义仍会得到“正确计算”的梯度.
+在每个 $(b,t)$ 上共享 $W\in\R^{D\times R}$, 则
+$Y_{btr}=\sum_iX_{bti}W_{ir}+b_r$, 形状是 $(B,T,R)$. 仿射层的梯度为
+\[
+G_X=G_YW^\top,\quad
+(G_W)_{ir}=\sum_{b,t}X_{bti}(G_Y)_{btr},\quad
+G_b=\sum_{b,t}(G_Y)_{bt,:}.
+\]
+实现把前两轴展为 $BT$ 行:
+\begin{verbatim}
+xflat = x.reshape(-1, D)
+dyflat = dy.reshape(-1, R)
+gW = xflat.T @ dyflat
+gx = dy @ W.T
+gb = dy.sum(axis=(0, 1))
+\end{verbatim}
+展平后的第 $bT+t$ 行对应原来的 $(b,t)$; 两个数组必须采用相同次序. 展平没有平均、没有求和, 是一次重新组织索引; 后面的矩阵乘法才执行对这些行的求和. 本项目旧模型的 \texttt{mm(x,y)} 就是这条展平后的共享矩阵梯度公式.
 
-初始化全部相同会让多个隐单元接收相同输入、得到相同梯度, 对称性无法靠普通确定更新破除. 权重过大时 $\tanh$ 饱和, 导数接近零; 过小时信号可能逐层减弱. 一个粗略方差分析是假设输入分量独立、居中, 权重独立且方差为 $s^2$, 则 $a_j=\sum_{i=1}^d W_{ij}x_i$ 的方差约为 $ds^2\operatorname{Var}(x_i)$. 选择 $s^2$ 随 $1/d$ 缩放可控制信号尺度. 假设不严格满足时, 这个分析仍只是初始化的设计理由, 不是训练成功保证.
+\originalsection{从平均损失到参数更新}
+令每个位置预测下一个 token, logits 为 $Z\in\R^{B\times T\times V_0}$, 目标数组为 $Y\in\{0,\ldots,V_0-1\}^{B\times T}$. 没有 padding 时, 平均损失和其导数为
+\[
+L=-\frac1{BT}\sum_{b,t}\log q_{bt,Y_{bt}},\qquad
+(G_Z)_{btv}=\frac{q_{btv}-\mathbf1\{v=Y_{bt}\}}{BT}.
+\]
+分母在损失定义时已经确定, 所以进入 $G_Z$ 后, 后面每层不得再除以 $B$ 或 $BT$. 若同一批次完整复制两份, 平均损失和所有参数梯度都应相同; 这是一个能抓住重复平均错误的不变量.
 
-残差层 $h_{l+1}=h_l+F_l(h_l)$ 的 Jacobian 为 $I+J_{F_l}$. 它提供一条直接的恒等路径, 但多层乘积依然可能爆炸或衰减, 所以不能声称残差必然消除梯度问题. 层归一化对每个 token 的特征计算均值 $\mu$ 和方差 $s^2$, 再输出 \mbox{$\gamma\odot(h-\mu)/\sqrt{s^2+\epsilon}+\beta$}. $\gamma,\beta$ 是可训练向量. 方差中的 $\epsilon$ 防止退化除零. 首版手写小模型省略归一化, 为减少实现与梯度检查负担; 现代标准 Transformer 通常包含它或 RMSNorm.
+有 padding 时, 令 $m_{bt}\in\{0,1\}$ 表示这个位置是否计入损失, $N=\sum_{b,t}m_{bt}>0$. 平均损失改为\[L=-\frac1N\sum_{b,t}m_{bt}\log q_{bt,Y_{bt}}.\]对应的 logits 梯度是 $m_{bt}(q-e_Y)/N$. Padding 的注意力掩码与损失掩码目的不同: 一个限制信息读取, 一个决定哪些输出被计分. 只把 padding 的损失设为零, 不一定阻止其他位置读取它; 只把 padding 的键遮住, 也不等于它的输出不计入损失.
 
-\originalsection{实验与练习}
-实验 \texttt{mlp} 使用 8 个 $\tanh$ 隐单元, 两个 softmax 输出, 对 XOR 的全部四点训练 4,000 次, 步长为 0.1. 初始化与训练均固定种子, 所有参数组都有有限差分抽样. 它检验“非线性表示能拟合 XOR”与“反向传播实现相符”, 没有独立测试样本, 因而不报告自然数据泛化能力. 损失曲线来自实际执行, 在图 \ref{fig:mlp} 中显示.
+计算出所有梯度后, 普通梯度下降同时更新 $\theta\leftarrow\theta-\eta G_\theta$. “同时”指每组参数都使用本次前向的旧参数及其反向梯度. 若先更新 $W_2$, 再用新的 $W_2$ 返回 $G_h$, 得到的就不是同一个损失在同一点的梯度. 实现时先完成整个反向并存梯度, 再统一修改参数.
+
+为什么正确梯度在小步长下能降损失? 把所有参数视为一个长向量, 可微性给
+$L(\theta-\eta g)=L(\theta)-\eta\norm{g}^2+o(\eta)$, 其中 $g=\nabla L(\theta)$. 若 $g\ne0$, 足够小的正 $\eta$ 使线性下降项胜过余项. 这仅是当前点附近的结论, 不能保证任意步长、任意迭代都下降, 更不能保证测试风险下降. ReLU 的拐点还需要单独处理非光滑情形.
+
+\begin{exercise}
+一个实现先令 logits 梯度除以 $BT$, 再把每个矩阵梯度除以 $BT$. 若 $B=2,T=3$, 它算的是原目标的梯度吗? 如何用复制批次定位?
+\end{exercise}
+\begin{solution}
+不是. 单个矩阵梯度又缩小了 6 倍, 而传播到上游的激活梯度若没有同步缩放, 各组参数还会出现不一致. 复制整批次后 $BT$ 变为 12, 正确平均梯度应保持不变, 错误矩阵梯度却再缩小一半. 先检查 logits 处平均因子, 再检查各共享参数的求和; 平均应只来自损失定义一次.
+\end{solution}
+
+\originalsection{残差、初始化与梯度尺度}
+Transformer 使用残差组合 $Y=X+F(X)$. 对增量有 $dY=dX+J_F[dX]$, 因而上游梯度 $G_Y$ 回到输入时成为 $G_X=G_Y+J_F^\top[G_Y]$. 这里 $J_F$ 是把输入增量映到输出增量的线性映射, 转置表示把微分系数传回输入. 恒等路径的 $G_Y$ 不能漏掉. 若 $F$ 有自己的参数, 恒等支路没有这些参数, 所以它不直接增加 $F$ 的参数梯度.
+
+多层网络的激活梯度会反复乘局部导数. 对标量链, 若每层导数都为 $0.5$, 20 层后系数成为 $2^{-20}$; 若都为 2, 则成为 $2^{20}$. 矩阵版本可用线性映射的范数解释: 定义 $\norm{J}=\sup_{u\ne0}\norm{Ju}/\norm{u}$, 则从定义直接得 $\norm{J_1J_2}\le\norm{J_1}\norm{J_2}$. 残差把局部导数改为 $I+J_F$, 提供直接路径, 但若这些映射的乘积过大或发生方向抵消, 梯度仍可爆炸或衰减. 残差不构成无条件稳定性保证.
+
+初始化先要破除隐单元的对称性. 若所有隐单元使用相同权重和偏置, 又接受相同下游连接, 它们在确定性更新下可能始终相同, 无法学出不同特征. 随机初始化给出不同起点. 还要控制前向信号尺度: 若 $a_j=\sum_{i=1}^dW_{ij}x_i$, 输入居中且独立、方差为 $v$, 权重相互独立、均值零、方差 $s^2$, 并独立于输入, 则
+\[
+\E a_j=0,\qquad \operatorname{Var}(a_j)=\sum_i\E W_{ij}^2\E x_i^2=ds^2v.
+\]
+交叉项因零均值与独立性消失. 令 $s^2$ 随 $1/d$ 缩放, 可避免单层求和使方差随输入宽度增长. 这是当前假设下的精确计算, 对训练后相关表征只是尺度设计的参考. 对称且近零均值的高斯预激活, ReLU 把负半轴置零, 其输出二阶矩为预激活二阶矩的一半, 所以常用 $2/d$ 的权重方差补偿这一二阶矩变化; 二阶矩不是方差, 因为 ReLU 输出通常均值为正.
+
+对于 $\tanh$, 大幅度预激活使 $1-h^2$ 接近零, 回传信号可能消失. 实际诊断应同时检查层输出的均方尺度、饱和比例、每组梯度范数和更新范数 $\eta\norm{G_W}/\max(\norm{W},\varepsilon)$. 梯度很小可能是模型已接近驻点, 也可能是饱和、错误平均或漏路径. 梯度很大可能来自大损失、异常输入或归一化分母过小. 单一范数没有足够信息确定原因.
+
+\originalsection{LayerNorm 的数值与完整导数}\label{sec:layernorm}
+归一化让每个 token 的各特征在相近尺度下进入后续层. LayerNorm 沿特征轴计算, 不沿批次或位置轴计算\cite{layernorm}. 对单个 token $x\in\R^D$, 定义
+\[
+\mu=\frac1D\sum_i x_i,\quad c_i=x_i-\mu,\quad
+s^2=\frac1D\sum_i c_i^2,\quad r=(s^2+\epsilon)^{-1/2},\quad
+\widehat x_i=rc_i,\quad y_i=\gamma_i\widehat x_i+\beta_i.
+\]
+这里 $D\ge1$, $\epsilon>0$ 是固定常数, $\gamma,\beta\in\R^D$ 为可训练的共享参数. 方差分母使用 $D$, 不是统计中的无偏样本方差分母 $D-1$. 对 $(B,T,D)$ 输入, 每个 $(b,t)$ 分别计算一组 $\mu,s^2,r$, 而 $\gamma,\beta$ 对所有 token 共享.
+
+归一化结果满足 $\sum_i\widehat x_i=0$, 但其平均平方为 $s^2/(s^2+\epsilon)$, 并不精确等于 1. 加上 $\gamma,\beta$ 后, 输出也不必零均值. 正 $\epsilon$ 保证对任何有限输入分母非零, 整个函数处处可微. 若 $\epsilon=0$ 且所有特征相同, 就未定义; 若 $\epsilon=0$ 且方差正, 才可在该开集上使用同样微分式.
+
+为求导, 先让 $dx_i$ 表示输入增量. 因 $\sum_i c_i=0$,
+\begin{align*}
+d\mu&=\frac1D\sum_i dx_i,&dc_i&=dx_i-d\mu,\\
+d(s^2)&=\frac2D\sum_i c_i\,dc_i=\frac2D\sum_i c_i\,dx_i,&
+dr&=-\frac{r^3}{D}\sum_i c_i\,dx_i.
+\end{align*}
+因此
+\[
+d\widehat x_i=r\left(dx_i-\frac1D\sum_jdx_j\right)
+-\frac{r^3c_i}{D}\sum_jc_j\,dx_j.
+\]
+给定上游梯度 $g_i=\partial L/\partial y_i$, 令 $u_i=g_i\gamma_i$. 将上式乘 $u_i$ 并对 $i$ 求和, $dx_j$ 的系数为
+\[
+(G_x)_j=r\left(u_j-\overline u-\widehat x_j\,\overline{u\widehat x}\right),\qquad
+\overline u=\frac1D\sum_i u_i,\quad
+\overline{u\widehat x}=\frac1D\sum_i u_i\widehat x_i.
+\]
+最后一项用了 $r^3c_jc_i=r\widehat x_j\widehat x_i$. 这一步解释了常见反向代码里两个均值项的来源, 不能把它们当作额外的“梯度归一化”随意删掉. 对可训练向量, 单 token 有 $G_{\gamma_i}=g_i\widehat x_i,G_{\beta_i}=g_i$; 整批次则沿 $(b,t)$ 求和.
+
+\begin{example}
+当 $D=4$, 输入四个特征均为 3, $\gamma_i=1$, $\beta_i=0$, $\epsilon=10^{-5}$, 上游梯度为 $(1,2,3,4)$, 求输出与输入梯度.
+\end{example}
+\begin{solution}
+此时 $c=0,s^2=0,\widehat x=0,y=0$. $\overline u=2.5$, 第三个归一化导数项为零, 所以
+\[G_x=(10^{-5})^{-1/2}(-1.5,-0.5,0.5,1.5).\]
+输出完全有限, 梯度也有限, 但其范数约为 $707.107$, 可以很大. 这说明“加 epsilon 防止除零”不等于“梯度尺度一定合适”. $D=1$ 时所有输入都被减为零, 输出恒为 $\beta$, 公式相应给 $G_x=0$.
+\end{solution}
+
+若输入所有特征加同一常数, $c$ 不变, 输出不变, 所以输入梯度的坐标和应为零; 上式也直接验证这一点. 这是一项不依赖有限差分的结构检查. 有正 $\epsilon$ 时, 整体缩放输入并不严格保持输出, 因为分母中的固定 $\epsilon$ 不随输入缩放. 不应从近似行为推成精确不变性.
+
+\originalsection{从公式到诊断实验}
+旧 \texttt{mlp} 实验只检验四点 XOR 的拟合与手写导数, 用 8 个 $\tanh$ 隐单元、4000 次更新、步长 0.1. 它没有自然数据上的独立测试, 因而拟合正确率不是语言模型泛化证据. 原损失曲线仍保留, 用于说明一个完整的前向、反向和更新闭环:
 \begin{figure}[ht]
-\centering\includegraphics[width=.66\textwidth]{generated/mlp.pdf}
-\caption{XOR 平均交叉熵随更新步数变化. 单个固定种子, 横轴为实际更新次数.}\label{fig:mlp}
+\centering\includegraphics[width=.62\textwidth]{generated/mlp.pdf}
+\caption{原 XOR 实验的平均交叉熵, 横轴为实际更新次数. 这是一项最小反传练习, 不代表基础模型能力.}\label{fig:mlp}
 \end{figure}
 
+新增 \texttt{batch} 实验更直接对应 token 网络. 输入是 $B=2,T=3$ 的词编号, 含重复编号. 模型先算 $X=E[\mathrm{ids}]+P$, 再算
+\[
+H=\tanh(XW_1+b_1),\qquad Z=HW_2+XU+b_2.
+\]
+它有一条非线性路径与一条直接路径. 对 $G_Z$, 正确输入梯度为
+$G_X=((G_ZW_2^\top)\odot(1-H^2))W_1^\top+G_ZU^\top$.
+故意删去第二项, 前向损失完全不变, $W_1,W_2,U,b_1,b_2$ 的梯度也可以仍然正确; 错误只继续传到查表和位置表 $E,P$. 测试对全部 64 个参数坐标进行中心差分, 种子 144 的正确归一化误差最大为 $1.61\times10^{-11}$, 故障恰好定位到 $E,P$. 同一实验复制批次后梯度保持不变, 并用步长 0.05 检查一次更新确实降低当前损失.
+
+有限差分检验的数值为
+$[L(\theta+h e_j)-L(\theta-h e_j)]/(2h)$, 本次 $h=10^{-5}$. 报告的坐标误差为 $|g_j^{\rm num}-g_j|/\max(1,|g_j^{\rm num}|,|g_j|)$. 分母中的 1 避免极小梯度的相对误差失真, 因而这是混合绝对与相对标准, 不是所有坐标严格的相对误差. $h$ 过小会遇到浮点相消, 过大会带来截断误差; 有疑问时应检查多个步长和不可微点.
+
+\texttt{layernorm} 实验对 $X,\gamma,\beta$ 的全部 32 个坐标检查导数, 最大误差约为 $1.73\times10^{-10}$; 测试另用随机方向的差分核对 $\langle G_X,U\rangle_F$, 并检查平移不变性与梯度坐标和为零. 数值检查只验证本次输入、参数和环境; 一般正确性来自前面的微分推导. 自动微分框架即使正确计算了梯度, 也不会自动修复污染数据、错位目标或错误损失定义.
+
+可从项目根目录执行下列命令. 新结果独立存放, 旧实验和旧结果保持原有身份:
+\begin{verbatim}
+python experiments/v03_networks.py --seed 144 --out results/v03-networks
+python -m unittest discover -s tests -p test_v03_networks.py -v
+\end{verbatim}
+
 \begin{exercise}
-若同一矩阵 $W$ 在两条支路分别产生 $Wx$ 和 $Wu$, 对应下游梯度分别为 $a,b$, 求总梯度.
+共享矩阵 $W$ 同时产生 $XW$ 与 $UW$, 两个输出的上游梯度分别为 $A,B$. 求 $G_W$. 若一条输出是残差支路, 另一条是非线性支路, 能否只保留范数较大的那条?
 \end{exercise}
 \begin{solution}
-两条路径微分相加为 $a^\top dW\,x+b^\top dW\,u$, 所以总梯度为 $ax^\top+bu^\top$. 共享参数的梯度不能由其中一条支路覆盖另一条.
+由两条微分路径相加, $G_W=X^\top A+U^\top B$. 不能按范数选择一条, 因为损失对该参数的总一阶变化是两条系数之和; 两条梯度还可能相互抵消. 若要删支路, 必须改变前向模型与目标, 而不是在原模型的反向中随意忽略它.
 \end{solution}
 \begin{exercise}
-若两层网络没有非线性, 为什么仍可能与直接优化一个线性矩阵有不同训练行为?
+某层的 $\tanh$ 激活绝对值几乎都大于 $0.999$, 下游梯度不小, 但输入侧梯度很小. 写出数值原因与两项检查. 为什么只把学习率增大未必合适?
 \end{exercise}
 \begin{solution}
-可表示函数仍是线性, 但参数化为 $W_2W_1$ 后目标对这两组因子一般非凸, 梯度分别依赖另一因子. 参数空间的尺度对称性、隐式偏置与优化轨迹都可能不同. 函数族相同不意味着优化问题相同.
+局部导数 $1-h^2$ 小于约 $0.002$, 它逐坐标缩小回传信号. 应检查预激活分布与权重初始化尺度, 同时核对归一化、输入尺度以及是否重复平均. 增大学习率同时放大未饱和位置和其他参数的更新, 可能使它们不稳定, 却不直接消除饱和机制. 应根据各组梯度和更新尺度判断, 而不是仅凭某组梯度小就改一个全局步长.
+\end{solution}
+\begin{exercise}
+有人把 LayerNorm 的均值轴改成所有 $(B,T,D)$ 坐标, 其输出仍有合法形状. 这与逐 token LayerNorm 有何区别? 在因果语言模型中还有什么风险?
+\end{exercise}
+\begin{solution}
+新的均值和方差使一个 token 依赖其他文档及其他位置, 已经不是本章定义的函数. 改变同批其他文档会改变本样本, 改变未来 token 也可能改变前缀的归一化结果. 所以即使注意力使用三角掩码, 整个模型仍可能泄漏未来信息. 形状合法不保证数学对象和信息路径正确; 下一章的因果检验必须覆盖整条前向路径.
 \end{solution}
 \label{ch:end:06}

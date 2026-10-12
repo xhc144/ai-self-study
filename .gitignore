@@ -13,3 +13,6 @@ qa/render/
 book/elegantbook-original-adapter.cls
 dist/*.bundle
 qa/style-check/
+
+.venv-models/
+book/*-original-adapter.cls

@@ -1,0 +1,150 @@
+[
+  {
+    "english": "counterfactual simulatability",
+    "chinese": "反事实可模拟性"
+  },
+  {
+    "english": "counterfactual claim",
+    "chinese": "反事实主张"
+  },
+  {
+    "english": "counterfactual experiment",
+    "chinese": "反事实实验"
+  },
+  {
+    "english": "counterfactual prompt edit",
+    "chinese": "反事实提示编辑"
+  },
+  {
+    "english": "in-the-wild behavior",
+    "chinese": "真实场景行为"
+  },
+  {
+    "english": "open-ended explanation",
+    "chinese": "开放式解释"
+  },
+  {
+    "english": "activation oracle",
+    "chinese": "激活预言机"
+  },
+  {
+    "english": "natural-language autoencoder",
+    "chinese": "自然语言自编码器"
+  },
+  {
+    "english": "sparse autoencoder",
+    "chinese": "稀疏自编码器"
+  },
+  {
+    "english": "transcript-only baseline",
+    "chinese": "仅对话记录基线"
+  },
+  {
+    "english": "investigator agent",
+    "chinese": "调查智能体"
+  },
+  {
+    "english": "predictor agent",
+    "chinese": "预测智能体"
+  },
+  {
+    "english": "behavior classifier",
+    "chinese": "行为分类器"
+  },
+  {
+    "english": "auditing game",
+    "chinese": "审计游戏"
+  },
+  {
+    "english": "uplift",
+    "chinese": "增益"
+  },
+  {
+    "english": "downlift",
+    "chinese": "负增益"
+  },
+  {
+    "english": "privileged access",
+    "chinese": "特权访问"
+  },
+  {
+    "english": "self-trained predictor",
+    "chinese": "自身训练预测者"
+  },
+  {
+    "english": "cross-trained predictor",
+    "chinese": "交叉训练预测者"
+  },
+  {
+    "english": "chain-of-thought faithfulness",
+    "chinese": "思维链忠实性"
+  },
+  {
+    "english": "hint setting",
+    "chinese": "暗示设置"
+  },
+  {
+    "english": "planted cue",
+    "chinese": "植入线索"
+  },
+  {
+    "english": "sycophancy",
+    "chinese": "迎合"
+  },
+  {
+    "english": "mechanism concreteness",
+    "chinese": "机制具体性"
+  },
+  {
+    "english": "confounded edit",
+    "chinese": "混杂编辑"
+  },
+  {
+    "english": "reproducibility",
+    "chinese": "可重复性"
+  },
+  {
+    "english": "single-factor intervention",
+    "chinese": "单因素干预"
+  },
+  {
+    "english": "false positive rate",
+    "chinese": "假阳性率"
+  },
+  {
+    "english": "true positive rate",
+    "chinese": "真阳性率"
+  },
+  {
+    "english": "AUROC",
+    "chinese": "ROC曲线下面积"
+  },
+  {
+    "english": "behavioral drift",
+    "chinese": "行为漂移"
+  },
+  {
+    "english": "hypothesis discrimination",
+    "chinese": "假设辨别"
+  },
+  {
+    "english": "hypothesis generation",
+    "chinese": "假设生成"
+  },
+  {
+    "english": "percentage point",
+    "chinese": "百分点"
+  },
+  {
+    "english": "prefill",
+    "chinese": "提示预处理"
+  },
+  {
+    "english": "ground truth",
+    "chinese": "真值"
+  },
+  {
+    "english": "model organism",
+    "chinese": "模型实验体"
+  }
+]

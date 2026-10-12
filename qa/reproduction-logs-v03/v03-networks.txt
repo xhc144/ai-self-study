@@ -1,0 +1,69 @@
+{
+  "batch": {
+    "correct_errors": {
+      "E": 1.0390785454283957e-11,
+      "P": 1.608172438532368e-11,
+      "W1": 1.4608127207882404e-11,
+      "b1": 3.21081355947328e-12,
+      "W2": 1.445277925116173e-11,
+      "U": 1.5256587659884246e-11,
+      "b2": 1.2472828325726937e-11
+    },
+    "failing_groups": [
+      "E",
+      "P"
+    ]
+  },
+  "attention": {
+    "blocked_max_abs_gaps": {
+      "1x1": 4.440892098500626e-16,
+      "4x6": 3.3306690738754696e-16,
+      "8x7": 4.440892098500626e-16,
+      "50x50": 4.440892098500626e-16
+    },
+    "masked_prefix_max_abs_gap": 0.0,
+    "unmasked_prefix_max_abs_gap": 37.10551281187789
+  },
+  "layernorm": {
+    "finite_difference_errors": {
+      "x": 1.721343609021903e-10,
+      "gamma": 1.512805436476583e-10,
+      "beta": 1.8416787267939707e-11
+    }
+  },
+  "calibration": {
+    "chosen_temperature": 2.9000000000000004
+  },
+  "selection": {
+    "rows": [
+      {
+        "candidates": 1,
+        "validation_selected_mean": 0.4996875,
+        "independent_test_mean": 0.5003449999999999,
+        "optimism_mean": 0.0006574999999999867,
+        "optimism_standard_error": 0.00473485554181748
+      },
+      {
+        "candidates": 8,
+        "validation_selected_mean": 0.371171875,
+        "independent_test_mean": 0.49986125000000003,
+        "optimism_mean": 0.12868937499999997,
+        "optimism_standard_error": 0.0027550079342340684
+      },
+      {
+        "candidates": 64,
+        "validation_selected_mean": 0.29765625,
+        "independent_test_mean": 0.49925375000000005,
+        "optimism_mean": 0.20159749999999999,
+        "optimism_standard_error": 0.001855820996095494
+      },
+      {
+        "candidates": 512,
+        "validation_selected_mean": 0.2375,
+        "independent_test_mean": 0.50013,
+        "optimism_mean": 0.26263,
+        "optimism_standard_error": 0.0014773554214722276
+      }
+    ]
+  }
+}

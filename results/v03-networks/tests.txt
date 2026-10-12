@@ -1,0 +1,14 @@
+test_all_batch_coordinates_and_localized_fault (test_v03_networks.NetworkLessons.test_all_batch_coordinates_and_localized_fault) ... ok
+test_attention_closed_form_and_late_allowed_block (test_v03_networks.NetworkLessons.test_attention_closed_form_and_late_allowed_block) ... ok
+test_attention_degenerate_mask_rejected (test_v03_networks.NetworkLessons.test_attention_degenerate_mask_rejected) ... ok
+test_cli_records_actual_code_and_environment (test_v03_networks.NetworkLessons.test_cli_records_actual_code_and_environment) ... ok
+test_gather_unused_row_and_batch_permutation (test_v03_networks.NetworkLessons.test_gather_unused_row_and_batch_permutation) ... ok
+test_layernorm_directional_derivative_and_translation (test_v03_networks.NetworkLessons.test_layernorm_directional_derivative_and_translation) ... ok
+test_online_equivalence_causal_invariance_and_derivatives (test_v03_networks.NetworkLessons.test_online_equivalence_causal_invariance_and_derivatives) ... ok
+test_selection_bias_known_population_risk (test_v03_networks.NetworkLessons.test_selection_bias_known_population_risk) ... ok
+test_temperature_preserves_labels_and_improves_controlled_nll (test_v03_networks.NetworkLessons.test_temperature_preserves_labels_and_improves_controlled_nll) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.310s
+
+OK

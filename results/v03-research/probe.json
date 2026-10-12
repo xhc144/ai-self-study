@@ -1,0 +1,61 @@
+{
+  "scope": "fitted linear probe on synthetic activations; interventions on known frozen function, not an LLM",
+  "parameters": {
+    "train_size": 512,
+    "test_size": 256,
+    "probe_steps": 1200,
+    "probe_lr": 0.1,
+    "downstream_function": "f(h)=h[0]",
+    "observational_support": "h[1]=h[0]; h[2] independent Rademacher"
+  },
+  "probe_weight_intercept": [
+    4.757235609100793,
+    -0.020000945554465435
+  ],
+  "probe_test_accuracy": 1.0,
+  "rows": [
+    {
+      "intervention": "used_positive_control",
+      "coordinate": 0,
+      "mean_patch_norm": 2.0,
+      "mean_absolute_logit_change": 2.0,
+      "output_flip_rate": 1.0,
+      "off_observational_support_rate": 1.0
+    },
+    {
+      "intervention": "decodable_unused",
+      "coordinate": 1,
+      "mean_patch_norm": 2.0,
+      "mean_absolute_logit_change": 0.0,
+      "output_flip_rate": 0.0,
+      "off_observational_support_rate": 1.0
+    },
+    {
+      "intervention": "nuisance_negative_control",
+      "coordinate": 2,
+      "mean_patch_norm": 2.0,
+      "mean_absolute_logit_change": 0.0,
+      "output_flip_rate": 0.0,
+      "off_observational_support_rate": 0.0
+    }
+  ],
+  "random_coordinate_control_mean_absolute_logit_change": 0.7265625,
+  "random_coordinate_theory_mean_absolute_logit_change": 0.6666666666666666,
+  "corrupted_accuracy": 0.0,
+  "positive_patch_recovery_accuracy": 1.0,
+  "unused_patch_recovery_accuracy": 0.0,
+  "integrated_gradients": {
+    "quadrature_panels": 2048,
+    "values": [
+      0.39996368174111213,
+      0.09999092043527803
+    ],
+    "sum": 0.49995460217639015,
+    "output_difference": 0.4999546021312976,
+    "completeness_residual": 4.50925408124192e-11,
+    "endpoint_gradient": [
+      0.00018158323094363062,
+      9.079161547181531e-05
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "original_key": "zhao2024wildchat1mchatgptinteraction",
+    "translated_key": "chive-zhao2024wildchat1mchatgptinteraction",
+    "title": "WildChat: 1M ChatGPT Interaction Logs in the Wild",
+    "translated_title": "WildChat: 真实场景中的100万份ChatGPT交互记录",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "lourie2021scruplescorpuscommunityethical",
+    "translated_key": "chive-lourie2021scruplescorpuscommunityethical",
+    "title": "Scruples: A Corpus of Community Ethical Judgments on 32,000 Real-Life Anecdotes",
+    "translated_title": "Scruples: 关于32,000则真实生活轶事的社区伦理判断语料",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "turpin2023languagemodelsdontsay",
+    "translated_key": "chive-turpin2023languagemodelsdontsay",
+    "title": "Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting",
+    "translated_title": "语言模型并不总说出它们所想: 思维链提示中的不忠实解释",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "chua2025biasaugmentedconsistencytrainingreduces",
+    "translated_key": "chive-chua2025biasaugmentedconsistencytrainingreduces",
+    "title": "Bias-Augmented Consistency Training Reduces Biased Reasoning in Chain-of-Thought",
+    "translated_title": "偏差增强的一致性训练减少思维链中的有偏推理",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "turpin2025teachingmodelsverbalizereward",
+    "translated_key": "chive-turpin2025teachingmodelsverbalizereward",
+    "title": "Teaching Models to Verbalize Reward Hacking in Chain-of-Thought Reasoning",
+    "translated_title": "教模型在思维链推理中说出奖励黑客行为",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "hase2026counterfactualsimulationtrainingchainofthought",
+    "translated_key": "chive-hase2026counterfactualsimulationtrainingchainofthought",
+    "title": "Counterfactual Simulation Training for Chain-of-Thought Faithfulness",
+    "translated_title": "用于思维链忠实性的反事实模拟训练",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "guo2026introspectivecouplingselfexplanationtraining",
+    "translated_key": "chive-guo2026introspectivecouplingselfexplanationtraining",
+    "title": "Introspective Coupling: Self-Explanation Training Tracks Behavioral Change Despite Fixed Supervision",
+    "translated_title": "内省耦合: 即使监督固定, 自我解释训练仍追踪行为变化",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "chen2023modelsexplainthemselvescounterfactual",
+    "translated_key": "chive-chen2023modelsexplainthemselvescounterfactual",
+    "title": "Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations",
+    "translated_title": "模型会解释自己吗? 自然语言解释的反事实可模拟性",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "mayne2026positivecasefaithfulnessllm",
+    "translated_key": "chive-mayne2026positivecasefaithfulnessllm",
+    "title": "A Positive Case for Faithfulness: LLM Self-Explanations Help Predict Model Behavior",
+    "translated_title": "支持忠实性的正面案例: LLM自我解释帮助预测模型行为",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "mayne2025llmsdontknowdecision",
+    "translated_key": "chive-mayne2025llmsdontknowdecision",
+    "title": "LLMs Don't Know Their Own Decision Boundaries: The Unreliability of Self-Generated Counterfactual Explanations",
+    "translated_title": "LLM不知道自己的决策边界: 自生成反事实解释的不可靠性",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "dehghanighobadi2025llmsexplaincounterfactually",
+    "translated_key": "chive-dehghanighobadi2025llmsexplaincounterfactually",
+    "title": "Can LLMs Explain Themselves Counterfactually?",
+    "translated_title": "LLM能以反事实方式解释自身吗?",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "betley2025tellyourselfllmsaware",
+    "translated_key": "chive-betley2025tellyourselfllmsaware",
+    "title": "Tell me about yourself: LLMs are aware of their learned behaviors",
+    "translated_title": "谈谈你自己: LLM能意识到自己学到的行为",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "binder2024lookinginward",
+    "translated_key": "chive-binder2024lookinginward",
+    "title": "Looking Inward: Language Models Can Learn About Themselves by Introspection",
+    "translated_title": "向内看: 语言模型能通过内省学习自身情况",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "li2026traininglanguagemodelsexplain",
+    "translated_key": "chive-li2026traininglanguagemodelsexplain",
+    "title": "Training Language Models to Explain Their Own Computations",
+    "translated_title": "训练语言模型解释自身计算",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "karvonen2026activationoraclestrainingevaluating",
+    "translated_key": "chive-karvonen2026activationoraclestrainingevaluating",
+    "title": "Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers",
+    "translated_title": "激活预言机: 训练并评估作为通用激活解释器的LLM",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "frasertaliente2026nla",
+    "translated_key": "chive-frasertaliente2026nla",
+    "title": "Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations",
+    "translated_title": "自然语言自编码器生成对LLM激活的无监督解释",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "cunningham2023sparseautoencodershighlyinterpretable",
+    "translated_key": "chive-cunningham2023sparseautoencodershighlyinterpretable",
+    "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
+    "translated_title": "稀疏自编码器在语言模型中找到高度可解释的特征",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "bricken2023monosemanticity",
+    "translated_key": "chive-bricken2023monosemanticity",
+    "title": "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+    "translated_title": "走向单义性: 用字典学习分解语言模型",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "marks2025auditinglanguagemodelshidden",
+    "translated_key": "chive-marks2025auditinglanguagemodelshidden",
+    "title": "Auditing language models for hidden objectives",
+    "translated_title": "审计语言模型的隐藏目标",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "sheshadri2026auditbenchevaluatingalignmentauditing",
+    "translated_key": "chive-sheshadri2026auditbenchevaluatingalignmentauditing",
+    "title": "AuditBench: Evaluating Alignment Auditing Techniques on Models with Hidden Behaviors",
+    "translated_title": "AuditBench: 在有隐藏行为的模型上评价对齐审计技术",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "cywinski2025elicitingsecretknowledgelanguage",
+    "translated_key": "chive-cywinski2025elicitingsecretknowledgelanguage",
+    "title": "Eliciting Secret Knowledge from Language Models",
+    "translated_title": "从语言模型中引出秘密知识",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "minder2026narrowfinetuningleavesclearly",
+    "translated_key": "chive-minder2026narrowfinetuningleavesclearly",
+    "title": "Narrow Finetuning Leaves Clearly Readable Traces in Activation Differences",
+    "translated_title": "窄微调在激活差异中留下清楚可读的痕迹",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "petri2025",
+    "translated_key": "chive-petri2025",
+    "title": "Petri: Parallel Exploration of Risky Interactions",
+    "translated_title": "Petri: 并行探索风险交互",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "laine2024memyselfaisituational",
+    "translated_key": "chive-laine2024memyselfaisituational",
+    "title": "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs",
+    "translated_title": "我、我自己与AI: LLM的情境意识数据集SAD",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "lindsey2025biology",
+    "translated_key": "chive-lindsey2025biology",
+    "title": "On the Biology of a Large Language Model",
+    "translated_title": "大语言模型的生物学",
+    "printed_in_paper": false
+  },
+  {
+    "original_key": "mcdougall2025gemmascope2",
+    "translated_key": "chive-mcdougall2025gemmascope2",
+    "title": "{Gemma Scope 2} - Technical Paper",
+    "translated_title": "Gemma Scope 2 技术论文",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "neuronpedia",
+    "translated_key": "chive-neuronpedia",
+    "title": "Neuronpedia: Interactive Reference and Tooling for Analyzing Neural Networks",
+    "translated_title": "Neuronpedia: 分析神经网络的交互参考与工具",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "hu2021loralowrankadaptationlarge",
+    "translated_key": "chive-hu2021loralowrankadaptationlarge",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "translated_title": "LoRA: 大语言模型的低秩适配",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "arcuschin2026chainofthoughtreasoningwildfaithful",
+    "translated_key": "chive-arcuschin2026chainofthoughtreasoningwildfaithful",
+    "title": "Chain-of-Thought Reasoning In The Wild Is Not Always Faithful",
+    "translated_title": "真实场景中的思维链推理并不总是忠实",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "bauer2026buildingbetteractivationoracles",
+    "translated_key": "chive-bauer2026buildingbetteractivationoracles",
+    "title": "Building Better Activation Oracles",
+    "translated_title": "构建更好的激活预言机",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "anthropic2025sonnet45card",
+    "translated_key": "chive-anthropic2025sonnet45card",
+    "title": "Claude Sonnet 4.5 System Card",
+    "translated_title": "Claude Sonnet 4.5 系统卡",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "anthropic2026mythos5card",
+    "translated_key": "chive-anthropic2026mythos5card",
+    "title": "Claude Mythos 5 System Card",
+    "translated_title": "Claude Mythos 5 系统卡",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "liu2024toolace",
+    "translated_key": "chive-liu2024toolace",
+    "title": "ToolACE: Winning the Points of LLM Function Calling",
+    "translated_title": "ToolACE: 赢取LLM函数调用的分数",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "hermesfunctioncalling2024",
+    "translated_key": "chive-hermesfunctioncalling2024",
+    "title": "Hermes-Function-Calling-Dataset-V1",
+    "translated_title": "Hermes 函数调用数据集V1",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "systemchat2024",
+    "translated_key": "chive-systemchat2024",
+    "title": "SystemChat-2.0",
+    "translated_title": "SystemChat-2.0",
+    "printed_in_paper": true
+  },
+  {
+    "original_key": "szablewski2026modelorganismlotterymodel",
+    "translated_key": "chive-szablewski2026modelorganismlotterymodel",
+    "title": "The Model Organism Lottery: Model Organism Interpretability Strongly Depends on Training Methodology",
+    "translated_title": "模型实验体的抽签效应: 模型实验体可解释性强烈依赖训练方法",
+    "printed_in_paper": true
+  }
+]

@@ -1,0 +1,1 @@
+{"generated": ["v03-standard-table.tex", "v03-public-table.tex"], "forced_choice_counts": {"HuggingFaceTB/SmolLM2-135M-Instruct matched_plain": {"A": 18, "B": 0}, "HuggingFaceTB/SmolLM2-135M matched_plain": {"A": 18, "B": 0}, "HuggingFaceTB/SmolLM2-135M-Instruct native_chat": {"A": 18, "B": 0}}}

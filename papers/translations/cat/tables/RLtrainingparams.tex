@@ -1,0 +1,23 @@
+\Needspace{20\baselineskip}
+\begin{longtable}{lc}
+\caption{共享 RL 训练超参数. 使用 verl 提供的 PyTorch FSDP 实现，见 \url{https://docs.pytorch.org/docs/stable/fsdp.html}.}\label{cat-tab:RLtrainingparams}\\
+
+        \toprule
+        参数 & 取值 \\
+        \midrule
+        算法 & GRPO \cite{cat-shao2024deepseekmath} \\
+        每个提示的轨迹数 & 8 \\
+        学习率 & $5\times10^{-7}$ \\
+        学习率计划 & 恒定，无预热 \\
+        全局批量大小 & $256$ \\
+        奖励层面的 KL 系数 & $1 \times 10^{-3}$ \\
+        最大训练步数 & $1000$ \\
+        最大生成 token（HealthBench） & $1024$ \\
+        最大生成 token（MATH-500） & $1536$ \\
+        训练 GPU & $8 \times$ NVIDIA H100s \\
+        $\pi_J$ & GPT-4o \cite{cat-hurst2024gpt} \\
+        优化器 & AdamW \cite{cat-loschilov2019decoupled} \\
+        并行策略 & FSDP \cite{cat-rajbhandari2020zero} \\
+        \bottomrule
+    
+\end{longtable}

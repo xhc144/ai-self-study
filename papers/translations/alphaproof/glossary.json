@@ -1,0 +1,183 @@
+{
+  "source_version": "Nature Version of Record 2026-03-13",
+  "language": "en–zh-CN",
+  "terms": [
+    [
+      "formal proof",
+      "形式证明"
+    ],
+    [
+      "proof term",
+      "证明项"
+    ],
+    [
+      "proof state",
+      "证明状态"
+    ],
+    [
+      "tactic",
+      "tactic (证明策略程序)"
+    ],
+    [
+      "tactic state",
+      "tactic 状态"
+    ],
+    [
+      "kernel",
+      "内核"
+    ],
+    [
+      "soundness",
+      "健全性"
+    ],
+    [
+      "auto-formalization",
+      "自动形式化"
+    ],
+    [
+      "formalization fidelity",
+      "形式化忠实性"
+    ],
+    [
+      "policy",
+      "策略"
+    ],
+    [
+      "value function",
+      "价值函数"
+    ],
+    [
+      "return",
+      "回报"
+    ],
+    [
+      "reward",
+      "奖励"
+    ],
+    [
+      "AND–OR tree",
+      "AND--OR 树"
+    ],
+    [
+      "subgoal",
+      "子目标"
+    ],
+    [
+      "tree search",
+      "树搜索"
+    ],
+    [
+      "selection",
+      "选择"
+    ],
+    [
+      "expansion",
+      "扩展"
+    ],
+    [
+      "backpropagation (search)",
+      "反向回传 (树搜索语境)"
+    ],
+    [
+      "PUCT",
+      "概率上置信树界"
+    ],
+    [
+      "progressive sampling",
+      "渐进采样"
+    ],
+    [
+      "test-time reinforcement learning (TTRL)",
+      "测试时强化学习"
+    ],
+    [
+      "variant",
+      "变式"
+    ],
+    [
+      "main RL",
+      "主强化学习"
+    ],
+    [
+      "matchmaker",
+      "任务匹配系统"
+    ],
+    [
+      "actor",
+      "执行者"
+    ],
+    [
+      "learner",
+      "学习者"
+    ],
+    [
+      "replay buffer",
+      "重放缓冲区"
+    ],
+    [
+      "disproof",
+      "反证／反驳的证明"
+    ],
+    [
+      "counterexample",
+      "反例"
+    ],
+    [
+      "held-out benchmark",
+      "留出基准"
+    ],
+    [
+      "simulation",
+      "模拟"
+    ],
+    [
+      "TPU day",
+      "TPU 日 (计算量, 不等同实际经过时间)"
+    ],
+    [
+      "term mode",
+      "项模式"
+    ],
+    [
+      "propositional extensionality",
+      "命题外延性"
+    ],
+    [
+      "global choice",
+      "全局选择"
+    ],
+    [
+      "quotient type soundness",
+      "商类型健全性"
+    ],
+    [
+      "curriculum",
+      "课程 (训练问题分布)"
+    ],
+    [
+      "generalist",
+      "通用模型"
+    ],
+    [
+      "specialist",
+      "专门模型"
+    ],
+    [
+      "proof engineering",
+      "证明工程"
+    ],
+    [
+      "golden formalization",
+      "标准形式化"
+    ],
+    [
+      "aquaesulian",
+      "aquaesulian (原题函数性质名)"
+    ]
+  ],
+  "notes": [
+    "Formal proof correctness and fidelity of natural-language formalization kept distinct.",
+    "Policy/value search is translated from source; not asserted to be interchangeable with final-answer-only verification.",
+    "Source code remains unchanged inside original figures; natural-language comments translated separately."
+  ]
+}

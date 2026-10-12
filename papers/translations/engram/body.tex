@@ -1,0 +1,396 @@
+% arXiv:2601.07372v2, 2026-07-12, CC BY 4.0;固定项目模板内容槽.
+\originalchapter{通过可扩展查找实现条件记忆}\label{engram-paper}
+\begin{center}
+{\bfseries 通过可扩展查找实现条件记忆: 大语言模型的新稀疏轴}\par
+Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models
+\end{center}
+作者为 Xin Cheng, Rui Tian, Wangding Zeng, Damai Dai, Qinyu Chen, Bingxuan Wang, Zhenda Xie, Kezhao Huang, Xingkai Yu, Chengqi Deng, Shangyan Zhou, Chenggang Zhao, Zhewen Hao, Yukun Li, Han Zhang, Zhengyan Zhang, Yixuan Wei, M.Y Xu, Huishuai Zhang, Dongyan Zhao, Wenfeng Liang. Xin Cheng 与 Rui Tian 共同贡献. Xin Cheng、Huishuai Zhang 和 Dongyan Zhao 的机构包括北京大学, Xin Cheng 及其余标记为第二机构的作者来自 DeepSeek-AI. 原文联系地址为 \texttt{\{zhanghuishuai,zhaody\}@pku.edu.cn} 及 \texttt{\{chengxin,tianr22,zengwangding,damai.dai\}@deepseek.com}.
+
+\begin{remark}
+本译稿对应 2026 年 7 月 12 日的 arXiv v2, 官方来源为 \url{https://arxiv.org/abs/2601.07372v2}; 已实际核对该版许可为 CC BY 4.0, \url{https://creativecommons.org/licenses/by/4.0/}. ai-self-study contributors 机器辅助翻译, 非作者或机构官方译本. 改动为中文翻译、固定项目版式、引用前缀及宽表重排; 原作者图内英文保留并附中文说明. 后文“我们”指论文作者, 不表示本项目复现了其模型. 表中转引 Patchscopes 的材料保留原署名, 其指定来源也另行核对为 CC BY 4.0. 原文不一致与证据范围在末尾译者注中说明.
+\end{remark}
+
+\originalsection{摘要}\label{engram-abstract}
+混合专家(MoE)通过条件计算扩展容量, 而 Transformer 缺少原生知识查找原语, 不得不用计算低效地模拟检索. 为解决这一问题, 我们提出条件记忆, 作为互补的稀疏轴, 并用 Engram 实现: 该模块将经典 $N$-gram embedding 现代化, 实现 $\mathcal O(1)$ 查找. 通过建立稀疏分配问题, 我们发现一条 U 形扩展规律, 用于优化神经计算(MoE)与静态记忆(Engram)之间的权衡.
+
+在该规律指导下, 我们把 Engram 扩展到 27B 参数模型, 性能优于严格等参数、等 FLOPs 的 MoE 基线. 记忆模块理应帮助知识检索, 如 MMLU 增加 $3.4$, CMMLU 增加 $4.0$; 更值得注意的是, 我们还在一般推理中观察到更大收益, 如 BBH 增加 $5.0$, ARC-Challenge 增加 $3.7$, 以及代码与数学中的收益, 如 HumanEval 增加 $3.0$, MATH 增加 $2.4$.
+
+机制分析表明, Engram 让骨干早期层免于静态重建, 从而有效加深网络, 为复杂推理提供更多深度. 将局部依赖交给查找, 还释放注意力容量用于全局上下文, 明显增强长上下文检索, 如多查询 NIAH 从 $84.2$ 到 $97.0$. 最后, Engram 实现面向基础设施的效率设计: 确定性寻址允许运行时从主机内存预取, 带来的开销可以忽略. 我们认为条件记忆将成为下一代稀疏模型不可缺少的建模原语. 代码为 \url{https://github.com/deepseek-ai/Engram}.
+
+\originalsection{1 引言}\paperlabel{1}{engram-sec-1}
+稀疏性是智能系统中反复出现的设计原则, 从生物神经电路\cite{engram-olshausen1997sparse,engram-lennie2003cost}到现代大语言模型都能看到它. 目前, 这一原则主要通过 MoE\cite{engram-shazeer2017outrageously,engram-dai2024deepseekmoe}实现, 即用条件计算扩展容量. MoE 能显著增加模型大小而不同比例增加计算, 已成为前沿模型的事实标准\cite{engram-guo2025deepseek,engram-comanici2025gemini,engram-kimi-k2}.
+
+条件计算虽然成功, 语言信号自身的异质性仍表明结构优化有很大空间. 具体说, 语言建模包含两类性质不同的子任务: 组合推理与知识检索. 前者需要深层动态计算, 但大量文本, 如命名实体和套语模式, 是局部、静态且高度定型的\cite{engram-erman2000idiom,engram-constant2017survey}. 经典 $N$-gram 模型\cite{engram-liu2024infini,engram-nguyen2024understanding,engram-brants-etal-2007-large}能有效捕捉局部依赖, 暗示这些规律适合表示成低成本查找. 标准 Transformer\cite{engram-vaswani2017attention}缺少原生知识查找原语, 迫使当前 LLM \textbf{用计算模拟检索}. 例如解析常见的多 token 实体, 需要耗费多个早期注意力与前馈层\cite{engram-ghandeharioun2024patchscopes,engram-DBLP:conf/coling/JinYHZWH0MMDYDZ25}, 见实体解析表. 这相当于运行时昂贵地重建静态查找表, 把本可用于高层推理的顺序深度浪费在简单操作上.
+
+为使架构对应这种语言双重性, 我们提出互补稀疏轴: 条件记忆. 条件计算稀疏地激活参数来处理动态逻辑\cite{engram-shazeer2017outrageously,engram-bengio2013estimatingpropagatinggradientsstochastic}; 条件记忆则用稀疏查找取回固定知识的静态 embedding. 作为初步探索, 我们重新研究经典的 $N$-gram embedding\cite{engram-bojanowski2017enriching}: 以局部上下文为键, 用常数时间 $\mathcal O(1)$ 查找索引大规模 embedding 表\cite{engram-tito2017hash,engram-huang2025over,engram-pagnoni2025byte,engram-yu2025scaling}. 研究表明, 这种静态检索可以成为现代 MoE 的理想补充, 但前提是合理设计. 我们提出的 Engram 基于经典 $N$-gram 结构, 加入分词器压缩、多头哈希、上下文化门控以及多分支集成, 架构节给出细节.
+
+为量化两种原语的协同, 我们建立\emph{稀疏分配}问题: 固定总参数预算时, 容量应如何分给 MoE 专家和 Engram 记忆? 实验发现明显的 U 形扩展规律, 表明即使简单查找, 只要作为一等建模原语处理, 也能成为神经计算的重要补充. 据此, 我们训练 27B 参数模型. 相比严格等参数、等 FLOPs 的 MoE-27B, Engram-27B 在多个领域效率更好. 收益不局限于知识密集任务, 如 MMLU $+3.4$, CMMLU $+4.0$, MMLU-Pro $+1.8$; 一般推理还有 BBH $+5.0$, ARC-Challenge $+3.7$, DROP $+3.3$, 代码/数学还有 HumanEval $+3.0$, MATH $+2.4$, GSM8K $+2.2$.
+
+借助 LogitLens\cite{engram-nostalgebraist2020logitlens}与 CKA\cite{engram-hendrycks2020measuring}的机制分析, 我们认为这些收益源于: Engram 免去骨干早期层的静态知识重建, 为复杂推理提供更多有效深度. 它把局部依赖交给查找, 释放注意力去处理全局上下文, 因而在 LongPPL\cite{engram-fangwrong}与 RULER\cite{engram-hsiehruler}中显著优于基线. 例如多查询 NIAH 为 $97.0$ 对 $84.2$, 变量跟踪为 $89.0$ 对 $77.0$.
+
+最后, 我们将面向基础设施的效率视为一等设计原则. 与 MoE 动态路由不同, Engram 用确定性 ID 进行运行时预取, 将通信与计算重叠. 实验显示把 100B 参数表卸载到主机内存, 开销低于 $3\%$. 作者据此认为 Engram 能有效绕过 GPU 显存容量限制, 支持大规模参数扩展.
+
+\originalsection{2 架构}\paperlabel{2}{engram-sec-2}
+\subsection*{2.1 概述}\paperlabel{2.1}{engram-sec-2-1}
+如图 \ref{engram-fig-1}, Engram 是一个增强 Transformer 骨干的条件记忆模块, 在结构上分离静态模式存储与动态计算. 给定输入序列 $X=(x_1,\ldots,x_T)$, 第 $\ell$ 层隐状态为 $\mathbf H^{(\ell)}\in\R^{T\times d}$, 每个位置 $t$ 经历\textbf{检索与融合}两阶段. 先提取并压缩后缀 $N$-gram, 通过哈希确定性地取回静态 embedding 向量. 再用当前隐状态动态调制这些向量, 并用轻量卷积精炼. 下文还讨论多分支集成和系统层设计.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.96\textwidth]{../papers/translations/engram/figures/engram_arch.pdf}
+\caption{原文图1: Engram架构. 检索静态$N$-gram记忆,通过上下文感知门控与动态隐状态融合. 仅在特定层插入,将记忆与计算分离;标准输入embedding与输出投影不变. 图内Vocab Embedding为词表嵌入,Input Hidden为输入隐状态,Hash为哈希,Concat为拼接,Linear为线性投影,Scaled Dot Product为缩放点积,Conv为卷积,Attention为注意力,MoE为混合专家. 原示例完整为“Only Alexander the Great could tame the horse Bucephalus.”,意为“只有亚历山大大帝能驯服名为Bucephalus的马”;示意后缀“the Great”和“Alexander the Great”的2/3-gram查找.}\label{engram-fig-1}
+\end{figure}
+
+\subsection*{2.2 基于哈希$N$-gram的稀疏检索}\paperlabel{2.2}{engram-sec-2-2}
+第一阶段把局部上下文映射成静态记忆项, 包括分词器压缩与确定性哈希检索.
+
+\noindent\textbf{分词器压缩.}\label{engram-token-compression}
+普通 $N$-gram 模型通常直接使用分词结果, 标准子词分词器却优先保证无损重建, 常给语义等价形式分配不同 ID, 如 \texttt{Apple} 与带前导空格的 \texttt{apple}\cite{engram-kudo2018sentencepiecesimplelanguageindependent,engram-li2023starcodersourceyou}. 为提高语义密度, 我们加入词表投影层. 预先计算满射 $\mathcal P:V\to V'$, 按正规化的文本等价关系, 包括 NFKC\cite{engram-UAX15-NFKC}、小写转换等, 把原始 token ID 合并成规范标识. 对 128k 分词器, 有效词表大小实际减少约 $23\%$, 例子见附录 C. 位置 $t$ 的原 ID $x_t$ 被映射为 $x'_t=\mathcal P(x_t)$, 并构成后缀 $N$-gram $g_{t,n}=(x'_{t-n+1},\ldots,x'_t)$.
+
+\noindent\textbf{多头哈希.}\label{engram-multi-head-hash}
+所有可能 $N$-gram 的组合空间无法直接参数化. 按既有方法\cite{engram-tito2017hash}, 我们采用哈希. 为减轻碰撞, 每个阶数 $n$ 使用 $K$ 个不同哈希头. 第 $k$ 个头以确定函数 $\phi_{n,k}$ 把压缩上下文映射为 embedding 表 $\mathbf E_{n,k}$ 的索引, 该表大小 $M_{n,k}$ 为素数:
+\begin{equation}\label{engram-eq-1}
+z_{t,n,k}\triangleq\phi_{n,k}(g_{t,n}),\qquad
+\mathbf e_{t,n,k}=\mathbf E_{n,k}[z_{t,n,k}].
+\end{equation}
+实际的 $\phi_{n,k}$ 用轻量乘法--异或哈希实现. 最终记忆向量 $\mathbf e_t\in\R^{d_{\rm mem}}$ 拼接所有检索到的 embedding:
+\begin{equation}\label{engram-eq-2}
+\mathbf e_t\triangleq\mathop{\Vert}_{n=2}^{N}\mathop{\Vert}_{k=1}^{K}\mathbf e_{t,n,k}.
+\end{equation}
+
+\subsection*{2.3 上下文感知门控}\paperlabel{2.3}{engram-sec-2-3}
+检索得到的 $\mathbf e_t$ 是与上下文无关的先验. 静态性质使它缺少上下文适应能力, 哈希碰撞或多义性也可能引入噪声\cite{engram-haber-poesio-2024-polysemy}. 为增强表达并消除歧义, 我们采用受注意力启发的上下文感知门控\cite{engram-vaswani2017attention,engram-bahdanau2014neural}. 当前隐状态 $\mathbf h_t$ 已通过先前注意力层聚合全局上下文, 被作为动态 Query; 记忆 $\mathbf e_t$ 同时用于 Key 与 Value 投影:
+\begin{equation}\label{engram-eq-3}
+\mathbf k_t=\mathbf W_K\mathbf e_t,\qquad\mathbf v_t=\mathbf W_V\mathbf e_t.
+\end{equation}
+$\mathbf W_K,\mathbf W_V$ 是可学习投影矩阵. 为保证梯度稳定\cite{engram-pmlr-v202-dehghani23a}, 计算标量门 $\alpha_t\in(0,1)$ 前, 对 Query 和 Key 使用 RMSNorm\cite{engram-zhang2019root}:
+\begin{equation}\label{engram-eq-4}
+\alpha_t=\sigma\left(\frac{\operatorname{RMSNorm}(\mathbf h_t)^\top
+\operatorname{RMSNorm}(\mathbf k_t)}{\sqrt d}\right).
+\end{equation}
+门控输出为 $\tilde{\mathbf v}_t=\alpha_t\mathbf v_t$. 作者认为这一设计强制语义对齐: 若检索记忆与当前上下文冲突, 门值倾向零, 从而抑制噪声.
+
+最后, 为扩大感受野并增强非线性, 引入短的逐通道因果卷积\cite{engram-gu2021efficiently,engram-peng2023rwkv}. 令门控值序列 $\tilde{\mathbf V}\in\R^{T\times d}$, 卷积核大小 $w=4$, 膨胀率 $\delta$ 取最大 $N$-gram 阶数, 激活为 SiLU\cite{engram-elfwing2018sigmoid}, 最终输出是
+\begin{equation}\label{engram-eq-5}
+\mathbf Y=\operatorname{SiLU}\left(\operatorname{Conv1D}
+(\operatorname{RMSNorm}(\tilde{\mathbf V}))\right)+\tilde{\mathbf V}.
+\end{equation}
+Engram 通过残差接入骨干, $\mathbf H^{(\ell)}\leftarrow\mathbf H^{(\ell)}+\mathbf Y$, 随后仍进行标准 Attention 和 MoE. 关键是, 不在每层都使用 Engram; 放置位置需平衡建模效果与后文的系统延迟约束.
+
+\subsection*{2.4 与多分支架构集成}\paperlabel{2.4}{engram-sec-2-4}
+本工作不用标准单流连接\cite{engram-he2016deep}, 默认采用建模能力更强的多分支骨干\cite{engram-larsson2016fractalnet,engram-zhu2025hyperconnections,engram-xie2025mhcmanifoldconstrainedhyperconnections,engram-szegedy2015going}. 其特征是把残差流扩展成 $M$ 个并行分支, 由可学习连接权重调制信息流.
+
+Engram 本身不依赖拓扑, 但适配多分支时, 需要优化结构以平衡效率和表达. 具体采用参数共享: 所有 $M$ 个分支共享同一稀疏 embedding 表及 Value 投影 $\mathbf W_V$, 使用 $M$ 个不同 Key 投影 $\{\mathbf W_K^{(m)}\}_{m=1}^M$, 从而允许分支特定门控. 对隐状态为 $\mathbf h_t^{(m)}$ 的第 $m$ 个分支,
+\begin{equation}\label{engram-eq-6}
+\alpha_t^{(m)}=\sigma\left(\frac{\operatorname{RMSNorm}(\mathbf h_t^{(m)})^\top
+\operatorname{RMSNorm}(\mathbf W_K^{(m)}\mathbf e_t)}{\sqrt d}\right).
+\end{equation}
+独立门控调制共享值向量, $\mathbf u_t^{(m)}=\alpha_t^{(m)}(\mathbf W_V\mathbf e_t)$. 这样一个 $\mathbf W_V$ 与 $M$ 个 Key 投影可以融合为一次稠密 FP8 矩阵乘法, 提高现代 GPU 利用率. 未另说明时, 所有实验均使用这种与流形约束超连接(mHC, $M=4$)的集成\cite{engram-xie2025mhcmanifoldconstrainedhyperconnections}.
+
+\subsection*{2.5 系统效率: 计算与记忆解耦}\paperlabel{2.5}{engram-sec-2-5}
+参数扩展常受 GPU 高带宽显存(HBM)容量限制. MoE 基于运行时隐状态动态路由, Engram 则仅依赖输入 token ID 确定性检索, 因而自然分离参数存储与计算. 这种可预测性使训练、推断都能特别优化, 见图 \ref{engram-fig-2}.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.96\textwidth]{../papers/translations/engram/figures/engram_system.pdf}
+\caption{原文图2: Engram系统实现. (a)训练时,大embedding表分片到GPU,用All-to-All跨设备读取激活行. (b)推断时,表卸载到主机内存,主机利用确定检索异步预取并传输embedding,让通信与先前Transformer模块计算重叠. 图内On Device Computation/On Host Communication分别为设备计算/主机通信,Input IDs为输入编号,Vocab Embedding为词表嵌入,Offloaded Engram为卸载的记忆表,Memory Hierarchy为存储层级,All2All为全互联通信,Transformer Block为Transformer模块.}\label{engram-fig-2}
+\end{figure}
+
+训练中, 我们用标准模型并行把大表分片到各 GPU. 前向以 All-to-All 收集激活行, 后向用它分发梯度, 让总记忆容量随加速器数量线性增长.
+
+推断中, 确定性允许预取和重叠策略. 前向之前就知道记忆索引, 系统可以通过 PCIe 从充足的主机内存异步取 embedding. 为掩盖通信延迟, 将 Engram 放在骨干特定层, 借先前层计算作为缓冲, 避免 GPU 停顿. 这需要硬件与算法共同设计: 放得更深, 隐藏延迟的计算窗口更大; 但结构消融显示, 建模效果偏好尽早介入, 卸下局部模式重建. 因而最优位置同时受建模和延迟约束.
+
+此外, 自然语言 $N$-gram 遵循 Zipf 分布\cite{engram-piantadosi2014zipf,engram-Chao1950HumanBA}, 少数模式占据大多数访问. 这支持多级缓存: 常用 embedding 放在 GPU HBM 或主机 DRAM 等较快层级, 罕见长尾放在 NVMe SSD 等慢而大容量介质. 作者认为这种分层可让 Engram 扩展到很大记忆容量, 而有效延迟影响很小.
+
+\originalsection{3 扩展规律与稀疏分配}\paperlabel{3}{engram-sec-3}
+条件记忆的 Engram 与条件计算的 MoE 专家在结构上互补. 本节研究这种双重结构的扩展性质及最优稀疏容量分配, 关注两个问题: 总参数和训练计算固定时, 容量如何分给专家与 embedding? 如果利用 Engram 的 $\mathcal O(1)$ 开销特征放宽或大幅扩展记忆预算, 单独 Engram 表现出怎样的扩展行为?
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.98\textwidth]{../papers/translations/engram/figures/scaling_law.pdf}
+\caption{原文图3: 稀疏分配与Engram扩展. 左: 分配比例$\rho$对应验证损失,展示$2\times10^{20}$和$6\times10^{20}$ FLOPs预算,两者均为U形,混合分配优于纯MoE. 右: 所谓无限记忆设置,验证损失与embedding数量呈对数线性趋势. 图内Allocation Ratio为分配比例,Validation Loss为验证损失,Number of Embedding Slots (Log Scale)为记忆槽数(对数坐标),Pure MoE为纯MoE,OverEncoding为对照方法.}\label{engram-fig-3}
+\end{figure}
+
+\subsection*{3.1 MoE与Engram的最优分配比例}\paperlabel{3.1}{engram-sec-3-1}
+\noindent\textbf{计算匹配形式化.}
+用三项参数指标分析权衡. $P_{\rm tot}$ 是总可训练参数, 不含词表 embedding 和 LM head. $P_{\rm act}$ 是每个 token 的激活参数, 决定训练 FLOPs. $P_{\rm sparse}\triangleq P_{\rm tot}-P_{\rm act}$ 是不激活参数, 代表不增加计算即可扩模型的“免费”参数预算, 如未选专家或未检索 embedding.
+
+每个 FLOPs 预算中固定 $P_{\rm tot}$ 和 $P_{\rm act}$, 使总参数和每 token FLOPs 相同. MoE 的 $P_{\rm act}$ 由 top-$k$ 专家决定, 其余专家进入 $P_{\rm sparse}$. Engram 每 token 只读取常数个槽, 因而扩槽数增加总参数, 不增加每 token FLOPs.
+
+\noindent\textbf{分配比例.}
+$\rho\in[0,1]$ 定义为不激活参数预算中分给 MoE 专家的比例:
+\begin{equation}\label{engram-eq-7}
+P_{\rm MoE}^{(\rm sparse)}=\rho P_{\rm sparse},\qquad
+P_{\rm Engram}=(1-\rho)P_{\rm sparse}.
+\end{equation}
+$\rho=1$ 为纯 MoE, 全部不激活参数都是路由专家. $\rho<1$ 时减少路由专家, 把释放的参数分给 Engram 槽.
+
+\noindent\textbf{实验协议.}
+比较两项计算预算, 稀疏比 $P_{\rm tot}/P_{\rm act}\approx10$ 保持相同. $C=2\times10^{20}$ FLOPs 时, $P_{\rm tot}\approx5.7$B, $P_{\rm act}=568$M, $\rho=1$ 基线共106个专家. $C=6\times10^{20}$ FLOPs 时, $P_{\rm tot}\approx9.9$B, $P_{\rm act}=993$M, 基线共99个专家. 不同 $\rho$ 仅调整路由专家数和 Engram 槽数, 训练流程和优化超参数完全一致.
+
+\noindent\textbf{结果与分析.}
+图 \ref{engram-fig-3} 左侧显示, 验证损失与 $\rho$ 有一致的 U 形关系. 即使 MoE 分配减少到约 $40\%$, Engram 仍与纯 MoE 的 $100\%$ 分配性能相近; 5.7B模型共46个专家, 9.9B模型共43个专家. 纯 MoE 并非最优, 把稀疏预算约 $20\%$--$25\%$ 分给 Engram 时最好. 10B设置、$6\times10^{20}$ FLOPs 中, 损失由纯MoE的 $1.7248$ 降为接近 $\rho=80\%$ 最优点的 $1.7109$, 差为 $0.0139$.
+
+两个规模的最优位置均约 $75\%$--$80\%$, 表明在已考察规模和固定稀疏度下偏好稳定. 作者认为 U 形关系确认两模块结构互补: MoE占主导时缺少静态模式专用记忆, 只能低效地用深度和计算重建; Engram占主导时失去条件计算容量, 损害动态上下文推理, 记忆不能替代计算.
+
+\subsection*{3.2 无限记忆设置中的Engram}\paperlabel{3.2}{engram-sec-3-2}
+前面固定总参数, 现在考察更激进的记忆扩展, 动机是存储与计算解耦.
+
+\noindent\textbf{实验协议.}
+固定约3B总参数、568M激活参数的 MoE 骨干, 训练100B token以确保收敛. 加 Engram 表, 槽数 $M$ 从 $2.58\times10^5$ 到 $1.0\times10^7$, 最多增加约13B参数. 对照为 OverEncoding\cite{engram-huang2025over}, 它把 $N$-gram embedding 与词表 embedding 平均融合. SCONE\cite{engram-yu2025scaling}虽也研究大embedding, 但主要着眼推断, 包含额外 f-gram 模块和训练FLOPs, 不符合本研究严格等计算条件.
+
+\noindent\textbf{结果.}
+图 \ref{engram-fig-3} 右侧显示槽数增加清楚而持续地改善验证损失. 在考察区间, 作者称曲线满足严格幂律, 在对数空间线性, 因而把 Engram 视为可预测的扩展旋钮: 更大记忆持续有收益, 无需额外计算. OverEncoding的直接平均也受益于大表, 但同一记忆预算下, Engram释放更大扩展潜力. 结合前述分配规律, 作者据此认为条件记忆是独立且可扩展的稀疏容量轴, 与MoE条件计算互补.
+
+\originalsection{4 大规模预训练}\paperlabel{4}{engram-sec-4}
+使用提出的架构与经验分配规律, 我们训练多十亿参数模型, 检验真实语言模型预训练中的效用. 四个模型为 Dense-4B(总参数4.1B)、MoE-27B(26.7B)、Engram-27B(26.7B)与Engram-40B(39.5B). 全部使用相同数据课程, 即同样的token预算和顺序, 激活参数数目严格匹配.
+
+\subsection*{4.1 实验设置}\paperlabel{4.1}{engram-sec-4-1}
+\noindent\textbf{训练数据与模型配置.}
+所有模型在262B token语料上预训练, 使用DeepSeek-V3\cite{engram-liu2024deepseek}的128k词表分词器. 为控制比较, 除明确例外外采用一致默认配置: 30个Transformer模块, 隐层2560. 各模块含32头多头潜在注意力(MLA)\cite{engram-deepseekai2024deepseekv2strongeconomicalefficient}, 以扩张率4的mHC\cite{engram-xie2025mhcmanifoldconstrainedhyperconnections}连接FFN. 全部使用Muon\cite{engram-jordan2024muon,engram-liu2025muon}优化, 详细超参数见附录A. 四种配置如下:
+\begin{itemize}
+\item Dense-4B为基线, 每个模块使用标准稠密FFN.
+\item MoE-27B以DeepSeekMoE\cite{engram-dai2024deepseekmoe}替代稠密FFN, 含72个路由专家与2个共享专家, 每token选择top-$k=6$路由专家. 总参数26.7B, 激活参数与Dense-4B相同.
+\item Engram-27B严格从MoE-27B得到: 路由专家72减为55, 释放参数给5.7B embedding模块, $\rho=74.3\%$, 总参数仍26.7B. Engram放在第2和15层, 最大$N$-gram为3, 头数8, 维度1280. embedding参数以Adam\cite{engram-kingma2014adam}更新, 学习率是基础值的5倍, 无权重衰减. 卷积参数零初始化, 作者称由此在训练开始严格保持恒等映射.
+\item Engram-40B保持相同骨干和计算预算, 稀疏embedding扩至18.5B, 总参数39.5B, 用于研究Engram扩展性质.
+\end{itemize}
+
+\noindent\textbf{评价协议.}
+评价覆盖语言建模、知识、推理、阅读理解、代码和数学, 各基准使用标准提示协议与指标.
+\begin{itemize}
+\item 语言建模报告The Pile\cite{engram-gao2020pile}测试损失, 以及从训练同分布抽取的验证集损失.
+\item 知识与推理包括MMLU\cite{engram-hendrycks2020measuring}、MMLU-Redux\cite{engram-gema2025we}、MMLU-Pro\cite{engram-wang2024mmlu}、CMMLU\cite{engram-li2024cmmlu}、C-Eval\cite{engram-huang2023c}、AGIEval\cite{engram-zhong2024agieval}、ARC-Easy/Challenge\cite{engram-clark2018think}、TriviaQA\cite{engram-joshi2017triviaqa}、内部TriviaQA-ZH、PopQA\cite{engram-mallen2023not}、CCPM\cite{engram-li2021ccpm}、BBH\cite{engram-suzgun2023challenging}、HellaSwag\cite{engram-zellers2019hellaswag}、PIQA\cite{engram-bisk2020piqa}、WinoGrande\cite{engram-sakaguchi2021winogrande}.
+\item 阅读理解包括DROP\cite{engram-dua2019drop}、RACE的Middle/High\cite{engram-lai2017race}以及C3\cite{engram-sun2020investigating}.
+\item 代码与数学包括HumanEval\cite{engram-chen2021evaluatinglargelanguagemodels}、MBPP\cite{engram-austin2021program}、CruxEval\cite{engram-gu2024cruxeval}、GSM8K\cite{engram-cobbe2021training}、MGSM\cite{engram-shi2022language}与MATH\cite{engram-hendrycks2021measuring}.
+\end{itemize}
+
+\input{../papers/translations/engram/tables/pretraining.tex}
+
+\subsection*{4.2 实验结果}\paperlabel{4.2}{engram-sec-4-2}
+表 \ref{engram-tab-1} 汇总结果. 与既有文献\cite{engram-shazeer2017outrageously,engram-he2024mixture,engram-borgeaud2022improving}一致, 稀疏架构比稠密架构有更好的扩展规律. 同训练计算预算下, MoE-27B和Engram-27B/40B三种稀疏模型在全部基准显著优于等FLOPs的Dense-4B.
+
+更重要的是, Engram-27B持续优于等参数、等FLOPs的MoE-27B. 收益不限于知识密集任务, 如本节报告MMLU $+3.0$, MMLU-Pro $+1.8$, CMMLU $+4.0$. 一般推理也有BBH $+5.0$, ARC-Challenge $+3.7$, DROP $+3.3$; 代码与数学有HumanEval $+3.0$, MBPP $+1.6$, GSM8K $+2.2$, MATH $+2.4$. 为降低基准噪声影响、展示训练动态, 附录B给出预训练完整基准轨迹. 这些结果支持作者假说: 专用知识查找原语能改善表征效率, 超过把全部稀疏预算给条件计算的方案.
+
+Engram-40B进一步降低预训练损失, 改善大多数基准, 但并非每项任务严格优于27B. 作者推测原因是训练不足: 40B与基线的训练损失差在训练末期仍扩大, 暗示当前token预算尚未充分发挥新增记忆容量.
+
+\originalsection{5 长上下文训练}\paperlabel{5}{engram-sec-5}
+Engram把局部依赖建模交给静态查找, 为全局上下文保留注意力容量. 本节通过长上下文扩展训练\cite{engram-gao2025train,engram-peng2023yarn}检验这一结构优势, 尝试将架构贡献与基础模型能力分离, 报告长程检索和推理收益.
+
+\subsection*{5.1 实验设置}\paperlabel{5.1}{engram-sec-5-1}
+\noindent\textbf{训练细节.}
+采用DeepSeek-V3\cite{engram-liu2024deepseek}的上下文扩展策略. 预训练后使用YaRN\cite{engram-peng2023yarn}, 在32768-token上下文阶段训练5000步, 使用30B高质量长上下文token. 超参数为$s=10$, $\alpha=1$, $\beta=32$, 缩放因子$f=0.707$.
+
+\noindent\textbf{模型配置.}
+四种模型的上下文扩展比较包括MoE-27B和Engram-27B的50k最终预训练检查点, 以及Engram-27B的41k和46k中间检查点. 初始化阶段不同, 但扩展训练协议完全相同. 特别选46k, 因为其预训练损失等于完整训练MoE-27B的50k, 构成“Iso-Loss”控制. 作者据此认为, 扩展后的差异可归于架构, 而不是起始模型质量.
+
+\noindent\textbf{评价基准.}
+LongPPL\cite{engram-fangwrong}包含长书籍、研究论文、代码库和长思维链轨迹四类. RULER\cite{engram-hsiehruler}包含14个子集, 汇成8类: 大海捞针(NIAH)的单针(S)、多键(MK)、多值(MV)、多查询(MQ), 多跳变量跟踪(VT)、常见词提取(CWE)、高频词提取(FWE)和问答(QA).
+
+\input{../papers/translations/engram/tables/long_context.tex}
+
+\subsection*{5.2 实验结果}\paperlabel{5.2}{engram-sec-5-2}
+结果见表 \ref{engram-tab-2}. 分析分两步, 先分离基础模型能力与架构的影响, 再进行控制比较.
+
+\noindent\textbf{1. 不只由注意力机制决定的长上下文能力.}
+注意力和位置编码提供上下文处理结构基础\cite{engram-su2023roformerenhancedtransformerrotary,engram-press2021train,engram-yang2025path,engram-xiao2023efficient}, 但结果表明长上下文性能不只由架构先验决定. 原文称, Engram由41k到50k的轨迹显示, 在架构相同、上下文扩展计算预算固定时, 预训练推进带来单调改善. 作者认为这提示长上下文与一般建模能力内在相连, 因而严格比较应对齐基础模型损失, 不只对齐训练步数.
+
+\noindent\textbf{2. 控制设置中的架构优势.}
+按上述原则, 比较Engram与MoE.
+\begin{itemize}
+\item 等损失设置: Engram-27B的46k与MoE-27B的50k预训练损失相同. 作者称它严格分离架构效率, Engram在复杂检索任务显著更好, 如多查询NIAH $97.0$ 对 $84.2$, VT $87.2$ 对 $77.0$.
+\item 等FLOPs设置: 两者均50k, Engram进一步扩大差距. 原文称它取得全面最高性能.
+\item 极端设置: Engram仅41k, 约82\%预训练计算, 仍与完整MoE有竞争力. 作者称它匹配LongPPL并在RULER超过基线, 展示架构固有优势.
+\end{itemize}
+原表图注还概括两点: 41k用82\%预训练FLOPs, LongPPL匹配而RULER准确率明显更高; 46k等预训练损失和50k等预训练FLOPs时, Engram在所有指标显著更好. 这些为作者概括, 完整数值均在表 \ref{engram-tab-2} 保留.
+
+\originalsection{6 分析}\paperlabel{6}{engram-sec-6}
+本节研究Engram内部机制, 包括有效深度、核心模块与参数敏感性, 还评价卸载推断吞吐, 最后给出门控可视化案例.
+
+\subsection*{6.1 Engram在功能上是否等于增加模型深度?}\paperlabel{6.1}{engram-sec-6-1}
+当前LLM缺少专用知识查找原语, 依赖计算模拟记忆回想. 表 \ref{engram-tab-3} 显示, 为识别“Diana, Princess of Wales”, LLM使用多个注意力和FFN层逐步组合特征\cite{engram-li2025echoesbertmodernlanguage,engram-ghandeharioun2024patchscopes,engram-DBLP:conf/coling/JinYHZWH0MMDYDZ25}, 理论上这可以用知识查找来识别. 我们因此提出假说: 显式查找免去早期特征组合, 在效果上模拟深度增加. 用LogitLens\cite{engram-nostalgebraist2020logitlens,engram-belrose2023eliciting}与中心化核对齐(CKA)\cite{engram-kornblith2019similarity,engram-davari2022reliability}检验.
+
+\begin{table}[htbp]
+\centering\begingroup\setlength{\tabcolsep}{3pt}
+\caption{原文表3: 从Ghandeharioun等的Patchscopes\cite{engram-ghandeharioun2024patchscopes}转引的实体解析例子. 多层注意力与FFN逐渐构建“Diana, Princess of Wales”的表示. 中列是PatchScope对最后token“Wales”的自动生成文本,下列保留英文并附中文翻译;右列为原作者人工解释. 该第三方论文另经官方arXiv许可核对为CC BY4.0,作者为Asma Ghandeharioun、Avi Caciularu、Adam Pearce、Lucas Dixon和Mor Geva,见\url{https://proceedings.mlr.press/v235/ghandeharioun24a.html}.}\label{engram-tab-3}
+\begin{tabular}{rp{.54\textwidth}p{.33\textwidth}}\toprule
+层 & 潜状态翻译 & 原作者解释\\\midrule
+1--2 & : Country in the United Kingdom\par : 位于英国的国家 & Wales(威尔士)\\
+3 & : Country in Europe\par : 位于欧洲的国家 & Wales(威尔士)\\
+4 & : Title held by female sovereigns in their own right or by queens consort\par : 女性在位君主或王后拥有的头衔 & Princess of Wales(威尔士王妃), 不特指个人\\
+5 & : Title given to the wife of the Prince of Wales (and later King)\par : 授予威尔士亲王(后来成为国王)妻子的头衔 & Princess of Wales(威尔士王妃), 不特指个人\\
+6 & : Diana, Princess of Wales (1961-1997), the first wife of Prince Charles, Prince of Wales, who was famous for her beauty and humanitarian work\par : 戴安娜, 威尔士王妃(1961--1997), 威尔士亲王查尔斯的第一任妻子, 以美貌和人道主义工作闻名 & Diana, Princess of Wales(戴安娜, 威尔士王妃)\\\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\noindent\textbf{预测收敛加快.}\label{engram-logitlens}
+先用LogitLens分析预测跨层演化. 每层隐状态用最终LM Head投影, 计算中间输出分布与模型最终输出分布的KL散度\cite{engram-kullback1951information}. 这量化潜表示离“预测就绪”有多近\cite{engram-csordas2025language,engram-belrose2023eliciting}. 图 \ref{engram-fig-4}(a)显示, 两种Engram相较MoE都有系统性更小的KL, 早期模块差距最明显. 作者认为更陡下降说明特征组合更快, 与显式访问知识减少计算步数、较早得到高置信度有效预测的假说相符.
+
+\noindent\textbf{表征对齐与有效深度.}\label{engram-cka}
+为考察Engram浅层是否在语义上对应更深的基线层, 使用广泛用于表征结构比较的CKA\cite{engram-kornblith2019similarity,engram-kriegeskorte2008representational}. 给定两组表示$X,Y$, 如不同模型或层的激活,
+\begin{equation}\label{engram-eq-8}
+\operatorname{CKA}(K,L)=\frac{\operatorname{HSIC}(K,L)}{
+\sqrt{\operatorname{HSIC}(K,K)\operatorname{HSIC}(L,L)}}.
+\end{equation}
+$K=XX^\top$, $L=YY^\top$是线性核Gram矩阵, HSIC为Hilbert--Schmidt独立性准则\cite{engram-gretton2005measuring}. 使用小批次实现及无偏HSIC估计\cite{engram-davari2022reliability}, 在Few-NERD\cite{engram-ding2021few}上取命名实体最后token隐状态.
+
+先计算逐层成对CKA矩阵$S\in[0,1]^{L\times L}$, $L$为层数. 再用每个Engram层$j$最相似的top-$k$个MoE层的加权质心定义软对齐指标:
+\begin{equation}\label{engram-eq-9}
+a_j=\frac{\sum_{i\in\mathcal I_j}S_{i,j}i}{\sum_{i\in\mathcal I_j}S_{i,j}},
+\qquad\mathcal I_j=\mathop{\mathrm{argtop}k}_{i}(S_{i,j}).
+\end{equation}
+$S_{i,j}$为MoE层$i$与Engram层$j$的相似度; $a_j$代理该Engram层对应的“有效MoE深度”. top-$k$过滤取$k=5$, 减轻低相似度噪声.
+
+图 \ref{engram-fig-4}(b,c)将软对齐曲线(白虚线)叠在相似度热图上. 高相似对角线明显上移, 很多层满足$a_j>j$. 例如Engram-27B第5层最接近MoE约第12层的表示. 这种持续的非对角偏移与LogitLens一致, 作者据此称Engram较早形成更深表示, 并验证核心假说: 显式查找绕过早期特征组合, 在功能上等于提高有效深度.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\textwidth]{../papers/translations/engram/figures/logitlens_and_cka.pdf}
+\caption{原文图4: 表征对齐与收敛速度. (a)逐层LogitLens KL散度,早期层较低散度表示预测较快趋近最终分布. (b,c)CKA相似度热图,高相似区域上移;作者把它解释为Engram浅层相当于MoE深层,从而增加有效深度. 图内Layer Index/Engram Layer/MoE Layer为层编号/Engram层/MoE层,KL Divergence为KL散度,CKA Similarity为CKA相似度. 图注原文有“=Engram”多余等号,译稿在排版上去掉这一明显标点错误.}\label{engram-fig-4}
+\end{figure}
+
+\subsection*{6.2 结构消融与层敏感性}\paperlabel{6.2}{engram-sec-6-2}
+在受控设置中检验各设计. 未说明例外时, 骨干是12层3B MoE, 激活参数0.56B, 训练100B token. 图 \ref{engram-fig-5} 报告验证损失, 橙虚线是MoE基线$1.808$.
+
+\noindent\textbf{参考配置.}
+添加固定1.6B Engram记忆, 使用$\{2,3\}$-gram, 插入第2和6层, 验证损失$1.768$, 相比MoE改善$0.04$. 后面所有结构消融相对这个参考模型定义.
+
+\noindent\textbf{记忆放在哪里?}
+固定1.6B预算, 合并成单个模块, 扫描第1--12层. 这暴露放置权衡: 早插入能在骨干花费计算深度之前卸掉局部模式重建, 对应自然层级处理\cite{engram-tenney2019bert,engram-ghandeharioun2024patchscopes,engram-li2025echoesbertmodernlanguage,engram-DBLP:conf/coling/JinYHZWH0MMDYDZ25}. 但早期隐状态尚未经注意力充分聚合全局上下文, 并行分支也缺少精细调制所需的表征分化\cite{engram-xie2025mhcmanifoldconstrainedhyperconnections,engram-zhu2025hyperconnections}, 门控精度因此受影响. 最优位置需平衡尽早卸载静态模式与稍晚更强的上下文Query.
+
+单模块最好为第2层, 损失$1.770$, 优于第1层, 更深则变差. 作者据此认为一轮注意力已给门控提供有意义的上下文, 同时足够早, 能替代底层局部聚合. 把同一1.6B记忆通过缩小$d_{\rm mem}$分成两个模块, 放第2和6层, 更好地达到$1.768$. 分层结合早期介入与后期丰富上下文门控, 还方便利用系统记忆层级.
+
+\noindent\textbf{哪些组件重要?}
+从参考配置逐个去掉设计, 记忆参数预算固定. 最重要的三项是多分支骨干中的分支特定融合、上下文门控、分词器压缩. 去掉任一项使损失回退最大. “w/o multi branch”仍保留mHC骨干, 只把分支门控改成在预映射$\mathcal H^{\rm pre}$之后对隐状态做一次Engram融合\cite{engram-xie2025mhcmanifoldconstrainedhyperconnections}.
+
+其他变化较小: 去掉轻量逐通道卷积仅略微变差; 固定1.6B预算下分容量给4-gram略次优, 可能挤占更频繁的2/3-gram容量, 但不排除大记忆时高阶有益.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.86\textwidth]{../papers/translations/engram/figures/arch_ablation.pdf}
+\caption{原文图5: 架构消融. 深蓝曲线扫描单模块插入层,早期第2层最好,更深变差;右侧标记去掉参考配置子模块,显示多分支、压缩、门控的重要性. 图内Layer Index为层编号,Validation Loss为验证损失,Layer Sweep为逐层扫描,Ablation Variations为消融变体;w/o gating/w/o multi branch/w/o token compress/w/o short conv分别为无门控/无分支门控/无分词器压缩/无短卷积,+4-gram为加入4-gram.}\label{engram-fig-5}
+\end{figure}
+
+\subsection*{6.3 敏感性分析}\paperlabel{6.3}{engram-sec-6-3}
+为刻画功能贡献, 推断时完全抑制稀疏embedding输出, 骨干不变. 关键是这种事后消融造成训练--推断不一致, 可能在混合复杂能力任务中引入噪声. 因而优先考察敏感谱两端的事实知识与阅读理解, 它们在此压力测试下信噪比最高.
+
+图 \ref{engram-fig-6} 显示两类明显分化. 事实知识保留原性能的29\%--44\%, 如TriviaQA仅29\%, 作者据此称Engram是参数知识的主要仓库. 阅读理解保留81\%--93\%, 如C3为93\%, 表明有上下文依据的任务主要依赖骨干注意力而非Engram.
+\begin{figure}[htbp]
+\centering\includegraphics[width=.96\textwidth]{../papers/translations/engram/figures/sensitivity_analysis.pdf}
+\caption{原文图6: 抑制Engram后的性能保留比例. 事实知识更依赖记忆模块,阅读理解更多由骨干保留. Retained Performance (\% of Baseline)为原性能保留百分比,不等于绝对准确率. 类别Reading Comprehension/Common Sense Reasoning/Knowledge-Intensive Reasoning/Code/Algorithmic Reasoning/Factual Knowledge分别为阅读理解/常识推理/知识密集推理/代码/算法推理/事实知识. 基准名与各百分比原样保留.}\label{engram-fig-6}
+\end{figure}
+
+\subsection*{6.4 系统效率}\paperlabel{6.4}{engram-sec-6-4}
+相比按路由的MoE, Engram用显式静态哈希ID寻址稀疏激活. token序列已知时, 下一次查找索引确定, 可以在对应层执行前计算.
+
+\noindent\textbf{实验设置.}
+推断测试程序基于nano-vLLM\footnote{\url{https://github.com/GeeeekExplorer/nano-vllm}}, 是vLLM\cite{engram-kwon2023efficient}的精简原型. 为排除MoE专家并行通信混杂, 使用Dense-4B与Dense-8B两种稠密骨干. 第二个Transformer模块插入100B参数Engram层, 全表在主机DRAM. 推断中异步预取, 让PCIe传输与第一模块计算重叠.
+
+\begin{table}[htbp]
+\centering
+\caption{原文表4: 100B参数Engram表全部卸载到主机内存的端到端推断吞吐.}\label{engram-tab-4}
+\begin{tabular}{llr}\toprule
+\multicolumn{3}{c}{实验设置}\\\midrule
+\multicolumn{2}{l}{硬件} & NVIDIA H800\\
+\multicolumn{2}{l}{工作负载} & 512个序列\\
+\multicolumn{2}{l}{序列长度} & Uniform$(100,1024)$\\\midrule
+骨干 & 配置 & 吞吐(token/s)\\\midrule
+4B-Dense & 基线 & 9,031.62\\
+ & +100B Engram(CPU卸载) & 8,858.28\\\midrule
+8B-Dense & 基线 & 6,315.52\\
+ & +100B Engram(CPU卸载) & 6,140.02\\\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{结果.}
+表 \ref{engram-tab-4} 显示吞吐代价很小, 最大为8B骨干约2.8\%. 作者认为, 早期稠密模块的计算强度提供足够窗口掩盖检索延迟. 每步有效通信量随激活槽数而不是总表大小增长. 这是保守基线: 系统分层设计可利用Zipf局部性缓存常用项到HBM, 当前测试却强制所有检索经PCIe从主机取. 作者由小开销推测, 完全优化且利用局部性的实现也将有可忽略的吞吐代价.
+
+\subsection*{6.5 门控可视化案例}\paperlabel{6.5}{engram-sec-6-5}
+上下文门控动态调制静态记忆与骨干融合. 为观察是否按设计工作, 图 \ref{engram-fig-7} 展示Engram-27B若干样本的门值$\alpha_t$.\footnote{模型使用$M=4$的mHC,在第2和15层插Engram,每token共有8个门值. 并非每分支都呈现可解释激活. 为清楚展示,作者挑选与语义模式匹配相关最强的门值.}
+
+完成局部静态模式时, 门控持续强激活, 图中为红色. 英语包含多token命名实体“Alexander the Great”“the Milky Way”, 以及套语“By the way”“Princess of Wales”. 中文包含“四大发明”和“张仲景”等熟语或历史实体. 作者认为这些定性结果显示Engram能够识别并处理定型依赖, 让骨干免于记忆静态关联.
+\begin{figure}[htbp]
+\centering\includegraphics[width=\textwidth]{../papers/translations/engram/figures/visualization.pdf}
+\caption{原文图7: Engram门控热图. 深红表示更大的$\alpha_t\in[0,1]$. 模块基于后缀$N$-gram,此处$N=3$,故token$x_t$上的强激活表示以它结尾的前序短语被识别为记忆中的静态模式. 图中五个完整样本在下文逐一保留,英语附中文翻译;图中子词切分、空格和$\langle\mathrm{bos}\rangle$是分词展示,不代表新增文本指令.}\label{engram-fig-7}
+\end{figure}
+完整样本如下;原文只给这些可视化序列, 没有另外公布逐字评测提示模板.
+\begin{enumerate}
+\item \texttt{<bos>} Only Alexander the Great could tame the horse Bucephalus.\par 只有亚历山大大帝能驯服名为Bucephalus的马.
+\item \texttt{<bos>} By the way, I am a fan of the Milky Way.\par 顺便说一句, 我是银河的爱好者.
+\item \texttt{<bos>} This study analyzes the media impact of Diana, Princess of Wales.\par 本研究分析威尔士王妃戴安娜的媒体影响.
+\item \texttt{<bos>} 中国四大发明包括: 造纸术、指南针、火药和印刷术.
+\item \texttt{<bos>} 东汉末年名医张仲景, 因其卓越的贡献被后世尊称为“医圣”, 并著有传世巨作《伤寒杂病论》.
+\end{enumerate}
+
+\originalsection{7 相关工作}\paperlabel{7}{engram-sec-7}
+\phantomsection
+\noindent\textbf{$N$-gram建模与embedding扩展.}\paperlabel{7}{engram-sec-7-1}
+$N$-gram源于Shannon框架\cite{engram-shannon1948mathematical}, 依赖局部历史预测token, 传统方法用平滑\cite{engram-kneser1995improved,engram-DBLP:journals/tsp/Katz87}减轻数据稀疏. 虽然神经架构\cite{engram-bengio2003neural}取代其长程依赖建模, 查找效率仍保留在现代表征学习中, 如FastText\cite{engram-bojanowski2017enriching}.
+
+近来该范式以embedding扩展形式复兴. Per-Layer Embeddings\cite{engram-gemma_3n_2025}、STEM\cite{engram-sadhukhan2026stem}、L3\cite{engram-tseng20263}、DeepEmbed\cite{engram-rwkv_deepembed_wiki_2025}用大表扩容量. 更接近我们的另一条工作线, 将组合$N$-gram直接融入表征空间. N-Grammer\cite{engram-roy2022n}用离散潜文本表示构建$N$-gram来增强Transformer; Feng等\cite{engram-feng2023memory}展示其语音识别效用. SuperBPE\cite{engram-liu2025superbpe}把高频多词表达合成“超词”token; SCONE\cite{engram-yu2025scaling}则用辅助编码模型. OverEncoding\cite{engram-huang2025over}与字节潜在Transformer(BLT)\cite{engram-pagnoni2025byte}分别用哈希token级和byte级$N$-gram embedding捕捉局部依赖. 这些工作共同显示, $N$-gram参数扩展可以只有很小计算开销. 我们在两方面有根本区别.
+
+第一, 建模和评价协议不同. 既有方法常把$N$-gram当外部增强, 没在严格公平协议下验证效率. SCONE主要面向推断, 辅助模块增加训练FLOPs; 原文称OverEncoding即使在非等参数设置下, 也未在稀疏MoE骨干上带来有意义改善. 我们把条件记忆当一等原语, 用精心设计的Engram实现, 在稀疏分配框架中严格评价, 展示对等参数、等FLOPs的MoE基线优势.
+
+第二, 系统上采用算法与系统共同设计. 既有方法把embedding严格放在输入层, 第0层, 使访问与计算串行\cite{engram-yu2025scaling,engram-huang2025over}. Engram放在更深层以重叠通信与计算. 再利用$N$-gram的Zipf分布, 可以充分利用存储层级. 作者认为整体设计能以可忽略推断开销扩展大量参数.
+
+\phantomsection
+\noindent\textbf{高基数类别embedding.}\paperlabel{7}{engram-sec-7-2}
+推荐系统也有相关表征问题: 数百个类别特征的词表可能各有数百万到数十亿ID\cite{engram-coleman2023unified}. 既有方法通过多哈希和组合表示\cite{engram-tito2017hash,engram-shi2020compositional}、频率感知哈希和碰撞管理\cite{engram-zhang2020model,engram-tsang2022clustering,engram-zhang2024cafe}、频率/重要性自适应容量\cite{engram-ginart2021mixed,engram-joglekar2020neural,engram-liu2021learnable}, 以及量化、张量分解、共享内存布局的结构压缩\cite{engram-kang2020learning,engram-yin2021tt,engram-desai2021random}, 改善参数--准确率与访问权衡. 其他方法跨类别域共享表示\cite{engram-coleman2023unified}, 无显式表生成embedding\cite{engram-kang2021learning}, 或用学习到的语义标识代替任意物品ID\cite{engram-rajput2023recommender,engram-singh2024better}. Engram同样面对高度偏斜访问下的大离散键空间, 但键由有序文本$N$-gram构成, 通过上下文门控注入Transformer中间层.
+
+\phantomsection
+\noindent\textbf{混合专家.}\paperlabel{7}{engram-sec-7-3}
+MoE通过每token条件激活少数专家, 分离容量与计算成本, 由Shazeer等提出\cite{engram-shazeer2017outrageously}. 后续GShard\cite{engram-lepikhin2020gshard}、BASE\cite{engram-pmlr-v139-lewis21a}、Switch Transformer\cite{engram-fedus2022switch}、GLaM\cite{engram-du2022glam}在保持固定推断成本时支持超线性参数扩展. 近期DeepSeek-MoE\cite{engram-dai2024deepseekmoe}借助细粒度专家分割与共享专家隔离, 显著优于同激活参数稠密模型. DeepSeek-V3\cite{engram-liu2024deepseek}与Kimi-k2\cite{engram-kimi-k2}采用这类架构, 总参数达数百十亿规模.
+
+\phantomsection
+\noindent\textbf{记忆网络.}\paperlabel{7}{engram-sec-7-4}
+记忆增强研究旨在增加容量而不同比例增加计算, 大体分参数与非参数方法. 参数记忆如PKM\cite{engram-lample2019large}、PEER\cite{engram-he2024mixture}、Selfmem\cite{engram-cheng2023lift}、Memory+\cite{engram-berges2024memory}、UltraMem\cite{engram-huang2024ultra,engram-huang2025ultramemv2}, 将大规模稀疏键值存储直接加入模型层, 以很小FLOPs影响扩容量. 非参数记忆如REALM\cite{engram-guu2020retrieval}、RETRO\cite{engram-borgeaud2022improving,engram-wang2023shall}、CoG\cite{engram-lan2023copy,engram-caoretrieval}、PlugLM\cite{engram-cheng2023decouple}, 分离知识存储与处理, 把外部记忆视为可编辑、可扩展键值库, 适应变化信息而无需昂贵重训.
+
+\phantomsection
+\noindent\textbf{知识存储机制.}\paperlabel{7}{engram-sec-7-5}
+容量扩展之外, 许多研究考察Transformer如何编码、取回事实知识. FFN被广泛假设为键值记忆\cite{engram-geva2021transformer}: 第一层探测模式作“键”, 第二层把特定信息作“值”投到残差流. 特定“知识神经元”的识别\cite{engram-dai2022knowledge}支持模块性. 因果跟踪\cite{engram-meng2022locating}把事实回忆信息流定位到特定FFN层, 提供进一步证据, 并启发ROME\cite{engram-meng2022locating}、MEMIT\cite{engram-meng2022mass}等无需重训直接更新事实关联的编辑算法. Othello-GPT等内部表示研究\cite{engram-li2024emergentworldrepresentationsexploring}还提示, 这些存储机制可能帮助形成结构化“世界模型”.
+
+\originalsection{8 结论}\paperlabel{8}{engram-sec-8}
+本工作提出条件记忆, 作为主流条件计算MoE的互补稀疏轴, 解决动态计算模拟知识检索的低效. Engram把经典$N$-gram embedding现代化, 实现对静态模式可扩展、常数时间$O(1)$查找.
+
+建立稀疏分配问题后, 我们观察U形规律, 混合分配MoE专家与Engram容量严格优于纯MoE. 据此训练27B模型, 多领域性能更好; 记忆虽直观上有助知识检索, 一般推理、代码与数学收益也很大.
+
+机制分析提示, Engram免去早期静态重建, 有效“加深”网络, 为全局上下文和复杂推理释放注意力. 结构改变在LongPPL与RULER中体现为长上下文改善. Engram还强调基础设施效率: 确定寻址分离存储与计算, 允许大表卸载到主机内存, 推断额外开销很小. 我们认为条件记忆将成为下一代稀疏模型不可缺少的建模原语.
+
+\originalsection{附录 A: 完整架构与超参数}\paperlabel{A}{engram-app-A}
+\input{../papers/translations/engram/tables/architecture.tex}
+
+\clearpage
+\originalsection{附录 B: 全部基准曲线}\paperlabel{B}{engram-app-B}
+\begin{figure}[!ht]
+\centering\includegraphics[width=.97\textwidth,height=.70\textheight,keepaspectratio]{../papers/translations/engram/figures/benchmark_curve.pdf}
+\caption{原文图8: 预训练最后10k步的全部基准曲线. 原图包含Pile-test、MMLU、MMLU-Redux、MMLU-Pro、CMMLU、C-Eval、AGIEval、ARC-Easy、ARC-Challenge、TriviaQA、TriviaQA-ZH、PopQA、CCPM、BBH、HellaSwag、PIQA、WinoGrande、DROP、RACE-High、RACE-Middle、C3、HumanEval、MBPP、CruxEval-o/i、GSM8K、MGSM、MATH,图例为MoE-27B与Engram-27B. 横轴为训练步数,如42k、46k、50k;各纵轴沿用原图指标尺度. 图本身为完整矢量PDF,可放大检查细节.}\label{engram-fig-8}
+\end{figure}
+
+\clearpage
+\originalsection{附录 C: 分词器压缩案例}\paperlabel{C}{engram-app-C}
+\begin{table}[htbp]
+\centering\begingroup\setlength{\tabcolsep}{3pt}
+\caption{原文表6: 分词器压缩合并数最多的5个token. 128k分词器总体压缩率为23.43\%. 以下保留原文列出的所有原token与省略号;“\textvisiblespace”表示可见空格,反斜杠t/n/r为原表展示的制表/换行/回车形式.}\label{engram-tab-6}
+\begin{tabular}{rrlp{.65\textwidth}}\toprule
+排名 & 合并数 & 规范token & 原token\\\midrule
+1 & 163 & \texttt{'\textvisiblespace'} & \texttt{'\textbackslash t'}, \texttt{'\textbackslash n'}, \texttt{'\textbackslash r'}, \texttt{'\textvisiblespace'}, \texttt{'\textvisiblespace\textvisiblespace'}, \texttt{'\textbackslash n\textbackslash n'}, \texttt{'\textvisiblespace\textvisiblespace\textvisiblespace'}, \texttt{'\textvisiblespace\textbackslash n'}, \ldots\\
+2 & 54 & \texttt{'a'} & \texttt{'A'}, \texttt{'a'}, \texttt{'\textvisiblespace a'}, \texttt{'\textvisiblespace A'}, \texttt{'á'}, \texttt{'ä'}, \texttt{'ã'}, \texttt{'ą'}, \texttt{'\textvisiblespace à'}, \texttt{'\textvisiblespace å'}, \texttt{'â'}, \ldots\\
+3 & 40 & \texttt{'o'} & \texttt{'O'}, \texttt{'o'}, \texttt{'\textvisiblespace o'}, \texttt{'\textvisiblespace O'}, \texttt{'ó'}, \texttt{'ö'}, \texttt{'ô'}, \texttt{'õ'}, \texttt{'ő'}, \texttt{'ò'}, \ldots\\
+4 & 35 & \texttt{'e'} & \texttt{'E'}, \texttt{'e'}, \texttt{'\textvisiblespace e'}, \texttt{'\textvisiblespace E'}, \texttt{'é'}, \texttt{'è'}, \texttt{'\textvisiblespace é'}, \texttt{'ę'}, \texttt{'ě'}, \texttt{'ê'}, \ldots\\
+5 & 30 & \texttt{'i'} & \texttt{'I'}, \texttt{'i'}, \texttt{'\textvisiblespace I'}, \texttt{'\textvisiblespace i'}, \texttt{'í'}, \texttt{'ì'}, \texttt{'î'}, \texttt{'ī'}, \texttt{'ï'}, \ldots\\\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\originalsection{译者核查注}\label{engram-translator-notes}
+以下为译者补充, 不属于原论文. 本稿译出了指定版全部实质正文与附录, 原图、原表数字及原书目保留, 未把不一致默默改成一致.
+
+第一, 摘要和引言的“MMLU $+3.4$”与主表的$57.4\to60.4$, 即$+3.0$, 不一致; 主表MMLU-Redux恰为$60.6\to64.0$, 即$+3.4$. 结果节用$+3.0$. 本稿保留各处原报告. 附录B部分曲线也不能直接作为主表逐点复算依据;例如C3曲线的可见刻度约0.75--0.81,与主表MoE/Engram的60.1/63.6不在相同数值区间,原文未解释这一差异.
+
+第二, 长上下文段落“所有指标更好”“全面最高”“单调改善”等概括并非逐项成立. 等损失46k的单针S为97.6,低于MoE的100.0; CWE为4.3,低于4.5. QA在41k为44.0,46k为37.5,50k为40.5,并不单调; FWE为99.6、98.6、99.3,也非单调. 全表数值及作者粗体/下划线保留,其标记也不总严格对应最大值. 相同预训练损失是一项控制,不保证所有潜在基础能力和历史都相同.
+
+第三, $\mathcal O(1)$ 指固定阶数和哈希头数下的查找工作不随表槽数增长,不是全部硬件访问延迟或通信开销的无条件常数保证. 100B卸载吞吐实测仅限H800、512序列、长度Uniform$(100,1024)$、4B/8B稠密骨干及该原型实现. 原文对多级缓存和更大规模的讨论包含设计主张与外推,不是已报告每种硬件/每种负载都小于3\%开销.
+
+第四, “无限记忆”是放宽参数预算的有限扫描,最大槽数$10^7$,并非真正无限. 作者将扩展曲线同时描述为“对数线性”与“严格幂律”;对数横轴上的原损失近似直线,与原损失本身满足幂律是不同函数形式,还需定义拟合量、不可约损失和误差. 原文措辞保留,不把有限扫描提升为渐近定理.
+
+第五, LogitLens与CKA提供表征/读出相关性证据,不单独证明唯一因果机制、计算图等价或真实层数增加. 较低的中间到最终分布KL衡量一致性,并不保证最终预测正确. 有限批次的无偏HSIC估计及其比值也不能仅据人口版本结论保证所有估计CKA都严格落在$[0,1]$. 软对齐还需要分母非零和top-$k$平票处理,原文未详述这些边界.
+
+第六, 门控可视化明确挑选了语义匹配相关最强的分支,不是全部8门值的随机样本. 事后抑制记忆引入训练--推断分布变化,保留原性能比例不是同等训练预算下重训消融结果;两点均已按原文保留. 门值点积自身也不提供语义冲突必然被阻断的数学保证.
+
+第七, Engram表为可训练参数,训练中用Adam更新;“静态”主要区别于由隐状态动态计算地址,不能据此把它当成无需学习或可任意编辑而无需验证的外部事实库. 卷积零初始化在式 \eqref{engram-eq-5} 中给$\mathbf Y=\tilde{\mathbf V}$,故仅凭卷积为零不能推出整个Engram残差输出为零;原文恒等映射表述须区分卷积子模块与整模块.
+
+第八, 官方arXiv作者条目写Yixu Wei,指定PDF/source写Yixuan Wei. 正文作者表按PDF/source保留,元数据记录两种原写法. Source系统图文件名为\texttt{Engram\_system.pdf},引用路径却写小写;译稿仅规范文件名大小写. 部分原BibTeX条目缺年份或期刊,本稿保留原书目内容并在核查记录标出,没有猜测补全. 原文没有独立限制节或正式定理/证明/算法环境,不虚构作者未给的证明或逐字提示模板.
+
+\input{../papers/translations/engram/references.tex}

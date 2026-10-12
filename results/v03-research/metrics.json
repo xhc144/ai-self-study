@@ -1,0 +1,1879 @@
+{
+  "boundary": {
+    "scope": "symbolic source-routing and capability-executor simulation; no LLM",
+    "parameters": {
+      "clean_cases": 240,
+      "attack_cases": 120,
+      "attack_families": [
+        "export",
+        "private",
+        "wrong_public"
+      ]
+    },
+    "rows": [
+      {
+        "policy": "source_blind",
+        "clean_total": 240,
+        "clean_completed": 240,
+        "clean_refused": 0,
+        "attack_total": 120,
+        "unauthorized_proposals": 80,
+        "unauthorized_executions": 80,
+        "semantic_attack_successes": 120,
+        "blocked_proposals": 0,
+        "clean_completion_rate": 1.0,
+        "clean_false_refusal_rate": 0.0,
+        "semantic_attack_success_rate": 1.0
+      },
+      {
+        "policy": "source_blind_with_executor",
+        "clean_total": 240,
+        "clean_completed": 240,
+        "clean_refused": 0,
+        "attack_total": 120,
+        "unauthorized_proposals": 80,
+        "unauthorized_executions": 0,
+        "semantic_attack_successes": 40,
+        "blocked_proposals": 80,
+        "clean_completion_rate": 1.0,
+        "clean_false_refusal_rate": 0.0,
+        "semantic_attack_success_rate": 0.3333333333333333
+      },
+      {
+        "policy": "keyword_refusal",
+        "clean_total": 240,
+        "clean_completed": 120,
+        "clean_refused": 120,
+        "attack_total": 120,
+        "unauthorized_proposals": 0,
+        "unauthorized_executions": 0,
+        "semantic_attack_successes": 0,
+        "blocked_proposals": 0,
+        "clean_completion_rate": 0.5,
+        "clean_false_refusal_rate": 0.5,
+        "semantic_attack_success_rate": 0.0
+      },
+      {
+        "policy": "trusted_source_router",
+        "clean_total": 240,
+        "clean_completed": 240,
+        "clean_refused": 0,
+        "attack_total": 120,
+        "unauthorized_proposals": 0,
+        "unauthorized_executions": 0,
+        "semantic_attack_successes": 0,
+        "blocked_proposals": 0,
+        "clean_completion_rate": 1.0,
+        "clean_false_refusal_rate": 0.0,
+        "semantic_attack_success_rate": 0.0
+      }
+    ]
+  },
+  "propagation": {
+    "scope": "absorbing-error multi-step agent simulation, not measured LLM errors",
+    "parameters": {
+      "episodes": 10000,
+      "error_probability": 0.08,
+      "recovery_probability": 0.6,
+      "false_refusal_probability": 0.02,
+      "independence_assumption": true,
+      "checked_local_success_probability": 0.9496000000000001
+    },
+    "rows": [
+      {
+        "steps": 1,
+        "unverified_episode_success": 0.9253,
+        "unverified_theory": 0.92,
+        "checked_episode_success": 0.9491,
+        "checked_theory": 0.9496000000000001,
+        "mean_unverified_local_accuracy": 0.9253,
+        "wrong_state_episodes": 747
+      },
+      {
+        "steps": 4,
+        "unverified_episode_success": 0.7177,
+        "unverified_theory": 0.7163929600000001,
+        "checked_episode_success": 0.8086,
+        "checked_theory": 0.813135316156826,
+        "mean_unverified_local_accuracy": 0.919975,
+        "wrong_state_episodes": 2823
+      },
+      {
+        "steps": 8,
+        "unverified_episode_success": 0.515,
+        "unverified_theory": 0.5132188731375618,
+        "checked_episode_success": 0.6569,
+        "checked_theory": 0.6611890423814614,
+        "mean_unverified_local_accuracy": 0.9199,
+        "wrong_state_episodes": 4850
+      }
+    ]
+  },
+  "probe": {
+    "scope": "fitted linear probe on synthetic activations; interventions on known frozen function, not an LLM",
+    "parameters": {
+      "train_size": 512,
+      "test_size": 256,
+      "probe_steps": 1200,
+      "probe_lr": 0.1,
+      "downstream_function": "f(h)=h[0]",
+      "observational_support": "h[1]=h[0]; h[2] independent Rademacher"
+    },
+    "probe_weight_intercept": [
+      4.757235609100793,
+      -0.020000945554465435
+    ],
+    "probe_test_accuracy": 1.0,
+    "rows": [
+      {
+        "intervention": "used_positive_control",
+        "coordinate": 0,
+        "mean_patch_norm": 2.0,
+        "mean_absolute_logit_change": 2.0,
+        "output_flip_rate": 1.0,
+        "off_observational_support_rate": 1.0
+      },
+      {
+        "intervention": "decodable_unused",
+        "coordinate": 1,
+        "mean_patch_norm": 2.0,
+        "mean_absolute_logit_change": 0.0,
+        "output_flip_rate": 0.0,
+        "off_observational_support_rate": 1.0
+      },
+      {
+        "intervention": "nuisance_negative_control",
+        "coordinate": 2,
+        "mean_patch_norm": 2.0,
+        "mean_absolute_logit_change": 0.0,
+        "output_flip_rate": 0.0,
+        "off_observational_support_rate": 0.0
+      }
+    ],
+    "random_coordinate_control_mean_absolute_logit_change": 0.7265625,
+    "random_coordinate_theory_mean_absolute_logit_change": 0.6666666666666666,
+    "corrupted_accuracy": 0.0,
+    "positive_patch_recovery_accuracy": 1.0,
+    "unused_patch_recovery_accuracy": 0.0,
+    "integrated_gradients": {
+      "quadrature_panels": 2048,
+      "values": [
+        0.39996368174111213,
+        0.09999092043527803
+      ],
+      "sum": 0.49995460217639015,
+      "output_difference": 0.4999546021312976,
+      "completeness_residual": 4.50925408124192e-11,
+      "endpoint_gradient": [
+        0.00018158323094363062,
+        9.079161547181531e-05
+      ]
+    }
+  },
+  "program_search": {
+    "scope": "bounded original polynomial-program search, not an LLM or FunSearch reproduction",
+    "parameters": {
+      "candidate_count": 126,
+      "dev_inputs": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "holdout_inputs": [
+        9,
+        -6,
+        11,
+        5,
+        -12,
+        -4,
+        6,
+        10,
+        -5,
+        7,
+        -7,
+        4,
+        12,
+        -10,
+        -9,
+        8,
+        -11,
+        -8
+      ],
+      "target": "x*x+x",
+      "coefficients_domain": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "honest_rule": "dev exact equality, then minimum cost, then proposal index",
+      "faulty_rule": "mean(max(candidate-target,0)^2)+0.01*cost",
+      "holdout_used_for_selection": false
+    },
+    "honest_selected": {
+      "index": 113,
+      "kind": "polynomial",
+      "coefficients": [
+        0,
+        1,
+        1
+      ],
+      "cost": 3,
+      "dev_mse": 0.0,
+      "faulty_dev_loss": 0.0,
+      "holdout_accuracy": 1.0,
+      "holdout_mse": 0.0
+    },
+    "faulty_selected": {
+      "index": 0,
+      "kind": "polynomial",
+      "coefficients": [
+        0,
+        0,
+        0
+      ],
+      "cost": 0,
+      "dev_mse": 32.0,
+      "faulty_dev_loss": 0.0,
+      "holdout_accuracy": 0.0,
+      "holdout_mse": 6805.333333333333
+    },
+    "dev_memorization_negative_control": {
+      "index": 125,
+      "kind": "dev_lookup",
+      "coefficients": null,
+      "cost": 7,
+      "dev_mse": 0.0,
+      "faulty_dev_loss": 0.0,
+      "holdout_accuracy": 0.0,
+      "holdout_mse": 6805.333333333333
+    },
+    "archive": [
+      {
+        "index": 0,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          0,
+          0
+        ],
+        "cost": 0,
+        "dev_mse": 32.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 1,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          2,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 32.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 2,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 212.0,
+        "faulty_dev_loss": 0.5714285714285714
+      },
+      {
+        "index": 3,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 84.0,
+        "faulty_dev_loss": 84.0
+      },
+      {
+        "index": 4,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 53.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 5,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 57.0,
+        "faulty_dev_loss": 2.857142857142857
+      },
+      {
+        "index": 6,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 40.0,
+        "faulty_dev_loss": 30.571428571428573
+      },
+      {
+        "index": 7,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 145.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 8,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 281.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 9,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 37.0,
+        "faulty_dev_loss": 37.0
+      },
+      {
+        "index": 10,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 101.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 11,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 277.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 12,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 8.0,
+        "faulty_dev_loss": 7.857142857142857
+      },
+      {
+        "index": 13,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 37.0,
+        "faulty_dev_loss": 0.8571428571428571
+      },
+      {
+        "index": 14,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          0,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 233.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 15,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 293.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 16,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 233.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 17,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          0,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 5.0,
+        "faulty_dev_loss": 0.7142857142857143
+      },
+      {
+        "index": 18,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 73.0,
+        "faulty_dev_loss": 0.2857142857142857
+      },
+      {
+        "index": 19,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 224.0,
+        "faulty_dev_loss": 0.7142857142857143
+      },
+      {
+        "index": 20,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 37.0,
+        "faulty_dev_loss": 36.142857142857146
+      },
+      {
+        "index": 21,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 152.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 22,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          1,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 112.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 23,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          1,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 252.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 24,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 88.0,
+        "faulty_dev_loss": 0.7142857142857143
+      },
+      {
+        "index": 25,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          0,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 152.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 26,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          0,
+          -2
+        ],
+        "cost": 2,
+        "dev_mse": 256.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 27,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 17.0,
+        "faulty_dev_loss": 5.0
+      },
+      {
+        "index": 28,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 16.0,
+        "faulty_dev_loss": 0.8571428571428571
+      },
+      {
+        "index": 29,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          0,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 52.0,
+        "faulty_dev_loss": 52.0
+      },
+      {
+        "index": 30,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 52.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 31,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 17.0,
+        "faulty_dev_loss": 12.0
+      },
+      {
+        "index": 32,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 100.0,
+        "faulty_dev_loss": 1.1428571428571428
+      },
+      {
+        "index": 33,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          0,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 41.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 34,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 120.0,
+        "faulty_dev_loss": 1.8571428571428572
+      },
+      {
+        "index": 35,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          2,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 116.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 36,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 84.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 37,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          1,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 28.0,
+        "faulty_dev_loss": 28.0
+      },
+      {
+        "index": 38,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          1,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 28.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 39,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          0,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 25.0,
+        "faulty_dev_loss": 24.714285714285715
+      },
+      {
+        "index": 40,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 84.0,
+        "faulty_dev_loss": 0.5714285714285714
+      },
+      {
+        "index": 41,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 40.0,
+        "faulty_dev_loss": 9.428571428571429
+      },
+      {
+        "index": 42,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 308.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 43,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 165.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 44,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          0,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 20.0,
+        "faulty_dev_loss": 1.1428571428571428
+      },
+      {
+        "index": 45,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 129.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 46,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 8.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 47,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          0,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 25.0,
+        "faulty_dev_loss": 0.2857142857142857
+      },
+      {
+        "index": 48,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 52.0,
+        "faulty_dev_loss": 46.285714285714285
+      },
+      {
+        "index": 49,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 64.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 50,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -1,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 268.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 51,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -2,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 288.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 52,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 133.0,
+        "faulty_dev_loss": 0.7142857142857143
+      },
+      {
+        "index": 53,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 25.0,
+        "faulty_dev_loss": 0.2857142857142857
+      },
+      {
+        "index": 54,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          0,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 41.0,
+        "faulty_dev_loss": 41.0
+      },
+      {
+        "index": 55,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          0,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 52.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 56,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 184.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 57,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          0,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 308.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 58,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 4.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 59,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 32.0,
+        "faulty_dev_loss": 29.571428571428573
+      },
+      {
+        "index": 60,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -2,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 148.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 61,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          0,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 5.0,
+        "faulty_dev_loss": 4.285714285714286
+      },
+      {
+        "index": 62,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 113.0,
+        "faulty_dev_loss": 0.2857142857142857
+      },
+      {
+        "index": 63,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 53.0,
+        "faulty_dev_loss": 53.0
+      },
+      {
+        "index": 64,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 4.0,
+        "faulty_dev_loss": 4.0
+      },
+      {
+        "index": 65,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -1,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 128.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 66,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -2,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 64.0,
+        "faulty_dev_loss": 62.857142857142854
+      },
+      {
+        "index": 67,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 20.0,
+        "faulty_dev_loss": 18.857142857142858
+      },
+      {
+        "index": 68,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 304.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 69,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 5.0,
+        "faulty_dev_loss": 0.7142857142857143
+      },
+      {
+        "index": 70,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -1,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 44.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 71,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          0,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 212.0,
+        "faulty_dev_loss": 0.5714285714285714
+      },
+      {
+        "index": 72,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 48.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 73,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          0,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 88.0,
+        "faulty_dev_loss": 0.7142857142857143
+      },
+      {
+        "index": 74,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 37.0,
+        "faulty_dev_loss": 13.285714285714286
+      },
+      {
+        "index": 75,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          0,
+          1
+        ],
+        "cost": 2,
+        "dev_mse": 4.0,
+        "faulty_dev_loss": 2.0
+      },
+      {
+        "index": 76,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          0,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 281.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 77,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 73.0,
+        "faulty_dev_loss": 72.71428571428571
+      },
+      {
+        "index": 78,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          0,
+          2
+        ],
+        "cost": 2,
+        "dev_mse": 32.0,
+        "faulty_dev_loss": 32.0
+      },
+      {
+        "index": 79,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          0,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 8.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 80,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 229.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 81,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          2,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 4.0,
+        "faulty_dev_loss": 2.0
+      },
+      {
+        "index": 82,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 97.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 83,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          2,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 32.0,
+        "faulty_dev_loss": 32.0
+      },
+      {
+        "index": 84,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          0,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 133.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 85,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 37.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 86,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          0,
+          -1
+        ],
+        "cost": 3,
+        "dev_mse": 101.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 87,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 64.0,
+        "faulty_dev_loss": 64.0
+      },
+      {
+        "index": 88,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 313.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 89,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 1.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 90,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          2,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 133.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 91,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          0,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 8.0,
+        "faulty_dev_loss": 7.857142857142857
+      },
+      {
+        "index": 92,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          -2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 57.0,
+        "faulty_dev_loss": 54.142857142857146
+      },
+      {
+        "index": 93,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          2,
+          -2
+        ],
+        "cost": 3,
+        "dev_mse": 256.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 94,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 52.0,
+        "faulty_dev_loss": 52.0
+      },
+      {
+        "index": 95,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 20.0,
+        "faulty_dev_loss": 17.142857142857142
+      },
+      {
+        "index": 96,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 20.0,
+        "faulty_dev_loss": 1.1428571428571428
+      },
+      {
+        "index": 97,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -1,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 44.0,
+        "faulty_dev_loss": 43.857142857142854
+      },
+      {
+        "index": 98,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 41.0,
+        "faulty_dev_loss": 41.0
+      },
+      {
+        "index": 99,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 48.0,
+        "faulty_dev_loss": 48.0
+      },
+      {
+        "index": 100,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 244.0,
+        "faulty_dev_loss": 1.1428571428571428
+      },
+      {
+        "index": 101,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 16.0,
+        "faulty_dev_loss": 15.142857142857142
+      },
+      {
+        "index": 102,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 1.0,
+        "faulty_dev_loss": 1.0
+      },
+      {
+        "index": 103,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 320.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 104,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -2,
+          0
+        ],
+        "cost": 1,
+        "dev_mse": 64.0,
+        "faulty_dev_loss": 1.1428571428571428
+      },
+      {
+        "index": 105,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 208.0,
+        "faulty_dev_loss": 0.5714285714285714
+      },
+      {
+        "index": 106,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          0,
+          -1
+        ],
+        "cost": 2,
+        "dev_mse": 116.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 107,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          1,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 21.0,
+        "faulty_dev_loss": 20.857142857142858
+      },
+      {
+        "index": 108,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 21.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 109,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -1,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 245.0,
+        "faulty_dev_loss": 0.14285714285714285
+      },
+      {
+        "index": 110,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 37.0,
+        "faulty_dev_loss": 23.714285714285715
+      },
+      {
+        "index": 111,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -1,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 32.0,
+        "faulty_dev_loss": 2.4285714285714284
+      },
+      {
+        "index": 112,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          0,
+          2
+        ],
+        "cost": 3,
+        "dev_mse": 20.0,
+        "faulty_dev_loss": 18.857142857142858
+      },
+      {
+        "index": 113,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          1,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 0.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 114,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 340.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 115,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -1,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 20.0,
+        "faulty_dev_loss": 2.857142857142857
+      },
+      {
+        "index": 116,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          2,
+          1
+        ],
+        "cost": 4,
+        "dev_mse": 5.0,
+        "faulty_dev_loss": 4.285714285714286
+      },
+      {
+        "index": 117,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -1,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 16.0,
+        "faulty_dev_loss": 8.0
+      },
+      {
+        "index": 118,
+        "kind": "polynomial",
+        "coefficients": [
+          2,
+          -2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 52.0,
+        "faulty_dev_loss": 5.714285714285714
+      },
+      {
+        "index": 119,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 148.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 120,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          2,
+          0
+        ],
+        "cost": 2,
+        "dev_mse": 41.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 121,
+        "kind": "polynomial",
+        "coefficients": [
+          0,
+          -2,
+          1
+        ],
+        "cost": 3,
+        "dev_mse": 36.0,
+        "faulty_dev_loss": 18.0
+      },
+      {
+        "index": 122,
+        "kind": "polynomial",
+        "coefficients": [
+          -1,
+          2,
+          2
+        ],
+        "cost": 4,
+        "dev_mse": 25.0,
+        "faulty_dev_loss": 24.714285714285715
+      },
+      {
+        "index": 123,
+        "kind": "polynomial",
+        "coefficients": [
+          -2,
+          -1,
+          -1
+        ],
+        "cost": 4,
+        "dev_mse": 164.0,
+        "faulty_dev_loss": 0.0
+      },
+      {
+        "index": 124,
+        "kind": "polynomial",
+        "coefficients": [
+          1,
+          -2,
+          -2
+        ],
+        "cost": 4,
+        "dev_mse": 265.0,
+        "faulty_dev_loss": 0.2857142857142857
+      },
+      {
+        "index": 125,
+        "kind": "dev_lookup",
+        "coefficients": null,
+        "cost": 7,
+        "dev_mse": 0.0,
+        "faulty_dev_loss": 0.0
+      }
+    ]
+  },
+  "recurrence": {
+    "scope": "scalar contraction counterexample and exact two-token denoising expectation; no trained looped LLM",
+    "parameters": {
+      "rho": 0.5,
+      "initial_state": 0.0,
+      "true_answer": 1.0,
+      "readout": "int(h>0)",
+      "steps": 64
+    },
+    "rows": [
+      {
+        "fixed_point": -1.0,
+        "steps": 1,
+        "state": -0.5,
+        "successive_difference": 0.5,
+        "fixed_point_error": 0.5,
+        "contraction_error_bound": 0.5,
+        "answer": 0,
+        "correct": false
+      },
+      {
+        "fixed_point": -1.0,
+        "steps": 4,
+        "state": -0.9375,
+        "successive_difference": 0.0625,
+        "fixed_point_error": 0.0625,
+        "contraction_error_bound": 0.0625,
+        "answer": 0,
+        "correct": false
+      },
+      {
+        "fixed_point": -1.0,
+        "steps": 16,
+        "state": -0.9999847412109375,
+        "successive_difference": 1.52587890625e-05,
+        "fixed_point_error": 1.52587890625e-05,
+        "contraction_error_bound": 1.52587890625e-05,
+        "answer": 0,
+        "correct": false
+      },
+      {
+        "fixed_point": -1.0,
+        "steps": 64,
+        "state": -1.0,
+        "successive_difference": 0.0,
+        "fixed_point_error": 0.0,
+        "contraction_error_bound": 5.421010862427522e-20,
+        "answer": 0,
+        "correct": false
+      },
+      {
+        "fixed_point": 1.0,
+        "steps": 1,
+        "state": 0.5,
+        "successive_difference": 0.5,
+        "fixed_point_error": 0.5,
+        "contraction_error_bound": 0.5,
+        "answer": 1,
+        "correct": true
+      },
+      {
+        "fixed_point": 1.0,
+        "steps": 4,
+        "state": 0.9375,
+        "successive_difference": 0.0625,
+        "fixed_point_error": 0.0625,
+        "contraction_error_bound": 0.0625,
+        "answer": 1,
+        "correct": true
+      },
+      {
+        "fixed_point": 1.0,
+        "steps": 16,
+        "state": 0.9999847412109375,
+        "successive_difference": 1.52587890625e-05,
+        "fixed_point_error": 1.52587890625e-05,
+        "contraction_error_bound": 1.52587890625e-05,
+        "answer": 1,
+        "correct": true
+      },
+      {
+        "fixed_point": 1.0,
+        "steps": 64,
+        "state": 1.0,
+        "successive_difference": 0.0,
+        "fixed_point_error": 0.0,
+        "contraction_error_bound": 5.421010862427522e-20,
+        "answer": 1,
+        "correct": true
+      }
+    ],
+    "two_token_denoising": [
+      {
+        "mask_probability": 0.25,
+        "expected_masked_tokens": 0.5,
+        "expected_unweighted_loss": 0.08664339756999316,
+        "expected_inverse_t_weighted_loss": 0.34657359027997264
+      },
+      {
+        "mask_probability": 0.5,
+        "expected_masked_tokens": 1.0,
+        "expected_unweighted_loss": 0.34657359027997264,
+        "expected_inverse_t_weighted_loss": 0.6931471805599453
+      },
+      {
+        "mask_probability": 1.0,
+        "expected_masked_tokens": 2.0,
+        "expected_unweighted_loss": 1.3862943611198906,
+        "expected_inverse_t_weighted_loss": 1.3862943611198906
+      }
+    ]
+  }
+}

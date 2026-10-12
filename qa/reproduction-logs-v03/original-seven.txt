@@ -1,0 +1,19 @@
+{
+  "ridge": {},
+  "mlp": {
+    "final_loss": 0.0024318000084150755,
+    "accuracy": 1.0
+  },
+  "language_model": {
+    "parameters": 2538,
+    "train_loss": 0.255984969647661,
+    "test_loss": 1.506582484199625,
+    "sound_accuracy": 1.0,
+    "causal_prefix_max_error": 0.0
+  },
+  "spurious": {},
+  "search_verifier": {},
+  "injection": {},
+  "preference": {}
+}
+Written /tmp/ai-source-v03-rebuild-nofm5xup/original seven; elapsed 0.97s

@@ -1,0 +1,63 @@
+{
+  "role": "translator author; not independent translation reviewer",
+  "static_checks": {
+    "environment_nesting": "passed",
+    "unique_r1n_prefixed_labels": "passed",
+    "all_36_cites_resolve": "passed",
+    "source_equations_1_to_10": "passed",
+    "source_table2_all_105_values_and_bold_flags": "passed",
+    "194_author_names_in_rendered_pdf": "passed"
+  },
+  "pdf_check": {
+    "status": "isolated compilation passed",
+    "pages": 17,
+    "passes": 2,
+    "template": "Unchanged fixed project adapter/preamble snapshot used for chapter verification; no style substitution",
+    "pdf_path": "/tmp/r1-nature-translation-build/r1-nature.pdf",
+    "sha256": "a6cb058130122a1d33333f1f357ea96cd8239a215a0c2942c9c189d74bb1f072",
+    "log_errors": [],
+    "visual_review": {
+      "status": "all 17 isolated pages actually viewed by translator author",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "render_scale": 1.4,
+      "page_image_sha256": {
+        "1": "a0165ea27dcb03bf39e2488d87f438cfbce22aa45e7921bbc71f73ed4bf65ffd",
+        "2": "69bea058a45f91b05516ab768c715396cdfaa99755ecbce7b9714d48b3878686",
+        "3": "46c075c87fda8c64335f950b457426709171d87984ce8310cb37e6b2289f21b2",
+        "4": "92cb8d4220c370a93e3e2065ce4efc0e76da3d9b9df8e61f947c23e1d8d3cb33",
+        "5": "7fb2bda268c962753e9e71abc3e1a277181d9959eaaceb12e37551818ea43b6a",
+        "6": "93664bf5e29e441dab7fe44d4246bbd225bd772fe3360f823fc6f8be72da3781",
+        "7": "61961a8e5f8bbbc0942e9d085b526a66aafe05fad0419bd6e63feef686014a62",
+        "8": "7f0bdb3efb2ee3994cfff82d4777c66bce5b7d236283d56dd27ef045f2034d8a",
+        "9": "c8f79e3db0ddd1b7ad28a8e89c61f28915d0114ddca3097d1090ed2e49425ad0",
+        "10": "d9e6680f97538779b5e0e481c67310c4f89c04d5b25932b50c25f41331ba724f",
+        "11": "5fe4263878e83425ce2142161371efe6e0049aec8cb65b67b1a9ee1927613acb",
+        "12": "9f0510f9b8b320d3f8975266e336ff820aa67202b4506571ee8b50d067024888",
+        "13": "85338c6954ee54d27f96c4a475ee0b6f52a1795d7aaf824ce0e5c8893886fd60",
+        "14": "405f69c7439f8c8cc5fddee9106e58697d7e1506119d15004f3df0c8c341dd13",
+        "15": "dfeed343a429be32f61ec5a18022e8edd02a61084fe69c1ab476d4d7bff77d55",
+        "16": "988453e6a172af285849e490b85181a0f780453256559147e8a994b960a9249e",
+        "17": "a979e4a2a2c482353361f59e96f507728ae4d91f4101b160c8b6e8242257b576"
+      }
+    }
+  },
+  "remaining_scope": "Final single-paper and collected-book PDF generation and integrated numbering are owned by parent agent; separate supplementary and peer-review files are explicitly excluded."
+}

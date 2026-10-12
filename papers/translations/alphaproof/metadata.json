@@ -1,0 +1,441 @@
+{
+  "title_original": "Olympiad-level formal mathematical reasoning with reinforcement learning",
+  "title_zh": "基于强化学习的奥林匹克级形式化数学推理",
+  "authors": [
+    "Thomas Hubert",
+    "Rishi Mehta",
+    "Laurent Sartran",
+    "Miklós Z. Horváth",
+    "Goran Žužić",
+    "Eric Wieser",
+    "Aja Huang",
+    "Julian Schrittwieser",
+    "Yannick Schroecker",
+    "Hussain Masoom",
+    "Ottavia Bertolli",
+    "Tom Zahavy",
+    "Amol Mandhane",
+    "Jessica Yung",
+    "Iuliya Beloshapka",
+    "Borja Ibarz",
+    "Vivek Veeriah",
+    "Lei Yu",
+    "Oliver Nash",
+    "Paul Lezeau",
+    "Salvatore Mercuri",
+    "Calle Sönne",
+    "Bhavik Mehta",
+    "Alex Davies",
+    "Daniel Zheng",
+    "Fabian Pedregosa",
+    "Yin Li",
+    "Ingrid von Glehn",
+    "Mark Rowland",
+    "Samuel Albanie",
+    "Ameya Velingker",
+    "Simon Schmitt",
+    "Edward Lockhart",
+    "Edward Hughes",
+    "Henryk Michalewski",
+    "Nicolas Sonnerat",
+    "Demis Hassabis",
+    "Pushmeet Kohli",
+    "David Silver"
+  ],
+  "authors_citation_format": [
+    "Hubert, Thomas",
+    "Mehta, Rishi",
+    "Sartran, Laurent",
+    "Horváth, Miklós Z.",
+    "Žužić, Goran",
+    "Wieser, Eric",
+    "Huang, Aja",
+    "Schrittwieser, Julian",
+    "Schroecker, Yannick",
+    "Masoom, Hussain",
+    "Bertolli, Ottavia",
+    "Zahavy, Tom",
+    "Mandhane, Amol",
+    "Yung, Jessica",
+    "Beloshapka, Iuliya",
+    "Ibarz, Borja",
+    "Veeriah, Vivek",
+    "Yu, Lei",
+    "Nash, Oliver",
+    "Lezeau, Paul",
+    "Mercuri, Salvatore",
+    "Sönne, Calle",
+    "Mehta, Bhavik",
+    "Davies, Alex",
+    "Zheng, Daniel",
+    "Pedregosa, Fabian",
+    "Li, Yin",
+    "von Glehn, Ingrid",
+    "Rowland, Mark",
+    "Albanie, Samuel",
+    "Velingker, Ameya",
+    "Schmitt, Simon",
+    "Lockhart, Edward",
+    "Hughes, Edward",
+    "Michalewski, Henryk",
+    "Sonnerat, Nicolas",
+    "Hassabis, Demis",
+    "Kohli, Pushmeet",
+    "Silver, David"
+  ],
+  "author_count": 39,
+  "affiliation": "Google DeepMind, London, UK",
+  "translator": "ai-self-study contributors",
+  "translation_status": "Machine-assisted unofficial Chinese translation",
+  "journal": "Nature",
+  "volume": 651,
+  "pages": "607–613",
+  "version": "Version of Record",
+  "version_of_record_date": "2026-03-13",
+  "first_online_date": "2025-11-12",
+  "issue_date": "2026-03-19",
+  "received": "2025-06-03",
+  "accepted": "2025-10-30",
+  "doi": "10.1038/s41586-025-09833-y",
+  "url": "https://www.nature.com/articles/s41586-025-09833-y",
+  "pdf_url": "https://www.nature.com/articles/s41586-025-09833-y.pdf",
+  "source_pdf_sha256": "ef6ea043c1acd4712c43369a294f6c8581d47c8f3dc2c660f69f5dd2a7c96f30",
+  "source_html_sha256": "13a77ca5edaea0047ba5f618b2adcb9ac1005db2ce069b338aae25312e0be5f9",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence": "Official HTML Rights and permissions and official 25-page PDF page 7 Open Access licence paragraph. Each figure caption checked individually, credit lines retained.",
+  "changes": [
+    "Chinese translation",
+    "re-typesetting without template changes",
+    "source figures extracted unchanged with complete Chinese natural-language correspondences",
+    "separately marked translator notes on evaluation conditions and apparent source sign inconsistency"
+  ],
+  "assets": [
+    {
+      "id": "fig1",
+      "source_pdf_page": 2,
+      "crop_rect": [
+        80,
+        44,
+        525,
+        315
+      ],
+      "path": "assets/fig1.pdf",
+      "sha256": "6400e73185984ed615faa76fb61c58230845f7c9081434ba761cd26fda3dda76",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "fig2",
+      "source_pdf_page": 3,
+      "crop_rect": [
+        303,
+        44,
+        563,
+        225
+      ],
+      "path": "assets/fig2.pdf",
+      "sha256": "a0ad0d703f28eea8929666491aa058464804622ac91af43e8ee7c8a1e030d8e6",
+      "credit_line": "Figure adapted from ref. 28, Google DeepMind.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "fig3",
+      "source_pdf_page": 4,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        198
+      ],
+      "path": "assets/fig3.pdf",
+      "sha256": "b9294ac6ce61750e4702757e37bb7169cb1d779ba55969db18dc1a7e71a44388",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "fig4",
+      "source_pdf_page": 5,
+      "crop_rect": [
+        85,
+        44,
+        513,
+        208
+      ],
+      "path": "assets/fig4.pdf",
+      "sha256": "62cdddba39a9f7a6e0de43bbd0730d49d07e19a063987cdf9233db54da552cf8",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "fig5",
+      "source_pdf_page": 6,
+      "crop_rect": [
+        305,
+        477,
+        564,
+        682
+      ],
+      "path": "assets/fig5.pdf",
+      "sha256": "d62ad83d8c7bd38b916e7083d439e8fd04e5a3b4822035e43fdb19b008011c92",
+      "credit_line": "Figure reproduced from ref. 28, Google DeepMind.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig1",
+      "source_pdf_page": 15,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        320.81573486328125
+      ],
+      "path": "assets/edfig1.pdf",
+      "sha256": "24cb671f14ce5955263cf9551eecb9c05d0a76d7a90d12b2d30369480e2ba7f0",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig2",
+      "source_pdf_page": 16,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        212.33584594726562
+      ],
+      "path": "assets/edfig2.pdf",
+      "sha256": "e38ab1f2c7048a8891f6d010e6b93fe7ccf864683a9127a4bbe87a22845a0129",
+      "credit_line": "Credit: Google DeepMind.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig3",
+      "source_pdf_page": 17,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        413.69573974609375
+      ],
+      "path": "assets/edfig3.pdf",
+      "sha256": "4c2be9b0db64851a45e0b89c69f0ca9f796380d518c7499315a4e7107d58fadb",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig4",
+      "source_pdf_page": 18,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        434.3357238769531
+      ],
+      "path": "assets/edfig4.pdf",
+      "sha256": "d5c99f5366032dc8017eb959fcc35ff4419ffbd7de3e476c4ba73963f8e296a0",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig5",
+      "source_pdf_page": 19,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        663.415771484375
+      ],
+      "path": "assets/edfig5.pdf",
+      "sha256": "ef21c09c5944b4d2231311e934f1069c3886ce56c85a644f7e682d06fca7a420",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig6",
+      "source_pdf_page": 20,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        209.81570434570312
+      ],
+      "path": "assets/edfig6.pdf",
+      "sha256": "e9acad30348f812fb0337f8718102fe9b707a73632655450281183c4b2dca408",
+      "credit_line": "None separately stated in the caption.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig7",
+      "source_pdf_page": 21,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        604.8557739257812
+      ],
+      "path": "assets/edfig7.pdf",
+      "sha256": "49d3d10db14aa77e99283d031570a1e7d7a2727a93d7c5917fb522709cf95340",
+      "credit_line": "Figure adapted from ref. 28.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig8",
+      "source_pdf_page": 22,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        617.0957641601562
+      ],
+      "path": "assets/edfig8.pdf",
+      "sha256": "9dede847e3fbfb75c6fdd67473329ada1c5df1ecc7ffb31024c879ec7fcfe63d",
+      "credit_line": "Figure adapted from ref. 28.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edfig9",
+      "source_pdf_page": 23,
+      "crop_rect": [
+        39,
+        44,
+        563,
+        703.1357421875
+      ],
+      "path": "assets/edfig9.pdf",
+      "sha256": "6f548276d4a77f7f6d6d89bf41157dda138d5eb81f6f81f72dc7f8611e3c2314",
+      "credit_line": "Figure adapted from ref. 28.",
+      "permission_review": "Original official article caption inspected. Attribution above retained; no separate licence exclusion or permission-only restriction indicated. Article CC BY 4.0 covers the figure under its explicit default unless a credit line states otherwise.",
+      "modifications": "Figure-region PDF extraction only; original codes, marks, values, states and highlights retained. Chinese captions and full natural-language correspondences added separately."
+    },
+    {
+      "id": "edtable1",
+      "source_pdf_page": 24,
+      "crop_rect": [
+        39,
+        75,
+        563,
+        118
+      ],
+      "path": "assets/edtable1.pdf",
+      "sha256": "dc41a857929ebd7f2908719120ac748f5bb0c4469b386d20c641cae3e3197048",
+      "credit_line": "No separate licence exclusion in the official table caption.",
+      "permission_review": "Article CC BY 4.0 default applies; mathematical table retained as supporting source extraction.",
+      "modifications": "Source table image preserved; Chinese editable table in extended-tables.tex independently checked against original PDF."
+    },
+    {
+      "id": "edtable2",
+      "source_pdf_page": 25,
+      "crop_rect": [
+        39,
+        61,
+        563,
+        137
+      ],
+      "path": "assets/edtable2.pdf",
+      "sha256": "90ef0677a97cf21ddc756e12841325e7b97936dbf1b85003754c97ca088f8bbc",
+      "credit_line": "No separate licence exclusion in the official table caption.",
+      "permission_review": "Article CC BY 4.0 default applies; mathematical table retained as supporting source extraction.",
+      "modifications": "Source table image preserved; Chinese editable table in extended-tables.tex independently checked against original PDF."
+    }
+  ],
+  "scope": {
+    "official_pdf_pages": 25,
+    "main_figures": 5,
+    "main_tables": 1,
+    "methods_display_formula_ids": [
+      "Equa",
+      "Equb",
+      "Equc",
+      "Equd"
+    ],
+    "extended_data_figures": 9,
+    "extended_data_tables": 2,
+    "references": 80,
+    "independent_supplementary_files_included": false
+  },
+  "excluded_independent_attachments": [
+    {
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-025-09833-y/MediaObjects/41586_2025_9833_MOESM1_ESM.pdf",
+      "source_attachment_name": "41586_2025_9833_MOESM1_ESM.pdf",
+      "included": false,
+      "reason": "Independent attachment outside the requested 25-page Version of Record. No separate Creative Commons licence located during inspection.",
+      "pages": 9
+    },
+    {
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-025-09833-y/MediaObjects/41586_2025_9833_MOESM2_ESM.zip",
+      "source_attachment_name": "41586_2025_9833_MOESM2_ESM.zip",
+      "included": false,
+      "reason": "Independent attachment outside the requested 25-page Version of Record. No separate Creative Commons licence located during inspection.",
+      "archive_members": [
+        "2025-06-13867A-s2/",
+        "2025-06-13867A-s2/pseudocode.py"
+      ],
+      "licence_text_matches": [],
+      "source_filename_note": "Article Code availability calls file alphaproof_pseudocode.py; supplied archive actually contains 2025-06-13867A-s2/pseudocode.py. Article statement retained unchanged; no source code executed or redistributed."
+    }
+  ],
+  "corresponding_authors": [
+    {
+      "name": "Thomas Hubert",
+      "email": "tkhubert@google.com"
+    },
+    {
+      "name": "Eric Wieser",
+      "email": "efw@google.com"
+    },
+    {
+      "name": "Pushmeet Kohli",
+      "email": "pushmeet@google.com"
+    }
+  ],
+  "orcid": {
+    "Thomas Hubert": "https://orcid.org/0000-0003-2209-3933",
+    "Laurent Sartran": "https://orcid.org/0000-0002-5538-8327",
+    "Miklós Z. Horváth": "https://orcid.org/0000-0001-6928-7423",
+    "Goran Žužić": "https://orcid.org/0000-0002-9322-6329",
+    "Eric Wieser": "https://orcid.org/0000-0003-0412-4978",
+    "Aja Huang": "https://orcid.org/0000-0002-2476-9194",
+    "Hussain Masoom": "https://orcid.org/0009-0000-0861-5665",
+    "Ottavia Bertolli": "https://orcid.org/0000-0001-8578-3216",
+    "Tom Zahavy": "https://orcid.org/0009-0009-2309-922X",
+    "Amol Mandhane": "https://orcid.org/0000-0002-3412-2634",
+    "Iuliya Beloshapka": "https://orcid.org/0000-0003-1451-9877",
+    "Borja Ibarz": "https://orcid.org/0000-0003-3476-9953",
+    "Vivek Veeriah": "https://orcid.org/0000-0002-0728-4953",
+    "Lei Yu": "https://orcid.org/0009-0007-8303-3674",
+    "Oliver Nash": "https://orcid.org/0000-0001-7208-6307",
+    "Paul Lezeau": "https://orcid.org/0009-0006-6142-9953",
+    "Salvatore Mercuri": "https://orcid.org/0000-0002-8997-8632",
+    "Calle Sönne": "https://orcid.org/0009-0008-1871-426X",
+    "Bhavik Mehta": "https://orcid.org/0000-0001-7892-7891",
+    "Alex Davies": "https://orcid.org/0000-0003-4917-5234",
+    "Daniel Zheng": "https://orcid.org/0009-0005-4026-8997",
+    "Fabian Pedregosa": "https://orcid.org/0000-0003-4025-3953",
+    "Yin Li": "https://orcid.org/0009-0000-3234-2505",
+    "Ingrid von Glehn": "https://orcid.org/0009-0008-3102-196X",
+    "Mark Rowland": "https://orcid.org/0000-0002-8336-6352",
+    "Samuel Albanie": "https://orcid.org/0000-0003-1732-9198",
+    "Ameya Velingker": "https://orcid.org/0000-0001-9641-1020",
+    "Edward Lockhart": "https://orcid.org/0000-0001-8753-0765",
+    "Edward Hughes": "https://orcid.org/0000-0002-2434-2334",
+    "Henryk Michalewski": "https://orcid.org/0000-0001-8541-8112",
+    "Demis Hassabis": "https://orcid.org/0000-0003-2812-9917",
+    "Pushmeet Kohli": "https://orcid.org/0000-0002-7466-7997",
+    "David Silver": "https://orcid.org/0000-0002-5197-2892"
+  },
+  "copyright_notice": "© The Author(s) 2025"
+}

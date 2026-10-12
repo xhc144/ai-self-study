@@ -1,0 +1,177 @@
+[
+  {
+    "english": "Looped Language Model",
+    "chinese": "循环语言模型",
+    "usage_note": "共享模块沿深度重复,不是仅重复文本调用"
+  },
+  {
+    "english": "depth recurrence",
+    "chinese": "深度递归",
+    "usage_note": "迭代相同网络模块,参数共享"
+  },
+  {
+    "english": "test-time scaling",
+    "chinese": "测试时扩展",
+    "usage_note": "参数不变时增加推断计算预算"
+  },
+  {
+    "english": "latent reasoning",
+    "chinese": "潜在推理",
+    "usage_note": "在隐表示中分配计算,不据此声称心理体验"
+  },
+  {
+    "english": "effectiveness",
+    "chinese": "有效性",
+    "usage_note": "对应任务性能,与动力学稳定性分别评价"
+  },
+  {
+    "english": "stability",
+    "chinese": "稳定性",
+    "usage_note": "动力系统性质,不等于答案语义正确"
+  },
+  {
+    "english": "fixed point",
+    "chinese": "不动点",
+    "usage_note": "Phi(h)=h,一般不保证为吸引子"
+  },
+  {
+    "english": "attractor",
+    "chinese": "吸引子",
+    "usage_note": "原文给出的邻域吸引描述见预备节;标准定义还可含其他条件"
+  },
+  {
+    "english": "locally asymptotically stable",
+    "chinese": "局部渐近稳定",
+    "usage_note": "原文给出吸引条件,完整标准概念通常还含Lyapunov稳定性"
+  },
+  {
+    "english": "Jacobian",
+    "chinese": "Jacobian矩阵",
+    "usage_note": "循环映射对潜状态的导数矩阵"
+  },
+  {
+    "english": "spectral radius",
+    "chinese": "谱半径",
+    "usage_note": "最大特征值模,不同于一般矩阵范数"
+  },
+  {
+    "english": "Frobenius norm",
+    "chinese": "Frobenius范数",
+    "usage_note": "矩阵全部元素平方和的平方根"
+  },
+  {
+    "english": "Jacobian-vector product",
+    "chinese": "Jacobian--向量积",
+    "usage_note": "JVP,不显式构造全部Jacobian"
+  },
+  {
+    "english": "power iteration",
+    "chinese": "幂迭代",
+    "usage_note": "收敛主特征向量需要谱与初始方向条件"
+  },
+  {
+    "english": "random loop sampling",
+    "chinese": "随机循环采样",
+    "usage_note": "从分布采样训练循环深度"
+  },
+  {
+    "english": "STARS",
+    "chinese": "稳定性驱动的循环扩展",
+    "usage_note": "保留作者缩写STAbility-driven Recurrent Scaling"
+  },
+  {
+    "english": "JSRR",
+    "chinese": "Jacobian谱半径正则化",
+    "usage_note": "作者方法名;有限步估计为代理量"
+  },
+  {
+    "english": "Prelude",
+    "chinese": "前置非循环层",
+    "usage_note": "保留Prelude专名"
+  },
+  {
+    "english": "Coda",
+    "chinese": "后置非循环层",
+    "usage_note": "保留Coda专名"
+  },
+  {
+    "english": "internal normalization system",
+    "chinese": "内部归一化系统",
+    "usage_note": "按原文定义为Pre-Norm/Pre-Sandwich,残差位于归一化外"
+  },
+  {
+    "english": "external normalization system",
+    "chinese": "外部归一化系统",
+    "usage_note": "按原文定义为Post-Norm/Post-Sandwich,最终归一化包住残差"
+  },
+  {
+    "english": "residual stream",
+    "chinese": "残差流",
+    "usage_note": "累积更新的主干状态"
+  },
+  {
+    "english": "manifold",
+    "chinese": "流形",
+    "usage_note": "译作者的几何描述,二维PCA不是全状态空间证明"
+  },
+  {
+    "english": "trajectory",
+    "chinese": "轨迹",
+    "usage_note": "状态迭代序列"
+  },
+  {
+    "english": "PCA",
+    "chinese": "主成分分析",
+    "usage_note": "图中二维投影用于可视化"
+  },
+  {
+    "english": "performance retention",
+    "chinese": "性能保持",
+    "usage_note": "随循环次数增加时性能维持的范围"
+  },
+  {
+    "english": "training horizon",
+    "chinese": "训练时域",
+    "usage_note": "训练中遇到的循环深度范围"
+  },
+  {
+    "english": "clipping bounds",
+    "chinese": "截断边界",
+    "usage_note": "随机循环次数的最小最大范围"
+  },
+  {
+    "english": "log-normal distribution",
+    "chinese": "对数正态分布",
+    "usage_note": "参数mu和sigma保留"
+  },
+  {
+    "english": "Poisson distribution",
+    "chinese": "泊松分布",
+    "usage_note": "lambda为分布参数,不同于损失权重"
+  },
+  {
+    "english": "regularization weight",
+    "chinese": "正则权重",
+    "usage_note": "正文与算法系数不同,不静默统一"
+  },
+  {
+    "english": "relative value",
+    "chinese": "相对值",
+    "usage_note": "原效率表未定义具体单位,不译成加速倍数"
+  },
+  {
+    "english": "accuracy",
+    "chinese": "准确率",
+    "usage_note": "图表百分比原样保留"
+  },
+  {
+    "english": "performance peak",
+    "chinese": "性能峰值",
+    "usage_note": "与末次循环表现分开"
+  },
+  {
+    "english": "performance deterioration",
+    "chinese": "性能退化",
+    "usage_note": "不译成任意更多计算均无益"
+  }
+]

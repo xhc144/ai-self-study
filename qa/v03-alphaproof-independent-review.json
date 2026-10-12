@@ -1,0 +1,1414 @@
+{
+  "role": "Independent reviewer; not the AlphaProof translator; no use of the translator-authored 38-page build as independent final-PDF evidence.",
+  "date": "2026-10-12",
+  "status": "PASS; content review complete; final frozen root PDF independently reviewed.",
+  "official_source": {
+    "url": "https://www.nature.com/articles/s41586-025-09833-y",
+    "doi": "10.1038/s41586-025-09833-y",
+    "version": "Version of Record 2026-03-13",
+    "first_online": "2025-11-12",
+    "issue_date": "2026-03-19",
+    "independent_downloaded_pdf": "/tmp/alphaproof-independent-review/official.pdf",
+    "pdf_pages": 25,
+    "pdf_sha256": "ef6ea043c1acd4712c43369a294f6c8581d47c8f3dc2c660f69f5dd2a7c96f30",
+    "pdf_hash_matches_translation_metadata": true,
+    "independent_downloaded_html": "/tmp/alphaproof-independent-review/article.html",
+    "fresh_html_sha256": "f0f88914451179c8ad07f22b4877a508d86fd3fb9e01f133da4153b8e79296c0",
+    "retained_html_sha256": "13a77ca5edaea0047ba5f618b2adcb9ac1005db2ce069b338aae25312e0be5f9",
+    "html_note": "HTML raw bytes differ across requests because the publisher page contains dynamic markup. Scientific text compared separately; a raw HTML hash difference alone does not imply a different article version.",
+    "scientific_section_comparisons": [
+      {
+        "section_id": "Abs1",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "129aa94428b415a242a1a8244fea30d29850b7897f67e8bede5817695c4672d2"
+      },
+      {
+        "section_id": "Sec1",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "97e99a6a2cdcdde5ce4523daeb2c65b6ca27efff31f21a6b0d43d306fb22c823"
+      },
+      {
+        "section_id": "Sec2",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "cb115789b6a07de2c3d8372ab58f76c04681ea006a850727b7912e564f3495b3"
+      },
+      {
+        "section_id": "Sec7",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "e00065a75deb7eeb6ec1004d70670afd274c84be537cdc3eb8c7c41e4d2ba1dd"
+      },
+      {
+        "section_id": "Sec8",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "11765b85aca33614287787b43a569fb5a74fbb9867ed2f17d423fbc0b08c8b56"
+      },
+      {
+        "section_id": "Sec9",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "b91ff0c31380379dfc686edf06e6ca41faf8797638d03ee610f8c46be7e939a5"
+      },
+      {
+        "section_id": "Sec10",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "b15616d2ff63a9906e264b174e9683476c6d2b6a9732eabf2a194b83589418e3"
+      },
+      {
+        "section_id": "Sec11",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "0f699901f9b994126d15d2a9f9d2047287dbaf1a88d43c4ef98e0d81cdab595e"
+      },
+      {
+        "section_id": "Sec12",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "4d316e06fdd44eb4082acf21a12e3bcd01d655cc2e7972db845a89915f71c5cf"
+      },
+      {
+        "section_id": "Sec13",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "24f9763fdfe375ad44d2a5c20426d6d1693efae533995adf287ab58353964dd7"
+      },
+      {
+        "section_id": "data-availability",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "3c1b93ecefc8772067b1c7aff429d66ad2a681f3c583c58f5a97be2f6d76a636"
+      },
+      {
+        "section_id": "code-availability",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "22677d0cbe17e73cbf562b3d7ebf308691ad7b642e40b567619ec6d667fe5c2f"
+      },
+      {
+        "section_id": "Ack1",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "24070d6cc2ed346e703aa9fe4c53d37e010b8322310c6a2b01023920d61c04ed"
+      },
+      {
+        "section_id": "author-information",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "c846143fd0a7c7f977df469e9f2c99cd6de593d87d358118dfa4c361ff0579a7"
+      },
+      {
+        "section_id": "ethics",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "13079032e104034409c32971cd48831f02da6ef91c16002d3596ef3c34629dab"
+      },
+      {
+        "section_id": "additional-information",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "1ed8c6ffcc95634401f21620f358412fdd155f4e7cdeba80337d7ef7033f6b34"
+      },
+      {
+        "section_id": "Bib1",
+        "fresh_and_retained_scientific_text_equal": true,
+        "fresh_normalized_text_sha256": "24aff40bb4ee0eba90c6fddb93d18349003ceccbfab5bb3672f97ed550da83b3"
+      }
+    ]
+  },
+  "license": {
+    "actual_actions": [
+      "Opened the official Nature article Rights and permissions and About this article.",
+      "Followed official licence link to https://creativecommons.org/licenses/by/4.0/.",
+      "Independently downloaded and visually viewed original official PDF page 7 Open Access licence paragraph.",
+      "Read all fourteen official figure captions and their credit lines."
+    ],
+    "verified": "CC BY 4.0",
+    "link": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_rule": "The article explicitly includes images and third-party material unless a credit line excludes it. No such exclusion found in the fourteen figure captions.",
+    "original_copyright_notice": "© The Author(s) 2025",
+    "copyright_notice_present_in_translation": true
+  },
+  "methods": {
+    "source_paragraphs": 76,
+    "actually_read_and_compared": 76,
+    "paragraph_map": [
+      {
+        "index": 1,
+        "source_start": "Our research is grounded in the field of interactive theorem proving, where humans formalize theorems and cons",
+        "source_paragraph_sha256": "8ee22bb66651516519dfc6194f4bcb80b67fa2d078a5734bce335184b993866f",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 2,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 2,
+        "source_start": "The intersection of machine learning and theorem proving has seen significant advancements, particularly with ",
+        "source_paragraph_sha256": "1513315c00018b6ef0ba0da825e39a7bf5a95ccbd8948b65b6be803d10843404",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 4,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 3,
+        "source_start": "An automated feedback signal from theorem provers for correct proofs has been pivotal for applying large-scale",
+        "source_paragraph_sha256": "b39bfbfc786260567716a620887e7a713a8a82243c4057c5d3a50740d0956a99",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 6,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 4,
+        "source_start": "A critical component of bridging the gap between human-written mathematics and formal theorem provers is auto-",
+        "source_paragraph_sha256": "867d500bb384f8875d3d92d16aca2bf7d96ad49bc5c81652b30d221b29a749c5",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 8,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 5,
+        "source_start": "Beyond dedicated theorem provers, the broader field of reasoning with LLMs has seen substantial progress. Tech",
+        "source_paragraph_sha256": "82c473b5452abaac5ef93cde00f5959f8f2152485e94e87b02c4dc7bd94f7cf0",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 10,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 6,
+        "source_start": "Our methodology extends on trends in test-time compute scaling9,61,62,63 and adaptation64,65,66, including ear",
+        "source_paragraph_sha256": "8005c3a7f72bb9a14300725a230ccb5248542d9f4c90974be6e114bc365e8736",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 12,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 7,
+        "source_start": "AlphaProof is an RL agent designed to discover formal mathematical proofs by interacting with a verifiable env",
+        "source_paragraph_sha256": "3c5aea8c5564bcd003e3120b557666ad567dad7d85ee01846f26efe41237edfd",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 19,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 8,
+        "source_start": "Formal mathematics as the RL environment. Formal mathematics provides a rigorous framework for expressing math",
+        "source_paragraph_sha256": "0043c5bfcb1ef92538060238d68d88528730e6bfce825a006f1d9bc460f5b4dd",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 22,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 9,
+        "source_start": "States (st): a state represents the complete logical context within the Lean prover at a given step t of a pro",
+        "source_paragraph_sha256": "9f3c80a392061428931932deb2382ce6cbe957e4f53f6fdfa0bf28fc542b6fea",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 24,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 10,
+        "source_start": "Observations: the agent observes the state as a pretty-printed string representation of the Lean tactic state.",
+        "source_paragraph_sha256": "c6fac30ff745f324fd5951b8f8b0fd3467079f8407396e3186bfbb0d8e9fd655",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 26,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 11,
+        "source_start": "Actions (at): an action is a Lean tactic, represented as a text string.",
+        "source_paragraph_sha256": "a88dd81f97bba7adbb93f10be7aad4fa85ac9d33807dcf89f1def871a05a9ab2",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 28,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 12,
+        "source_start": "Transitions: applying an action at to state st involves the Lean environment attempting to execute the tactic.",
+        "source_paragraph_sha256": "3507572539117322910ffcb4b4458301ad1cc3216486b41929883b52fa46521c",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 30,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 13,
+        "source_start": "Episodes: each episode commences with a new mathematical statement (the initial state) to be proven. An episod",
+        "source_paragraph_sha256": "3aafda19c8428dd2745433c59647a8f8d4ab4b78ac5e0a1d8e1fc22bea581675",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 32,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 14,
+        "source_start": "Reward signal and objective: to incentivize the discovery of the shortest proof, a reward of rt = −1 accompani",
+        "source_paragraph_sha256": "bb6193ef62a8c59c550993e4fe4950c764986398468ea3386d5481818b51d026",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 34,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 15,
+        "source_start": "Return definition: the return Gt from a state st is the sum of rewards until termination. For states that deco",
+        "source_paragraph_sha256": "1a8905527c859dd96845292e155fe84cad6d2631837679ab04ceb6cd2e65aa14",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 36,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 16,
+        "source_start": "Interfacing with Lean. To enable RL, AlphaProof interacts with a custom environment built upon the Lean 4 inte",
+        "source_paragraph_sha256": "3ad76ae4fd13472b2d6bd15b19c5ea013f4f74cb8c4597d3e14f7e8c61a4668b",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 38,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 17,
+        "source_start": "Core Lean and Mathlib integration. The environment utilizes Lean 4 as its foundational proof assistant. The ex",
+        "source_paragraph_sha256": "cf01094fb24422a2d9a33b12fa814081648d379c0bdaeb75c1f0e583e1622441",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 40,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 18,
+        "source_start": "Environment operations. To support the demands of AlphaProof, our environment enables the following.",
+        "source_paragraph_sha256": "d9288626d6121e9e36d5448226fc77fd11538187052a89c2a7bd28a14be21ee5",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 42,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 19,
+        "source_start": "Parallel execution and state management. The environment is designed to manage and operate on multiple Lean pr",
+        "source_paragraph_sha256": "52d64c6f2620bc8174a7fa148154537eb0a4003ddf2b41f3f0e60f167f44ea88",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 44,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 20,
+        "source_start": "Tactic validation and execution. When the proof network proposes a tactic (as a text string), the environment ",
+        "source_paragraph_sha256": "f7bc61229c0966debebf226753261e3ff7b7647bf15b0ebec1a92f8e85fdad63",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 46,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 21,
+        "source_start": "Goal decomposition (AND-node state splitting). If a tactic application successfully decomposes the current goa",
+        "source_paragraph_sha256": "8d83a2032ee8f6cc416741246a49341bc57e9696cabda096f4130d46dfa88f65",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 48,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 22,
+        "source_start": "Disproving mechanism. To enable the agent to disprove statements (that is, prove their negation), the environm",
+        "source_paragraph_sha256": "81d2d283e4edd71a996efcaa11671fc6305bf01c379977470e971d2659f1ce1d",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": [
+          50,
+          54
+        ],
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 23,
+        "source_start": "Performance and stability considerations. Several modifications were implemented to ensure that the Lean envir",
+        "source_paragraph_sha256": "d045a295c0e716a7f56d3b3ec800a06b1cc745d656c5102edf5638fd2faca912",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 56,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 24,
+        "source_start": "Key Mathlib tactics frequently used by the agent (for example, linarith) were compiled to C code. This results",
+        "source_paragraph_sha256": "4d5f5181310b42c9fd3c59f7a8bea73f4a1615ef4b414fc665bf9ceaa8e289b2",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 56,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 25,
+        "source_start": "A wall-clock time limit was imposed on individual tactic executions, complementing Lean’s internal ‘heartbeat’",
+        "source_paragraph_sha256": "4d05d598e8c5206213ccbe1290c7875a585219c0c46fe99c9f53bf93631a8fbd",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 56,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 26,
+        "source_start": "Lean’s internal checkSystem function, which monitors resource consumption, was invoked more frequently within ",
+        "source_paragraph_sha256": "a1d972cd44f0d5321a9e3e257f1f4f214c2e0aa215d7826e99b8a2c0544eda1c",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 56,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 27,
+        "source_start": "The multi-precision integer library within Lean was modified to enforce a hard cap on the size of numerals, pr",
+        "source_paragraph_sha256": "d425f269f771f3ddbaf29535dd53ff6b0298dad85b4b1ed2045e81c63633246f",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 56,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 28,
+        "source_start": "Proof verification final check. To provide absolute assurance of correctness (assuming the soundness of the Le",
+        "source_paragraph_sha256": "c9a95913a084663151f7acc0695877e6951722a028f2c27620d3505f1b985ab9",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 58,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 29,
+        "source_start": "Proof network. The proof network is a 3-billion-parameter encoder–decoder transformer model15, similar to ref.",
+        "source_paragraph_sha256": "4705170f67617a16105fd71a71dd6dba8c200e64e5433c61ebe8ea588bc94f76",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 65,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 30,
+        "source_start": "Tree search algorithm. The proof network guides a tree search algorithm to explore the space of possible proof",
+        "source_paragraph_sha256": "02e994824202bb67dc8485b92674e5891fbebac77687e9fdfcb7db31fc5c8bfc",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 67,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 31,
+        "source_start": "Standard tree search framework.",
+        "source_paragraph_sha256": "e3f2133d1db2be9492038da58347cbd42bbd3d228ffd06cc0dfb1d31d320e327",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 69,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 32,
+        "source_start": "Selection. Starting from the root state, a path is traversed to a leaf node by recursively selecting an action",
+        "source_paragraph_sha256": "659b73f0af049f7a978929269306f09b120dd3fe88b0aedccfca2b5754db5318",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 69,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 33,
+        "source_start": "Here, N(s, a) is the visit count for action a from state s. The prior π1/τ(a∣s) is derived from the proof netw",
+        "source_paragraph_sha256": "7346616ae4e6fff540955eb6c2ce7d554e9ce8783955ffbf2a58c6559d8344d0",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 75,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 34,
+        "source_start": "Whereas in previous work72, the values Q(s, a) were normalized to [0, 1] using the maximum and minimum estimat",
+        "source_paragraph_sha256": "1ef87b21bc6e5b999dfc4e2ada47a6ef79de6a936e782920e3a01349549ddac0",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 80,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 35,
+        "source_start": "where γ is a discounting factor and V(s, a) is the aggregated search value, which has the semantic of the nega",
+        "source_paragraph_sha256": "00713b6d3f735cf41958bffc56b3078124347ecf7fc306eed5aa24e560746fe0",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 85,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 36,
+        "source_start": "Expansion. When a simulation reaches a leaf node sL not previously expanded, K tactics are sampled from the pr",
+        "source_paragraph_sha256": "d81dd8cad9d06df102937bed1c42696e0740552aaee2f9813cb302c46257b8da",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 87,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 37,
+        "source_start": "Backpropagation. The value estimate from the expanded leaf node is backed up along the selected path, updating",
+        "source_paragraph_sha256": "402bfc63b98bd4adef28670f0d3e92ba8100ca5be7ba146ab1a6cdd975fcd965",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 89,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 38,
+        "source_start": "Key adaptations for AlphaProof.",
+        "source_paragraph_sha256": "363968b66493ad061821547a3161f81d92a474a7378ab65b64f5794a10de2828",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 91,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 39,
+        "source_start": "Progressive sampling. To dynamically broaden the search in promising regions, progressive sampling is used. If",
+        "source_paragraph_sha256": "7d50663a6c0f84074495a39f72761def0e966d48055912d0071e8e0dafc9bb5b",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 91,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 40,
+        "source_start": "AND nodes for multi-goal states. To manage proof states with multiple independent subgoals (a logical AND cond",
+        "source_paragraph_sha256": "b9bd570debae7335ef12010592b8529c90312a83b8d6a84128a9581da0d2ccf6",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 93,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 41,
+        "source_start": "The prior π(a∣sAND) is set to be uniform over all subgoals, and cAND is an additional multiplier.",
+        "source_paragraph_sha256": "d7276a419737d22eb51786b1a150f348efc6c8d7ffd3a3a1ec69a3fc47c266a4",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 102,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 42,
+        "source_start": "During backpropagation through an AND node, the value passed up is the minimum V(sAND, a) of its children subg",
+        "source_paragraph_sha256": "bd279a396392f2dcfd0473787207083e0411834d72d0e4cc8e9a5cade51c1b80",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 102,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 43,
+        "source_start": "Single search. For each proof attempt on an initial problem statement, AlphaProof executes a single search tha",
+        "source_paragraph_sha256": "a9f72b4cdcb822ac1e26263fdb4b2abfef6a826903ae92e68b64bd98951c3372",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 108,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 44,
+        "source_start": "Pretraining and supervised fine-tuning. Before RL, the AlphaProof proof network is initialized through a multi",
+        "source_paragraph_sha256": "e619d9ca91eb8673394b15b95c463a4cb14bc4b04890e6dce5a7bef25a9e9a73",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 111,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 45,
+        "source_start": "First, the network is pre-trained on large datasets consisting of approximately 300 billion tokens of publicly",
+        "source_paragraph_sha256": "20d1885eea3fb4010b1151c75cb42805ca1e8b1126e7062d8613bc336bca5dc7",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 111,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 46,
+        "source_start": "Following pretraining, the model undergoes supervised fine-tuning (SFT). This stage utilizes a much smaller bu",
+        "source_paragraph_sha256": "9fec813165be4bd6b36e14241e8b17d0aeb0ae4f7314cb08686dc5695e46f46e",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 113,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 47,
+        "source_start": "Auto-formalization. To provide a sufficiently large and diverse curriculum for RL, AlphaProof relies on an aut",
+        "source_paragraph_sha256": "a8bf05204d1fe3ba94a1b7374325b8fbfa84e670f285534345497857d206aae8",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 115,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 48,
+        "source_start": "Model and training data. The auto-formalization system is built upon a specialized Gemini 1.5 Pro language mod",
+        "source_paragraph_sha256": "5bd8dbae1bade99e93eb0eb73673c555a6acd072e77784a7eb8f1e8f2785b71e",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 117,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 49,
+        "source_start": "Iterative refinement. To further enhance the formalization model’s accuracy, we used an iterative refinement s",
+        "source_paragraph_sha256": "db8c97e4e863bd833e9d306672d23fb23dc89c81451435a9b3f9f85a9e8d1d9b",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": [
+          119,
+          123
+        ],
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 50,
+        "source_start": "Evaluation and benchmarking. The performance of the auto-formalization model was regularly monitored through A",
+        "source_paragraph_sha256": "622435eaed7962e64acd0953485ccc408cf085da39a1892b4d31bfde3a40633b",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 125,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 51,
+        "source_start": "Before the IMO 2024 competition, the final auto-formalization process achieved a 60% pass@1 success rate on th",
+        "source_paragraph_sha256": "b093d6fa3ed11bcf1b8d6e903c980d85b0c8cc3dc192c6a6491b5acde6fa1c9f",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 127,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 52,
+        "source_start": "Dataset generation. Several key methods facilitated the generation of a training dataset suitable for formaliz",
+        "source_paragraph_sha256": "010c149866b78b6879c99d5b5f3a312cf2d9c9f2d1fa5a2f61d32d783a9d5aaf",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 129,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 53,
+        "source_start": "Main RL. The main RL phase further trains the proof network, initialized from pretraining and SFT. The RL trai",
+        "source_paragraph_sha256": "1bf8edffd4d45beaea49b88001607467547337d4ecfcf3da39e4b74da429e53b",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 131,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 54,
+        "source_start": "Start positions dataset. The training curriculum for this RL phase primarily comprised the approximately 80 mi",
+        "source_paragraph_sha256": "02c84b508be76c0389cdd39c6878d33c4f10c7f82bed2da01a3ee0c8f8a74777",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 133,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 55,
+        "source_start": "Matchmaker system. The matchmaker orchestrates the training process by assigning tasks to available actors. Fo",
+        "source_paragraph_sha256": "5d09e6d82da1268154d44f2c3281dcbda939192bdd0901b3911f4558d4c94262",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 135,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 56,
+        "source_start": "Actor experience generation. Each actor, upon receiving a problem statement and simulation budget from the mat",
+        "source_paragraph_sha256": "9ea8f8a32d261236113c4f24fb5ed9b9209a2a333649d478d61e971454da7dbf",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 137,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 57,
+        "source_start": "Learner and network updates. The learner continuously updates the proof network parameters by training on batc",
+        "source_paragraph_sha256": "859c0f737b5fce59fce22c4931079b9aa7d20ffd968a939a8a29d2878b106ff9",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 139,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 58,
+        "source_start": "Computational budget summary. The AlphaProof-specific training pipeline, which follows a general pretraining p",
+        "source_paragraph_sha256": "dd7b2d169c8f27a90f8f93b1ca1d3fb113a49b926f6bd90d76e27f33349a3d9e",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 141,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 59,
+        "source_start": "Following main RL training, AlphaProof possesses general proof-finding capabilities for a wide range of mathem",
+        "source_paragraph_sha256": "a48bac0859ff31813ef803c72bf72a5067e0886401c25646f105c6c2d2bcef89",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 144,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 60,
+        "source_start": "Scaling with tree search. The primary method for applying more computation at inference, common in the AlphaZe",
+        "source_paragraph_sha256": "30cde6cbe66f537716828b55129d6a659b9b7559377813e4566dd78a0cbd8615",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 146,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 61,
+        "source_start": "Scaling with TTRL. For problems that remain intractable even with extensive tree search, AlphaProof uses TTRL ",
+        "source_paragraph_sha256": "17fbe84e6df33fe459a56e5bb1bc75152b0bd2d82cd899344d8973e6aa412f79",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 148,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 62,
+        "source_start": "Variant generation for TTRL curriculum. The TTRL phase commences with the generation of a problem-specific cur",
+        "source_paragraph_sha256": "fd107859c83851d3bbdd5fcb102f6086b2fea94a0822cdb291e483b15f16868d",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": [
+          150,
+          152
+        ],
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 63,
+        "source_start": "Focused RL. Following variant generation, AlphaProof executes its core AlphaZero-inspired RL loop, initializin",
+        "source_paragraph_sha256": "6956b1719323c6336b385a608cf21c39dee971df630ec6a11318f961ac446f34",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 154,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 64,
+        "source_start": "The TTRL phase thus enables AlphaProof to dedicate substantial, targeted computational resources at inference.",
+        "source_paragraph_sha256": "dc7430158c906ff4776e6303fcc278e3243ee8193603870046533e26115d654a",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 156,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 65,
+        "source_start": "We evaluated AlphaProof on a comprehensive suite of formal mathematics benchmarks, spanning advanced high-scho",
+        "source_paragraph_sha256": "2d38e11d3d66221e68532c33f0b07427e92ad0cdf50106881af83e0cea4032ef",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 159,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 66,
+        "source_start": "We introduce formal-imo, a benchmark of all non-geometry historical IMO problems that were internally formaliz",
+        "source_paragraph_sha256": "8500dc50e39d2da44a6f2b243812378cd3e3c16403db60f9ce5b77c21a11860a",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 161,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 67,
+        "source_start": "To ensure a rigorous evaluation of AlphaProof’s generalization capabilities, we carefully managed data separat",
+        "source_paragraph_sha256": "59ff9719c924792d4f35a7277d1fb3769eebda4b6ff6e22eadb1f77ae96cf5e5",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 163,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 68,
+        "source_start": "Handling IMO-style planar geometry within Lean for AlphaProof presented challenges owing to specific gaps exis",
+        "source_paragraph_sha256": "a501b33abc9a8a112e258a6fd9b0f7dc77ae8027fe90e38a1fb4d4ad39b32ad9",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 165,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 69,
+        "source_start": "For the IMO 2024 competition, a specific, predefined evaluation protocol was followed to ensure a rigorous ass",
+        "source_paragraph_sha256": "2e8a688434ba4c717c6abdcc66ef3b0e97aa501ab20beae09bc8d43a671ac757",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 167,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 70,
+        "source_start": "Pre-competition freeze. The main RL training of AlphaProof was halted, and all system hyperparameters were fro",
+        "source_paragraph_sha256": "00a73db0cbdb5ffc47d5695ded2abbc39ab248abc44558a036a431587f030474",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 169,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 71,
+        "source_start": "Problem formalization. Immediately upon release, the five non-geometry IMO 2024 problems were manually formali",
+        "source_paragraph_sha256": "11dbf6fd9584027606d1825e88d5a62db3c21e67528946a631c2f55515c506be",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 171,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 72,
+        "source_start": "Notably, P5 (combinatorics) proved exceptionally challenging to formalize, with initial attempts by experts be",
+        "source_paragraph_sha256": "dad2f9765d079847432f615f0b8222916cb7775ebf7e6f11d9f1f29f2defa8c9",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 171,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 73,
+        "source_start": "For problems requiring an answer (for example, ‘Find all…’), placeholders (sorry) were used for the answer com",
+        "source_paragraph_sha256": "12a24104e5f3e66c31af4ce91d08b3bf0518e4dd6fffd9406e48eb0f43a881c0",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 171,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 74,
+        "source_start": "Answer guessing. Answer generation was specifically optimized to maximize the likelihood of including the corr",
+        "source_paragraph_sha256": "feefc13194c5738aaf07da0758d5c374a20f97f7e6f2b71b5fa88124152cb843",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 173,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 75,
+        "source_start": "Geometry problem. For reasons described in ‘IMO-style geometry’, the geometry problem (IMO 2024 P4) was addres",
+        "source_paragraph_sha256": "c5b96ec0936708fce1e0685495854b62847c8d5431f79d0da65b033243a6d37a",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 175,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      },
+      {
+        "index": 76,
+        "source_start": "Verification and judging. Solutions generated by AlphaProof (P1, P2 and P6, shown in Extended Data Figs. 7–9) ",
+        "source_paragraph_sha256": "b275f4df2a01a8be66b868bf1898d574c4943b326dbc623523b54233eaab714f",
+        "target_file": "papers/translations/alphaproof/methods.tex",
+        "target_line": 177,
+        "review": "Full substantive content present; source paragraphs sometimes merged into one translated paragraph."
+      }
+    ],
+    "display_formulas": [
+      {
+        "source_id": "Equa",
+        "source_latex": "$$Q(s,a)+c(s){\\pi }^{1/\\tau }\\,(a| s)\\frac{\\sqrt{{\\sum }_{b}N(s,b)}}{N(s,a)+1}.$$",
+        "target_label": "alphaproof-equ-a",
+        "review": "Variables, sign, power, visits, temperature, constants and AND transform match source."
+      },
+      {
+        "source_id": "Equb",
+        "source_latex": "$$c(s)={c}_{{\\rm{i}}{\\rm{n}}{\\rm{i}}{\\rm{t}}}+\\log \\left(\\frac{N(s)+{c}_{{\\rm{b}}{\\rm{a}}{\\rm{s}}{\\rm{e}}}+1}{{c}_{{\\rm{b}}{\\rm{a}}{\\rm{s}}{\\rm{e}}}}\\right).$$",
+        "target_label": "alphaproof-equ-b",
+        "review": "Variables, sign, power, visits, temperature, constants and AND transform match source."
+      },
+      {
+        "source_id": "Equc",
+        "source_latex": "$$Q(s,a)={\\gamma }^{-V(s,a)-1},$$",
+        "target_label": "alphaproof-equ-c",
+        "review": "Variables, sign, power, visits, temperature, constants and AND transform match source."
+      },
+      {
+        "source_id": "Equd",
+        "source_latex": "$$(1-Q({s}_{{\\rm{A}}{\\rm{N}}{\\rm{D}}},a))+{c}_{{\\rm{A}}{\\rm{N}}{\\rm{D}}}c({s}_{{\\rm{A}}{\\rm{N}}{\\rm{D}}})\\pi (a| {s}_{{\\rm{A}}{\\rm{N}}{\\rm{D}}})\\frac{\\sqrt{{\\sum }_{b}N({s}_{{\\rm{A}}{\\rm{N}}{\\rm{D}}},b)}}{N({s}_{{\\rm{A}}{\\rm{N}}{\\rm{D}}},a)+1}.$$",
+        "target_label": "alphaproof-equ-d",
+        "review": "Variables, sign, power, visits, temperature, constants and AND transform match source."
+      }
+    ],
+    "other_math_review": [
+      "Return -T_steps and AND minimum child return retained; OR/PUCT maximum-action choice retained.",
+      "Progressive sampling n(s)<=C N(s)^alpha and additional K samples retained.",
+      "Private internalSorry and internal_true_if_false are search devices; final independent kernel and three-axiom dependency check retained.",
+      "Formal syntax validity, fidelity to natural-language problem, and final proof validity kept distinct."
+    ],
+    "source_V_Q_anomaly": {
+      "source_largest_V_or_smallest_Q_preserved": true,
+      "translation_note_separate": true,
+      "review_inference": "For the usual discount condition 0<gamma<1, dQ/dV=-log(gamma)*Q>0, so largest V and smallest Q cannot rank subgoals identically. Negative remaining-step V means a harder goal has smaller V. The source also says AND backup uses minimum V. Translation correctly preserves the source instead of silently correcting it.",
+      "illustration_gamma": 0.9,
+      "illustration": [
+        {
+          "V": -2,
+          "Q": 0.9
+        },
+        {
+          "V": -5,
+          "Q": 0.6561
+        },
+        {
+          "V": -10,
+          "Q": 0.3874204890000001
+        }
+      ]
+    }
+  },
+  "scope_checks": {
+    "figures": 14,
+    "tables": 3,
+    "authors": 39,
+    "author_order_and_diacritics_equal": true,
+    "references": 80,
+    "normalized_original_reference_metadata_equal": 80,
+    "reference_audit": [
+      {
+        "index": 1,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 2,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 3,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 4,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 5,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 6,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 7,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 8,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 9,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 10,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 11,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 12,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 13,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 14,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 15,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 16,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 17,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 18,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 19,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 20,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 21,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 22,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 23,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 24,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 25,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 26,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 27,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 28,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 29,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 30,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 31,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 32,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 33,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 34,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 35,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 36,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 37,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 38,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 39,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 40,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 41,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 42,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 43,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 44,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 45,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 46,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 47,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 48,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 49,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 50,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 51,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 52,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 53,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 54,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 55,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 56,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 57,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 58,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 59,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 60,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 61,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 62,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 63,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 64,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 65,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 66,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 67,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 68,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 69,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 70,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 71,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 72,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 73,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 74,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 75,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 76,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 77,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 78,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 79,
+        "normalized_metadata_equal": true
+      },
+      {
+        "index": 80,
+        "normalized_metadata_equal": true
+      }
+    ],
+    "main_table_source_rows_equal": true,
+    "main_table_percent_sequence_equal": true,
+    "extended_tables_original_pdf_pages_visually_viewed": [
+      24,
+      25
+    ],
+    "extended_table_cells_and_notes_equal": true,
+    "figure_asset_checks": [
+      {
+        "id": "fig1",
+        "source_page": 2,
+        "asset": "assets/fig1.pdf",
+        "width": 890,
+        "height": 542,
+        "reference_width": 890,
+        "reference_height": 542,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "fig2",
+        "source_page": 3,
+        "asset": "assets/fig2.pdf",
+        "width": 520,
+        "height": 362,
+        "reference_width": 520,
+        "reference_height": 362,
+        "pixel_identical_to_independently_recreated_crop": false,
+        "changed_pixel_count": 8142,
+        "fraction_changed": 0.04325329366765831,
+        "bbox": [
+          6,
+          1,
+          516,
+          345
+        ],
+        "max_difference": 2
+      },
+      {
+        "id": "fig3",
+        "source_page": 4,
+        "asset": "assets/fig3.pdf",
+        "width": 1048,
+        "height": 308,
+        "reference_width": 1048,
+        "reference_height": 308,
+        "pixel_identical_to_independently_recreated_crop": false,
+        "changed_pixel_count": 25099,
+        "fraction_changed": 0.07775788143154555,
+        "bbox": [
+          1,
+          1,
+          1043,
+          297
+        ],
+        "max_difference": 3
+      },
+      {
+        "id": "fig4",
+        "source_page": 5,
+        "asset": "assets/fig4.pdf",
+        "width": 856,
+        "height": 328,
+        "reference_width": 856,
+        "reference_height": 328,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "fig5",
+        "source_page": 6,
+        "asset": "assets/fig5.pdf",
+        "width": 518,
+        "height": 410,
+        "reference_width": 518,
+        "reference_height": 410,
+        "pixel_identical_to_independently_recreated_crop": false,
+        "changed_pixel_count": 7562,
+        "fraction_changed": 0.03560598926452585,
+        "bbox": [
+          7,
+          13,
+          512,
+          402
+        ],
+        "max_difference": 2
+      },
+      {
+        "id": "edfig1",
+        "source_page": 15,
+        "asset": "assets/edfig1.pdf",
+        "width": 1048,
+        "height": 554,
+        "reference_width": 1048,
+        "reference_height": 554,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig2",
+        "source_page": 16,
+        "asset": "assets/edfig2.pdf",
+        "width": 1048,
+        "height": 337,
+        "reference_width": 1048,
+        "reference_height": 337,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig3",
+        "source_page": 17,
+        "asset": "assets/edfig3.pdf",
+        "width": 1048,
+        "height": 740,
+        "reference_width": 1048,
+        "reference_height": 740,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig4",
+        "source_page": 18,
+        "asset": "assets/edfig4.pdf",
+        "width": 1048,
+        "height": 781,
+        "reference_width": 1048,
+        "reference_height": 781,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig5",
+        "source_page": 19,
+        "asset": "assets/edfig5.pdf",
+        "width": 1048,
+        "height": 1239,
+        "reference_width": 1048,
+        "reference_height": 1239,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig6",
+        "source_page": 20,
+        "asset": "assets/edfig6.pdf",
+        "width": 1048,
+        "height": 332,
+        "reference_width": 1048,
+        "reference_height": 332,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig7",
+        "source_page": 21,
+        "asset": "assets/edfig7.pdf",
+        "width": 1048,
+        "height": 1122,
+        "reference_width": 1048,
+        "reference_height": 1122,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig8",
+        "source_page": 22,
+        "asset": "assets/edfig8.pdf",
+        "width": 1048,
+        "height": 1147,
+        "reference_width": 1048,
+        "reference_height": 1147,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edfig9",
+        "source_page": 23,
+        "asset": "assets/edfig9.pdf",
+        "width": 1048,
+        "height": 1319,
+        "reference_width": 1048,
+        "reference_height": 1319,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edtable1",
+        "source_page": 24,
+        "asset": "assets/edtable1.pdf",
+        "width": 1048,
+        "height": 86,
+        "reference_width": 1048,
+        "reference_height": 86,
+        "pixel_identical_to_independently_recreated_crop": true
+      },
+      {
+        "id": "edtable2",
+        "source_page": 25,
+        "asset": "assets/edtable2.pdf",
+        "width": 1048,
+        "height": 152,
+        "reference_width": 1048,
+        "reference_height": 152,
+        "pixel_identical_to_independently_recreated_crop": true
+      }
+    ],
+    "all_16_asset_hashes_match": true,
+    "asset_pixel_note": "Thirteen of sixteen recreated crops are pixel-identical. Three result figures differ by at most 2–3/255 in colour channels at identical dimensions; no missing content found. Fourteen figures and two supporting table crops are counted separately.",
+    "figure_credit_lines_retained": true,
+    "independent_supplementary_attachments": "Not part of the requested 25-page body; translated body retains references/descriptions, and excludes redistribution. No missing body appendix is inferred from this deliberate scope."
+  },
+  "IMO_interpretation": {
+    "manual_formalization_of_five_non_geometry_problems": true,
+    "P5_not_formalized_within_first_day_retained": true,
+    "separate_autoformalization_side_experiment_P1_P2_P6_retained": true,
+    "Gemini_1_5_Pro_with_Python_and_fewshot_candidates_retained": true,
+    "candidate_count": 500,
+    "refutation_percent_P1_P2_P6": [
+      99,
+      98,
+      7
+    ],
+    "per_successful_AlphaProof_solution_TTRL_days": "2–3",
+    "AlphaProof_solved": [
+      "P1",
+      "P2",
+      "P6"
+    ],
+    "AlphaGeometry2_solved": [
+      "P4"
+    ],
+    "unsolved": [
+      "P3",
+      "P5"
+    ],
+    "combined_score": "28/42",
+    "silver_equivalent_not_official_student_medal": true,
+    "not_student_time_limit": true
+  },
+  "findings": [
+    {
+      "id": "AP-COPYRIGHT-1",
+      "severity": "minor_attribution_completeness",
+      "status": "resolved_by_root",
+      "file": "papers/translations/alphaproof/backmatter.tex",
+      "evidence": "Original official PDF page 7 carries © The Author(s) 2025. Original author list, source link, CC link and change notice are retained, but the explicit copyright notice is absent.",
+      "recommendation": "Retain © 原作者 2025 after the licence paragraph; do not replace 2025 with the 2026 VOR date.",
+      "resolved_final_page": 32
+    }
+  ],
+  "final_pdf_review": {
+    "status": "PASS",
+    "record": "qa/v03-final-pdf-alphaproof.json",
+    "pdf_sha256": "59b2f6ddfcc8c75fb30c28edf25ed30e6dfeb6f36702dcb8b7d5363e43470193",
+    "pages": 39,
+    "author_build_38_pages_not_used": true
+  },
+  "translation_files_sha256": {
+    "assets/edfig1.pdf": "24cb671f14ce5955263cf9551eecb9c05d0a76d7a90d12b2d30369480e2ba7f0",
+    "assets/edfig2.pdf": "e38ab1f2c7048a8891f6d010e6b93fe7ccf864683a9127a4bbe87a22845a0129",
+    "assets/edfig3.pdf": "4c2be9b0db64851a45e0b89c69f0ca9f796380d518c7499315a4e7107d58fadb",
+    "assets/edfig4.pdf": "d5c99f5366032dc8017eb959fcc35ff4419ffbd7de3e476c4ba73963f8e296a0",
+    "assets/edfig5.pdf": "ef21c09c5944b4d2231311e934f1069c3886ce56c85a644f7e682d06fca7a420",
+    "assets/edfig6.pdf": "e9acad30348f812fb0337f8718102fe9b707a73632655450281183c4b2dca408",
+    "assets/edfig7.pdf": "49d3d10db14aa77e99283d031570a1e7d7a2727a93d7c5917fb522709cf95340",
+    "assets/edfig8.pdf": "9dede847e3fbfb75c6fdd67473329ada1c5df1ecc7ffb31024c879ec7fcfe63d",
+    "assets/edfig9.pdf": "6f548276d4a77f7f6d6d89bf41157dda138d5eb81f6f81f72dc7f8611e3c2314",
+    "assets/edtable1.pdf": "dc41a857929ebd7f2908719120ac748f5bb0c4469b386d20c641cae3e3197048",
+    "assets/edtable2.pdf": "90ef0677a97cf21ddc756e12841325e7b97936dbf1b85003754c97ca088f8bbc",
+    "assets/fig1.pdf": "6400e73185984ed615faa76fb61c58230845f7c9081434ba761cd26fda3dda76",
+    "assets/fig2.pdf": "a0ad0d703f28eea8929666491aa058464804622ac91af43e8ee7c8a1e030d8e6",
+    "assets/fig3.pdf": "b9294ac6ce61750e4702757e37bb7169cb1d779ba55969db18dc1a7e71a44388",
+    "assets/fig4.pdf": "62cdddba39a9f7a6e0de43bbd0730d49d07e19a063987cdf9233db54da552cf8",
+    "assets/fig5.pdf": "d62ad83d8c7bd38b916e7083d439e8fd04e5a3b4822035e43fdb19b008011c92",
+    "authors.tex": "b2f3bd72eca092578fcbbc31bd825523fc9f151809a3095de4991d03e02749b5",
+    "backmatter.tex": "c94525b364f5f469977f8f26ba8872d530135ea5b779eb2b88a011e8154d4efc",
+    "body.tex": "fbe6e3db3479cf9c0132ba5dd8e8cd2b2641a51c6776d3b3af958c3aee82d23f",
+    "coverage.json": "cd80c1e77533e68d0ad3959741a3035e1ab7e9d9dacfa0ef7e52acd24bcc4122",
+    "extended-data.tex": "2b2c7d9c549530b8666458319ecd3b002b50486c5db8880dcdb0d764e5467aba",
+    "extended-tables.tex": "e00ba392ea0ceb552e86aa6e1c120960dd307c4b9a3127b2173ef0f79f692e87",
+    "fig1.tex": "e66c78c7e041f31d67f8cb6f5bafd24ff0e70af5eb3f5e027a3a42bca16c8ae1",
+    "fig2.tex": "8d8a79d0f02156a25d0ef988146f555fab736da59572c79e4700558816a603d9",
+    "fig3.tex": "3ac00beefb9c3388b67d9c38f6ec2e7857bcd7c242bdf6068fe8b9fc57c8389d",
+    "fig4.tex": "11f5a46e7a03d9e30a7ec477ff274d83bd9bbdf422e955937a1c838dd25d9505",
+    "fig5.tex": "3e9da01f0c09e8eb53b0c1631c92fed9e1df2f6982735adf44642ebcd477e353",
+    "glossary.json": "e45c4ddfafcf1b2f5fd935ebc2156fefb19c4b958eb036e9aa4dca46824558c3",
+    "integration-snapshot.json": "52d845750dae0a60084b9389f6624e232b6fd52217f9b618df29ca383b0c40dd",
+    "metadata.json": "74f4594df09b5a741cc1c189a7842a44d83895bc010cbe887854eafe59bba05a",
+    "methods.tex": "4e2288b57aa64d00882da997ee272732bff4b80a73d2acbccb110fb8f2a6e5d2",
+    "references.tex": "07a4f5a495f83e1ad6abf2feb85bb4412dda038fd4b937eed361f1ba5dce1732",
+    "source-reading.md": "c493f1cdf46013bf19731b89e27fbb5702102d042615b387ac90b5437c133b49",
+    "table-data.json": "fbac36db9af4b4fb4bc8d51a865be24002783beeea18cf9ac145f3c5fd4fea3c",
+    "table1.tex": "b9dd2bb09f2e41d90060970a7f0fe03cd803fdf4dab378f797d6502d2cf3a447",
+    "verification.json": "2394856bd396f2c0ba2a87dd2fb39efb00d10d113a41df039f61ce90974b897f"
+  },
+  "limits": [
+    "No AlphaProof training or execution of Lean proof artifacts.",
+    "No claim of mathematically resolving the original AND/V/Q inconsistency.",
+    "No independent audit of all eighty cited papers; their published bibliography metadata was checked."
+  ]
+}

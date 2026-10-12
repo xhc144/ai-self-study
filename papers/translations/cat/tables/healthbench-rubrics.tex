@@ -1,0 +1,23 @@
+\begin{longtable}{llc}
+\caption{不同评分细则与评判方法的分数. 最佳值加粗，次佳值加下划线.}\label{cat-tab:healthbench-rubrics}\\
+
+        \toprule
+        模型 & 方法 & HealthBench 分数 \\
+        \midrule
+        Gemma 3 4B 
+        & 自提出评分细则 & $\mathbf{0.43} \pm 0.01$ \\
+        & 模型直接评判       & $\underline{0.39} \pm 0.01$ \\
+        & 医师评分细则     & $\underline{0.39} \pm 0.01$ \\
+        \midrule
+        Qwen 3 4B
+        & 自提出评分细则 & $\mathbf{0.43} \pm 0.01$ \\
+        & 医师评分细则     & $\mathbf{0.43} \pm 0.01$ \\
+        & 模型直接评判       & $0.40 \pm 0.01$ \\
+        \midrule
+        Llama 3.1 8B
+        & 自提出评分细则 & $\underline{0.38} \pm 0.01$ \\
+        & 医师评分细则     & $\mathbf{0.40} \pm 0.01$ \\
+        & 模型直接评判       & $0.18 \pm 0.01$ \\
+        \bottomrule
+    
+\end{longtable}

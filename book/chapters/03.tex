@@ -1,68 +1,150 @@
-\originalchapter{概率、信息与预测损失}\label{ch:prob}
-\originalsection{不确定性与条件分布}
-同样的输入可能有多个合理输出. 与其强迫模型永远给一个确定值, 可以让它报告概率. 离散随机变量 $Y$ 取值于有限集合 $\{1,\ldots,V\}$, 其分布 $p_i=P(Y=i)$ 满足 $p_i\ge0$ 和 $\sum_i p_i=1$. 条件分布 $P(Y=i\mid X=x)$ 表示在给定输入之后的不确定性. 这里的 $x$ 可以是图像, 也可以是文本前缀.
+\originalchapter{序列概率、交叉熵与不确定性}\label{ch:prob}
+本章可按需查阅: 条件语言模型需要联合与条件概率、序列似然和交叉熵三部分; 手写输出层时回查 softmax; 比较实验概率或有限样本结果时, 再查期望、方差与不确定性. 末尾二项区间是可跳过的补充, 不构成学习现代模型的先修门槛.
+\originalsection{联合分布与下一个 token}
+语言模型在一个前缀后给出下一 token 的分布. 理解这句话需要三个不同对象: 整段序列的联合概率, 给定前缀后的条件概率, 以及用有限语料估计的模型概率. 三者混在一起, 就容易误把“一个 token 预测得准”当成“整段回答一定正确”. 本章先在有限集合上建立概率, 不需要测度论.
 
 \begin{definition}
-离散随机变量的期望为 $\E[f(Y)]=\sum_i p_i f(i)$. 当实随机变量 $Z$ 满足 $\E[Z^2]<\infty$ 时, 方差为 $\operatorname{Var}(Z)=\E[(Z-\E Z)^2]$, 衡量围绕均值的平方偏离; 有限取值时可按期望的求和定义计算. 两事件 $A,B$ 在 $P(B)>0$ 时满足 $P(A\mid B)=P(A\cap B)/P(B)$. 联合概率分解为 $P(A\cap B)=P(A\mid B)P(B)$.
+有限随机变量 $Y$ 的取值为 $1,\ldots,V$, 概率 $p_j=P(Y=j)$ 满足 $p_j\ge0$、$\sum_jp_j=1$. 两个变量的联合分布为 $p_{ij}=P(X=i,Y=j)$. 边缘分布为 $P(X=i)=\sum_jp_{ij}$. 若 $P(X=i)>0$, 条件分布为
+$P(Y=j\mid X=i)=p_{ij}/P(X=i)$.
 \end{definition}
-Bayes 公式由交换交集得到: $P(A\mid B)=P(B\mid A)P(A)/P(B)$, 前提是 $P(B)>0$. 分母可通过一组互斥且穷尽的事件求和. 例如疾病率为 $0.01$, 检测真阳性率 $0.9$, 假阳性率 $0.05$, 那么阳性概率为 $0.9\cdot0.01+0.05\cdot0.99=0.0585$, 阳性后患病概率约为 $0.154$. 单看真阳性率很高, 不能判断一次阳性有多可信. 模型评估中的类别不平衡也有同样结构.
+条件分布之和为 1, 因为分子求和恰为分母. 在零概率输入处, 这个比值没有定义; 一个模型仍可以在该输入上输出数, 但这些数不能从原分布的条件频率推出来. 条件概率也不表示因果干预的结果: “读到这个前缀时怎样续写”并不自动回答“改变某个事实后世界怎样变化”.
 
-概率独立意味着 $P(A\cap B)=P(A)P(B)$, 不意味着两个事件在同一个时间发生或不发生. 训练样本独立同分布是常用数学假设; 同一文档切出的相邻窗口通常不满足独立性. 后面讨论泛化时要记住假设的边界.
-
-\originalsection{似然与交叉熵}
-\begin{definition}
-对独立样本 $y_1,\ldots,y_n$, 参数模型 $q_\theta$ 的似然为 $L(\theta)=\prod_i q_\theta(y_i)$. 最大似然寻找使已观测数据概率最大的参数. 平均负对数似然是 $\ell(\theta)=-n^{-1}\sum_i\log q_\theta(y_i)$, 本书所有信息量使用自然对数.
-\end{definition}
-对数把乘积变成和, 方便稳定计算和逐样本求导. 若 $\hat p_j$ 是类别 $j$ 的经验频率, 就有 $\ell=-\sum_j\hat p_j\log q_j$. 这不是任意选择的“分数”, 而是把整个训练样本似然写成平均损失. 对条件模型, 只需改为 $-n^{-1}\sum_i\log q_\theta(y_i\mid x_i)$.
-
-\begingroup\widowpenalty=10000
-\begin{definition}
-熵为 $H(p)=-\sum_i p_i\log p_i$, 交叉熵为 $H(p,q)=-\sum_i p_i\log q_i$, 相对熵为 $\KL(p\Vert q)=\sum_{i:p_i>0}p_i\log(p_i/q_i)$. 约定 $0\log0=0$; 若 $p_i>0$ 而 $q_i=0$, 相对熵与交叉熵取 $+\infty$.
-\end{definition}
-\begin{proposition}
-对有限概率分布有 $H(p,q)=H(p)+\KL(p\Vert q)$, 且 $\KL(p\Vert q)\ge0$, 等号当且仅当 $p=q$.
-\end{proposition}
-\begin{proof}
-在共同正概率位置拆开 $\log(p_i/q_i)$ 即得恒等式; 无穷情形按约定处理. 对 $u>0$, $\log u\le u-1$, 因为 $u-1-\log u$ 在 $u=1$ 处达到唯一最小值零. 对 $p_i>0$ 应用 $u=q_i/p_i$, 得
+由定义立刻有 $P(X=i,Y=j)=P(X=i)P(Y=j\mid X=i)$. 反复应用给出概率链式分解. 对固定长度 $T$ 的 token 序列 $Y_{1:T}$, 在相关前缀具有正概率时,
 \[
-\KL(p\Vert q)\ge\sum_{i:p_i>0}(p_i-q_i)=1-\sum_{i:p_i>0}q_i\ge0.
+P(Y_{1:T}=y_{1:T})=P(Y_1=y_1)\prod_{t=2}^TP(Y_t=y_t\mid Y_{1:t-1}=y_{1:t-1}).
 \]
-若等号成立, 每个正 $p_i$ 的位置须有 $q_i=p_i$, 且 $q$ 在其他位置无剩余质量, 故 $p=q$. 反之直接代入即为零.
-\end{proof}
-因此在固定真实分布 $p$ 上, 最小交叉熵的模型分布就是 $p$. 但真实分布通常未知, 模型族也可能无法表示它. 经验最优与总体最优之间还隔着采样误差和模型误设. 交叉熵低意味着概率预测更吻合评估分布, 不直接等于事实可靠、任务正确或推理严谨.\par
-\endgroup
+证明可以逐步约去前缀概率: 第 $t$ 个条件因子等于长 $t$ 前缀概率除以长 $t-1$ 前缀概率, 相乘只留下完整序列概率. 这是一条恒等式, 不要求 token 独立. 独立反而是特殊限制: 当联合概率总是边缘概率的乘积时, 给定前缀不会改变后继分布.
 
-\originalsection{Softmax 与稳定计算}
-\begin{definition}
-对实向量 $z\in\R^V$, softmax 定义为 $q_i=\exp(z_i)/\sum_j\exp(z_j)$. $z_i$ 称为 logit, 它不是概率. 所有概率都严格为正且总和为 1.
-\end{definition}
-任意常数 $c$ 都满足 $\softmax(z+c\mathbf1)=\softmax(z)$. 因此先减去最大 logit 可使指数落在 $(0,1]$, 避免大正数溢出. 实现负对数似然时也可以使用 $\log\sum_j e^{z_j}=m+\log\sum_j e^{z_j-m}$, 其中 $m=\max_jz_j$. 这叫 log-sum-exp 稳定形式.
-
-求导用商法则得到
-\[
-\frac{\partial q_i}{\partial z_j}=q_i(\delta_{ij}-q_j),\qquad
-J_q=\diag(q)-qq^\top.
-\]
-其中 $\delta_{ij}$ 在 $i=j$ 时为 1, 否则为 0. 若目标类别是 $y$, 损失为 $-\log q_y=-z_y+\log\sum_j e^{z_j}$, 所以 $\partial\ell/\partial z_j=q_j-\delta_{jy}$. 对软标签分布 $p$, 导数同样为 $q_j-p_j$. “预测减目标”不是经验口诀, 它依赖 softmax 与交叉熵配对.
+反过来, 任意在每个前缀上归一化的下一 token 模型 $q_\theta$ 都定义一个固定长度联合分布. 求所有序列的概率之和时, 先对最后一个 token 求和, 最后一个条件因子之和为 1; 再依次向前求和, 最终得到 1. 即使某个前缀概率为零, 在该处指定任何归一化条件都不会改变联合分布. 对可变长度序列, 还需结束 token 和终止条件; 每一步归一化并不单独保证最终以概率 1 停止. 后文的小实验使用明确的固定长度或结束规则.
 
 \begin{example}
-两个类别的 logit 为 $(0,\log3)$, 真标签为第一类. 求预测、损失与梯度.
+两个 token 为 $a,b$, 长为 2 的序列概率依次为 $P(aa)=3/10$, $P(ab)=2/10$, $P(ba)=1/10$, $P(bb)=4/10$. 已知第一 token 为 $a$, 下一 token 为 $a$ 的概率是多少? 第二 token 的边缘概率相同吗?
 \end{example}
 \begin{solution}
-指数为 $(1,3)$, 所以预测为 $(1/4,3/4)$, 损失为 $\log4$, 梯度为 $(-3/4,3/4)$. 沿负梯度更新会提高第一类 logit, 降低第二类 logit. 两梯度之和为零, 与整体平移不改变预测一致.
+$P(Y_1=a)=1/2$, 所以 $P(Y_2=a\mid Y_1=a)=(3/10)/(1/2)=3/5$. 但 $P(Y_2=a)=P(aa)+P(ba)=2/5$. 前缀改变了分布, 不能将联合分解误写成两个边缘概率相乘.
 \end{solution}
+
+\originalsection{期望、方差与训练平均}
+\begin{definition}
+在有限取值分布上, $\E[f(Y)]=\sum_jp_jf(j)$. 实随机变量 $Z$ 的方差为 $\operatorname{Var}(Z)=\E[(Z-\E Z)^2]$, 标准差为方差的平方根. 两个实随机变量的协方差为 $\operatorname{Cov}(Z,W)=\E[(Z-\E Z)(W-\E W)]$.
+\end{definition}
+期望是按概率加权的平均, 不要求平均值本身是可能的观测值. 对 token 编号直接求平均通常没有语义; 有意义的是对损失、长度或成功指示量求平均. 分配律给出 $\E[aZ+bW]=a\E Z+b\E W$, 无需独立. 展开平方并使用 $\E[Z-\E Z]=0$, 得 $\operatorname{Var}(Z)=\E[Z^2]-(\E Z)^2$.
+
+条件期望也是加权平均. 在 $P(X=i)>0$ 时令 $m_i=\sum_jP(Y=j\mid X=i)f(i,j)$. 再按 $X$ 的概率求平均,
+\[
+\sum_iP(X=i)m_i=\sum_{i,j}p_{ij}f(i,j)=\E[f(X,Y)].
+\]
+这就是有限情形的全期望公式. 它允许把“每种前缀下的损失”平均成“所有前缀上的总体损失”.
+
+若 $Z_1,\ldots,Z_n$ 独立同分布, 均值为 $\mu$、方差为 $\sigma^2$, 样本平均 $\bar Z=n^{-1}\sum_iZ_i$ 满足
+\[
+\E\bar Z=\mu,\qquad
+\operatorname{Var}(\bar Z)=\frac1{n^2}\sum_{i,j}\operatorname{Cov}(Z_i,Z_j)=\frac{\sigma^2}{n}.
+\]
+对不同 $i,j$, 独立使 $\E[Z_iZ_j]=\E Z_i\E Z_j$, 故协方差为零; 相同指标留下 $n$ 个方差项. 同一文档中的 token 损失通常相关, 这时交叉项不能删. 把相邻窗口当成独立样本, 会把不确定性估计得过小. 独立抽样是实验假设, 不是由求平均自动获得的性质.
+
+\originalsection{从序列似然到 token 交叉熵}
+设训练集含序列 $s^{(1)},\ldots,s^{(M)}$. 若将各序列视为独立抽取, 模型对已观察数据的似然为 $L(\theta)=\prod_{m=1}^Mq_\theta(s^{(m)})$. 这里数据固定、参数变化; 似然不是“参数的概率分布”. 在 $q_\theta(s^{(m)})>0$ 时, 对数的单调性使最大似然等价于最小负对数似然.
+
+利用联合分解, 若第 $m$ 段有 $T_m$ 个被计入目标的 token, 总数 $N=\sum_mT_m$, 则每 token 平均损失为
+\[
+\ell(\theta)=-\frac1N\sum_{m=1}^M\sum_{t=1}^{T_m}
+\log q_\theta(s_t^{(m)}\mid s_{<t}^{(m)}).
+\]
+这推导解释了为什么训练会在每个位置累加一个对数损失. 分解并没有假定这些 token 独立. 训练时给定语料里的真实前缀计算条件概率; 模型生成时前缀来自已经生成的 token, 前缀分布会不同. 若 padding、不参与训练的提示或被屏蔽位置存在, 它们必须从 $N$ 和求和中同时去掉. 若改为先对每段求平均再对段平均, 长段与短段的权重会改变; 两种指标不可不加说明地比较.
+
+固定一个前缀 $c$, 设真实后继分布为 $p(\cdot\mid c)$、模型分布为 $q(\cdot\mid c)$. 一次观测损失的期望为 $-\sum_jp_j\log q_j$. 如果同一前缀出现多次, 用经验频率 $\hat p_j$ 替代真实 $p_j$, 同样得到 $-\sum_j\hat p_j\log q_j$. 真实分布未知、前缀常常稀疏, 所以语言模型用共享参数连接不同前缀; 它并非给每个前缀单独存一张频率表.
+
+\begin{definition}
+本书用自然对数. 熵 $H(p)=-\sum_jp_j\log p_j$, 交叉熵 $H(p,q)=-\sum_jp_j\log q_j$, KL 散度
+$\KL(p\Vert q)=\sum_{j:p_j>0}p_j\log(p_j/q_j)$.
+约定 $0\log0=0$; 若 $p_j>0$ 而 $q_j=0$, 后两者为 $+\infty$.
+\end{definition}
+熵描述分布自身的不确定性; 交叉熵是用模型 $q$ 预测来自 $p$ 的数据时的期望对数损失. KL 衡量这种错配, 但不是对称距离. 下面先证明一个不等式, 再证明损失的最优条件.
+
+\begin{lemma}[对数和不等式]\label{lem:logsum}
+设 $a_j,b_j>0$, $A=\sum_ja_j$、$B=\sum_jb_j$. 则
+$\sum_ja_j\log(a_j/b_j)\ge A\log(A/B)$,
+等号当且仅当所有 $a_j/b_j$ 相同.
+\end{lemma}
+\begin{proof}
+对 $u>0$, 函数 $u-1-\log u$ 的导数为 $1-1/u$, 在 $u<1$ 时为负, $u>1$ 时为正, 因而 $\log u\le u-1$, 等号仅在 $u=1$. 令 $\alpha_j=a_j/A$、$\beta_j=b_j/B$. 两者分别和为 1, 故
+\[
+\sum_j\alpha_j\log(\alpha_j/\beta_j)
+=-\sum_j\alpha_j\log(\beta_j/\alpha_j)
+\ge\sum_j\alpha_j(1-\beta_j/\alpha_j)=0.
+\]
+另一方面 $\log(a_j/b_j)=\log(A/B)+\log(\alpha_j/\beta_j)$. 乘以 $a_j$ 后求和即得结论. 每项的差都非负, 总差为零当且仅当每个 $\beta_j/\alpha_j=1$, 等价于比值 $a_j/b_j=A/B$ 恒定.
+\end{proof}
+\begin{proposition}\label{prop:kl}
+对有限概率分布, $H(p,q)=H(p)+\KL(p\Vert q)$, 且 $\KL(p\Vert q)\ge0$, 等号当且仅当 $p=q$.
+\end{proposition}
+\begin{proof}
+对数拆分给出恒等式; 若交叉熵无穷, 由于有限集合的 $H(p)$ 有限, 仍成立. 设 $S=\{j:p_j>0\}$. 若某个 $S$ 中的 $q_j$ 为零, 非负性直接成立且不能取等. 否则在 $S$ 上用引理, $A=1$、$B=\sum_{j\in S}q_j\le1$, 得 $\KL(p\Vert q)\ge-\log B\ge0$. 等号要求 $B=1$ 且各 $p_j/q_j$ 恒定, 因而 $S$ 上 $p_j=q_j$, 外部 $q_j=0$. 反之 $p=q$ 时直接代入得零.
+\end{proof}
+所以在固定前缀的真实分布上, 最小交叉熵是报告 $p$ 本身. 再按前缀分布 $P(c)$ 求平均, 总体差额就是 $\sum_cP(c)\KL(p(\cdot\mid c)\Vert q(\cdot\mid c))$, 同样非负. 这是数学最优性. 有限语料、受限模型族和训练算法是否接近该最优点, 则是三个额外问题. 即使总体 token 损失很低, 也没有由此推出事实可靠或复杂任务成功的定理.
+
+每 token 损失 $\ell$ 的困惑度定义为 $\exp(\ell)$. 若模型在每个位置均匀猜 $V$ 个 token, 则 $\ell=\log V$, 困惑度为 $V$. 一般情况下它是对数损失的指数变换, 不是逐位置“候选 token 个数”的字面计数. 不同分词改变 token 单位, 因而跨分词比较困惑度需要另定一致的计量方式.
+
+\originalsection{Softmax 与损失梯度}
+\begin{definition}
+对 logit 向量 $z\in\R^V$, $q_i=\softmax(z)_i=e^{z_i}/\sum_je^{z_j}$. logit 是未归一化分数, 概率 $q_i$ 严格为正且和为 1.
+\end{definition}
+加同一常数 $c$ 不改变概率, 因为分子分母的 $e^c$ 相消. 因此计算时取 $m=\max_jz_j$, 用 $q_i=e^{z_i-m}/\sum_je^{z_j-m}$ 避免大的正指数溢出. 对数损失直接写为
+$-z_y+m+\log\sum_je^{z_j-m}$, 避免先得到极小概率再取对数. 浮点下极小指数仍可能下溢, 所以稳定的 log-sum-exp 形式比直接算 $\log q_y$ 更稳妥.
+
+商法则给出
+\[
+\frac{\partial q_i}{\partial z_j}
+=\frac{\delta_{ij}e^{z_i}\sum_ke^{z_k}-e^{z_i}e^{z_j}}
+{(\sum_ke^{z_k})^2}=q_i(\delta_{ij}-q_j),
+\]
+其中 $\delta_{ij}$ 在 $i=j$ 时为 1, 否则为 0. 对分布目标 $p$, 交叉熵可写成 $-\sum_ip_iz_i+\log\sum_ke^{z_k}$, 因 $\sum_ip_i=1$, 所以 $\partial\ell/\partial z_j=q_j-p_j$. 硬标签 $y$ 对应 $p_j=\delta_{jy}$. “预测减目标”来自这对函数的推导, 不能随意套到别的损失与输出层上.
+
+\begin{example}
+两个 token 的 logit 为 $(0,\log3)$, 真 token 为第一个. 求概率、损失与两个 logit 的梯度.
+\end{example}
+\begin{solution}
+指数为 $(1,3)$, 所以 $q=(1/4,3/4)$, 损失 $\log4$, 梯度 $(-3/4,3/4)$. 沿负梯度提高正确 token 的分数并降低另一分数. 梯度之和为零, 与整体平移不改变概率相符.
+\end{solution}
+
+\originalsection{估计误差与概率校准}
+假设在同一种受控前缀下独立观察 $n$ 次, 每次用 $Z_i\in\{0,1\}$ 表示目标 token 是否出现. 若真实概率为 $p$, 则 $\E Z_i=p$、$\operatorname{Var}(Z_i)=p(1-p)$. 经验频率 $\hat p=\bar Z$ 的期望为 $p$, 方差为 $p(1-p)/n$. 对观测成功数 $k$, 二元似然 $q^k(1-q)^{n-k}$ 的对数导数为 $k/q-(n-k)/(1-q)$; $0<k<n$ 时唯一极大点为 $q=k/n$, 端点情形分别取 0 或 1. 这说明频率是此小模型的最大似然估计, 但不是“真实概率已被精确测出”.
+
+\begin{proposition}
+在上述独立假设下, 对任意 $\epsilon>0$,
+$P(|\hat p-p|\ge\epsilon)\le p(1-p)/(n\epsilon^2)\le1/(4n\epsilon^2)$.
+\end{proposition}
+\begin{proof}
+对非负变量 $U$, 在 $U\ge a>0$ 的事件上 $U\ge a$, 所以 $\E U\ge aP(U\ge a)$. 取 $U=(\hat p-p)^2$、$a=\epsilon^2$, 再代入方差公式. 最后 $p(1-p)=1/4-(p-1/2)^2\le1/4$.
+\end{proof}
+给定错误水平 $\alpha\in(0,1)$, 上式保证由 $\hat p\pm\sqrt{1/(4n\alpha)}$ 截到 $[0,1]$ 得到的随机区间覆盖固定 $p$ 的概率至少为 $1-\alpha$. 这个界较宽, 但不需要正态近似. 覆盖概率指重复采样生成的区间的比例, 不是在已经看到数据后把固定参数当作随机变量. 高相关 token 或重复文档不满足这里的独立假设.
+
+校准考察另一件事: 在许多被报告为概率 $q$ 的事件中, 实际出现比例是否接近 $q$. 形式化地, 对二元标签 $Z$ 和离散报告 $Q$, 校准要求 $P(Z=1\mid Q=q)=q$ 对所有有正概率的报告成立. 准确率只看阈值或最大概率类别, 不足以判断校准; 即使总体校准, 也可能在某个子群或任务上出错.
+
+种子 144 的 CPU 实验让两类前缀的真实目标概率为 $0.2,0.8$, 每类独立抽取 2000 个标签. 两个报告器分别输出 $(0.2,0.8)$ 和 $(0.05,0.95)$. 两者预测的最大概率类别相同, 实测准确率都是 $0.7975$; 但平均负对数似然分别为 $0.503868$ 和 $0.647542$, 两组平均校准差分别为 $0.0110$ 和 $0.1525$. 准确率没有显示过度自信, 对数损失显示了它. 此合成实验不是对某个真实语言模型的校准评估; 真实评估还需选定事件、分组和抽样单位.
+
+作为可跳过的统计补充, 脚本还对 $p=0.7$ 独立抽样 100 次, 得到 72 次成功. 它通过二项尾概率反演得到 $95\%$ 区间约 $[0.621333,0.805206]$. 具体地, 成功数为 $k$ 时下端满足 $P_{p=l}(K\ge k)=\alpha/2$, 上端满足 $P_{p=u}(K\le k)=\alpha/2$; $k=0$ 取下端 0, $k=n$ 取上端 1. 这是调用的精确二项区间构造\cite{nist-ci}, 本章不证明其完整覆盖定理. 脚本用有限求和与二分求端点, 另有有限样本覆盖测试. 3000 次重复的实际覆盖比例为 $0.964333$, 离散分布使覆盖常高于名义值; 单次模拟比例仍有误差, 不能替代理论保证. 所有数值与参数见 \texttt{results/v03-foundations/metrics.json}.
 
 \originalsection{练习与解答}
 \begin{exercise}
-若真实分布为 $(1/2,1/2)$, 比较模型 $(1/2,1/2)$ 与 $(0.9,0.1)$ 的交叉熵. 二者在任意固定平局规则下的最可能类别判断, 能否充分反映差别?
+真实下一 token 分布为 $(1/2,1/2)$, 两模型报告 $(1/2,1/2)$ 和 $(0.9,0.1)$. 若平局固定选第一 token, 二者准确率和交叉熵怎样比较? 这是否说明一个模型更会推理?
 \end{exercise}
 \begin{solution}
-第一模型交叉熵为 $\log2\approx0.6931$, 第二模型为 $-\tfrac12\log0.09\approx1.2040$. 若第一模型平局选第一类, 两者都始终预测第一类, 准确率均为 $1/2$. 但第二模型错误地把不确定性压低, 交叉熵对此施加惩罚.
+两者都预测第一 token, 真实准确率均为 $1/2$. 交叉熵分别为 $\log2$ 和 $-\tfrac12\log(0.9\cdot0.1)$, 脚本复算约 $0.693147$ 与 $1.203973$. 差为 KL, 约 $0.510826$, 反映概率错配. 题目只给一个二元分布, 没有任何推理任务证据.
 \end{solution}
 \begin{exercise}
-证明 softmax Jacobian 对任意向量 $a$ 满足 $a^\top J_q a\ge0$, 并解释为何 $\mathbf1$ 位于其核中.
+两条序列分别长 1 和 9, 它们的每 token 平均损失分别为 $a,b$. 先对序列平均与直接按全部 token 平均得到什么? 为什么必须说明口径?
 \end{exercise}
 \begin{solution}
-有 $a^\top J_q a=\sum_iq_ia_i^2-(\sum_iq_ia_i)^2=\sum_iq_i(a_i-\bar a)^2\ge0$, 其中 $\bar a=\sum_iq_ia_i$. 当所有 $a_i=1$ 时该式为零, 且直接计算 $J_q\mathbf1=q-q(q^\top\mathbf1)=0$. 这是平移不变性的微分表达.
+先序列平均得到 $(a+b)/2$, 全 token 平均为 $(a+9b)/10$. 前者让两序列权重相同, 后者让每个 token 权重相同. 长度分布变化会改变这两指标的关系; 比较模型时不能隐去这种变化.
+\end{solution}
+\begin{exercise}
+证明 softmax 的 Jacobian $J_q=\diag(q)-qq^\top$ 为半正定, 并找出其核. 这与 logit 的可辨识性有什么联系?
+\end{exercise}
+\begin{solution}
+对任意 $a$, 令 $\bar a=\sum_iq_ia_i$, 则
+$a^\top J_qa=\sum_iq_i(a_i-\bar a)^2\ge0$.
+因为每个 $q_i>0$, 等号当且仅当所有 $a_i$ 相同. 直接计算 $J_q\mathbf1=0$, 故核恰为常数向量的张成空间. 整体平移 logit 不改变概率, 所以概率无法识别 logit 的共同常数部分.
 \end{solution}
 \label{ch:end:03}

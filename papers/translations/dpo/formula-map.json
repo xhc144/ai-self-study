@@ -1,0 +1,162 @@
+[
+  {
+    "source_display_index": 1,
+    "translation_label": "dpo-eq:bradley-terry",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 2,
+    "translation_label": "dpo-eq:reward_model",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 3,
+    "translation_label": "dpo-eq:RL",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 4,
+    "translation_label": "dpo-eq:op_policy",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 5,
+    "translation_label": "dpo-eq:main_eq",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 6,
+    "translation_label": "dpo-eq:objective",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 7,
+    "translation_label": "dpo-eq:optimum_model",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 8,
+    "translation_label": "dpo-eq:gradient",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 9,
+    "translation_label": "dpo-display-09",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 10,
+    "translation_label": "dpo-eq:lag_p",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 11,
+    "translation_label": "dpo-eq:AC",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 12,
+    "translation_label": "dpo-display-12",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 13,
+    "translation_label": "dpo-eq:RL_proof",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 14,
+    "translation_label": "dpo-display-14",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 15,
+    "translation_label": "dpo-display-15",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 16,
+    "translation_label": "dpo-display-16",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 17,
+    "translation_label": "dpo-display-17",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 18,
+    "translation_label": "dpo-eq:BT_restated",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 19,
+    "translation_label": "dpo-eq:main_eq_restated",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 20,
+    "translation_label": "dpo-display-20",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 21,
+    "translation_label": "dpo-eq:pl-model",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 22,
+    "translation_label": "dpo-display-22",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 23,
+    "translation_label": "dpo-display-23",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 24,
+    "translation_label": "dpo-eq:grad-start",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 25,
+    "translation_label": "dpo-display-25",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 26,
+    "translation_label": "dpo-display-26",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 27,
+    "translation_label": "dpo-display-27",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 28,
+    "translation_label": "dpo-display-28",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 29,
+    "translation_label": "dpo-display-29",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 30,
+    "translation_label": "dpo-display-30",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 31,
+    "translation_label": "dpo-display-31",
+    "status": "preserved_from_official_tex"
+  },
+  {
+    "source_display_index": 32,
+    "translation_label": "dpo-display-32",
+    "status": "preserved_from_official_tex"
+  }
+]

@@ -1,0 +1,769 @@
+{
+  "version": "arXiv:2408.03314v1",
+  "complete": true,
+  "known_omissions": [],
+  "sections": [
+    {
+      "original": "Abstract",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-abstract",
+      "translation_line": 15,
+      "complete": true
+    },
+    {
+      "original": "1 Introduction",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:introduction",
+      "translation_line": 19,
+      "complete": true
+    },
+    {
+      "original": "2 A Unified Perspective on Test-Time Computation: Proposer and Verifier",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:unifying_perspective",
+      "translation_line": 41,
+      "complete": true
+    },
+    {
+      "original": "3 How to Scale Test-Time Computation Optimally",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:compute_optimal",
+      "translation_line": 49,
+      "complete": true
+    },
+    {
+      "original": "3.1 Test-Time Compute-Optimal Scaling Strategy",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:compute-optimal-strategy",
+      "translation_line": 59,
+      "complete": true
+    },
+    {
+      "original": "3.2 Estimating Question Difficulty for Compute-Optimal Scaling",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:estimating-difficulty",
+      "translation_line": 73,
+      "complete": true
+    },
+    {
+      "original": "4 Experimental Setup",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:setup",
+      "translation_line": 87,
+      "complete": true
+    },
+    {
+      "original": "5 Scaling Test-Time Compute via Verifiers",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:search",
+      "translation_line": 95,
+      "complete": true
+    },
+    {
+      "original": "5.1 Training Verifiers Amenable to Search",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:training-verifiers",
+      "translation_line": 99,
+      "complete": true
+    },
+    {
+      "original": "5.2 Search Methods Against a PRM",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:search-methods",
+      "translation_line": 109,
+      "complete": true
+    },
+    {
+      "original": "5.3 Analysis Results: Test-Time Scaling for Search with Verifiers",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:search-analysis",
+      "translation_line": 142,
+      "complete": true
+    },
+    {
+      "original": "6 Refining the Proposal Distribution",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:revisions",
+      "translation_line": 173,
+      "complete": true
+    },
+    {
+      "original": "6.1 Setup: Training and Using Revision Models",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:revision_setup",
+      "translation_line": 184,
+      "complete": true
+    },
+    {
+      "original": "6.2 Analysis Results: Test-Time Scaling with Revisions",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:revision-analysis",
+      "translation_line": 212,
+      "complete": true
+    },
+    {
+      "original": "7 Putting it Together: Exchanging Pretraining and Test-Time Compute",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:exchanging",
+      "translation_line": 230,
+      "complete": true
+    },
+    {
+      "original": "8 Discussion and Future Work",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:discussion",
+      "translation_line": 259,
+      "complete": true
+    },
+    {
+      "original": "Acknowledgements",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-acknowledgements",
+      "translation_line": 269,
+      "complete": true
+    },
+    {
+      "original": "References",
+      "translation_file": "references.tex",
+      "translation_label": "testcompute-references",
+      "translation_line": 2,
+      "complete": true
+    },
+    {
+      "original": "A Related Work",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:related_work",
+      "translation_line": 277,
+      "complete": true
+    },
+    {
+      "original": "B Additional Revision Results",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:additional_revision",
+      "translation_line": 288,
+      "complete": true
+    },
+    {
+      "original": "C Unsupervised Difficulty Bins",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:unsupervised_difficulty",
+      "translation_line": 298,
+      "complete": true
+    },
+    {
+      "original": "D PRM Training Details",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:prm_training",
+      "translation_line": 319,
+      "complete": true
+    },
+    {
+      "original": "E Comparing PRM Aggregation Strategies",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:comparing_prm_agg",
+      "translation_line": 327,
+      "complete": true
+    },
+    {
+      "original": "F Comparing PRM and ORM",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:comparing_prm_orm",
+      "translation_line": 339,
+      "complete": true
+    },
+    {
+      "original": "G Prompting Details",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:prompting",
+      "translation_line": 349,
+      "complete": true
+    },
+    {
+      "original": "H Revision Model Finetuning Details",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:revision_finetune",
+      "translation_line": 356,
+      "complete": true
+    },
+    {
+      "original": "I Revision Model Selection Criteria",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:revision_selection",
+      "translation_line": 364,
+      "complete": true
+    },
+    {
+      "original": "J Revision Model Verifier Training",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:revision_verifier",
+      "translation_line": 372,
+      "complete": true
+    },
+    {
+      "original": "K ReST^EM Revision Model Experiments",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:rest_revision_model",
+      "translation_line": 389,
+      "complete": true
+    },
+    {
+      "original": "L Revision Model Example Outputs",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:revision_example_outputs",
+      "translation_line": 401,
+      "complete": true
+    },
+    {
+      "original": "M PRM Beam Search Example Outputs",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-app:prm_example_outputs",
+      "translation_line": 522,
+      "complete": true
+    }
+  ],
+  "figures": [
+    {
+      "original_figure": 1,
+      "original_label": "fig:comparing_base_lms",
+      "original_assets": [
+        "revisions_fig1.pdf",
+        "prm_fig1.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:comparing_base_lms",
+      "translation_line": 27,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 2,
+      "original_label": "fig:search_methods",
+      "original_assets": [
+        "Search_Figure-2.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:search_methods",
+      "translation_line": 114,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 3,
+      "original_label": "fig:comparing_search_and_beam_difficulty",
+      "original_assets": [
+        "search_comparing_and_bins3.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:comparing_search_and_beam_difficulty",
+      "translation_line": 138,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 4,
+      "original_label": "fig:compute_optimal_search",
+      "original_assets": [
+        "compute_optimal_search_v4.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:compute_optimal_search",
+      "translation_line": 164,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 5,
+      "original_label": "fig:how_revisions_works",
+      "original_assets": [
+        "Revisions_descriptive_fig.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:how_revisions_works",
+      "translation_line": 180,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 6,
+      "original_label": "fig:revision_model_results",
+      "original_assets": [
+        "pass1_and_comparing_seq_parallel.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revision_model_results",
+      "translation_line": 198,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 7,
+      "original_label": "fig:iso_revisions",
+      "original_assets": [
+        "revisions_varing_ratio_and_with_difficulty.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:iso_revisions",
+      "translation_line": 208,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 8,
+      "original_label": "fig:compute_optimal_revisions",
+      "original_assets": [
+        "compute_optimal_revisions_v4.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:compute_optimal_revisions",
+      "translation_line": 221,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 9,
+      "original_label": "fig:pretrain_exchange",
+      "original_assets": [
+        "comparing_test_pretrain_v8.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:pretrain_exchange",
+      "translation_line": 243,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 10,
+      "original_label": "fig:revision_maj_additional",
+      "original_assets": [
+        "iso_gens_majority_difficulty.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revision_maj_additional",
+      "translation_line": 294,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 11,
+      "original_label": "fig:revisions_unsupervised_difficulty",
+      "original_assets": [
+        "bon_unsupervised_difficulty_output.pdf",
+        "maj_unsupervised_difficulty_output.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_unsupervised_difficulty",
+      "translation_line": 309,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 12,
+      "original_label": "fig:search_unsupervised_difficulty",
+      "original_assets": [
+        "search_unsup_difficulty_output.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:search_unsupervised_difficulty",
+      "translation_line": 315,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 13,
+      "original_label": "fig:comparing_prm_aggregations",
+      "original_assets": [
+        "prm_agg_comparing_output.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:comparing_prm_aggregations",
+      "translation_line": 335,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 14,
+      "original_label": "fig:prm_v_orm",
+      "original_assets": [
+        "prm_comparing_output3.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:prm_v_orm",
+      "translation_line": 345,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 15,
+      "original_label": "fig:revision_verifier_ablations",
+      "original_assets": [
+        "revision_model_with_prm_verses_revision_orm_output.pdf",
+        "revision_model_with_without_history_output.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revision_verifier_ablations",
+      "translation_line": 385,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 16,
+      "original_label": "fig:rest_em_revisions",
+      "original_assets": [
+        "rest_em_revision_model_iso_gens_output.pdf"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:rest_em_revisions",
+      "translation_line": 397,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:chart-labels",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 17,
+      "original_label": "fig:revisions_ex1",
+      "original_assets": [
+        "revisions_ex1.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_ex1",
+      "translation_line": 411,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:revisions_ex1",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 18,
+      "original_label": "fig:revisions_ex2",
+      "original_assets": [
+        "revisions_ex2.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_ex2",
+      "translation_line": 427,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:revisions_ex2",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 19,
+      "original_label": "fig:revisions_ex3",
+      "original_assets": [
+        "revisions_ex3.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_ex3",
+      "translation_line": 443,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:revisions_ex3",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 20,
+      "original_label": "fig:revisions_ex4",
+      "original_assets": [
+        "revisions_ex4.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_ex4",
+      "translation_line": 457,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:revisions_ex4",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 21,
+      "original_label": "fig:revisions_ex5",
+      "original_assets": [
+        "revisions_ex5.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_ex5",
+      "translation_line": 479,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:revisions_ex5",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 22,
+      "original_label": "fig:revisions_ex6",
+      "original_assets": [
+        "revisions_ex6.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_ex6",
+      "translation_line": 495,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:revisions_ex6",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 23,
+      "original_label": "fig:revisions_ex7",
+      "original_assets": [
+        "revisions_ex7.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:revisions_ex7",
+      "translation_line": 511,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:revisions_ex7",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 24,
+      "original_label": "fig:prm_ex1",
+      "original_assets": [
+        "PRM_ex1.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:prm_ex1",
+      "translation_line": 529,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:PRM_ex1",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 25,
+      "original_label": "fig:prm_ex2",
+      "original_assets": [
+        "PRM_ex2.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:prm_ex2",
+      "translation_line": 549,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:PRM_ex2",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 26,
+      "original_label": "fig:prm_ex3",
+      "original_assets": [
+        "PRM_ex3.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:prm_ex3",
+      "translation_line": 573,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:PRM_ex3",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 27,
+      "original_label": "fig:prm_ex4",
+      "original_assets": [
+        "PRM_ex4.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:prm_ex4",
+      "translation_line": 596,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:PRM_ex4",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 28,
+      "original_label": "fig:prm_ex5",
+      "original_assets": [
+        "PRM_ex5.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:prm_ex5",
+      "translation_line": 620,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:PRM_ex5",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    },
+    {
+      "original_figure": 29,
+      "original_label": "fig:prm_ex6",
+      "original_assets": [
+        "PRM_ex6.png"
+      ],
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-fig:prm_ex6",
+      "translation_line": 641,
+      "caption_translated": true,
+      "original_image_preserved": true,
+      "image_text_translation_label": "testcompute-image-text:PRM_ex6",
+      "image_text_translated": true,
+      "complete": true,
+      "source_url": "https://arxiv.org/src/2408.03314v1"
+    }
+  ],
+  "tables": [],
+  "tables_note": "There are no table environments or numbered tables in the official v1 PDF/HTML/LaTeX.",
+  "equations": [
+    {
+      "original_number": 1,
+      "original_label": "eq:test_time_compute_optimal",
+      "translation_label": "testcompute-eq:test_time_compute_optimal",
+      "translation_line": 65,
+      "complete": true,
+      "note": "Original a*(q)/y*(q) index discrepancy preserved in a translator note; indicator glyph changed only."
+    }
+  ],
+  "unnumbered_mathematics": [
+    {
+      "original": "Section 7 pretraining X=6ND_pretrain and inference Y=2ND_inference FLOPs approximations and exchange multiplier",
+      "translation_label": "testcompute-sec:exchanging",
+      "complete": true
+    },
+    {
+      "original": "Appendix D binary cross entropy loss",
+      "translation_label": "testcompute-app:prm_training",
+      "complete": true
+    },
+    {
+      "original": "All mathematical expressions in image examples 17–29",
+      "translation_labels": [
+        "testcompute-image-text:revisions_ex1",
+        "testcompute-image-text:revisions_ex2",
+        "testcompute-image-text:revisions_ex3",
+        "testcompute-image-text:revisions_ex4",
+        "testcompute-image-text:revisions_ex5",
+        "testcompute-image-text:revisions_ex6",
+        "testcompute-image-text:revisions_ex7",
+        "testcompute-image-text:PRM_ex1",
+        "testcompute-image-text:PRM_ex2",
+        "testcompute-image-text:PRM_ex3",
+        "testcompute-image-text:PRM_ex4",
+        "testcompute-image-text:PRM_ex5",
+        "testcompute-image-text:PRM_ex6"
+      ],
+      "complete": true
+    }
+  ],
+  "footnotes": [
+    {
+      "original_number": 1,
+      "location": "Section 1 capability-specific finetuning",
+      "translation_file": "body.tex",
+      "translation_label": "testcompute-sec:introduction",
+      "complete": true
+    }
+  ],
+  "bibliography": {
+    "entries": 51,
+    "translation_file": "references.tex",
+    "original_language_preserved": true,
+    "complete": true
+  },
+  "label_audit": {
+    "source_labels": 54,
+    "missing_labels": []
+  },
+  "counts": {
+    "figures": 29,
+    "figure_assets": 32,
+    "tables": 0,
+    "numbered_equations": 1,
+    "reference_entries": 51
+  },
+  "review_status": {
+    "paragraph_source_comparison": "completed",
+    "numeric_and_formula_comparison": "completed",
+    "all_13_output_screenshots_visually_read": "completed",
+    "final_pdf_visual_review": "official root build pending independent root review",
+    "translator_local_pdf_visual_review": "all 42 body-layout pages inspected; shortened chapter header and restored it after references; after the last header-only change first 6 and appendix headers rechecked"
+  }
+}

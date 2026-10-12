@@ -1,0 +1,1004 @@
+{
+  "config": {
+    "additional_copies": 30,
+    "architecture": {
+      "context": 7,
+      "ffn": 64,
+      "heads": 2,
+      "layers": 2,
+      "vocab": 10,
+      "width": 32
+    },
+    "conditions": [
+      "balanced",
+      "duplicated_one_combination"
+    ],
+    "frozen_at_utc": "2026-10-12T01:37:31.530921+00:00",
+    "gradient_clip": 1.0,
+    "lr": 0.003,
+    "predictions_before_execution": [
+      "Excess repetition can reduce the weighted training loss while harming balanced evaluation; outcome not assumed.",
+      "Same-seed paired conditions start from identical parameters; data frequency is the only changed training variable.",
+      "Causal masking should leave earlier logits unchanged after editing future input."
+    ],
+    "release": "0.3",
+    "scope": "Original8-document grammar, 3initializations, fixed2documentholdout. Complete2-layerpre-normGELUcausalTransformer, not a reproduction of FineWeb or frontier LLM. Intervention documents overlap train combinations; sound accuracy does not identify a unique mechanism.",
+    "seeds": [
+      144,
+      145,
+      146
+    ],
+    "selection": "All6pairedrunsreported; no selecting best seed, changing design or tuning on test outcomes.",
+    "steps": 600,
+    "test_ids": [
+      3,
+      4
+    ],
+    "train_ids": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7
+    ],
+    "weight_decay": 0.01
+  },
+  "design_sha256": "3e57576ea4abc3c71393b1e3b6d5632cc98bc195d9e43477d18211870ee1b1cf",
+  "documents": [
+    [
+      0,
+      1,
+      3,
+      4,
+      1,
+      6,
+      7,
+      9
+    ],
+    [
+      0,
+      1,
+      3,
+      4,
+      2,
+      6,
+      7,
+      9
+    ],
+    [
+      0,
+      1,
+      3,
+      5,
+      1,
+      6,
+      7,
+      9
+    ],
+    [
+      0,
+      1,
+      3,
+      5,
+      2,
+      6,
+      7,
+      9
+    ],
+    [
+      0,
+      2,
+      3,
+      4,
+      1,
+      6,
+      8,
+      9
+    ],
+    [
+      0,
+      2,
+      3,
+      4,
+      2,
+      6,
+      8,
+      9
+    ],
+    [
+      0,
+      2,
+      3,
+      5,
+      1,
+      6,
+      8,
+      9
+    ],
+    [
+      0,
+      2,
+      3,
+      5,
+      2,
+      6,
+      8,
+      9
+    ]
+  ],
+  "runs": [
+    {
+      "balanced_train_nll": 0.25648006796836853,
+      "condition": "balanced",
+      "future_edit_prefix_error": 0.0,
+      "initial_parameters_sha256": "8fe8637b4beb7d9fdd525333a7f86fcd6d13c0e353dec3b45c15f09a7726303e",
+      "parameters": 18026,
+      "seed": 144,
+      "snapshot_sha256": "392a772b77e8f4d8e83ee18260b793f0dcc7af8e94e63b1be08174f6c1b37f19",
+      "sound_variants": [
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "original",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9994971752166748,
+            0.9993823766708374
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "distractor",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9995112419128418,
+            0.9993969202041626
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "speaker",
+          "predictions": [
+            8,
+            7
+          ],
+          "target_probability": [
+            0.9994041919708252,
+            0.9995206594467163
+          ],
+          "truth": [
+            8,
+            7
+          ]
+        }
+      ],
+      "test_nll": 1.315886378288269,
+      "test_position_accuracy": [
+        0.5,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_position_nll": [
+        0.6935202479362488,
+        0.00042024365393444896,
+        1.0995097160339355,
+        7.416181564331055,
+        0.0006266060518100858,
+        0.0005603634053841233,
+        0.0003861039294861257
+      ],
+      "trace": [
+        [
+          1,
+          2.289773941040039
+        ],
+        [
+          100,
+          0.2639193832874298
+        ],
+        [
+          200,
+          0.25880753993988037
+        ],
+        [
+          300,
+          0.25748178362846375
+        ],
+        [
+          400,
+          0.25700098276138306
+        ],
+        [
+          500,
+          0.25663650035858154
+        ],
+        [
+          600,
+          0.25647711753845215
+        ]
+      ],
+      "train_rows": 6,
+      "train_unique_rows": 6,
+      "training_row_ids_with_repetitions": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "weighted_train_nll": 0.25648006796836853
+    },
+    {
+      "balanced_train_nll": 0.4309936761856079,
+      "condition": "duplicated_one_combination",
+      "future_edit_prefix_error": 0.0,
+      "initial_parameters_sha256": "8fe8637b4beb7d9fdd525333a7f86fcd6d13c0e353dec3b45c15f09a7726303e",
+      "parameters": 18026,
+      "seed": 144,
+      "snapshot_sha256": "b6806a34c645bfe8ee171d94ebb5bcb7b11fbbc64369f56382261118b7b2fa68",
+      "sound_variants": [
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "original",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9982295632362366,
+            0.9975576400756836
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "distractor",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9995622038841248,
+            0.997711181640625
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "speaker",
+          "predictions": [
+            8,
+            7
+          ],
+          "target_probability": [
+            0.997702419757843,
+            0.9997043013572693
+          ],
+          "truth": [
+            8,
+            7
+          ]
+        }
+      ],
+      "test_nll": 1.3746696710586548,
+      "test_position_accuracy": [
+        0.5,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_position_nll": [
+        1.28643798828125,
+        0.0005148412310518324,
+        2.297799825668335,
+        6.034904956817627,
+        0.0005570874782279134,
+        0.0021086763590574265,
+        0.00036357901990413666
+      ],
+      "trace": [
+        [
+          1,
+          2.2566680908203125
+        ],
+        [
+          100,
+          0.09711945056915283
+        ],
+        [
+          200,
+          0.09192877262830734
+        ],
+        [
+          300,
+          0.09076296538114548
+        ],
+        [
+          400,
+          0.09030091762542725
+        ],
+        [
+          500,
+          0.0900476947426796
+        ],
+        [
+          600,
+          0.08990153670310974
+        ]
+      ],
+      "train_rows": 36,
+      "train_unique_rows": 6,
+      "training_row_ids_with_repetitions": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weighted_train_nll": 0.08990038186311722
+    },
+    {
+      "balanced_train_nll": 0.2564878463745117,
+      "condition": "balanced",
+      "future_edit_prefix_error": 0.0,
+      "initial_parameters_sha256": "92261c884bc9ef90fce28b0ce8300406ae0afe069105e2dcffdb9a0405906fde",
+      "parameters": 18026,
+      "seed": 145,
+      "snapshot_sha256": "38b749e4c659099b297a6aee10a811679a18e28a23c5e5a2866b63b7b773d179",
+      "sound_variants": [
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "original",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.999173104763031,
+            0.9994603991508484
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "distractor",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9992128610610962,
+            0.9994945526123047
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "speaker",
+          "predictions": [
+            8,
+            7
+          ],
+          "target_probability": [
+            0.9994990825653076,
+            0.9992172718048096
+          ],
+          "truth": [
+            8,
+            7
+          ]
+        }
+      ],
+      "test_nll": 1.2957706451416016,
+      "test_position_accuracy": [
+        0.5,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_position_nll": [
+        0.6934605240821838,
+        0.00040576569153927267,
+        1.0989372730255127,
+        7.275793552398682,
+        0.0005090729100629687,
+        0.0006834809319116175,
+        0.0006062338361516595
+      ],
+      "trace": [
+        [
+          1,
+          2.1904327869415283
+        ],
+        [
+          100,
+          0.2642900049686432
+        ],
+        [
+          200,
+          0.2589052617549896
+        ],
+        [
+          300,
+          0.25758299231529236
+        ],
+        [
+          400,
+          0.2569583058357239
+        ],
+        [
+          500,
+          0.256673663854599
+        ],
+        [
+          600,
+          0.2564893066883087
+        ]
+      ],
+      "train_rows": 6,
+      "train_unique_rows": 6,
+      "training_row_ids_with_repetitions": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "weighted_train_nll": 0.2564878463745117
+    },
+    {
+      "balanced_train_nll": 0.4311073422431946,
+      "condition": "duplicated_one_combination",
+      "future_edit_prefix_error": 0.0,
+      "initial_parameters_sha256": "92261c884bc9ef90fce28b0ce8300406ae0afe069105e2dcffdb9a0405906fde",
+      "parameters": 18026,
+      "seed": 145,
+      "snapshot_sha256": "790e6182450b4334e47e5ec9c3075bdceda60bd2c786d293e207e0bd985aa06d",
+      "sound_variants": [
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "original",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9993626475334167,
+            0.9983955025672913
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "distractor",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.999415397644043,
+            0.9985472559928894
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "speaker",
+          "predictions": [
+            8,
+            7
+          ],
+          "target_probability": [
+            0.9985278844833374,
+            0.9994949102401733
+          ],
+          "truth": [
+            8,
+            7
+          ]
+        }
+      ],
+      "test_nll": 1.3474844694137573,
+      "test_position_accuracy": [
+        0.5,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_position_nll": [
+        1.2866027355194092,
+        0.0005069258622825146,
+        2.2984941005706787,
+        5.844382286071777,
+        0.0006130740512162447,
+        0.0011216684943065047,
+        0.0006696083582937717
+      ],
+      "trace": [
+        [
+          1,
+          2.1724135875701904
+        ],
+        [
+          100,
+          0.09864367544651031
+        ],
+        [
+          200,
+          0.09222490340471268
+        ],
+        [
+          300,
+          0.09102234989404678
+        ],
+        [
+          400,
+          0.09042184799909592
+        ],
+        [
+          500,
+          0.09013564139604568
+        ],
+        [
+          600,
+          0.08996912837028503
+        ]
+      ],
+      "train_rows": 36,
+      "train_unique_rows": 6,
+      "training_row_ids_with_repetitions": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weighted_train_nll": 0.08996789157390594
+    },
+    {
+      "balanced_train_nll": 0.25649428367614746,
+      "condition": "balanced",
+      "future_edit_prefix_error": 0.0,
+      "initial_parameters_sha256": "723bb30a29179c215b9034978fe69bcf229c9fd7937b5ae1f2c6099e7b5cbfe2",
+      "parameters": 18026,
+      "seed": 146,
+      "snapshot_sha256": "489635b516ab7fead1b709e9954b5902d55c9197eaa22d6087c39b1e8181aacf",
+      "sound_variants": [
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "original",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9993010759353638,
+            0.999337375164032
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "distractor",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9993017911911011,
+            0.9993466734886169
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "speaker",
+          "predictions": [
+            8,
+            7
+          ],
+          "target_probability": [
+            0.9993540644645691,
+            0.9993025064468384
+          ],
+          "truth": [
+            8,
+            7
+          ]
+        }
+      ],
+      "test_nll": 1.277305006980896,
+      "test_position_accuracy": [
+        0.5,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_position_nll": [
+        0.6934874057769775,
+        0.0005093111540190876,
+        1.0989134311676025,
+        7.146648406982422,
+        0.0005347490659914911,
+        0.0006809893529862165,
+        0.00036054308293387294
+      ],
+      "trace": [
+        [
+          1,
+          2.51627779006958
+        ],
+        [
+          100,
+          0.2647915780544281
+        ],
+        [
+          200,
+          0.25908172130584717
+        ],
+        [
+          300,
+          0.25757938623428345
+        ],
+        [
+          400,
+          0.2569844424724579
+        ],
+        [
+          500,
+          0.25701209902763367
+        ],
+        [
+          600,
+          0.25649574398994446
+        ]
+      ],
+      "train_rows": 6,
+      "train_unique_rows": 6,
+      "training_row_ids_with_repetitions": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "weighted_train_nll": 0.25649428367614746
+    },
+    {
+      "balanced_train_nll": 0.43108221888542175,
+      "condition": "duplicated_one_combination",
+      "future_edit_prefix_error": 0.0,
+      "initial_parameters_sha256": "723bb30a29179c215b9034978fe69bcf229c9fd7937b5ae1f2c6099e7b5cbfe2",
+      "parameters": 18026,
+      "seed": 146,
+      "snapshot_sha256": "7cf9e840412e43b3d67987c47296772c32d29d4135830e8011a8a8430ca0ba9d",
+      "sound_variants": [
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "original",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9884351491928101,
+            0.9980310797691345
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "distractor",
+          "predictions": [
+            7,
+            8
+          ],
+          "target_probability": [
+            0.9993358254432678,
+            0.9980522394180298
+          ],
+          "truth": [
+            7,
+            8
+          ]
+        },
+        {
+          "correct": [
+            true,
+            true
+          ],
+          "name": "speaker",
+          "predictions": [
+            8,
+            7
+          ],
+          "target_probability": [
+            0.9981653094291687,
+            0.9995829463005066
+          ],
+          "truth": [
+            8,
+            7
+          ]
+        }
+      ],
+      "test_nll": 1.3984678983688354,
+      "test_position_accuracy": [
+        0.5,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_position_nll": [
+        1.2868633270263672,
+        0.0004909585695713758,
+        2.2979331016540527,
+        6.195855140686035,
+        0.0006993224378675222,
+        0.006801543291658163,
+        0.0006325000431388617
+      ],
+      "trace": [
+        [
+          1,
+          2.667231321334839
+        ],
+        [
+          100,
+          0.10098032653331757
+        ],
+        [
+          200,
+          0.09247009456157684
+        ],
+        [
+          300,
+          0.09104927629232407
+        ],
+        [
+          400,
+          0.09047156572341919
+        ],
+        [
+          500,
+          0.09017328917980194
+        ],
+        [
+          600,
+          0.0899994820356369
+        ]
+      ],
+      "train_rows": 36,
+      "train_unique_rows": 6,
+      "training_row_ids_with_repetitions": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weighted_train_nll": 0.08999791741371155
+    }
+  ],
+  "scope": "Original8-document grammar, 3initializations, fixed2documentholdout. Complete2-layerpre-normGELUcausalTransformer, not a reproduction of FineWeb or frontier LLM. Intervention documents overlap train combinations; sound accuracy does not identify a unique mechanism.",
+  "selection": "All6pairedrunsreported; no selecting best seed, changing design or tuning on test outcomes.",
+  "vocabulary": [
+    "<bos>",
+    "cat",
+    "dog",
+    "sees",
+    "red",
+    "blue",
+    "says",
+    "meow",
+    "woof",
+    "<eos>"
+  ]
+}

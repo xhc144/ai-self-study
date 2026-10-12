@@ -1,0 +1,135 @@
+{
+  "title": "Stabilizing Recurrent Dynamics for Test-Time Scalable Latent Reasoning in Looped Language Models",
+  "title_zh": "稳定循环语言模型的递归动力学,实现可扩展的测试时潜在推理",
+  "authors": [
+    "Xiao-Wen Yang",
+    "Zi-Yu Han",
+    "Xi-Hua Zhang",
+    "Wen-Da Wei",
+    "Jie-Jing Shao",
+    "Lan-Zhe Guo",
+    "Yu-Feng Li"
+  ],
+  "equal_contribution": [
+    "Xiao-Wen Yang",
+    "Zi-Yu Han"
+  ],
+  "corresponding_author": "Yu-Feng Li",
+  "affiliations": [
+    "State Key Laboratory of Novel Software Technology, Nanjing University",
+    "School of Artificial Intelligence, Nanjing University",
+    "School of Intelligence Science and Technology, Nanjing University"
+  ],
+  "arxiv_id": "2605.26733",
+  "version": "v1",
+  "date": "2026-05-26",
+  "venue_as_printed": "Proceedings of the 43rd International Conference on Machine Learning, 2026",
+  "source_pdf_url": "https://arxiv.org/pdf/2605.26733v1",
+  "source_tex_url": "https://arxiv.org/src/2605.26733v1",
+  "abstract_url": "https://arxiv.org/abs/2605.26733v1",
+  "license": "Creative Commons Attribution 4.0 International",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_verification": "根代理独立核验指定版official viewlicense;本代理下载原PDF/source并核对作者、版本及正文",
+  "translator": "ai-self-study contributors",
+  "translation_status": "机器辅助中文翻译,非作者或机构官方译本",
+  "changes": [
+    "正文、摘要、附录、图注、表头、算法和标题译为简体中文",
+    "改用项目固定排版,章节与公式重新编号,所有label/cite加stars-前缀",
+    "作者原图保留英文内部标签,附中文图内文字说明;栅格图片仅转换PDF容器",
+    "参考文献完整保留原作者和英文检索信息,不用中文题名替换原文",
+    "译者核查注与作者原文分开,不静默修正原文不一致"
+  ],
+  "source_pdf_sha256": "20791f73ae2d2f58b00150acd17f106177493327898277bab4efb90080e2d8db",
+  "source_archive_sha256": "0e867dd3215e9c4ba124397d94d9b19f64de250cb1283165f8930b06118edf16",
+  "source_pages": 13,
+  "source_bibliography_entries": 41,
+  "source_formal_proof_environments": 0,
+  "source_theory_note": "原文引用Lyapunov线性化结论但无正式定理/证明环境;完整译其理论论证,没有制造不存在的作者证明",
+  "downloaded_on": "2026-10-12",
+  "figures": [
+    {
+      "source": "fig/ablation_with_compare.png",
+      "output": "figures/ablation_with_compare.pdf",
+      "source_sha256": "50c9d2d3824a98858c6b9bd79f5b658dad0267f14f781ebf7576a2453a731ade",
+      "output_sha256": "a973cec39613644974a26cba6be2938bc44c9bb471b212e38c6b988413ed5fd8",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/amc23_ablation.png",
+      "output": "figures/amc23_ablation.pdf",
+      "source_sha256": "955138243100b638a0db90d6affb038d537f7a94294d75fd119aa63d73a8cc21",
+      "output_sha256": "e53d613a5a003b996c372545722df34d07abc50f1f4f9779bd0615f8ae820fc7",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/intro.pdf",
+      "output": "figures/intro.pdf",
+      "source_sha256": "5469de3732324e8fa6b8d8a3a045f6feaf4d80caa2856ebdd78ca40a199fef6d",
+      "output_sha256": "5469de3732324e8fa6b8d8a3a045f6feaf4d80caa2856ebdd78ca40a199fef6d",
+      "change": "原作者矢量 PDF 逐字节直接保留；未栅格封装、未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/main_addition.jpg",
+      "output": "figures/main_addition.pdf",
+      "source_sha256": "5dca90cb7a714684634795e6bdc721435b94754e019323e997461c6d97c48bfa",
+      "output_sha256": "2ff4d04d269f987db3ed289fbbe7a3b8351d033f733c752bf1372872a653e599",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/norm.jpg",
+      "output": "figures/norm.pdf",
+      "source_sha256": "ed9f546b2fd9b41477b6ba8d8a1d04f6125687bd401b4e0c40fea384ee144761",
+      "output_sha256": "a68687d2ebc056439aaa134f7c5b6c82907ddae835615c512b5e9d99da148fd7",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/norm_anal.jpg",
+      "output": "figures/norm_anal.pdf",
+      "source_sha256": "91fdae3a4bf56c9a49d18e90acca255bd83757e371cb29b8fbfebc85b22b3b16",
+      "output_sha256": "e5d235e7bbd050796bc20e7606730357f15d7284de834f75dada65e41528a3b8",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/pre_post_random.jpg",
+      "output": "figures/pre_post_random.pdf",
+      "source_sha256": "e3b06842c553c60d948f4a5f8c0f268d42fc8e38445332344a441c33c9f41a56",
+      "output_sha256": "3625cab3dcfe9219bfe1f8a496a2c45daa90b10855cebbe08283d66659fda9b5",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/prelude_coda.jpg",
+      "output": "figures/prelude_coda.pdf",
+      "source_sha256": "04200c9d584dbd1799370b55e91826b711665b0bbdb499cd55594e8a15a958a7",
+      "output_sha256": "7cc1b87cf0aaa4017e30eb4e74a193a23b654d4a4985b93a223236dcb1d3472c",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/random.jpg",
+      "output": "figures/random.pdf",
+      "source_sha256": "fe7a31404b8ec2daa7b55983e0610572b8e70dcda1369f9eaa41f1c6890ce6fc",
+      "output_sha256": "f4e1cb5729179f34c7d9e4eb65f06e16987eb23af0a7ea7d87d8c44c3fdeec27",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    },
+    {
+      "source": "fig/weight.jpg",
+      "output": "figures/weight.pdf",
+      "source_sha256": "cba5b4ac5fab20d3a2aec90c72c21ebed360264726ec2bf24d825a2228199c2c",
+      "output_sha256": "c2e72f7e63a0ac05f73db00fe0c967d3da71b0e816769b56aeb055df0f71a0c3",
+      "change": "原图保留;原始栅格内容封装进PDF,未重绘或改写数据",
+      "third_party_credit_found": false
+    }
+  ],
+  "translation_body_sha256": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0",
+  "translation_references_sha256": "3d8104490f9d9156426de4795e33472e2ef678ec57879aedb2ef76de471cc0fb",
+  "deliverable_status": "完整翻译已完成,隔离两轮编译和18页视觉审查完成;最终PDF由根代理集成",
+  "unrecovered_content": []
+}

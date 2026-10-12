@@ -1,0 +1,147 @@
+{
+  "main_table1": [
+    [
+      "GPT-F expert iteration24",
+      "–",
+      "36.6%",
+      "–",
+      "–"
+    ],
+    [
+      "Hypertree proof search17",
+      "–",
+      "41.0%",
+      "–",
+      "–"
+    ],
+    [
+      "InternLM2-Math-Plus-7B23",
+      "–",
+      "43.4%",
+      "–",
+      "–"
+    ],
+    [
+      "Kimina-Prover Preview25",
+      "–",
+      "80.7%",
+      "–",
+      "1.6%"
+    ],
+    [
+      "DeepSeek-Prover-V226",
+      "–",
+      "88.9%",
+      "–",
+      "5.3%"
+    ],
+    [
+      "AlphaProof",
+      "2 TPU minutes",
+      "96.3%",
+      "33.2%",
+      "27.9%"
+    ],
+    [
+      "AlphaProof",
+      "12 TPU hours",
+      "97.7%",
+      "43.7%",
+      "39.4%"
+    ],
+    [
+      "AlphaProof with TTRL",
+      "50 TPU days",
+      "97.5%",
+      "53.9%",
+      "45.5%"
+    ],
+    [
+      "AlphaProof with TTRL",
+      "500 TPU days",
+      "99.6%",
+      "58.3%",
+      "56.1%"
+    ]
+  ],
+  "extended_table1": {
+    "source_pdf_page": 24,
+    "headers": [
+      "Algebra",
+      "Number theory",
+      "Combinatorics",
+      "Geometry",
+      "All areas",
+      "Pass@k (k studies)"
+    ],
+    "rows": [
+      [
+        "IMO",
+        "81.3%",
+        "76.9%",
+        "33.3%",
+        "(Not included)",
+        "60.0%",
+        "96% (k=29)"
+      ],
+      [
+        "Putnam",
+        "61.9%",
+        "72.7%",
+        "60.0%",
+        "54.6%",
+        "64.0%",
+        "98% (k=16)"
+      ]
+    ]
+  },
+  "extended_table2": {
+    "source_pdf_page": 25,
+    "headers": [
+      "Compute Budget (per problem)",
+      "miniF2F-valid",
+      "miniF2F-test",
+      "formal-imo",
+      "PutnamBench-train",
+      "PutnamBench-test"
+    ],
+    "rows": [
+      [
+        "AlphaProof",
+        "2 TPUmins",
+        "96.0%",
+        "96.3%",
+        "33.2%",
+        "35.4%",
+        "27.9%"
+      ],
+      [
+        "AlphaProof",
+        "12 TPUhours",
+        "97.1%",
+        "97.7%",
+        "43.7%",
+        "48.7%",
+        "39.5%"
+      ],
+      [
+        "AlphaProof with TTRL",
+        "50 TPUdays",
+        "99.6%",
+        "97.5%",
+        "53.9%",
+        "–",
+        "45.5%"
+      ],
+      [
+        "AlphaProof with TTRL",
+        "500 TPUdays",
+        "100.0%",
+        "99.6%",
+        "58.3%",
+        "–",
+        "56.1%"
+      ]
+    ]
+  }
+}

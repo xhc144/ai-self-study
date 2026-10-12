@@ -1,0 +1,904 @@
+{
+  "scope": "指定版已发表可见论文全部实质内容;源码中的注释草稿、ICML模板说明和未用示例参考不属发表内容",
+  "source_pages": 13,
+  "translation_body_sha256": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0",
+  "completion": {
+    "abstract": true,
+    "main_sections": 7,
+    "appendices": [
+      "A",
+      "B",
+      "C"
+    ],
+    "impact_statement": true,
+    "acknowledgements": true,
+    "numbered_equations": 4,
+    "figures": 8,
+    "tables": 4,
+    "algorithms": 1,
+    "bibliography_entries": 41,
+    "source_formal_proof_environments": 0,
+    "omitted_published_substantive_sections": [],
+    "unrecovered_content": []
+  },
+  "section_and_paragraph_headings": [
+    {
+      "source_file": "tex/intro.tex",
+      "source_heading": "Introduction",
+      "source_heading_type": "section",
+      "source_start_line": 2,
+      "translation_file": "body.tex",
+      "translation_start_line": 20,
+      "translation_anchor": "stars-sec-1",
+      "status": "translated",
+      "translation_end_line": 37
+    },
+    {
+      "source_file": "tex/relatedwork.tex",
+      "source_heading": "Related Work",
+      "source_heading_type": "section",
+      "source_start_line": 2,
+      "translation_file": "body.tex",
+      "translation_start_line": 38,
+      "translation_anchor": "stars-sec-2",
+      "status": "translated",
+      "translation_end_line": 50
+    },
+    {
+      "source_file": "tex/relatedwork.tex",
+      "source_heading": "Test time scaling and latent reasoning.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 3,
+      "translation_file": "body.tex",
+      "translation_start_line": 38,
+      "translation_anchor": "stars-sec-2",
+      "status": "translated",
+      "translation_end_line": 50
+    },
+    {
+      "source_file": "tex/relatedwork.tex",
+      "source_heading": "Recurrent Transformers and LoopLM.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 12,
+      "translation_file": "body.tex",
+      "translation_start_line": 38,
+      "translation_anchor": "stars-sec-2",
+      "status": "translated",
+      "translation_end_line": 50
+    },
+    {
+      "source_file": "tex/pre.tex",
+      "source_heading": "Preliminaries",
+      "source_heading_type": "section",
+      "source_start_line": 3,
+      "translation_file": "body.tex",
+      "translation_start_line": 51,
+      "translation_anchor": "stars-sec-3",
+      "status": "translated",
+      "translation_end_line": 51
+    },
+    {
+      "source_file": "tex/pre.tex",
+      "source_heading": "Looped Language Models",
+      "source_heading_type": "subsection",
+      "source_start_line": 5,
+      "translation_file": "body.tex",
+      "translation_start_line": 52,
+      "translation_anchor": "stars-sec-3-1",
+      "status": "translated",
+      "translation_end_line": 71
+    },
+    {
+      "source_file": "tex/pre.tex",
+      "source_heading": "Latent Reasoning as a Dynamical System",
+      "source_heading_type": "subsection",
+      "source_start_line": 23,
+      "translation_file": "body.tex",
+      "translation_start_line": 72,
+      "translation_anchor": "stars-sec-3-2",
+      "status": "translated",
+      "translation_end_line": 78
+    },
+    {
+      "source_file": "tex/pre.tex",
+      "source_heading": "Attractor and fixed points.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 32,
+      "translation_file": "body.tex",
+      "translation_start_line": 79,
+      "translation_anchor": "stars-attractors",
+      "status": "translated",
+      "translation_end_line": 89
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Recurrent Dynamics of LoopLM",
+      "source_heading_type": "section",
+      "source_start_line": 9,
+      "translation_file": "body.tex",
+      "translation_start_line": 90,
+      "translation_anchor": "stars-sec-4",
+      "status": "translated",
+      "translation_end_line": 92
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Experimental Setup",
+      "source_heading_type": "subsection",
+      "source_start_line": 14,
+      "translation_file": "body.tex",
+      "translation_start_line": 93,
+      "translation_anchor": "stars-sec-4-1",
+      "status": "translated",
+      "translation_end_line": 95
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Task description.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 45,
+      "translation_file": "body.tex",
+      "translation_start_line": 96,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 98
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Model architecture.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 47,
+      "translation_file": "body.tex",
+      "translation_start_line": 99,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 101
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Evaluation details.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 49,
+      "translation_file": "body.tex",
+      "translation_start_line": 102,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 111
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Static Architecture Analysis",
+      "source_heading_type": "subsection",
+      "source_start_line": 55,
+      "translation_file": "body.tex",
+      "translation_start_line": 112,
+      "translation_anchor": "stars-sec-4-2",
+      "status": "translated",
+      "translation_end_line": 114
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Impacts of Norm Structure Design",
+      "source_heading_type": "subsubsection",
+      "source_start_line": 58,
+      "translation_file": "body.tex",
+      "translation_start_line": 115,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 129
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Impacts of Prelude and Coda Layers",
+      "source_heading_type": "subsubsection",
+      "source_start_line": 131,
+      "translation_file": "body.tex",
+      "translation_start_line": 130,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 159
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Attempted Methods for Scalable Latent Reasoning",
+      "source_heading_type": "subsection",
+      "source_start_line": 166,
+      "translation_file": "body.tex",
+      "translation_start_line": 160,
+      "translation_anchor": "stars-sec-4-3",
+      "status": "translated",
+      "translation_end_line": 160
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "Random Loop Sampling",
+      "source_heading_type": "subsubsection",
+      "source_start_line": 168,
+      "translation_file": "body.tex",
+      "translation_start_line": 161,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 170
+    },
+    {
+      "source_file": "tex/method.tex",
+      "source_heading": "L2 regularization",
+      "source_heading_type": "subsubsection",
+      "source_start_line": 182,
+      "translation_file": "body.tex",
+      "translation_start_line": 171,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 176
+    },
+    {
+      "source_file": "tex/jsrr.tex",
+      "source_heading": "Jacobian Spectral Radius Regularization",
+      "source_heading_type": "section",
+      "source_start_line": 2,
+      "translation_file": "body.tex",
+      "translation_start_line": 177,
+      "translation_anchor": "stars-sec-5",
+      "status": "translated",
+      "translation_end_line": 241
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Experiments",
+      "source_heading_type": "section",
+      "source_start_line": 2,
+      "translation_file": "body.tex",
+      "translation_start_line": 242,
+      "translation_anchor": "stars-sec-6",
+      "status": "translated",
+      "translation_end_line": 253
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Experimental Setup",
+      "source_heading_type": "subsection",
+      "source_start_line": 22,
+      "translation_file": "body.tex",
+      "translation_start_line": 254,
+      "translation_anchor": "stars-sec-6-1",
+      "status": "translated",
+      "translation_end_line": 254
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Multi-digits addition task.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 23,
+      "translation_file": "body.tex",
+      "translation_start_line": 255,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 257
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Mathematical reasoning task.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 26,
+      "translation_file": "body.tex",
+      "translation_start_line": 258,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 260
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Main Results",
+      "source_heading_type": "subsection",
+      "source_start_line": 28,
+      "translation_file": "body.tex",
+      "translation_start_line": 261,
+      "translation_anchor": "stars-sec-6-2",
+      "status": "translated",
+      "translation_end_line": 261
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Multi-digits addition task.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 30,
+      "translation_file": "body.tex",
+      "translation_start_line": 262,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 264
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Mathematical reasoning task.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 38,
+      "translation_file": "body.tex",
+      "translation_start_line": 265,
+      "translation_anchor": null,
+      "status": "translated",
+      "translation_end_line": 269
+    },
+    {
+      "source_file": "tex/exp.tex",
+      "source_heading": "Ablation Study",
+      "source_heading_type": "subsection",
+      "source_start_line": 45,
+      "translation_file": "body.tex",
+      "translation_start_line": 270,
+      "translation_anchor": "stars-sec-6-3",
+      "status": "translated",
+      "translation_end_line": 272
+    },
+    {
+      "source_file": "tex/con.tex",
+      "source_heading": "Conclusion",
+      "source_heading_type": "section",
+      "source_start_line": 2,
+      "translation_file": "body.tex",
+      "translation_start_line": 273,
+      "translation_anchor": "stars-sec-7",
+      "status": "translated",
+      "translation_end_line": 276
+    },
+    {
+      "source_file": "tex/app.tex",
+      "source_heading": "Limitations and Future Work",
+      "source_heading_type": "section",
+      "source_start_line": 2,
+      "translation_file": "body.tex",
+      "translation_start_line": 283,
+      "translation_anchor": "stars-app-A",
+      "status": "translated",
+      "translation_end_line": 287
+    },
+    {
+      "source_file": "tex/app.tex",
+      "source_heading": "Training Algorithm Details",
+      "source_heading_type": "section",
+      "source_start_line": 6,
+      "translation_file": "body.tex",
+      "translation_start_line": 288,
+      "translation_anchor": "stars-app-B",
+      "status": "translated",
+      "translation_end_line": 318
+    },
+    {
+      "source_file": "tex/app.tex",
+      "source_heading": "More Results",
+      "source_heading_type": "section",
+      "source_start_line": 78,
+      "translation_file": "body.tex",
+      "translation_start_line": 319,
+      "translation_anchor": "stars-app-C",
+      "status": "translated",
+      "translation_end_line": 319
+    },
+    {
+      "source_file": "tex/app.tex",
+      "source_heading": "Random loop sampling on PreNorm and PostNorm",
+      "source_heading_type": "paragraph",
+      "source_start_line": 82,
+      "translation_file": "body.tex",
+      "translation_start_line": 320,
+      "translation_anchor": "stars-app-C-1",
+      "status": "translated",
+      "translation_end_line": 338
+    },
+    {
+      "source_file": "tex/app.tex",
+      "source_heading": "Hyperparameter analysis.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 115,
+      "translation_file": "body.tex",
+      "translation_start_line": 339,
+      "translation_anchor": "stars-app-C-2",
+      "status": "translated",
+      "translation_end_line": 345
+    },
+    {
+      "source_file": "tex/app.tex",
+      "source_heading": "Efficiency analysis during training phase.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 124,
+      "translation_file": "body.tex",
+      "translation_start_line": 346,
+      "translation_anchor": "stars-app-C-3",
+      "status": "translated",
+      "translation_end_line": 359
+    },
+    {
+      "source_file": "tex/app.tex",
+      "source_heading": "Comparative Analysis and Ablation Study on AMC23.",
+      "source_heading_type": "paragraph",
+      "source_start_line": 140,
+      "translation_file": "body.tex",
+      "translation_start_line": 360,
+      "translation_anchor": "stars-app-C-4",
+      "status": "translated",
+      "translation_end_line": 380
+    },
+    {
+      "source_file": "example_paper.tex",
+      "source_heading": "abstract",
+      "source_start_line": 147,
+      "translation_file": "body.tex",
+      "translation_start_line": 15,
+      "translation_anchor": "stars-abstract",
+      "status": "translated",
+      "translation_end_line": 19
+    },
+    {
+      "source_file": "example_paper.tex",
+      "source_heading": "Impact Statement",
+      "source_start_line": 170,
+      "translation_file": "body.tex",
+      "translation_start_line": 277,
+      "translation_anchor": "stars-impact",
+      "status": "translated",
+      "translation_end_line": 279
+    },
+    {
+      "source_file": "example_paper.tex",
+      "source_heading": "Acknowledge",
+      "source_start_line": 173,
+      "translation_file": "body.tex",
+      "translation_start_line": 280,
+      "translation_anchor": "stars-acknowledgements",
+      "status": "translated",
+      "translation_end_line": 282
+    }
+  ],
+  "numbered_equations": [
+    {
+      "source_id": "Equation 1",
+      "source_file": "tex/pre.tex",
+      "translation_anchor": "stars-eq-1",
+      "translation_line": 66,
+      "status": "formula_and_context_translated"
+    },
+    {
+      "source_id": "Equation 2",
+      "source_file": "tex/pre.tex",
+      "translation_anchor": "stars-eq-2",
+      "translation_line": 74,
+      "status": "formula_and_context_translated"
+    },
+    {
+      "source_id": "Equation 3",
+      "source_file": "tex/jsrr.tex",
+      "translation_anchor": "stars-eq-3",
+      "translation_line": 197,
+      "status": "formula_and_context_translated"
+    },
+    {
+      "source_id": "Equation 4",
+      "source_file": "tex/jsrr.tex",
+      "translation_anchor": "stars-eq-4",
+      "translation_line": 204,
+      "status": "formula_and_context_translated"
+    }
+  ],
+  "other_core_formulas": [
+    {
+      "source_formula": "architecture composition",
+      "translation_line": 55,
+      "status": "translated"
+    },
+    {
+      "source_formula": "attractor limit",
+      "translation_line": 82,
+      "status": "translated"
+    },
+    {
+      "source_formula": "fixed point condition",
+      "translation_line": 86,
+      "status": "translated"
+    },
+    {
+      "source_formula": "local asymptotic stability",
+      "translation_line": 88,
+      "status": "translated"
+    },
+    {
+      "source_formula": "fixed point Jacobian",
+      "translation_line": 182,
+      "status": "translated"
+    },
+    {
+      "source_formula": "spectral radius definition",
+      "translation_line": 186,
+      "status": "translated"
+    },
+    {
+      "source_formula": "linearization stability threshold",
+      "translation_line": 188,
+      "status": "translated"
+    },
+    {
+      "source_formula": "power iteration and estimator",
+      "translation_line": 192,
+      "status": "translated"
+    }
+  ],
+  "figures": [
+    {
+      "source_id": "Figure 1",
+      "translation_anchor": "stars-fig-1",
+      "translation_line": 25,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    },
+    {
+      "source_id": "Figure 2",
+      "translation_anchor": "stars-fig-2",
+      "translation_line": 109,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    },
+    {
+      "source_id": "Figure 3",
+      "translation_anchor": "stars-fig-3",
+      "translation_line": 144,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    },
+    {
+      "source_id": "Figure 4",
+      "translation_anchor": "stars-fig-4",
+      "translation_line": 247,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    },
+    {
+      "source_id": "Figure 5",
+      "translation_anchor": "stars-fig-5",
+      "translation_line": 251,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    },
+    {
+      "source_id": "Figure 6",
+      "translation_anchor": "stars-fig-6",
+      "translation_line": 324,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    },
+    {
+      "source_id": "Figure 7",
+      "translation_anchor": "stars-fig-7",
+      "translation_line": 343,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    },
+    {
+      "source_id": "Figure 8",
+      "translation_anchor": "stars-fig-8",
+      "translation_line": 364,
+      "status": "complete_author_graphics_with_translated_caption_and_internal_label_explanation"
+    }
+  ],
+  "tables": [
+    {
+      "source_id": "Table 1",
+      "translation_anchor": "stars-tab-1",
+      "translation_line": 149,
+      "status": "complete_translated_table_numeric_sequence_checked"
+    },
+    {
+      "source_id": "Table 2",
+      "translation_anchor": "stars-tab-2",
+      "translation_line": 212,
+      "status": "complete_translated_table_numeric_sequence_checked"
+    },
+    {
+      "source_id": "Table 3",
+      "translation_anchor": "stars-tab-3",
+      "translation_line": 328,
+      "status": "complete_translated_table_numeric_sequence_checked"
+    },
+    {
+      "source_id": "Table 4",
+      "translation_anchor": "stars-tab-4",
+      "translation_line": 350,
+      "status": "complete_translated_table_numeric_sequence_checked"
+    }
+  ],
+  "algorithm": {
+    "source_id": "Algorithm 1",
+    "source_file": "tex/app.tex",
+    "translation_anchor": "stars-alg-1",
+    "translation_start_line": 289,
+    "translation_end_line": 318,
+    "status": "all_input_loop_JVP_loss_and_optimization_operations_preserved"
+  },
+  "bibliography": [
+    {
+      "source_bibliography_key": "ba2016layer",
+      "translation_key": "stars-ba2016layer",
+      "translation_file": "references.tex",
+      "translation_line": 9,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "bai2019deep",
+      "translation_key": "stars-bai2019deep",
+      "translation_file": "references.tex",
+      "translation_line": 14,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "bai2021stabilizing",
+      "translation_key": "stars-bai2021stabilizing",
+      "translation_file": "references.tex",
+      "translation_line": 19,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "cheng2024compressed",
+      "translation_key": "stars-cheng2024compressed",
+      "translation_file": "references.tex",
+      "translation_line": 24,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "cobbe2021gsm8k",
+      "translation_key": "stars-cobbe2021gsm8k",
+      "translation_file": "references.tex",
+      "translation_line": 30,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "dehghani2018universal",
+      "translation_key": "stars-dehghani2018universal",
+      "translation_file": "references.tex",
+      "translation_line": 36,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "du2025latent",
+      "translation_key": "stars-du2025latent",
+      "translation_file": "references.tex",
+      "translation_line": 41,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "fan2024looped",
+      "translation_key": "stars-fan2024looped",
+      "translation_file": "references.tex",
+      "translation_line": 47,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "eval-harness",
+      "translation_key": "stars-eval-harness",
+      "translation_file": "references.tex",
+      "translation_line": 52,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "geiping2025scaling",
+      "translation_key": "stars-geiping2025scaling",
+      "translation_file": "references.tex",
+      "translation_line": 59,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "giannou2023looped",
+      "translation_key": "stars-giannou2023looped",
+      "translation_file": "references.tex",
+      "translation_line": 66,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "grattafiori2024llama",
+      "translation_key": "stars-grattafiori2024llama",
+      "translation_file": "references.tex",
+      "translation_line": 73,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "hao2024training",
+      "translation_key": "stars-hao2024training",
+      "translation_file": "references.tex",
+      "translation_line": 79,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "he2016deep",
+      "translation_key": "stars-he2016deep",
+      "translation_file": "references.tex",
+      "translation_line": 85,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "li2024numinamath",
+      "translation_key": "stars-li2024numinamath",
+      "translation_file": "references.tex",
+      "translation_line": 91,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "lightman2023lets",
+      "translation_key": "stars-lightman2023lets",
+      "translation_file": "references.tex",
+      "translation_line": 98,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "loshchilov2017decoupled",
+      "translation_key": "stars-loshchilov2017decoupled",
+      "translation_file": "references.tex",
+      "translation_line": 104,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "mcleish2025teaching",
+      "translation_key": "stars-mcleish2025teaching",
+      "translation_file": "references.tex",
+      "translation_line": 109,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "miao2020diverse",
+      "translation_key": "stars-miao2020diverse",
+      "translation_file": "references.tex",
+      "translation_line": 117,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "mohtashami2023cotformer",
+      "translation_key": "stars-mohtashami2023cotformer",
+      "translation_file": "references.tex",
+      "translation_line": 124,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "patel2021nlp",
+      "translation_key": "stars-patel2021nlp",
+      "translation_file": "references.tex",
+      "translation_line": 130,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "radford2019language",
+      "translation_key": "stars-radford2019language",
+      "translation_file": "references.tex",
+      "translation_line": 135,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "shen2025codi",
+      "translation_key": "stars-shen2025codi",
+      "translation_file": "references.tex",
+      "translation_line": 140,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "team2025gemma",
+      "translation_key": "stars-team2025gemma",
+      "translation_file": "references.tex",
+      "translation_line": 146,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "team2024qwen2",
+      "translation_key": "stars-team2024qwen2",
+      "translation_file": "references.tex",
+      "translation_line": 152,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "vaswani2017attention",
+      "translation_key": "stars-vaswani2017attention",
+      "translation_file": "references.tex",
+      "translation_line": 157,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "wang2022selfconsistency",
+      "translation_key": "stars-wang2022selfconsistency",
+      "translation_file": "references.tex",
+      "translation_line": 163,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "wei2022chain",
+      "translation_key": "stars-wei2022chain",
+      "translation_file": "references.tex",
+      "translation_line": 170,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "wei2025sim",
+      "translation_key": "stars-wei2025sim",
+      "translation_file": "references.tex",
+      "translation_line": 178,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "xiong2020layer",
+      "translation_key": "stars-xiong2020layer",
+      "translation_file": "references.tex",
+      "translation_line": 183,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "yang2025qwen3",
+      "translation_key": "stars-yang2025qwen3",
+      "translation_file": "references.tex",
+      "translation_line": 190,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "yang2023looped",
+      "translation_key": "stars-yang2023looped",
+      "translation_file": "references.tex",
+      "translation_line": 196,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "yang2022chain",
+      "translation_key": "stars-yang2022chain",
+      "translation_file": "references.tex",
+      "translation_line": 201,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "tot",
+      "translation_key": "stars-tot",
+      "translation_file": "references.tex",
+      "translation_line": 207,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "zelikman2024quiet",
+      "translation_key": "stars-zelikman2024quiet",
+      "translation_file": "references.tex",
+      "translation_line": 214,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "zhang2019root",
+      "translation_key": "stars-zhang2019root",
+      "translation_file": "references.tex",
+      "translation_line": 220,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "zhang2025lightthinker",
+      "translation_key": "stars-zhang2025lightthinker",
+      "translation_file": "references.tex",
+      "translation_line": 225,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "zhang2025survey",
+      "translation_key": "stars-zhang2025survey",
+      "translation_file": "references.tex",
+      "translation_line": 231,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "zhang2024llm",
+      "translation_key": "stars-zhang2024llm",
+      "translation_file": "references.tex",
+      "translation_line": 238,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "zhu2025survey",
+      "translation_key": "stars-zhu2025survey",
+      "translation_file": "references.tex",
+      "translation_line": 245,
+      "status": "complete_original_entry_retained"
+    },
+    {
+      "source_bibliography_key": "zhu2025scaling",
+      "translation_key": "stars-zhu2025scaling",
+      "translation_file": "references.tex",
+      "translation_line": 251,
+      "status": "complete_original_entry_retained"
+    }
+  ],
+  "translation_adaptations": [
+    "所有已发表段落均译出,作者强措辞用作者归属明确表达",
+    "原图内部英文保留并在中文图注说明",
+    "参考文献的作者、英文题名、年份与出版信息完整保留用于检索",
+    "新增译者核查注与原作者内容分开"
+  ],
+  "verification_limit": "章节映射、数值检查和编译证明文件覆盖与机械一致性;不是独立数学专家或独立翻译专家审校"
+}

@@ -1,0 +1,12 @@
+### 文档：工具函数模式
+
+认真考虑是增加或增强当前工具，还是编辑 forward() 中的工作流。
+
+特别注意确保 "required" 和 "type" 始终位于正确的嵌套层级。例如，"required" 应与 "properties" 同级，而不是位于其内部。
+确保每个属性，无论多短，都有正确嵌套的 type 和 description。
+不允许使用你已见过参数之外的其他参数。例如，type 为 array 的 "edit_line_ranges" 不允许使用 "minItems" 和 "maxItems"。
+
+...
+
+以下是编码智能体尝试解决一项编程任务的日志。
+每项任务使用一种编程语言，但智能体需要处理不同语言，包括 C++、Go、Java、JavaScript、Python 和 Rust。

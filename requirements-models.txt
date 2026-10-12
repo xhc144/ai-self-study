@@ -1,0 +1,5 @@
+# Optional public small-model and standard-Transformer CPU experiments.
+# Install CPU torch from https://download.pytorch.org/whl/cpu before this file.
+torch==2.8.0
+transformers==4.57.3
+numpy==2.3.5

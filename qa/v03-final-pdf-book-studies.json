@@ -1,0 +1,6506 @@
+{
+  "phase": "final frozen PDFs audited",
+  "created_at": "2026-10-12T02:11:53.437855+00:00",
+  "dpi": 100,
+  "files": {
+    "book": {
+      "path": "dist/ai-self-study.pdf",
+      "sha256": "c9bdf9aa359158ce80fea766aabb35d3796adefa36364283b3bdb03491edd4d9",
+      "pages": 99,
+      "link_count": 297,
+      "internal_link_count": 226,
+      "link_anomalies": [],
+      "text_clipping_candidates": [],
+      "blank_text_pages": [],
+      "page_records": [
+        {
+          "page": 1,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1880,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-001.png",
+          "png_sha256": "ccd196f8eb014f5903e48418cba5e6a8f20c38c08befcd9004049a8f9acfb8f1",
+          "links": 14,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 2,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 2909,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-002.png",
+          "png_sha256": "1ce5ea1e33e18046964eabae37b646ccd653416b99ecf665f997b3318b45651b",
+          "links": 31,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 3,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 3106,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-003.png",
+          "png_sha256": "b1ad684650a4c5e429d7be62f6b7ad06297c0eba33e59267e6492d27cb67a211",
+          "links": 32,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 4,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 3058,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-004.png",
+          "png_sha256": "fb95f493bbbc9ddab64553f776f7d8ce98829c1763fc0767088686703946b8cd",
+          "links": 32,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 5,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1845,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-005.png",
+          "png_sha256": "f3d4f2d465f14f54063721f2fc265edcc940d6aeebf0d1ea89e6bf079645ac16",
+          "links": 20,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 6,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1434,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-006.png",
+          "png_sha256": "26ec11de14bcd5dd754d23ed272107fd7e334418ce8cfafdf0d4988a9b14bcf1",
+          "links": 3,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 7,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1432,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-007.png",
+          "png_sha256": "46ca66efd9b4a81dcdb3df132b37b07ef786206248bb81be2dd1b05572978906",
+          "links": 10,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 8,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1266,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-008.png",
+          "png_sha256": "55bb8c651f7bd55803f727778426326e2ba0936a2677b0584557fd7e8812bee1",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 9,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1173,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-009.png",
+          "png_sha256": "4cf5a4e347641f270cb56087cd92f99ff1f854d45a9c431291afe93c93bd1834",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 10,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1572,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-010.png",
+          "png_sha256": "e9cc0ef997584dc90bd65020f8860221e7bdbe4f193a63ddbcc7a916182fb267",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 11,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1525,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-011.png",
+          "png_sha256": "42cbacc97c84d5c6fc55cc595cc4044c272b1987d121c41a864de6845333acfd",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 12,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1384,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-012.png",
+          "png_sha256": "5a3d3d451b114caf7ac969012c220349c07b88d1eacb4344d22ec0d4360aa028",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 13,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1246,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-013.png",
+          "png_sha256": "fdf67959263d38e9995f954d3792dbad4efb48958336a9d5a6e805391be0d47e",
+          "links": 3,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 14,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1642,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-014.png",
+          "png_sha256": "1bc2c373d355abecb1b16473ab7cbd06dbc9f08e97309e8a5ad9325dd52eff92",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 15,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1540,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-015.png",
+          "png_sha256": "4c373371107ca3526464f33c12b3d159f4f287b9606c4c51c5b67b80a47cd46a",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 16,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1438,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-016.png",
+          "png_sha256": "23c5b2081844d5887bf799e46e1956717ae011f0c8040bdf76cb70d8ebc3b20e",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 17,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1437,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-017.png",
+          "png_sha256": "ccd4ff5b415b2bdf586625f8e3dcb696111f1e653578ee6682a630eef69941a4",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 18,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1242,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-018.png",
+          "png_sha256": "d580b7d968a561be7d2e10b626fba3bf71f0dba15b5285fd2d8626cb3f245825",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 19,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1365,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-019.png",
+          "png_sha256": "9c40adf5d91fa24d59dd46630c831cecb715516a9a46de100e24b085d44220a3",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 20,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1548,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-020.png",
+          "png_sha256": "bf7ed430627c479005b971075c213e15f4be3972aae525b3ff156e81ac4326a1",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 21,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1280,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-021.png",
+          "png_sha256": "98310f69ba1a315ba2ac987938287e60ae7978300695b41939afbc11ab559a4e",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 22,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1177,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-022.png",
+          "png_sha256": "cb59f601f0ec8c7d64059b59525f056e422eaed768976cd0cccc5f5d742d6d8e",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 23,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1351,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-023.png",
+          "png_sha256": "4bd9375efe175ed8d3cf5a5a6543e89e45c9ea9c24dda03f1f9f45fa99a307a2",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 24,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1631,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-024.png",
+          "png_sha256": "cda3cd00cc9a86be0c1dd5c879ad10f79b05125e46a760310b368bd8f8289920",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 25,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1450,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-025.png",
+          "png_sha256": "648a6ad5357e4e7be93e280c6c8d4a746503b2085deea0ee28345ef41d77bc89",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 26,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1448,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-026.png",
+          "png_sha256": "f9b581ff7af923593afa3bc624eef78b407f2fd198f1d126d60e54b24debbeb1",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 27,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1551,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-027.png",
+          "png_sha256": "66b3e28b8c690fc77c5b35f2920d3222738aed0873685ca0c90538645b5ed9e4",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 28,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1029,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-028.png",
+          "png_sha256": "9f0f71417d0c48efbb61a062dd047451de062075693588b0cbdac6a76c552582",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 29,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1319,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-029.png",
+          "png_sha256": "b4073f62a8751e05cbfa8f7be98d4711dfb912a8e0ffdc66509463033f4b1b8b",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 30,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1407,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-030.png",
+          "png_sha256": "4d145d4deb8c5858b14829ac3c541759a8843f68c252a2033a59d701987afd21",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 31,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1488,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-031.png",
+          "png_sha256": "598f68ea50979cea2c4721789553eb452974a906a1011da694ce838dddc1b864",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "reinspected_final_high_resolution",
+          "equals_previously_inspected_render": false
+        },
+        {
+          "page": 32,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1454,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-032.png",
+          "png_sha256": "df626760f97acbefa2f027a0ab65c23e130160b16025dc0699fa30ef0e97d084",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 33,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1263,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-033.png",
+          "png_sha256": "7ed46457e64ffa7552d0a8f6dae83c172b21e67581e4a0929d0ba2c132b1981e",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 34,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1459,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-034.png",
+          "png_sha256": "010b8babceb314828a9649d8360bc065218a2d420692ba8a9419b1382706ad82",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 35,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1402,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-035.png",
+          "png_sha256": "2a2a6b34f42d77be5977c59d6cdeb6c7f050025705d090a3056f574c80726d73",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 36,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1297,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-036.png",
+          "png_sha256": "b3b5f270fd9b40bc2f0e3006309e4ad1b8d660c380737acdd8d939d80e31af97",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 37,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1561,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-037.png",
+          "png_sha256": "e4d8276f22cfbd3cbfcf0786d7f411f8a348edf7c935f86f4b962a7c5b02eb8c",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 38,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1770,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-038.png",
+          "png_sha256": "425660013795ce519e1cb847b3cbde5c243125f3848c433c56802d26dec721fd",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 39,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1267,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-039.png",
+          "png_sha256": "05cd87464898ab005852f99135b3f31c1aa9885fbe7396d3e2f82f96c348800b",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 40,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1489,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-040.png",
+          "png_sha256": "a3bea2c283de2133b978ea8406a54039853e75dfb1c8a746583172b85e2c5302",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 41,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1344,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-041.png",
+          "png_sha256": "ccdf20077696fe25e96fe330f2a0cd41a0821454aa826a7a74f0fa7ef208cf83",
+          "links": 3,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 42,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1490,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-042.png",
+          "png_sha256": "a9e4537926085b19c3addffdf9d9d989565c41678756bee70c24df88b0d82ddc",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 43,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1342,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-043.png",
+          "png_sha256": "01c1dfa06c76a8ad2c2e97afb3d0982db0f83fb635ccb3d9af21cd97dcc82b58",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 44,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1205,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-044.png",
+          "png_sha256": "97ee381ff835f66e429c47abb1fec8b88b6ac06137a2777286b31a1dd6e013d9",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 45,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1351,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-045.png",
+          "png_sha256": "a9c34b2b4a24769dd8c7fb57567973dac24d6eb35db84a0c962e64492b5bf954",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 46,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1494,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-046.png",
+          "png_sha256": "d4c4de4f0aa07fd9230b8a162c8129dbcb7696292e8027d520ace6619837b800",
+          "links": 6,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 47,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1482,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-047.png",
+          "png_sha256": "95d460121c55f986e5f087c15a9a904cb7a48b93ad5152b2036ca4974cd13f9c",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 48,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1307,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-048.png",
+          "png_sha256": "2c9a185aabbd15221ba0f5465dcbb70ac7c1fca259a9c3ccb29f06d11fa5be09",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 49,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1385,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-049.png",
+          "png_sha256": "1334f3f53879d7a2c47f4199f120b09ad74b863c67f46322b7ee41a98ea0b02c",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 50,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1330,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-050.png",
+          "png_sha256": "cd8d8ed5135936f2a8692a073f5ed9e3b8e65a92cb2fe60a2c85f1433e8eaf9d",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 51,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1410,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-051.png",
+          "png_sha256": "074427946ae9cbbf8eac04aadc57d3b7db7af0be83b7a7cf2ec2dd7594312dd3",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 52,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1384,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-052.png",
+          "png_sha256": "35b77911767707c56100acb1b36de7004adb3535abfd4164b5a1edda4906ffb0",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 53,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1478,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-053.png",
+          "png_sha256": "4d3326b1ccaf4689e5ef649f727013320f4eea76aac05b4d3c1cfaa897ec5bbe",
+          "links": 4,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 54,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1246,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-054.png",
+          "png_sha256": "7a473a30a0d097271c72a5d6c358f58098c0b2135f391eb6f1193b77f26fc227",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 55,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1449,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-055.png",
+          "png_sha256": "b601a2f95c1b4235ffee53b9cb058ec36a02fbcf47a17be21a409be4fbf6b693",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 56,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1241,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-056.png",
+          "png_sha256": "3291a8eca460c5b23b0766dcab689122d8b053e7a669182df98f7442f0ffd549",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 57,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1338,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-057.png",
+          "png_sha256": "c025535fd66004a0c4c5e2ac866a777fadf4590f8212b7c7e761b73353a324c2",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 58,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1490,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-058.png",
+          "png_sha256": "fdf047b24d3f8b82ede1366e16da30f68b6e936a2a3870232f60f78aa9b82c10",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 59,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1507,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-059.png",
+          "png_sha256": "105924e06724103aded7213f3d642d43aef857ae254b88b9acbf07c32006d329",
+          "links": 4,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 60,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1341,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-060.png",
+          "png_sha256": "8bd464fb685f7866d815f04c27f284744b820543f1d4adc2a0bfc156279cf9dc",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 61,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1323,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-061.png",
+          "png_sha256": "11b8098c1173e5ede98dbb2d4bc1448d570ac0dc9a346a0e2dfadcb0a6fad530",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 62,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1380,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-062.png",
+          "png_sha256": "941fa9738a41257395cc5e6f22198cbce75906c6e488704043a3f2bc30c255ce",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 63,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1385,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-063.png",
+          "png_sha256": "419addc78b731becd66ee9adb37a241fd8015a38b4dc718f3a87d22931e683ce",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 64,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1389,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-064.png",
+          "png_sha256": "1415bdca825f8984e387d8a80299a947157803fdee5e0b86ebd61e9d33723bfa",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 65,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1266,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-065.png",
+          "png_sha256": "3ce5db2f70bd3ed85200fd484b6e49f95fb6ab9d06d374353b8851d1dbbcd61f",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 66,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1421,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-066.png",
+          "png_sha256": "ec2a53087d9cd844b4f5d92997e591958bd2b7484a42d3a4445a4cdd2a12eebd",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 67,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1085,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-067.png",
+          "png_sha256": "76d3a7c31db361ee831d870b8880214863ddb1f2561760a66ed0af8b455e9959",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 68,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1339,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-068.png",
+          "png_sha256": "c70f8784a571e390580cb6a3c01ed4cd946c731e6c56e89179a97f34af76015d",
+          "links": 3,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 69,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1256,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-069.png",
+          "png_sha256": "d79feee6b4111c6dee604eafd37b0046eab2c795d7ea076282166a3186f5202f",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 70,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1568,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-070.png",
+          "png_sha256": "598a6140e169a88dc974524ef35b6120eeb5fa397ccdd9149e1d4338395ad443",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 71,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1397,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-071.png",
+          "png_sha256": "4b9ed4b51a0242a69bcf820930a90d38df5ac54390dbb428f95ebf69e8eab3b5",
+          "links": 3,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 72,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1263,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-072.png",
+          "png_sha256": "e843f726c2ff9ad1bb7737af4280d0412735b325ea993d2349092cf965c8ecad",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 73,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1468,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-073.png",
+          "png_sha256": "93d0942857073ea727cd9034f3d75805dd0d7eb25a5cb30b38c02c926b15e051",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 74,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1563,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-074.png",
+          "png_sha256": "32b7a98dc613478d449912fc9fbbbb8a6ce27ffac14f347dbddff5109df0fc8c",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 75,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1330,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-075.png",
+          "png_sha256": "7a1f2e11eba3dc52323f3c26c210d2895e28498b4f9a7f44207b770ef0205bbd",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 76,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1378,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-076.png",
+          "png_sha256": "6b39d1ef93522c5f2ed862ee12b6fba2c19843c7f17bfb395ced20b754a40dc6",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 77,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1201,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-077.png",
+          "png_sha256": "446a225fe15af409ef450168f6cbb96d695e1d36edfeaf24e5af608b00b99d7b",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 78,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1558,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-078.png",
+          "png_sha256": "7b015c3ef22961605220620e8a131f7406318fd903eda65c35395f8af4e000ca",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 79,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1411,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            773,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-079.png",
+          "png_sha256": "676afa635e95f79a58158bf59045b8d0813a23ba81daa03ef8621d2f26c6ccd9",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 80,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1237,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-080.png",
+          "png_sha256": "af98603d6e1e5a96cbebfa825632b939b0d7a7fbfb5c23fbc7dc5a72fa4aa113",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 81,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 956,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-081.png",
+          "png_sha256": "e15efd045e2d3b9312cdae650ca694034ad9dff15f3f2d7b397168533410cf99",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 82,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1145,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-082.png",
+          "png_sha256": "15ea8ebc1456911e084ea943b09bf154f09b1934706d2199e3eaf0d1d04ae115",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 83,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1590,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-083.png",
+          "png_sha256": "f66b511e08130aa745f9025e22b400f071f2a0ffe7de12c09a83108362ff735f",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 84,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1438,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-084.png",
+          "png_sha256": "82123e18b3575305f7d9bd69391e053f757a83fc5b6d82c204145d3f34bc05a6",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 85,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1676,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-085.png",
+          "png_sha256": "1d4cf7da6fc7b84ce3a53eccbd44fbdb6410124cc7ae2ed1b581fa249c32110e",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 86,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1159,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-086.png",
+          "png_sha256": "b3a024051422679d53065510b57770d1e6f52e2e7129b8cf0755b6f51b04be53",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 87,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1522,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-087.png",
+          "png_sha256": "05b752d4ef59624a3a9c08c54f3e02b865e2283658da676eb338b51ee44a9342",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 88,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1587,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-088.png",
+          "png_sha256": "fd9123312bd1375599d87bced02baa24d3b6599b94bf1c6436d9008d30a3fb46",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 89,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1631,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-089.png",
+          "png_sha256": "49ded596fccedaa5a9c44a66d8d2123e85489ea8d5443a5e310089aa49eb9c76",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 90,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1436,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-090.png",
+          "png_sha256": "5e416c6d4d690d86737dfa30b989933892cd18ab3af590e66f3e1ee0e68e7f7a",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 91,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1546,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-091.png",
+          "png_sha256": "ffb8acf1365f8f2d162ad016a860412099d3348e40f903fb942437bf2b8610d5",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 92,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1493,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-092.png",
+          "png_sha256": "0f47e99d316b35bff8f6d377cde00cda22692a35cb99457e89cb84c19df08509",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 93,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1386,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-093.png",
+          "png_sha256": "831b102e479c2f017ae34d908e15d6733d248b6bccea08b96cfe659fb2d6fb03",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 94,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1700,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-094.png",
+          "png_sha256": "ad6cad0337e20ff70e520b5c3eb1a251dd6a87899f6987968b18f0d512ec9e2c",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 95,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1708,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-095.png",
+          "png_sha256": "eb6e1355ba7ba63f97a2f1315cb01dcf8e39e84fee6b4bbc0edcea45e8feaa5f",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 96,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1456,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-096.png",
+          "png_sha256": "12ce38be99ccc6fc2e759640a28bf12e952f004a7f5e62d56da4884226bd6a9c",
+          "links": 9,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 97,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 2269,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-097.png",
+          "png_sha256": "5c723ec1040a127cac76da78f4516a9d664ce997557ec57ac33e5eb01fb06367",
+          "links": 23,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 98,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 2229,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-098.png",
+          "png_sha256": "7887ffb779d7b6266474f8856c206187adc5ebda18f0633f2af36ce40a933df5",
+          "links": 23,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        },
+        {
+          "page": 99,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 2067,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/book-final/page-099.png",
+          "png_sha256": "07ae758282f40133db7c6caa0726f9eee6d52dd3d55a3d9f513df9519c228736",
+          "links": 16,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_initial_and_final_pixels_identical",
+          "equals_previously_inspected_render": true
+        }
+      ],
+      "contact_sheets": [
+        "/tmp/v03-final-pdf-book-studies/book/contact-001-006.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-007-012.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-013-018.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-019-024.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-025-030.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-031-036.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-037-042.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-043-048.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-049-054.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-055-060.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-061-066.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-067-072.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-073-078.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-079-084.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-085-090.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-091-096.png",
+        "/tmp/v03-final-pdf-book-studies/book/contact-097-099.png"
+      ],
+      "named_destination_count": 426,
+      "outline_count": 129,
+      "outline_anomalies": [],
+      "font_records": [
+        {
+          "name": "JNQHSH+FandolSong-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 188912
+        },
+        {
+          "name": "STXXAL+FandolSong-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 489860
+        },
+        {
+          "name": "RMBITS+CMUSerif-Roman-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 11441
+        },
+        {
+          "name": "LLUPKU+CMUSerif-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 6292
+        },
+        {
+          "name": "LVPABK+CMUSerif-Italic-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 8429
+        },
+        {
+          "name": "ZHDGVY+FandolKai-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 325577
+        },
+        {
+          "name": "CTRRZR+CMMI10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 12860
+        },
+        {
+          "name": "LECVDM+CMMI7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 11401
+        },
+        {
+          "name": "UFZSAJ+CMR10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 2822
+        },
+        {
+          "name": "FBXZKM+CMSY10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 5625
+        },
+        {
+          "name": "PFJWXA+CMR7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 2077
+        },
+        {
+          "name": "TORRBR+MSAM10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 337
+        },
+        {
+          "name": "ERVVSH+CMEX10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 3505
+        },
+        {
+          "name": "OOXVGA+CMSY7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 2720
+        },
+        {
+          "name": "TLHTNU+LMMono10-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 8585
+        },
+        {
+          "name": "FNJUTB+MSBM10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 1093
+        },
+        {
+          "name": "MPHCVA+CMMI5",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 3475
+        },
+        {
+          "name": "BMQQDV+DejaVuSans",
+          "type": "Type3",
+          "extension": "n/a",
+          "embedded_bytes": 0,
+          "embedded_glyph_streams": true,
+          "glyph_stream_count": 32
+        },
+        {
+          "name": "MQZMDU+CMR5",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 576
+        },
+        {
+          "name": "BMQQDV+DejaVuSans",
+          "type": "Type3",
+          "extension": "n/a",
+          "embedded_bytes": 0,
+          "embedded_glyph_streams": true,
+          "glyph_stream_count": 32
+        },
+        {
+          "name": "RUJNWA+CMEX7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 495
+        },
+        {
+          "name": "MENGYL+CMSY5",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 543
+        },
+        {
+          "name": "HPVYBX+MSBM7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 546
+        },
+        {
+          "name": "BMQQDV+DejaVuSans",
+          "type": "Type3",
+          "extension": "n/a",
+          "embedded_bytes": 0,
+          "embedded_glyph_streams": true,
+          "glyph_stream_count": 32
+        }
+      ],
+      "body_margin_candidates": [
+        {
+          "page": 7,
+          "text": " 推理时采样、修订、",
+          "bbox": [
+            469.20159912109375,
+            461.06890869140625,
+            561.8045043945312,
+            471.0315246582031
+          ]
+        },
+        {
+          "page": 19,
+          "text": " 不能保证任意步长、",
+          "bbox": [
+            467.71453857421875,
+            708.2089233398438,
+            561.8013916015625,
+            718.1715087890625
+          ]
+        },
+        {
+          "page": 31,
+          "text": " 减少分数工作空间、",
+          "bbox": [
+            467.1585693359375,
+            326.1828918457031,
+            561.8007202148438,
+            336.1455078125
+          ]
+        },
+        {
+          "page": 31,
+          "text": " 激活，最后归一化及线性读出，",
+          "bbox": [
+            419.7587890625,
+            434.7759094238281,
+            562.210205078125,
+            444.738525390625
+          ]
+        },
+        {
+          "page": 31,
+          "text": "。训练对整个词表用交叉熵，不只监督叫声。八条原创语法句从说话者、",
+          "bbox": [
+            241.4599151611328,
+            519.2598876953125,
+            561.7970581054688,
+            529.2224731445312
+          ]
+        },
+        {
+          "page": 32,
+          "text": "六个模型对原始、改变旁观者及改变说话者三种叫声测试均符合该有限语法；但这些干预组合与训练句子重叠，",
+          "bbox": [
+            76.61799621582031,
+            306.18890380859375,
+            562.2047729492188,
+            316.1515197753906
+          ]
+        },
+        {
+          "page": 34,
+          "text": " 题面、答案、解析、",
+          "bbox": [
+            470.79962158203125,
+            606.1688842773438,
+            561.8074340820312,
+            616.1314697265625
+          ]
+        },
+        {
+          "page": 34,
+          "text": " 更合理的顺序是先在文档、",
+          "bbox": [
+            436.2596130371094,
+            720.9389038085938,
+            561.7932739257812,
+            730.9014892578125
+          ]
+        },
+        {
+          "page": 43,
+          "text": " 是否与人类智能同构、",
+          "bbox": [
+            458.7995300292969,
+            358.6529235839844,
+            561.7946166992188,
+            368.61553955078125
+          ]
+        },
+        {
+          "page": 48,
+          "text": "经校准的置信度。第二种又会将知识上可能正确的解释判成接口格式失败，所以零分也不意味着完全没有相关知识。",
+          "bbox": [
+            56.69297790527344,
+            243.6829376220703,
+            561.7267456054688,
+            253.64553833007812
+          ]
+        },
+        {
+          "page": 51,
+          "text": " 验证时间、",
+          "bbox": [
+            504.588623046875,
+            626.7479248046875,
+            561.7957153320312,
+            636.7105102539062
+          ]
+        },
+        {
+          "page": 58,
+          "text": " 不能先验证一段字符串、",
+          "bbox": [
+            447.24755859375,
+            465.2528991699219,
+            561.79833984375,
+            475.21551513671875
+          ]
+        },
+        {
+          "page": 60,
+          "text": " 而导航、",
+          "bbox": [
+            518.8426513671875,
+            243.88192749023438,
+            561.8023071289062,
+            253.8445281982422
+          ]
+        },
+        {
+          "page": 62,
+          "text": " 向量、输出投影、",
+          "bbox": [
+            478.1569519042969,
+            359.5658874511719,
+            561.7927856445312,
+            369.52850341796875
+          ]
+        },
+        {
+          "page": 70,
+          "text": " 提议、",
+          "bbox": [
+            529.0108032226562,
+            713.52294921875,
+            561.8025512695312,
+            723.4855346679688
+          ]
+        },
+        {
+          "page": 72,
+          "text": " 但“最好档案分数单调不降”",
+          "bbox": [
+            425.87060546875,
+            535.3198852539062,
+            561.1292114257812,
+            545.282470703125
+          ]
+        },
+        {
+          "page": 79,
+          "text": " 为哈希函数，",
+          "bbox": [
+            497.0169372558594,
+            243.88192749023438,
+            563.1886596679688,
+            253.8445281982422
+          ]
+        },
+        {
+          "page": 79,
+          "text": "这与数学工具附录的共享参数完全相同。哈希碰撞使不同上下文共享表项；多头可缓解碰撞，但不能保证语义唯一。",
+          "bbox": [
+            56.6929931640625,
+            356.11187744140625,
+            561.7267456054688,
+            366.0744934082031
+          ]
+        },
+        {
+          "page": 85,
+          "text": "、",
+          "bbox": [
+            552.0269775390625,
+            382.3049011230469,
+            561.9895629882812,
+            392.26751708984375
+          ]
+        }
+      ],
+      "high_resolution_inspected_pages": [
+        10,
+        21,
+        25,
+        26,
+        30,
+        31,
+        45,
+        46,
+        48,
+        65,
+        75,
+        79,
+        80
+      ],
+      "visual_notes": "All99 pages layout-inspected; final onlypage31 changed, re-opened at180dpi; filename overflow repaired, no remaining visible clipping/overlap.",
+      "font_embedding_note": "Type3 graphic fonts embed CharProcs glyph streams rather than a standalone font file; main text/math fonts contain extractable embedded font data.",
+      "font_embedding_failures": [],
+      "internal_link_records": [
+        {
+          "source_page": 1,
+          "destination_name": "chapter.1",
+          "target_page": 6,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.1",
+          "target_page": 6,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.2",
+          "target_page": 6,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.3",
+          "target_page": 7,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.4",
+          "target_page": 8,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.5",
+          "target_page": 8,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.6",
+          "target_page": 8,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "chapter.2",
+          "target_page": 9,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.2.1",
+          "target_page": 9,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.2.2",
+          "target_page": 10,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.2.3",
+          "target_page": 11,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.2.4",
+          "target_page": 12,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.2.5",
+          "target_page": 13,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.2.6",
+          "target_page": 14,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.2.7",
+          "target_page": 15,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.2.8",
+          "target_page": 15,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "chapter.3",
+          "target_page": 16,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.3.1",
+          "target_page": 16,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.3.2",
+          "target_page": 17,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.3.3",
+          "target_page": 18,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.3.4",
+          "target_page": 19,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.3.5",
+          "target_page": 20,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.3.6",
+          "target_page": 20,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.3.7",
+          "target_page": 21,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "chapter.4",
+          "target_page": 23,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.1",
+          "target_page": 23,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.2",
+          "target_page": 24,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.3",
+          "target_page": 24,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.4",
+          "target_page": 25,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.5",
+          "target_page": 26,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.6",
+          "target_page": 27,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.7",
+          "target_page": 28,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.8",
+          "target_page": 29,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.9",
+          "target_page": 30,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.10",
+          "target_page": 31,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.4.11",
+          "target_page": 32,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "chapter.5",
+          "target_page": 33,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.5.1",
+          "target_page": 33,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.5.2",
+          "target_page": 34,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.5.3",
+          "target_page": 35,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.5.4",
+          "target_page": 36,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.5.5",
+          "target_page": 37,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.5.6",
+          "target_page": 37,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "section.5.7",
+          "target_page": 38,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "chapter.6",
+          "target_page": 39,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.6.1",
+          "target_page": 39,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.6.2",
+          "target_page": 40,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.6.3",
+          "target_page": 40,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.6.4",
+          "target_page": 42,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.6.5",
+          "target_page": 42,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.6.6",
+          "target_page": 43,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.6.7",
+          "target_page": 43,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "chapter.7",
+          "target_page": 44,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.7.1",
+          "target_page": 44,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.7.2",
+          "target_page": 44,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.7.3",
+          "target_page": 46,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.7.4",
+          "target_page": 47,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.7.5",
+          "target_page": 47,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.7.6",
+          "target_page": 48,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "chapter.8",
+          "target_page": 49,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.1",
+          "target_page": 49,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.2",
+          "target_page": 49,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.3",
+          "target_page": 50,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.4",
+          "target_page": 51,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.5",
+          "target_page": 52,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.6",
+          "target_page": 53,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.7",
+          "target_page": 54,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.8.8",
+          "target_page": 54,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "chapter.9",
+          "target_page": 55,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.1",
+          "target_page": 55,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.2",
+          "target_page": 56,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.3",
+          "target_page": 57,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.4",
+          "target_page": 57,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.5",
+          "target_page": 58,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.6",
+          "target_page": 59,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.7",
+          "target_page": 59,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "section.9.8",
+          "target_page": 60,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.9.9",
+          "target_page": 60,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.9.10",
+          "target_page": 61,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "chapter.10",
+          "target_page": 62,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.1",
+          "target_page": 62,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.2",
+          "target_page": 62,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.3",
+          "target_page": 63,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.4",
+          "target_page": 64,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.5",
+          "target_page": 64,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.6",
+          "target_page": 65,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.7",
+          "target_page": 66,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.8",
+          "target_page": 67,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.9",
+          "target_page": 68,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.10.10",
+          "target_page": 68,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "chapter.11",
+          "target_page": 69,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.1",
+          "target_page": 69,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.2",
+          "target_page": 70,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.3",
+          "target_page": 70,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.4",
+          "target_page": 71,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.5",
+          "target_page": 72,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.6",
+          "target_page": 73,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.7",
+          "target_page": 74,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.8",
+          "target_page": 74,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.9",
+          "target_page": 75,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.10",
+          "target_page": 76,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.11",
+          "target_page": 77,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.12",
+          "target_page": 78,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.13",
+          "target_page": 79,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.14",
+          "target_page": 79,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.15",
+          "target_page": 80,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.11.16",
+          "target_page": 81,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "appendix.A",
+          "target_page": 82,
+          "valid": true
+        },
+        {
+          "source_page": 4,
+          "destination_name": "section.A.1",
+          "target_page": 82,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.A.2",
+          "target_page": 83,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.A.3",
+          "target_page": 84,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.A.4",
+          "target_page": 84,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.A.5",
+          "target_page": 85,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "appendix.B",
+          "target_page": 86,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.B.1",
+          "target_page": 86,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.B.2",
+          "target_page": 87,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.B.3",
+          "target_page": 88,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.B.4",
+          "target_page": 89,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.B.5",
+          "target_page": 89,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.B.6",
+          "target_page": 90,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "appendix.C",
+          "target_page": 91,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.C.1",
+          "target_page": 91,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.C.2",
+          "target_page": 91,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.C.3",
+          "target_page": 92,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.C.4",
+          "target_page": 93,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.C.5",
+          "target_page": 94,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.C.6",
+          "target_page": 95,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section.C.7",
+          "target_page": 95,
+          "valid": true
+        },
+        {
+          "source_page": 5,
+          "destination_name": "section*.1",
+          "target_page": 96,
+          "valid": true
+        },
+        {
+          "source_page": 6,
+          "destination_name": "cite.ih",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 6,
+          "destination_name": "cite.ihblog",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 6,
+          "destination_name": "cite.browserdefenses",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.fineweb",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.chinchilla",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.dpo",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.r1nature",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.rlvrboundary",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.testcompute",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.chive",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.funsearch",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.alphaevolve",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 7,
+          "destination_name": "cite.dgm",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 9,
+          "destination_name": "chapter.3",
+          "target_page": 16,
+          "valid": true
+        },
+        {
+          "source_page": 9,
+          "destination_name": "chapter.4",
+          "target_page": 23,
+          "valid": true
+        },
+        {
+          "source_page": 11,
+          "destination_name": "equation.2.1",
+          "target_page": 10,
+          "valid": true
+        },
+        {
+          "source_page": 12,
+          "destination_name": "chapter.3",
+          "target_page": 16,
+          "valid": true
+        },
+        {
+          "source_page": 12,
+          "destination_name": "chapter.4",
+          "target_page": 23,
+          "valid": true
+        },
+        {
+          "source_page": 13,
+          "destination_name": "cite.gpt3",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 13,
+          "destination_name": "appendix.A",
+          "target_page": 82,
+          "valid": true
+        },
+        {
+          "source_page": 13,
+          "destination_name": "appendix.B",
+          "target_page": 86,
+          "valid": true
+        },
+        {
+          "source_page": 14,
+          "destination_name": "cite.iclbayes",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 20,
+          "destination_name": "cite.layernorm",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 24,
+          "destination_name": "cite.attention",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 25,
+          "destination_name": "cite.rope",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 26,
+          "destination_name": "section.3.6",
+          "target_page": 20,
+          "valid": true
+        },
+        {
+          "source_page": 26,
+          "destination_name": "cite.attention",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 28,
+          "destination_name": "section.3.3",
+          "target_page": 18,
+          "valid": true
+        },
+        {
+          "source_page": 31,
+          "destination_name": "cite.flash",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 35,
+          "destination_name": "cite.fineweb",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 38,
+          "destination_name": "cite.calibration",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 40,
+          "destination_name": "equation.6.1",
+          "target_page": 40,
+          "valid": true
+        },
+        {
+          "source_page": 40,
+          "destination_name": "cite.kaplan",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 41,
+          "destination_name": "cite.chinchilla",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 41,
+          "destination_name": "equation.6.2",
+          "target_page": 41,
+          "valid": true
+        },
+        {
+          "source_page": 41,
+          "destination_name": "cite.chinchilla",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 42,
+          "destination_name": "cite.fineweb",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 43,
+          "destination_name": "cite.emergence",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 44,
+          "destination_name": "equation.2.1",
+          "target_page": 10,
+          "valid": true
+        },
+        {
+          "source_page": 44,
+          "destination_name": "cite.dpo",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 45,
+          "destination_name": "cite.dpo",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 46,
+          "destination_name": "chapter.8",
+          "target_page": 49,
+          "valid": true
+        },
+        {
+          "source_page": 46,
+          "destination_name": "theorem.8.3",
+          "target_page": 52,
+          "valid": true
+        },
+        {
+          "source_page": 46,
+          "destination_name": "cite.r1nature",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 46,
+          "destination_name": "cite.r1nature",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 46,
+          "destination_name": "cite.r1",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 46,
+          "destination_name": "section.8.6",
+          "target_page": 53,
+          "valid": true
+        },
+        {
+          "source_page": 47,
+          "destination_name": "cite.lora",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 49,
+          "destination_name": "cite.cot",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 52,
+          "destination_name": "cite.testcompute",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 53,
+          "destination_name": "cite.r1nature",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 53,
+          "destination_name": "theorem.8.3",
+          "target_page": 52,
+          "valid": true
+        },
+        {
+          "source_page": 53,
+          "destination_name": "cite.r1nature",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 53,
+          "destination_name": "cite.rlvrboundary",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 54,
+          "destination_name": "theorem.7.1",
+          "target_page": 45,
+          "valid": true
+        },
+        {
+          "source_page": 57,
+          "destination_name": "cite.rag",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 57,
+          "destination_name": "cite.injection",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 59,
+          "destination_name": "cite.ihblog",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 59,
+          "destination_name": "cite.ih",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 59,
+          "destination_name": "cite.ih",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 59,
+          "destination_name": "cite.ihblog",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 60,
+          "destination_name": "cite.browserdefenses",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 63,
+          "destination_name": "cite.superposition",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 64,
+          "destination_name": "cite.sae",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 65,
+          "destination_name": "cite.ig",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 66,
+          "destination_name": "cite.patching",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 67,
+          "destination_name": "figure.10.1",
+          "target_page": 67,
+          "valid": true
+        },
+        {
+          "source_page": 68,
+          "destination_name": "cite.biology",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 68,
+          "destination_name": "cite.chive",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 68,
+          "destination_name": "cite.workspace",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 71,
+          "destination_name": "theorem.11.3",
+          "target_page": 70,
+          "valid": true
+        },
+        {
+          "source_page": 71,
+          "destination_name": "cite.funsearch",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 71,
+          "destination_name": "cite.alphaevolve",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 72,
+          "destination_name": "cite.alphafold",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 72,
+          "destination_name": "cite.dgm",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 73,
+          "destination_name": "cite.mamba",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 74,
+          "destination_name": "cite.llada",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 74,
+          "destination_name": "cite.latent",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 75,
+          "destination_name": "cite.stars",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 76,
+          "destination_name": "chapter.2",
+          "target_page": 9,
+          "valid": true
+        },
+        {
+          "source_page": 78,
+          "destination_name": "cite.nist-ci",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 79,
+          "destination_name": "cite.engram",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 79,
+          "destination_name": "cite.cat",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 80,
+          "destination_name": "cite.alphaproof",
+          "target_page": 99,
+          "valid": true
+        },
+        {
+          "source_page": 81,
+          "destination_name": "theorem.11.3",
+          "target_page": 70,
+          "valid": true
+        },
+        {
+          "source_page": 83,
+          "destination_name": "appendix.C",
+          "target_page": 91,
+          "valid": true
+        },
+        {
+          "source_page": 84,
+          "destination_name": "theorem.A.4",
+          "target_page": 83,
+          "valid": true
+        },
+        {
+          "source_page": 84,
+          "destination_name": "cite.dl",
+          "target_page": 96,
+          "valid": true
+        },
+        {
+          "source_page": 85,
+          "destination_name": "cite.lora",
+          "target_page": 97,
+          "valid": true
+        },
+        {
+          "source_page": 85,
+          "destination_name": "appendix.C",
+          "target_page": 91,
+          "valid": true
+        },
+        {
+          "source_page": 90,
+          "destination_name": "cite.nist-ci",
+          "target_page": 98,
+          "valid": true
+        },
+        {
+          "source_page": 91,
+          "destination_name": "appendix.A",
+          "target_page": 82,
+          "valid": true
+        },
+        {
+          "source_page": 91,
+          "destination_name": "appendix.B",
+          "target_page": 86,
+          "valid": true
+        },
+        {
+          "source_page": 92,
+          "destination_name": "cite.dl",
+          "target_page": 96,
+          "valid": true
+        },
+        {
+          "source_page": 93,
+          "destination_name": "appendix.B",
+          "target_page": 86,
+          "valid": true
+        },
+        {
+          "source_page": 94,
+          "destination_name": "appendix.A",
+          "target_page": 82,
+          "valid": true
+        },
+        {
+          "source_page": 95,
+          "destination_name": "cite.adam",
+          "target_page": 97,
+          "valid": true
+        }
+      ],
+      "final_all_pages_rendered": true,
+      "body_margin_candidates_note": "Text bounding boxes can include CJK punctuation side bearings and hanging punctuation; inspected candidates do not show physical page clipping. Only initialpage31 filename was a true body-margin overflow, now repaired.",
+      "final_log": {
+        "path": "book/build/main.log",
+        "sha256": "f555add3038ebd7e988da3069ba781208673b8ee416a20b5b54b77e83c7bf585",
+        "overfull_count": 0,
+        "missing_character_count": 0,
+        "undefined_reference_count": 0,
+        "latex_error_count": 0,
+        "warnings": [
+          "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'.",
+          "Underfull \\hbox (badness 1087) in paragraph at lines 116--117",
+          "Underfull \\hbox (badness 1371) in paragraph at lines 68--69",
+          "LaTeX Font Warning: Font shape `TU/FandolSong-Regular(1)/m/it' undefined",
+          "Package amsmath Warning: Foreign command \\atopwithdelims;",
+          "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+        ],
+        "pass_1_stdout_sha256": "fe44611a20f325543f9e3deff2ce761809e6224256b2f5b90590bdda43b618b3",
+        "pass_2_stdout_sha256": "fe44611a20f325543f9e3deff2ce761809e6224256b2f5b90590bdda43b618b3",
+        "pass_3_stdout_sha256": "fe44611a20f325543f9e3deff2ce761809e6224256b2f5b90590bdda43b618b3"
+      },
+      "build_pdf_equals_dist": true,
+      "final_text_clipping_candidates": [],
+      "final_replacement_character_count": 0
+    },
+    "ih": {
+      "path": "dist/papers/study-ih-challenge.pdf",
+      "sha256": "093f8c958dcf4770f475074b519c1b19f0f37003ba19f6ed074a1e36160734fd",
+      "pages": 4,
+      "link_count": 11,
+      "internal_link_count": 8,
+      "link_anomalies": [],
+      "text_clipping_candidates": [],
+      "blank_text_pages": [],
+      "page_records": [
+        {
+          "page": 1,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 476,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/ih/page-001.png",
+          "png_sha256": "831bf981f5da3fc58052a1f8683c40a57e91b12c20b22421c7717e758eb794ac",
+          "links": 6,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 2,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1254,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/ih/page-002.png",
+          "png_sha256": "a497adc2ca5465a01bd2dc249c920e6af961ac5b0928a4ac0bc0943ff27cd460",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 3,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1297,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            773,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/ih/page-003.png",
+          "png_sha256": "3758837215bc626ca20c1e881c1f43b2b07acc19d0d32bf278d57e980edf631a",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 4,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 372,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/ih/page-004.png",
+          "png_sha256": "9e27be696fe72d2b275828179529a1fa5311cc54bf0b46fcad86892a2c67d77b",
+          "links": 3,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        }
+      ],
+      "contact_sheets": [
+        "/tmp/v03-final-pdf-book-studies/ih/contact-001-004.png"
+      ],
+      "named_destination_count": 17,
+      "outline_count": 6,
+      "outline_anomalies": [],
+      "font_records": [
+        {
+          "name": "WGFOGP+FandolSong-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 27477
+        },
+        {
+          "name": "SNNVXQ+FandolSong-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 200086
+        },
+        {
+          "name": "NFOAFY+CMUSerif-Roman-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 6913
+        },
+        {
+          "name": "HGSSST+CMUSerif-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 762
+        },
+        {
+          "name": "ILPLIA+CMUSerif-Italic-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 771
+        },
+        {
+          "name": "TRLKCV+FandolKai-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 18107
+        },
+        {
+          "name": "ZRXMKZ+CMMI10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 2788
+        },
+        {
+          "name": "ZCXBRP+CMR10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 2087
+        },
+        {
+          "name": "MRLXGE+CMR7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 520
+        },
+        {
+          "name": "NHFAEH+CMMI7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 1809
+        },
+        {
+          "name": "QLOOYV+CMSY10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 912
+        },
+        {
+          "name": "XNYKHT+LMMono10-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 4093
+        },
+        {
+          "name": "XNZZTF+MSBM10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 549
+        },
+        {
+          "name": "JATFTN+CMSY7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 474
+        },
+        {
+          "name": "HQIADA+CMMI5",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 390
+        },
+        {
+          "name": "WZLPNA+MSAM10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 337
+        }
+      ],
+      "body_margin_candidates": [
+        {
+          "page": 2,
+          "text": "。本文是原创中文研究说明，",
+          "bbox": [
+            433.8719787597656,
+            125.15791320800781,
+            562.2100219726562,
+            135.12051391601562
+          ]
+        },
+        {
+          "page": 2,
+          "text": "“管理员”不改变角色。对本研究采用的政策，权威次序为",
+          "bbox": [
+            50.865020751953125,
+            291.13592529296875,
+            308.6871337890625,
+            301.0985412597656
+          ]
+        },
+        {
+          "page": 2,
+          "text": "；用户给出两选一算术题。评分器先解析整个输出，再检查键、类型和值，最后与独立计算的答案比较。",
+          "bbox": [
+            104.72999572753906,
+            544.5858764648438,
+            561.7240600585938,
+            554.5484619140625
+          ]
+        },
+        {
+          "page": 3,
+          "text": "：",
+          "bbox": [
+            553.281005859375,
+            166.3729248046875,
+            563.2435913085938,
+            176.3355255126953
+          ]
+        },
+        {
+          "page": 3,
+          "text": "。这是该论文协议中的作者结果，不能移植成当前公开产品的错误率，",
+          "bbox": [
+            251.0530242919922,
+            255.83790588378906,
+            562.1947631835938,
+            265.8005065917969
+          ]
+        },
+        {
+          "page": 3,
+          "text": " 消息，只有很小的题集，",
+          "bbox": [
+            450.47265625,
+            408.8638916015625,
+            562.2080078125,
+            418.8265075683594
+          ]
+        },
+        {
+          "page": 3,
+          "text": "，但让我们看到格式、选择概率和任务完成确实是三个不同测量。",
+          "bbox": [
+            275.02398681640625,
+            427.9928894042969,
+            561.7273559570312,
+            437.95550537109375
+          ]
+        },
+        {
+          "page": 3,
+          "text": "任务本来可解，再加入冲突；另设看起来危险但实际授权的正常题，测误拒。攻击集按作者、模板、目标分别留出，",
+          "bbox": [
+            56.69300079345703,
+            498.32891845703125,
+            562.2048950195312,
+            508.2915344238281
+          ]
+        },
+        {
+          "page": 3,
+          "text": "，第二个更高。但在泄漏代价很高的系统中，任务比例不是损失比例；还须报告两项、",
+          "bbox": [
+            181.36599731445312,
+            612.89990234375,
+            561.7975463867188,
+            622.8624877929688
+          ]
+        }
+      ],
+      "high_resolution_inspected_pages": [
+        2,
+        3
+      ],
+      "visual_notes": "All4 pages inspected; last page contains continued solution and bibliography, sparse but deliberate.",
+      "font_embedding_note": "Type3 graphic fonts embed CharProcs glyph streams rather than a standalone font file; main text/math fonts contain extractable embedded font data.",
+      "font_embedding_failures": [],
+      "internal_link_records": [
+        {
+          "source_page": 1,
+          "destination_name": "chapter.1",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.1",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.2",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.3",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.4",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section*.1",
+          "target_page": 4,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "cite.ihblog",
+          "target_page": 4,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "cite.ih",
+          "target_page": 4,
+          "valid": true
+        }
+      ],
+      "final_all_pages_rendered": true,
+      "body_margin_candidates_note": "Text bounding boxes can include CJK punctuation side bearings and hanging punctuation; inspected candidates do not show physical page clipping. Only initialpage31 filename was a true body-margin overflow, now repaired.",
+      "final_log": {
+        "path": "book/build/study-ih-challenge/study-ih-challenge.log",
+        "sha256": "9f67271778195d8dac6bf0e627d474a7a00ce69acfbd1faa8f1c95fbf834db26",
+        "overfull_count": 0,
+        "missing_character_count": 0,
+        "undefined_reference_count": 0,
+        "latex_error_count": 0,
+        "warnings": [
+          "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'."
+        ],
+        "pass_1_stdout_sha256": "c41d5cdd869827fe134dac2b537a52d5c5dedbc22365af218e18e9d3d4aedf8a",
+        "pass_2_stdout_sha256": "e3febe195c4df4962e1a4e3c5a59193adc4800b0d6730c7ef8f9eaca753cbb0d",
+        "pass_3_stdout_sha256": "e3febe195c4df4962e1a4e3c5a59193adc4800b0d6730c7ef8f9eaca753cbb0d"
+      },
+      "build_pdf_equals_dist": true,
+      "final_text_clipping_candidates": [],
+      "final_replacement_character_count": 0
+    },
+    "browser": {
+      "path": "dist/papers/study-browser-injection.pdf",
+      "sha256": "0a6efedc3f747c5352af34977975219cac6b7c3ccd1b5966e228cf04c01651f0",
+      "pages": 4,
+      "link_count": 10,
+      "internal_link_count": 8,
+      "link_anomalies": [],
+      "text_clipping_candidates": [],
+      "blank_text_pages": [],
+      "page_records": [
+        {
+          "page": 1,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 579,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/browser/page-001.png",
+          "png_sha256": "c49f0cf1b1494907c5aa1eadee8afa3b7daaca84d1e4c37ebb905c2f512bafc5",
+          "links": 7,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 2,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1263,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/browser/page-002.png",
+          "png_sha256": "5bcb4bf4c73443b055b1738d2f3a1848587f43b041ab388e8d16baed49773e80",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 3,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1237,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/browser/page-003.png",
+          "png_sha256": "495528adc20bf622440a2841c330d34fbe5506efbeb3e81c90e271c31cf5d9c7",
+          "links": 0,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 4,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 302,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/browser/page-004.png",
+          "png_sha256": "e131abcba721f046dd6cded7ec09e5442dfb87d983679d7c463b915f63a92326",
+          "links": 2,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        }
+      ],
+      "contact_sheets": [
+        "/tmp/v03-final-pdf-book-studies/browser/contact-001-004.png"
+      ],
+      "named_destination_count": 18,
+      "outline_count": 7,
+      "outline_anomalies": [],
+      "font_records": [
+        {
+          "name": "LSKFPM+FandolSong-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 36071
+        },
+        {
+          "name": "QEMQHO+FandolSong-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 198633
+        },
+        {
+          "name": "BFEIPM+CMUSerif-Roman-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 5295
+        },
+        {
+          "name": "MDIHVU+CMUSerif-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 762
+        },
+        {
+          "name": "MBGCSF+CMUSerif-Italic-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 771
+        },
+        {
+          "name": "LSYAFH+FandolKai-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 41746
+        },
+        {
+          "name": "PSFYMT+CMR10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 1766
+        },
+        {
+          "name": "BBMJCD+CMMI10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 3142
+        },
+        {
+          "name": "XZXLXM+CMMI7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 831
+        },
+        {
+          "name": "OGCEJV+CMSY7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 409
+        },
+        {
+          "name": "HCJAWE+CMR7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 872
+        },
+        {
+          "name": "SRHZXM+CMSY10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 778
+        },
+        {
+          "name": "NZHNKJ+CMEX10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 492
+        },
+        {
+          "name": "DKRSWX+MSAM10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 337
+        },
+        {
+          "name": "KGBHMP+LMMono10-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 3065
+        }
+      ],
+      "body_margin_candidates": [
+        {
+          "page": 2,
+          "text": "。",
+          "bbox": [
+            550.4769287109375,
+            335.326904296875,
+            560.4395141601562,
+            345.2895202636719
+          ]
+        },
+        {
+          "page": 3,
+          "text": " 时，",
+          "bbox": [
+            538.71142578125,
+            139.27391052246094,
+            562.2012329101562,
+            149.23651123046875
+          ]
+        }
+      ],
+      "high_resolution_inspected_pages": [
+        2,
+        3
+      ],
+      "visual_notes": "All4 pages inspected; last page contains final exercise solution and bibliography, sparse but deliberate.",
+      "font_embedding_note": "Type3 graphic fonts embed CharProcs glyph streams rather than a standalone font file; main text/math fonts contain extractable embedded font data.",
+      "font_embedding_failures": [],
+      "internal_link_records": [
+        {
+          "source_page": 1,
+          "destination_name": "chapter.1",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.1",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.2",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.3",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.4",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.5",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section*.1",
+          "target_page": 4,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "cite.browserdefenses",
+          "target_page": 4,
+          "valid": true
+        }
+      ],
+      "final_all_pages_rendered": true,
+      "body_margin_candidates_note": "Text bounding boxes can include CJK punctuation side bearings and hanging punctuation; inspected candidates do not show physical page clipping. Only initialpage31 filename was a true body-margin overflow, now repaired.",
+      "final_log": {
+        "path": "book/build/study-browser-injection/study-browser-injection.log",
+        "sha256": "0a9cdb390da76e36c282352ffd96afbcb64a6ff23f9b90dd220b9b8b3911f7f5",
+        "overfull_count": 0,
+        "missing_character_count": 0,
+        "undefined_reference_count": 0,
+        "latex_error_count": 0,
+        "warnings": [
+          "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'."
+        ],
+        "pass_1_stdout_sha256": "03eb693c1fddf31331e26370aae085f11dc31cffee9f70f51ab9b3bff689b8dc",
+        "pass_2_stdout_sha256": "201bc2339db9cc2ae23d8c4e0e6d771275e516c33537bdf3dace42d8b74547fb",
+        "pass_3_stdout_sha256": "201bc2339db9cc2ae23d8c4e0e6d771275e516c33537bdf3dace42d8b74547fb"
+      },
+      "build_pdf_equals_dist": true,
+      "final_text_clipping_candidates": [],
+      "final_replacement_character_count": 0
+    },
+    "r1": {
+      "path": "dist/papers/study-r1-reading.pdf",
+      "sha256": "db9301f9d3195169740cc63852a60daae1e92e7c19592289c5ef1797a582694b",
+      "pages": 3,
+      "link_count": 11,
+      "internal_link_count": 9,
+      "link_anomalies": [],
+      "text_clipping_candidates": [],
+      "blank_text_pages": [],
+      "page_records": [
+        {
+          "page": 1,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 573,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            97,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/r1/page-001.png",
+          "png_sha256": "334ad22d0ed928b47729590794aceda1e5ef19a4123cda9dc6a4520b30d98f8f",
+          "links": 7,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 2,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1421,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1063
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/r1/page-002.png",
+          "png_sha256": "65a33f58f338e89802580cc7cbcedd4782db030f002106b7a03eb4db68231244",
+          "links": 1,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        },
+        {
+          "page": 3,
+          "media_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "crop_box": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "rotation": 0,
+          "text_chars": 1275,
+          "replacement_chars": 0,
+          "ink_box_px": [
+            78,
+            81,
+            772,
+            1064
+          ],
+          "png": "/tmp/v03-final-pdf-book-studies/r1/page-003.png",
+          "png_sha256": "1f217a9a319318e08d40fba25f1c7cec7526c8e39fbe575081d1ec5e8c25c191",
+          "links": 3,
+          "out_of_page_spans": [],
+          "visual_status": "inspected_layout_contact_sheet"
+        }
+      ],
+      "contact_sheets": [
+        "/tmp/v03-final-pdf-book-studies/r1/contact-001-003.png"
+      ],
+      "named_destination_count": 16,
+      "outline_count": 7,
+      "outline_anomalies": [],
+      "font_records": [
+        {
+          "name": "LSECAP+CMUSerif-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 1390
+        },
+        {
+          "name": "MSNJLD+FandolSong-Bold-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 33716
+        },
+        {
+          "name": "TAYXBU+FandolSong-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 180839
+        },
+        {
+          "name": "NQTGUU+CMUSerif-Roman-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 8173
+        },
+        {
+          "name": "ZCGZGA+CMUSerif-Italic-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 1057
+        },
+        {
+          "name": "OPNZFH+FandolKai-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 22279
+        },
+        {
+          "name": "JRKAAF+CMMI10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 2571
+        },
+        {
+          "name": "OXMLOI+CMMI7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 1271
+        },
+        {
+          "name": "TSNXXM+CMR10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 1984
+        },
+        {
+          "name": "XBGSLL+CMSY10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 633
+        },
+        {
+          "name": "CYWVFE+MSBM10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 549
+        },
+        {
+          "name": "SQOHFP+CMSY7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 389
+        },
+        {
+          "name": "BBCLNC+CMMI5",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 390
+        },
+        {
+          "name": "EFXUSW+CMEX10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 551
+        },
+        {
+          "name": "ITCINT+MSAM10",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 337
+        },
+        {
+          "name": "SLUQOC+CMR7",
+          "type": "Type1",
+          "extension": "cff",
+          "embedded_bytes": 458
+        },
+        {
+          "name": "YUTVMV+LMMono10-Regular-Identity-H",
+          "type": "Type0",
+          "extension": "cid",
+          "embedded_bytes": 4216
+        }
+      ],
+      "body_margin_candidates": [
+        {
+          "page": 2,
+          "text": "观察文本和性能现象，不是意识或全部内部推理过程的直接记录。多阶段流程同时改变数据、训练目标与模型状态；",
+          "bbox": [
+            56.6929931640625,
+            696.6439208984375,
+            562.1949462890625,
+            706.6065063476562
+          ]
+        },
+        {
+          "page": 3,
+          "text": "。",
+          "bbox": [
+            551.7599487304688,
+            120.14591979980469,
+            561.7225341796875,
+            130.1085205078125
+          ]
+        }
+      ],
+      "high_resolution_inspected_pages": [
+        2,
+        3
+      ],
+      "visual_notes": "All3 pages inspected; formulas, sample ratios, bibliography clean.",
+      "font_embedding_note": "Type3 graphic fonts embed CharProcs glyph streams rather than a standalone font file; main text/math fonts contain extractable embedded font data.",
+      "font_embedding_failures": [],
+      "internal_link_records": [
+        {
+          "source_page": 1,
+          "destination_name": "chapter.1",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.1",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.2",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.3",
+          "target_page": 2,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.4",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section.1.5",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 1,
+          "destination_name": "section*.1",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 2,
+          "destination_name": "cite.r1nature",
+          "target_page": 3,
+          "valid": true
+        },
+        {
+          "source_page": 3,
+          "destination_name": "cite.rlvrboundary",
+          "target_page": 3,
+          "valid": true
+        }
+      ],
+      "final_all_pages_rendered": true,
+      "body_margin_candidates_note": "Text bounding boxes can include CJK punctuation side bearings and hanging punctuation; inspected candidates do not show physical page clipping. Only initialpage31 filename was a true body-margin overflow, now repaired.",
+      "final_log": {
+        "path": "book/build/study-r1-reading/study-r1-reading.log",
+        "sha256": "9099d46d04b0cfc25193ae397665fbe4561854804ba2c1666e01b244307affbb",
+        "overfull_count": 0,
+        "missing_character_count": 0,
+        "undefined_reference_count": 0,
+        "latex_error_count": 0,
+        "warnings": [
+          "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'."
+        ],
+        "pass_1_stdout_sha256": "c7177189c2ee3cdcd7fdd0bced51383013b772920c311826f35fd829a81b62ba",
+        "pass_2_stdout_sha256": "543b4cac52fee3608e00a9586cf5af7bef1039c913f46885bba5082f4cac1985",
+        "pass_3_stdout_sha256": "543b4cac52fee3608e00a9586cf5af7bef1039c913f46885bba5082f4cac1985"
+      },
+      "build_pdf_equals_dist": true,
+      "final_text_clipping_candidates": [],
+      "final_replacement_character_count": 0
+    }
+  },
+  "status": "PASS",
+  "reviewer": "Independent model agent; not a human peer reviewer",
+  "reviewed_at": "2026-10-12T02:19:22.887174+00:00",
+  "pixel_change_review": {
+    "initial_sha256": "5555d3753cd3ac680ebf151623b8153ae700833978bcb29c26dba4d411eb2007",
+    "final_sha256": "c9bdf9aa359158ce80fea766aabb35d3796adefa36364283b3bdb03491edd4d9",
+    "changed_pages": [
+      31
+    ],
+    "page_records": [
+      {
+        "page": 1,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-001.png",
+        "png_sha256": "ccd196f8eb014f5903e48418cba5e6a8f20c38c08befcd9004049a8f9acfb8f1",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 2,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-002.png",
+        "png_sha256": "1ce5ea1e33e18046964eabae37b646ccd653416b99ecf665f997b3318b45651b",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 3,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-003.png",
+        "png_sha256": "b1ad684650a4c5e429d7be62f6b7ad06297c0eba33e59267e6492d27cb67a211",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 4,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-004.png",
+        "png_sha256": "fb95f493bbbc9ddab64553f776f7d8ce98829c1763fc0767088686703946b8cd",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 5,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-005.png",
+        "png_sha256": "f3d4f2d465f14f54063721f2fc265edcc940d6aeebf0d1ea89e6bf079645ac16",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 6,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-006.png",
+        "png_sha256": "26ec11de14bcd5dd754d23ed272107fd7e334418ce8cfafdf0d4988a9b14bcf1",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 7,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-007.png",
+        "png_sha256": "46ca66efd9b4a81dcdb3df132b37b07ef786206248bb81be2dd1b05572978906",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 8,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-008.png",
+        "png_sha256": "55bb8c651f7bd55803f727778426326e2ba0936a2677b0584557fd7e8812bee1",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 9,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-009.png",
+        "png_sha256": "4cf5a4e347641f270cb56087cd92f99ff1f854d45a9c431291afe93c93bd1834",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 10,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-010.png",
+        "png_sha256": "e9cc0ef997584dc90bd65020f8860221e7bdbe4f193a63ddbcc7a916182fb267",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 11,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-011.png",
+        "png_sha256": "42cbacc97c84d5c6fc55cc595cc4044c272b1987d121c41a864de6845333acfd",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 12,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-012.png",
+        "png_sha256": "5a3d3d451b114caf7ac969012c220349c07b88d1eacb4344d22ec0d4360aa028",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 13,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-013.png",
+        "png_sha256": "fdf67959263d38e9995f954d3792dbad4efb48958336a9d5a6e805391be0d47e",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 14,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-014.png",
+        "png_sha256": "1bc2c373d355abecb1b16473ab7cbd06dbc9f08e97309e8a5ad9325dd52eff92",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 15,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-015.png",
+        "png_sha256": "4c373371107ca3526464f33c12b3d159f4f287b9606c4c51c5b67b80a47cd46a",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 16,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-016.png",
+        "png_sha256": "23c5b2081844d5887bf799e46e1956717ae011f0c8040bdf76cb70d8ebc3b20e",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 17,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-017.png",
+        "png_sha256": "ccd4ff5b415b2bdf586625f8e3dcb696111f1e653578ee6682a630eef69941a4",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 18,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-018.png",
+        "png_sha256": "d580b7d968a561be7d2e10b626fba3bf71f0dba15b5285fd2d8626cb3f245825",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 19,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-019.png",
+        "png_sha256": "9c40adf5d91fa24d59dd46630c831cecb715516a9a46de100e24b085d44220a3",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 20,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-020.png",
+        "png_sha256": "bf7ed430627c479005b971075c213e15f4be3972aae525b3ff156e81ac4326a1",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 21,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-021.png",
+        "png_sha256": "98310f69ba1a315ba2ac987938287e60ae7978300695b41939afbc11ab559a4e",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 22,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-022.png",
+        "png_sha256": "cb59f601f0ec8c7d64059b59525f056e422eaed768976cd0cccc5f5d742d6d8e",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 23,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-023.png",
+        "png_sha256": "4bd9375efe175ed8d3cf5a5a6543e89e45c9ea9c24dda03f1f9f45fa99a307a2",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 24,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-024.png",
+        "png_sha256": "cda3cd00cc9a86be0c1dd5c879ad10f79b05125e46a760310b368bd8f8289920",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 25,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-025.png",
+        "png_sha256": "648a6ad5357e4e7be93e280c6c8d4a746503b2085deea0ee28345ef41d77bc89",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 26,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-026.png",
+        "png_sha256": "f9b581ff7af923593afa3bc624eef78b407f2fd198f1d126d60e54b24debbeb1",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 27,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-027.png",
+        "png_sha256": "66b3e28b8c690fc77c5b35f2920d3222738aed0873685ca0c90538645b5ed9e4",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 28,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-028.png",
+        "png_sha256": "9f0f71417d0c48efbb61a062dd047451de062075693588b0cbdac6a76c552582",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 29,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-029.png",
+        "png_sha256": "b4073f62a8751e05cbfa8f7be98d4711dfb912a8e0ffdc66509463033f4b1b8b",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 30,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-030.png",
+        "png_sha256": "4d145d4deb8c5858b14829ac3c541759a8843f68c252a2033a59d701987afd21",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 31,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-031.png",
+        "png_sha256": "598f68ea50979cea2c4721789553eb452974a906a1011da694ce838dddc1b864",
+        "equals_previously_inspected_render": false
+      },
+      {
+        "page": 32,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-032.png",
+        "png_sha256": "df626760f97acbefa2f027a0ab65c23e130160b16025dc0699fa30ef0e97d084",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 33,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-033.png",
+        "png_sha256": "7ed46457e64ffa7552d0a8f6dae83c172b21e67581e4a0929d0ba2c132b1981e",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 34,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-034.png",
+        "png_sha256": "010b8babceb314828a9649d8360bc065218a2d420692ba8a9419b1382706ad82",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 35,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-035.png",
+        "png_sha256": "2a2a6b34f42d77be5977c59d6cdeb6c7f050025705d090a3056f574c80726d73",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 36,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-036.png",
+        "png_sha256": "b3b5f270fd9b40bc2f0e3006309e4ad1b8d660c380737acdd8d939d80e31af97",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 37,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-037.png",
+        "png_sha256": "e4d8276f22cfbd3cbfcf0786d7f411f8a348edf7c935f86f4b962a7c5b02eb8c",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 38,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-038.png",
+        "png_sha256": "425660013795ce519e1cb847b3cbde5c243125f3848c433c56802d26dec721fd",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 39,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-039.png",
+        "png_sha256": "05cd87464898ab005852f99135b3f31c1aa9885fbe7396d3e2f82f96c348800b",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 40,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-040.png",
+        "png_sha256": "a3bea2c283de2133b978ea8406a54039853e75dfb1c8a746583172b85e2c5302",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 41,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-041.png",
+        "png_sha256": "ccdf20077696fe25e96fe330f2a0cd41a0821454aa826a7a74f0fa7ef208cf83",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 42,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-042.png",
+        "png_sha256": "a9e4537926085b19c3addffdf9d9d989565c41678756bee70c24df88b0d82ddc",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 43,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-043.png",
+        "png_sha256": "01c1dfa06c76a8ad2c2e97afb3d0982db0f83fb635ccb3d9af21cd97dcc82b58",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 44,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-044.png",
+        "png_sha256": "97ee381ff835f66e429c47abb1fec8b88b6ac06137a2777286b31a1dd6e013d9",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 45,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-045.png",
+        "png_sha256": "a9c34b2b4a24769dd8c7fb57567973dac24d6eb35db84a0c962e64492b5bf954",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 46,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-046.png",
+        "png_sha256": "d4c4de4f0aa07fd9230b8a162c8129dbcb7696292e8027d520ace6619837b800",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 47,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-047.png",
+        "png_sha256": "95d460121c55f986e5f087c15a9a904cb7a48b93ad5152b2036ca4974cd13f9c",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 48,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-048.png",
+        "png_sha256": "2c9a185aabbd15221ba0f5465dcbb70ac7c1fca259a9c3ccb29f06d11fa5be09",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 49,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-049.png",
+        "png_sha256": "1334f3f53879d7a2c47f4199f120b09ad74b863c67f46322b7ee41a98ea0b02c",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 50,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-050.png",
+        "png_sha256": "cd8d8ed5135936f2a8692a073f5ed9e3b8e65a92cb2fe60a2c85f1433e8eaf9d",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 51,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-051.png",
+        "png_sha256": "074427946ae9cbbf8eac04aadc57d3b7db7af0be83b7a7cf2ec2dd7594312dd3",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 52,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-052.png",
+        "png_sha256": "35b77911767707c56100acb1b36de7004adb3535abfd4164b5a1edda4906ffb0",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 53,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-053.png",
+        "png_sha256": "4d3326b1ccaf4689e5ef649f727013320f4eea76aac05b4d3c1cfaa897ec5bbe",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 54,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-054.png",
+        "png_sha256": "7a473a30a0d097271c72a5d6c358f58098c0b2135f391eb6f1193b77f26fc227",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 55,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-055.png",
+        "png_sha256": "b601a2f95c1b4235ffee53b9cb058ec36a02fbcf47a17be21a409be4fbf6b693",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 56,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-056.png",
+        "png_sha256": "3291a8eca460c5b23b0766dcab689122d8b053e7a669182df98f7442f0ffd549",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 57,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-057.png",
+        "png_sha256": "c025535fd66004a0c4c5e2ac866a777fadf4590f8212b7c7e761b73353a324c2",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 58,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-058.png",
+        "png_sha256": "fdf047b24d3f8b82ede1366e16da30f68b6e936a2a3870232f60f78aa9b82c10",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 59,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-059.png",
+        "png_sha256": "105924e06724103aded7213f3d642d43aef857ae254b88b9acbf07c32006d329",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 60,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-060.png",
+        "png_sha256": "8bd464fb685f7866d815f04c27f284744b820543f1d4adc2a0bfc156279cf9dc",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 61,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-061.png",
+        "png_sha256": "11b8098c1173e5ede98dbb2d4bc1448d570ac0dc9a346a0e2dfadcb0a6fad530",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 62,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-062.png",
+        "png_sha256": "941fa9738a41257395cc5e6f22198cbce75906c6e488704043a3f2bc30c255ce",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 63,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-063.png",
+        "png_sha256": "419addc78b731becd66ee9adb37a241fd8015a38b4dc718f3a87d22931e683ce",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 64,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-064.png",
+        "png_sha256": "1415bdca825f8984e387d8a80299a947157803fdee5e0b86ebd61e9d33723bfa",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 65,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-065.png",
+        "png_sha256": "3ce5db2f70bd3ed85200fd484b6e49f95fb6ab9d06d374353b8851d1dbbcd61f",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 66,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-066.png",
+        "png_sha256": "ec2a53087d9cd844b4f5d92997e591958bd2b7484a42d3a4445a4cdd2a12eebd",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 67,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-067.png",
+        "png_sha256": "76d3a7c31db361ee831d870b8880214863ddb1f2561760a66ed0af8b455e9959",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 68,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-068.png",
+        "png_sha256": "c70f8784a571e390580cb6a3c01ed4cd946c731e6c56e89179a97f34af76015d",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 69,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-069.png",
+        "png_sha256": "d79feee6b4111c6dee604eafd37b0046eab2c795d7ea076282166a3186f5202f",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 70,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-070.png",
+        "png_sha256": "598a6140e169a88dc974524ef35b6120eeb5fa397ccdd9149e1d4338395ad443",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 71,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-071.png",
+        "png_sha256": "4b9ed4b51a0242a69bcf820930a90d38df5ac54390dbb428f95ebf69e8eab3b5",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 72,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-072.png",
+        "png_sha256": "e843f726c2ff9ad1bb7737af4280d0412735b325ea993d2349092cf965c8ecad",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 73,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-073.png",
+        "png_sha256": "93d0942857073ea727cd9034f3d75805dd0d7eb25a5cb30b38c02c926b15e051",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 74,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-074.png",
+        "png_sha256": "32b7a98dc613478d449912fc9fbbbb8a6ce27ffac14f347dbddff5109df0fc8c",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 75,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-075.png",
+        "png_sha256": "7a1f2e11eba3dc52323f3c26c210d2895e28498b4f9a7f44207b770ef0205bbd",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 76,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-076.png",
+        "png_sha256": "6b39d1ef93522c5f2ed862ee12b6fba2c19843c7f17bfb395ced20b754a40dc6",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 77,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-077.png",
+        "png_sha256": "446a225fe15af409ef450168f6cbb96d695e1d36edfeaf24e5af608b00b99d7b",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 78,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-078.png",
+        "png_sha256": "7b015c3ef22961605220620e8a131f7406318fd903eda65c35395f8af4e000ca",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 79,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-079.png",
+        "png_sha256": "676afa635e95f79a58158bf59045b8d0813a23ba81daa03ef8621d2f26c6ccd9",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 80,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-080.png",
+        "png_sha256": "af98603d6e1e5a96cbebfa825632b939b0d7a7fbfb5c23fbc7dc5a72fa4aa113",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 81,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-081.png",
+        "png_sha256": "e15efd045e2d3b9312cdae650ca694034ad9dff15f3f2d7b397168533410cf99",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 82,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-082.png",
+        "png_sha256": "15ea8ebc1456911e084ea943b09bf154f09b1934706d2199e3eaf0d1d04ae115",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 83,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-083.png",
+        "png_sha256": "f66b511e08130aa745f9025e22b400f071f2a0ffe7de12c09a83108362ff735f",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 84,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-084.png",
+        "png_sha256": "82123e18b3575305f7d9bd69391e053f757a83fc5b6d82c204145d3f34bc05a6",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 85,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-085.png",
+        "png_sha256": "1d4cf7da6fc7b84ce3a53eccbd44fbdb6410124cc7ae2ed1b581fa249c32110e",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 86,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-086.png",
+        "png_sha256": "b3a024051422679d53065510b57770d1e6f52e2e7129b8cf0755b6f51b04be53",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 87,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-087.png",
+        "png_sha256": "05b752d4ef59624a3a9c08c54f3e02b865e2283658da676eb338b51ee44a9342",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 88,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-088.png",
+        "png_sha256": "fd9123312bd1375599d87bced02baa24d3b6599b94bf1c6436d9008d30a3fb46",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 89,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-089.png",
+        "png_sha256": "49ded596fccedaa5a9c44a66d8d2123e85489ea8d5443a5e310089aa49eb9c76",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 90,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-090.png",
+        "png_sha256": "5e416c6d4d690d86737dfa30b989933892cd18ab3af590e66f3e1ee0e68e7f7a",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 91,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-091.png",
+        "png_sha256": "ffb8acf1365f8f2d162ad016a860412099d3348e40f903fb942437bf2b8610d5",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 92,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-092.png",
+        "png_sha256": "0f47e99d316b35bff8f6d377cde00cda22692a35cb99457e89cb84c19df08509",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 93,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-093.png",
+        "png_sha256": "831b102e479c2f017ae34d908e15d6733d248b6bccea08b96cfe659fb2d6fb03",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 94,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-094.png",
+        "png_sha256": "ad6cad0337e20ff70e520b5c3eb1a251dd6a87899f6987968b18f0d512ec9e2c",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 95,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-095.png",
+        "png_sha256": "eb6e1355ba7ba63f97a2f1315cb01dcf8e39e84fee6b4bbc0edcea45e8feaa5f",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 96,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-096.png",
+        "png_sha256": "12ce38be99ccc6fc2e759640a28bf12e952f004a7f5e62d56da4884226bd6a9c",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 97,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-097.png",
+        "png_sha256": "5c723ec1040a127cac76da78f4516a9d664ce997557ec57ac33e5eb01fb06367",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 98,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-098.png",
+        "png_sha256": "7887ffb779d7b6266474f8856c206187adc5ebda18f0633f2af36ce40a933df5",
+        "equals_previously_inspected_render": true
+      },
+      {
+        "page": 99,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/page-099.png",
+        "png_sha256": "07ae758282f40133db7c6caa0726f9eee6d52dd3d55a3d9f513df9519c228736",
+        "equals_previously_inspected_render": true
+      }
+    ]
+  },
+  "visual_review_method": "All110 pages opened in20 contact sheets;19 selected pages opened at180dpi; final book re-rendered all99 pages, onlypage31 changed and independently re-opened at180dpi.",
+  "source_snapshot": {
+    "book/main.tex": "ef575198f84c7b2060f2d954c24df12183b744cfecb8d9099bd6f6cb85d454a3",
+    "book/references.tex": "2cf035a1d74ed30e1806c8d32b0a633d5899db9ac09f265fb441b16018c00c82",
+    "book/chapters/09.tex": "b6201c62bbdff859e54214fb80ed1b79d1f69df6c0ffb3bc561fb1c7a1d066d4",
+    "book/chapters/posttraining.tex": "61b7c793755e44b180390d3cdc4d0619d9980d26d2427f124575727d1b1524dc",
+    "book/chapters/10.tex": "d218e48baf81c17bd8e98908e5feaeaeaed190a6adff496543546e30d67bd9fd",
+    "book/chapters/06.tex": "36c12f508dbfffdcd7b2f01683128ef70a7100ae3b87fe643c513839d15cb503",
+    "book/chapters/03.tex": "db77613bd0d3a8ffd788aef0fd00d00994938fb8eb5e9b863386decd88be4dea",
+    "book/chapters/13.tex": "55eaf93e06641a63851d88bc0c8c4359d2fdd52e9480e9e4bac07d546e90c1d6",
+    "book/chapters/02.tex": "9fdbf5ff16efb0b2883e93c91649b0a616e7559fcb2310eac938190ba8f7accf",
+    "book/chapters/01.tex": "0fa88d765b6089acabbe1d5bdf60549ec9bdd8c9b390a6644ec0686e38f7b1d7",
+    "book/chapters/12.tex": "802b32f06f48b56a3c34581b2fbe201eea28220522c42c6ab4d239873e94edc9",
+    "book/chapters/language-prediction.tex": "20d8efe61bea6ddd774c2e9b9377f4a3df3c847ab04b18db628793f13e0bbce5",
+    "book/chapters/11.tex": "700f3b3dfc56c51b147b5c595216cfae4f3d1dd521425452ae602322137bd8ae",
+    "book/chapters/04.tex": "b23179240e0f090be6874934ab8dc36981069fb1147d84cf1c8ab0d5561418df",
+    "book/chapters/07.tex": "1fb1c730cd83eab2954fa55f19382151f8dcc940e3e983fb24e14a8c962488bf",
+    "book/chapters/05.tex": "afc7dcdd55c69241c4fb6a5be976060244bbeb5c47c459f2ea305d126408a9bb",
+    "book/sections/research-bridges.tex": "6da733fedc6705569c7378690b1dd33dfec57f2387be548336fcd505faf28be4",
+    "book/sections/standard-model.tex": "223d4ad098190257bd47d1bbf869bed324092e4a7236c83ad6dd688bd703ee70",
+    "book/sections/public-models.tex": "51a6751284b459d1bce5124f018668d610f0dc307f2e4387df66865c3285f221",
+    "book/generated/summary.tex": "154d77b0a5e064602e1d67972fa47be0767000205810a4e27501ab3710b4b505",
+    "book/generated/v03-public-table.tex": "2c5bb0772c1a8f1394aea2329577c907b414fc2c34314237a55e4b048cd18aee",
+    "book/generated/v02-residual.tex": "85675283c96571891c451ca3b862f9216546ff4d062f6464f1e697cf2bfd8788",
+    "book/generated/v02-research-summary.tex": "9d7071ba330366387be9ed3572442881ec28708ccb9d8650414e35165d12f68c",
+    "book/generated/v02-attention.tex": "1420afdeae979363fc31434a893ad98f9825f96ff282cdd05eab0fc540b4bf24",
+    "book/generated/v02-research-effects.tex": "07db24b0c1e193a3c327c8f9e3c0be6071b20437fb22517212fde2524a1bee0e",
+    "book/generated/v03-standard-table.tex": "4dc309404a021d336065c8e0ee65b0db507df881f57634876d7e5392c0596882",
+    "book/generated/v02-research-runs.tex": "9a0a0788870b43a345dc6a46ba4ca9536a5da05b5b792e871b4ea5fb77382d0f",
+    "book/generated/v02-research-positions.tex": "531eccacad7389964e1cb478ed1dbc7a7721f408916d0dc6f7735f4c21e38bb4",
+    "papers/studies/ih-challenge.tex": "7064549a30795cc12a5f81ed27b37d9ecee0fb5576c38dea7a89c7d396a431b5",
+    "papers/studies/browser-injection.tex": "00e95fe9588b47fb0fdf14c84cb0820e2567f3dff6ad2537b0fbedcfe94e0b88",
+    "papers/studies/r1-reading.tex": "4bb7099c88271488a762cadd3a0d94aa2955b900637691d302895bb33edb65dd",
+    "book/study-ih-challenge.tex": "a4b648a2e6d4f3878603ab7fdd545b8e4f20a777a4ec49f136ba8ea632ed51b8",
+    "book/study-browser-injection.tex": "b5644134fc18fed46f1729e7ecfc114822e6f5a384dd6a1a312552c4a73a9010",
+    "book/study-r1-reading.tex": "48d83aee8bc9c85094a020b0db75887798dfbf9a84216924e5e29eee6a5db543",
+    "book/generated/language_model.pdf": "b034148f97aed68e41e70ffd0fa037dee0ef0fe7b1664ceee1ee32a1b4c26f40",
+    "book/generated/spurious.pdf": "ed9eee12bec6b4e409978aa2fae52a459c48a3d7e6ce405d759a91106905bd8b",
+    "book/generated/mlp.pdf": "e015dc23a01a1cdbf197bea14f147230f83081bf04d21a0c540f07a0efd6b6a5"
+  },
+  "locked_class_equal_approved_HEAD": true,
+  "locked_class_contents_sha256": "92188b261de87c1412bb6245a131492cd1a4fb34d900aa527c7df78fb0bbdf28",
+  "manual_inspection_contact_sheets": [
+    "/tmp/v03-final-pdf-book-studies/book/contact-001-006.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-007-012.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-013-018.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-019-024.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-025-030.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-031-036.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-037-042.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-043-048.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-049-054.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-055-060.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-061-066.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-067-072.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-073-078.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-079-084.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-085-090.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-091-096.png",
+    "/tmp/v03-final-pdf-book-studies/book/contact-097-099.png",
+    "/tmp/v03-final-pdf-book-studies/ih/contact-001-004.png",
+    "/tmp/v03-final-pdf-book-studies/browser/contact-001-004.png",
+    "/tmp/v03-final-pdf-book-studies/r1/contact-001-003.png"
+  ],
+  "blank_text_pages": {
+    "book": [],
+    "ih": [],
+    "browser": [],
+    "r1": []
+  },
+  "limits": [
+    "Layout review is independent model-agent review, not human peer review.",
+    "No fresh PDF compile performed by reviewer; author final3pass logs and build/dist byte equality inspected.",
+    "External URL reachability not retested in this PDF navigation audit.",
+    "Native CJK italic font substitution and2mild underfull boxes retained after actual visual inspection; not reported as zero warnings."
+  ],
+  "inline_height_warning_review": {
+    "reviewed_at": "2026-10-12T02:38:22.319607+00:00",
+    "validator_path": "qa/v03-typesetting.json",
+    "validator_sha256": "6a0880f1a186cab9d6bbca32270c317f2ef4e35e3d02b6202ffb0cd518196064",
+    "validator_automated_status": "PASS",
+    "validator_error_count": 0,
+    "final_pdf_sha256": "c9bdf9aa359158ce80fea766aabb35d3796adefa36364283b3bdb03491edd4d9",
+    "findings": [
+      {
+        "file": "chapters/13.tex",
+        "line": 166,
+        "pdf_page": 75,
+        "dpi": 180,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/inline-review-075.png",
+        "png_sha256": "c03f58cfbcfb23b27ca8ad1c5f90ab4af1f13498824beb0ec77d119661737332",
+        "actually_opened": true,
+        "disposition": "accepted_as_inline",
+        "reason": "Two-row matrix slightly increases local line height; visible separation from adjacent text, no collision/cropping or abnormal blank; preserve continuous sentence."
+      },
+      {
+        "file": "chapters/02.tex",
+        "line": 67,
+        "pdf_page": 84,
+        "dpi": 180,
+        "png": "/tmp/v03-final-pdf-book-studies/book-final/inline-review-084.png",
+        "png_sha256": "52c4e695ee3b19c2606ea6c65a631fefda1003f29a5c970eaead21a5ed963fc2",
+        "actually_opened": true,
+        "disposition": "accepted_as_inline",
+        "reason": "Single-line example statement remains readable; matrix lower edge clear of solution, brackets and numbering complete; local height justified."
+      }
+    ]
+  }
+}

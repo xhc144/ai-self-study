@@ -1,0 +1,27 @@
+\Needspace{6\baselineskip}
+\phantomsection
+\noindent\textbf{原文表 1. AlphaProof 在形式数学基准上的表现.}\paperlabel{1}{alphaproof-table1}
+\begin{longtable}{p{4.8cm}p{2.6cm}rrr}
+\toprule
+名称 & 每题计算预算 & \shortstack{miniF2F-test\\\cite{alphaproof-ref20}} & formal-imo & \shortstack{PutnamBench-test\\\cite{alphaproof-ref21}} \\
+\midrule
+\endfirsthead
+\toprule
+名称 & 每题计算预算 & \shortstack{miniF2F-test\\\cite{alphaproof-ref20}} & formal-imo & \shortstack{PutnamBench-test\\\cite{alphaproof-ref21}} \\
+\midrule
+\endhead
+\multicolumn{5}{l}{\textbf{此前最先进结果 (IMO 2024 前)}} \\
+GPT-F expert iteration\cite{alphaproof-ref24} & -- & 36.6\% & -- & -- \\
+Hypertree proof search\cite{alphaproof-ref17} & -- & 41.0\% & -- & -- \\
+InternLM2-Math-Plus-7B\cite{alphaproof-ref23} & -- & 43.4\% & -- & -- \\
+\multicolumn{5}{l}{\textbf{此前最先进结果 (IMO 2024 后)}} \\
+Kimina-Prover Preview\cite{alphaproof-ref25} & -- & 80.7\% & -- & 1.6\% \\
+DeepSeek-Prover-V2\cite{alphaproof-ref26} & -- & 88.9\% & -- & 5.3\% \\
+\multicolumn{5}{l}{\textbf{本工作}} \\
+AlphaProof & 2 TPU 分钟 & 96.3\% & 33.2\% & 27.9\% \\
+AlphaProof & 12 TPU 小时 & 97.7\% & 43.7\% & 39.4\% \\
+AlphaProof 加 TTRL & 50 TPU 日 & 97.5\% & 53.9\% & 45.5\% \\
+AlphaProof 加 TTRL & 500 TPU 日 & 99.6\% & 58.3\% & 56.1\% \\
+\bottomrule
+\end{longtable}
+\noindent\textbf{原表注.} 每个其他系统使用其报告的最强结果, 对应最大计算预算, 与 AlphaProof 比较. “--” 表示计算预算或评估结果不可用. AlphaProof 的“每题计算预算”为原文图 4a 定义的平均计算成本, 只含推断预算, 不含主 RL 循环摊销成本. AlphaProof 的 miniF2F-test 使用修订版本, 见“方法”; 其他系统数值按各自论文和所用数据版本报告, 因而直接比较须考虑潜在数据差异并保持谨慎. PutnamBench-test 的此前工作分数, 按各系统公开报告的证明重新计算, 确保与本测试划分一致; 因此可能不同于那些系统在完整 PutnamBench 上报告的数字.

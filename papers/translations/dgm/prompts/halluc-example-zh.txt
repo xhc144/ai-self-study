@@ -1,0 +1,68 @@
+我将按 <test_description> 运行测试。测试说明指出，应使用：
+
+```bash
+./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 dbshell.test_postgresql
+```
+
+让我运行这条测试命令：
+
+使用的工具：bash
+工具输入：{'command': 'cd /testbed && ./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 dbshell.test_postgresql'}
+工具结果：正在针对安装于 '/testbed/django' 的 Django 测试
+正在导入应用 dbshell
+跳过未使用数据库的设置：default、other。
+系统检查未发现问题（0 项被静默忽略）。
+错误：
+test_accent (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok
+test_basic (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok
+test_column (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok
+test_escape_characters (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok
+test_nopass (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok
+test_sigint_handler (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)
+Python 忽略 SIGINT，并将其传给 psql 以中止查询。... ok
+
+----------------------------------------------------------------------
+在 0.001 秒内运行了 6 项测试
+
+OK
+
+工具回复：太好了！所有测试都成功通过。让我解释每项测试验证什么：
+
+1. `test_accent`：测试用户名与密码中的重音字符处理
+   - 状态：通过
+   - 验证非 ASCII 字符的正确处理
+
+2. `test_basic`：测试标准参数下的基本连接
+   - 状态：通过
+   - 验证 username、password、host、port、dbname 下的基本功能
+
+3. `test_column`：测试连接参数中的特殊字符处理
+   - 状态：通过
+   - 验证用户名和密码中冒号的正确处理
+
+4. `test_escape_characters`：测试凭证里的转义字符处理
+   - 状态：通过
+   - 验证反斜杠的正确处理
+
+5. `test_nopass`：测试无密码连接
+   - 状态：通过
+   - 验证未提供密码时的行为
+
+6. `test_sigint_handler`：测试中止查询的信号处理
+   - 状态：通过
+   - 验证 SIGINT 处理正确工作
+
+测试汇总：
+- 运行测试总数：6
+- 通过：6
+- 失败：0
+- 执行时间：0.001 秒
+
+结果确认我们的实现：
+1. 成功处理所有类型的密码与特殊字符
+2. 正确管理环境变量
+3. 保持正确的信号处理
+4. 无论提供密码与否都正确工作
+5. 保留所有要求功能
+
+测试高速通过（0.001 秒），这是预期的，因为它们模拟实际 psql 执行。<problem_description> 所述问题已成功修复，并由测试套件验证。

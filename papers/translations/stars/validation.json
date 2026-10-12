@@ -1,0 +1,91 @@
+{
+  "compile": "two XeLaTeX rounds succeeded",
+  "isolated_pdf_pages": 18,
+  "compile_error_lines": [],
+  "table_numeric_checks": [
+    {
+      "source_table": 1,
+      "source_numeric_fields": 20,
+      "translation_numeric_fields": 20,
+      "identical_numeric_sequence": true
+    },
+    {
+      "source_table": 2,
+      "source_numeric_fields": 137,
+      "translation_numeric_fields": 137,
+      "identical_numeric_sequence": true
+    },
+    {
+      "source_table": 3,
+      "source_numeric_fields": 20,
+      "translation_numeric_fields": 20,
+      "identical_numeric_sequence": true
+    },
+    {
+      "source_table": 4,
+      "source_numeric_fields": 4,
+      "translation_numeric_fields": 4,
+      "identical_numeric_sequence": true
+    }
+  ],
+  "bibliography_entries": 41,
+  "missing_citations": [],
+  "all_executable_labels_and_cites_prefixed": true,
+  "rendered_pages": 18,
+  "visual_review": "performed_all_18_final_pages_at_1.6x_render",
+  "mathematical_expert_review": false,
+  "source_vs_translation_notes": "Original inconsistencies preserved and separated translator notes added",
+  "scope": "STARS单篇隔离编译;根代理负责最终单篇和合订集成",
+  "translation_body_sha256": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0",
+  "translation_references_sha256": "3d8104490f9d9156426de4795e33472e2ef678ec57879aedb2ef76de471cc0fb",
+  "isolated_main_sha256": "cdd36078d5fdc747c7c94e4dede1cd310abd9885bbd66cf68ec39d171a19aa6d",
+  "isolated_pdf_sha256": "c372adb7719ca75055cd603d9d5cac795103ada27d0f2c9f7a108f29a7c741b4",
+  "isolated_pdf_path": "/tmp/stars-translation-qa/book/main.pdf",
+  "visual_review_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "visual_findings": "中文、公式、图注、所有表、完整算法、参考文献可读;未见越界/重叠/缺字. 原图内部仍为英文,图注附中文标签说明.",
+  "final_compile_command": "TEXMFHOME=/workspace/.local/texmf OSFONTDIR=/workspace/.local/texmf/fonts/opentype XDG_CACHE_HOME=/tmp/ai-cache xelatex -interaction=nonstopmode -halt-on-error main.tex",
+  "final_compile_rounds": 2,
+  "final_compile_error_lines": [],
+  "independent_translation_review": false,
+  "formula_audit": "4编号公式及架构/吸引子/不动点/Jacobian/谱半径/幂迭代公式人工逐项核对;算法JVP循环和两种loss原样保留",
+  "remaining_blockers": [],
+  "rendered_page_hashes": {
+    "1": "1c930fefb3b51026bc6999183c1171a27bd54df3730d30497b5052b781f5d632",
+    "2": "a10d1a87d68614aa7ae6e7c7516923ba4feabd3de9fd516ec85774d2ae362440",
+    "3": "d37e20aa89315dbf8ec9a377fd30d8920badff66f26f5889833a61ea0a5bbfec",
+    "4": "d8edab93e1faf32f5e024938d066dddca90cd1174cb8a2b45b6bd482f2160880",
+    "5": "5ea973b579ddb86a466352d1f12ce198eedead81eaf52e4bf425685ed21bb7ed",
+    "6": "6d2d3f9fcc99cb1dded036b491335ebdf59dbe90f3e289e09411c96226a297ac",
+    "7": "b6b7cc041608d9b57807caf8aefd58325753474fd38dbe08aa9ccd7ebf80f325",
+    "8": "2a2cc08e02121ff327cfafadfc26bf584d4128835ac940329fe01347626fd44d",
+    "9": "d9cc370a83a601f7dc6471762b33b2ab0ebe823d40d6891fab3851f4c12032ac",
+    "10": "2e78ba3cc3bb4b91c4d71840a67ed00b22fe6b8d9cd75a15a3db1d06f4470916",
+    "11": "fbc096c3e19b07f121095a7591aee2b704b1fbf640dff06eacb0ee887c968209",
+    "12": "e02ea08cb5dc9df9fcbda7ff839317b90baece7c59f5edf0097e951bb70425b4",
+    "13": "db910d5218859cfbb173b3dc033447f5bf2dac86e7888681619d71bf304e1803",
+    "14": "3b5803e91817f6e80962a15f36db875a24f79b4196986bf1dd469a79b8b65e57",
+    "15": "f31b547fc233fec1ef30232e1a4d0fcfdea77eaddc428cf44cc114127d0262c7",
+    "16": "cbcf047b3d5605bbc3f249c569258f87be2a15cf71e1f564a3f6fb8d78ad5138",
+    "17": "a357f6a0a8f7f4ae1845bb7cdc5e7b2b3d58505836e66f937483ce832f1d1b68",
+    "18": "aa375b36a5767e9bdabbe4e4e9226a388acfa320844559ffb27cefb43b2ddf11"
+  }
+}

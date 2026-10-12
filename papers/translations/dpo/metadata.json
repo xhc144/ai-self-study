@@ -1,0 +1,65 @@
+{
+  "title_original": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+  "title_zh": "直接偏好优化：语言模型其实也是奖励模型",
+  "authors": [
+    "Rafael Rafailov",
+    "Archit Sharma",
+    "Eric Mitchell",
+    "Stefano Ermon",
+    "Christopher D. Manning",
+    "Chelsea Finn"
+  ],
+  "author_notes": "First three authors contributed equally; more junior authors listed earlier. Stanford University; Stefano Ermon also CZ Biohub.",
+  "arxiv_id": "2305.18290",
+  "version": "v3",
+  "version_date": "2024-07-29",
+  "official_urls": {
+    "abstract": "https://arxiv.org/abs/2305.18290v3",
+    "html": "https://arxiv.org/html/2305.18290v3",
+    "pdf": "https://arxiv.org/pdf/2305.18290v3",
+    "source": "https://arxiv.org/src/2305.18290v3"
+  },
+  "original_license": {
+    "identifier": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "evidence": "Official arXiv v3 HTML header explicitly states License: CC BY 4.0. Source and paper have no visible separate exception for author-generated experimental plots; the SurveyMonkey screenshot is not redistributed."
+  },
+  "translation_license": "CC-BY-4.0",
+  "translator": "ai-self-study contributors",
+  "translator_process": "Machine-assisted Chinese translation followed by AI comparison to official LaTeX/PDF; no claim of completed human expert review or author endorsement.",
+  "date": "2026-10-12",
+  "changes": [
+    "Full Chinese translation of abstract, sections 1–7, acknowledgements, author contributions, Appendices A–D, all prompts and sample responses.",
+    "All 51 bibliography items retained in their original bibliographical wording.",
+    "Mathematical formula content preserved; labels prefixed dpo-; original style macros expanded using the owning book typography.",
+    "Two content-only Chinese redraws for Figures 1 and 5. All six experimental plot PDFs reproduced without modifying curve values. Chinese caption/axis/legend translations supplied.",
+    "Tables converted to breakable longtable without dropping cells. Code document strings translated; identifiers, calculations and output schema field keys preserved. Degenerate English token output retained in full with Chinese gloss.",
+    "Explicit translator notes identify original inconsistencies and factual errors without silently correcting them.",
+    "Table 2 row heading N respondents clarified as judgment count; original heading and reason for change explicitly disclosed."
+  ],
+  "scope": "Complete v3 paper translation; not an abridgement or study guide.",
+  "source_hashes": {
+    "original.pdf": "92cb3a2b71362acda98a789b03d88688fd33cf5fcf13f81d2b1de30ee7d3b67a",
+    "source.tar": "750054a6d13d9f79559d6defbfa68432e2a8c8959f0b7e7e37c622c1740653cc",
+    "original.html": "46515bc6001158063f3da04695b1412099bc40b90c53f54bf1834581aefa15d1",
+    "main.tex": "c670b679a12b1a9316ffe38540bc8bd2d744e49d6b115da64aded587c9bf96d8",
+    "main.bbl": "4ccd759f1caeb182990fceb737062cd1aa92ea3578d98ee1ae4bd88e5c1b46bc"
+  },
+  "public_original_bundle": false,
+  "validation": {
+    "source_display_formulas": 32,
+    "translated_display_formulas": 32,
+    "exact_formula_token_comparison": "all passed after documented reference macro expansion and annotation translation",
+    "numbered_tables": 10,
+    "unnumbered_participant_table": 1,
+    "figures": 5,
+    "bibliography_items": 51,
+    "review": "AI source comparison; human expert review not completed",
+    "compile": "Passed direct XeLaTeX fixed-template compilation, two converged final runs; 35 pages; no undefined references, missing characters or Overfull boxes.",
+    "visual_review": "All 35 pages visually inspected across build iterations; modified pages rerendered and rechecked. Native QED placement and sample-table caption pagination repaired without content deletion.",
+    "typesetting_skill": "AUTOMATED PASS on project-contained snapshot; only static relative asset path prefix normalized. Warnings reviewed: source-required subsection headings explicitly allowed by task, and inline-height reminders concern diagram arrows."
+  },
+  "deliverable_hashes": {
+    "body.tex": "3ba5c8f3532ad262e7defe5ccce82f6f570324200fad20befaa7fb5423581880"
+  }
+}

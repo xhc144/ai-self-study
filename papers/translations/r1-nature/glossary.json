@@ -1,0 +1,179 @@
+{
+  "language": "en–zh-CN",
+  "scope": "Nature Version of Record, DOI 10.1038/s41586-025-09422-z",
+  "terms": [
+    [
+      "large language model (LLM)",
+      "大语言模型"
+    ],
+    [
+      "chain of thought (CoT)",
+      "思维链"
+    ],
+    [
+      "reinforcement learning (RL)",
+      "强化学习"
+    ],
+    [
+      "supervised fine-tuning (SFT)",
+      "监督微调"
+    ],
+    [
+      "Group Relative Policy Optimization (GRPO)",
+      "组相对策略优化"
+    ],
+    [
+      "proximal policy optimization (PPO)",
+      "近端策略优化"
+    ],
+    [
+      "advantage",
+      "优势"
+    ],
+    [
+      "reference policy",
+      "参考策略"
+    ],
+    [
+      "old policy",
+      "旧策略"
+    ],
+    [
+      "policy model",
+      "策略模型"
+    ],
+    [
+      "rule-based reward",
+      "基于规则的奖励"
+    ],
+    [
+      "accuracy reward",
+      "正确性奖励"
+    ],
+    [
+      "format reward",
+      "格式奖励"
+    ],
+    [
+      "model-based reward",
+      "基于模型的奖励"
+    ],
+    [
+      "helpfulness",
+      "有用性"
+    ],
+    [
+      "harmlessness",
+      "无害性"
+    ],
+    [
+      "reward hacking",
+      "奖励投机"
+    ],
+    [
+      "cold-start data",
+      "冷启动数据"
+    ],
+    [
+      "rejection sampling",
+      "拒绝采样"
+    ],
+    [
+      "distillation",
+      "蒸馏"
+    ],
+    [
+      "rollout",
+      "策略采样展开"
+    ],
+    [
+      "checkpoint",
+      "检查点"
+    ],
+    [
+      "epoch",
+      "数据遍历轮次 (正文保留 epoch)"
+    ],
+    [
+      "minibatch",
+      "小批量"
+    ],
+    [
+      "language mixing",
+      "语言混杂"
+    ],
+    [
+      "language consistency",
+      "语言一致性"
+    ],
+    [
+      "self-consistency decoding",
+      "自一致性解码"
+    ],
+    [
+      "self-reflection",
+      "自我反思"
+    ],
+    [
+      "self-verification",
+      "自我验证"
+    ],
+    [
+      "self-evolution",
+      "自我演化"
+    ],
+    [
+      "aha moment",
+      "顿悟时刻"
+    ],
+    [
+      "temporal reasoning",
+      "时间推理"
+    ],
+    [
+      "test-time scaling",
+      "测试时计算扩展"
+    ],
+    [
+      "generalized advantage estimation (GAE)",
+      "广义优势估计 (原图缩写的译注)"
+    ],
+    [
+      "actor–critic",
+      "行动者–评论家"
+    ],
+    [
+      "pairwise loss",
+      "成对损失"
+    ],
+    [
+      "pointwise methodology",
+      "逐点方法"
+    ],
+    [
+      "ground-truth answer",
+      "标准答案"
+    ],
+    [
+      "token efficiency",
+      "token 效率"
+    ],
+    [
+      "prompt engineering",
+      "提示工程"
+    ],
+    [
+      "pass@1",
+      "单次输出通过率 (指标名保留 pass@1)"
+    ],
+    [
+      "cons@16",
+      "16 次输出自一致性指标 (正文保留 cons@16)"
+    ]
+  ],
+  "notes": [
+    "Behavioural vocabulary retained as author descriptions; no assertion of consciousness added.",
+    "RLVR is mentioned only in a marked translator note; it is not silently substituted for the source terminology.",
+    "No original result is inferred from glossary expansions."
+  ]
+}

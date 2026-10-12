@@ -1,0 +1,10 @@
+\textbf{Bash 工具说明的完整中文译文.}
+在 bash shell 中运行命令. 调用该工具时，command 参数内容无需作 XML 转义. 不能通过此工具访问互联网. 可以通过 apt 和 pip 访问常见 Linux 与 Python 软件包的镜像. 状态在多次命令调用及与用户的讨论间保持持久. 若要查看文件特定行范围，如 10--25 行，可使用 \texttt{sed -n 10,25p /path/to/the/file}. 避免可能产生大量输出的命令. 长时间运行的命令应放到后台，例如 \texttt{sleep 10 \&}，或在后台启动服务器. 输入模式为 object，含字符串属性 command，其说明为“要运行的 bash 命令”；必填属性是 command.
+
+所提供编辑工具的信息如下：
+\VerbatimInput[breaklines,breakanywhere]{../papers/translations/dgm/code/initial_agent-edit_tool.txt}
+\textbf{编辑工具说明的完整中文译文.}
+这是用于查看、创建和编辑文件的定制编辑工具. 状态在多次命令调用及与用户讨论间持久保存. 如果 path 是文件，view 显示含行号的整个文件；如果 path 是目录，view 列出最多两层深的非隐藏文件与目录. 若指定 path 已是文件，不能使用 create. command 若生成很长输出，会被截断并标为 \texttt{<response clipped>}. edit 用提供的 file\_text 覆盖整个文件. 不支持局部编辑、指定行范围编辑或局部查看. 输入模式为 object，command 为字符串，枚举为 view、create、edit，说明为“要运行的命令：view、create 或 edit”；path 为字符串，说明为“文件或目录的绝对路径，例如 /repo/file.py 或 /repo”；file\_text 为字符串，说明为“create 或 edit 所需参数，包含整个文件的内容”. 必填属性是 command 和 path.
+
+任务提示的完整中文译文如下，模板占位符原样保留：
+\VerbatimInput[breaklines,breakanywhere]{../papers/translations/dgm/prompts/initial-task-zh.txt}

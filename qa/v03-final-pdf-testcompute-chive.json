@@ -1,0 +1,2927 @@
+{
+  "testcompute": {
+    "pdf_path": "/workspace/ai-self-study/dist/papers/testcompute.pdf",
+    "pdf_sha256": "2def43e5ed63b670ae9fb929f5e38bf5965b69ad1ccadf4d40d2bd6642d265e1",
+    "build_pdf_same_hash": true,
+    "pages": [
+      {
+        "page": 1,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-001.png",
+        "render_sha256": "96fe43a519cd53c9e91e1fc8d7fe60aa0769f7b02afca467bcef0dd8dc51de4f",
+        "text_chars": 2405,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "05ed9c1c1d199353b1e27d67f280619e9996b8eab370e4b78dcc7924a99eeeaf",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 2,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-002.png",
+        "render_sha256": "8fc1463d9cd246c204230b58cb57c760b3d197414f9dcb6b103c6fce1365dd9f",
+        "text_chars": 1732,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "e462b021d70df97944d709ae621a9543ee67df87e6e03c9e0b20554c632cc3ae",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 3,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-003.png",
+        "render_sha256": "88e4c893c1b7532b4db66b3e17968110a6cf87485fd8ebea608a7c5dbd281723",
+        "text_chars": 1629,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "a7bb52962b283f346aeacd83cf773fdee0223e7288388042750ce4fea86f2534",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 4,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-004.png",
+        "render_sha256": "d9e1d8c8f7d02e2c0d03940fa81d84a77c4efb022cac0cf3416fc2f21e9aefca",
+        "text_chars": 1831,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "45e9a5f0cbf8d55ac42db02890c5fb5eb045624e570bd7ad320f143bee1912be",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 5,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-005.png",
+        "render_sha256": "8ffacee605eee3df67ab07eff6aa8930143cff26cd0fe5951c23e60152bdef1b",
+        "text_chars": 1583,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "861e3a67069a21c2d8ab6fb4842baa5e789c8b621bd267a30004f6195a472d65",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 6,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-006.png",
+        "render_sha256": "ddc6c89955b47c98a5912e04e74064fcf1401d89b112762ca81c2bd4e7ac1d6d",
+        "text_chars": 1474,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "b917961676bdc1ec00468ce80311566e47d5a8f44d3ee4b0c1c03840ee7a1bfa",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 7,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-007.png",
+        "render_sha256": "9462596fba719d6db3654926145b65aa8c9a8c86d78dbdcec1193e982d62e792",
+        "text_chars": 1358,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "7be812454fe7aa46b04eee26c55ad0664e47747c8f400176e59aea268eaaddda",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 8,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-008.png",
+        "render_sha256": "114acbbd3ab9c72e3caad3f9e0347815391e3f67808446b489adf95e2e58f4f0",
+        "text_chars": 1708,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "42bd3cb34c2570dac431801ac7cd6cd525e66f4b84cb12e560d1405fbc13b005",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 9,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-009.png",
+        "render_sha256": "cb6f9d230db12d63e71d78cec0a933e3d69d11a23665cb964d47f7959f916d8d",
+        "text_chars": 1613,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "eb590c27f194e33b92979aa0a38091f8695c01645f7f801161597eab101939c3",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 10,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-010.png",
+        "render_sha256": "2cd6e342c3fe41ce5b7f8e54bbc3bff7cfda6eecff7036c3306657d8dca133ae",
+        "text_chars": 1059,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "dc492c017a6db45df1a2c0a5b20266ed8ea7d9565479f12a35375ffd8acd8648",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 11,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-011.png",
+        "render_sha256": "3d5b53590141abeedd7bd11f08b8927be5f1a77dc46e3c8c79b4c20675beb388",
+        "text_chars": 1917,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "1d8a27a6f21f9a9b4a80d2382a3437ba3fb8478ea8f81ec342034f7fc7448628",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 12,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-012.png",
+        "render_sha256": "9fc37e82b67d5df06bcfd67e7ec76a5882b5dd5689fadab57c381dd7f3f9269d",
+        "text_chars": 1461,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "ae0c94643cc9386f313142d145d62f6011d511feba4f58d343ab7b753236d432",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 13,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-013.png",
+        "render_sha256": "6d4e332751b43f0b7cd4aadf2ac9a7dafd678f881c2f261c98519fd9d5a108a8",
+        "text_chars": 1492,
+        "images": 2,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "8bded23b9dee531af72a9539310353209ef091f0f839f8eff4f994ba6c434815",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 14,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-014.png",
+        "render_sha256": "22d7a3aea39f17ccf003a1ac54ce1162ddfff7bdcfab1859d0aa67d9275f3804",
+        "text_chars": 1342,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "b790bb6f1c356447db7a8d7dd43a5a80d4557aab2061c528e6c94a5e09c6498b",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 15,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-015.png",
+        "render_sha256": "61f6d39c70dafd1f2465ab149cab9160a0efbc8c0e1e6602ac979c492b228c1f",
+        "text_chars": 1511,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "3c2e2e87c9afafd31562c1dae4f0c0f85fa7a79cb3fa26c6089ec1eeb099f0ab",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 16,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-016.png",
+        "render_sha256": "b7b1456b88b1c069625e6fedd77421c438f845046a29e90310cf58438fed79cc",
+        "text_chars": 2597,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "be1dee2140b9db807d073825ae3e7c93ee8671448115cab3176c555797ad302d",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 17,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-017.png",
+        "render_sha256": "0cf27dc3faf27e6dc5f249f3daf83c1cd846af05d620cc8c88b9d3c333b63fd5",
+        "text_chars": 2434,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "00ade478b27d093ed5f43a8d7bf3a178a5eceaea55b48252f3bd0fd975fc739e",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 18,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-018.png",
+        "render_sha256": "40686548baa805dd77dd10137dae68aefec9aa74aff8448f19ffc7e0cc576d00",
+        "text_chars": 2378,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "b5ae0d14e089a02a046082877744f7ac109a91caaaf25c36c3340e75b46cbf6e",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 19,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-019.png",
+        "render_sha256": "b850144ffbd7656ea0af7f02c885bb5370899ec41a697af4d0169f2bc7b7eeaa",
+        "text_chars": 2731,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "740fafeb48c0d123b8623a3b0d484a32d2f23267cdd5ff32a2af14d6cc2542ed",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 20,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-020.png",
+        "render_sha256": "217b06be681cd8d7c6f7a8526287336baa074de6358f7a17ce775dd2710b051d",
+        "text_chars": 2226,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "4efd2fdda22604e5b86b904112cb034a3b0b97f08dd67e49df59efd166897f6a",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 21,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-021.png",
+        "render_sha256": "3b5a14577054216912787565599c66189f6e6df1f7f6a647990ee0e5687e0133",
+        "text_chars": 1389,
+        "images": 2,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "176b888dfe8fd1ad16924b38c0e89d3f01f5cc4e4d1f71581ec35a3c21155ec6",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 22,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-022.png",
+        "render_sha256": "7a7cd64a9708c26707fe1f8a528e9ed8dbfd3419b8564011be1fda8e10ea696e",
+        "text_chars": 917,
+        "images": 2,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "3488814960221166019f3ee1df7a5e0d6286d3b6b061ed3b1349fa14e4c34503",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 23,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-023.png",
+        "render_sha256": "e26adc94d313dcb6e4cbdb01d305aa14860b34ce2bb559169b87f5f9545614f9",
+        "text_chars": 857,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "63ff50dab683ee26106540549a3b6a361bd3ea5a5dee0a0d69cc6f2bf120fa97",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 24,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-024.png",
+        "render_sha256": "a6bfbb7d75b96b098a96f68be88c8027abd041ff5f2bfb22a31cada62cc4e068",
+        "text_chars": 1009,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "63091f3672526afa514a2408a6483efc8fb69d11f0bc2e9eff3108560b361174",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 25,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-025.png",
+        "render_sha256": "ab3709a011400588984f32a2923a43921b0a61df8d76f42deddf8c363f7da5e5",
+        "text_chars": 1465,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "7046f3830c74722afe3b93e9c0a5a78ebb9e47cf117141fcd577afa7d7836f08",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 26,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-026.png",
+        "render_sha256": "edd487abd8c08e37be12265c174ed1754ce8c61f81f20195116b981e55319a9a",
+        "text_chars": 911,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "e8e8bcdfccfd10306ac500c087f2ae81a7b51937ee82636a68a4c2f2fbdacf15",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 27,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-027.png",
+        "render_sha256": "caffa9c12a1e284181538d8b2af4317f001ebcc8f7e89272473957d40fed5c81",
+        "text_chars": 84,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "147d34cdbb2a1b148020f894c5edda7440729408031ecee68ef63d4e6c10e7df",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 28,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-028.png",
+        "render_sha256": "16104bf434f4dae24173d51ea101210c110f2ac7c193b3f99db5fa37aa47dc36",
+        "text_chars": 1779,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "48f481d9c2628606162c122210e1ec08ee657a33eebf1a56f9a1b976c7aa72af",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 29,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-029.png",
+        "render_sha256": "34c0cc6d13b6186758742d254c33f76a04b3d3cadbfa4fff00e8f8511b5457e9",
+        "text_chars": 91,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "ec029713edd3efe39238f37b56e207755169c69b4e24d4d1bfdf50123bd6182e",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 30,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-030.png",
+        "render_sha256": "6755afc5b5449b61fe2cce69f1f453bd22b6756403a71f883a40d00a3d023a0d",
+        "text_chars": 79,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "d287ed756031520d36d7413bff4a8ed0349d135eb3cc747469e1bfa006bd29e5",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 31,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-031.png",
+        "render_sha256": "f422b7d50d19ba50bd399d54daa46c213f2165f28b2068c55ecaea7e4cd05dba",
+        "text_chars": 83,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "1111dc9bf8f55ccafabba7173efa7023aa145a3639b44c0c68ad843e33c5c8b1",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 32,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-032.png",
+        "render_sha256": "243b1ed8048d2dd1b8a06967658a380fd6ed2ca84a9e1ea5995059c7ffe3c7f1",
+        "text_chars": 538,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "3ee98b52147327de12cf66480af8a576ffce4693dc4d4b06d7b183aeb0b3107c",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 33,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-033.png",
+        "render_sha256": "b8b736395eaacfbe79801c0bb171c6dc6dd529bb76dfb7c82b0036691e18b1ee",
+        "text_chars": 2078,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "3407d829c7a611d19f8d970dd67605c6da8628b393e1f84adea6ed4e90a6a316",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 34,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-034.png",
+        "render_sha256": "07b614d01048ed4377bb685927f14b5176c503606a8ebf944a995d7bfb2974a9",
+        "text_chars": 82,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "809ce5cde40fb773b084b048c26605dbe215813b49ebd85b6adda3ba53c5881b",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 35,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-035.png",
+        "render_sha256": "d4dc0a0056ecf106b454a6bbc3a210c6620c76f1c57540f91e3ffd23e5e9eb95",
+        "text_chars": 78,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "fa453a0d55e315962678e867d8fff11156ab16f27170c6174ed1b6893a7b40c9",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 36,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-036.png",
+        "render_sha256": "f243570d1133c47e6e2bf53b4115d10581b77803c7cc401970e468ac2a3aeeb7",
+        "text_chars": 1286,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "89741349305b05a4477ff14e4beec7a2cb919bf0c6cd55ad8d39a0056aa89191",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 37,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-037.png",
+        "render_sha256": "01e2e86e774a63855547862618596f4e42e8e9ba93baaf1f392b0856f3d69b92",
+        "text_chars": 557,
+        "images": 2,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "1796c4513dba2e49557f6b2132a515fb88a077276b11d65efc4eb21426ccf432",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 38,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-038.png",
+        "render_sha256": "1e37241d7d313d123f9ebd0cdafe47a13b2118dc4de820a5cc5005a85d5d51e2",
+        "text_chars": 1123,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "830becdbd71b3a3db09971a2bfa1d8982a5173f84fb5d165527f1a51c3d9a54b",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 39,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-039.png",
+        "render_sha256": "2b5d092fd081c66c82b8fd12130d7e626c794391da1e323473a32d63e6ab6a82",
+        "text_chars": 1155,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "8b6edcbb533b77650e4f13dbf7716b12d6b506174ab260b0f4dadceaf328d1fd",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 40,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-040.png",
+        "render_sha256": "25295a435ae758d5833be062cc59045eef56a6ec6993591fdde66414230338f6",
+        "text_chars": 829,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "fe15eef555bfb74864b5a0af0678bb4ec29895fa7250c2dfafdd6e089f10d2fa",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 41,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-041.png",
+        "render_sha256": "cce7e92ddabb3091b57d43fc813f0f594bdbe7b6e2a7ae744b06290181a5296c",
+        "text_chars": 1496,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "207090012d923f1f4d157e33bd80b29a892a21693f2bc55cc0601a2444e40829",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 42,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-042.png",
+        "render_sha256": "0fbe6d80fea6332cab1e7c3eb4e4aac67f12faeaf8e278a88bea567e23e6c8a8",
+        "text_chars": 2063,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "216759139979bc82cc2d1b8b6366279dec3a22694416f34075412223dbc9953b",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 43,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/testcompute/page-043.png",
+        "render_sha256": "3501c85186dbcbaa509db4189c02e2ecfd865773f720f2e291c4977a0e9a0eb0",
+        "text_chars": 382,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "4d384c390e3cabebf9ee4945166aa810928b17e9fa415621059f05bb9f578632",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      }
+    ],
+    "contacts": [
+      {
+        "pages": [
+          1,
+          2
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-001-002.png",
+        "sha256": "c04017a048ae2c887713ec7cf1be9c0c514fa31c30c204fabfd328c6bc8a15cd",
+        "inspected": true
+      },
+      {
+        "pages": [
+          3,
+          4
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-003-004.png",
+        "sha256": "ef46e5079a314a87a91b28e5a2c0f01c1ee7fd831bc05c2b8c37c81bcf35af81",
+        "inspected": true
+      },
+      {
+        "pages": [
+          5,
+          6
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-005-006.png",
+        "sha256": "c439e6056eb7a0588b1bcabb464a791ca3d13631ec27a55952fe84e3536073ae",
+        "inspected": true
+      },
+      {
+        "pages": [
+          7,
+          8
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-007-008.png",
+        "sha256": "c0d142e3fb133d8da42dfb9f638362149e745f0ec0fd768c3107bf2648b467c7",
+        "inspected": true
+      },
+      {
+        "pages": [
+          9,
+          10
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-009-010.png",
+        "sha256": "50203cf318d54b732906e4cf7f965d79b811a975c3a0a91ecef9a6ba40f5e163",
+        "inspected": true
+      },
+      {
+        "pages": [
+          11,
+          12
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-011-012.png",
+        "sha256": "423c08a00531005e7e6064dac0c781db4567142ee04788070c38e9a8fc1c4c9d",
+        "inspected": true
+      },
+      {
+        "pages": [
+          13,
+          14
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-013-014.png",
+        "sha256": "f4b62f7a1f94a907c8f00fcd21418f7856b79db1b3992ccdf4a1ef9d61dc7923",
+        "inspected": true
+      },
+      {
+        "pages": [
+          15,
+          16
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-015-016.png",
+        "sha256": "2b784b1b33862a5b1deab8799033b55623f03041435fcf43b24d44db852d38dc",
+        "inspected": true
+      },
+      {
+        "pages": [
+          17,
+          18
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-017-018.png",
+        "sha256": "5f90f1d1bed37b9929c94840374b69e100b03ea21941a0f5ba5abfd7b6ff27e6",
+        "inspected": true
+      },
+      {
+        "pages": [
+          19,
+          20
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-019-020.png",
+        "sha256": "827e8c3f5109c401528da1d6b8b034a211b0481865c3f528e002f3ff4fc9bbd1",
+        "inspected": true
+      },
+      {
+        "pages": [
+          21,
+          22
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-021-022.png",
+        "sha256": "723d06ef56dca39e29d079f8eab1a5f198d7737a4f52b811d0e700b04a005b99",
+        "inspected": true
+      },
+      {
+        "pages": [
+          23,
+          24
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-023-024.png",
+        "sha256": "8c01a37b599501d51b677bb10f815e9b28779f2a1c306308af38ec5f5037ae2b",
+        "inspected": true
+      },
+      {
+        "pages": [
+          25,
+          26
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-025-026.png",
+        "sha256": "44bc5e8ebe8d22c8dc3503a22e29ae843eb723539d68ec58eded9e438dd5a727",
+        "inspected": true
+      },
+      {
+        "pages": [
+          27,
+          28
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-027-028.png",
+        "sha256": "b53ad7a73ef15a5df099fc06d581c25b18fdbd69413860d5f3172b6429c47875",
+        "inspected": true
+      },
+      {
+        "pages": [
+          29,
+          30
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-029-030.png",
+        "sha256": "78471ed521f8094bbd0893f4b2e226e28281f07cd420fddec96bef6c72f26d9e",
+        "inspected": true
+      },
+      {
+        "pages": [
+          31,
+          32
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-031-032.png",
+        "sha256": "e2c7fa8bd09d9cfe02c93772861f37028d2041851def7dcd14a3cd84bda0ca8f",
+        "inspected": true
+      },
+      {
+        "pages": [
+          33,
+          34
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-033-034.png",
+        "sha256": "6b4ca91aa358617894a8d01af940f31a579b274c618a61fa8b6f465101233b4b",
+        "inspected": true
+      },
+      {
+        "pages": [
+          35,
+          36
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-035-036.png",
+        "sha256": "ed29f23ac2921a054e783edac0fe003447797c0e398431482feee5c973a875be",
+        "inspected": true
+      },
+      {
+        "pages": [
+          37,
+          38
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-037-038.png",
+        "sha256": "0ca5d0ddb19eb4581c8fc92bed52b37f4b35e07a8b9efa7d464d9e5668aea178",
+        "inspected": true
+      },
+      {
+        "pages": [
+          39,
+          40
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-039-040.png",
+        "sha256": "a3e8519899fd9ab0c27a8fee10d1704daba57458fb32588113789d66c211a89c",
+        "inspected": true
+      },
+      {
+        "pages": [
+          41,
+          42
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-041-042.png",
+        "sha256": "126b0b6ae2ef2aa2e9b08fdae1ba797be0a80b89e460f98402b9b62451255df2",
+        "inspected": true
+      },
+      {
+        "pages": [
+          43
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/contact-043-043.png",
+        "sha256": "c10e4159ae70fec4c10e69d29eca10de7bc8a588a8b15b59ec685922938703bb",
+        "inspected": true
+      }
+    ],
+    "log_path": "/workspace/ai-self-study/book/build/testcompute/testcompute.log",
+    "log_sha256": "f17684dbcbfd091e5babdddb2b6c75499c5c567ce73a3eedbcef941778995327",
+    "log_finished": true,
+    "log_errors": {
+      "overfull": [],
+      "missing_characters": [],
+      "undefined": [],
+      "tex_errors": []
+    },
+    "log_warnings": [
+      "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'."
+    ],
+    "aux_sha256": "c5073d5f7012158d1bde0c33fa8aaaeefad28a8e038de04e27a36469b6188f8e",
+    "link_kind_counts": {
+      "4": 199,
+      "2": 15
+    },
+    "invalid_internal_links": [],
+    "external_urls": [
+      {
+        "page": 2,
+        "uri": "https://arxiv.org/abs/2408.03314v1",
+        "format_valid": true
+      },
+      {
+        "page": 2,
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "format_valid": true
+      },
+      {
+        "page": 17,
+        "uri": "https://arxiv.org/abs/2406.03476",
+        "format_valid": true
+      },
+      {
+        "page": 17,
+        "uri": "https://arxiv.org/abs/2211.10435",
+        "format_valid": true
+      },
+      {
+        "page": 17,
+        "uri": "https://arxiv.org/abs/2310.02226",
+        "format_valid": true
+      },
+      {
+        "page": 17,
+        "uri": "https://arxiv.org/abs/2104.03113",
+        "format_valid": true
+      },
+      {
+        "page": 18,
+        "uri": "https://arxiv.org/abs/2307.16789",
+        "format_valid": true
+      },
+      {
+        "page": 18,
+        "uri": "https://arxiv.org/abs/2405.17935",
+        "format_valid": true
+      },
+      {
+        "page": 19,
+        "uri": "https://arxiv.org/abs/2402.12366",
+        "format_valid": true
+      },
+      {
+        "page": 19,
+        "uri": "https://arxiv.org/abs/2307.09288",
+        "format_valid": true
+      },
+      {
+        "page": 19,
+        "uri": "https://arxiv.org/abs/2307.09288",
+        "format_valid": true
+      },
+      {
+        "page": 20,
+        "uri": "https://epochai.org/blog/trading-off-compute-in-training-and-inference",
+        "format_valid": true
+      },
+      {
+        "page": 20,
+        "uri": "https://epochai.org/blog/trading-off-compute-in-training-and-inference",
+        "format_valid": true
+      },
+      {
+        "page": 20,
+        "uri": "https://arxiv.org/abs/2309.05660",
+        "format_valid": true
+      },
+      {
+        "page": 20,
+        "uri": "https://arxiv.org/abs/2403.09629",
+        "format_valid": true
+      }
+    ],
+    "paper_size_all_correct": true,
+    "outside_paper_text": [],
+    "selected_reference_destinations": {},
+    "semantic_review": "Previously completed separately; this review is final PDF layout and link evidence",
+    "internal_links_checked": 199,
+    "paperlabel_checks": [
+      {
+        "key": "testcompute-sec:introduction",
+        "expected": "1",
+        "aux_value": "1",
+        "aux_page": 2,
+        "anchor": "section.1.2",
+        "resolved_pdf_destination_top_origin": [
+          1,
+          56.689998626708984,
+          559.4199829101562
+        ]
+      },
+      {
+        "key": "testcompute-sec:unifying_perspective",
+        "expected": "2",
+        "aux_value": "2",
+        "aux_page": 4,
+        "anchor": "section.1.3",
+        "resolved_pdf_destination_top_origin": [
+          3,
+          56.689998626708984,
+          594.0999755859375
+        ]
+      },
+      {
+        "key": "testcompute-sec:compute_optimal",
+        "expected": "3",
+        "aux_value": "3",
+        "aux_page": 5,
+        "anchor": "section.1.4",
+        "resolved_pdf_destination_top_origin": [
+          4,
+          56.689998626708984,
+          326.8699951171875
+        ]
+      },
+      {
+        "key": "testcompute-sec:compute-optimal-strategy",
+        "expected": "3.1",
+        "aux_value": "3.1",
+        "aux_page": 5,
+        "anchor": "section*.1",
+        "resolved_pdf_destination_top_origin": [
+          4,
+          56.689998626708984,
+          618.0599975585938
+        ]
+      },
+      {
+        "key": "testcompute-sec:estimating-difficulty",
+        "expected": "3.2",
+        "aux_value": "3.2",
+        "aux_page": 6,
+        "anchor": "section*.2",
+        "resolved_pdf_destination_top_origin": [
+          5,
+          56.689998626708984,
+          207.3900146484375
+        ]
+      },
+      {
+        "key": "testcompute-sec:setup",
+        "expected": "4",
+        "aux_value": "4",
+        "aux_page": 6,
+        "anchor": "section.1.5",
+        "resolved_pdf_destination_top_origin": [
+          5,
+          56.689998626708984,
+          648.719970703125
+        ]
+      },
+      {
+        "key": "testcompute-sec:search",
+        "expected": "5",
+        "aux_value": "5",
+        "aux_page": 7,
+        "anchor": "section.1.6",
+        "resolved_pdf_destination_top_origin": [
+          6,
+          56.689998626708984,
+          173.20001220703125
+        ]
+      },
+      {
+        "key": "testcompute-sec:training-verifiers",
+        "expected": "5.1",
+        "aux_value": "5.1",
+        "aux_page": 7,
+        "anchor": "section*.3",
+        "resolved_pdf_destination_top_origin": [
+          6,
+          56.689998626708984,
+          246.6500244140625
+        ]
+      },
+      {
+        "key": "testcompute-sec:search-methods",
+        "expected": "5.2",
+        "aux_value": "5.2",
+        "aux_page": 7,
+        "anchor": "section*.4",
+        "resolved_pdf_destination_top_origin": [
+          6,
+          56.689998626708984,
+          557.1099853515625
+        ]
+      },
+      {
+        "key": "testcompute-sec:search-analysis",
+        "expected": "5.3",
+        "aux_value": "5.3",
+        "aux_page": 9,
+        "anchor": "section*.5",
+        "resolved_pdf_destination_top_origin": [
+          8,
+          56.689998626708984,
+          345.6199951171875
+        ]
+      },
+      {
+        "key": "testcompute-sec:revisions",
+        "expected": "6",
+        "aux_value": "6",
+        "aux_page": 11,
+        "anchor": "section.1.7",
+        "resolved_pdf_destination_top_origin": [
+          10,
+          56.689998626708984,
+          95.03997802734375
+        ]
+      },
+      {
+        "key": "testcompute-sec:revision_setup",
+        "expected": "6.1",
+        "aux_value": "6.1",
+        "aux_page": 11,
+        "anchor": "section*.6",
+        "resolved_pdf_destination_top_origin": [
+          10,
+          56.689998626708984,
+          481.3699951171875
+        ]
+      },
+      {
+        "key": "testcompute-sec:revision-analysis",
+        "expected": "6.2",
+        "aux_value": "6.2",
+        "aux_page": 12,
+        "anchor": "section*.7",
+        "resolved_pdf_destination_top_origin": [
+          11,
+          56.689998626708984,
+          569.3300170898438
+        ]
+      },
+      {
+        "key": "testcompute-sec:exchanging",
+        "expected": "7",
+        "aux_value": "7",
+        "aux_page": 13,
+        "anchor": "section.1.8",
+        "resolved_pdf_destination_top_origin": [
+          12,
+          56.689998626708984,
+          563.4500122070312
+        ]
+      },
+      {
+        "key": "testcompute-sec:discussion",
+        "expected": "8",
+        "aux_value": "8",
+        "aux_page": 15,
+        "anchor": "section.1.9",
+        "resolved_pdf_destination_top_origin": [
+          14,
+          56.689998626708984,
+          455.2799987792969
+        ]
+      },
+      {
+        "key": "testcompute-app:related_work",
+        "expected": "A",
+        "aux_value": "A",
+        "aux_page": 20,
+        "anchor": "section.1.10",
+        "resolved_pdf_destination_top_origin": [
+          19,
+          56.689998626708984,
+          414.92999267578125
+        ]
+      },
+      {
+        "key": "testcompute-app:additional_revision",
+        "expected": "B",
+        "aux_value": "B",
+        "aux_page": 21,
+        "anchor": "section.1.11",
+        "resolved_pdf_destination_top_origin": [
+          20,
+          56.689998626708984,
+          115.96002197265625
+        ]
+      },
+      {
+        "key": "testcompute-app:unsupervised_difficulty",
+        "expected": "C",
+        "aux_value": "C",
+        "aux_page": 21,
+        "anchor": "section.1.12",
+        "resolved_pdf_destination_top_origin": [
+          20,
+          56.689998626708984,
+          410.79998779296875
+        ]
+      },
+      {
+        "key": "testcompute-app:prm_training",
+        "expected": "D",
+        "aux_value": "D",
+        "aux_page": 21,
+        "anchor": "section.1.13",
+        "resolved_pdf_destination_top_origin": [
+          20,
+          56.689998626708984,
+          576.6900024414062
+        ]
+      },
+      {
+        "key": "testcompute-app:comparing_prm_agg",
+        "expected": "E",
+        "aux_value": "E",
+        "aux_page": 23,
+        "anchor": "section.1.14",
+        "resolved_pdf_destination_top_origin": [
+          22,
+          56.689998626708984,
+          134.94000244140625
+        ]
+      },
+      {
+        "key": "testcompute-app:comparing_prm_orm",
+        "expected": "F",
+        "aux_value": "F",
+        "aux_page": 23,
+        "anchor": "section.1.15",
+        "resolved_pdf_destination_top_origin": [
+          22,
+          56.689998626708984,
+          592.4000244140625
+        ]
+      },
+      {
+        "key": "testcompute-app:prompting",
+        "expected": "G",
+        "aux_value": "G",
+        "aux_page": 24,
+        "anchor": "section.1.16",
+        "resolved_pdf_destination_top_origin": [
+          23,
+          56.689998626708984,
+          401.45001220703125
+        ]
+      },
+      {
+        "key": "testcompute-app:revision_finetune",
+        "expected": "H",
+        "aux_value": "H",
+        "aux_page": 24,
+        "anchor": "section.1.17",
+        "resolved_pdf_destination_top_origin": [
+          23,
+          56.689998626708984,
+          563.8300170898438
+        ]
+      },
+      {
+        "key": "testcompute-app:revision_selection",
+        "expected": "I",
+        "aux_value": "I",
+        "aux_page": 25,
+        "anchor": "section.1.18",
+        "resolved_pdf_destination_top_origin": [
+          24,
+          56.689998626708984,
+          154.1500244140625
+        ]
+      },
+      {
+        "key": "testcompute-app:revision_verifier",
+        "expected": "J",
+        "aux_value": "J",
+        "aux_page": 25,
+        "anchor": "section.1.19",
+        "resolved_pdf_destination_top_origin": [
+          24,
+          56.689998626708984,
+          339.25
+        ]
+      },
+      {
+        "key": "testcompute-app:rest_revision_model",
+        "expected": "K",
+        "aux_value": "K",
+        "aux_page": 26,
+        "anchor": "section.1.20",
+        "resolved_pdf_destination_top_origin": [
+          25,
+          56.689998626708984,
+          95.03997802734375
+        ]
+      },
+      {
+        "key": "testcompute-app:revision_example_outputs",
+        "expected": "L",
+        "aux_value": "L",
+        "aux_page": 26,
+        "anchor": "section.1.21",
+        "resolved_pdf_destination_top_origin": [
+          25,
+          56.689998626708984,
+          544.9299926757812
+        ]
+      },
+      {
+        "key": "testcompute-app:prm_example_outputs",
+        "expected": "M",
+        "aux_value": "M",
+        "aux_page": 36,
+        "anchor": "section.1.22",
+        "resolved_pdf_destination_top_origin": [
+          35,
+          56.689998626708984,
+          242.65997314453125
+        ]
+      }
+    ],
+    "paperlabel_failures": [],
+    "frozen_source_hashes": {
+      "papers/translations/testcompute/references.tex": "b319128b37c38bfd2edc025a3e1ba8bd604fe58da860fb903859b432e8e8a5eb",
+      "papers/translations/testcompute/body.tex": "13ce70cecc271b97bf191cd8f63dbbbd118aa085ec9947ee9292c658165b3482"
+    },
+    "build_class_sha256": "8494e8b6aa35c93b4b6e437e4df92325eea21fcf6c8b927759604b02c15be357",
+    "all_layout_pages_inspected": true,
+    "detail_pages_inspected": [
+      6,
+      14,
+      28,
+      32,
+      35,
+      36,
+      39,
+      40
+    ],
+    "current_pdf_hash_matches_review": true,
+    "replacement_character_count": 0,
+    "internal_link_resolution_method": "resolve_link on named destination, transformed to top-origin page coordinates",
+    "font_warnings": [
+      "LaTeX Font Warning: Font shape `TU/FandolSong-Regular(1)/m/it' undefined\n(Font)              using `TU/FandolSong-Regular(1)/m/n' instead on input line ",
+      "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+    ],
+    "underfull_boxes": [
+      "Underfull \\hbox (badness 1789) in paragraph at lines 708--708"
+    ],
+    "header_height_warnings": []
+  },
+  "chive": {
+    "pdf_path": "/workspace/ai-self-study/dist/papers/chive.pdf",
+    "pdf_sha256": "02bd760d1e1681c5d7a91f7032d07a2fd4d06cff0d6425968513829c863e355e",
+    "build_pdf_same_hash": true,
+    "pages": [
+      {
+        "page": 1,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-001.png",
+        "render_sha256": "b0b1ee6dca69090c556f83d300162de2628d5aebc5d434600f542f80c0efe898",
+        "text_chars": 1613,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "43af47e2809f2d7c297900907636052925e69eb040184d1cf0e3546a4f121b15",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 2,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-002.png",
+        "render_sha256": "9e9c91529fc09060b9a355229a483e2e261a6b6aa90b41819d5a0fafa61b196b",
+        "text_chars": 1601,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "3c1eae4373756894f43a81b653de70748b31ee557f39e8092a5e3f40253f050c",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 3,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-003.png",
+        "render_sha256": "3117979c8fe2580abd20f1b11d56150abca99e23035fd8ceebfeaf06101b3ae4",
+        "text_chars": 1514,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "4dd600feb88dc7fc787b45901c83b6a80a46474fdc2bc64ac94da44cf11fed5f",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 4,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-004.png",
+        "render_sha256": "692d162ef6a7016eab581ed8bb613c54e6cb9cf1b6ad77795012cb16925a179e",
+        "text_chars": 1575,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "3b3d8fbbea19e65d99f463e4fb57e9f20c74b5172587ecad19b164c75ad7e11a",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 5,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-005.png",
+        "render_sha256": "601f4aaba2590e49cd006b91a668f7df65669ce4a2b28c01acf64e3e856c9ec9",
+        "text_chars": 1481,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "e6eaaca7534cbdb80a397167bf319c2fcbea91a2bb60d4f58e656b5d8aa72117",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 6,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-006.png",
+        "render_sha256": "365b0b572e30235e60b70dacf984e93c59417040f9f71d64d3c0b95bdbadad1c",
+        "text_chars": 843,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "00381c2d0f36fe24c27fa0a79fb24ce45247c32e99c6c083026097bd32233c90",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 7,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-007.png",
+        "render_sha256": "273220b71d22d2ec548f65c6204391f3a0f75605ba6ad0d06cd6a4a4a78ad759",
+        "text_chars": 1340,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "22ba62eb465f762172c0041a7802b7f91a9f2cd10b6a36cc0dedb1f703058e2c",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 8,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-008.png",
+        "render_sha256": "583cfc8eb5e869d0e85d908620ed62a7dd6177cda09cc553f73f93339f567f1c",
+        "text_chars": 927,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "4a4b292cf1bded444bc5de5f8492723f771502c425bae03bae77a3609461ab3e",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 9,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-009.png",
+        "render_sha256": "900816deb3c78a3a8fc314c65012a48ff45b6108f3b707e5aa7bd4d31da1ccef",
+        "text_chars": 911,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "75b0d5ca5953c44947637f92be35162dabcaccb0056313d9aa4311ff73c99fb0",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 10,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-010.png",
+        "render_sha256": "904cf5423bb2ba1641a79270efa60ec21e47a552e811fdc45a11f79af5496b2b",
+        "text_chars": 1456,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "811abac45b4e548fd8a9acaece4195f3f78ff7c3bc90692b606836773ed3b566",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 11,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-011.png",
+        "render_sha256": "071ea174b12f387e6659435cecc7f809e20ad944577a7b134d57ffa3334aebf1",
+        "text_chars": 1326,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "ec5ae23734d7f344c7e483effd3a74d2c3f5522308ec7fde9d26a4c058bf1e02",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 12,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-012.png",
+        "render_sha256": "44b3650161687dca188bb97ea9f84327c93b645ffb78807363f55e841ca57557",
+        "text_chars": 1427,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "c7eb54178c3946cd93d441b81735665f6ad26ce0ee0086f7f3b6e8d7285a6e0f",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 13,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-013.png",
+        "render_sha256": "a3d8eead9e07208b3411d945cbd831c86868a073edf53ea8728b8766447f3fe1",
+        "text_chars": 1554,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "6049c8d8a54184e4f41fb09fcb45443752d26bc50c300abad9800d3e8ea333c2",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 14,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-014.png",
+        "render_sha256": "e70756e90851d545c3b0b06f19860fa2388773f855a39d54cc07793fa465b4bd",
+        "text_chars": 1412,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "32e45304481db26812e61e96e55eec4ce9792baa22f26ab0c35e5a4020c528f6",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 15,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-015.png",
+        "render_sha256": "7e6f6645fc1c972a467d2829d50471ab92a2efa031a235faf3578b6d6a115dfc",
+        "text_chars": 1183,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "5466ba88e0d7a19cbaa7b6578fd9d3b481c4f290ee6c50e361f39fe8ee429653",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 16,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-016.png",
+        "render_sha256": "03d05fc41eb08fbbfae2cc8e11fca78faf35bb10395e11e00f14d7a3041dde26",
+        "text_chars": 1570,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "49e6cb2d17a0a611f26d7ddcc35c5f2a0670eff5f39c6158c295f3793b65bea9",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 17,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-017.png",
+        "render_sha256": "032f49909a613818d425ca71ef14c4980fc1e9429b19e87e7369c8e70b1e7c69",
+        "text_chars": 845,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "d89d814aae858df4bf89d44b143cda9fc251db4e69fd67ac64e9900fec52b0c1",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 18,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-018.png",
+        "render_sha256": "6773e78a6dc6d799a20faf665287d19db2db2d3100087d99942f7c758f603511",
+        "text_chars": 1539,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "bb325afde19874b9ae68237c23ed396ed3d06a8bf18e97a4ed90dc47b900d544",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 19,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-019.png",
+        "render_sha256": "5025583b76b483083d5cf90539795e01eb58d4a79507ba8150d4e20f3f6f7035",
+        "text_chars": 1324,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "76485984933716fc24377f43bd6d9eebf8dc6bef3cfd18ad114de85bd13a72a2",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 20,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-020.png",
+        "render_sha256": "d50b23ef5499c18cfbdb5294a2ab12dba4dff9055ed7ab6f2d928130e4656902",
+        "text_chars": 1340,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "bb09d83f3304140029954db4d55e32ea04c066bab59b7d5648af7b32d6160317",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 21,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-021.png",
+        "render_sha256": "d56d22ec308fb8b90aa0f23c1780001f35dbcbebe86b2c6f407900c03b15f781",
+        "text_chars": 1248,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "78a54f7f0ac0fdaa48225d0134668d88d39545e936f2a3a5188f13a68b23c5c0",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 22,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-022.png",
+        "render_sha256": "c3aa6e0907f965421cbbc7118f5d909db8d79d036241eeb4aa9fbb6f327f59e0",
+        "text_chars": 625,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "6eb458876f827848a8c4f84275602bd4088baf010f4cc6e32dfc3aed898e8995",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 23,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-023.png",
+        "render_sha256": "63849cc41841866c6ef068766af18dca1cf6ca56f34c9545e27fd56ced8095f8",
+        "text_chars": 709,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "13de0b0d22d1f70c78a61a04bd1bbfc1f60c3c866ca5efac0b4145d90b42b284",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 24,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-024.png",
+        "render_sha256": "7fd7b710771d5f028737023291e2605f3c81172e5d01d9f5354a0262efc5f1d6",
+        "text_chars": 953,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "73fe7d6418a1db8d2627d29d41f65319e32b159b75eb65b370fcc9caf1ba4dbb",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 25,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-025.png",
+        "render_sha256": "c3f1e82f3d78ef73b9398979bd02d33e33d362b40fabab6894aee0f2f37511e2",
+        "text_chars": 739,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "d60ec8ba922644850cf9cc5ad4c0ff8868f446f7027278369e1939eb0bdf1e42",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 26,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-026.png",
+        "render_sha256": "75ddb131101515f00ca458b88580ef8523b5e77a14ab31639cc622df10c3080c",
+        "text_chars": 1434,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": true,
+        "pdf_content_stream_sha256": "0dfb4bb2d46e38c5d54bc2f016301514e7440ac18078f32f9d796d9c69c9556b",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 27,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-027.png",
+        "render_sha256": "accda522ffbd6fa73af885803e96751fd08a8a8f5902401be179c13c87c7f271",
+        "text_chars": 1011,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "1d4c13ac1d9b91f75f2e7cf6e014238bbae8cf1ffb8635294ad2ebd23d9e509c",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 28,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-028.png",
+        "render_sha256": "330666b076ef4442e368769f9412cb0dce6300a6468af9df1d6b1edf11a2ff00",
+        "text_chars": 359,
+        "images": 2,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "7ab4d4f34c238ed9f3cbde631b205330ff307b420de62a7b8709aa807a8c8588",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 29,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-029.png",
+        "render_sha256": "be491903f1cb589b147e54831851512fe70f912c633506baf638c060a2624a1a",
+        "text_chars": 178,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "f9d1589373d47fc4f376b0c95fc7943c8fcc58c41c6aff15b6bca049bda3f71b",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 30,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-030.png",
+        "render_sha256": "a8eb81743a04ed1cddd4d9f6678acf164a7dbb99d589ce38a35eb0dce3e52d56",
+        "text_chars": 217,
+        "images": 1,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "140a205977f04c7394c94d2394cdaebe5ef9ca44ab707a414604488117e183f4",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 31,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-031.png",
+        "render_sha256": "c12af2c30d4608a0fef31138dc97d6f351f5056ac18e90d5127e1df9c89e9716",
+        "text_chars": 2333,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "8046293c6deccf9d86e9e66b1fb60f5a07237becf4bc5d3683a3e16e2cc3706f",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 32,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-032.png",
+        "render_sha256": "b1f8843099947e86cbd3bd3d6d008a82fb5806650c453e4a0bd3fb5ef594148c",
+        "text_chars": 2639,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "a34df65177c824c9ef0a9d372e7079d2586d9f36dca6f04deb6a97071bd37640",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 33,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-033.png",
+        "render_sha256": "be05fb99390fb500353da127a86369f61a167a0c0d8084c959b61d607a7bf657",
+        "text_chars": 2641,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "be2d226e601bf0967f641cf83896b0004e2eae049737bd0ebc29ef7e123b80a0",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      },
+      {
+        "page": 34,
+        "width_bp": 612.0,
+        "height_bp": 792.0,
+        "render": "/tmp/v03-final-pdf-testcompute-chive/chive/page-034.png",
+        "render_sha256": "2b6902487dc2cbf9b5aa6f0f9f350e36d60655c96fdbfe051b3381c50fd90e05",
+        "text_chars": 2520,
+        "images": 0,
+        "layout_inspected": true,
+        "detail_inspected": false,
+        "pdf_content_stream_sha256": "3e21aeb808100996d4ca800cbecd507f05d0a8eca7f96b0d665a5447f65ecd4a",
+        "layout_result": "No clipping, missing blocks, header collision, or accidental blank page observed"
+      }
+    ],
+    "contacts": [
+      {
+        "pages": [
+          1,
+          2
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-001-002.png",
+        "sha256": "4c422d55c037dc3dc87757f00ed2ce9483d2654ee2e0588b159c419723856756",
+        "inspected": true
+      },
+      {
+        "pages": [
+          3,
+          4
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-003-004.png",
+        "sha256": "8929e7bef9f14d4b5ceef8c1a33539db4cd3a415852278727e46e3f19413dd6f",
+        "inspected": true
+      },
+      {
+        "pages": [
+          5,
+          6
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-005-006.png",
+        "sha256": "c4e8cdcdff39b8feed53ee6520fbc8d49695188a5982b84f8861ae746b96141f",
+        "inspected": true
+      },
+      {
+        "pages": [
+          7,
+          8
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-007-008.png",
+        "sha256": "4bfc7e9231f13dea09ad8a1c085d02e571e1e787bc8923e8664c1e1a99033fee",
+        "inspected": true
+      },
+      {
+        "pages": [
+          9,
+          10
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-009-010.png",
+        "sha256": "a630a65a0d6a275eabb171457349d862f9a561985ace0daa29ac06cf45794e77",
+        "inspected": true
+      },
+      {
+        "pages": [
+          11,
+          12
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-011-012.png",
+        "sha256": "ee9f6f0a48af41274d5441d92ab21e0b7a1a28631a91fc08f0be8a3230458552",
+        "inspected": true
+      },
+      {
+        "pages": [
+          13,
+          14
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-013-014.png",
+        "sha256": "a223b02866e67d2f42e2838b49695e8bf2bee2f040db7272e0a0d52da3861f86",
+        "inspected": true
+      },
+      {
+        "pages": [
+          15,
+          16
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-015-016.png",
+        "sha256": "3d921d9e9856b5b086f51c2c6a9935daff2c83e10e7b2b662717e6bb332b3bc7",
+        "inspected": true
+      },
+      {
+        "pages": [
+          17,
+          18
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-017-018.png",
+        "sha256": "41a88a0f45c2500627a2dd58cc2958985aeafef2fa28daedaf0e68328cf5cbd6",
+        "inspected": true
+      },
+      {
+        "pages": [
+          19,
+          20
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-019-020.png",
+        "sha256": "75df566516cd58fcfa2e7379c954099244793135d8f0a8f315663fd6dbef65a1",
+        "inspected": true
+      },
+      {
+        "pages": [
+          21,
+          22
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-021-022.png",
+        "sha256": "dd1721bc8f960c23bd8851c98365196d5276ee869b79256f72005ad8573fcce0",
+        "inspected": true
+      },
+      {
+        "pages": [
+          23,
+          24
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-023-024.png",
+        "sha256": "2d84760d4659d4e5001e0b1a7be08df2d4baad47d4866530599b7820c1bddc7f",
+        "inspected": true
+      },
+      {
+        "pages": [
+          25,
+          26
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-025-026.png",
+        "sha256": "d0f8cb81bcd192551beaf660fc75d8b3ae3e17fe864fbbcb1e0c55b1b926ce1f",
+        "inspected": true
+      },
+      {
+        "pages": [
+          27,
+          28
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-027-028.png",
+        "sha256": "f3d1a38d1f0318af79202d1675221f6263575980b1ccdcc7c300ea3fa4b03364",
+        "inspected": true
+      },
+      {
+        "pages": [
+          29,
+          30
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-029-030.png",
+        "sha256": "cfb8e378c01c343ca6b905b006374d1149c46a2306f0452396b12acf2596c424",
+        "inspected": true
+      },
+      {
+        "pages": [
+          31,
+          32
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-031-032.png",
+        "sha256": "73bb28852cbc678156704836622a4df3130627394b74b410c9798c733d958fe0",
+        "inspected": true
+      },
+      {
+        "pages": [
+          33,
+          34
+        ],
+        "path": "/tmp/v03-final-pdf-testcompute-chive/chive/contact-033-034.png",
+        "sha256": "1f8a8823a072fb4c07a14a723165f0e080e9af123e2ff626c4b434d81545bab6",
+        "inspected": true
+      }
+    ],
+    "log_path": "/workspace/ai-self-study/book/build/chive/chive.log",
+    "log_sha256": "52c57907dc672699808db0de532bb631baff46e381ece26b80abca6d9581d7f3",
+    "log_finished": true,
+    "log_errors": {
+      "overfull": [],
+      "missing_characters": [],
+      "undefined": [],
+      "tex_errors": []
+    },
+    "log_warnings": [
+      "LaTeX Warning: Writing or overwriting file `elegantbook-original-adapter.cls'."
+    ],
+    "aux_sha256": "17b1c2efa9306fab195f651a168d6814dab5830277b254ff4e279a45119cd29a",
+    "link_kind_counts": {
+      "4": 183,
+      "2": 60
+    },
+    "invalid_internal_links": [],
+    "external_urls": [
+      {
+        "page": 2,
+        "uri": "https://arxiv.org/abs/2608.16747v1",
+        "format_valid": true
+      },
+      {
+        "page": 2,
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "format_valid": true
+      },
+      {
+        "page": 3,
+        "uri": "https://github.com/adamkarvonen/chive",
+        "format_valid": true
+      },
+      {
+        "page": 4,
+        "uri": "https://adamkarvonen.github.io/chive/figure_qa_examples.html",
+        "format_valid": true
+      },
+      {
+        "page": 4,
+        "uri": "https://adamkarvonen.github.io/chive/freeform_investigations.html",
+        "format_valid": true
+      },
+      {
+        "page": 5,
+        "uri": "https://adamkarvonen.github.io/chive/sample_binary_claims.html",
+        "format_valid": true
+      },
+      {
+        "page": 5,
+        "uri": "https://adamkarvonen.github.io/chive/sample_binary_claims.html",
+        "format_valid": true
+      },
+      {
+        "page": 16,
+        "uri": "https://www.neuronpedia.org/qwen3-8b/18-resid-batchtopk-65k__l0-80",
+        "format_valid": true
+      },
+      {
+        "page": 16,
+        "uri": "https://huggingface.co/marco-bazzani/Qwen3-8B-nla",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2602.22755",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2602.22755",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2512.15674",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2607.01033",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2607.01033",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2510.01070",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2511.08579",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://arxiv.org/abs/2511.08579",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://transformer-circuits.pub/2023/monosemantic-features/index.html",
+        "format_valid": true
+      },
+      {
+        "page": 31,
+        "uri": "https://transformer-circuits.pub/2023/monosemantic-features/index.html",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2106.09685",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://huggingface.co/datasets/cognitivecomputations/SystemChat-2.0",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://huggingface.co/datasets/cognitivecomputations/SystemChat-2.0",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2410.13787",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2410.13787",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://transformer-circuits.pub/2026/nla/index.html",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://transformer-circuits.pub/2026/nla/index.html",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://github.com/safety-research/petri",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2602.02639",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2509.09396",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2309.08600",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2503.08679",
+        "format_valid": true
+      },
+      {
+        "page": 32,
+        "uri": "https://arxiv.org/abs/2403.05518",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2606.02609",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2501.11120",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2510.13900",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://www.neuronpedia.org",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://www.neuronpedia.org",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/Gemma_Scope_2_Technical_Paper.pdf",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/Gemma_Scope_2_Technical_Paper.pdf",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/Gemma_Scope_2_Technical_Paper.pdf",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/Gemma_Scope_2_Technical_Paper.pdf",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2506.22777",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2305.04388",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2008.09094",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2602.20710",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2407.04694",
+        "format_valid": true
+      },
+      {
+        "page": 33,
+        "uri": "https://arxiv.org/abs/2407.04694",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2503.10965",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2409.00920",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2405.01470",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2307.08678",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2307.08678",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2502.18156",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2502.18156",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://arxiv.org/abs/2606.32038",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://www.anthropic.com/claude-sonnet-4-5-system-card",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://www.anthropic.com/claude-sonnet-4-5-system-card",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
+        "format_valid": true
+      },
+      {
+        "page": 34,
+        "uri": "https://huggingface.co/NousResearch/hermes-function-calling-v1",
+        "format_valid": true
+      }
+    ],
+    "paper_size_all_correct": true,
+    "outside_paper_text": [],
+    "selected_reference_destinations": {
+      "chive-sec:pipeline_description": {
+        "label_value": "2.1",
+        "aux_page": "4",
+        "anchor": "section*.2",
+        "pdf_destination": "{'page': 3, 'to': (56.69, 669.09), 'zoom': 0.0, 'nameddest': 'section*.2'}",
+        "resolved_top_origin": {
+          "page": 4,
+          "x": 56.689998626708984,
+          "y": 122.90997314453125
+        },
+        "heading_text_bbox": [
+          [
+            56.69300079345703,
+            134.7064208984375,
+            126.65480041503906,
+            147.61802673339844
+          ]
+        ],
+        "target_precedes_heading_correctly": true
+      },
+      "chive-app:qwen_interp": {
+        "label_value": "C.2",
+        "aux_page": "16",
+        "anchor": "section*.21",
+        "pdf_destination": "{'page': 15, 'to': (56.69, 164.88), 'zoom': 0.0, 'nameddest': 'section*.21'}",
+        "resolved_top_origin": {
+          "page": 16,
+          "x": 56.689998626708984,
+          "y": 627.1199951171875
+        },
+        "heading_text_bbox": [
+          [
+            56.69300079345703,
+            639.8678588867188,
+            143.77468872070312,
+            651.8230590820312
+          ]
+        ],
+        "target_precedes_heading_correctly": true
+      },
+      "chive-app:training_hparams": {
+        "label_value": "D.1.3",
+        "aux_page": "20",
+        "anchor": "section*.28",
+        "pdf_destination": "{'page': 19, 'to': (56.69, 706.13), 'zoom': 0.0}",
+        "resolved_top_origin": {
+          "page": 20,
+          "x": 56.689998626708984,
+          "y": 85.8699951171875
+        },
+        "heading_text_bbox": [
+          [
+            56.69300079345703,
+            97.03292083740234,
+            83.2831802368164,
+            106.99552154541016
+          ]
+        ],
+        "target_precedes_heading_correctly": true
+      }
+    },
+    "semantic_review": "Previously completed separately; this review is final PDF layout and link evidence",
+    "internal_links_checked": 183,
+    "paperlabel_checks": [
+      {
+        "key": "chive-app:allruns",
+        "expected": "F",
+        "aux_value": "F",
+        "aux_page": 26,
+        "anchor": "section.1.13",
+        "resolved_pdf_destination_top_origin": [
+          25,
+          56.689998626708984,
+          337.79998779296875
+        ]
+      },
+      {
+        "key": "chive-app:cot",
+        "expected": "G",
+        "aux_value": "G",
+        "aux_page": 26,
+        "anchor": "section.1.14",
+        "resolved_pdf_destination_top_origin": [
+          25,
+          56.689998626708984,
+          580.3099975585938
+        ]
+      },
+      {
+        "key": "chive-app:selfexpl_freeform",
+        "expected": "E",
+        "aux_value": "E",
+        "aux_page": 22,
+        "anchor": "section.1.12",
+        "resolved_pdf_destination_top_origin": [
+          21,
+          56.689998626708984,
+          404.0199890136719
+        ]
+      },
+      {
+        "key": "chive-app:selfexpl_format",
+        "expected": "E.1",
+        "aux_value": "E.1",
+        "aux_page": 22,
+        "anchor": "section*.33",
+        "resolved_pdf_destination_top_origin": [
+          21,
+          56.689998626708984,
+          534.780029296875
+        ]
+      },
+      {
+        "key": "chive-app:selfexpl_hint",
+        "expected": "E.2",
+        "aux_value": "E.2",
+        "aux_page": 24,
+        "anchor": "section*.34",
+        "resolved_pdf_destination_top_origin": [
+          23,
+          56.689998626708984,
+          534.1700439453125
+        ]
+      },
+      {
+        "key": "chive-app:selfexpl_simulatability",
+        "expected": "E.3",
+        "aux_value": "E.3",
+        "aux_page": 25,
+        "anchor": "section*.35",
+        "resolved_pdf_destination_top_origin": [
+          24,
+          56.689998626708984,
+          435.2900085449219
+        ]
+      },
+      {
+        "key": "chive-app:selfexpl_discussion",
+        "expected": "E.4",
+        "aux_value": "E.4",
+        "aux_page": 25,
+        "anchor": "section*.36",
+        "resolved_pdf_destination_top_origin": [
+          24,
+          56.689998626708984,
+          611.8499755859375
+        ]
+      },
+      {
+        "key": "chive-sec:intro",
+        "expected": "1",
+        "aux_value": "1",
+        "aux_page": 2,
+        "anchor": "section.1.1",
+        "resolved_pdf_destination_top_origin": [
+          1,
+          56.689998626708984,
+          473.6400146484375
+        ]
+      },
+      {
+        "key": "chive-sec:pipeline",
+        "expected": "2",
+        "aux_value": "2",
+        "aux_page": 4,
+        "anchor": "section.1.2",
+        "resolved_pdf_destination_top_origin": [
+          3,
+          56.689998626708984,
+          95.03997802734375
+        ]
+      },
+      {
+        "key": "chive-sec:pipeline_description",
+        "expected": "2.1",
+        "aux_value": "2.1",
+        "aux_page": 4,
+        "anchor": "section*.2",
+        "resolved_pdf_destination_top_origin": [
+          3,
+          56.689998626708984,
+          122.90997314453125
+        ]
+      },
+      {
+        "key": "chive-sec:pipeline_claims",
+        "expected": "2.2",
+        "aux_value": "2.2",
+        "aux_page": 4,
+        "anchor": "section*.3",
+        "resolved_pdf_destination_top_origin": [
+          3,
+          56.689998626708984,
+          626.4000244140625
+        ]
+      },
+      {
+        "key": "chive-sec:pipeline_quality",
+        "expected": "2.3",
+        "aux_value": "2.3",
+        "aux_page": 5,
+        "anchor": "section*.4",
+        "resolved_pdf_destination_top_origin": [
+          4,
+          56.689998626708984,
+          329.7900085449219
+        ]
+      },
+      {
+        "key": "chive-sec:interp_eval",
+        "expected": "3",
+        "aux_value": "3",
+        "aux_page": 5,
+        "anchor": "section.1.3",
+        "resolved_pdf_destination_top_origin": [
+          4,
+          56.689998626708984,
+          484.20001220703125
+        ]
+      },
+      {
+        "key": "chive-sec:interp_eval_background",
+        "expected": "3.1",
+        "aux_value": "3.1",
+        "aux_page": 5,
+        "anchor": "section*.5",
+        "resolved_pdf_destination_top_origin": [
+          4,
+          56.689998626708984,
+          519.3099975585938
+        ]
+      },
+      {
+        "key": "chive-sec:interp_eval_tools",
+        "expected": "3.2",
+        "aux_value": "3.2",
+        "aux_page": 5,
+        "anchor": "section*.6",
+        "resolved_pdf_destination_top_origin": [
+          4,
+          56.689998626708984,
+          638.489990234375
+        ]
+      },
+      {
+        "key": "chive-sec:interp_eval_results",
+        "expected": "3.3",
+        "aux_value": "3.3",
+        "aux_page": 7,
+        "anchor": "section*.7",
+        "resolved_pdf_destination_top_origin": [
+          6,
+          56.689998626708984,
+          82.69000244140625
+        ]
+      },
+      {
+        "key": "chive-sec:training",
+        "expected": "4",
+        "aux_value": "4",
+        "aux_page": 7,
+        "anchor": "section.1.4",
+        "resolved_pdf_destination_top_origin": [
+          6,
+          56.689998626708984,
+          351.8599853515625
+        ]
+      },
+      {
+        "key": "chive-sec:training_background",
+        "expected": "4.1",
+        "aux_value": "4.1",
+        "aux_page": 7,
+        "anchor": "section*.8",
+        "resolved_pdf_destination_top_origin": [
+          6,
+          56.689998626708984,
+          425.2300109863281
+        ]
+      },
+      {
+        "key": "chive-sec:training_setup",
+        "expected": "4.2",
+        "aux_value": "4.2",
+        "aux_page": 7,
+        "anchor": "section*.9",
+        "resolved_pdf_destination_top_origin": [
+          6,
+          56.689998626708984,
+          640.0499877929688
+        ]
+      },
+      {
+        "key": "chive-sec:training_hint",
+        "expected": "4.3",
+        "aux_value": "4.3",
+        "aux_page": 8,
+        "anchor": "section*.10",
+        "resolved_pdf_destination_top_origin": [
+          7,
+          56.689998626708984,
+          549.030029296875
+        ]
+      },
+      {
+        "key": "chive-sec:training_heldout",
+        "expected": "4.4",
+        "aux_value": "4.4",
+        "aux_page": 9,
+        "anchor": "section*.11",
+        "resolved_pdf_destination_top_origin": [
+          8,
+          56.689998626708984,
+          82.69000244140625
+        ]
+      },
+      {
+        "key": "chive-sec:training_privileged",
+        "expected": "4.5",
+        "aux_value": "4.5",
+        "aux_page": 9,
+        "anchor": "section*.12",
+        "resolved_pdf_destination_top_origin": [
+          8,
+          56.689998626708984,
+          572.6400146484375
+        ]
+      },
+      {
+        "key": "chive-sec:discussion",
+        "expected": "5",
+        "aux_value": "5",
+        "aux_page": 10,
+        "anchor": "section.1.5",
+        "resolved_pdf_destination_top_origin": [
+          9,
+          56.689998626708984,
+          95.03997802734375
+        ]
+      },
+      {
+        "key": "chive-sec:conclusion",
+        "expected": "6",
+        "aux_value": "6",
+        "aux_page": 10,
+        "anchor": "section.1.6",
+        "resolved_pdf_destination_top_origin": [
+          9,
+          56.689998626708984,
+          464.19000244140625
+        ]
+      },
+      {
+        "key": "chive-app:interp_details",
+        "expected": "C",
+        "aux_value": "C",
+        "aux_page": 16,
+        "anchor": "section.1.10",
+        "resolved_pdf_destination_top_origin": [
+          15,
+          56.689998626708984,
+          192.41998291015625
+        ]
+      },
+      {
+        "key": "chive-app:toolcalls",
+        "expected": "C.1",
+        "aux_value": "C.1",
+        "aux_page": 16,
+        "anchor": "section*.20",
+        "resolved_pdf_destination_top_origin": [
+          15,
+          56.689998626708984,
+          227.52001953125
+        ]
+      },
+      {
+        "key": "chive-app:qwen_interp",
+        "expected": "C.2",
+        "aux_value": "C.2",
+        "aux_page": 16,
+        "anchor": "section*.21",
+        "resolved_pdf_destination_top_origin": [
+          15,
+          56.689998626708984,
+          627.1199951171875
+        ]
+      },
+      {
+        "key": "chive-app:crossmodel",
+        "expected": "C.3",
+        "aux_value": "C.3",
+        "aux_page": 17,
+        "anchor": "section*.22",
+        "resolved_pdf_destination_top_origin": [
+          16,
+          56.689998626708984,
+          376.5
+        ]
+      },
+      {
+        "key": "chive-app:representability",
+        "expected": "C.4",
+        "aux_value": "C.4",
+        "aux_page": 17,
+        "anchor": "section*.23",
+        "resolved_pdf_destination_top_origin": [
+          16,
+          56.689998626708984,
+          623.0499877929688
+        ]
+      },
+      {
+        "key": "chive-app:worked_examples",
+        "expected": "C.5",
+        "aux_value": "C.5",
+        "aux_page": 18,
+        "anchor": "section*.24",
+        "resolved_pdf_destination_top_origin": [
+          17,
+          56.689998626708984,
+          456.8599853515625
+        ]
+      },
+      {
+        "key": "chive-app:selfexpl_details",
+        "expected": "D",
+        "aux_value": "D",
+        "aux_page": 19,
+        "anchor": "section.1.11",
+        "resolved_pdf_destination_top_origin": [
+          18,
+          56.689998626708984,
+          364.55999755859375
+        ]
+      },
+      {
+        "key": "chive-app:training_details",
+        "expected": "D.1",
+        "aux_value": "D.1",
+        "aux_page": 19,
+        "anchor": "section*.25",
+        "resolved_pdf_destination_top_origin": [
+          18,
+          56.689998626708984,
+          399.6700134277344
+        ]
+      },
+      {
+        "key": "chive-app:training_formats",
+        "expected": "D.1.1",
+        "aux_value": "D.1.1",
+        "aux_page": 19,
+        "anchor": "section*.26",
+        "resolved_pdf_destination_top_origin": [
+          18,
+          56.689998626708984,
+          499.7200012207031
+        ]
+      },
+      {
+        "key": "chive-app:training_datasets",
+        "expected": "D.1.2",
+        "aux_value": "D.1.2",
+        "aux_page": 19,
+        "anchor": "section*.27",
+        "resolved_pdf_destination_top_origin": [
+          18,
+          56.689998626708984,
+          558.3300170898438
+        ]
+      },
+      {
+        "key": "chive-app:training_hparams",
+        "expected": "D.1.3",
+        "aux_value": "D.1.3",
+        "aux_page": 20,
+        "anchor": "section*.28",
+        "resolved_pdf_destination_top_origin": [
+          19,
+          56.689998626708984,
+          85.8699951171875
+        ]
+      },
+      {
+        "key": "chive-app:hint_datasets",
+        "expected": "D.2",
+        "aux_value": "D.2",
+        "aux_page": 20,
+        "anchor": "section*.29",
+        "resolved_pdf_destination_top_origin": [
+          19,
+          56.689998626708984,
+          362.7200012207031
+        ]
+      },
+      {
+        "key": "chive-app:hint_accuracy",
+        "expected": "D.3",
+        "aux_value": "D.3",
+        "aux_page": 21,
+        "anchor": "section*.30",
+        "resolved_pdf_destination_top_origin": [
+          20,
+          56.689998626708984,
+          82.69000244140625
+        ]
+      },
+      {
+        "key": "chive-app:privileged",
+        "expected": "D.4",
+        "aux_value": "D.4",
+        "aux_page": 21,
+        "anchor": "section*.31",
+        "resolved_pdf_destination_top_origin": [
+          20,
+          56.689998626708984,
+          320.1700134277344
+        ]
+      },
+      {
+        "key": "chive-app:kl_training",
+        "expected": "D.5",
+        "aux_value": "D.5",
+        "aux_page": 21,
+        "anchor": "section*.32",
+        "resolved_pdf_destination_top_origin": [
+          20,
+          56.689998626708984,
+          534.989990234375
+        ]
+      },
+      {
+        "key": "chive-app:extended_discussion",
+        "expected": "A",
+        "aux_value": "A",
+        "aux_page": 11,
+        "anchor": "section.1.8",
+        "resolved_pdf_destination_top_origin": [
+          10,
+          56.689998626708984,
+          211.45001220703125
+        ]
+      },
+      {
+        "key": "chive-app:proxy",
+        "expected": "A.1",
+        "aux_value": "A.1",
+        "aux_page": 11,
+        "anchor": "section*.13",
+        "resolved_pdf_destination_top_origin": [
+          10,
+          56.689998626708984,
+          246.6500244140625
+        ]
+      },
+      {
+        "key": "chive-app:hypothesis_discrimination",
+        "expected": "A.2",
+        "aux_value": "A.2",
+        "aux_page": 11,
+        "anchor": "section*.14",
+        "resolved_pdf_destination_top_origin": [
+          10,
+          56.689998626708984,
+          480.6000061035156
+        ]
+      },
+      {
+        "key": "chive-app:pipeline_datasets",
+        "expected": "B",
+        "aux_value": "B",
+        "aux_page": 12,
+        "anchor": "section.1.9",
+        "resolved_pdf_destination_top_origin": [
+          11,
+          56.689998626708984,
+          404.489990234375
+        ]
+      },
+      {
+        "key": "chive-app:pipeline_detail",
+        "expected": "B.1",
+        "aux_value": "B.1",
+        "aux_page": 12,
+        "anchor": "section*.15",
+        "resolved_pdf_destination_top_origin": [
+          11,
+          56.689998626708984,
+          438.7699890136719
+        ]
+      },
+      {
+        "key": "chive-app:prompt_sources",
+        "expected": "B.2",
+        "aux_value": "B.2",
+        "aux_page": 13,
+        "anchor": "section*.16",
+        "resolved_pdf_destination_top_origin": [
+          12,
+          56.689998626708984,
+          329.3399963378906
+        ]
+      },
+      {
+        "key": "chive-app:eval_dataset",
+        "expected": "B.3",
+        "aux_value": "B.3",
+        "aux_page": 13,
+        "anchor": "section*.17",
+        "resolved_pdf_destination_top_origin": [
+          12,
+          56.689998626708984,
+          601.5399780273438
+        ]
+      },
+      {
+        "key": "chive-app:eval_claim_format",
+        "expected": "B.4",
+        "aux_value": "B.4",
+        "aux_page": 14,
+        "anchor": "section*.18",
+        "resolved_pdf_destination_top_origin": [
+          13,
+          56.689998626708984,
+          550.1799926757812
+        ]
+      },
+      {
+        "key": "chive-app:costs",
+        "expected": "B.5",
+        "aux_value": "B.5",
+        "aux_page": 15,
+        "anchor": "section*.19",
+        "resolved_pdf_destination_top_origin": [
+          14,
+          56.689998626708984,
+          396.2900085449219
+        ]
+      }
+    ],
+    "paperlabel_failures": [],
+    "frozen_source_hashes": {
+      "papers/translations/chive/body.tex": "18851bef310f9295e1739132fb9a54abd4ee7b5a3bb33402bf2301a43de51fce",
+      "papers/translations/chive/parts/references.tex": "4f634ea8da7af5d2efcd14a329ef6654a91771d2e7132a7fc5461b611926f173",
+      "papers/translations/chive/parts/appendix-fg.tex": "5f81973fe1d4cff6a60e611dd4cc4d9cc1d4268916a3b7147f456281147fc190",
+      "papers/translations/chive/parts/appendix-e.tex": "dcd2d046fb9d89624cd7bc6c10391005e9e112a231b0c9bd2d920c72b77a2260",
+      "papers/translations/chive/parts/main.tex": "a6df57221f5ef9feda898f24f86bdab3ddafe369df0d939b8bb3f393404f01ab",
+      "papers/translations/chive/parts/appendix-c.tex": "aed454469a4486dd6690f65a86ddd8c1366e273aa989b36184d4acda7f0caf24",
+      "papers/translations/chive/parts/appendix-d.tex": "b27fb1226e7b819e69d13243ae349d11245759fca55931cac4c2a7ed43285412",
+      "papers/translations/chive/parts/appendix-a.tex": "3a3a8b5eba4ee9255ee3e9296b9e9fea7d72ff183cb41e5acfd650bebb203b58",
+      "papers/translations/chive/parts/appendix-b.tex": "994212fd300faa222b9452248756947f25e9bd1874b0437c90e8e3750723f168"
+    },
+    "build_class_sha256": "8494e8b6aa35c93b4b6e437e4df92325eea21fcf6c8b927759604b02c15be357",
+    "all_layout_pages_inspected": true,
+    "detail_pages_inspected": [
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      26
+    ],
+    "current_pdf_hash_matches_review": true,
+    "replacement_character_count": 0,
+    "internal_link_resolution_method": "resolve_link on named destination, transformed to top-origin page coordinates",
+    "font_warnings": [],
+    "underfull_boxes": [],
+    "header_height_warnings": []
+  },
+  "detail_crops": [
+    {
+      "paper": "testcompute",
+      "page": 35,
+      "label": "dense-revision-7",
+      "clip_bp": [
+        145,
+        160,
+        440,
+        640
+      ],
+      "scale": 4,
+      "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/detail-035-dense-revision-7.png",
+      "sha256": "c7d456a873e4c57b5782e79bc441c4abe8eb790e3325f4ffe8604148edc4ee21",
+      "inspected": true
+    },
+    {
+      "paper": "testcompute",
+      "page": 39,
+      "label": "prm-final-wrong-answer",
+      "clip_bp": [
+        55,
+        110,
+        559,
+        236
+      ],
+      "scale": 4,
+      "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/detail-039-prm-final-wrong-answer.png",
+      "sha256": "8c04272af019275a104a5d16cb367104eb8b5cbec4e4945364417255a0e82d9d",
+      "inspected": true
+    },
+    {
+      "paper": "testcompute",
+      "page": 40,
+      "label": "prm-blank-step-scores",
+      "clip_bp": [
+        55,
+        98,
+        555,
+        265
+      ],
+      "scale": 4,
+      "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/detail-040-prm-blank-step-scores.png",
+      "sha256": "53677f52708225b7946e46764aa5dbb798726f71028b793466e9dcd41069186f",
+      "inspected": true
+    },
+    {
+      "paper": "chive",
+      "page": 20,
+      "label": "lora-table",
+      "clip_bp": [
+        138,
+        175,
+        525,
+        355
+      ],
+      "scale": 4,
+      "path": "/tmp/v03-final-pdf-testcompute-chive/chive/detail-020-lora-table.png",
+      "sha256": "66aeede9c4b34d33873350ad98d6d34524585d5b734323517e5cb92154f74db1",
+      "inspected": true
+    },
+    {
+      "paper": "testcompute",
+      "page": 35,
+      "label": "dense-revision-7-full-image",
+      "clip_bp": [
+        164.82598876953125,
+        169.99978637695312,
+        447.1748962402344,
+        634.9929809570312
+      ],
+      "scale": 4,
+      "path": "/tmp/v03-final-pdf-testcompute-chive/testcompute/detail-035-dense-revision-7-full.png",
+      "sha256": "fb2971e0ae34f14cf0436509e1624108a097a7b170e4ccbdf9ec0f1b20f3f7b2",
+      "inspected": true
+    }
+  ],
+  "scope": {
+    "reviewer": "independent_translations_v03",
+    "date": "2026-10-12",
+    "layout_coverage": "All 77 pages independently rendered at 144 dpi and actually viewed using 39 two-page contact sheets at approximately 100 dpi per page",
+    "detail_coverage": "20 full-page 144 dpi views plus five 288 dpi region views; complete table coverage and selected dense formulas/output/report examples",
+    "semantics": "Separate earlier independent translation reviews; no claim of word-by-word semantic readability on contact sheets",
+    "no_source_or_root_mutations": true,
+    "remaining_blockers": [],
+    "limits": [
+      "No live external URL availability checks; only PDF URI syntax verified",
+      "Single-paper PDFs only; combined book handled by other review",
+      "Raster originals remain dense and may require zoom; complete Chinese transcriptions are available",
+      "No human expert or experimental reproduction"
+    ]
+  }
+}

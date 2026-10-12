@@ -1,0 +1,11 @@
+我已在目录 {self.git_tempdir} 中上传一个 Python 代码仓库。请帮助解决以下问题。
+
+<problem_description>
+{self.problem_statement}
+</problem_description>
+
+<test_description>
+{self.test_description}
+</test_description>
+
+你的任务是修改 {self.git_tempdir} 目录中的文件，解决 <problem_description>。所需依赖我已处理好。

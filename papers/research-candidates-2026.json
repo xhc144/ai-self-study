@@ -1,0 +1,150 @@
+{
+  "scope": "Additional exact-version official-source survey used for editorial choice. Only Engram/CaT/AlphaProof selected here for full translation; remaining entries are not a delivery promise or a root full-reading claim. Adaptation permission must be reconfirmed for any future different version.",
+  "provenance": "Delegated official-license research supplied with the task; selected versions independently rechecked by their translators and reviewers.",
+  "records": [
+    {
+      "id": "engram",
+      "version": "2601.07372v2",
+      "date": "2026-07-12",
+      "survey_license": "CC BY4",
+      "editorial_role": "full_translation",
+      "source_url": "https://arxiv.org/abs/2601.07372v2"
+    },
+    {
+      "id": "deepseek-v4.1",
+      "version": "53e70b17d9acb8e0c423f0e4fe5702f25562b63d",
+      "date": "2026-09-10",
+      "survey_license": "no explicit paper adaptation grant",
+      "editorial_role": "candidate",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/53e70b17d9acb8e0c423f0e4fe5702f25562b63d/DeepSeek_V41_Tech_Report.pdf"
+    },
+    {
+      "id": "cat",
+      "version": "2509.14234v3",
+      "date": "2026-05-09",
+      "survey_license": "CC BY4",
+      "editorial_role": "full_translation",
+      "source_url": "https://arxiv.org/abs/2509.14234v3"
+    },
+    {
+      "id": "alphaproof",
+      "version": "Nature VOR",
+      "date": "2026-03-13",
+      "survey_license": "CC BY4",
+      "editorial_role": "full_translation",
+      "source_url": "https://www.nature.com/articles/s41586-025-09833-y"
+    },
+    {
+      "id": "qwen3.5-omni",
+      "version": "2604.15804v2",
+      "date": "2026-04-21",
+      "survey_license": "CC BY4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2604.15804v2"
+    },
+    {
+      "id": "qwen-agentworld",
+      "version": "2606.24597v1",
+      "date": "2026-06-23",
+      "survey_license": "arXiv nonexclusive",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2606.24597v1"
+    },
+    {
+      "id": "teaching-claude-why",
+      "version": "official alignment blog",
+      "date": "2026-05-08",
+      "survey_license": "no explicit adaptation grant",
+      "editorial_role": "candidate",
+      "source_url": "https://alignment.anthropic.com/2026/teaching-claude-why/"
+    },
+    {
+      "id": "rlvr-boundaries",
+      "version": "2504.13837v5",
+      "date": "2025-11-24",
+      "survey_license": "CC BY4",
+      "editorial_role": "comparative_study",
+      "source_url": "https://arxiv.org/abs/2504.13837v5"
+    },
+    {
+      "id": "fineweb",
+      "version": "2406.17557v2",
+      "date": "2024-10-31",
+      "survey_license": "CC BY4",
+      "editorial_role": "comparative_study",
+      "source_url": "https://arxiv.org/abs/2406.17557v2"
+    },
+    {
+      "id": "deliberative-alignment",
+      "version": "2412.16339v2",
+      "date": "2025-01-08",
+      "survey_license": "CC BY4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2412.16339v2"
+    },
+    {
+      "id": "self-report-misbehavior",
+      "version": "2602.22303v1",
+      "date": "2026-02-25",
+      "survey_license": "CC BY4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2602.22303v1"
+    },
+    {
+      "id": "cot-controllability",
+      "version": "2603.05706v1",
+      "date": "2026-03-05",
+      "survey_license": "CC BY4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2603.05706v1"
+    },
+    {
+      "id": "introspection-adapters",
+      "version": "2604.16812v2",
+      "date": "2026-04-28",
+      "survey_license": "CC BY4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2604.16812v2"
+    },
+    {
+      "id": "deepseek-elastic-compute",
+      "version": "2609.22978v1",
+      "date": "2026-09-19",
+      "survey_license": "arXiv nonexclusive",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2609.22978v1"
+    },
+    {
+      "id": "cwm",
+      "version": "2510.02387v1",
+      "date": "2025-09-30",
+      "survey_license": "arXiv nonexclusive",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2510.02387v1"
+    },
+    {
+      "id": "gemini-robotics1.5",
+      "version": "2510.03342v3",
+      "date": "2025-11-28",
+      "survey_license": "CC BY4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2510.03342v3"
+    },
+    {
+      "id": "v-jepa2.1",
+      "version": "2603.14482v3",
+      "date": "2026-06-11",
+      "survey_license": "CC BY-NC-ND4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2603.14482v3"
+    },
+    {
+      "id": "qwen-robotworld",
+      "version": "2606.17030v3",
+      "date": "2026-06-17",
+      "survey_license": "CC BY4",
+      "editorial_role": "candidate",
+      "source_url": "https://arxiv.org/abs/2606.17030v3"
+    }
+  ]
+}

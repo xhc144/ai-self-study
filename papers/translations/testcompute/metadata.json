@@ -1,0 +1,91 @@
+{
+  "id": "testcompute",
+  "title_original": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+  "title_zh": "最优扩展大语言模型推理时计算可以比扩展模型参数更有效",
+  "authors": [
+    "Charlie Snell",
+    "Jaehoon Lee",
+    "Kelvin Xu",
+    "Aviral Kumar"
+  ],
+  "affiliations": {
+    "Charlie Snell": "UC Berkeley; work done during an internship at Google DeepMind",
+    "Jaehoon Lee": "Google DeepMind",
+    "Kelvin Xu": "Google DeepMind; equal advising",
+    "Aviral Kumar": "Google DeepMind; equal advising"
+  },
+  "version": "arXiv:2408.03314v1",
+  "arxiv_id": "2408.03314",
+  "publication_date": "2024-08-06",
+  "submission_timestamp_utc": "2024-08-06 17:35:05",
+  "official_urls": {
+    "abstract": "https://arxiv.org/abs/2408.03314v1",
+    "html": "https://arxiv.org/html/2408.03314v1",
+    "pdf": "https://arxiv.org/pdf/2408.03314v1",
+    "source": "https://arxiv.org/src/2408.03314v1"
+  },
+  "license": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified_at": "2026-10-12",
+    "verification": "Official v1 HTML header reads License: CC BY 4.0; official v1 abstract view license href is http://creativecommons.org/licenses/by/4.0/, resolving to the canonical HTTPS license page.",
+    "html_header_help_url": "https://info.arxiv.org/help/license/index.html#licenses-available",
+    "redistribution_and_adaptation_permitted": true,
+    "separate_third_party_exceptions_found": false,
+    "official_view_license_href": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "translator": {
+    "name": "ai-self-study contributors",
+    "machine_assisted": true,
+    "description": "Chinese translation and source comparison assisted by an OpenAI Codex AI agent; not an author-endorsed translation"
+  },
+  "translation_license": "CC-BY-4.0",
+  "changes": [
+    "Translated abstract, all main text, footnote, acknowledgements, all appendices A–M and all 29 figure captions into Simplified Chinese.",
+    "Preserved all 32 original author-supplied figure assets, with Chinese legend and axis-text concordance; all 13 model-output screenshots additionally transcribed and translated sentence by sentence, preserving mistakes, repetitions, attempt numbers and PRM scores.",
+    "Preserved all 51 reference entries in their original language with testcompute- citation prefixes.",
+    "Adapted layout to the user-approved originalchapter/originalsection template; original section numbers retained in headings, subheadings unnumbered in the combined book.",
+    "Changed indicator glyph from mathbbm 1 to bold 1 without changing meaning.",
+    "Added explicitly marked translator notes for original notation/parameter/editorial inconsistencies; did not replace the original claims."
+  ],
+  "source_hashes": {
+    "original.pdf": "ded7b20b51493258c5ce2a1a024cd33dd752de1fa3373d1207620da4cfe24545",
+    "original.html": "a9b93ce1d687a53f5e4348f81434234d17b0bf44541ecbb3a5e5551984e9cd02",
+    "source.tar": "f179cbc6b43f09285096e8a088bdacb8b2f0af4f6e3bcaaf8c12721a0f5331f9",
+    "abs.html": "d4e42ec687108f23e84786e4954426722db06608e4ee72778110a7212648ce0a",
+    "template_content.tex": "15dc282595233f37d94d0dcf5c6dd3833185ce630ecd02d8ad1089351ac0c354",
+    "googledeepmind-test.tex": "e8e17b12b3c3e3208b27902ef9b09467b07829e330cd999d8f7dc7da02b2fafe",
+    "googledeepmind-test.bbl": "ab795f5596c1dafaafdff963c06494bed2ab2ef34fd595b66c8e57beef5caf7f"
+  },
+  "completeness": {
+    "abstract": true,
+    "main_sections": 8,
+    "appendices": "A–M",
+    "acknowledgements": true,
+    "bibliography_entries": 51,
+    "figure_containers": 29,
+    "figure_assets": 32,
+    "tables": 0,
+    "numbered_equations": 1,
+    "model_output_image_translations": 13,
+    "known_omissions": []
+  },
+  "build_status": "Local user-approved fixed-template XeLaTeX compile succeeded in 42 pages; official individual and combined PDF publication remain owned by the root agent.",
+  "review_limits": [
+    "Mathematical inconsistencies in model-output examples are deliberately preserved.",
+    "The original v1 describes the four-shot prompt construction but supplies no verbatim four-shot prompt string.",
+    "Original plots retain English labels; all caption text and their unique axis, legend and diagram prose are translated in a separately marked concordance."
+  ],
+  "local_build": {
+    "pages": 42,
+    "pdf_sha256": "61b085c108a71d89f149cf43f572f370d7fdd826cc747f97957f32128ca31fb8",
+    "body_sha256": "2f7e19cd10d41bb480d5ab4632b7f9cf6d7cece4b1828cad3e79cd92c9e438ec",
+    "references_sha256": "b319128b37c38bfd2edc025a3e1ba8bd604fe58da860fb903859b432e8e8a5eb",
+    "pdf_path": "/tmp/testcompute-v1/build/check.pdf",
+    "no_overfull": true,
+    "no_missing_characters": true,
+    "no_unresolved_refs": true,
+    "font_shape_warning": "Fixed-template FandolSong CJK italic falls back to upright; no missing glyphs."
+  }
+}

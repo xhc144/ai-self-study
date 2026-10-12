@@ -1,0 +1,1970 @@
+{
+  "paper_id": "arXiv:2601.07372v2",
+  "coverage_scope": "Full specified-version substantive publication: abstract, eight numbered body sections, all subsections/paragraphs, appendices A-C, nine numbered equations, eight figures, six tables, displayed examples, footnotes and all 135 cited bibliography entries.",
+  "headings": [
+    {
+      "source_file": "main.tex",
+      "source_line": 134,
+      "source_heading": "Abstract",
+      "translation_file": "body.tex",
+      "translation_line": 13,
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/intro.tex",
+      "source_line": 1,
+      "source_level": "section",
+      "source_heading": "Introduction",
+      "translation_file": "body.tex",
+      "translation_line": 20,
+      "translation_heading": "\\originalsection{引言}\\label{engram-sec-1}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 11,
+      "source_level": "section",
+      "source_heading": "Architecture",
+      "translation_file": "body.tex",
+      "translation_line": 33,
+      "translation_heading": "\\originalsection{架构}\\label{engram-sec-2}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 14,
+      "source_level": "subsection",
+      "source_heading": "Overview",
+      "translation_file": "body.tex",
+      "translation_line": 34,
+      "translation_heading": "\\noindent\\textbf{概述.}\\label{engram-sec-2-1}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 24,
+      "source_level": "subsection",
+      "source_heading": "Sparse Retrieval via Hashed $N$-grams",
+      "translation_file": "body.tex",
+      "translation_line": 42,
+      "translation_heading": "\\noindent\\textbf{基于哈希$N$-gram的稀疏检索.}\\label{engram-sec-2-2}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 29,
+      "source_level": "paragraph",
+      "source_heading": "Tokenizer Compression",
+      "translation_file": "body.tex",
+      "translation_line": 45,
+      "translation_heading": "\\noindent\\textbf{分词器压缩.}\\label{engram-token-compression}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 36,
+      "source_level": "paragraph",
+      "source_heading": "Multi-Head Hashing.",
+      "translation_file": "body.tex",
+      "translation_line": 48,
+      "translation_heading": "\\noindent\\textbf{多头哈希.}\\label{engram-multi-head-hash}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 51,
+      "source_level": "subsection",
+      "source_heading": "Context-aware Gating",
+      "translation_file": "body.tex",
+      "translation_line": 59,
+      "translation_heading": "\\noindent\\textbf{上下文感知门控.}\\label{engram-sec-2-3}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 83,
+      "source_level": "subsection",
+      "source_heading": "Integration with Multi-branch Architecture",
+      "translation_file": "body.tex",
+      "translation_line": 78,
+      "translation_heading": "\\noindent\\textbf{与多分支架构集成.}\\label{engram-sec-2-4}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/arch.tex",
+      "source_line": 96,
+      "source_level": "subsection",
+      "source_heading": "System Efficiency: Decoupling Compute and Memory",
+      "translation_file": "body.tex",
+      "translation_line": 88,
+      "translation_heading": "\\noindent\\textbf{系统效率: 计算与记忆解耦.}\\label{engram-sec-2-5}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 11,
+      "source_level": "section",
+      "source_heading": "Scaling Laws and Sparsity Allocation",
+      "translation_file": "body.tex",
+      "translation_line": 102,
+      "translation_heading": "\\originalsection{扩展规律与稀疏分配}\\label{engram-sec-3}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 21,
+      "source_level": "subsection",
+      "source_heading": "Optimal Allocation Ratio Between MoE and Engram",
+      "translation_file": "body.tex",
+      "translation_line": 110,
+      "translation_heading": "\\noindent\\textbf{MoE与Engram的最优分配比例.}\\label{engram-sec-3-1}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 24,
+      "source_level": "paragraph",
+      "source_heading": "Compute-matched formulation.",
+      "translation_file": "body.tex",
+      "translation_line": 111,
+      "translation_heading": "\\noindent\\textbf{计算匹配形式化.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 34,
+      "source_level": "paragraph",
+      "source_heading": "Allocation ratio.",
+      "translation_file": "body.tex",
+      "translation_line": 116,
+      "translation_heading": "\\noindent\\textbf{分配比例.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 48,
+      "source_level": "paragraph",
+      "source_heading": "Experimental protocol.",
+      "translation_file": "body.tex",
+      "translation_line": 124,
+      "translation_heading": "\\noindent\\textbf{实验协议.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 57,
+      "source_level": "paragraph",
+      "source_heading": "Results and Analysis.",
+      "translation_file": "body.tex",
+      "translation_line": 127,
+      "translation_heading": "\\noindent\\textbf{结果与分析.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 69,
+      "source_level": "subsection",
+      "source_heading": "Engram under Infinite Memory Regime",
+      "translation_file": "body.tex",
+      "translation_line": 132,
+      "translation_heading": "\\noindent\\textbf{无限记忆设置中的Engram.}\\label{engram-sec-3-2}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 75,
+      "source_level": "paragraph",
+      "source_heading": "Experimental protocol.",
+      "translation_file": "body.tex",
+      "translation_line": 135,
+      "translation_heading": "\\noindent\\textbf{实验协议.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 81,
+      "source_level": "paragraph",
+      "source_heading": "Results.",
+      "translation_file": "body.tex",
+      "translation_line": 138,
+      "translation_heading": "\\noindent\\textbf{结果.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/large_scale_exp.tex",
+      "source_line": 1,
+      "source_level": "section",
+      "source_heading": "Large Scale Pre-training",
+      "translation_file": "body.tex",
+      "translation_line": 141,
+      "translation_heading": "\\originalsection{大规模预训练}\\label{engram-sec-4}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/large_scale_exp.tex",
+      "source_line": 67,
+      "source_level": "subsection",
+      "source_heading": "Experimental Setup",
+      "translation_file": "body.tex",
+      "translation_line": 144,
+      "translation_heading": "\\noindent\\textbf{实验设置.}\\label{engram-sec-4-1}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/large_scale_exp.tex",
+      "source_line": 69,
+      "source_level": "paragraph",
+      "source_heading": "Training Data and Model Configurations",
+      "translation_file": "body.tex",
+      "translation_line": 145,
+      "translation_heading": "\\noindent\\textbf{训练数据与模型配置.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/large_scale_exp.tex",
+      "source_line": 81,
+      "source_level": "paragraph",
+      "source_heading": "Evaluation Protocol",
+      "translation_file": "body.tex",
+      "translation_line": 154,
+      "translation_heading": "\\noindent\\textbf{评价协议.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/large_scale_exp.tex",
+      "source_line": 99,
+      "source_level": "subsection",
+      "source_heading": "Experimental Results",
+      "translation_file": "body.tex",
+      "translation_line": 165,
+      "translation_heading": "\\noindent\\textbf{实验结果.}\\label{engram-sec-4-2}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/long_context_exp.tex",
+      "source_line": 32,
+      "source_level": "section",
+      "source_heading": "Long Context Training",
+      "translation_file": "body.tex",
+      "translation_line": 172,
+      "translation_heading": "\\originalsection{长上下文训练}\\label{engram-sec-5}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/long_context_exp.tex",
+      "source_line": 37,
+      "source_level": "subsection",
+      "source_heading": "Experimental Setup",
+      "translation_file": "body.tex",
+      "translation_line": 175,
+      "translation_heading": "\\noindent\\textbf{实验设置.}\\label{engram-sec-5-1}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/long_context_exp.tex",
+      "source_line": 39,
+      "source_level": "paragraph",
+      "source_heading": "Training Details.",
+      "translation_file": "body.tex",
+      "translation_line": 176,
+      "translation_heading": "\\noindent\\textbf{训练细节.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/long_context_exp.tex",
+      "source_line": 41,
+      "source_level": "paragraph",
+      "source_heading": "Model Configurations.",
+      "translation_file": "body.tex",
+      "translation_line": 179,
+      "translation_heading": "\\noindent\\textbf{模型配置.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/long_context_exp.tex",
+      "source_line": 45,
+      "source_level": "paragraph",
+      "source_heading": "Evaluation Benchmarks.",
+      "translation_file": "body.tex",
+      "translation_line": 182,
+      "translation_heading": "\\noindent\\textbf{评价基准.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/long_context_exp.tex",
+      "source_line": 47,
+      "source_level": "subsection",
+      "source_heading": "Experimental Results",
+      "translation_file": "body.tex",
+      "translation_line": 187,
+      "translation_heading": "\\noindent\\textbf{实验结果.}\\label{engram-sec-5-2}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 51,
+      "source_level": "section",
+      "source_heading": "Analysis",
+      "translation_file": "body.tex",
+      "translation_line": 202,
+      "translation_heading": "\\originalsection{分析}\\label{engram-sec-6}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 54,
+      "source_level": "subsection",
+      "source_heading": "Is Engram functionally equivalent to increasing the model’s depth?",
+      "translation_file": "body.tex",
+      "translation_line": 205,
+      "translation_heading": "\\noindent\\textbf{Engram在功能上是否等于增加模型深度?}\\label{engram-sec-6-1}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 61,
+      "source_level": "subsubsection",
+      "source_heading": "Accelerated Prediction Convergence",
+      "translation_file": "body.tex",
+      "translation_line": 221,
+      "translation_heading": "\\noindent\\textbf{预测收敛加快.}\\label{engram-logitlens}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 68,
+      "source_level": "subsubsection",
+      "source_heading": "Representational Alignment and Effective Depth",
+      "translation_file": "body.tex",
+      "translation_line": 224,
+      "translation_heading": "\\noindent\\textbf{表征对齐与有效深度.}\\label{engram-cka}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 99,
+      "source_level": "subsection",
+      "source_heading": "Structural Ablation and Layer Sensitivity",
+      "translation_file": "body.tex",
+      "translation_line": 246,
+      "translation_heading": "\\noindent\\textbf{结构消融与层敏感性.}\\label{engram-sec-6-2}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 107,
+      "source_level": "paragraph",
+      "source_heading": "Reference configuration.",
+      "translation_file": "body.tex",
+      "translation_line": 249,
+      "translation_heading": "\\noindent\\textbf{参考配置.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 113,
+      "source_level": "paragraph",
+      "source_heading": "Where should memory be injected?",
+      "translation_file": "body.tex",
+      "translation_line": 252,
+      "translation_heading": "\\noindent\\textbf{记忆放在哪里?}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 133,
+      "source_level": "paragraph",
+      "source_heading": "Which components matter?",
+      "translation_file": "body.tex",
+      "translation_line": 257,
+      "translation_heading": "\\noindent\\textbf{哪些组件重要?}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 147,
+      "source_level": "subsection",
+      "source_heading": "Sensitivity Analysis",
+      "translation_file": "body.tex",
+      "translation_line": 267,
+      "translation_heading": "\\noindent\\textbf{敏感性分析.}\\label{engram-sec-6-3}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 163,
+      "source_level": "subsection",
+      "source_heading": "System Efficiency",
+      "translation_file": "body.tex",
+      "translation_line": 276,
+      "translation_heading": "\\noindent\\textbf{系统效率.}\\label{engram-sec-6-4}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 168,
+      "source_level": "paragraph",
+      "source_heading": "Experimental Setup.",
+      "translation_file": "body.tex",
+      "translation_line": 279,
+      "translation_heading": "\\noindent\\textbf{实验设置.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 202,
+      "source_level": "paragraph",
+      "source_heading": "Results.",
+      "translation_file": "body.tex",
+      "translation_line": 298,
+      "translation_heading": "\\noindent\\textbf{结果.}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/analysis.tex",
+      "source_line": 209,
+      "source_level": "subsection",
+      "source_heading": "Case Study: Gating Visualization",
+      "translation_file": "body.tex",
+      "translation_line": 301,
+      "translation_heading": "\\noindent\\textbf{门控可视化案例.}\\label{engram-sec-6-5}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/related_work.tex",
+      "source_line": 1,
+      "source_level": "section",
+      "source_heading": "Related Work",
+      "translation_file": "body.tex",
+      "translation_line": 318,
+      "translation_heading": "\\originalsection{相关工作}\\label{engram-sec-7}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/related_work.tex",
+      "source_line": 3,
+      "source_level": "paragraph",
+      "source_heading": "$N$-gram Modeling and Embedding Scaling.",
+      "translation_file": "body.tex",
+      "translation_line": 319,
+      "translation_heading": "\\noindent\\textbf{$N$-gram建模与embedding扩展.}\\label{engram-sec-7-1}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/related_work.tex",
+      "source_line": 15,
+      "source_level": "paragraph",
+      "source_heading": "High-Cardinality Categorical Embeddings.",
+      "translation_file": "body.tex",
+      "translation_line": 328,
+      "translation_heading": "\\noindent\\textbf{高基数类别embedding.}\\label{engram-sec-7-2}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/related_work.tex",
+      "source_line": 36,
+      "source_level": "paragraph",
+      "source_heading": "Mixture-of-Experts.",
+      "translation_file": "body.tex",
+      "translation_line": 331,
+      "translation_heading": "\\noindent\\textbf{混合专家.}\\label{engram-sec-7-3}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/related_work.tex",
+      "source_line": 38,
+      "source_level": "paragraph",
+      "source_heading": "Memory Network.",
+      "translation_file": "body.tex",
+      "translation_line": 334,
+      "translation_heading": "\\noindent\\textbf{记忆网络.}\\label{engram-sec-7-4}",
+      "status": "translated"
+    },
+    {
+      "source_file": "sections/related_work.tex",
+      "source_line": 42,
+      "source_level": "paragraph",
+      "source_heading": "Mechanisms of Knowledge Storage.",
+      "translation_file": "body.tex",
+      "translation_line": 337,
+      "translation_heading": "\\noindent\\textbf{知识存储机制.}\\label{engram-sec-7-5}",
+      "status": "translated"
+    },
+    {
+      "source_file": "main.tex",
+      "source_line": 160,
+      "source_level": "section",
+      "source_heading": "Conclusion",
+      "translation_file": "body.tex",
+      "translation_line": 340,
+      "translation_label": "engram-sec-8",
+      "status": "translated"
+    },
+    {
+      "source_file": "main.tex",
+      "source_line": 176,
+      "source_level": "section",
+      "source_heading": "Detailed Model Architecture and Hyper Parameters",
+      "translation_file": "body.tex",
+      "translation_line": 347,
+      "translation_label": "engram-app-A",
+      "status": "translated"
+    },
+    {
+      "source_file": "main.tex",
+      "source_line": 181,
+      "source_level": "section",
+      "source_heading": "Full Benchmark Curves",
+      "translation_file": "body.tex",
+      "translation_line": 351,
+      "translation_label": "engram-app-B",
+      "status": "translated"
+    },
+    {
+      "source_file": "main.tex",
+      "source_line": 190,
+      "source_level": "section",
+      "source_heading": "Case Study of Tokenizer Compression",
+      "translation_file": "body.tex",
+      "translation_line": 358,
+      "translation_label": "engram-app-C",
+      "status": "translated"
+    }
+  ],
+  "equations": [
+    {
+      "source_id": "1",
+      "source_file": "sections/arch.tex",
+      "source_line": 39,
+      "translation_label": "engram-eq-1",
+      "translation_file": "body.tex",
+      "translation_line": 50,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "2",
+      "source_file": "sections/arch.tex",
+      "source_line": 44,
+      "translation_label": "engram-eq-2",
+      "translation_file": "body.tex",
+      "translation_line": 55,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "3",
+      "source_file": "sections/arch.tex",
+      "source_line": 55,
+      "translation_label": "engram-eq-3",
+      "translation_file": "body.tex",
+      "translation_line": 61,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "4",
+      "source_file": "sections/arch.tex",
+      "source_line": 59,
+      "translation_label": "engram-eq-4",
+      "translation_file": "body.tex",
+      "translation_line": 65,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "5",
+      "source_file": "sections/arch.tex",
+      "source_line": 65,
+      "translation_label": "engram-eq-5",
+      "translation_file": "body.tex",
+      "translation_line": 72,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "6",
+      "source_file": "sections/arch.tex",
+      "source_line": 91,
+      "translation_label": "engram-eq-6",
+      "translation_file": "body.tex",
+      "translation_line": 82,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "7",
+      "source_file": "sections/scaling_law_exp.tex",
+      "source_line": 36,
+      "translation_label": "engram-eq-7",
+      "translation_file": "body.tex",
+      "translation_line": 118,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "8",
+      "source_file": "sections/analysis.tex",
+      "source_line": 71,
+      "translation_label": "engram-eq-8",
+      "translation_file": "body.tex",
+      "translation_line": 226,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    },
+    {
+      "source_id": "9",
+      "source_file": "sections/analysis.tex",
+      "source_line": 78,
+      "translation_label": "engram-eq-9",
+      "translation_file": "body.tex",
+      "translation_line": 233,
+      "check": "Compared source notation, indices, normalization and operators; notation translated without adding a scientific theorem."
+    }
+  ],
+  "figures": [
+    {
+      "source_id": "1",
+      "source_asset": "figs/engram_arch.pdf",
+      "translation_label": "engram-fig-1",
+      "translation_file": "body.tex",
+      "translation_line": 39,
+      "translation_asset": "figures/engram_arch.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    },
+    {
+      "source_id": "2",
+      "source_asset": "figs/Engram_system.pdf",
+      "translation_label": "engram-fig-2",
+      "translation_file": "body.tex",
+      "translation_line": 93,
+      "translation_asset": "figures/engram_system.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    },
+    {
+      "source_id": "3",
+      "source_asset": "figs/scaling_law.pdf",
+      "translation_label": "engram-fig-3",
+      "translation_file": "body.tex",
+      "translation_line": 107,
+      "translation_asset": "figures/scaling_law.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    },
+    {
+      "source_id": "4",
+      "source_asset": "figs/logitlens_and_cka.pdf",
+      "translation_label": "engram-fig-4",
+      "translation_file": "body.tex",
+      "translation_line": 243,
+      "translation_asset": "figures/logitlens_and_cka.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    },
+    {
+      "source_id": "5",
+      "source_asset": "figs/arch_ablation.pdf",
+      "translation_label": "engram-fig-5",
+      "translation_file": "body.tex",
+      "translation_line": 264,
+      "translation_asset": "figures/arch_ablation.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    },
+    {
+      "source_id": "6",
+      "source_asset": "figs/sensitivity_analysis.pdf",
+      "translation_label": "engram-fig-6",
+      "translation_file": "body.tex",
+      "translation_line": 273,
+      "translation_asset": "figures/sensitivity_analysis.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    },
+    {
+      "source_id": "7",
+      "source_asset": "figs/visualization.pdf",
+      "translation_label": "engram-fig-7",
+      "translation_file": "body.tex",
+      "translation_line": 307,
+      "translation_asset": "figures/visualization.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    },
+    {
+      "source_id": "8",
+      "source_asset": "figs/benchmark_curve.pdf",
+      "translation_label": "engram-fig-8",
+      "translation_file": "body.tex",
+      "translation_line": 354,
+      "translation_asset": "figures/benchmark_curve.pdf",
+      "coverage": "Complete unchanged vector asset, full caption, Chinese explanation of labels; selected examples spelled out."
+    }
+  ],
+  "tables": [
+    {
+      "source_id": "1",
+      "translation_label": "engram-tab-1",
+      "translation_file": "tables/pretraining.tex",
+      "translation_line": 3,
+      "status": "all cells translated/preserved; mechanical checks in numeric-checks.json"
+    },
+    {
+      "source_id": "2",
+      "translation_label": "engram-tab-2",
+      "translation_file": "tables/long_context.tex",
+      "translation_line": 3,
+      "status": "all cells translated/preserved; mechanical checks in numeric-checks.json"
+    },
+    {
+      "source_id": "3",
+      "translation_label": "engram-tab-3",
+      "translation_file": "body.tex",
+      "translation_line": 210,
+      "status": "all cells translated/preserved; mechanical checks in numeric-checks.json"
+    },
+    {
+      "source_id": "4",
+      "translation_label": "engram-tab-4",
+      "translation_file": "body.tex",
+      "translation_line": 284,
+      "status": "all cells translated/preserved; mechanical checks in numeric-checks.json"
+    },
+    {
+      "source_id": "5",
+      "translation_label": "engram-tab-5",
+      "translation_file": "tables/architecture.tex",
+      "translation_line": 3,
+      "status": "all cells translated/preserved; mechanical checks in numeric-checks.json"
+    },
+    {
+      "source_id": "6",
+      "translation_label": "engram-tab-6",
+      "translation_file": "body.tex",
+      "translation_line": 361,
+      "status": "all cells translated/preserved; mechanical checks in numeric-checks.json"
+    }
+  ],
+  "references": [
+    {
+      "source_key": "austin2021program",
+      "source_file": "ref.bib",
+      "source_line": 1122,
+      "translation_key": "engram-austin2021program",
+      "translation_file": "references.tex",
+      "translation_line": 9,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "bahdanau2014neural",
+      "source_file": "ref.bib",
+      "source_line": 657,
+      "translation_key": "engram-bahdanau2014neural",
+      "translation_file": "references.tex",
+      "translation_line": 15,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "belrose2023eliciting",
+      "source_file": "ref.bib",
+      "source_line": 899,
+      "translation_key": "engram-belrose2023eliciting",
+      "translation_file": "references.tex",
+      "translation_line": 24,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "bengio2003neural",
+      "source_file": "ref.bib",
+      "source_line": 334,
+      "translation_key": "engram-bengio2003neural",
+      "translation_file": "references.tex",
+      "translation_line": 30,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "bengio2013estimatingpropagatinggradientsstochastic",
+      "source_file": "ref.bib",
+      "source_line": 590,
+      "translation_key": "engram-bengio2013estimatingpropagatinggradientsstochastic",
+      "translation_file": "references.tex",
+      "translation_line": 36,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "berges2024memory",
+      "source_file": "ref.bib",
+      "source_line": 1630,
+      "translation_key": "engram-berges2024memory",
+      "translation_file": "references.tex",
+      "translation_line": 42,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "bi2024deepseek",
+      "source_file": "ref.bib",
+      "source_line": 945,
+      "translation_key": "engram-bi2024deepseek",
+      "translation_file": "references.tex",
+      "translation_line": 49,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "bisk2020piqa",
+      "source_file": "ref.bib",
+      "source_line": 1209,
+      "translation_key": "engram-bisk2020piqa",
+      "translation_file": "references.tex",
+      "translation_line": 55,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "bojanowski2017enriching",
+      "source_file": "ref.bib",
+      "source_line": 637,
+      "translation_key": "engram-bojanowski2017enriching",
+      "translation_file": "references.tex",
+      "translation_line": 61,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "borgeaud2022improving",
+      "source_file": "ref.bib",
+      "source_line": 1708,
+      "translation_key": "engram-borgeaud2022improving",
+      "translation_file": "references.tex",
+      "translation_line": 67,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "brants-etal-2007-large",
+      "source_file": "ref.bib",
+      "source_line": 600,
+      "translation_key": "engram-brants-etal-2007-large",
+      "translation_file": "references.tex",
+      "translation_line": 74,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "caoretrieval",
+      "source_file": "ref.bib",
+      "source_line": 153,
+      "translation_key": "engram-caoretrieval",
+      "translation_file": "references.tex",
+      "translation_line": 83,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "Chao1950HumanBA",
+      "source_file": "ref.bib",
+      "source_line": 906,
+      "translation_key": "engram-Chao1950HumanBA",
+      "translation_file": "references.tex",
+      "translation_line": 89,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "chen2021evaluatinglargelanguagemodels",
+      "source_file": "ref.bib",
+      "source_line": 1129,
+      "translation_key": "engram-chen2021evaluatinglargelanguagemodels",
+      "translation_file": "references.tex",
+      "translation_line": 96,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "cheng2023decouple",
+      "source_file": "ref.bib",
+      "source_line": 1724,
+      "translation_key": "engram-cheng2023decouple",
+      "translation_file": "references.tex",
+      "translation_line": 110,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "cheng2023lift",
+      "source_file": "ref.bib",
+      "source_line": 617,
+      "translation_key": "engram-cheng2023lift",
+      "translation_file": "references.tex",
+      "translation_line": 121,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "clark2018think",
+      "source_file": "ref.bib",
+      "source_line": 1288,
+      "translation_key": "engram-clark2018think",
+      "translation_file": "references.tex",
+      "translation_line": 128,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "cobbe2021training",
+      "source_file": "ref.bib",
+      "source_line": 1097,
+      "translation_key": "engram-cobbe2021training",
+      "translation_file": "references.tex",
+      "translation_line": 135,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "coleman2023unified",
+      "source_file": "ref.bib",
+      "source_line": 111,
+      "translation_key": "engram-coleman2023unified",
+      "translation_file": "references.tex",
+      "translation_line": 141,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "comanici2025gemini",
+      "source_file": "ref.bib",
+      "source_line": 1606,
+      "translation_key": "engram-comanici2025gemini",
+      "translation_file": "references.tex",
+      "translation_line": 148,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "constant2017survey",
+      "source_file": "ref.bib",
+      "source_line": 1373,
+      "translation_key": "engram-constant2017survey",
+      "translation_file": "references.tex",
+      "translation_line": 155,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "csordas2025language",
+      "source_file": "ref.bib",
+      "source_line": 997,
+      "translation_key": "engram-csordas2025language",
+      "translation_file": "references.tex",
+      "translation_line": 162,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "dai2022knowledge",
+      "source_file": "ref.bib",
+      "source_line": 432,
+      "translation_key": "engram-dai2022knowledge",
+      "translation_file": "references.tex",
+      "translation_line": 167,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "dai2024deepseekmoe",
+      "source_file": "ref.bib",
+      "source_line": 1789,
+      "translation_key": "engram-dai2024deepseekmoe",
+      "translation_file": "references.tex",
+      "translation_line": 174,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "davari2022reliability",
+      "source_file": "ref.bib",
+      "source_line": 978,
+      "translation_key": "engram-davari2022reliability",
+      "translation_file": "references.tex",
+      "translation_line": 181,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "deepseekai2024deepseekv2strongeconomicalefficient",
+      "source_file": "ref.bib",
+      "source_line": 1041,
+      "translation_key": "engram-deepseekai2024deepseekv2strongeconomicalefficient",
+      "translation_file": "references.tex",
+      "translation_line": 189,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "pmlr-v202-dehghani23a",
+      "source_file": "ref.bib",
+      "source_line": 298,
+      "translation_key": "engram-pmlr-v202-dehghani23a",
+      "translation_file": "references.tex",
+      "translation_line": 195,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "desai2021random",
+      "source_file": "ref.bib",
+      "source_line": 26,
+      "translation_key": "engram-desai2021random",
+      "translation_file": "references.tex",
+      "translation_line": 211,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "ding2021few",
+      "source_file": "ref.bib",
+      "source_line": 970,
+      "translation_key": "engram-ding2021few",
+      "translation_file": "references.tex",
+      "translation_line": 218,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "du2022glam",
+      "source_file": "ref.bib",
+      "source_line": 1796,
+      "translation_key": "engram-du2022glam",
+      "translation_file": "references.tex",
+      "translation_line": 225,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "dua2019drop",
+      "source_file": "ref.bib",
+      "source_line": 1172,
+      "translation_key": "engram-dua2019drop",
+      "translation_file": "references.tex",
+      "translation_line": 232,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "elfwing2018sigmoid",
+      "source_file": "ref.bib",
+      "source_line": 647,
+      "translation_key": "engram-elfwing2018sigmoid",
+      "translation_file": "references.tex",
+      "translation_line": 244,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "erman2000idiom",
+      "source_file": "ref.bib",
+      "source_line": 1383,
+      "translation_key": "engram-erman2000idiom",
+      "translation_file": "references.tex",
+      "translation_line": 250,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "fangwrong",
+      "source_file": "ref.bib",
+      "source_line": 1018,
+      "translation_key": "engram-fangwrong",
+      "translation_file": "references.tex",
+      "translation_line": 256,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "fedus2022switch",
+      "source_file": "ref.bib",
+      "source_line": 1819,
+      "translation_key": "engram-fedus2022switch",
+      "translation_file": "references.tex",
+      "translation_line": 262,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "feng2023memory",
+      "source_file": "ref.bib",
+      "source_line": 144,
+      "translation_key": "engram-feng2023memory",
+      "translation_file": "references.tex",
+      "translation_line": 269,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "gao2020pile",
+      "source_file": "ref.bib",
+      "source_line": 1356,
+      "translation_key": "engram-gao2020pile",
+      "translation_file": "references.tex",
+      "translation_line": 275,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "gao2025train",
+      "source_file": "ref.bib",
+      "source_line": 498,
+      "translation_key": "engram-gao2025train",
+      "translation_file": "references.tex",
+      "translation_line": 281,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "gema2025we",
+      "source_file": "ref.bib",
+      "source_line": 1329,
+      "translation_key": "engram-gema2025we",
+      "translation_file": "references.tex",
+      "translation_line": 288,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "geva2021transformer",
+      "source_file": "ref.bib",
+      "source_line": 440,
+      "translation_key": "engram-geva2021transformer",
+      "translation_file": "references.tex",
+      "translation_line": 296,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "ghandeharioun2024patchscopes",
+      "source_file": "ref.bib",
+      "source_line": 1513,
+      "translation_key": "engram-ghandeharioun2024patchscopes",
+      "translation_file": "references.tex",
+      "translation_line": 302,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "ginart2021mixed",
+      "source_file": "ref.bib",
+      "source_line": 69,
+      "translation_key": "engram-ginart2021mixed",
+      "translation_file": "references.tex",
+      "translation_line": 309,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "gretton2005measuring",
+      "source_file": "ref.bib",
+      "source_line": 961,
+      "translation_key": "engram-gretton2005measuring",
+      "translation_file": "references.tex",
+      "translation_line": 316,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "gu2021efficiently",
+      "source_file": "ref.bib",
+      "source_line": 537,
+      "translation_key": "engram-gu2021efficiently",
+      "translation_file": "references.tex",
+      "translation_line": 322,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "gu2024cruxeval",
+      "source_file": "ref.bib",
+      "source_line": 1104,
+      "translation_key": "engram-gu2024cruxeval",
+      "translation_file": "references.tex",
+      "translation_line": 330,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "guo2025deepseek",
+      "source_file": "ref.bib",
+      "source_line": 483,
+      "translation_key": "engram-guo2025deepseek",
+      "translation_file": "references.tex",
+      "translation_line": 339,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "guu2020retrieval",
+      "source_file": "ref.bib",
+      "source_line": 1765,
+      "translation_key": "engram-guu2020retrieval",
+      "translation_file": "references.tex",
+      "translation_line": 346,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "haber-poesio-2024-polysemy",
+      "source_file": "ref.bib",
+      "source_line": 573,
+      "translation_key": "engram-haber-poesio-2024-polysemy",
+      "translation_file": "references.tex",
+      "translation_line": 352,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "he2016deep",
+      "source_file": "ref.bib",
+      "source_line": 739,
+      "translation_key": "engram-he2016deep",
+      "translation_file": "references.tex",
+      "translation_line": 361,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "he2024mixture",
+      "source_file": "ref.bib",
+      "source_line": 1717,
+      "translation_key": "engram-he2024mixture",
+      "translation_file": "references.tex",
+      "translation_line": 367,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "hendrycks2020measuring",
+      "source_file": "ref.bib",
+      "source_line": 1337,
+      "translation_key": "engram-hendrycks2020measuring",
+      "translation_file": "references.tex",
+      "translation_line": 372,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "hendrycks2021measuring",
+      "source_file": "ref.bib",
+      "source_line": 1051,
+      "translation_key": "engram-hendrycks2021measuring",
+      "translation_file": "references.tex",
+      "translation_line": 381,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "hsiehruler",
+      "source_file": "ref.bib",
+      "source_line": 1012,
+      "translation_key": "engram-hsiehruler",
+      "translation_file": "references.tex",
+      "translation_line": 392,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "huang2025over",
+      "source_file": "ref.bib",
+      "source_line": 1688,
+      "translation_key": "engram-huang2025over",
+      "translation_file": "references.tex",
+      "translation_line": 398,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "huang2023c",
+      "source_file": "ref.bib",
+      "source_line": 1303,
+      "translation_key": "engram-huang2023c",
+      "translation_file": "references.tex",
+      "translation_line": 406,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "huang2025ultramemv2",
+      "source_file": "ref.bib",
+      "source_line": 1648,
+      "translation_key": "engram-huang2025ultramemv2",
+      "translation_file": "references.tex",
+      "translation_line": 414,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "huang2024ultra",
+      "source_file": "ref.bib",
+      "source_line": 1745,
+      "translation_key": "engram-huang2024ultra",
+      "translation_file": "references.tex",
+      "translation_line": 421,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "DBLP:conf/coling/JinYHZWH0MMDYDZ25",
+      "source_file": "ref.bib",
+      "source_line": 198,
+      "translation_key": "engram-DBLP:conf/coling/JinYHZWH0MMDYDZ25",
+      "translation_file": "references.tex",
+      "translation_line": 429,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "joglekar2020neural",
+      "source_file": "ref.bib",
+      "source_line": 61,
+      "translation_key": "engram-joglekar2020neural",
+      "translation_file": "references.tex",
+      "translation_line": 441,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "jordan2024muon",
+      "source_file": "ref.bib",
+      "source_line": 952,
+      "translation_key": "engram-jordan2024muon",
+      "translation_file": "references.tex",
+      "translation_line": 448,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "joshi2017triviaqa",
+      "source_file": "ref.bib",
+      "source_line": 1266,
+      "translation_key": "engram-joshi2017triviaqa",
+      "translation_file": "references.tex",
+      "translation_line": 453,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kang2020learning",
+      "source_file": "ref.bib",
+      "source_line": 46,
+      "translation_key": "engram-kang2020learning",
+      "translation_file": "references.tex",
+      "translation_line": 464,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kang2021learning",
+      "source_file": "ref.bib",
+      "source_line": 18,
+      "translation_key": "engram-kang2021learning",
+      "translation_file": "references.tex",
+      "translation_line": 471,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "DBLP:journals/tsp/Katz87",
+      "source_file": "ref.bib",
+      "source_line": 360,
+      "translation_key": "engram-DBLP:journals/tsp/Katz87",
+      "translation_file": "references.tex",
+      "translation_line": 478,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kimi-k2",
+      "source_file": "ref.bib",
+      "source_line": 173,
+      "translation_key": "engram-kimi-k2",
+      "translation_file": "references.tex",
+      "translation_line": 487,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kingma2014adam",
+      "source_file": "ref.bib",
+      "source_line": 891,
+      "translation_key": "engram-kingma2014adam",
+      "translation_file": "references.tex",
+      "translation_line": 494,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kneser1995improved",
+      "source_file": "ref.bib",
+      "source_line": 350,
+      "translation_key": "engram-kneser1995improved",
+      "translation_file": "references.tex",
+      "translation_line": 499,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kornblith2019similarity",
+      "source_file": "ref.bib",
+      "source_line": 1465,
+      "translation_key": "engram-kornblith2019similarity",
+      "translation_file": "references.tex",
+      "translation_line": 505,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kriegeskorte2008representational",
+      "source_file": "ref.bib",
+      "source_line": 188,
+      "translation_key": "engram-kriegeskorte2008representational",
+      "translation_file": "references.tex",
+      "translation_line": 511,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kudo2018sentencepiecesimplelanguageindependent",
+      "source_file": "ref.bib",
+      "source_line": 870,
+      "translation_key": "engram-kudo2018sentencepiecesimplelanguageindependent",
+      "translation_file": "references.tex",
+      "translation_line": 517,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kullback1951information",
+      "source_file": "ref.bib",
+      "source_line": 562,
+      "translation_key": "engram-kullback1951information",
+      "translation_file": "references.tex",
+      "translation_line": 528,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "kwon2023efficient",
+      "source_file": "ref.bib",
+      "source_line": 927,
+      "translation_key": "engram-kwon2023efficient",
+      "translation_file": "references.tex",
+      "translation_line": 534,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "lai2017race",
+      "source_file": "ref.bib",
+      "source_line": 1149,
+      "translation_key": "engram-lai2017race",
+      "translation_file": "references.tex",
+      "translation_line": 542,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "lample2019large",
+      "source_file": "ref.bib",
+      "source_line": 1774,
+      "translation_key": "engram-lample2019large",
+      "translation_file": "references.tex",
+      "translation_line": 552,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "lan2023copy",
+      "source_file": "ref.bib",
+      "source_line": 159,
+      "translation_key": "engram-lan2023copy",
+      "translation_file": "references.tex",
+      "translation_line": 557,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "larsson2016fractalnet",
+      "source_file": "ref.bib",
+      "source_line": 283,
+      "translation_key": "engram-larsson2016fractalnet",
+      "translation_file": "references.tex",
+      "translation_line": 562,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "lennie2003cost",
+      "source_file": "ref.bib",
+      "source_line": 1443,
+      "translation_key": "engram-lennie2003cost",
+      "translation_file": "references.tex",
+      "translation_line": 570,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "lepikhin2020gshard",
+      "source_file": "ref.bib",
+      "source_line": 1805,
+      "translation_key": "engram-lepikhin2020gshard",
+      "translation_file": "references.tex",
+      "translation_line": 575,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "pmlr-v139-lewis21a",
+      "source_file": "ref.bib",
+      "source_line": 1613,
+      "translation_key": "engram-pmlr-v139-lewis21a",
+      "translation_file": "references.tex",
+      "translation_line": 582,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "li2024cmmlu",
+      "source_file": "ref.bib",
+      "source_line": 1312,
+      "translation_key": "engram-li2024cmmlu",
+      "translation_file": "references.tex",
+      "translation_line": 591,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "li2024emergentworldrepresentationsexploring",
+      "source_file": "ref.bib",
+      "source_line": 387,
+      "translation_key": "engram-li2024emergentworldrepresentationsexploring",
+      "translation_file": "references.tex",
+      "translation_line": 597,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "li2025echoesbertmodernlanguage",
+      "source_file": "ref.bib",
+      "source_line": 231,
+      "translation_key": "engram-li2025echoesbertmodernlanguage",
+      "translation_file": "references.tex",
+      "translation_line": 607,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "li2023starcodersourceyou",
+      "source_file": "ref.bib",
+      "source_line": 792,
+      "translation_key": "engram-li2023starcodersourceyou",
+      "translation_file": "references.tex",
+      "translation_line": 613,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "li2021ccpm",
+      "source_file": "ref.bib",
+      "source_line": 1251,
+      "translation_key": "engram-li2021ccpm",
+      "translation_file": "references.tex",
+      "translation_line": 629,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "liu2024deepseek",
+      "source_file": "ref.bib",
+      "source_line": 1782,
+      "translation_key": "engram-liu2024deepseek",
+      "translation_file": "references.tex",
+      "translation_line": 634,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "liu2025superbpe",
+      "source_file": "ref.bib",
+      "source_line": 552,
+      "translation_key": "engram-liu2025superbpe",
+      "translation_file": "references.tex",
+      "translation_line": 640,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "liu2024infini",
+      "source_file": "ref.bib",
+      "source_line": 1399,
+      "translation_key": "engram-liu2024infini",
+      "translation_file": "references.tex",
+      "translation_line": 646,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "liu2025muon",
+      "source_file": "ref.bib",
+      "source_line": 137,
+      "translation_key": "engram-liu2025muon",
+      "translation_file": "references.tex",
+      "translation_line": 653,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "liu2021learnable",
+      "source_file": "ref.bib",
+      "source_line": 54,
+      "translation_key": "engram-liu2021learnable",
+      "translation_file": "references.tex",
+      "translation_line": 659,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "mallen2023not",
+      "source_file": "ref.bib",
+      "source_line": 1258,
+      "translation_key": "engram-mallen2023not",
+      "translation_file": "references.tex",
+      "translation_line": 664,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "meng2022locating",
+      "source_file": "ref.bib",
+      "source_line": 423,
+      "translation_key": "engram-meng2022locating",
+      "translation_file": "references.tex",
+      "translation_line": 672,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "meng2022mass",
+      "source_file": "ref.bib",
+      "source_line": 406,
+      "translation_key": "engram-meng2022mass",
+      "translation_file": "references.tex",
+      "translation_line": 678,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "nguyen2024understanding",
+      "source_file": "ref.bib",
+      "source_line": 1390,
+      "translation_key": "engram-nguyen2024understanding",
+      "translation_file": "references.tex",
+      "translation_line": 686,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "nostalgebraist2020logitlens",
+      "source_file": "ref.bib",
+      "source_line": 1474,
+      "translation_key": "engram-nostalgebraist2020logitlens",
+      "translation_file": "references.tex",
+      "translation_line": 692,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "olshausen1997sparse",
+      "source_file": "ref.bib",
+      "source_line": 1454,
+      "translation_key": "engram-olshausen1997sparse",
+      "translation_file": "references.tex",
+      "translation_line": 699,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "pagnoni2025byte",
+      "source_file": "ref.bib",
+      "source_line": 1671,
+      "translation_key": "engram-pagnoni2025byte",
+      "translation_file": "references.tex",
+      "translation_line": 705,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "peng2023rwkv",
+      "source_file": "ref.bib",
+      "source_line": 673,
+      "translation_key": "engram-peng2023rwkv",
+      "translation_file": "references.tex",
+      "translation_line": 713,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "peng2023yarn",
+      "source_file": "ref.bib",
+      "source_line": 1024,
+      "translation_key": "engram-peng2023yarn",
+      "translation_file": "references.tex",
+      "translation_line": 727,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "piantadosi2014zipf",
+      "source_file": "ref.bib",
+      "source_line": 916,
+      "translation_key": "engram-piantadosi2014zipf",
+      "translation_file": "references.tex",
+      "translation_line": 735,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "press2021train",
+      "source_file": "ref.bib",
+      "source_line": 448,
+      "translation_key": "engram-press2021train",
+      "translation_file": "references.tex",
+      "translation_line": 742,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "rajput2023recommender",
+      "source_file": "ref.bib",
+      "source_line": 9,
+      "translation_key": "engram-rajput2023recommender",
+      "translation_file": "references.tex",
+      "translation_line": 751,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "roy2022n",
+      "source_file": "ref.bib",
+      "source_line": 166,
+      "translation_key": "engram-roy2022n",
+      "translation_file": "references.tex",
+      "translation_line": 758,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "rwkv_deepembed_wiki_2025",
+      "source_file": "ref.bib",
+      "source_line": 1655,
+      "translation_key": "engram-rwkv_deepembed_wiki_2025",
+      "translation_file": "references.tex",
+      "translation_line": 764,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "sadhukhan2026stem",
+      "source_file": "ref.bib",
+      "source_line": 130,
+      "translation_key": "engram-sadhukhan2026stem",
+      "translation_file": "references.tex",
+      "translation_line": 770,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "sakaguchi2021winogrande",
+      "source_file": "ref.bib",
+      "source_line": 1198,
+      "translation_key": "engram-sakaguchi2021winogrande",
+      "translation_file": "references.tex",
+      "translation_line": 776,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "shannon1948mathematical",
+      "source_file": "ref.bib",
+      "source_line": 376,
+      "translation_key": "engram-shannon1948mathematical",
+      "translation_file": "references.tex",
+      "translation_line": 782,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "shazeer2017outrageously",
+      "source_file": "ref.bib",
+      "source_line": 1812,
+      "translation_key": "engram-shazeer2017outrageously",
+      "translation_file": "references.tex",
+      "translation_line": 788,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "shi2022language",
+      "source_file": "ref.bib",
+      "source_line": 1073,
+      "translation_key": "engram-shi2022language",
+      "translation_file": "references.tex",
+      "translation_line": 794,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "shi2020compositional",
+      "source_file": "ref.bib",
+      "source_line": 103,
+      "translation_key": "engram-shi2020compositional",
+      "translation_file": "references.tex",
+      "translation_line": 803,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "singh2024better",
+      "source_file": "ref.bib",
+      "source_line": 1,
+      "translation_key": "engram-singh2024better",
+      "translation_file": "references.tex",
+      "translation_line": 810,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "su2023roformerenhancedtransformerrotary",
+      "source_file": "ref.bib",
+      "source_line": 464,
+      "translation_key": "engram-su2023roformerenhancedtransformerrotary",
+      "translation_file": "references.tex",
+      "translation_line": 818,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "sun2020investigating",
+      "source_file": "ref.bib",
+      "source_line": 1139,
+      "translation_key": "engram-sun2020investigating",
+      "translation_file": "references.tex",
+      "translation_line": 825,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "suzgun2023challenging",
+      "source_file": "ref.bib",
+      "source_line": 1243,
+      "translation_key": "engram-suzgun2023challenging",
+      "translation_file": "references.tex",
+      "translation_line": 832,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "szegedy2015going",
+      "source_file": "ref.bib",
+      "source_line": 529,
+      "translation_key": "engram-szegedy2015going",
+      "translation_file": "references.tex",
+      "translation_line": 840,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "gemma_3n_2025",
+      "source_file": "ref.bib",
+      "source_line": 1663,
+      "translation_key": "engram-gemma_3n_2025",
+      "translation_file": "references.tex",
+      "translation_line": 847,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "tenney2019bert",
+      "source_file": "ref.bib",
+      "source_line": 1408,
+      "translation_key": "engram-tenney2019bert",
+      "translation_file": "references.tex",
+      "translation_line": 853,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "tito2017hash",
+      "source_file": "ref.bib",
+      "source_line": 731,
+      "translation_key": "engram-tito2017hash",
+      "translation_file": "references.tex",
+      "translation_line": 860,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "tsang2022clustering",
+      "source_file": "ref.bib",
+      "source_line": 89,
+      "translation_key": "engram-tsang2022clustering",
+      "translation_file": "references.tex",
+      "translation_line": 865,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "tseng20263",
+      "source_file": "ref.bib",
+      "source_line": 120,
+      "translation_key": "engram-tseng20263",
+      "translation_file": "references.tex",
+      "translation_line": 871,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "vaswani2017attention",
+      "source_file": "ref.bib",
+      "source_line": 1483,
+      "translation_key": "engram-vaswani2017attention",
+      "translation_file": "references.tex",
+      "translation_line": 876,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "wang2023shall",
+      "source_file": "ref.bib",
+      "source_line": 275,
+      "translation_key": "engram-wang2023shall",
+      "translation_file": "references.tex",
+      "translation_line": 882,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "wang2024auxiliarylossfreeloadbalancingstrategy",
+      "source_file": "ref.bib",
+      "source_line": 265,
+      "translation_key": "engram-wang2024auxiliarylossfreeloadbalancingstrategy",
+      "translation_file": "references.tex",
+      "translation_line": 890,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "wang2024mmlu",
+      "source_file": "ref.bib",
+      "source_line": 1320,
+      "translation_key": "engram-wang2024mmlu",
+      "translation_file": "references.tex",
+      "translation_line": 896,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "UAX15-NFKC",
+      "source_file": "ref.bib",
+      "source_line": 779,
+      "translation_key": "engram-UAX15-NFKC",
+      "translation_file": "references.tex",
+      "translation_line": 904,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "xiao2023efficient",
+      "source_file": "ref.bib",
+      "source_line": 248,
+      "translation_key": "engram-xiao2023efficient",
+      "translation_file": "references.tex",
+      "translation_line": 911,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "xie2025mhcmanifoldconstrainedhyperconnections",
+      "source_file": "ref.bib",
+      "source_line": 1363,
+      "translation_key": "engram-xie2025mhcmanifoldconstrainedhyperconnections",
+      "translation_file": "references.tex",
+      "translation_line": 919,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "yang2025path",
+      "source_file": "ref.bib",
+      "source_line": 241,
+      "translation_key": "engram-yang2025path",
+      "translation_file": "references.tex",
+      "translation_line": 926,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "yin2021tt",
+      "source_file": "ref.bib",
+      "source_line": 37,
+      "translation_key": "engram-yin2021tt",
+      "translation_file": "references.tex",
+      "translation_line": 932,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "yu2025scaling",
+      "source_file": "ref.bib",
+      "source_line": 1681,
+      "translation_key": "engram-yu2025scaling",
+      "translation_file": "references.tex",
+      "translation_line": 939,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "zellers2019hellaswag",
+      "source_file": "ref.bib",
+      "source_line": 1219,
+      "translation_key": "engram-zellers2019hellaswag",
+      "translation_file": "references.tex",
+      "translation_line": 944,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "zhang2019root",
+      "source_file": "ref.bib",
+      "source_line": 490,
+      "translation_key": "engram-zhang2019root",
+      "translation_file": "references.tex",
+      "translation_line": 955,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "zhang2020model",
+      "source_file": "ref.bib",
+      "source_line": 95,
+      "translation_key": "engram-zhang2020model",
+      "translation_file": "references.tex",
+      "translation_line": 960,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "zhang2024cafe",
+      "source_file": "ref.bib",
+      "source_line": 78,
+      "translation_key": "engram-zhang2024cafe",
+      "translation_file": "references.tex",
+      "translation_line": 968,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "zhong2024agieval",
+      "source_file": "ref.bib",
+      "source_line": 1295,
+      "translation_key": "engram-zhong2024agieval",
+      "translation_file": "references.tex",
+      "translation_line": 975,
+      "status": "complete original bibliographic information retained"
+    },
+    {
+      "source_key": "zhu2025hyperconnections",
+      "source_file": "ref.bib",
+      "source_line": 758,
+      "translation_key": "engram-zhu2025hyperconnections",
+      "translation_file": "references.tex",
+      "translation_line": 982,
+      "status": "complete original bibliographic information retained"
+    }
+  ],
+  "formal_theorem_proof_algorithm_environments": {
+    "source_count": 0,
+    "not_invented": true
+  },
+  "prompt_and_example_scope": {
+    "gating_sequences": 5,
+    "english_sequences_retained_with_chinese": 3,
+    "chinese_sequences_retained": 2,
+    "patchscopes_automatic_outputs_complete": 5,
+    "compression_table_original_tokens": "Every explicitly printed token and source ellipsis retained, with original order checked.",
+    "full_benchmark_prompts": "Not supplied as verbatim templates by the source. All stated protocols, shot counts and displayed examples translated; no fabricated prompts."
+  },
+  "unrecovered_substantive_source_items": [],
+  "intentional_exclusions": [
+    "Source document class/preamble implementations and decorative DeepSeek logo are not scientific text and are not reproduced as a translation.",
+    "Commented-out draft alternatives in source are not part of the published v2 and are not incorporated."
+  ],
+  "verification_limit": "Heading/ID/cell checks demonstrate structural coverage. They do not by themselves prove every translation decision or empirical claim correct."
+}

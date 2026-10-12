@@ -1,0 +1,858 @@
+{
+  "source_version": "arXiv:2305.18290v3",
+  "source_tex_sha256": "c670b679a12b1a9316ffe38540bc8bd2d744e49d6b115da64aded587c9bf96d8",
+  "source_html_sha256": "46515bc6001158063f3da04695b1412099bc40b90c53f54bf1834581aefa15d1",
+  "scope_complete": true,
+  "sections": [
+    {
+      "source_id": "abstract1",
+      "heading_zh": "摘要",
+      "translation": {
+        "file": "body.tex",
+        "line": 9
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S1",
+      "heading_zh": "1 引言",
+      "translation": {
+        "file": "body.tex",
+        "line": 14
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S2",
+      "heading_zh": "2 相关工作",
+      "translation": {
+        "file": "body.tex",
+        "line": 36
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S3",
+      "heading_zh": "3 预备知识",
+      "translation": {
+        "file": "body.tex",
+        "line": 52
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S4",
+      "heading_zh": "4 直接偏好优化",
+      "translation": {
+        "file": "body.tex",
+        "line": 81
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S5",
+      "heading_zh": "5 DPO 的理论分析",
+      "translation": {
+        "file": "body.tex",
+        "line": 128
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S5.SS1",
+      "heading_zh": "5.1 语言模型其实也是奖励模型",
+      "translation": {
+        "file": "body.tex",
+        "line": 135
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S5.SS2",
+      "heading_zh": "5.2 演员—评论家算法的不稳定性",
+      "translation": {
+        "file": "body.tex",
+        "line": 178
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S6",
+      "heading_zh": "6 实验",
+      "translation": {
+        "file": "body.tex",
+        "line": 188
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S6.SS1",
+      "heading_zh": "6.1 DPO 优化 RLHF 目标的效果",
+      "translation": {
+        "file": "body.tex",
+        "line": 214
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S6.SS2",
+      "heading_zh": "6.2 扩展到真实偏好数据集",
+      "translation": {
+        "file": "body.tex",
+        "line": 229
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S6.SS3",
+      "heading_zh": "6.3 对新输入分布的泛化",
+      "translation": {
+        "file": "body.tex",
+        "line": 237
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S6.SS4",
+      "heading_zh": "6.4 用人工判断验证 GPT-4",
+      "translation": {
+        "file": "body.tex",
+        "line": 260
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "S7",
+      "heading_zh": "7 讨论",
+      "translation": {
+        "file": "body.tex",
+        "line": 300
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "Sx1",
+      "heading_zh": "致谢",
+      "translation": {
+        "file": "body.tex",
+        "line": 307
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "bib",
+      "heading_zh": "参考文献（原文书目信息）",
+      "translation": {
+        "file": "body.tex",
+        "line": 319
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "Ax1",
+      "heading_zh": "作者贡献",
+      "translation": {
+        "file": "body.tex",
+        "line": 744
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A1",
+      "heading_zh": "附录 A 数学推导",
+      "translation": {
+        "file": "body.tex",
+        "line": 761
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A1.SS1",
+      "heading_zh": "A.1 KL 约束奖励最大化的最优解",
+      "translation": {
+        "file": "body.tex",
+        "line": 762
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A1.SS2",
+      "heading_zh": "A.2 Bradley--Terry 模型下的 DPO 目标",
+      "translation": {
+        "file": "body.tex",
+        "line": 809
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A1.SS3",
+      "heading_zh": "A.3 Plackett--Luce 模型下的 DPO 目标",
+      "translation": {
+        "file": "body.tex",
+        "line": 835
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A1.SS4",
+      "heading_zh": "A.4 DPO 目标的梯度",
+      "translation": {
+        "file": "body.tex",
+        "line": 857
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A1.SS5",
+      "heading_zh": "A.5 引理 1 与引理 2 的证明",
+      "translation": {
+        "file": "body.tex",
+        "line": 887
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A1.SS6",
+      "heading_zh": "A.6 定理 1 的证明",
+      "translation": {
+        "file": "body.tex",
+        "line": 937
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A2",
+      "heading_zh": "附录 B 实现细节与超参数",
+      "translation": {
+        "file": "body.tex",
+        "line": 997
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A3",
+      "heading_zh": "附录 C 实验设置补充",
+      "translation": {
+        "file": "body.tex",
+        "line": 1031
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A3.SS1",
+      "heading_zh": "C.1 IMDb 情感实验与基线细节",
+      "translation": {
+        "file": "body.tex",
+        "line": 1035
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A3.SS2",
+      "heading_zh": "C.2 计算胜率的 GPT-4 提示",
+      "translation": {
+        "file": "body.tex",
+        "line": 1040
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A3.SS3",
+      "heading_zh": "C.3 非似然训练基线",
+      "translation": {
+        "file": "body.tex",
+        "line": 1106
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A4",
+      "heading_zh": "附录 D 补充实验结果",
+      "translation": {
+        "file": "body.tex",
+        "line": 1137
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A4.SS1",
+      "heading_zh": "D.1 不同 $N$ 的选优基线",
+      "translation": {
+        "file": "body.tex",
+        "line": 1138
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A4.SS2",
+      "heading_zh": "D.2 回复样例与 GPT-4 判断",
+      "translation": {
+        "file": "body.tex",
+        "line": 1149
+      },
+      "status": "translated_complete"
+    },
+    {
+      "source_id": "A4.SS3",
+      "heading_zh": "D.3 人工研究细节",
+      "translation": {
+        "file": "body.tex",
+        "line": 1322
+      },
+      "status": "translated_complete"
+    }
+  ],
+  "figures": [
+    {
+      "source_id": "S1.F1",
+      "source_tex_label": "fig:teaser",
+      "translation": {
+        "file": "body.tex",
+        "line": 24
+      },
+      "status": "caption_translated_and_figure_included",
+      "assets": [
+        "figures/teaser-redraw.tex"
+      ],
+      "mode": "content_redraw"
+    },
+    {
+      "source_id": "S6.F2",
+      "source_tex_label": "fig:frontier-tldr-main",
+      "translation": {
+        "file": "body.tex",
+        "line": 202
+      },
+      "status": "caption_translated_and_figure_included",
+      "assets": [
+        "figures/frontier.pdf",
+        "figures/tldr_winrate_vs_temp.pdf"
+      ],
+      "mode": "author_plot_reproduction"
+    },
+    {
+      "source_id": "S6.F3",
+      "source_tex_label": "fig:dialogue-main",
+      "translation": {
+        "file": "body.tex",
+        "line": 222
+      },
+      "status": "caption_translated_and_figure_included",
+      "assets": [
+        "figures/dialogue_winrate_vs_temp.pdf",
+        "figures/dialogue_winrate_vs_steps.pdf"
+      ],
+      "mode": "author_plot_reproduction"
+    },
+    {
+      "source_id": "A4.F4",
+      "source_tex_label": "fig:best-of-n",
+      "translation": {
+        "file": "body.tex",
+        "line": 1147
+      },
+      "status": "caption_translated_and_figure_included",
+      "assets": [
+        "figures/dialogue_winrate_vs_temp_rerank.pdf",
+        "figures/tldr_rerank_vs_temp.pdf"
+      ],
+      "mode": "author_plot_reproduction"
+    },
+    {
+      "source_id": "A4.F5",
+      "source_tex_label": "fig:survey",
+      "translation": {
+        "file": "body.tex",
+        "line": 1329
+      },
+      "status": "caption_translated_and_figure_included",
+      "assets": [
+        "figures/survey-redraw.tex"
+      ],
+      "mode": "content_redraw"
+    }
+  ],
+  "tables": [
+    {
+      "source_id": "S6.T1",
+      "source_tex_label": "tab:ood",
+      "translation": {
+        "file": "body.tex",
+        "line": 241
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "S6.T2",
+      "source_tex_label": "tab:human_results",
+      "translation": {
+        "file": "body.tex",
+        "line": 266
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A3.T3",
+      "source_tex_label": "tab:unlikelihood_generations",
+      "translation": {
+        "file": "body.tex",
+        "line": 1112
+      },
+      "status": "all_cells_included",
+      "special_handling": "Degenerate response tokens preserved in full"
+    },
+    {
+      "source_id": "A4.T4",
+      "source_tex_label": "tab:summ-ex-1",
+      "translation": {
+        "file": "body.tex",
+        "line": 1155
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A4.T5",
+      "source_tex_label": "tab:summ-ex-2",
+      "translation": {
+        "file": "body.tex",
+        "line": 1178
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A4.T6",
+      "source_tex_label": "tab:summ-ex-3",
+      "translation": {
+        "file": "body.tex",
+        "line": 1204
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A4.T7",
+      "source_tex_label": "tab:dialogue-ex-1",
+      "translation": {
+        "file": "body.tex",
+        "line": 1229
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A4.T8",
+      "source_tex_label": "tab:dialogue-ex-2",
+      "translation": {
+        "file": "body.tex",
+        "line": 1251
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A4.T9",
+      "source_tex_label": "tab:dialogue-ex-3",
+      "translation": {
+        "file": "body.tex",
+        "line": 1272
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A4.T10",
+      "source_tex_label": "tab:dialogue-ex-4",
+      "translation": {
+        "file": "body.tex",
+        "line": 1295
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    },
+    {
+      "source_id": "A4.SS3.SSS0.Px1.tab1",
+      "source_tex_label": "participants-unnumbered",
+      "translation": {
+        "file": "body.tex",
+        "line": 1341
+      },
+      "status": "all_cells_included",
+      "special_handling": "Chinese translation; proper names retained"
+    }
+  ],
+  "formulas": [
+    {
+      "source_display_index": 1,
+      "translation_label": "dpo-eq:bradley-terry",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S3.E1",
+      "translation": {
+        "file": "body.tex",
+        "line": 62
+      }
+    },
+    {
+      "source_display_index": 2,
+      "translation_label": "dpo-eq:reward_model",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S3.E2",
+      "translation": {
+        "file": "body.tex",
+        "line": 67
+      }
+    },
+    {
+      "source_display_index": 3,
+      "translation_label": "dpo-eq:RL",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S3.E3",
+      "translation": {
+        "file": "body.tex",
+        "line": 75
+      }
+    },
+    {
+      "source_display_index": 4,
+      "translation_label": "dpo-eq:op_policy",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S4.E4",
+      "translation": {
+        "file": "body.tex",
+        "line": 89
+      }
+    },
+    {
+      "source_display_index": 5,
+      "translation_label": "dpo-eq:main_eq",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S4.E5",
+      "translation": {
+        "file": "body.tex",
+        "line": 94
+      }
+    },
+    {
+      "source_display_index": 6,
+      "translation_label": "dpo-eq:objective",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S4.E6",
+      "translation": {
+        "file": "body.tex",
+        "line": 99
+      }
+    },
+    {
+      "source_display_index": 7,
+      "translation_label": "dpo-eq:optimum_model",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S4.E7",
+      "translation": {
+        "file": "body.tex",
+        "line": 107
+      }
+    },
+    {
+      "source_display_index": 8,
+      "translation_label": "dpo-eq:gradient",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S4.p4.2",
+      "translation": {
+        "file": "body.tex",
+        "line": 115
+      }
+    },
+    {
+      "source_display_index": 9,
+      "translation_label": "dpo-display-09",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S5.E8",
+      "translation": {
+        "file": "body.tex",
+        "line": 162
+      }
+    },
+    {
+      "source_display_index": 10,
+      "translation_label": "dpo-eq:lag_p",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S5.E9",
+      "translation": {
+        "file": "body.tex",
+        "line": 172
+      }
+    },
+    {
+      "source_display_index": 11,
+      "translation_label": "dpo-eq:AC",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "S5.E10",
+      "translation": {
+        "file": "body.tex",
+        "line": 181
+      }
+    },
+    {
+      "source_display_index": 12,
+      "translation_label": "dpo-display-12",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.E11",
+      "translation": {
+        "file": "body.tex",
+        "line": 765
+      }
+    },
+    {
+      "source_display_index": 13,
+      "translation_label": "dpo-eq:RL_proof",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.EGx1",
+      "translation": {
+        "file": "body.tex",
+        "line": 770
+      },
+      "source_row_ids": [
+        "A1.Ex1",
+        "A1.Ex2",
+        "A1.Ex3",
+        "A1.E12"
+      ]
+    },
+    {
+      "source_display_index": 14,
+      "translation_label": "dpo-display-14",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.Ex4",
+      "translation": {
+        "file": "body.tex",
+        "line": 779
+      }
+    },
+    {
+      "source_display_index": 15,
+      "translation_label": "dpo-display-15",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.Ex5",
+      "translation": {
+        "file": "body.tex",
+        "line": 786
+      }
+    },
+    {
+      "source_display_index": 16,
+      "translation_label": "dpo-display-16",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.EGx2",
+      "translation": {
+        "file": "body.tex",
+        "line": 793
+      },
+      "source_row_ids": [
+        "A1.E13",
+        "A1.E14"
+      ]
+    },
+    {
+      "source_display_index": 17,
+      "translation_label": "dpo-display-17",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.E15",
+      "translation": {
+        "file": "body.tex",
+        "line": 799
+      }
+    },
+    {
+      "source_display_index": 18,
+      "translation_label": "dpo-eq:BT_restated",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.E16",
+      "translation": {
+        "file": "body.tex",
+        "line": 813
+      }
+    },
+    {
+      "source_display_index": 19,
+      "translation_label": "dpo-eq:main_eq_restated",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.E17",
+      "translation": {
+        "file": "body.tex",
+        "line": 819
+      }
+    },
+    {
+      "source_display_index": 20,
+      "translation_label": "dpo-display-20",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.EGx3",
+      "translation": {
+        "file": "body.tex",
+        "line": 825
+      },
+      "source_row_ids": [
+        "A1.Ex6",
+        "A1.Ex7",
+        "A1.Ex8"
+      ]
+    },
+    {
+      "source_display_index": 21,
+      "translation_label": "dpo-eq:pl-model",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.E18",
+      "translation": {
+        "file": "body.tex",
+        "line": 839
+      }
+    },
+    {
+      "source_display_index": 22,
+      "translation_label": "dpo-display-22",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.E19",
+      "translation": {
+        "file": "body.tex",
+        "line": 845
+      }
+    },
+    {
+      "source_display_index": 23,
+      "translation_label": "dpo-display-23",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.E20",
+      "translation": {
+        "file": "body.tex",
+        "line": 851
+      }
+    },
+    {
+      "source_display_index": 24,
+      "translation_label": "dpo-eq:grad-start",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.EGx4",
+      "translation": {
+        "file": "body.tex",
+        "line": 861
+      },
+      "source_row_ids": [
+        "A1.E21"
+      ]
+    },
+    {
+      "source_display_index": 25,
+      "translation_label": "dpo-display-25",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.EGx5",
+      "translation": {
+        "file": "body.tex",
+        "line": 868
+      },
+      "source_row_ids": [
+        "A1.E22"
+      ]
+    },
+    {
+      "source_display_index": 26,
+      "translation_label": "dpo-display-26",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.SS4.p3.2",
+      "translation": {
+        "file": "body.tex",
+        "line": 877
+      }
+    },
+    {
+      "source_display_index": 27,
+      "translation_label": "dpo-display-27",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.EGx6",
+      "translation": {
+        "file": "body.tex",
+        "line": 900
+      },
+      "source_row_ids": [
+        "A1.Ex9",
+        "A1.Ex10",
+        "A1.Ex11",
+        "A1.Ex12",
+        "A1.Ex13"
+      ]
+    },
+    {
+      "source_display_index": 28,
+      "translation_label": "dpo-display-28",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.EGx7",
+      "translation": {
+        "file": "body.tex",
+        "line": 922
+      },
+      "source_row_ids": [
+        "A1.Ex14",
+        "A1.Ex15",
+        "A1.Ex16",
+        "A1.Ex17",
+        "A1.Ex18"
+      ]
+    },
+    {
+      "source_display_index": 29,
+      "translation_label": "dpo-display-29",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.Ex19",
+      "translation": {
+        "file": "body.tex",
+        "line": 950
+      }
+    },
+    {
+      "source_display_index": 30,
+      "translation_label": "dpo-display-30",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.Ex20",
+      "translation": {
+        "file": "body.tex",
+        "line": 956
+      }
+    },
+    {
+      "source_display_index": 31,
+      "translation_label": "dpo-display-31",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.Ex21",
+      "translation": {
+        "file": "body.tex",
+        "line": 968
+      }
+    },
+    {
+      "source_display_index": 32,
+      "translation_label": "dpo-display-32",
+      "status": "all_formula_tokens_preserved",
+      "source_html_id": "A1.Ex22",
+      "translation": {
+        "file": "body.tex",
+        "line": 983
+      }
+    }
+  ],
+  "prose_map": "prose-map.json",
+  "bibliography": {
+    "source_items": 51,
+    "included_items": 51,
+    "status": "complete_original_bibliographic_wording"
+  },
+  "review_limits": [
+    "AI source comparison, not independent human expert review.",
+    "Original author plots retain original English labels; captions translate all axes, titles and relevant legend text.",
+    "Figure 5 is a complete visible-content redraw, not a reproduction of SurveyMonkey visual appearance."
+  ],
+  "omissions": [],
+  "translation_sha256": "3ba5c8f3532ad262e7defe5ccce82f6f570324200fad20befaa7fb5423581880",
+  "validation_file": "validation.json"
+}

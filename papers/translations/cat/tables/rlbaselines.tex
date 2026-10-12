@@ -1,0 +1,13 @@
+\Needspace{10\baselineskip}
+\begin{longtable}{lcc}
+\caption{与使用选择方法进行 RL 的基线比较，模型为 Llama 3.1 8B. 多数投票在定性答案领域不适用，故 HealthBench 留为不适用.}\label{cat-tab:rlbaselines}\\
+
+\toprule
+方法 & HealthBench & MATH-500 \\
+\midrule
+CaT & $\mathbf{0.38} \pm 0.01$  & $\mathbf{0.56} \pm 0.02$ \\
+多数投票-RL & 不适用 & $0.53 \pm 0.02$ \\
+min(PPL)-RL & $0.33 \pm 0.01$ & $0.51 \pm 0.02$ \\
+\bottomrule
+
+\end{longtable}

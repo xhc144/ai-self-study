@@ -1,0 +1,24 @@
+\Needspace{14\baselineskip}
+\begin{longtable}{llcc}
+\caption{CaT 与初始策略的比较. 最佳值加粗，次佳值加下划线.}\label{cat-tab:results-table}\\
+
+        \toprule
+        模型 & 方法 & HealthBench 分数 & MATH-500 准确率 \\
+        \midrule
+        Gemma 3 4B 
+        & 初始策略 & $0.35 \pm 0.01$ & $0.70 \pm 0.02$ \\
+        & 合成     & $\underline{0.39} \pm 0.01$ & $\underline{0.74} \pm 0.02$ \\
+        & CaT  & $\mathbf{0.43} \pm 0.01$ & $\mathbf{0.78} \pm 0.02$ \\
+        \midrule
+        Qwen 3 4B 
+        & 初始策略 & $0.39 \pm 0.01$ & $0.78 \pm 0.02$ \\
+        & 合成     & $\underline{0.42} \pm 0.01$ & $\underline{0.81} \pm 0.02$ \\
+        & CaT  & $\mathbf{0.43} \pm 0.01$ & $\mathbf{0.83} \pm 0.02$ \\
+        \midrule
+        Llama 3.1 8B
+        & 初始策略 & $0.29 \pm 0.01$ & $0.42 \pm 0.02$ \\
+        & 合成     & $\underline{0.32} \pm 0.01$ & $\underline{0.52} \pm 0.02$ \\
+        & CaT  & $\mathbf{0.38} \pm 0.01$ & $\mathbf{0.56} \pm 0.02$ \\
+        \bottomrule
+    
+\end{longtable}

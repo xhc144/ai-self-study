@@ -1,0 +1,133 @@
+\originalchapter{后训练的目标与反馈}\label{ch:posttrain}
+\originalsection{监督微调与奖励模型}\label{sec:lm-sft}
+预训练拟合所选文本分布, 用户需要的却常是特定任务下的可靠回答. 指令与答案组成 $(x,y)$, 对话格式中的角色边界也是 token 序列的一部分. 监督微调 SFT 仍使用交叉熵, 但通常只把回答部分放进损失:
+\[
+\mathcal L_{\rm SFT}=-\frac1S\sum_{(x,y)}\sum_{t=1}^{|y|}\log\pi_\theta(y_t\mid x,y_{<t}).
+\]
+这里 $S$ 是全部有效回答 token 数; 若按回答平均, 则另写分母与权重. 提示仍是可见输入, 只是提示位置不作为此次目标. 将 padding 与提示 mask 合并到式 \eqref{eq:lm-tokenloss} 就能实现. SFT 学习模仿示范, 若示范有系统错误或缺少任务覆盖, 损失函数不会自动补足它们.
+
+偏好资料则包含同一提示下的胜者 $y_w$ 与败者 $y_l$. 假定一个标量奖励 $r_\phi(x,y)$ 能表示偏好, Bradley--Terry 模型设
+\[
+P(y_w\succ y_l\mid x)=\sigma(r_\phi(x,y_w)-r_\phi(x,y_l)),\quad
+\sigma(u)=1/(1+e^{-u}).
+\]
+模型损失为成对平均的 $-\log\sigma(r_w-r_l)$. 语言奖励网络可把 $B\times T\times d$ 的最终隐状态在回答结束位置抽取成 $B\times d$, 再用线性读出得到 $B$ 个实数. 若 $s=r_w-r_l$, 则损失对 $r_w,r_l$ 的导数分别为 $-\sigma(-s)$ 与 $\sigma(-s)$: 偏好差不够大时, 更新提高胜者分数并降低败者分数.
+
+奖励只能由差确定. 对同一提示, 给全部回答奖励加上 $c(x)$, 偏好概率完全不变. 不同标注者也可能有不同标准, 偏好可能不传递, 因而这个标量模型是统计假设. RLHF 中优化策略使用这个学到的奖励, 不能把它与客观正确性画等号. SFT、偏好建模与策略优化这三个对象在 DPO 论文的预备部分被明确区分\cite{dpo}; 本章以下只在有限回答集合上推导可证明的关系.
+
+\originalsection{KL 正则奖励与 DPO}\label{sec:lm-dpo}
+固定提示 $x$, 暂把回答集合设为有限集合 $\mathcal Y$. 参考策略 $\pi_{\rm ref}(y)>0$, 奖励 $r(y)$ 有限, 系数 $\beta>0$. 希望提高平均奖励同时限制分布偏移, 考虑
+\[
+J(\pi)=\sum_y\pi(y)r(y)-\beta\sum_y\pi(y)\log\frac{\pi(y)}{\pi_{\rm ref}(y)}.
+\]
+约定 $0\log0=0$. KL 惩罚的方向是 $\KL(\pi\Vert\pi_{\rm ref})$, 反向 KL 是另一目标. 在长回答中, $\log\pi(y\mid x)$ 为回答 token 的条件对数概率之和; 若改成每 token 平均, 奖励关系也改变, 不能在推导中偷偷替换.
+
+\begin{theorem}\label{thm:finite-kl-policy}
+令 $Z=\sum_y\pi_{\rm ref}(y)e^{r(y)/\beta}$, $q(y)=\pi_{\rm ref}(y)e^{r(y)/\beta}/Z$. 对任意概率分布 $\pi$, 有
+\[
+J(\pi)=\beta\log Z-\beta\KL(\pi\Vert q).
+\]
+因此唯一最优策略为 $\pi=q$.
+\end{theorem}
+\begin{proof}
+$q$ 全正且和为 1. 由 $\log q(y)=\log\pi_{\rm ref}(y)+r(y)/\beta-\log Z$, 得
+\begin{align*}
+\beta\KL(\pi\Vert q)
+&=\beta\sum_y\pi(y)\log\frac{\pi(y)}{\pi_{\rm ref}(y)}
+ -\sum_y\pi(y)r(y)+\beta\log Z.
+\end{align*}
+移项即为恒等式. KL 非负且仅在两个分布相同时为零, 所以最优值为 $\beta\log Z$, 取到且唯一.
+\end{proof}
+最优分布的概率比为 $q_i/q_j=(\pi_{{\rm ref},i}/\pi_{{\rm ref},j})e^{(r_i-r_j)/\beta}$. 参考概率影响奖励相同候选的比例. $\beta$ 很大时 $q$ 接近参考; 趋于零时集中到最高奖励集合, 集合内部比例由参考保留. 假定参考全正保证每个回答可获得概率; 若参考为零, 应在其支持上讨论, KL 不允许以有限代价向外分配正概率.
+
+要转为偏好目标, 将最优策略公式改写成
+\[
+r(y)=\beta\log\frac{\pi^*(y)}{\pi_{\rm ref}(y)}+\beta\log Z.
+\]
+同一提示下两回答相减, $\log Z$ 抵消. 代回 Bradley--Terry 概率, 再用参数策略代替未知最优策略, 对已观察的胜负对最大似然, 得到
+\begin{align*}
+\mathcal L_{\rm DPO}(\theta)&=-\E_{(x,y_w,y_l)}\log\sigma(s_\theta),\\
+s_\theta&=\beta\left(\log\frac{\pi_\theta(y_w\mid x)}{\pi_{\rm ref}(y_w\mid x)}
+-\log\frac{\pi_\theta(y_l\mid x)}{\pi_{\rm ref}(y_l\mid x)}\right).
+\end{align*}
+其梯度为
+\[
+\nabla\mathcal L_{\rm DPO}
+=-\E\bigl[\beta\sigma(-s_\theta)
+(\nabla\log\pi_\theta(y_w\mid x)-\nabla\log\pi_\theta(y_l\mid x))\bigr].
+\]
+每份胜负对产生一个实数 margin, 故一批大小 $B$ 的成对损失是 $B$ 个标量的平均. 实现上分别构造胜者与败者序列, 用 teacher forcing 得到 $B\times T_w\times V$ 与 $B\times T_l\times V$ 的 logits, 仅对回答有效位置抽取并求和 log probability; 固定参考网络做同样运算且不累计参考梯度. 不必把全部回答显式枚举, 因为 $Z$ 已在差中消去.
+
+这条推导对应 DPO 原文第 4 节与附录 A 的奖励--策略关系\cite{dpo}, 但本地定理只证明给定有限奖励问题的最优分布. 偏好分布是否满足假设、有限数据能否识别奖励、神经参数能否表示该策略、优化器能否找到它, 是另外的问题. 不存在 ``有 DPO 公式就保证人类目标已实现'' 的推论.
+
+已有 \texttt{preference} 实验用八个动作, 已知奖励、非均匀参考与带噪偏好拟合八个 logits. 若 $\pi=\softmax(z)$, 胜负对中的 softmax 对数归一化相消, 所以 $s=\beta[(z_w-\log\pi_{{\rm ref},w})-(z_l-\log\pi_{{\rm ref},l})]$. 单对导数仅在胜者与败者坐标上非零, 分别为 $-\beta\sigma(-s)$ 与 $\beta\sigma(-s)$. 新 \texttt{reward\_experiment} 则直接优化四个动作的 KL 奖励目标并与解析最优比较. 两者分别检查偏好拟合与奖励优化, 不能混成同一个实验.
+
+\originalsection{可验证奖励与多阶段后训练}\label{sec:lm-rlvr}
+偏好奖励适合表达帮助程度等相对判断, 数学答案和程序测试则能提供较明确的结果奖励. 可验证奖励强化学习 RLVR 用这种反馈改变生成策略. 一批提示 $x_1,\ldots,x_B$ 各采样 $G$ 个回答, 得到 $B\times G$ 个序列奖励; 每份序列仍由逐 token 条件概率组成. 策略梯度怎样把标量奖励传到 token logits, 见第 \ref{ch:reason} 章的命题 \ref{prop:score-gradient}.
+
+DeepSeek-R1 的 Nature 正式论文于 2025 年 9 月 17 日发表\cite{r1nature}. R1-Zero 在已预训练的 DeepSeek-V3 Base 上用 GRPO 和规则奖励训练, 未先作推理 SFT. R1 的流程则包含冷启动示范、RL、拒绝采样后 SFT、再作 RL, 并结合推理与一般任务. 因而这份工作同时展示了可验证反馈与多阶段资料组织, 不能只概括成 ``靠一种奖励从零学会思考''.
+
+为看懂组内更新, 固定一个提示, 设奖励向量 $r\in\R^G$, 组平均 $\bar r=G^{-1}\sum_i r_i$, 相对量可写为 $A_i=(r_i-\bar r)/(s_r+\epsilon)$, 其中 $s_r$ 是采用明确约定的组内标准差, $\epsilon>0$ 防止零分母. 如奖励为 $(1,0,1,0)$, 用总体标准差 $s_r=1/2$, 忽略极小 $\epsilon$ 时, 相对量为 $(1,-1,1,-1)$. 若奖励全为 1, 相对量全零, 此组不提供区分回答的信号.
+
+先用一个序列级教学替代项说明裁剪. 对从旧策略采样的回答, 定义整序列概率比 $\rho_i=\pi_\theta(y_i\mid x)/\pi_{\rm old}(y_i\mid x)$. 裁剪项为
+\[
+\min\{\rho_iA_i,\operatorname{clip}(\rho_i,1-\delta,1+\delta)A_i\},\qquad0<\delta<1.
+\]
+当 $A_i>0$, 过大的概率比不再继续增加此项; 当 $A_i<0$, 过小的概率比受对应限制. KL 项进一步约束对参考策略的偏离. 这些操作旨在控制一次更新的变化, 不是最优策略闭式解或全局收敛保证. Nature 正式论文的 Methods 式 (1) 用序列级记号概括目标; 更细的 token 级训练式见 R1 预印本的方法部分\cite{r1nature,r1}. 对第 $i$ 份回答的第 $t$ 个 token, 概率比是
+\[
+ \rho_{it}=\frac{\pi_\theta(y_{it}\mid x,y_{i,<t})}
+ {\pi_{\rm old}(y_{it}\mid x,y_{i,<t})}.
+\]
+一种对应的 token 平均结构为
+\[
+ \frac1G\sum_{i=1}^G\frac1{|y_i|}\sum_{t=1}^{|y_i|}
+ \left[\min\{\rho_{it}A_i,
+ \operatorname{clip}(\rho_{it},1-\delta,1+\delta)A_i\}
+ -\beta D_{{\rm KL},it}\right].
+\]
+这里 $D_{{\rm KL},it}$ 表示所选 token 条件下的 KL 项或其论文定义的采样估计, 必须按实现给出. 整序列比等于各 token 比的乘积, 不等于平均; 裁剪乘积也不等于逐 token 裁剪后平均. 因而上面的序列算例不能直接当作完整 GRPO 实现. 完整算法还要明确样本长度权重、采样温度、参考更新及零方差处理. 尤其组平均含自身奖励, 不能直接套用与当前回答无关的无偏基线证明; 第 \ref{sec:reason-rlvr} 节给出其简化情况下的期望分析.
+
+拒绝采样则是先生成回答, 由某个标准保留合格者, 再把保留资料用于监督训练. 若保留谓词为 $V(y)$, 对固定提示, 资料分布为 $\pi(y\mid x)V(y)/\sum_z\pi(z\mid x)V(z)$, 前提是分母正. SFT 模仿的是这个筛选后的分布. 验证器不完备时可能丢掉可行路线, 有错误接受时会把错误带入示范. 这种资料筛选与直接策略梯度是不同计算过程, 即使都利用了同一结果反馈.
+
+\originalsection{LoRA 的秩约束与梯度}\label{sec:lm-lora}
+SFT、DPO 或奖励优化都要改变网络参数, 但可以选择只改变一部分矩阵. LoRA 冻结基矩阵, 把更新参数化为两个小矩阵的乘积\cite{lora}. 为和线性代数的列向量约定一致, 设
+\[
+W_0\in\R^{m\times d},\quad A\in\R^{r\times d},\quad B\in\R^{m\times r},\quad
+h=(W_0+sBA)x,
+\]
+其中 $x\in\R^d$, $s>0$ 是固定缩放, 常取与 $\alpha/r$ 有关的约定. 若代码使用行向量, 一批输入为 $X\in\R^{n\times d}$, 输出是 $X(W_0+sBA)^\top\in\R^{n\times m}$, 这只是转置约定不同.
+
+\begin{proposition}
+对损失 $\ell$, 若输出梯度为 $u=\nabla_h\ell\in\R^m$, 则
+\[
+\nabla_B\ell=s\,u(Ax)^\top\in\R^{m\times r},\qquad
+\nabla_A\ell=s\,B^\top u\,x^\top\in\R^{r\times d}.
+\]
+对于批损失, 若 $G=\nabla_W\ell\in\R^{m\times d}$, 相应公式为 $\nabla_A\ell=sB^\top G$, $\nabla_B\ell=sGA^\top$.
+\end{proposition}
+\begin{proof}
+冻结 $W_0$, 有 $dh=s(dB)Ax+sB(dA)x$. 于是 $d\ell=u^\top dh$. 第一项写为 $\operatorname{tr}([s\,u(Ax)^\top]^\top dB)$, 第二项写为 $\operatorname{tr}([sB^\top ux^\top]^\top dA)$, 与 Frobenius 内积的梯度定义对照即得. 批版本由 $dW=s(dB)A+sB(dA)$ 作同样展开得到.
+\end{proof}
+矩阵乘积满足 $\operatorname{rank}(BA)\le r$. 当 $1\le r\le\min(m,d)$ 时, 任意秩至多 $r$ 的更新均可用这种乘积表示: 对其奇异值分解, 把非零奇异值的平方根分到左右因子, 不足 $r$ 的部分补零即可. 秩限制作用于更新 $\Delta W$, 不是说最终 $W_0+\Delta W$ 也只有秩 $r$. 若目标差矩阵有超过 $r$ 个非零奇异值, 该参数化无法精确表达它.
+
+可训练参数为 $r(m+d)$, 完整矩阵为 $md$. 只有 $r<md/(m+d)$ 时才真的减少参数数目. 对 $m=d$, 需要 $r<d/2$, 不能只说 ``秩低于矩阵维度就省参数''. 因子不唯一: 任意可逆 $R\in\R^{r\times r}$ 给出 $(BR)(R^{-1}A)=BA$, 这也表明不能把因子坐标本身解释为唯一机制.
+
+常见初始化令 $B=0,A$ 随机, 则初始更新为零, $\nabla_A\ell=0$, 但 $\nabla_B\ell$ 可非零. 下一步 $B$ 改变后, $A$ 才可能收到梯度. 若两者同时设为零, 两个梯度都为零, 这个纯乘积分支会停在零处. 训练结束后可把 $sBA$ 合入 $W_0$, 不增加这份合并矩阵的推理乘法; 切换多个适配器时则要保留各自因子. 冻结基矩阵减少其梯度和优化器状态, 却不消除计算适配器梯度所需的激活.
+
+新实验取 $n=7,d=5,m=4,r=2,s=0.75$, 对平方损失的全部因子坐标做中心有限差分. $A$ 与 $B$ 的最大归一化差分别为 $4.02\times10^{-10}$ 与 $6.61\times10^{-11}$, 更新秩为 2. 可训练参数为 18, 相比完整矩阵 20 仅略少, 正好提醒 ``低秩'' 与 ``大幅节省'' 需要具体尺寸. $B=0$ 时 $A$ 梯度范数为零, $B$ 梯度范数约为 6.2393, 与推导相符.
+
+\input{sections/public-models.tex}
+\originalsection{复算与练习}
+\begin{exercise}
+设参考策略为 $(1/2,1/2)$, 奖励为 $(0,\beta\log3)$, 求 KL 正则最优策略. 若奖励同时加上 100, 最优策略与偏好概率有何变化?
+\end{exercise}
+\begin{solution}
+未归一化概率为 $(1/2,3/2)$, 最优策略为 $(1/4,3/4)$. 加常数使两项同乘 $e^{100/\beta}$, 归一化后不变; 奖励差不变, 所以 Bradley--Terry 偏好也不变. 目标最优值增加 100, 策略不变.
+\end{solution}
+\begin{exercise}
+一层矩阵 $W_0\in\R^{12\times8}$, 用秩 $r=5$ 的 LoRA. 它比完整矩阵参数更少吗? 若同时零初始化两个因子, 用本章梯度解释第一步发生什么.
+\end{exercise}
+\begin{solution}
+完整参数为 96, 因子参数为 $5(12+8)=100$, 反而更多. 两因子为零使两项梯度都为零, 在没有别的扰动或分支影响因子的普通梯度更新中, 第一轮不会动, 后续也停在零处.
+\end{solution}
+\label{ch:end:posttrain}\label{ch:end:08}

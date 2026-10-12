@@ -1,0 +1,23 @@
+{
+  "chapters": {
+    "book/chapters/05.tex": "afc7dcdd55c69241c4fb6a5be976060244bbeb5c47c459f2ea305d126408a9bb",
+    "book/chapters/06.tex": "36c12f508dbfffdcd7b2f01683128ef70a7100ae3b87fe643c513839d15cb503",
+    "book/chapters/07.tex": "fb2305513db4d6b3c90bd4584a767b7d644032a5e59470400b7a6e21a4f2dfa3"
+  },
+  "tests": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -p test_v03_networks.py -v",
+  "tests_passed": 9,
+  "experiment": "PYTHONDONTWRITEBYTECODE=1 python experiments/v03_networks.py --out results/v03-networks --seed 144",
+  "temporary_pdf": "/tmp/v03-networks-check/main.pdf",
+  "temporary_pdf_pages": 25,
+  "compilation": "XeLaTeX, no shell escape, 06→07→05 plus existing bibliography, preamble extracted from existing main",
+  "overfull_hbox": 0,
+  "unresolved_citations": [
+    "layernorm",
+    "rope",
+    "fineweb",
+    "calibration"
+  ],
+  "citation_integration_owner": "parent agent",
+  "visual_review": "Selected pages 5,9,13,16,18,21 viewed in third-pass rendering. No claim of final whole-book review.",
+  "final_integration_owner": "parent agent"
+}

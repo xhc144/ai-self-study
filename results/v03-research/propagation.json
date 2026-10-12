@@ -1,0 +1,40 @@
+{
+  "scope": "absorbing-error multi-step agent simulation, not measured LLM errors",
+  "parameters": {
+    "episodes": 10000,
+    "error_probability": 0.08,
+    "recovery_probability": 0.6,
+    "false_refusal_probability": 0.02,
+    "independence_assumption": true,
+    "checked_local_success_probability": 0.9496000000000001
+  },
+  "rows": [
+    {
+      "steps": 1,
+      "unverified_episode_success": 0.9253,
+      "unverified_theory": 0.92,
+      "checked_episode_success": 0.9491,
+      "checked_theory": 0.9496000000000001,
+      "mean_unverified_local_accuracy": 0.9253,
+      "wrong_state_episodes": 747
+    },
+    {
+      "steps": 4,
+      "unverified_episode_success": 0.7177,
+      "unverified_theory": 0.7163929600000001,
+      "checked_episode_success": 0.8086,
+      "checked_theory": 0.813135316156826,
+      "mean_unverified_local_accuracy": 0.919975,
+      "wrong_state_episodes": 2823
+    },
+    {
+      "steps": 8,
+      "unverified_episode_success": 0.515,
+      "unverified_theory": 0.5132188731375618,
+      "checked_episode_success": 0.6569,
+      "checked_theory": 0.6611890423814614,
+      "mean_unverified_local_accuracy": 0.9199,
+      "wrong_state_episodes": 4850
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+[
+  {
+    "benchmark_metric": "MMLU (EM)",
+    "values": [
+      "88.8",
+      "89.1",
+      "91.2",
+      "91.0",
+      "90.8"
+    ],
+    "bold": [
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "benchmark_metric": "MMLU-Redux (EM)",
+    "values": [
+      "85.6",
+      "90.0",
+      "93.0",
+      "93.1",
+      "92.9"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "benchmark_metric": "MMLU-Pro (EM)",
+    "values": [
+      "68.9",
+      "74.1",
+      "83.8",
+      "83.1",
+      "84.0"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "DROP (3-shot F1)",
+    "values": [
+      "89.1",
+      "89.8",
+      "91.1",
+      "88.7",
+      "92.2"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "IF-Eval (Prompt Strict)",
+    "values": [
+      "46.6",
+      "71.7",
+      "72.0",
+      "78.1",
+      "83.3"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "GPQA Diamond (Pass@1)",
+    "values": [
+      "75.8",
+      "66.1",
+      "70.7",
+      "71.2",
+      "71.5"
+    ],
+    "bold": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "benchmark_metric": "SimpleQA (Correct)",
+    "values": [
+      "30.3",
+      "17.8",
+      "28.2",
+      "24.9",
+      "30.1"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "benchmark_metric": "FRAMES (Acc.)",
+    "values": [
+      "82.3",
+      "78.5",
+      "81.8",
+      "81.9",
+      "82.5"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "AlpacaEval 2.0 (LC-winrate)",
+    "values": [
+      "24.7",
+      "50.1",
+      "55.8",
+      "62.1",
+      "87.6"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "Arena-Hard (GPT-4-1106)",
+    "values": [
+      "53.6",
+      "77.0",
+      "73.2",
+      "75.6",
+      "92.3"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "LiveCodeBench (Pass@1-COT)",
+    "values": [
+      "50.0",
+      "57.5",
+      "63.5",
+      "64.6",
+      "65.9"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "Codeforces (Percentile)",
+    "values": [
+      "80.4",
+      "84.5",
+      "90.5",
+      "92.1",
+      "96.3"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "Codeforces (Rating)",
+    "values": [
+      "1,444",
+      "1,534",
+      "1,687",
+      "1,746",
+      "2,029"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "SWE-bench Verified (Resolved)",
+    "values": [
+      "43.2",
+      "39.6",
+      "44.6",
+      "45.6",
+      "49.2"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "Aider-Polyglot (Acc.)",
+    "values": [
+      "12.2",
+      "6.7",
+      "25.6",
+      "44.8",
+      "53.3"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "AIME 2024 (Pass@1)",
+    "values": [
+      "77.9",
+      "59.0",
+      "74.0",
+      "78.1",
+      "79.8"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "MATH-500 (Pass@1)",
+    "values": [
+      "95.9",
+      "94.2",
+      "95.9",
+      "95.4",
+      "97.3"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "benchmark_metric": "CNMO 2024 (Pass@1)",
+    "values": [
+      "88.1",
+      "58.0",
+      "73.9",
+      "77.3",
+      "78.8"
+    ],
+    "bold": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "benchmark_metric": "CLUEWSC (EM)",
+    "values": [
+      "93.1",
+      "92.8",
+      "92.6",
+      "91.6",
+      "92.8"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "benchmark_metric": "C-Eval (EM)",
+    "values": [
+      "92.8",
+      "85.7",
+      "91.9",
+      "86.4",
+      "91.8"
+    ],
+    "bold": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "benchmark_metric": "C-SimpleQA (Correct)",
+    "values": [
+      "66.4",
+      "58.8",
+      "64.2",
+      "66.9",
+      "63.7"
+    ],
+    "bold": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  }
+]

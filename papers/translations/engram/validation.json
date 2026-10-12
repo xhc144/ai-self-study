@@ -1,0 +1,215 @@
+{
+  "paper_id": "arXiv:2601.07372v2",
+  "translation_body_sha256": "b52f9755c8e1e237c7364fd5e39354238b90f42a028d078968dfe329c1f02370",
+  "number_check_report_sha256": "80224b57c4a59f5c8e0ae51442da99df057482ac5587a625c0972b0b3dc75194",
+  "source_audit_command": "python -B papers/translations/engram/audit_source.py --source-dir /tmp/engram-source/unpacked --out papers/translations/engram/numeric-checks.json",
+  "compile": {
+    "status": "passed",
+    "rounds": 2,
+    "command": "TEXMFHOME=/workspace/.local/texmf OSFONTDIR=/workspace/.local/texmf/fonts/opentype XDG_CACHE_HOME=/tmp/ai-cache xelatex -interaction=nonstopmode -halt-on-error main.tex",
+    "workdir": "/tmp/engram-translation-qa/book",
+    "preamble_source": "Read-only snapshot of root book/main.tex before begin{document}; same fixed project template.",
+    "preamble_snapshot_sha256": "ed1fd5a70bfd6d2e524fd193c243dd310203ae4adfb5aa376ebcdb474db62f28",
+    "final_log_sha256": "45c5039c3f5cfc778ddea12b79e2f73bf106ff320be922d2d6d3443b33b36457",
+    "output_pdf": "/tmp/engram-translation-qa/book/main.pdf",
+    "output_pdf_sha256": "39b019d5c7aa3763f7520b9fa44144904abc5643d3888d11aafd8a78fb611e5b",
+    "pages": 33,
+    "errors_missing_glyphs_overfull_unresolved_references": []
+  },
+  "visual_review": {
+    "render_scale": 1.6,
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "checks": [
+      "Text and formulas readable, original typography preserved",
+      "All eight vector figures and six complete tables present",
+      "Appendix B heading and full grid kept together after float repair",
+      "All 135 bibliography entries present, no missing glyphs or clipped text"
+    ],
+    "temporary_images": "/tmp/engram-translation-qa/render/page-XX.png",
+    "page_images_sha256": [
+      {
+        "page": 1,
+        "sha256": "6d311724c1368f53b8f2a5d19c7c1c698962de3f9fc3f7298be8cbf1f9ab470b"
+      },
+      {
+        "page": 2,
+        "sha256": "4ce702aaba2f7e8cdc74d33a69331285e83b10c1804a506af394634e8dc12263"
+      },
+      {
+        "page": 3,
+        "sha256": "fef6107afee51f38a5af167871ea837c78d0071f40286e4548e2a06a390dde1e"
+      },
+      {
+        "page": 4,
+        "sha256": "80006bc2ce6dbbc2e828769c02993bd435b681f7cf53b797d159e095db40d0ac"
+      },
+      {
+        "page": 5,
+        "sha256": "d9ee1753677de5b9dddd6012d5be314ef96879e46780509ea976225dfef8802b"
+      },
+      {
+        "page": 6,
+        "sha256": "4eaec695d78e3fd341b15f17303e84269262836a209b2e02a9239d0d2491078e"
+      },
+      {
+        "page": 7,
+        "sha256": "e6875b5d8548b918c35a2fdb9f6d129fcd7831e92bf6f4baeabd091616e5c4a7"
+      },
+      {
+        "page": 8,
+        "sha256": "d92e95c75e8d336cc3888090462685c3583a5536576038ba67126586efd14a22"
+      },
+      {
+        "page": 9,
+        "sha256": "563d4227725feaaa1dad970eea5e57ef52048a00624271897f3e8357903448bc"
+      },
+      {
+        "page": 10,
+        "sha256": "a1504cbca417d5ad35940c40039c49158696ed1063cedda261e9e1478f1bbb03"
+      },
+      {
+        "page": 11,
+        "sha256": "8b5f8c9d17442068846d0b51594f4b8deabee16ce37653ab227fb0e772797a9a"
+      },
+      {
+        "page": 12,
+        "sha256": "a4c0e46e5c6fe81a5d09a299f8a1f30ecff3c9bb6b59a0459b9e7a013fb58f88"
+      },
+      {
+        "page": 13,
+        "sha256": "b12f427dda8df5a19987b170084da2f9846228fb12596a9bcfd6677c99a3e2cd"
+      },
+      {
+        "page": 14,
+        "sha256": "dbe46cd69949260039abeb1cabf4dd8c921aecc08645b94fef1cee57c25939fc"
+      },
+      {
+        "page": 15,
+        "sha256": "f1469a376318d5347732a6ae411846100c70c47c0be2c1c35e16dc140d501033"
+      },
+      {
+        "page": 16,
+        "sha256": "4d796fab47b6f7ad0d9cbe79dd462a291dd5aa17404e330f0e2491cd4d2a3d62"
+      },
+      {
+        "page": 17,
+        "sha256": "df1c2fc6d0ecd5f02a402e7d9f31bb06d5985c975f4112fea2a55715d631f2c1"
+      },
+      {
+        "page": 18,
+        "sha256": "f5c2742edba3d219625d263e8db4cd61bd1ce1250f9846c72f5bd71a60a594ad"
+      },
+      {
+        "page": 19,
+        "sha256": "009096a257c11bd8b9d3f7cf3de5d7d968767425fe197c35327426d54348aeff"
+      },
+      {
+        "page": 20,
+        "sha256": "8d33f9034f62b3cdf5ca8e0a531f5a375cbcdb78fd7bce5513d43bc731efab1e"
+      },
+      {
+        "page": 21,
+        "sha256": "82c0c72663a115dd96b5a5ee5d7d67b6a18e647bc02d9fb0c1f6ca7b2a28947e"
+      },
+      {
+        "page": 22,
+        "sha256": "b054b3bdce0174be03c83edbcfc9cd3e8455a4ea7ef780c3d1b864842508f2fc"
+      },
+      {
+        "page": 23,
+        "sha256": "08818ac96fdd8501b005713b759b1cc186be028404f7c6cfea1a297e8ab7fe68"
+      },
+      {
+        "page": 24,
+        "sha256": "f7621b97512b06b5550a8949b6ae5897fd1f7dfa315608b1f3b1e621a65d4527"
+      },
+      {
+        "page": 25,
+        "sha256": "1824bc350e6359d34a3ef10a9acc02f7034ac699acef937af5c51bbc1cc89cdd"
+      },
+      {
+        "page": 26,
+        "sha256": "d5a3c38ef177e7474b292508915ea90acef72266be884385788f3032cb043b6d"
+      },
+      {
+        "page": 27,
+        "sha256": "cfa8f5781a344c9f7c2f844cd3e0f1986fea7943d9d66ef152b46feb311f29ff"
+      },
+      {
+        "page": 28,
+        "sha256": "4aa3e9c5fdda6bfb6792394c8b298b583d3271531735dedf8c553b4ca7e04f24"
+      },
+      {
+        "page": 29,
+        "sha256": "aa8b563f4a658b43c22ad2a80b083c5be025d1ba0acbd5dc2ce82bff83777801"
+      },
+      {
+        "page": 30,
+        "sha256": "5fd52acc6ed8111abe89b20ef87e08a7a11feaea400597de4c7105c80ee5584b"
+      },
+      {
+        "page": 31,
+        "sha256": "24040c10b0464eb16649b1e0a0d83cf84034ed728a06c77994a3dfc6eb134f74"
+      },
+      {
+        "page": 32,
+        "sha256": "1a0d040770e9c093dcdc21ad851eedd0e576a81fdcc603866610675394aa417d"
+      },
+      {
+        "page": 33,
+        "sha256": "bf18b8c970918a1b141db115ef51184f9acc4ca602600de200cec25faef9a35d"
+      }
+    ]
+  },
+  "coverage_checks": {
+    "equations": 9,
+    "figures": 8,
+    "tables": 6,
+    "references": 135,
+    "appendices": [
+      "A",
+      "B",
+      "C"
+    ],
+    "unrecovered_items": []
+  },
+  "limitations": [
+    "Structural and mechanical audit does not prove semantic correctness of every translation or scientific validity.",
+    "Original source scientific discrepancies are preserved and separated from translator comments.",
+    "Parent agent remains sole integrator of final project PDFs; no repository main/README/dist/Git modified."
+  ]
+}

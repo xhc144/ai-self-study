@@ -1,97 +1,218 @@
-\originalchapter{微分、梯度与优化}\label{ch:opt}
-\originalsection{导数作为局部线性变化}
-模型包含许多参数, 调整它们需要知道每个微小变化怎样影响损失. 单变量导数给出曲线斜率; 多变量导数则是一个线性映射. 对 $f:\R^d\to\R$, 若
-\[
-f(w+h)=f(w)+g^\top h+o(\norm{h}),
-\]
-则向量 $g$ 是梯度 $\nabla f(w)$. 符号 $o(\norm{h})$ 表示余项除以 $\norm{h}$ 在 $h\to0$ 时趋于零. 因而梯度并非“输出的变化”, 而是把参数增量映成一阶输出变化的系数.
+\originalchapter{反向传播与优化的数学工具}\label{ch:opt}
+\originalsection{增量、偏导与梯度}
+本章可按需查阅: 看不懂线性层反向传播时读前两节, 对训练曲线和学习率感到疑惑时读曲率与下降估计, 要实现优化器时读随机梯度与 Adam. 主线中的表示空间与条件损失分别在第 \ref{ch:linear}、\ref{ch:prob} 章提供工具; 不必先把所有优化理论学完再进入 Transformer.
 
-若固定增量长度为 $\epsilon$, 由 Cauchy--Schwarz 有 $g^\top h\ge-\epsilon\norm{g}$, 等号在 $h=-\epsilon g/\norm{g}$ 时成立. 梯度不为零时, 负梯度是欧氏长度约束下最快的局部下降方向. 这里强调局部: 走得太远后, 一阶近似可能失效.
+训练要改变参数, 以降低一个标量损失. 单变量导数描述一个微小增量的一阶影响. 对 $f:\R^d\to\R$, 同样希望所有坐标一起变化时有可靠的线性近似.
+\begin{definition}
+若存在 $g\in\R^d$, 使 $f(w+h)=f(w)+g^\top h+r(h)$, 且 $r(h)/\norm h\to0$ 当 $h\to0$, 则称 $f$ 在 $w$ 可微, $g=\nabla f(w)$ 为梯度. 记 $r(h)=o(\norm h)$. 偏导 $\partial f/\partial w_j$ 是只让第 $j$ 个坐标变化的一元导数.
+\end{definition}
+可微时取 $h=te_j$, 得 $g_j=\partial f/\partial w_j$, 所以梯度就是各偏导组成的向量. 反过来, 只有各偏导存在还不够. 例如令 $f(x,y)=xy/\sqrt{x^2+y^2}$ 在非零点定义, $f(0,0)=0$. 两坐标轴上它恒为零, 所以原点两偏导都为零. 但沿 $h=(t,t)$, $|f(h)|/\norm h=1/2$, 余项没有趋于零. 坐标方向的检查漏掉了斜向变化.
+
+一个足够条件是偏导在该点附近存在且连续. 理由是沿坐标依次从 $w$ 走到 $w+h$, 将总变化拆为 $d$ 个一元变化. 每段用一元中值定理, 得 $\sum_j\partial_j f(\xi_j)h_j$. 减去 $\sum_j\partial_j f(w)h_j$, 绝对值至多
+$\max_j|\partial_jf(\xi_j)-\partial_jf(w)|\sum_j|h_j|$.
+由 Cauchy--Schwarz, $\sum_j|h_j|\le\sqrt d\norm h$; 各 $\xi_j\to w$ 时连续性使前一个因子趋于零, 就得到可微定义的余项条件.
+
+若 $g\ne0$, 在 $\norm h=\epsilon$ 的限制下, $g^\top h\ge-\epsilon\norm g$, 等号由 $h=-\epsilon g/\norm g$ 达到. 负梯度是欧氏长度约束下最快的一阶下降方向. 这个结论依赖所用长度, 也只描述局部近似; 大步更新可能越过低损失区域.
 
 \begin{definition}
-若 $F:\R^d\to\R^m$ 可微, Jacobian $J_F$ 的元素为 $(J_F)_{ij}=\partial F_i/\partial w_j$. 若 $f=g\circ F$, 则链式法则给出 $\nabla_w f=J_F(w)^\top\nabla g(F(w))$.
+可微向量函数 $F:\R^d\to\R^m$ 的 Jacobian 为 $J_F(w)\in\R^{m\times d}$, 满足
+$F(w+h)=F(w)+J_F(w)h+o(\norm h)$;
+其元素为 $(J_F)_{ij}=\partial F_i/\partial w_j$.
 \end{definition}
-理由是先用 $F(w+h)=F(w)+J_Fh+o(\norm h)$, 再把这个输出增量代入 $g$ 的线性近似, 一次项变成 $\nabla g^\top J_Fh$. 这也是网络反向传播需要转置的原因: 参数方向的变化向前传播, 损失的系数向后传播.
-
-\originalsection{矩阵梯度与 Frobenius 内积}\label{sec:frobenius}
-参数往往是一张矩阵, 不能把矩阵变化直接与一个标量损失相等. 所需桥梁是与向量点积同样的“逐坐标系数乘增量, 再求和”. 对同形矩阵 $U,V\in\R^{m\times n}$, 定义 Frobenius 内积
+若 $g:\R^m\to\R$ 在 $F(w)$ 可微, $f=g\circ F$, 则
 \[
-\langle U,V\rangle_F=\sum_{i=1}^m\sum_{j=1}^n U_{ij}V_{ij}
+\nabla f(w)=J_F(w)^\top\nabla g(F(w)).
+\]
+确切地, 记 $\Delta=F(w+h)-F(w)=J_Fh+o(\norm h)$. 有 $\norm\Delta\le C\norm h$ 对充分小 $h$ 成立, 因为固定矩阵对长度的放大有有限上界. 代入 $g$ 的近似, 得 $g(F(w)+\Delta)-g(F(w))=\nabla g^\top J_Fh+o(\norm h)$. 最后一项成立, 因为 $g$ 的余项除以 $\norm\Delta$ 趋于零, 且 $\norm\Delta/\norm h$ 有界. 这证明链式法则, 同时解释转置: 前向传递增量 $J_Fh$, 反向收集增量对标量损失的系数.
+
+\originalsection{矩阵梯度与共享路径}\label{sec:frobenius}
+矩阵参数的损失梯度必须与参数同形, 才能逐元素更新. 对同形矩阵 $U,V\in\R^{m\times n}$ 定义
+\[
+\langle U,V\rangle_F=\sum_{i,j}U_{ij}V_{ij}
 =\operatorname{tr}(U^\top V),\qquad \norm U_F=\sqrt{\langle U,U\rangle_F}.
 \]
-$\operatorname{tr}$ 是方阵对角元素之和; $(U^\top V)_{jj}=\sum_iU_{ij}V_{ij}$, 所以两个定义一致. 对矩阵参数 $W$, 梯度 $G_W$ 的定义是
-\[
-\ell(W+H)=\ell(W)+\langle G_W,H\rangle_F+o(\norm H_F).
-\]
-令 $H$ 只有第 $(i,j)$ 个元素非零, 即可确定 $(G_W)_{ij}=\partial\ell/\partial W_{ij}$. 因而梯度与 $W$ 同形且唯一. 它并不是整个矩阵函数的 Jacobian; 已给定标量损失后, 才把下游变化的系数收集成这个矩阵.
+迹 $\operatorname{tr}$ 是方阵对角之和; 由于 $(U^\top V)_{jj}=\sum_iU_{ij}V_{ij}$, 两种写法相等. 矩阵梯度 $G_W$ 由
+$\ell(W+H)=\ell(W)+\langle G_W,H\rangle_F+o(\norm H_F)$
+定义. 令 $H$ 仅有一个非零元素, 就得 $(G_W)_{ij}=\partial\ell/\partial W_{ij}$. 展平矩阵后它正是普通向量梯度; $G_W$ 不是整个矩阵输出函数的 Jacobian, 而是已经指定标量损失后的系数.
 
-例如行批量线性层 $Y=XW$, $X\in\R^{B\times d}$, $W\in\R^{d\times r}$. 已知 $G_Y\in\R^{B\times r}$, 展开一次微分为
+设行批量线性层 $Y=XW+\mathbf1b^\top$, $X\in\R^{B\times d}$、$W\in\R^{d\times r}$、$b\in\R^r$, 下游已经算出 $G_Y\in\R^{B\times r}$. 用 $d$ 记一阶增量, 从元素式展开,
 \begin{align*}
-d\ell&=\sum_{b,j}(G_Y)_{bj}\,dY_{bj}\\
-&=\sum_{b,j,i}(G_Y)_{bj}\bigl(dX_{bi}W_{ij}+X_{bi}dW_{ij}\bigr)\\
-&=\sum_{b,i}\left(\sum_j(G_Y)_{bj}W_{ij}\right)dX_{bi}
- +\sum_{i,j}\left(\sum_bX_{bi}(G_Y)_{bj}\right)dW_{ij}.
+d\ell&=\sum_{s,j}(G_Y)_{sj}\,dY_{sj}\\
+&=\sum_{s,j,i}(G_Y)_{sj}(dX_{si}W_{ij}+X_{si}dW_{ij})
+ +\sum_{s,j}(G_Y)_{sj}db_j\\
+&=\sum_{s,i}\left(\sum_j(G_Y)_{sj}W_{ij}\right)dX_{si}
++\sum_{i,j}\left(\sum_sX_{si}(G_Y)_{sj}\right)dW_{ij}
++\sum_j\left(\sum_s(G_Y)_{sj}\right)db_j.
 \end{align*}
-比较每个独立增量的系数便得 $G_X=G_YW^\top$ 与 $G_W=X^\top G_Y$. 转置由指标收缩决定, 而非凭记忆摆放. 若加上各行共享的偏置 $b\in\R^r$, 则 $dY_{bj}$ 含同一个 $db_j$, 所以 $(G_b)_j=\sum_b(G_Y)_{bj}$. 前向复制到多少条路径, 反向就累加多少条路径.
+比较独立增量的系数,
+$G_X=G_YW^\top$、$G_W=X^\top G_Y$、$(G_b)_j=\sum_s(G_Y)_{sj}$.
+这里 $B$ 是批量行数, 若损失本身已经平均, $G_Y$ 已含该平均系数, 不能在每层再除一次 $B$.
 
 \begin{example}
-取 $X=(1,2)$, $W=(3,4)^\top$, $\ell=(XW-10)^2/2$. 求 $G_W,G_X$.
+$X=(1,2)$, $W=(3,4)^\top$, $\ell=(XW-10)^2/2$. 求两矩阵的梯度, 并核对一个扰动的一阶变化.
 \end{example}
 \begin{solution}
-$Y=11$, $G_Y=Y-10=1$. 所以 $G_W=(1,2)^\top$, $G_X=(3,4)$. 独立扰动 $dW=(a,b)^\top$ 时损失一次变化为 $a+2b=\langle G_W,dW\rangle_F$. 这与直接展开 $\ell=(w_1+2w_2-10)^2/2$ 求偏导一致.
+$Y=11$, $G_Y=1$, 所以 $G_W=(1,2)^\top$, $G_X=(3,4)$. 对 $dW=(a,b)^\top$, 一阶损失变化为 $a+2b$. 直接展开 $(w_1+2w_2-10)^2/2$ 也得到这两个系数, 因而转置和形状可独立核对.
 \end{solution}
+网络里的参数和中间值常被重复使用. 若同一 $x$ 沿两条路径进入损失, 两条路径的一阶变化系数要相加. 对残差 $Y=X+F(X)$, 链式法则给
+$\nabla_X\ell=G_Y+J_F(X)^\top G_Y$, 这里把矩阵暂时展平成向量来解释 $J_F$. 直接支路的 $G_Y$ 不能丢. 嵌入表查表也是共享: 若同一 token 在多个位置出现, 那一行的梯度等于所有这些位置梯度之和, 而非最后一次覆盖.
 
-\originalsection{步长与二次目标}
-对第 2 章的岭目标, 写 $H=X^\top X/n+\lambda I$, $b=X^\top y/n$, 则 $\nabla J(w)=Hw-b$. 假设 $H$ 正定, 最优点满足 $Hw_*=b$. 梯度下降 $w_{t+1}=w_t-\eta(Hw_t-b)$ 的误差 $e_t=w_t-w_*$ 满足 $e_{t+1}=(I-\eta H)e_t$.
+低秩层 $Y=X(W_0+AB)$ 同样可逐层反传. 固定 $W_0$, 先令 $Z=XA$, 便有
+$G_B=Z^\top G_Y=A^\top X^\top G_Y$,
+$G_A=X^\top G_YB^\top$.
+若初始 $B=0$ 而 $A\ne0$, 则 $G_A=0$, 但 $G_B$ 可能非零; 更新 $B$ 后 $A$ 也可获得梯度. 若两因子都为零, 两梯度都为零, 这个乘积支路无法自行启动. 这是参数化的代数性质, 可用来理解低秩适配的初始化选择.
 
-\begin{proposition}
-设 $H$ 的特征值满足 $0<\mu\le\lambda_j\le L$. 若 $0<\eta<2/L$, 则二次目标的梯度下降收敛到唯一最优点. 取 $\eta=1/L$ 时, $\norm{e_t}\le(1-\mu/L)^t\norm{e_0}$.
+\originalsection{Hessian、凸性与局部模型}
+\begin{definition}
+若 $f$ 有连续二阶偏导, Hessian 为梯度的 Jacobian,
+$H_f(w)_{ij}=\partial(\partial f/\partial w_i)/\partial w_j$.
+函数 $f$ 在凸集合 $D$ 上称为凸的, 若对 $u,v\in D$、$t\in[0,1]$ 有
+$f((1-t)u+tv)\le(1-t)f(u)+tf(v)$.
+集合凸指两点之间的整条线段仍在集合中.
+\end{definition}
+在连续二阶偏导的条件下, 混合偏导交换定理给 $H_f=H_f^\top$; 本书调用这一多变量微积分结论, 不将它扩展到只有二阶偏导存在的情形\cite{dl}. 固定方向 $h$, 令 $\phi(t)=f(w+th)$, 链式法则给 $\phi'(t)=\nabla f(w+th)^\top h$, $\phi''(t)=h^\top H_f(w+th)h$. Hessian 的作用因此是描述沿方向的曲率, 而非描述梯度本身的大小.
+
+为把变化率累积成总变化, 本章调用一元微积分基本定理: 对连续可微的 $G$, $G(b)-G(a)=\int_a^bG'(t)\,dt$. 定积分可理解为区间细分后“函数值乘小段宽度”的和的极限. 本章不重建积分存在理论, 只在连续被积函数和有限闭区间上使用它. 连续两次积分可在三角形区域换序; 等价地用一元分部积分可验证下面的恒等式:
+\[
+f(w+h)=f(w)+\nabla f(w)^\top h
++\int_0^1(1-t)h^\top H_f(w+th)h\,dt.
+\]
+具体地, 对 $\phi$ 分部积分得
+$\int_0^1(1-t)\phi''(t)dt=-\phi'(0)+\phi(1)-\phi(0)$.
+若把 Hessian 替换为 $H_f(w)$, 主项是 $\tfrac12h^\top H_f(w)h$; 连续性使剩余项为 $o(\norm h^2)$. 这给出了二阶局部模型.
+
+\begin{proposition}\label{prop:convex}
+设 $D\subseteq\R^d$ 为开凸集. 可微函数 $f$ 凸当且仅当对所有 $u,v\in D$ 有
+$f(v)\ge f(u)+\nabla f(u)^\top(v-u)$.
+若 $f$ 有连续二阶偏导, 又等价于 $H_f(w)$ 在每个 $w\in D$ 半正定.
 \end{proposition}
 \begin{proof}
-用正交特征基令 $a_t=U^\top e_t$, 得每个分量 $a_{t+1,j}=(1-\eta\lambda_j)a_{t,j}$. 给定步长范围使 $|1-\eta\lambda_j|<1$, 因而各分量趋于零. 当 $\eta=1/L$ 时, 每个因子落在 $[0,1-\mu/L]$ 内, 逐分量平方求和再开方即得误差界.
+若凸, 对 $0<t<1$ 有
+$[f(u+t(v-u))-f(u)]/t\le f(v)-f(u)$.
+令 $t\downarrow0$ 得一阶下界. 反之令 $z=(1-t)u+tv$, 分别在 $z$ 对 $u,v$ 用下界, 乘以 $1-t,t$ 后相加; 两个梯度项因 $(1-t)(u-z)+t(v-z)=0$ 抵消, 得凸性. 端点 $t=0,1$ 为等号.
+
+若 Hessian 半正定, 二阶积分余项非负, 得一阶下界. 若凸且二阶连续, 在任意点 $w$ 和方向 $h$ 上, 开集保证小 $s$ 时 $w\pm sh\in D$. 凸性给 $f(w+sh)+f(w-sh)-2f(w)\ge0$. 用刚才的二阶展开, 除以 $s^2$, 再令 $s\to0$, 得 $h^\top H_f(w)h\ge0$.
 \end{proof}
-当 $\mu/L$ 很小时, 收敛很慢, 这与病态矩阵的方向差异相同. 超过 $2/L$ 时, 最大特征方向会放大误差. 在一般非凸网络中 $L$ 往往未知且随区域变化, 不能直接把这个二次结论当作全局保证.
+所以在凸函数上 $\nabla f(w)=0$ 足以保证全局最小值. 非凸网络不满足这个前提; 例如 $f(x,y)=x^2-y^2$ 原点梯度为零, 却沿一轴上升、另一轴下降. 对 softmax 交叉熵, 关于 logit 的 Hessian 是第 \ref{ch:prob} 章算出的 $\diag(q)-qq^\top$, 因而关于 logit 凸. 把 logit 换成多层网络参数的非线性函数后, 这个凸性一般不会保留. 训练的最后一个函数简单, 不等于整个参数目标简单.
 
-定积分 $\int_a^b g(t)\,dt$ 可以理解为把区间切成许多小段, 对每段“函数值乘小段宽度”求和, 再在分割变细时取极限. 对连续函数该极限存在. 本书调用一元微积分基本定理: 若 $G$ 在闭区间上连续可微, 则 $G(b)-G(a)=\int_a^bG'(t)\,dt$. 它把局部变化率累积成总变化, 是接下来的下降估计和第 12 章积分归因所需工具. 此处不重证实数极限与积分存在理论; 不熟悉者可先用 $G(t)=t^2$ 检验: 从 0 到 1 的变化为 $\int_0^1 2t\,dt=1$.
-
-对一般可微函数, 若梯度满足 $\norm{\nabla f(u)-\nabla f(v)}\le L\norm{u-v}$, 则沿线段积分得到
+\originalsection{下降引理与步长边界}
+\begin{definition}
+在集合 $D$ 上, 梯度满足 $\norm{\nabla f(u)-\nabla f(v)}\le L\norm{u-v}$ 时, 称 $f$ 为 $L$ 光滑, 其中 $L>0$. 这是梯度变化的上界, 不是函数值变化的同一个上界.
+\end{definition}
+\begin{lemma}[下降引理]\label{lem:descent}
+若 $f$ 在凸集 $D$ 上可微且 $L$ 光滑, $w,w+h\in D$, 则
+$f(w+h)\le f(w)+\nabla f(w)^\top h+(L/2)\norm h^2$.
+\end{lemma}
+\begin{proof}
+沿线段用微积分基本定理,
+\begin{align*}
+f(w+h)-f(w)-\nabla f(w)^\top h
+&=\int_0^1[\nabla f(w+th)-\nabla f(w)]^\top h\,dt\\
+&\le\int_0^1 Lt\norm h^2\,dt=\frac L2\norm h^2.
+\end{align*}
+不等式先用 Cauchy--Schwarz, 再用光滑条件; 凸集保证整段位于条件成立的区域.
+\end{proof}
+梯度下降 (GD) 更新为 $w_{t+1}=w_t-\eta\nabla f(w_t)$. 代入 $h=-\eta\nabla f(w_t)$, 得
 \[
-f(w+h)\le f(w)+\nabla f(w)^\top h+\frac L2\norm h^2.
+f(w_{t+1})\le f(w_t)-\eta(1-L\eta/2)\norm{\nabla f(w_t)}^2.
 \]
-具体地, 写差值为 $\int_0^1\nabla f(w+th)^\top h\,dt$, 减去 $\nabla f(w)^\top h$, 再用梯度差上界 $Lt\norm h^2$, 积分便得 $L\norm h^2/2$. 代入 $h=-\eta\nabla f(w)$, 当 $0<\eta<2/L$ 时得到下降. 它保证一次更新下降, 仍不保证全局最优.
+在更新点仍位于条件区域且 $0<\eta<2/L$ 时, 非零梯度带来下降. 若光滑性在整个 $\R^d$ 成立且 $f\ge f_{\rm low}$, 将不等式从 $t=0$ 加到 $K-1$, 得
+\[
+\min_{0\le t<K}\norm{\nabla f(w_t)}^2
+\le\frac{f(w_0)-f_{\rm low}}{K\eta(1-L\eta/2)}.
+\]
+这保证遇到小梯度, 不保证其对应全局最优, 也不证明整个迭代点序列收敛.
 
-\originalsection{随机梯度与 Adam}
-若目标为 $J(\theta)=n^{-1}\sum_i\ell_i(\theta)$, 均匀抽取样本得到的 $g=\nabla\ell_I(\theta)$ 满足 $\E[g\mid\theta]=\nabla J(\theta)$. 抽取 $B$ 个独立样本后平均, 在方差有限时每个分量的方差除以 $B$. 若不放回抽样则还有有限总体修正. 随机梯度的噪声与抽样有关, 并不自动是有利的探索机制.
+若另有凸性、全局最小点 $w_*$, 且 $0<\eta\le1/L$, 还可得到目标误差界. 记 $g_t=\nabla f(w_t)$, 一阶凸下界和距离展开给
+\[
+\norm{w_{t+1}-w_*}^2
+\le\norm{w_t-w_*}^2-2\eta(f(w_t)-f(w_*))+\eta^2\norm{g_t}^2.
+\]
+下降引理又给 $f(w_t)-f(w_{t+1})\ge\eta\norm{g_t}^2/2$. 代入后,
+$2\eta(f(w_{t+1})-f(w_*))\le\norm{w_t-w_*}^2-\norm{w_{t+1}-w_*}^2$.
+求和且用目标单调性, 得
+$f(w_K)-f(w_*)\le\norm{w_0-w_*}^2/(2\eta K)$.
+这些额外前提对一般 Transformer 训练没有自动成立, 但说明“下降”“小梯度”“全局误差小”是三个不同层次的结论.
 
-\Needspace{9\baselineskip}
-动量把过去梯度的指数平均用于更新. Adam 同时维护一阶与逐坐标二阶平均\cite{adam}. 取 $\beta_1,\beta_2\in[0,1)$, $\epsilon>0$, $m_0=v_0=0$; $\odot$ 表示对应坐标相乘:
+二次目标提供可逐方向核对的边界. 对 $f(w)=\tfrac12w^\top Hw-b^\top w$, $H$ 对称正定, 梯度为 $Hw-b$. 唯一最优点 $Hw_*=b$, 误差 $e_t=w_t-w_*$ 满足 $e_{t+1}=(I-\eta H)e_t$. 调用第 \ref{ch:linear} 章的谱定理, 每个特征分量按 $a_{t+1,j}=(1-\eta\lambda_j)a_{t,j}$ 更新. 因而对任意初值都收敛当且仅当 $0<\eta<2/\lambda_{\max}$. 若 $\mu\le\lambda_j\le L$, $\eta=1/L$ 时
+$\norm{e_t}\le(1-\mu/L)^t\norm{e_0}$.
+这是将各分量的收缩界平方求和得到的. 小 $\mu/L$ 使某些方向收敛慢, 与条件数的问题相连.
+
+CPU 实验取 $H=\diag(1,10)$、$w_0=(1,1)^\top$. 80 步后, $\eta=0.1$ 的损失约为 $2.3866\times10^{-8}$; $\eta=0.19$ 约为 $2.3866\times10^{-7}$. 边界 $\eta=0.2$ 使第二分量永远交替为 $\pm1$, 损失趋于 5; $\eta=0.21$ 的损失约为 $2.0980\times10^7$. 端点不是安全步长. 实际网络的 $L$ 通常未知且可能只在局部有界; 二次实验解释机制, 不给真实训练一个通用学习率.
+
+\originalsection{随机梯度与噪声下限}
+真实语料太大时, 每步只读一小批数据. 对有限训练集目标 $J(\theta)=n^{-1}\sum_i\ell_i(\theta)$, 在固定当前参数下均匀抽取索引 $I$, 有
+$\E[\nabla\ell_I(\theta)\mid\theta]=\nabla J(\theta)$.
+这是有限求和的线性性, 不需要交换无限积分和求导. 若每次独立有放回抽 $B$ 个索引后平均, 各坐标噪声方差除以 $B$. 不放回抽样、重加权样本和不均匀 token 数需要按实际抽样设计重新核对; 并非所有 mini-batch 梯度都对同一个目标无偏.
+
+设随机梯度 $g=\nabla J(\theta)+\xi$, 条件均值 $\E[\xi\mid\theta]=0$, 条件平方长度 $\E[\norm\xi^2\mid\theta]\le\sigma^2/B$. 若 $J$ 全局 $L$ 光滑, 随机更新 $\theta^+=\theta-\eta g$ 的下降引理给
+\[
+\E[J(\theta^+)\mid\theta]
+\le J(\theta)-\eta(1-L\eta/2)\norm{\nabla J(\theta)}^2
++\frac{L\eta^2\sigma^2}{2B}.
+\]
+推导只需 $\E g=\nabla J$ 和 $\E\norm g^2=\norm{\nabla J}^2+\E\norm\xi^2$, 后者的混合项由零均值消失. 额外正项说明随机单步不保证下降. 增大批量或减小步长可降低这个上界中的噪声项, 但代价分别是计算量或更新幅度.
+
+在一维 $f(w)=aw^2/2$, $a>0$, 若噪声 $\xi_t$ 独立、零均值、方差 $\sigma^2$, 且独立于此前迭代, 更新为 $w_{t+1}=(1-\eta a)w_t-\eta\xi_t$. 因而
+$\E w_{t+1}^2=(1-\eta a)^2\E w_t^2+\eta^2\sigma^2$.
+当 $0<\eta a<2$ 时, 几何级数给
+\[
+\E w_t^2=(1-\eta a)^{2t}w_0^2+
+\eta^2\sigma^2\frac{1-(1-\eta a)^{2t}}{1-(1-\eta a)^2}
+\longrightarrow\frac{\eta\sigma^2}{a(2-\eta a)}.
+\]
+常数步长下, 均值可以趋于零, 均方误差却停在正数. “训练后期还在抖动”不一定是梯度实现错误, 也不能自动解释为有益的探索. 学习率日程是否改善实际模型, 仍要测量目标和任务指标.
+
+\originalsection{Adam、偏差修正与失败边界}
+Adam 用梯度的指数平均提供方向, 并用平方梯度的指数平均逐坐标缩放\cite{adam}. 设 $\beta_1,\beta_2\in[0,1)$、$\epsilon>0$, $m_0=v_0=0$. 第 $t$ 步在 $\theta_{t-1}$ 计算梯度 $g_t$, 然后
 \[\begin{aligned}
-m_t&=\beta_1m_{t-1}+(1-\beta_1)g_t,\\
-v_t&=\beta_2v_{t-1}+(1-\beta_2)(g_t\odot g_t),\\
-\hat m_t&=m_t/(1-\beta_1^t),\qquad \hat v_t=v_t/(1-\beta_2^t),\\
-\theta_{t+1}&=\theta_t-\eta\hat m_t/(\sqrt{\hat v_t}+\epsilon).
+m_t&=\beta_1m_{t-1}+(1-\beta_1)g_t,\qquad
+v_t=\beta_2v_{t-1}+(1-\beta_2)(g_t\odot g_t),\\
+\hat m_t&=m_t/(1-\beta_1^t),\qquad
+\hat v_t=v_t/(1-\beta_2^t),\\
+\theta_t&=\theta_{t-1}-\eta\hat m_t/(\sqrt{\hat v_t}+\epsilon).
 \end{aligned}\]
-平方、开方与除法逐坐标进行. 若梯度的期望固定, 零初始化使 $m_t$ 的期望为 $(1-\beta_1^t)\E[g]$, 因而分母作启动偏差修正. 二阶量有同样解释. 它不是 Hessian 逆, 也不是任意非凸问题全局收敛的证据. 权重衰减是否与梯度中的 $L^2$ 惩罚等价, 取决于优化器; 自适应逐坐标缩放下二者通常不同.
+$\odot$、平方根和除法均逐坐标计算. $v_t$ 是未中心化的二阶矩平均, 不是方差估计, 更不是 Hessian 的逆. 第一阶平均结合过去方向; 分母使持续较大梯度的坐标具有较小的缩放系数.
+
+反复展开递推, $m_t=(1-\beta_1)\sum_{s=1}^t\beta_1^{t-s}g_s$. 权重和为 $1-\beta_1^t$, 所以零初始化导致初期幅度偏小. 若 $\E g_s=\mu$ 对所有 $s$ 恒定, 则 $\E m_t=(1-\beta_1^t)\mu$, 除以此因子后均值正好为 $\mu$. 相同推导对 $v_t$ 成立, 前提是 $\E[g_s\odot g_s]$ 恒定. 这证明的是初始化偏差修正, 不要求各 $g_s$ 独立. 若训练中的均值随步数变化, 修正后得到的是归一化的历史加权平均, 不必等于当前均值. 而且 $\E[\hat m_t/(\sqrt{\hat v_t}+\epsilon)]$ 不能拆成两个期望相除, 所以不能据此声称 Adam 更新是无偏的梯度更新.
+
+例如首步 $g_1=(2,-3)^\top$、$\beta_1=0.9$、$\beta_2=0.999$, 有 $m_1=(0.2,-0.3)^\top$、$v_1=(0.004,0.009)^\top$, 修正后分别为 $g_1$ 和 $g_1\odot g_1$. 忽略 $\epsilon$ 时首步的各非零坐标更新近似为 $-\eta\operatorname{sign}(g_{1,j})$, 并不等于 GD 的 $-\eta g_{1,j}$.
+
+这也给出一个简单失败边界. 对 $f(w)=w^2/2$, 从 $w_0=10^{-3}$ 开始, 用 $\eta=0.1$、$\epsilon=10^{-8}$ 的 Adam 首步得到 $w_1=w_0-0.1w_0/(|w_0|+\epsilon)\approx-0.098999$. 损失从 $5\times10^{-7}$ 升到约 $0.0049004$. 因而即使目标凸且光滑, Adam 也没有每步下降的无条件保证. 这个例子只反驳单调下降, 不宣称所有 Adam 迭代必然发散.
+
+平方惩罚与直接权重衰减也要区分. 对普通 GD, 把 $\lambda\norm\theta^2/2$ 加入损失给
+$\theta^+=(1-\eta\lambda)\theta-\eta g$.
+若优化器将输入梯度逐坐标乘以矩阵 $D_t$, 惩罚项产生 $-\eta\lambda D_t\theta$, 而直接衰减产生 $-\eta\lambda\theta$, 两者通常不同. Adam 还会把惩罚梯度写入历史一阶、二阶平均, 差别更不能用同一个系数名消掉. 阅读现代训练配方时应检查实现中的衰减定义, 不只看超参数叫不叫 \texttt{weight\_decay}.
+
+配套实验在 $H=\diag(1,10)$ 上向梯度加入标准差 $0.5$ 的独立噪声, 两算法使用同一条噪声序列. SGD 步长为 $0.05$, Adam 步长为 $0.03$, 运行 1000 步; 最后 200 步平均损失分别约为 $0.006870$ 和 $0.005436$. 这是两个指定参数配置的一次比较, 不足以排名优化器. 末步损失分别约 $0.002411$ 和 $0.004166$, 又说明用某一个末步作比较容易受波动影响. 参数、完整 GD 曲线、随机优化器检查点与代码哈希均保存在 \texttt{results/v03-foundations/}.
 
 \originalsection{梯度检查与练习}
-对参数坐标 $j$, 中心有限差分为 $[f(\theta+he_j)-f(\theta-he_j)]/(2h)$. 足够光滑时截断误差为 $O(h^2)$, 但极小 $h$ 会放大浮点消减. 所以使用双精度与中等的 $h=10^{-5}$, 再检查多个坐标. 有限差分是实现诊断, 不是对所有参数、输入与边界的证明. ReLU 的零点不可微, 应避开该点或明确采用的次梯度.
-
-本项目 MLP 与注意力网络都手写梯度, 在训练前比较有限差分. 误差指标定义为
-\[
-e=\frac{|g_{\rm num}-g_{\rm ana}|}{\max(1,|g_{\rm num}|,|g_{\rm ana}|)},
-\]
-其中分母让较小梯度按绝对误差衡量. 程序若超过阈值会停止, 不让错误的梯度继续生成“研究结果”.
+中心有限差分 $[f(\theta+he_j)-f(\theta-he_j)]/(2h)$ 可检查解析梯度. 若沿该坐标三阶导数在邻域有界, 一元 Taylor 公式的两个展开相减, 得误差 $O(h^2)$. 浮点计算中极小 $h$ 又会放大消减误差, 所以要检查不同尺度并使用双精度. 可比较
+$|g_{\rm num}-g_{\rm ana}|/\max(1,|g_{\rm num}|,|g_{\rm ana}|)$.
+这是有限个输入与坐标的实现诊断, 不代替链式法则证明. 在 ReLU 零点等不可微处, 两侧差分可能混合不同分支; 应避开边界或明确所用次梯度.
 
 \begin{exercise}
-对 $f(w)=5w^2$, 梯度下降的哪些常数步长能使任意初值收敛到零? 步长恰为端点时发生什么?
+设 $F(w)=Aw+b$, 标量损失对 $F$ 的梯度为 $u\in\R^m$. 推导对 $w\in\R^d$、$A\in\R^{m\times d}$ 和 $b$ 的梯度. 若 $A$ 被两次使用, 应如何合并?
 \end{exercise}
 \begin{solution}
-更新为 $w_{t+1}=(1-10\eta)w_t$, 所以要求 $|1-10\eta|<1$, 即 $0<\eta<0.2$. $\eta=0$ 不更新; $\eta=0.2$ 在非零初值下正负振荡, 并不收敛. 零初值是平凡例外.
+$d\ell=u^\top(dA\,w+A\,dw+db)$, 故 $\nabla_w\ell=A^\top u\in\R^d$, $\nabla_A\ell=uw^\top\in\R^{m\times d}$, $\nabla_b\ell=u\in\R^m$. 两次使用产生两个关于同一 $dA$ 的系数, 总梯度是两个外积之和, 因为损失一阶变化是两项之和.
 \end{solution}
 \begin{exercise}
-设 $F(w)=Aw+b$, 下游损失对 $F$ 的梯度是 $u$. 推导对 $w,A,b$ 的梯度, 核对它们的维度.
+一个 token 在三个位置出现, 三处对嵌入向量的梯度分别为 $g_1,g_2,g_3$. 若代码依次把这三个梯度赋值到嵌入表的同一行, 哪里错了? 若这三个位置还各有一条残差路径, 是否能用嵌入累加替代残差累加?
 \end{exercise}
 \begin{solution}
-微分为 $d\ell=u^\top(dA\,w+A\,dw+db)$. 所以 $\nabla_w\ell=A^\top u\in\R^d$, $\nabla_A\ell=uw^\top\in\R^{m\times d}$, $\nabla_b\ell=u\in\R^m$. 对矩阵参数, 梯度由 Frobenius 内积 $\sum_{ij}(\nabla_A\ell)_{ij}dA_{ij}$ 定义.
+共享嵌入行变化 $h$ 时, 损失一阶变化为 $(g_1+g_2+g_3)^\top h$, 所以应累加而不是覆盖. 残差支路的梯度应先在每个位置与变换支路相加, 再按 token 汇总. 两种相加发生在不同共享结构上, 漏掉其中任何一个都改变总系数.
+\end{solution}
+\begin{exercise}
+对 $f(w)=5w^2$, 哪些常数 GD 步长使任意初值收敛到零? 对非零初值, 梯度在步长端点仍是下降方向吗? 为什么更新不收敛?
+\end{exercise}
+\begin{solution}
+更新 $w^+=(1-10\eta)w$, 收敛要求 $|1-10\eta|<1$, 即 $0<\eta<0.2$. 在 $\eta=0.2$ 时, 非零 $w$ 的负梯度仍与局部下降方向一致, 但完整一步到达 $-w$, 损失相同并持续振荡. 局部方向正确不能替代步长控制.
+\end{solution}
+\begin{exercise}
+某训练日志显示随机梯度均值接近零但损失仍波动. 能否仅据此断言已到全局最优? 如果把批量增大四倍, 独立抽样下噪声标准差怎样改变?
+\end{exercise}
+\begin{solution}
+不能. 随机均值可能有抽样误差; 即使真实梯度为零, 非凸目标也可能位于鞍点, 且常数步长噪声仍可造成波动. 在独立有放回抽样与方差有限的条件下, 批量均值方差与 $1/B$ 成正比, 批量增大四倍使标准差减半. 相关抽样或改变目标权重时不能直接套用.
 \end{solution}
 \label{ch:end:04}

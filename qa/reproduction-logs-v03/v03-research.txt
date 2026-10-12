@@ -1,0 +1,12 @@
+{
+  "out": "/tmp/ai-source-v03-rebuild-nofm5xup/v03-research",
+  "script_sha256": "6d7d88244aa88ea32d3481fa3c4f64d7d24b4296830d1335d6e9db7075f672fe",
+  "modules": [
+    "boundary",
+    "propagation",
+    "probe",
+    "program_search",
+    "recurrence"
+  ],
+  "llm_evaluated": false
+}

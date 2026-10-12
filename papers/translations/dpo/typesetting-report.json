@@ -1,0 +1,282 @@
+{
+  "schema_version": 2,
+  "source": "/tmp/dpo-validate/book/main.tex",
+  "automated_status": "PASS",
+  "mathematical_verification": false,
+  "pedagogy_assessed": false,
+  "visual_review": "not_performed",
+  "errors": [],
+  "warnings": [
+    "papers/translations/dpo/body.tex:9 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:135 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:178 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:214 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:229 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:237 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:260 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:307 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:744 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:762 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:809 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:835 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:857 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:887 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:937 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:1035 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:1040 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:1106 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:1138 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:1149 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:1322 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/body.tex:1336 heading-style: 该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+    "papers/translations/dpo/figures/teaser-redraw.tex:7 inline-height-review: 此行内式可能撑高行距，结合实际页面判断是否改为行间。",
+    "papers/translations/dpo/figures/teaser-redraw.tex:8 inline-height-review: 此行内式可能撑高行距，结合实际页面判断是否改为行间。",
+    "papers/translations/dpo/figures/teaser-redraw.tex:9 inline-height-review: 此行内式可能撑高行距，结合实际页面判断是否改为行间。",
+    "papers/translations/dpo/figures/teaser-redraw.tex:17 inline-height-review: 此行内式可能撑高行距，结合实际页面判断是否改为行间。"
+  ],
+  "stages": {
+    "source": "passed",
+    "compile": "passed",
+    "log": "passed",
+    "pdf": "passed",
+    "inline_diagnostic": "not_requested; log and page review remain required",
+    "render": "generated_not_inspected"
+  },
+  "policy": {
+    "title_soft_limit": 20,
+    "inline_warning_ratio": 0.5,
+    "overflow_tolerance_pt": 0.5,
+    "page_size": [
+      612,
+      792
+    ],
+    "reviewed_warnings": []
+  },
+  "sources": [
+    {
+      "path": "main.tex",
+      "sha256": "88144f166fbf4f8ac0670b33e0bf2cb24c8a8eade13e2dda47d03c4743a50090"
+    },
+    {
+      "path": "papers/translations/dpo/body.tex",
+      "sha256": "59740ecce9d7c2f1e6c8d68a57daa0df8aa994f1f930f17b4fec214cee10006d"
+    },
+    {
+      "path": "papers/translations/dpo/figures/teaser-redraw.tex",
+      "sha256": "371d2ec6b38a14cabfbbe27bbc16ccf495d5ab24ce2c1943db172c2389fdbc13"
+    },
+    {
+      "path": "papers/translations/dpo/figures/survey-redraw.tex",
+      "sha256": "b0ae24facf33c0ea573f1a2191779ac3ce1ad8ca89f48d8b78a377c71faefffe"
+    }
+  ],
+  "layout_source": {
+    "findings": [
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 9,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 135,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 178,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 214,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 229,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 237,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 260,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 307,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 744,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 762,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 809,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 835,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 857,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 887,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 937,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 1035,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 1040,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 1106,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 1138,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 1149,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 1322,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "heading-style",
+        "line": 1336,
+        "detail": "该标题不使用默认章/节宏；核对是否为授权扩展，而非临时换样式。",
+        "file": "papers/translations/dpo/body.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "inline-height-review",
+        "line": 7,
+        "detail": "此行内式可能撑高行距，结合实际页面判断是否改为行间。",
+        "file": "papers/translations/dpo/figures/teaser-redraw.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "inline-height-review",
+        "line": 8,
+        "detail": "此行内式可能撑高行距，结合实际页面判断是否改为行间。",
+        "file": "papers/translations/dpo/figures/teaser-redraw.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "inline-height-review",
+        "line": 9,
+        "detail": "此行内式可能撑高行距，结合实际页面判断是否改为行间。",
+        "file": "papers/translations/dpo/figures/teaser-redraw.tex"
+      },
+      {
+        "level": "WARNING",
+        "kind": "inline-height-review",
+        "line": 17,
+        "detail": "此行内式可能撑高行距，结合实际页面判断是否改为行间。",
+        "file": "papers/translations/dpo/figures/teaser-redraw.tex"
+      }
+    ],
+    "metrics": {
+      "heading_count": 34,
+      "inline_math_count": 249,
+      "proof_count": 5,
+      "solution_count": 0,
+      "content_depth_assessed": false
+    },
+    "style_errors": []
+  },
+  "build_record": "build/main.build.json",
+  "pdf_path": "/tmp/dpo-validate/book/build/main.pdf",
+  "passes": 2,
+  "log": {
+    "issues": [],
+    "warnings": []
+  },
+  "pdf": {
+    "pages": 35,
+    "issues": [],
+    "warnings": [],
+    "mathematical_verification": false,
+    "visual_review": "not_performed"
+  },
+  "render_record": "build/main.render.json"
+}

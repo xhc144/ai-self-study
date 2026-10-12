@@ -1,0 +1,122 @@
+[
+  {
+    "english": "Compute as Teacher (CaT)",
+    "chinese": "计算即教师",
+    "note": "框架名"
+  },
+  {
+    "english": "reference-free supervision",
+    "chinese": "无参考监督",
+    "note": "无外部人工参考，不表示无任何先验"
+  },
+  {
+    "english": "rollout",
+    "chinese": "采样轨迹",
+    "note": "模型针对提示生成的一次完整回答或推理"
+  },
+  {
+    "english": "reference estimation",
+    "chinese": "参考估计",
+    "note": "从轨迹集合构建监督估计"
+  },
+  {
+    "english": "pseudo-reference",
+    "chinese": "伪参考",
+    "note": "模型生成目标，不等于外部真值"
+  },
+  {
+    "english": "reward derivation",
+    "chinese": "奖励推导",
+    "note": "把伪参考转为每条轨迹奖励"
+  },
+  {
+    "english": "synthesis",
+    "chinese": "合成",
+    "note": "综合轨迹片段生成新回答"
+  },
+  {
+    "english": "selection",
+    "chinese": "选择",
+    "note": "从已有轨迹中选一个"
+  },
+  {
+    "english": "anchor",
+    "chinese": "锚点",
+    "note": "冻结初始策略"
+  },
+  {
+    "english": "self-proposed rubrics",
+    "chinese": "自提出评分细则",
+    "note": "由模型基于伪参考生成的二元标准"
+  },
+  {
+    "english": "criterion",
+    "chinese": "标准",
+    "note": "细则中的单条可判定要求"
+  },
+  {
+    "english": "judge",
+    "chinese": "判别器",
+    "note": "判断是否满足标准的模型"
+  },
+  {
+    "english": "verifiable domain",
+    "chinese": "可验证领域",
+    "note": "原文指可程序检查答案的领域"
+  },
+  {
+    "english": "non-verifiable domain",
+    "chinese": "不可验证领域",
+    "note": "原文指定性答案且缺乏程序检查器的领域"
+  },
+  {
+    "english": "best-of-N / Self-BoN",
+    "chinese": "best-of-N／Self-BoN",
+    "note": "从N个样本挑最好；Self指策略自行评选"
+  },
+  {
+    "english": "mutual predictability",
+    "chinese": "互可预测性",
+    "note": "在其他回答条件下评价当前回答概率"
+  },
+  {
+    "english": "group-relative advantage",
+    "chinese": "组相对优势",
+    "note": "相对组均值并以组标准差归一化"
+  },
+  {
+    "english": "amortize",
+    "chinese": "摊入／摊销",
+    "note": "通过训练让后续单次生成复用聚合收益"
+  },
+  {
+    "english": "reward hacking",
+    "chinese": "奖励投机",
+    "note": "提高奖励却偏离任务目的"
+  },
+  {
+    "english": "entropy collapse",
+    "chinese": "熵坍缩",
+    "note": "策略输出多样性降低"
+  },
+  {
+    "english": "oracle baseline",
+    "chinese": "理想基线",
+    "note": "使用专家标注的对照"
+  },
+  {
+    "english": "standard error",
+    "chinese": "标准误",
+    "note": "跨测试样本的均值不确定性指标"
+  },
+  {
+    "english": "Welch t-test",
+    "chinese": "Welch t检验",
+    "note": "原文采用的组间显著性检验"
+  },
+  {
+    "english": "surface-form bias",
+    "chinese": "表面形式偏差",
+    "note": "对措辞、长度或格式的偏好"
+  }
+]

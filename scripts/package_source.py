@@ -7,23 +7,26 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORIES = [
-    "book/chapters", "book/generated", "docs", "experiments", "licenses",
+    "book/chapters", "book/sections", "book/generated", "papers", "docs", "experiments", "licenses",
     "qa", "research", "results", "scripts", "tests",
 ]
 ROOT_FILES = [
     ".gitignore", "LICENSE", "README.md", "requirements.txt",
-    "requirements-build.txt", "book/main.tex", "book/references.tex",
+    "requirements-build.txt", "requirements-models.txt", "book/main.tex", "book/references.tex",
     "dist/ai-self-study.pdf",
 ]
 
 
 def main():
     paths = [ROOT / name for name in ROOT_FILES]
+    paths.extend((ROOT / "book").glob("*.tex"))
+    paths.extend((ROOT / "dist/papers").glob("*.pdf"))
     for folder in DIRECTORIES:
         paths.extend(p for p in (ROOT / folder).rglob("*") if p.is_file()
-                     and not any(part in {"__pycache__", "render", "style-check"}
+                     and not any(part in {"__pycache__", "render", "style-check", "reproduction-logs-v03"}
                                  for part in p.relative_to(ROOT).parts)
-                     and p.suffix != ".pyc")
+                     and p.suffix not in {".pyc", ".log"}
+                     and p.name not in {"v03-reproducibility.json"})
     paths = sorted(set(paths))
     if any(not p.is_file() for p in paths):
         raise FileNotFoundError("An explicitly required delivery file is missing")
@@ -31,14 +34,14 @@ def main():
         "sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
         "size_bytes": p.stat().st_size,
     } for p in paths}
-    manifest = json.dumps({"format": 1, "release": "0.2.1", "files": files},
+    manifest = json.dumps({"format": 1, "release": "0.3.0", "scope": "Editable sources, actual results and all component PDFs. Combined PDFs are reproducibly assembled, not redundantly packed. Archive-bound final verification is a repository sidecar.", "files": files},
                           ensure_ascii=False, indent=2).encode() + b"\n"
     out = ROOT / "dist/ai-self-study-source.zip"
     out.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         def add(name, data):
             item = zipfile.ZipInfo("ai-self-study/" + name,
-                                   date_time=(2026, 10, 11, 0, 0, 0))
+                                   date_time=(2026, 10, 12, 0, 0, 0))
             item.compress_type = zipfile.ZIP_DEFLATED
             item.external_attr = 0o100644 << 16
             z.writestr(item, data)

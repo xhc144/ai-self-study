@@ -1,0 +1,188 @@
+{
+  "release": "0.3.0",
+  "book_pages": 99,
+  "paper_collection_pages": 393,
+  "complete_pages": 492,
+  "components": [
+    {
+      "id": "study-ih-challenge",
+      "title": "指令层级研究说明",
+      "pdf": "dist/papers/study-ih-challenge.pdf",
+      "component_pages": 4,
+      "collection_pages": [
+        1,
+        4
+      ],
+      "complete_pages": [
+        100,
+        103
+      ],
+      "sha256": "093f8c958dcf4770f475074b519c1b19f0f37003ba19f6ed074a1e36160734fd"
+    },
+    {
+      "id": "study-browser-injection",
+      "title": "浏览器注入研究说明",
+      "pdf": "dist/papers/study-browser-injection.pdf",
+      "component_pages": 4,
+      "collection_pages": [
+        5,
+        8
+      ],
+      "complete_pages": [
+        104,
+        107
+      ],
+      "sha256": "0a6efedc3f747c5352af34977975219cac6b7c3ccd1b5966e228cf04c01651f0"
+    },
+    {
+      "id": "study-r1-reading",
+      "title": "R1 比较阅读说明",
+      "pdf": "dist/papers/study-r1-reading.pdf",
+      "component_pages": 3,
+      "collection_pages": [
+        9,
+        11
+      ],
+      "complete_pages": [
+        108,
+        110
+      ],
+      "sha256": "db9301f9d3195169740cc63852a60daae1e92e7c19592289c5ef1797a582694b"
+    },
+    {
+      "id": "dpo",
+      "title": "直接偏好优化",
+      "pdf": "dist/papers/dpo.pdf",
+      "component_pages": 36,
+      "collection_pages": [
+        12,
+        47
+      ],
+      "complete_pages": [
+        111,
+        146
+      ],
+      "sha256": "0a81f624e502bb93c0365c14cd0d5f0a856fc9d6f1346ffb696ee7f596d2e0c9"
+    },
+    {
+      "id": "testcompute",
+      "title": "最优测试时计算",
+      "pdf": "dist/papers/testcompute.pdf",
+      "component_pages": 43,
+      "collection_pages": [
+        48,
+        90
+      ],
+      "complete_pages": [
+        147,
+        189
+      ],
+      "sha256": "2def43e5ed63b670ae9fb929f5e38bf5965b69ad1ccadf4d40d2bd6642d265e1"
+    },
+    {
+      "id": "r1-nature",
+      "title": "DeepSeek-R1 Nature 正式论文",
+      "pdf": "dist/papers/r1-nature.pdf",
+      "component_pages": 18,
+      "collection_pages": [
+        91,
+        108
+      ],
+      "complete_pages": [
+        190,
+        207
+      ],
+      "sha256": "682aea649c1bfae85f5422c2444d3af0e901f113b92049d2e5596e850dc9c9bf"
+    },
+    {
+      "id": "chive",
+      "title": "用反事实检验解释",
+      "pdf": "dist/papers/chive.pdf",
+      "component_pages": 34,
+      "collection_pages": [
+        109,
+        142
+      ],
+      "complete_pages": [
+        208,
+        241
+      ],
+      "sha256": "02bd760d1e1681c5d7a91f7032d07a2fd4d06cff0d6425968513829c863e355e"
+    },
+    {
+      "id": "dgm",
+      "title": "达尔文哥德尔机",
+      "pdf": "dist/papers/dgm.pdf",
+      "component_pages": 128,
+      "collection_pages": [
+        143,
+        270
+      ],
+      "complete_pages": [
+        242,
+        369
+      ],
+      "sha256": "ec10565950209ebfd70a8d73908ec5efbb8ae864fe030267f50747914ea6f7a0"
+    },
+    {
+      "id": "stars",
+      "title": "循环动力学稳定性",
+      "pdf": "dist/papers/stars.pdf",
+      "component_pages": 19,
+      "collection_pages": [
+        271,
+        289
+      ],
+      "complete_pages": [
+        370,
+        388
+      ],
+      "sha256": "31a853ab98ec68d74fd763679b33a8efefa8b21c2b32db0fa2d104af5e493443"
+    },
+    {
+      "id": "alphaproof",
+      "title": "奥林匹克形式数学推理",
+      "pdf": "dist/papers/alphaproof.pdf",
+      "component_pages": 39,
+      "collection_pages": [
+        290,
+        328
+      ],
+      "complete_pages": [
+        389,
+        427
+      ],
+      "sha256": "59b2f6ddfcc8c75fb30c28edf25ed30e6dfeb6f36702dcb8b7d5363e43470193"
+    },
+    {
+      "id": "engram",
+      "title": "条件记忆与稀疏查找",
+      "pdf": "dist/papers/engram.pdf",
+      "component_pages": 34,
+      "collection_pages": [
+        329,
+        362
+      ],
+      "complete_pages": [
+        428,
+        461
+      ],
+      "sha256": "f9d5ed12246ea59f27a528fb8838295c65c699263cf075ea7d3a5f6c7c2f046e"
+    },
+    {
+      "id": "cat",
+      "title": "以计算作为教师",
+      "pdf": "dist/papers/cat.pdf",
+      "component_pages": 31,
+      "collection_pages": [
+        363,
+        393
+      ],
+      "complete_pages": [
+        462,
+        492
+      ],
+      "sha256": "d2bf4e3ed62fac3eaa5823480bf5c185c0719979043d11079ed516dbff1e2039"
+    }
+  ]
+}

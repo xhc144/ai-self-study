@@ -1,0 +1,723 @@
+{
+  "source_version": "arXiv:2509.14234v3",
+  "source_pdf_pages": 23,
+  "labels": [
+    {
+      "type": "figure",
+      "source_id": "fig:framework",
+      "target_label": "cat-fig:framework",
+      "standalone_page": "2",
+      "file": "sections/01-main.tex",
+      "line": 9
+    },
+    {
+      "type": "section",
+      "source_id": "sec:relatedwork",
+      "target_label": "cat-sec:relatedwork",
+      "standalone_page": "3",
+      "file": "sections/01-main.tex",
+      "line": 31
+    },
+    {
+      "type": "section",
+      "source_id": "sec:method",
+      "target_label": "cat-sec:method",
+      "standalone_page": "4",
+      "file": "sections/01-main.tex",
+      "line": 40
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:ref-estimation",
+      "target_label": "cat-subsec:ref-estimation",
+      "standalone_page": "4",
+      "file": "sections/01-main.tex",
+      "line": 47
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:synthesis",
+      "target_label": "cat-eq:synthesis",
+      "standalone_page": "4",
+      "file": "sections/01-main.tex",
+      "line": 58
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:reward-derivation",
+      "target_label": "cat-subsec:reward-derivation",
+      "standalone_page": "4",
+      "file": "sections/01-main.tex",
+      "line": 64
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:verifiable",
+      "target_label": "cat-eq:verifiable",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 71
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:rubric-gen",
+      "target_label": "cat-eq:rubric-gen",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 81
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:rubric-reward",
+      "target_label": "cat-eq:rubric-reward",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 87
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:rubric",
+      "target_label": "cat-fig:rubric",
+      "standalone_page": "6",
+      "file": "sections/01-main.tex",
+      "line": 96
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:training",
+      "target_label": "cat-subsec:training",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 99
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:advantage",
+      "target_label": "cat-eq:advantage",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 102
+    },
+    {
+      "type": "algorithm",
+      "source_id": "alg:cat-rl",
+      "target_label": "cat-alg:cat-rl",
+      "standalone_page": "6",
+      "file": "sections/01-main.tex",
+      "line": 109
+    },
+    {
+      "type": "section",
+      "source_id": "sec:experiments",
+      "target_label": "cat-sec:experiments",
+      "standalone_page": "6",
+      "file": "sections/01-main.tex",
+      "line": 121
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:setup",
+      "target_label": "cat-subsec:setup",
+      "standalone_page": "6",
+      "file": "sections/01-main.tex",
+      "line": 124
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:main-results",
+      "target_label": "cat-subsec:main-results",
+      "standalone_page": "7",
+      "file": "sections/01-main.tex",
+      "line": 131
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:headline",
+      "target_label": "cat-fig:headline",
+      "standalone_page": "7",
+      "file": "sections/01-main.tex",
+      "line": 139
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:rubric-results",
+      "target_label": "cat-subsec:rubric-results",
+      "standalone_page": "8",
+      "file": "sections/01-main.tex",
+      "line": 142
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:rubric-comparison",
+      "target_label": "cat-fig:rubric-comparison",
+      "standalone_page": "8",
+      "file": "sections/01-main.tex",
+      "line": 148
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:synthesis-results",
+      "target_label": "cat-subsec:synthesis-results",
+      "standalone_page": "8",
+      "file": "sections/01-main.tex",
+      "line": 151
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:inference-comparison",
+      "target_label": "cat-fig:inference-comparison",
+      "standalone_page": "9",
+      "file": "sections/01-main.tex",
+      "line": 157
+    },
+    {
+      "type": "section",
+      "source_id": "subsec:analysis",
+      "target_label": "cat-subsec:analysis",
+      "standalone_page": "8",
+      "file": "sections/01-main.tex",
+      "line": 160
+    },
+    {
+      "type": "table",
+      "source_id": "tab:disagreement",
+      "target_label": "cat-tab:disagreement",
+      "standalone_page": "9",
+      "file": "tables/disagreement.tex",
+      "line": 2
+    },
+    {
+      "type": "section",
+      "source_id": "sec:discussion",
+      "target_label": "cat-sec:discussion",
+      "standalone_page": "10",
+      "file": "sections/01-main.tex",
+      "line": 170
+    },
+    {
+      "type": "table",
+      "source_id": "tab:results-table",
+      "target_label": "cat-tab:results-table",
+      "standalone_page": "11",
+      "file": "tables/results-table.tex",
+      "line": 3
+    },
+    {
+      "type": "table",
+      "source_id": "tab:healthbench-rubrics",
+      "target_label": "cat-tab:healthbench-rubrics",
+      "standalone_page": "11",
+      "file": "tables/healthbench-rubrics.tex",
+      "line": 2
+    },
+    {
+      "type": "table",
+      "source_id": "tab:healthbench-cat",
+      "target_label": "cat-tab:healthbench-cat",
+      "standalone_page": "12",
+      "file": "tables/healthbench-cat.tex",
+      "line": 3
+    },
+    {
+      "type": "table",
+      "source_id": "tab:results-inf",
+      "target_label": "cat-tab:results-inf",
+      "standalone_page": "13",
+      "file": "tables/results-inf.tex",
+      "line": 3
+    },
+    {
+      "type": "section",
+      "source_id": "app:rlcomp",
+      "target_label": "cat-app:rlcomp",
+      "standalone_page": "13",
+      "file": "sections/02-appendices.tex",
+      "line": 8
+    },
+    {
+      "type": "table",
+      "source_id": "tab:rlbaselines",
+      "target_label": "cat-tab:rlbaselines",
+      "standalone_page": "14",
+      "file": "tables/rlbaselines.tex",
+      "line": 3
+    },
+    {
+      "type": "section",
+      "source_id": "app:pseudoref",
+      "target_label": "cat-app:pseudoref",
+      "standalone_page": "14",
+      "file": "sections/02-appendices.tex",
+      "line": 12
+    },
+    {
+      "type": "table",
+      "source_id": "tab:sqrubric",
+      "target_label": "cat-tab:sqrubric",
+      "standalone_page": "14",
+      "file": "tables/sqrubric.tex",
+      "line": 2
+    },
+    {
+      "type": "section",
+      "source_id": "app:judge-sens",
+      "target_label": "cat-app:judge-sens",
+      "standalone_page": "14",
+      "file": "sections/02-appendices.tex",
+      "line": 16
+    },
+    {
+      "type": "table",
+      "source_id": "tab:judge-sensitivity",
+      "target_label": "cat-tab:judge-sensitivity",
+      "standalone_page": "14",
+      "file": "tables/judge-sensitivity.tex",
+      "line": 2
+    },
+    {
+      "type": "section",
+      "source_id": "app:omittingq",
+      "target_label": "cat-app:omittingq",
+      "standalone_page": "14",
+      "file": "sections/02-appendices.tex",
+      "line": 20
+    },
+    {
+      "type": "section",
+      "source_id": "app:disagree",
+      "target_label": "cat-app:disagree",
+      "standalone_page": "15",
+      "file": "sections/02-appendices.tex",
+      "line": 27
+    },
+    {
+      "type": "section",
+      "source_id": "app:analysis",
+      "target_label": "cat-app:analysis",
+      "standalone_page": "15",
+      "file": "sections/02-appendices.tex",
+      "line": 54
+    },
+    {
+      "type": "table",
+      "source_id": "tab:cat-qual",
+      "target_label": "cat-tab:cat-qual",
+      "standalone_page": "15",
+      "file": "tables/cat-qual.tex",
+      "line": 2
+    },
+    {
+      "type": "section",
+      "source_id": "app:catrl-stops-learning",
+      "target_label": "cat-app:catrl-stops-learning",
+      "standalone_page": "16",
+      "file": "sections/02-appendices.tex",
+      "line": 61
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:catrl-stops",
+      "target_label": "cat-fig:catrl-stops",
+      "standalone_page": "16",
+      "file": "sections/02-appendices.tex",
+      "line": 67
+    },
+    {
+      "type": "section",
+      "source_id": "app:grpo",
+      "target_label": "cat-app:grpo",
+      "standalone_page": "17",
+      "file": "sections/02-appendices.tex",
+      "line": 70
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:grpo-objective",
+      "target_label": "cat-eq:grpo-objective",
+      "standalone_page": "17",
+      "file": "sections/02-appendices.tex",
+      "line": 77
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:grpo-l",
+      "target_label": "cat-eq:grpo-l",
+      "standalone_page": "17",
+      "file": "sections/02-appendices.tex",
+      "line": 83
+    },
+    {
+      "type": "equation",
+      "source_id": "eq:grpo-ratio-adv",
+      "target_label": "cat-eq:grpo-ratio-adv",
+      "standalone_page": "17",
+      "file": "sections/02-appendices.tex",
+      "line": 91
+    },
+    {
+      "type": "section",
+      "source_id": "app:prompts",
+      "target_label": "cat-app:prompts",
+      "standalone_page": "17",
+      "file": "sections/02-appendices.tex",
+      "line": 98
+    },
+    {
+      "type": "section",
+      "source_id": "app:hparams",
+      "target_label": "cat-app:hparams",
+      "standalone_page": "22",
+      "file": "sections/02-appendices.tex",
+      "line": 152
+    },
+    {
+      "type": "table",
+      "source_id": "tab:RLtrainingparams",
+      "target_label": "cat-tab:RLtrainingparams",
+      "standalone_page": "22",
+      "file": "tables/RLtrainingparams.tex",
+      "line": 3
+    },
+    {
+      "type": "table",
+      "source_id": "tab:SFTtrainingparams",
+      "target_label": "cat-tab:SFTtrainingparams",
+      "standalone_page": "23",
+      "file": "tables/SFTtrainingparams.tex",
+      "line": 3
+    },
+    {
+      "type": "table",
+      "source_id": "tab:samplingparams",
+      "target_label": "cat-tab:samplingparams",
+      "standalone_page": "23",
+      "file": "tables/samplingparams.tex",
+      "line": 3
+    },
+    {
+      "type": "section",
+      "source_id": "app:expdetails",
+      "target_label": "cat-app:expdetails",
+      "standalone_page": "23",
+      "file": "sections/02-appendices.tex",
+      "line": 158
+    },
+    {
+      "type": "equation",
+      "source_id": "unnamed-original-equation-9",
+      "target_label": "cat-eq:perplexity",
+      "standalone_page": "23",
+      "file": "sections/02-appendices.tex",
+      "line": 165
+    },
+    {
+      "type": "equation",
+      "source_id": "unnamed-original-equation-10",
+      "target_label": "cat-eq:mutual-ppl",
+      "standalone_page": "24",
+      "file": "sections/02-appendices.tex",
+      "line": 173
+    },
+    {
+      "type": "equation",
+      "source_id": "unnamed-original-equation-11",
+      "target_label": "cat-eq:mutual-choice",
+      "standalone_page": "24",
+      "file": "sections/02-appendices.tex",
+      "line": 178
+    },
+    {
+      "type": "equation",
+      "source_id": "unnamed-original-equation-12",
+      "target_label": "cat-eq:sft-loss",
+      "standalone_page": "24",
+      "file": "sections/02-appendices.tex",
+      "line": 188
+    }
+  ],
+  "headings": [
+    {
+      "original_heading": "Introduction",
+      "level": "section",
+      "target_label": "cat-sec:introduction",
+      "standalone_page": "1",
+      "file": "sections/01-main.tex",
+      "line": 4
+    },
+    {
+      "original_heading": "Related Work",
+      "level": "section",
+      "target_label": "cat-sec:relatedwork",
+      "standalone_page": "3",
+      "file": "sections/01-main.tex",
+      "line": 31
+    },
+    {
+      "original_heading": "Compute as Teacher (CaT)",
+      "level": "section",
+      "target_label": "cat-sec:method",
+      "standalone_page": "4",
+      "file": "sections/01-main.tex",
+      "line": 40
+    },
+    {
+      "original_heading": "Reference Estimation",
+      "level": "subsection",
+      "target_label": "cat-subsec:ref-estimation",
+      "standalone_page": "4",
+      "file": "sections/01-main.tex",
+      "line": 47
+    },
+    {
+      "original_heading": "Reward Derivation",
+      "level": "subsection",
+      "target_label": "cat-subsec:reward-derivation",
+      "standalone_page": "4",
+      "file": "sections/01-main.tex",
+      "line": 64
+    },
+    {
+      "original_heading": "Verifiable Domains",
+      "level": "subsubsection",
+      "target_label": "cat-subsubsec:verifiable",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 68
+    },
+    {
+      "original_heading": "Non-Verifiable Domains",
+      "level": "subsubsection",
+      "target_label": "cat-subsubsec:nonverifiable",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 76
+    },
+    {
+      "original_heading": "Training",
+      "level": "subsection",
+      "target_label": "cat-subsec:training",
+      "standalone_page": "5",
+      "file": "sections/01-main.tex",
+      "line": 99
+    },
+    {
+      "original_heading": "Experiments",
+      "level": "section",
+      "target_label": "cat-sec:experiments",
+      "standalone_page": "6",
+      "file": "sections/01-main.tex",
+      "line": 121
+    },
+    {
+      "original_heading": "Setup",
+      "level": "subsection",
+      "target_label": "cat-subsec:setup",
+      "standalone_page": "6",
+      "file": "sections/01-main.tex",
+      "line": 124
+    },
+    {
+      "original_heading": "Main Results",
+      "level": "subsection",
+      "target_label": "cat-subsec:main-results",
+      "standalone_page": "7",
+      "file": "sections/01-main.tex",
+      "line": 131
+    },
+    {
+      "original_heading": "Self-Proposed Rubrics for Non-Verifiable Domains",
+      "level": "subsection",
+      "target_label": "cat-subsec:rubric-results",
+      "standalone_page": "8",
+      "file": "sections/01-main.tex",
+      "line": 142
+    },
+    {
+      "original_heading": "Reference Estimation: Synthesis vs Selection",
+      "level": "subsection",
+      "target_label": "cat-subsec:synthesis-results",
+      "standalone_page": "8",
+      "file": "sections/01-main.tex",
+      "line": 151
+    },
+    {
+      "original_heading": "How Does Synthesis Differ From Selection?",
+      "level": "subsection",
+      "target_label": "cat-subsec:analysis",
+      "standalone_page": "8",
+      "file": "sections/01-main.tex",
+      "line": 160
+    },
+    {
+      "original_heading": "Discussion",
+      "level": "section",
+      "target_label": "cat-sec:discussion",
+      "standalone_page": "10",
+      "file": "sections/01-main.tex",
+      "line": 170
+    },
+    {
+      "original_heading": "Acknowledgements",
+      "level": "section",
+      "target_label": "cat-acknowledgements",
+      "standalone_page": "10",
+      "file": "sections/01-main.tex",
+      "line": 175
+    },
+    {
+      "original_heading": "Results Tables And Additional Results",
+      "level": "section",
+      "target_label": "cat-app:results",
+      "standalone_page": "10",
+      "file": "sections/02-appendices.tex",
+      "line": 1
+    },
+    {
+      "original_heading": "RL Results Against Selection Methods",
+      "level": "subsection",
+      "target_label": "cat-app:rlcomp",
+      "standalone_page": "13",
+      "file": "sections/02-appendices.tex",
+      "line": 8
+    },
+    {
+      "original_heading": "Conditioning Rubric Generation on the Pseudo-Reference",
+      "level": "subsection",
+      "target_label": "cat-app:pseudoref",
+      "standalone_page": "14",
+      "file": "sections/02-appendices.tex",
+      "line": 12
+    },
+    {
+      "original_heading": "Judge Sensitivity",
+      "level": "subsection",
+      "target_label": "cat-app:judge-sens",
+      "standalone_page": "14",
+      "file": "sections/02-appendices.tex",
+      "line": 16
+    },
+    {
+      "original_heading": "Omitting the Question in the Synthesis Aggregator",
+      "level": "subsection",
+      "target_label": "cat-app:omittingq",
+      "standalone_page": "14",
+      "file": "sections/02-appendices.tex",
+      "line": 20
+    },
+    {
+      "original_heading": "Example: Synthesis Disagrees With All Rollouts",
+      "level": "section",
+      "target_label": "cat-app:disagree",
+      "standalone_page": "15",
+      "file": "sections/02-appendices.tex",
+      "line": 27
+    },
+    {
+      "original_heading": "Analysis of Synthesis Outputs",
+      "level": "section",
+      "target_label": "cat-app:analysis",
+      "standalone_page": "15",
+      "file": "sections/02-appendices.tex",
+      "line": 54
+    },
+    {
+      "original_heading": "When Does CaT Stop Learning?",
+      "level": "section",
+      "target_label": "cat-app:catrl-stops-learning",
+      "standalone_page": "16",
+      "file": "sections/02-appendices.tex",
+      "line": 61
+    },
+    {
+      "original_heading": "GRPO Overview",
+      "level": "section",
+      "target_label": "cat-app:grpo",
+      "standalone_page": "17",
+      "file": "sections/02-appendices.tex",
+      "line": 70
+    },
+    {
+      "original_heading": "Prompts",
+      "level": "section",
+      "target_label": "cat-app:prompts",
+      "standalone_page": "17",
+      "file": "sections/02-appendices.tex",
+      "line": 98
+    },
+    {
+      "original_heading": "Example Rubrics",
+      "level": "section",
+      "target_label": "cat-app:examples",
+      "standalone_page": "21",
+      "file": "sections/02-appendices.tex",
+      "line": 111
+    },
+    {
+      "original_heading": "Hyperparameters",
+      "level": "section",
+      "target_label": "cat-app:hparams",
+      "standalone_page": "22",
+      "file": "sections/02-appendices.tex",
+      "line": 152
+    },
+    {
+      "original_heading": "Experimental Details",
+      "level": "section",
+      "target_label": "cat-app:expdetails",
+      "standalone_page": "23",
+      "file": "sections/02-appendices.tex",
+      "line": 158
+    }
+  ],
+  "equations_total": 12,
+  "figures_total": 6,
+  "tables_total": 12,
+  "algorithms_total": 1,
+  "bibliography_entries": 46,
+  "standalone_pages": 30,
+  "prompts": [
+    {
+      "source_title": "Freeform Synthesis Prompt",
+      "target_file": "prompts/freeform-synthesis-zh.txt",
+      "translation": "Full natural-language translation; placeholders/XML/fixed output markers retained."
+    },
+    {
+      "source_title": "CoT/Reasoning Synthesis Prompt",
+      "target_file": "prompts/reasoning-synthesis-zh.txt",
+      "translation": "Full natural-language translation; placeholders/XML/fixed output markers retained."
+    },
+    {
+      "source_title": "CaT Rubric Generation Prompt",
+      "target_file": "prompts/rubric-generation-zh.txt",
+      "translation": "Full natural-language translation; placeholders/XML/fixed output markers retained."
+    },
+    {
+      "source_title": "CaT Rubric Judge Prompt",
+      "target_file": "prompts/rubric-judge-zh.txt",
+      "translation": "Full natural-language translation; placeholders/XML/fixed output markers retained."
+    },
+    {
+      "source_title": "Model-as-Judge Prompt",
+      "target_file": "prompts/model-as-judge-zh.txt",
+      "translation": "Full natural-language translation; placeholders/XML/fixed output markers retained."
+    }
+  ],
+  "examples": [
+    {
+      "source": "Main hypertension reward example",
+      "target_file": "sections/01-main.tex",
+      "target_label": "cat-subsec:reward-derivation"
+    },
+    {
+      "source": "Appendix B complex recurrence worked example, including both wrong/right arithmetic chains",
+      "target_file": "sections/02-appendices.tex",
+      "target_label": "cat-app:disagree"
+    },
+    {
+      "source": "All three Appendix G user/rubric examples",
+      "target_file": "sections/02-appendices.tex",
+      "target_label": "cat-app:examples"
+    }
+  ],
+  "limits": "Coverage and exact numeric sequences do not certify semantic accuracy; no independent bilingual human review claimed."
+}

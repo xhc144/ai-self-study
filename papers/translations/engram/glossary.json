@@ -1,0 +1,195 @@
+{
+  "paper_id": "arXiv:2601.07372v2",
+  "terms": [
+    {
+      "en": "conditional memory",
+      "zh": "条件记忆"
+    },
+    {
+      "en": "conditional computation",
+      "zh": "条件计算"
+    },
+    {
+      "en": "sparsity axis",
+      "zh": "稀疏轴"
+    },
+    {
+      "en": "sparsity allocation",
+      "zh": "稀疏分配"
+    },
+    {
+      "en": "lookup primitive",
+      "zh": "查找原语"
+    },
+    {
+      "en": "static memory",
+      "zh": "静态记忆"
+    },
+    {
+      "en": "N-gram",
+      "zh": "N-gram / N元语法"
+    },
+    {
+      "en": "suffix N-gram",
+      "zh": "后缀N-gram"
+    },
+    {
+      "en": "embedding",
+      "zh": "embedding / 嵌入"
+    },
+    {
+      "en": "embedding slot",
+      "zh": "embedding槽 / 记忆槽"
+    },
+    {
+      "en": "tokenizer compression",
+      "zh": "分词器压缩"
+    },
+    {
+      "en": "vocabulary projection",
+      "zh": "词表投影"
+    },
+    {
+      "en": "surjective mapping",
+      "zh": "满射"
+    },
+    {
+      "en": "multi-head hashing",
+      "zh": "多头哈希"
+    },
+    {
+      "en": "hash collision",
+      "zh": "哈希碰撞"
+    },
+    {
+      "en": "multiplicative-XOR hash",
+      "zh": "乘法--异或哈希"
+    },
+    {
+      "en": "context-aware gating",
+      "zh": "上下文感知门控"
+    },
+    {
+      "en": "query/key/value",
+      "zh": "Query / Key / Value"
+    },
+    {
+      "en": "depthwise causal convolution",
+      "zh": "逐通道因果卷积"
+    },
+    {
+      "en": "dilation rate",
+      "zh": "膨胀率"
+    },
+    {
+      "en": "multi-branch architecture",
+      "zh": "多分支架构"
+    },
+    {
+      "en": "manifold-constrained hyper-connections",
+      "zh": "流形约束超连接"
+    },
+    {
+      "en": "activated parameters",
+      "zh": "激活参数"
+    },
+    {
+      "en": "inactive parameters",
+      "zh": "不激活参数"
+    },
+    {
+      "en": "iso-parameter",
+      "zh": "等参数"
+    },
+    {
+      "en": "iso-FLOPs",
+      "zh": "等FLOPs"
+    },
+    {
+      "en": "iso-loss",
+      "zh": "等损失"
+    },
+    {
+      "en": "infinite memory regime",
+      "zh": "无限记忆设置(作者用语,有限扫描)"
+    },
+    {
+      "en": "prefetching",
+      "zh": "预取"
+    },
+    {
+      "en": "offloading",
+      "zh": "卸载"
+    },
+    {
+      "en": "host memory",
+      "zh": "主机内存"
+    },
+    {
+      "en": "memory hierarchy",
+      "zh": "存储层级"
+    },
+    {
+      "en": "all-to-all",
+      "zh": "全互联通信"
+    },
+    {
+      "en": "Zipf distribution",
+      "zh": "Zipf分布"
+    },
+    {
+      "en": "LogitLens",
+      "zh": "LogitLens / logit透镜"
+    },
+    {
+      "en": "centered kernel alignment",
+      "zh": "中心化核对齐"
+    },
+    {
+      "en": "Hilbert-Schmidt independence criterion",
+      "zh": "Hilbert--Schmidt独立性准则"
+    },
+    {
+      "en": "Gram matrix",
+      "zh": "Gram矩阵"
+    },
+    {
+      "en": "unbiased estimator",
+      "zh": "无偏估计"
+    },
+    {
+      "en": "soft alignment index",
+      "zh": "软对齐指标"
+    },
+    {
+      "en": "effective depth",
+      "zh": "有效深度(代理解释)"
+    },
+    {
+      "en": "post-hoc ablation",
+      "zh": "事后消融"
+    },
+    {
+      "en": "retained performance",
+      "zh": "原性能保留比例"
+    },
+    {
+      "en": "Needle-in-a-Haystack",
+      "zh": "大海捞针"
+    },
+    {
+      "en": "parameter memory",
+      "zh": "参数记忆"
+    },
+    {
+      "en": "non-parametric memory",
+      "zh": "非参数记忆"
+    },
+    {
+      "en": "high-cardinality categorical embedding",
+      "zh": "高基数类别embedding"
+    }
+  ],
+  "notation_policy": "All mathematical variables and equation indices follow the specified source. Embedding, Query/Key/Value, benchmark names and common method abbreviations retain searchable English forms where useful.",
+  "important_distinction": "Static deterministic addressing is distinct from non-trainable facts; representational alignment is distinct from causal equivalence; stable/efficient computation is distinct from correct answers."
+}

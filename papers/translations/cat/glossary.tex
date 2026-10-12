@@ -1,0 +1,33 @@
+\originalsection{译者术语表}\label{cat-glossary}
+下表为译者附加，不属于原论文正文.
+\Needspace{8\baselineskip}
+\begin{longtable}{p{.30\textwidth}p{.22\textwidth}p{.40\textwidth}}\toprule
+原术语&译法&说明\\\midrule
+\endfirsthead
+\toprule 原术语&译法&说明\\\midrule
+\endhead
+Compute as Teacher (CaT)&计算即教师&框架名\\
+reference-free supervision&无参考监督&无外部人工参考，不表示无任何先验\\
+rollout&采样轨迹&模型针对提示生成的一次完整回答或推理\\
+reference estimation&参考估计&从轨迹集合构建监督估计\\
+pseudo-reference&伪参考&模型生成目标，不等于外部真值\\
+reward derivation&奖励推导&把伪参考转为每条轨迹奖励\\
+synthesis&合成&综合轨迹片段生成新回答\\
+selection&选择&从已有轨迹中选一个\\
+anchor&锚点&冻结初始策略\\
+self-proposed rubrics&自提出评分细则&由模型基于伪参考生成的二元标准\\
+criterion&标准&细则中的单条可判定要求\\
+judge&判别器&判断是否满足标准的模型\\
+verifiable domain&可验证领域&原文指可程序检查答案的领域\\
+non-verifiable domain&不可验证领域&原文指定性答案且缺乏程序检查器的领域\\
+best-of-N / Self-BoN&best-of-N／Self-BoN&从N个样本挑最好；Self指策略自行评选\\
+mutual predictability&互可预测性&在其他回答条件下评价当前回答概率\\
+group-relative advantage&组相对优势&相对组均值并以组标准差归一化\\
+amortize&摊入／摊销&通过训练让后续单次生成复用聚合收益\\
+reward hacking&奖励投机&提高奖励却偏离任务目的\\
+entropy collapse&熵坍缩&策略输出多样性降低\\
+oracle baseline&理想基线&使用专家标注的对照\\
+standard error&标准误&跨测试样本的均值不确定性指标\\
+Welch t-test&Welch t检验&原文采用的组间显著性检验\\
+surface-form bias&表面形式偏差&对措辞、长度或格式的偏好\\
+\bottomrule\end{longtable}

@@ -1,0 +1,1353 @@
+% Full Chinese translation of arXiv:2305.18290v3; CC BY 4.0.
+% Uses the owning book's originalchapter/originalsection/native semantic environments.
+\originalchapter{直接偏好优化：语言模型其实也是奖励模型}\label{dpo-paper}
+\noindent 原作：Rafael Rafailov，Archit Sharma，Eric Mitchell，Stefano Ermon，Christopher D. Manning，Chelsea Finn。前三位作者同等贡献，资历较浅者列在前面。作者单位为斯坦福大学；Stefano Ermon 亦隶属 CZ Biohub。原作通讯邮箱：\texttt{\{rafailov,architsh,eric.mitchell\}@cs.stanford.edu}。
+
+\noindent 原文：\emph{Direct Preference Optimization: Your Language Model is Secretly a Reward Model}，arXiv:2305.18290v3，2024 年 7 月 29 日。\url{https://arxiv.org/abs/2305.18290v3}。本文依据该版本官方 PDF 与 LaTeX 源码完整翻译；参考文献保留原文书目信息，代码的标识符和运算保留，提示与聊天样例译为中文，退化 token 原样保留并释义。译者：ai-self-study contributors（机器辅助翻译，AI 对原文进行复核；未声称已经完成人工专家审校）。正文的第几节与附录字母均沿用原论文编号，合订本的章、节编号另计。原作按 \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} 授权，译文亦按该许可提供。译文、中文图注、两幅内容重绘及明确标出的译注均为对原作的修改；其余实验曲线为原作作者图。出处与每图许可记录见同目录 metadata.json 与 rights.json。
+
+% SOURCE main.tex L75-L83
+\subsection*{摘要}\label{dpo-abstract}
+大规模无监督语言模型（LM）能够学习广泛的世界知识和某些推理技能，但由于训练完全采用无监督方式，很难精确控制其行为。现有方法为获得这种可控性，会收集人类对模型生成内容相对质量的标注，并微调无监督语言模型，使其与这些偏好对齐；这通常使用基于人类反馈的强化学习（RLHF）。然而，RLHF 是一个复杂且往往不稳定的过程：首先拟合反映人类偏好的奖励模型，再用强化学习微调大型无监督语言模型，在不过度偏离原模型的前提下最大化估计奖励。
+本文提出 RLHF 奖励模型的一种新参数化方式，能够以闭式形式提取相应的最优策略，从而只用一个简单的分类损失解决标准 RLHF 问题。由此得到的算法称为\emph{直接偏好优化}（Direct Preference Optimization，DPO），它稳定、性能良好、计算负担轻，免去了微调期间从语言模型采样以及大量调整超参数的需要。实验表明，DPO 可以微调语言模型，使其与人类偏好对齐的效果达到或超过现有方法。具体来说，DPO 微调在控制生成内容的情感方面优于基于 PPO 的 RLHF；在摘要和单轮对话方面，其回复质量达到或超过现有方法，同时实现和训练显著简化。
+
+
+\originalsection{1 引言}
+% SOURCE main.tex L87-L88
+在极大数据集上训练的大型无监督语言模型能够获得令人惊讶的能力\cite{dpo-chowdhery2022palm,dpo-brown2020language,dpo-touvron2023llama,dpo-bubeck2023sparks}。但是，这些模型所用的训练数据由目标、优先事项和技能各不相同的人生成，其中某些目标和技能未必值得模仿。例如，我们希望 AI 编程助手\emph{理解}常见编程错误，以便纠正它们；但生成代码时，我们希望模型倾向于训练数据中可能较为罕见的高质量编程能力。类似地，我们希望语言模型\emph{知道}一种被 50\% 的人相信的常见误解，却绝不希望模型在有关它的查询中有 50\% 声称该误解是真的！换言之，从模型极其广泛的\emph{知识与能力}中选择我们\emph{期望的回复和行为}，对于构建安全、高性能、可控的 AI 系统至关重要\cite{dpo-ouyang2022training}。现有方法通常使用强化学习（RL）引导语言模型符合人类偏好；我们将说明，这些方法采用的强化学习目标可以用简单的二元交叉熵目标精确优化，从而大幅简化偏好学习流程。
+
+
+\begin{figure}
+    \centering
+    \input{../papers/translations/dpo/figures/teaser-redraw.tex}
+% SOURCE main.tex L94-L94
+    \caption{\textbf{DPO 优化人类偏好，同时避免强化学习。}现有基于人类反馈的语言模型微调方法，先在包含提示和人类对成对回复的偏好的数据集上拟合奖励模型，再用强化学习寻找使所学奖励最大化的策略。DPO 则利用简单的分类目标，直接优化最符合偏好的策略；它拟合的是\emph{隐式}奖励模型，其对应的最优策略可以以闭式形式提取。译图按原图 1 中文重绘，保留两种流程及其输入输出。}
+    \label{dpo-fig:teaser}
+\end{figure}
+
+% SOURCE main.tex L99-L99
+从总体上看，现有方法使用经过整理的人类偏好集，把期望的行为注入语言模型；这些偏好代表人类认为安全、有帮助的行为类型。偏好学习发生在大型文本数据集上的大规模无监督预训练之后。最直接的偏好学习方式，是对人类示范的高质量回复进行监督微调；而最成功的一类方法是基于人类（或 AI）反馈的强化学习（RLHF/RLAIF；\cite{dpo-christiano2017deep,dpo-bai2022constitutional}）。RLHF 在人类偏好数据集上拟合奖励模型，随后用强化学习优化语言模型策略，使它在不过度偏离原模型的前提下生成高奖励回复。虽然 RLHF 得到了对话和编程能力出色的模型，但其流程比监督学习复杂得多，需要训练多个语言模型，并在训练循环中从语言模型策略采样，由此产生显著的计算成本。
+
+% SOURCE main.tex L101-L103
+本文说明如何在不显式建模奖励、不使用强化学习的情况下，直接优化语言模型，使其遵循人类偏好。我们提出\emph{直接偏好优化}（DPO）：它隐式优化与现有 RLHF 算法相同的目标，即带有 KL 散度约束的奖励最大化，但实现简单，训练直接。直观地说，DPO 更新会提高偏好回复相对于非偏好回复的对数概率，不过它还引入动态的逐样本重要性权重，以防止我们在朴素概率比目标中观察到的模型退化。与现有算法一样，DPO 依赖一个理论偏好模型（例如 Bradley--Terry 模型；\cite{dpo-bradley1952rankanalysis}），用以衡量给定奖励函数与经验偏好数据的符合程度。现有方法利用偏好模型定义偏好损失来训练奖励模型，再训练策略以优化所学奖励；DPO 则通过变量替换，把偏好损失直接定义为策略的函数。因此，只要有关于模型回复的人类偏好数据集，DPO 就能通过简单的二元交叉熵目标优化策略，得到一个在偏好数据上拟合的隐式奖励函数的最优策略。
+
+% SOURCE main.tex L105-L105
+本文的主要贡献是 DPO：一种从偏好训练语言模型的简单算法，无需强化学习。实验使用参数量最高为 6B 的语言模型，在情感调节、摘要和对话等任务中从偏好学习；结果显示，DPO 的效果至少与现有方法相当，包括基于 PPO 的 RLHF。
+
+\originalsection{2 相关工作}
+
+
+
+
+
+
+
+% SOURCE main.tex L115-L117
+规模日益增大的自监督语言模型，能够以零样本方式\cite{dpo-radford2019language}或少样本提示\cite{dpo-gpt3,dpo-megatron,dpo-chowdhery2022palm}完成一些任务。但是，在包含指令和人类撰写续写的数据集上微调，可以显著提高其下游任务表现以及与用户意图的对齐程度\cite{dpo-mishra-etal-2022-cross,dpo-sanh2022multitask,dpo-chung2022scaling,dpo-thoppilan2022lamda}。这种“指令微调”使大语言模型能够泛化到指令微调集之外的指令，并总体上提高可用性\cite{dpo-chung2022scaling}。尽管指令微调取得了成功，人类对回复质量的\emph{相对}判断通常比专家示范更容易收集。因此，后续研究使用人类偏好数据集微调大语言模型，提高了翻译\cite{dpo-kreutzer-etal-2018-reliability}、摘要\cite{dpo-stiennon2022learning,dpo-ziegler2020finetuning}、故事创作\cite{dpo-ziegler2020finetuning}及指令遵循\cite{dpo-ouyang2022training,dpo-ramamurthy2023is}的能力。这些方法先优化神经网络奖励函数，使其在 Bradley--Terry 等偏好模型\cite{dpo-bradley1952rankanalysis}下与偏好数据集相容；再使用强化学习算法微调语言模型，以最大化该奖励。常用算法包括 REINFORCE\cite{dpo-williams1992reinforce}、近端策略优化（PPO；\cite{dpo-schulman2017proximal}）及其变体\cite{dpo-ramamurthy2023is}。一个密切相关的研究方向，是利用经过人类反馈指令微调的大语言模型，为安全性或无害性等特定属性生成额外的合成偏好数据\cite{dpo-bai2022constitutional}；人类只需为模型的标注提供文本评分准则，作为弱监督。这些方法融合了两类研究：一类使用强化学习训练语言模型以实现不同目标\cite{dpo-Ranzato2015SequenceLT,dpo-paulus2018a,dpo-wu2018learning}，另一类研究从人类偏好学习的一般方法\cite{dpo-christiano2017deep,dpo-kupcsik2018learning}。尽管相对人类偏好很有吸引力，用强化学习微调大语言模型仍是重大的实践挑战；本文提供一种有理论依据、无需强化学习即可优化相对偏好的方法。
+
+% SOURCE main.tex L119-L119
+在语言之外，已有研究在多臂老虎机和强化学习场景中探索从偏好学习策略，并提出了多种方法。利用动作偏好或排序而非奖励进行上下文多臂老虎机学习，称为上下文决斗多臂老虎机（CDB；\cite{dpo-yue2012karmed,dpo-dudik2015contextual}）。在没有绝对奖励时，CDB 的理论分析以\emph{冯·诺伊曼胜者}取代最优策略的概念：这种策略对\emph{任何}其他策略的期望胜率都至少为 50\%\cite{dpo-dudik2015contextual}。但是，在 CDB 场景中，偏好标签在线给出；从人类偏好学习时，我们通常使用一批固定的离线偏好标注动作对\cite{dpo-yan2022human}。类似地，\emph{基于偏好的强化学习}（PbRL）从\emph{未知}“评分”函数产生的二元偏好中学习，而非直接从奖励学习\cite{dpo-BusaFekete2014,dpo-ruiz2023dueling}。PbRL 已有多种算法，包括能够复用离策略偏好数据的方法，但通常先显式估计潜在评分函数（即奖励模型），再优化该函数\cite{dpo-jain2013learning,dpo-BusaFekete2014,dpo-christiano2017deep,dpo-sadigh2017active,dpo-kupcsik2018learning}。我们则提出单阶段策略学习方法，直接优化策略以满足偏好。
+
+
+
+\originalsection{3 预备知识}\paperlabel{3}{dpo-section:prelims}
+
+% SOURCE main.tex L125-L125
+我们回顾 Ziegler 等人\cite{dpo-ziegler2020finetuning}及后续工作\cite{dpo-stiennon2022learning,dpo-bai2022training,dpo-ouyang2022training}中的 RLHF 流程。它通常包含三个阶段：1）监督微调（SFT）；2）偏好采样与奖励学习；3）强化学习优化。
+
+% SOURCE main.tex L127-L127
+\textbf{监督微调：}RLHF 通常首先在所关注的下游任务（对话、摘要等）的高质量数据上，用监督学习微调预训练语言模型，得到模型 $\pi^{\mathrm{SFT}}$。
+
+% SOURCE main.tex L129-L129
+\textbf{奖励建模阶段：}第二阶段用提示 $x$ 输入 SFT 模型，生成成对回答 $(y_1,y_2)\sim\pi^{\mathrm{SFT}}(y\mid x)$。随后把它们交给人类标注者，标注者表达对其中一个回答的偏好，记为 $y_w\succ y_l\mid x$；$y_w$ 与 $y_l$ 分别表示 $(y_1,y_2)$ 中的偏好续写和非偏好续写。假设这些偏好由某个我们无法访问的潜在奖励模型 $r^*(y,x)$ 产生。偏好建模有多种方法，Bradley--Terry（BT）模型\cite{dpo-bradley1952rankanalysis}是常见选择；如果可以获取多个已排序的回答，更一般的 Plackett--Luce 排序模型\cite{dpo-plackett1975analysis,dpo-luce2012individual}也与该框架相容。BT 模型规定，人类偏好分布 $p^*$ 可写为：
+\begin{equation}\label{dpo-eq:bradley-terry}
+    p^*(y_1\succ y_2 \mid x)=\frac{\exp\left(r^*(x, y_1)\right)}{\exp\left(r^*(x, y_1)\right) + \exp\left(r^*(x, y_2)\right)}.
+\end{equation}
+% SOURCE main.tex L133-L133
+假设可以访问从 $p^*$ 采样的静态比较数据集 $\mathcal D=\bigl\{x^{(i)},y_w^{(i)},y_l^{(i)}\bigr\}_{i=1}^N$，我们可以参数化奖励模型 $r_\phi(x,y)$，并通过最大似然估计参数。把问题表述为二元分类，得到负对数似然损失：
+\begin{equation}\label{dpo-eq:reward_model}
+    \mathcal{L}_R(r_{\phi}, \mathcal{D}) = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}}\bigl[\log \sigma(r_{\phi}(x, y_w)- r_{\phi}(x, y_l))\bigr]
+\end{equation}
+% SOURCE main.tex L137-L137
+其中 $\sigma$ 是逻辑函数。在语言模型场景中，网络 $r_\phi(x,y)$ 通常从 SFT 模型 $\pi^{\mathrm{SFT}}(y\mid x)$ 初始化，并在最后一个 Transformer 层之上添加线性层，输出一个奖励标量预测值\cite{dpo-ziegler2020finetuning}。为获得方差更低的奖励函数，先前工作对奖励进行归一化，使所有 $x$ 均满足 $\mathbb E_{x,y\sim\mathcal D}[r_\phi(x,y)]=0$。\footnote{译注：此处按原文保留；公式写的是对 $x,y$ 的联合期望，而文字同时写“对所有 $x$”。若指逐提示归一化，应写相应的条件期望。}
+
+% SOURCE main.tex L139-L139
+\textbf{强化学习微调阶段：}强化学习阶段使用所学奖励函数向语言模型提供反馈。沿用先前研究\cite{dpo-jaques2017sequence,dpo-jaques2020human}，优化问题写为：
+\begin{equation}\label{dpo-eq:RL}
+\max_{\pi_{\theta}}  \mathbb{E}_{x\sim \mathcal{D}, y\sim \pi_{\theta}(y \mid x)}\bigl[r_{\phi}(x, y)\bigr] - \beta\mathbb{D}_{\textrm{KL}}\bigl[\pi_{\theta}(y\mid x)\mid \mid \pi_{\mathrm{ref}}(y\mid x)\bigr],
+\end{equation}
+% SOURCE main.tex L143-L144
+其中参数 $\beta$ 控制模型相对基准参考策略 $\pi_{\mathrm{ref}}$ 的偏离程度，参考策略即初始 SFT 模型 $\pi^{\mathrm{SFT}}$。在实践中，语言模型策略 $\pi_\theta$ 也初始化为 $\pi^{\mathrm{SFT}}$。添加这一约束很重要：它防止模型过度偏离奖励模型能够准确评价的分布，同时维持生成多样性，防止模式坍缩到单一高奖励回答。由于语言生成的离散性，这一目标不可微，通常通过强化学习优化。标准方法\cite{dpo-ziegler2020finetuning,dpo-stiennon2022learning,dpo-bai2022training,dpo-ouyang2022training}构造奖励函数 ${r(x,y)=r_\phi(x,y)-\beta(\log\pi_\theta(y\mid x)-\log\pi_{\mathrm{ref}}(y\mid x))}$，再用 PPO\cite{dpo-schulman2017proximal}最大化它。
+
+\originalsection{4 直接偏好优化}\paperlabel{4}{dpo-sec:DPO}
+
+% SOURCE main.tex L148-L150
+在语言模型微调等大规模问题中应用强化学习算法面临诸多挑战，因此我们的目标是推导一种直接使用偏好优化策略的简单方法。先前 RLHF 方法先学习奖励，再通过强化学习优化；我们的方法选择了一种特定的奖励模型参数化方式，使其最优策略能够以闭式形式提取，无需强化学习训练循环。下面将详细说明，其关键是利用从奖励函数到最优策略的解析映射，把奖励函数上的损失转换为策略上的损失。这种变量替换避免拟合显式、独立的奖励模型，但仍在 Bradley--Terry 等已有的人类偏好模型下进行优化。本质上，策略网络同时代表语言模型和隐式奖励。
+
+
+% SOURCE main.tex L153-L153
+\textbf{DPO 目标的推导。}从先前工作所用的同一强化学习目标，即式~\ref{dpo-eq:RL}，以及一般奖励函数 $r$ 出发。沿用先前研究\cite{dpo-peters2007reinforcement,dpo-peng2019advantage,dpo-korbak2022reinforcement,dpo-go2023aligning}，可以证明，式~\ref{dpo-eq:RL}中带 KL 约束的奖励最大化目标具有如下最优解：
+\begin{equation}\label{dpo-eq:op_policy}
+    \pi_r(y\mid x) = \frac{1}{Z(x)}\pi_{\mathrm{ref}}(y\mid x)\exp\left(\frac{1}{\beta}r(x, y)\right),
+\end{equation}%
+% SOURCE main.tex L157-L157
+其中 $Z(x)=\sum_y\pi_{\mathrm{ref}}(y\mid x)\exp(\frac1\beta r(x,y))$ 为配分函数。完整推导见附录 A.1。即使采用真实奖励函数 $r^*$ 的最大似然估计 $r_\phi$，估计配分函数 $Z(x)$ 仍很昂贵\cite{dpo-korbak2022reinforcement,dpo-go2023aligning}，因而这种表达形式难以在实践中使用。不过，我们可以重新整理式~\ref{dpo-eq:op_policy}，用奖励函数对应的最优策略 $\pi_r$、参考策略 $\pi_{\mathrm{ref}}$ 和未知配分函数 $Z(\cdot)$ 表示奖励函数。具体地，先对式~\ref{dpo-eq:op_policy}两边取对数，再经代数变形，得到：
+\begin{equation}\label{dpo-eq:main_eq}
+    r(x,y) =\beta \log \frac{\pi_r(y\mid x)}{\pi_{\mathrm{ref}}(y\mid x)} + \beta \log Z(x).
+\end{equation}
+% SOURCE main.tex L161-L161
+可以把这种重参数化应用于真实奖励 $r^*$ 及相应最优模型 $\pi^*$。幸运的是，Bradley--Terry 模型只依赖两次续写的奖励差，即 ${p^*(y_1\succ y_2\mid x)=\sigma(r^*(x,y_1)-r^*(x,y_2))}$。把式~\ref{dpo-eq:main_eq}中 $r^*(x,y)$ 的重参数化代入偏好模型式~\ref{dpo-eq:bradley-terry}，配分函数抵消，从而能够只用最优策略 $\pi^*$ 和参考策略 $\pi_{\mathrm{ref}}$ 表示人类偏好概率。因此，Bradley--Terry 模型下的最优 RLHF 策略 $\pi^*$ 满足如下偏好模型：
+\begin{equation}\label{dpo-eq:objective}
+    p^*(y_1\succ y_2 \mid x)=\frac{1}{1 + \exp\left(\beta \log \frac{\pi^*(y_2\mid x)}{\pi_{\mathrm{ref}}(y_2\mid x)} - \beta \log \frac{\pi^*(y_1\mid x)}{\pi_{\mathrm{ref}}(y_1\mid x)}\right)}
+\end{equation}
+% SOURCE main.tex L165-L165
+推导见附录 A.2。虽然式~\ref{dpo-eq:objective}使用 Bradley--Terry 模型，对更一般的 Plackett--Luce 模型\cite{dpo-plackett1975analysis,dpo-luce2012individual}也可类似推导，其表达式见附录 A.3。
+
+% SOURCE main.tex L167-L168
+现在，我们已经用最优策略而非奖励模型表达了人类偏好数据的概率，便可以为参数化策略 $\pi_\theta$ 构造最大似然目标。与奖励建模的方法，即式~\ref{dpo-eq:reward_model}类似，策略目标变为：
+\begin{equation}\label{dpo-eq:optimum_model}
+    \mathcal{L}_\text{DPO}(\pi_{\theta}; \pi_{\mathrm{ref}}) = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}}\left[\log \sigma \left(\beta \log \frac{\pi_{\theta}(y_w\mid x)}{\pi_{\mathrm{ref}}(y_w\mid x)} - \beta \log \frac{\pi_{\theta}(y_l\mid x)}{\pi_{\mathrm{ref}}(y_l\mid x)}\right)\right].
+\end{equation}
+% SOURCE main.tex L172-L172
+这样，我们以另一种参数化方式拟合隐式奖励，其最优策略就是 $\pi_\theta$。此外，因为该过程等价于拟合重参数化的 Bradley--Terry 模型，它具有某些理论性质，例如在偏好数据分布满足适当假设时的一致性\cite{dpo-bong2022generalized}。第 5 节进一步讨论 DPO 的理论性质及其与其他工作的关系。
+
+% SOURCE main.tex L174-L174
+\textbf{DPO 更新做了什么？}为理解 DPO 的作用机制，分析损失函数 $\mathcal L_\text{DPO}$ 的梯度很有帮助。它对参数 $\theta$ 的梯度可写为：
+\phantomsection\label{dpo-eq:gradient}
+\begin{multline*}
+    \nabla_\theta \mathcal{L}_\text{DPO}(\pi_\theta;\pi_{\mathrm{ref}}) = \\ -\beta\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \bigg[\underbrace{\sigma(\hat{r}_\theta(x, y_l) - \hat{r}_\theta (x, y_w))}_\text{奖励估计错误时权重更高}\bigg[\underbrace{\nabla_\theta\log \pi(y_w \mid x)}_\text{提高 $y_w$ 的似然} - \underbrace{\nabla_\theta\log\pi(y_l \mid x)}_\text{降低 $y_l$ 的似然}\bigg]\bigg],
+\end{multline*}
+% SOURCE main.tex L178-L178
+其中 $\hat r_\theta(x,y)=\beta\log\frac{\pi_\theta(y\mid x)}{\pi_{\mathrm{ref}}(y\mid x)}$ 是语言模型 $\pi_\theta$ 和参考模型 $\pi_{\mathrm{ref}}$ 隐式定义的奖励（第 5 节详述）。直观上，损失 $\mathcal L_\text{DPO}$ 的梯度提高偏好续写 $y_w$ 的似然，并降低非偏好续写 $y_l$ 的似然。样本的权重取决于隐式奖励模型 $\hat r_\theta$ 将非偏好续写评分抬高了多少，并按 $\beta$ 缩放；也就是隐式奖励模型对续写排序的错误程度，同时计入 KL 约束的强度。实验表明这种加权很重要：不带加权系数的朴素版本可能导致语言模型退化（附录表~\ref{dpo-tab:unlikelihood_generations}）。
+
+% SOURCE main.tex L180-L182
+\textbf{DPO 流程。}一般流程如下：1）对每个提示 $x$，采样续写 $y_1,y_2\sim\pi_{\mathrm{ref}}(\cdot\mid x)$，用人类偏好标注，构建离线偏好数据集 $\mathcal D=\{x^{(i)},y_w^{(i)},y_l)^{(i)}\}_{i=1}^N$；2）对给定的 $\pi_{\mathrm{ref}}$、$\mathcal D$ 和所需 $\beta$，优化语言模型 $\pi_\theta$，以最小化 $\mathcal L_\text{DPO}$。\footnote{译注：上述数据集写法中的 $y_l)$ 是原文的括号排印错误；原意为 $y_l^{(i)}$，这里保留原式。}
+实践中，我们希望复用公开偏好数据集，而非重新生成样本并收集人类偏好。由于偏好数据集从 $\pi^{\mathrm{SFT}}$ 采样，只要该模型可用，就初始化 $\pi_{\mathrm{ref}}=\pi^{\mathrm{SFT}}$。若 $\pi^{\mathrm{SFT}}$ 不可用，则通过最大化偏好续写 $(x,y_w)$ 的似然初始化 $\pi_{\mathrm{ref}}$，即 ${\pi_{\mathrm{ref}}=\operatorname*{arg\,max}_\pi\mathbb E_{x,y_w\sim\mathcal D}[\log\pi(y_w\mid x)]}$。这有助于减轻不可用的真实参考分布与 DPO 所用 $\pi_{\mathrm{ref}}$ 之间的分布偏移。实现与超参数的更多细节见附录 B。
+
+
+
+\originalsection{5 DPO 的理论分析}
+% SOURCE main.tex L187-L187
+本节进一步解释 DPO，给出理论依据，并把其优点与 RLHF 中所用演员—评论家算法（例如 PPO\cite{dpo-schulman2017proximal}）的问题联系起来。
+
+\label{dpo-sec:theory}
+
+% SOURCE main.tex L191-L191
+\subsection*{5.1 语言模型其实也是奖励模型}
+DPO 仅用一个最大似然目标学习策略，同时避免拟合显式奖励与运行强化学习。注意，式~\ref{dpo-eq:main_eq}的优化目标等价于奖励参数化为 $r^*(x,y)=\beta\log\frac{\pi^*_\theta(y\mid x)}{\pi_{\mathrm{ref}}(y\mid x)}$ 的 Bradley--Terry 模型；优化参数模型 $\pi_\theta$ 等价于在变量替换下进行式~\ref{dpo-eq:reward_model}中的奖励模型优化。本节构建这一重参数化背后的理论，说明它不限制所学奖励模型的类别，并允许精确恢复最优策略。首先定义奖励函数之间的等价关系。\footnote{译注：原文此处指向式（5），即本译文式~\ref{dpo-eq:main_eq}，但直接的优化损失是原文式（7），即本译文式~\ref{dpo-eq:optimum_model}；这里保留原文引用。}
+
+\begin{definition}
+% SOURCE main.tex L194-L194
+两个奖励函数 $r(x,y)$ 与 $r'(x,y)$ 等价，当且仅当存在函数 $f$，使 ${r(x,y)-r'(x,y)=f(x)}$。
+\end{definition}
+% SOURCE main.tex L196-L196
+可以验证，这确实是一个等价关系，它把奖励函数集合划分为等价类。由此可陈述以下两个引理：
+
+% SOURCE main.tex L198-L198
+\begin{lemma}\label{dpo-lemma:same_prefrence}在 Plackett--Luce 偏好框架下，特别是在 Bradley--Terry 框架下，同一等价类中的两个奖励函数诱导相同的偏好分布。
+\end{lemma}
+
+\begin{lemma}\label{dpo-lemma:same_policy}
+% SOURCE main.tex L202-L202
+同一等价类中的两个奖励函数，在受约束强化学习问题下诱导相同的最优策略。
+\end{lemma}
+% SOURCE main.tex L204-L204
+证明较为直接，放在附录 A.5。第一个引理反映了 Plackett--Luce 模型族中已知的欠确定问题\cite{dpo-plackett1975analysis}。由于这种欠确定性，通常必须施加额外的可识别性约束，才能对式~\ref{dpo-eq:reward_model}的最大似然估计作出保证\cite{dpo-bong2022generalized}。第二个引理说明，同一等价类中的所有奖励函数都产生相同的最优策略。因此，就最终目标而言，我们只需从最优等价类中恢复任意一个奖励函数。以下定理在附录 A.6 中证明：
+\begin{theorem}\label{dpo-thm:main}
+% SOURCE main.tex L206-L206
+在温和假设下，对于某个模型 $\pi(y\mid x)$ 和给定参考模型 $\pi_{\mathrm{ref}}(y\mid x)$，所有与 Plackett--Luce 模型（特别是 Bradley--Terry 模型）相容的奖励等价类，都可以用重参数化 ${r(x,y)=\beta\log\frac{\pi(y\mid x)}{\pi_{\mathrm{ref}}(y\mid x)}}$ 表示。
+\end{theorem}
+\begin{proof}[证明概要]
+% SOURCE main.tex L209-L209
+考虑任意奖励函数 $r(x,y)$，它诱导的最优模型 $\pi_r(y\mid x)$ 由式~\ref{dpo-eq:op_policy}给出。我们要说明，$r$ 所属等价类中的某个奖励函数可以用上述重参数化表示。定义投影 $f$ 为：
+\begin{equation}\label{dpo-display-09}
+    f(r; \pi_{\mathrm{ref}}, \beta)(x, y) = r(x, y) - \beta\log\sum_{y}\pi_{\mathrm{ref}}(y\mid x)\exp\left(\frac{1}{\beta}r(x, y)\right)
+\end{equation}
+% SOURCE main.tex L213-L213
+算子 $f$ 仅用 $\pi_r$ 的配分函数的对数归一化奖励函数。由于添加的归一化项只依赖前缀 $x$，$f(r;\pi_{\mathrm{ref}},\beta)(x,y)$ 属于 $r(x,y)$ 的等价类。最后，用式~\ref{dpo-eq:main_eq}的右端替换 $r$（该式对任何奖励函数都成立），得到 $f(r;\pi_{\mathrm{ref}},\beta)(x,y)=\beta\log\frac{\pi_r(y\mid x)}{\pi_{\mathrm{ref}}(y\mid x)}$。因此，投影 $f$ 产生该等价类中具有所需形式的一个成员，\newline 提出的重参数化没有损失奖励模型的一般性。\qedhere
+\end{proof}
+
+
+% SOURCE main.tex L215-L215
+也可以把定理~\ref{dpo-thm:main}理解为：它精确指定了 DPO 重参数化在每个等价类中选取哪一个奖励函数，即满足下式的奖励函数：
+\begin{equation}\label{dpo-eq:lag_p}
+     \sum_{y}\underbrace{\pi_{\mathrm{ref}}(y\mid x)\exp\left(\frac{1}{\beta}r(x, y)\right)}_{=\pi(y\mid x)\text{，使用定理~\ref{dpo-thm:main}的重参数化}} = 1,
+\end{equation}
+% SOURCE main.tex L219-L221
+也就是说，$\pi(y\mid x)$ 是有效的概率分布：概率为正且总和为 1。不过，由式~\ref{dpo-eq:op_policy}可知，式~\ref{dpo-eq:lag_p}就是奖励函数 $r(x,y)$ 诱导的最优策略的配分函数。DPO 的关键洞见是：我们可以对约束不足的 Plackett--Luce 偏好模型族（特别是 Bradley--Terry 模型）施加某些约束，在保持可表示的奖励模型类别不变的同时，使式~\ref{dpo-eq:op_policy}中的最优策略对所有提示 $x$ 都明确地具有解析可处理性。
+
+\subsection*{5.2 演员—评论家算法的不稳定性}
+% SOURCE main.tex L224-L224
+这个框架也可用于诊断 RLHF 中 PPO 等标准演员—评论家算法的不稳定性。沿用 RLHF 流程，我们关注第 3 节的强化学习微调步骤。式~\ref{dpo-eq:RL}中的受约束强化学习问题可与“控制即推断”框架\cite{dpo-levine2018reinforcement}联系起来。假设参数模型为 $\pi_\theta(y\mid x)$，我们最小化 $\mathbb D_\text{KL}[\pi_\theta(y|x)\mid\mid\pi^*(y\mid x)]$，其中 $\pi^*$ 是由奖励函数 $r_\phi(y,x)$ 诱导、式~\ref{dpo-eq:optimum_model}中的最优策略。\footnote{译注：原文引用式（7），即这里的 DPO 损失式~\ref{dpo-eq:optimum_model}；最优策略的显式表达实际在式（4），即式~\ref{dpo-eq:op_policy}。保留原文引用。}经代数变形，得到优化目标：
+\begin{equation}\label{dpo-eq:AC}
+    \max_{\pi_{\theta}}\mathbb{E}_{\pi_{\theta}(y\mid x)}\bigg[\underbrace{r_{\phi}(x, y) -\beta\log\sum_{y}\pi_{\mathrm{ref}}(y\mid x)\exp\left(\frac{1}{\beta}r_{\phi}(x, y)\right)}_{f(r_{\phi}, \pi_{\mathrm{ref}}, \beta)} - \underbrace{\beta\log\frac{\pi_{\theta}(y\mid x)}{\pi_{\mathrm{ref}}(y\mid x)}}_{\text{KL}}\bigg]
+\end{equation}
+% SOURCE main.tex L228-L229
+这是先前工作\cite{dpo-ziegler2020finetuning,dpo-stiennon2022learning,dpo-bai2022training,dpo-ouyang2022training}所优化的同一目标，不过采用了奖励 $r_\phi$ 所属等价类中与 DPO 等价的奖励。在这个场景中，可以将 $f(r_\phi,\pi_{\mathrm{ref}},\beta)$ 的归一化项理解为参考策略 $\pi_{\mathrm{ref}}$ 的软价值函数。尽管该项不影响最优解，缺少它时目标的策略梯度可能具有较高方差，使学习不稳定。可以使用所学价值函数来处理归一化项，但价值函数也可能难以优化。另一种方法是先前工作使用人类续写作为基线归一化奖励；本质上，这是归一化项的单样本蒙特卡洛估计。DPO 重参数化则产生无需任何基线的奖励函数。
+
+
+\originalsection{6 实验}
+% SOURCE main.tex L233-L233
+本节通过实验评估 DPO 直接从偏好训练策略的能力。首先，在可控的文本生成场景中，我们考察：与 PPO 等常见偏好学习算法相比，DPO 在最大化奖励和最小化相对参考策略的 KL 散度之间，能多高效地进行权衡？接着评估 DPO 在更大模型、更困难的 RLHF 任务（包括摘要和对话）上的表现。我们发现，几乎无需调整超参数，DPO 的表现通常就能达到或超过使用 PPO 的 RLHF，以及根据所学奖励函数从 $N$ 条采样轨迹中返回最佳轨迹等强基线。呈现结果之前，先介绍实验设置；更多细节见附录 C。
+
+
+% SOURCE main.tex L236-L237
+\textbf{任务。}实验考察三种开放式文本生成任务。所有实验中，算法从偏好数据集 $\mathcal D=\bigl\{x^{(i)},y_w^{(i)},y_l^{(i)}\bigr\}_{i=1}^N$ 学习策略。在\textbf{受控情感生成}中，$x$ 是 IMDb 数据集\cite{dpo-maas-EtAl:2011:ACL-HLT2011}中电影评论的前缀，策略必须生成具有正面情感的 $y$。为了进行受控评估，本实验利用预训练情感分类器，对生成结果\emph{产生}偏好对，使 $p(\text{positive}\mid x,y_w)>p(\text{positive}\mid x,y_l)$。监督微调在 IMDb 训练划分的评论上微调 GPT-2-large，直到收敛（更多细节见附录 C.1）。在\textbf{摘要}中，$x$ 为 Reddit 论坛帖子；策略须生成概括主要观点的摘要 $y$。沿用先前工作，我们采用 Reddit TL;DR 摘要数据集\cite{dpo-volske-etal-2017-tl}和 Stiennon 等人\cite{dpo-stiennon2022learning}收集的人类偏好。使用一个在人类撰写的论坛帖子摘要上微调的 SFT 模型\footnote{\url{https://huggingface.co/CarperAI/openai_summarize_tldr_sft}}，并采用 TRLX\cite{dpo-leandro_von_werra_2023_7790115}框架进行 RLHF。Stiennon 等人的偏好数据是从另一个不同但训练方式相近的 SFT 模型的样本中收集的。最后，在\textbf{单轮对话}中，$x$ 是人类查询，可以是从天体物理问题到感情建议请求的任何内容。策略须针对用户查询生成有吸引力且有帮助的回复 $y$。我们使用 Anthropic Helpful and Harmless 对话数据集\cite{dpo-bai2022training}，其中包含 170k 段人类与自动助手的对话。每段记录以大型但具体身份未知的语言模型生成的一对回复，以及标明人类偏好回复的标签结束。这里没有可用的预训练 SFT 模型，因此只在偏好续写上微调现成语言模型，形成 SFT 模型。
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.50\textwidth]{../papers/translations/dpo/figures/frontier.pdf}
+    \includegraphics[width=0.49\textwidth]{../papers/translations/dpo/figures/tldr_winrate_vs_temp.pdf}
+% SOURCE main.tex L243-L243
+    \caption{\textbf{左：}期望奖励与相对参考策略的 KL 散度之间的前沿。DPO 在所有 KL 值下提供最高期望奖励，表明其优化质量。\textbf{右：}TL;DR 摘要相对人类撰写摘要的胜率，由 GPT-4 评价。DPO 超过 PPO 在摘要任务上的最佳表现，而且对采样温度变化更加稳健。原作图 2 的两个面板，作者绘制的矢量图按 CC BY 4.0 转载。左图题名为“IMDb 情感生成”，横轴 KL 散度、纵轴奖励；图例 Ours 为“本文”，Our impl. 为“本文实现”，Unlikelihood 为“非似然训练”，Preferred-FT 为“偏好续写微调”。右图题名为“TL;DR 摘要相对参考答案的胜率”，横轴采样温度、纵轴相对真实摘要的胜率，Best of 128 为“128 选优”。}
+    \label{dpo-fig:frontier-tldr-main}
+\end{figure}
+
+
+% SOURCE main.tex L249-L249
+\textbf{评价。}实验采用两种评价方式。为了分析各算法优化受约束奖励最大化目标的效率，在受控情感生成场景中，我们根据算法达到的奖励与相对参考策略的 KL 散度前沿进行评价；由于可访问真实奖励函数（情感分类器），该前沿可以计算。但在真实世界中，真实奖励函数未知；因此在摘要和单轮对话任务中，分别让 GPT-4 代理人类对摘要质量和回复有用性的评价，用算法相对基线策略的\emph{胜率}进行评价。摘要任务以测试集参考摘要为基线；对话任务以测试数据集中的偏好回复为基线。已有研究指出，语言模型作为自动评价者可能优于已有指标\cite{dpo-Chen2023ExploringTU}；我们仍在第 6.4 节开展人工研究，以验证使用 GPT-4 评价的合理性。结果表明 GPT-4 判断与人类高度相关，人类与 GPT-4 的一致性通常与人类标注者彼此之间的一致性相当或更高。
+
+
+
+% SOURCE main.tex L253-L253
+\textbf{方法。}除 DPO 外，我们还评价多种已有的基于人类偏好训练语言模型的方法。最简单的是摘要任务中的\textbf{GPT-J}\cite{dpo-gpt-j}零样本提示，以及对话任务中的\textbf{Pythia-2.8B}\cite{dpo-biderman2023pythia}双样本提示。此外，评价\textbf{SFT} 模型及\textbf{Preferred-FT}：后者在来自 SFT 模型（受控情感和摘要）或通用语言模型（单轮对话）的被选中续写 $y_w$ 上进行监督微调。另一种伪监督方法是\textbf{Unlikelihood}\cite{dpo-welleck2019neural}（非似然训练），直接优化策略以最大化 $y_w$ 的概率，并\emph{最小化} $y_l$ 的概率；其“非似然”项可以使用系数 $\alpha\in[0,1]$。我们也考察采用从偏好数据学习的奖励函数的\textbf{PPO}\cite{dpo-schulman2017proximal}，以及\textbf{PPO-GT}，后者是能够使用受控情感任务中真实奖励函数的理想基线。情感实验采用两种 PPO-GT 实现：一个现成版本\cite{dpo-leandro_von_werra_2023_7790115}，以及一个修改版本，后者归一化奖励并进一步调整超参数以改善表现（使用所学奖励运行“普通”PPO 时，也采用这些修改）。最后考虑\textbf{Best of $N$}（$N$ 选优）基线：从 SFT 模型（对话任务中为 Preferred-FT）采样 $N$ 个回复，再根据从偏好数据集学习的奖励函数返回最高评分的回复。这一高性能方法把奖励模型质量与 PPO 优化分开，但即使 $N$ 不大，计算上也不切实际，因为测试时每个查询都必须采样 $N$ 次续写。
+
+\subsection*{6.1 DPO 优化 RLHF 目标的效果}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.50\textwidth]{../papers/translations/dpo/figures/dialogue_winrate_vs_temp.pdf}
+    \includegraphics[width=0.49\textwidth]{../papers/translations/dpo/figures/dialogue_winrate_vs_steps.pdf}
+% SOURCE main.tex L261-L261
+    \caption{\textbf{左：}GPT-4 对 Anthropic-HH 单步对话计算的胜率；DPO 是唯一优于 Anthropic-HH 测试集中被选中摘要的方法。\textbf{右：}训练过程中不同采样温度下的胜率。对于不同采样温度，DPO 相对数据集标签的改善在训练过程中较为稳定。原作图 3 的两个面板，作者矢量图按 CC BY 4.0 转载；左图题名为“Anthropic-HH 对话相对被选中回复的胜率”，右图题名为“对话胜率随训练的变化”。左图横轴采样温度，右图横轴微调步数，纵轴均为相对被选中回复的胜率。图例 Preferred-FT 为“偏好续写微调”，Best of 128 为“128 选优”；右图 temp 指采样温度。译注：左图注原文写“chosen summaries”（被选中摘要），本实验实际为对话回复，保留原文措辞并说明。}
+    \label{dpo-fig:dialogue-main}
+\end{figure}
+
+% SOURCE main.tex L266-L266
+典型 RLHF 算法采用的带 KL 约束的奖励最大化目标，在利用奖励的同时限制策略过度偏离参考策略。因此比较算法时，必须同时考虑达到的奖励和 KL 差异；奖励略高而 KL 高得多，未必是期望的结果。图~\ref{dpo-fig:frontier-tldr-main}展示了情感任务中各算法的奖励—KL 前沿。每种算法运行多次训练，每次用不同超参数控制策略的保守程度（PPO 的目标 KL 为 $\{3,6,9,12\}$；$\beta\in\{0.05,0.1,1,5\}$；Unlikelihood 的 $\alpha\in\{0.05,0.1,0.5,1\}$；Preferred-FT 使用不同随机种子）。此参数扫描共包含 22 次运行。直到收敛为止，每训练 100 步就在一组测试提示上评价策略，计算真实奖励函数下的平均奖励，以及相对参考策略的平均序列级 KL\footnote{即各时间步 KL 散度之和。}，$\text{KL}(\pi\mid\mid\pi_{\mathrm{ref}})$。DPO 给出了明显更高效的前沿：在保持低 KL 的同时取得最高奖励。这一结果值得关注，原因有二。首先，DPO 和 PPO 优化相同目标，但 DPO 明显更加高效，其奖励与 KL 的权衡严格优于 PPO。其次，\emph{即使 PPO 可以访问真实奖励}（PPO-GT），DPO 仍取得更好的前沿。
+
+
+\subsection*{6.2 扩展到真实偏好数据集}
+\paperlabel{6.2}{dpo-sec:dpo-real-datasets}
+% SOURCE main.tex L271-L272
+接着，我们评价 DPO 在摘要和单轮对话上的微调表现。摘要任务中，ROUGE 等自动指标与人类偏好可能相关性较低\cite{dpo-stiennon2022learning}；先前研究发现，利用人类偏好和 PPO 微调语言模型能得到更有效的摘要。我们在 TL;DR 摘要数据集测试划分上采样续写，并计算相对测试集参考续写的平均胜率来评价不同方法。各方法的续写采样温度从 0.0 到 1.0，胜率见图~\ref{dpo-fig:frontier-tldr-main}右。DPO、PPO 与 Preferred-FT 均微调同一个 GPT-J SFT 模型\footnote{\url{https://huggingface.co/CarperAI/openai_summarize_tldr_sft}}。DPO 在温度 0.0 时胜率约为 61\%，高于 PPO 在其最佳采样温度 0.0 时约 57\% 的表现。DPO 的最高胜率也高于 $N$ 选优基线。我们没有实质性调整 DPO 的 $\beta$ 超参数，因此这些结果可能低估 DPO 的潜力。此外，DPO 对采样温度的稳健性远优于 PPO；PPO 在高温度下可能退化到基础 GPT-J 模型的表现。Preferred-FT 相对 SFT 没有显著改善。第 6.4 节还通过人工评价直接比较 DPO 与 PPO：温度 0.25 的 DPO 样本有 58\% 的时候优于温度 0 的 PPO 样本。
+
+% SOURCE main.tex L274-L274
+单轮对话任务中，我们在 Anthropic HH 数据集\cite{dpo-bai2022training}测试划分中只含一次人类—助手交互的子集上评价不同方法。GPT-4 以测试集中的偏好续写为参考，计算各方法胜率。由于该任务没有标准 SFT 模型，我们从预训练 Pythia-2.8B 出发，先使用 Preferred-FT 在被选中的续写上训练参考模型，使这些续写落在模型分布内，再用 DPO 训练。还与 128 个 Preferred-FT 续写中的最佳者（该任务中 $N$ 选优基线在 128 次续写处趋于饱和，见附录图~\ref{dpo-fig:best-of-n}），以及采用双样本提示的基础 Pythia-2.8B 比较；在各方法各自表现最好的温度下，DPO 达到或超过它们。我们也评价了来自知名来源\footnote{\url{https://github.com/CarperAI/trlx/tree/main/examples/hh}}、在 Anthropic HH 数据集上用 PPO 训练的 RLHF 模型\footnote{\url{https://huggingface.co/reciprocate/ppo_hh_pythia-6B}}，但未能找到使其优于基础 Pythia-2.8B 的提示或采样温度。根据 TL;DR 结果，以及两种方法优化同一奖励函数这一事实，我们把 128 选优看作 PPO 水平表现的粗略代理。总体而言，DPO 是唯一能超过 Anthropic HH 数据集偏好续写的计算高效方法，且表现达到或超过计算成本高昂的 128 选优基线。最后，图~\ref{dpo-fig:dialogue-main}表明 DPO 较快收敛到最佳表现。
+
+\subsection*{6.3 对新输入分布的泛化}
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}
+\begin{longtable}{ccc}
+\caption{对于分布外 CNN/DailyMail 输入文章，GPT-4 判断的相对真实摘要的胜率。}\label{dpo-tab:ood}\\
+
+        \toprule
+% SOURCE main.tex L283-L283
+        & \multicolumn{2}{c}{\textbf{相对真实摘要的胜率}} \\
+        \cmidrule(lr){2-3}
+% SOURCE main.tex L285-L285
+        \textbf{算法} & 温度 $0$ & 温度 $0.25$ \\
+        \midrule
+        DPO & 0.36 & 0.31 \\
+        PPO & 0.26 & 0.23 \\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+% SOURCE main.tex L296-L296
+为进一步比较分布偏移下 PPO 和 DPO 的表现，我们将 Reddit TL;DR 摘要实验中的两种策略用于另一种分布：CNN/DailyMail 数据集\cite{dpo-nallapati-etal-2016-abstractive}测试划分中的新闻文章；采样温度采用 TL;DR 中表现最佳的 0 和 0.25。结果见表~\ref{dpo-tab:ood}。仍用 Reddit TL;DR 中的 GPT-4（C）提示，计算相对数据集真实摘要的 GPT-4 胜率，只把“论坛帖子”替换为“新闻文章”。在新分布上，DPO 仍以明显优势超过 PPO 策略。虽然 DPO 未使用 PPO 所用的额外无标注 Reddit TL;DR 提示，这一实验仍初步表明：DPO 策略能够以与 PPO 策略相近的程度泛化。
+
+\subsection*{6.4 用人工判断验证 GPT-4}
+\paperlabel{6.4}{dpo-sec:human-judgments}
+% SOURCE main.tex L300-L300
+我们基于 TL;DR 摘要实验结果，使用两种不同 GPT-4 提示进行人工研究，验证其判断的可靠性。\textbf{GPT-4（S）}（简单提示）只问哪一个摘要更好地概括帖子中的重要信息。\textbf{GPT-4（C）}（简洁提示）还问哪一个摘要更简洁；之所以考察这一提示，是因为使用 GPT-4（S）时，GPT-4 比人类更偏好较长、重复较多的摘要。完整提示见附录 C.2。为覆盖不同样本质量，我们选取表现最高（DPO，温度 0.25）、最低（PPO，温度 1.0）和中间（SFT，温度 0.25）的三种方法进行比较；三者都与贪心采样的 PPO（其表现最好的温度）比较。
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}
+\begin{longtable}{lccc}
+\caption{比较 TL;DR 摘要样本中人类与 GPT-4 的胜率，以及逐次判断的一致程度。\textbf{人类与 GPT-4 的一致程度，约等于人类彼此的一致程度。}每项实验比较所列方法的摘要与温度 0 的 PPO 摘要。译注：原表行标题为“N respondents”（受访者数），其数值与附录 D.3 的判断数对应，而非独立受访者人数；本译表标为“判断数”，并在此说明这一表头更正。}\label{dpo-tab:human_results}\\
+
+    \toprule
+        & \textbf{DPO} & \textbf{SFT} & \textbf{PPO-1} \\
+        \cmidrule(lr){2-4}
+% SOURCE main.tex L308-L308
+        判断数 & 272 & 122 & 199 \\
+        \midrule
+% SOURCE main.tex L310-L316
+        GPT-4（S）胜率（\%） & 47 & 27 & 13 \\
+        GPT-4（C）胜率（\%） & 54 & 32 & 12 \\
+        人类胜率（\%） & 58 & 43 & 17 \\
+        \midrule
+        GPT-4（S）与人类一致（\%） & 70 & 77 & 86 \\
+        GPT-4（C）与人类一致（\%） & 67 & 79 & 85 \\
+        人类之间一致（\%） & 65 & - & 87 \\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+对于两种提示，GPT-4 与人类的一致频率通常与人类彼此一致的频率相当，说明 GPT-4 是合理的人类评价代理。由于人类评价者数量有限，只有 DPO 和 PPO-1 的比较收集了多个人类判断。总体上，GPT-4（C）给出的胜率更能代表人类，因此第 6.2 节的主要结果采用该提示。人工研究的更多细节，包括提供给评价者的网页界面及志愿者名单，见附录 D.3。
+
+
+
+
+
+
+
+
+
+
+
+
+
+\originalsection{7 讨论}
+% SOURCE main.tex L338-L338
+从偏好学习是训练能力强、对齐良好的语言模型的一种强大且可扩展的框架。我们提出 DPO，一种无需强化学习、从偏好训练语言模型的简单训练范式。DPO 没有为了使用现成强化学习算法而把偏好学习硬套进标准强化学习场景，而是识别出语言模型策略和奖励函数之间的映射，使模型能通过简单的交叉熵损失\emph{直接}满足人类偏好，无需强化学习且不损失一般性。几乎无需超参数调整，DPO 的表现就能达到或超过包括 PPO 在内的现有 RLHF 算法；因此它显著降低了基于人类偏好训练更多语言模型的门槛。
+
+% SOURCE main.tex L340-L340
+\textbf{局限与未来工作。}这些结果提出了若干重要问题。与从显式奖励函数学习相比，DPO 策略如何泛化到分布外？初步结果表明，其泛化表现可能与基于 PPO 的模型相近，但仍需更全面的研究。例如，利用 DPO 策略自标注进行训练，能否同样有效地利用无标注提示？另一方面，奖励过度优化在直接偏好优化中如何表现？图~\ref{dpo-fig:dialogue-main}右侧性能略有下降，是否就是它的体现？此外，本研究最高评价了 6B 参数模型，将 DPO 扩展到参数量大数个数量级的先进模型，是一个令人期待的方向。在评价方面，GPT-4 所计算的胜率受到提示影响，未来可研究如何从自动系统获得高质量判断。最后，DPO 在基于人类偏好训练语言模型之外还有许多可能用途，包括训练其他模态的生成模型。
+
+\subsection*{致谢}
+% SOURCE main.tex L343-L343
+EM 感谢 Knight-Hennessy 研究生奖学金的资助。CF 和 CM 是 CIFAR Fellow。本研究获得斯坦福学习加速器（SAL）与斯坦福以人为本人工智能研究院（HAI）“面向未来学习的生成式 AI”种子资助计划的部分支持。斯坦福基础模型研究中心（CRFM）提供了本研究实验所用的部分计算资源。本研究还获得美国海军研究办公室（ONR）项目 N00014-20-1-2675 的部分支持。
+
+
+
+
+
+
+
+
+
+\phantomsection\label{dpo-bibliography}\begin{thebibliography}{51}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem{dpo-bai2022training}
+Y.~Bai, A.~Jones, K.~Ndousse, A.~Askell, A.~Chen, N.~DasSarma, D.~Drain,
+  S.~Fort, D.~Ganguli, T.~Henighan, N.~Joseph, S.~Kadavath, J.~Kernion,
+  T.~Conerly, S.~El-Showk, N.~Elhage, Z.~Hatfield-Dodds, D.~Hernandez, T.~Hume,
+  S.~Johnston, S.~Kravec, L.~Lovitt, N.~Nanda, C.~Olsson, D.~Amodei, T.~Brown,
+  J.~Clark, S.~McCandlish, C.~Olah, B.~Mann, and J.~Kaplan.
+\newblock Training a helpful and harmless assistant with reinforcement learning
+  from human feedback, 2022{\natexlab{a}}.
+
+\bibitem{dpo-bai2022constitutional}
+Y.~Bai, S.~Kadavath, S.~Kundu, A.~Askell, J.~Kernion, A.~Jones, A.~Chen,
+  A.~Goldie, A.~Mirhoseini, C.~McKinnon, C.~Chen, C.~Olsson, C.~Olah,
+  D.~Hernandez, D.~Drain, D.~Ganguli, D.~Li, E.~Tran-Johnson, E.~Perez,
+  J.~Kerr, J.~Mueller, J.~Ladish, J.~Landau, K.~Ndousse, K.~Lukosuite,
+  L.~Lovitt, M.~Sellitto, N.~Elhage, N.~Schiefer, N.~Mercado, N.~DasSarma,
+  R.~Lasenby, R.~Larson, S.~Ringer, S.~Johnston, S.~Kravec, S.~E. Showk,
+  S.~Fort, T.~Lanham, T.~Telleen-Lawton, T.~Conerly, T.~Henighan, T.~Hume,
+  S.~R. Bowman, Z.~Hatfield-Dodds, B.~Mann, D.~Amodei, N.~Joseph,
+  S.~McCandlish, T.~Brown, and J.~Kaplan.
+\newblock Constitutional ai: Harmlessness from ai feedback, 2022{\natexlab{b}}.
+
+\bibitem{dpo-biderman2023pythia}
+S.~Biderman, H.~Schoelkopf, Q.~Anthony, H.~Bradley, K.~O'Brien, E.~Hallahan,
+  M.~A. Khan, S.~Purohit, U.~S. Prashanth, E.~Raff, A.~Skowron, L.~Sutawika,
+  and O.~van~der Wal.
+\newblock Pythia: A suite for analyzing large language models across training
+  and scaling, 2023.
+
+\bibitem{dpo-bong2022generalized}
+H.~Bong and A.~Rinaldo.
+\newblock Generalized results for the existence and consistency of the {MLE} in
+  the {B}radley-{T}erry-{L}uce model.
+\newblock \emph{International Conference on Machine Learning}, 2022.
+\newblock arXiv:2110.11487.
+
+\bibitem{dpo-bradley1952rankanalysis}
+R.~A. Bradley and M.~E. Terry.
+\newblock Rank analysis of incomplete block designs: I. the method of paired
+  comparisons.
+\newblock \emph{Biometrika}, 39\penalty0 (3/4):\penalty0 324--345, 1952.
+\newblock \doi{https://doi.org/10.2307/2334029}.
+
+\bibitem{dpo-gpt3}
+T.~Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~D. Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, S.~Agarwal, A.~Herbert-Voss,
+  G.~Krueger, T.~Henighan, R.~Child, A.~Ramesh, D.~Ziegler, J.~Wu, C.~Winter,
+  C.~Hesse, M.~Chen, E.~Sigler, M.~Litwin, S.~Gray, B.~Chess, J.~Clark,
+  C.~Berner, S.~McCandlish, A.~Radford, I.~Sutskever, and D.~Amodei.
+\newblock Language models are few-shot learners.
+\newblock In H.~Larochelle, M.~Ranzato, R.~Hadsell, M.~Balcan, and H.~Lin,
+  editors, \emph{Advances in Neural Information Processing Systems}, volume~33,
+  pages 1877--1901. Curran Associates, Inc., 2020{\natexlab{a}}.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf}.
+
+\bibitem{dpo-brown2020language}
+T.~Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~D. Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock \emph{Advances in neural information processing systems},
+  33:\penalty0 1877--1901, 2020{\natexlab{b}}.
+
+\bibitem{dpo-bubeck2023sparks}
+S.~Bubeck, V.~Chandrasekaran, R.~Eldan, J.~Gehrke, E.~Horvitz, E.~Kamar,
+  P.~Lee, Y.~T. Lee, Y.~Li, S.~Lundberg, H.~Nori, H.~Palangi, M.~T. Ribeiro,
+  and Y.~Zhang.
+\newblock Sparks of artificial general intelligence: Early experiments with
+  {GPT}-4, 2023.
+\newblock arXiv preprint arXiv:2303.12712.
+
+\bibitem{dpo-BusaFekete2014}
+R.~Busa-Fekete, B.~Sz\"{o}r{\'{e}}nyi, P.~Weng, W.~Cheng, and
+  E.~H\"{u}llermeier.
+\newblock Preference-based reinforcement learning: evolutionary direct policy
+  search using a preference-based racing algorithm.
+\newblock \emph{Machine Learning}, 97\penalty0 (3):\penalty0 327--351, July
+  2014.
+\newblock \doi{10.1007/s10994-014-5458-8}.
+\newblock URL \url{https://doi.org/10.1007/s10994-014-5458-8}.
+
+\bibitem{dpo-Chen2023ExploringTU}
+Y.~Chen, R.~Wang, H.~Jiang, S.~Shi, and R.-L. Xu.
+\newblock Exploring the use of large language models for reference-free text
+  quality evaluation: A preliminary empirical study.
+\newblock \emph{ArXiv}, abs/2304.00723, 2023.
+
+\bibitem{dpo-chowdhery2022palm}
+A.~Chowdhery, S.~Narang, J.~Devlin, M.~Bosma, G.~Mishra, A.~Roberts, P.~Barham,
+  H.~W. Chung, C.~Sutton, S.~Gehrmann, et~al.
+\newblock Palm: Scaling language modeling with pathways.
+\newblock \emph{arXiv preprint arXiv:2204.02311}, 2022.
+
+\bibitem{dpo-christiano2017deep}
+P.~F. Christiano, J.~Leike, T.~Brown, M.~Martic, S.~Legg, and D.~Amodei.
+\newblock Deep reinforcement learning from human preferences.
+\newblock In I.~Guyon, U.~V. Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
+  S.~Vishwanathan, and R.~Garnett, editors, \emph{Advances in Neural
+  Information Processing Systems}, volume~30. Curran Associates, Inc., 2017.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf}.
+
+\bibitem{dpo-chung2022scaling}
+H.~W. Chung, L.~Hou, S.~Longpre, B.~Zoph, Y.~Tay, W.~Fedus, Y.~Li, X.~Wang,
+  M.~Dehghani, S.~Brahma, A.~Webson, S.~S. Gu, Z.~Dai, M.~Suzgun, X.~Chen,
+  A.~Chowdhery, A.~Castro-Ros, M.~Pellat, K.~Robinson, D.~Valter, S.~Narang,
+  G.~Mishra, A.~Yu, V.~Zhao, Y.~Huang, A.~Dai, H.~Yu, S.~Petrov, E.~H. Chi,
+  J.~Dean, J.~Devlin, A.~Roberts, D.~Zhou, Q.~V. Le, and J.~Wei.
+\newblock Scaling instruction-finetuned language models, 2022.
+
+\bibitem{dpo-dudik2015contextual}
+M.~Dudík, K.~Hofmann, R.~E. Schapire, A.~Slivkins, and M.~Zoghi.
+\newblock Contextual dueling bandits.
+\newblock In P.~Grünwald, E.~Hazan, and S.~Kale, editors, \emph{Proceedings of
+  The 28th Conference on Learning Theory}, volume~40 of \emph{Proceedings of
+  Machine Learning Research}, pages 563--587, Paris, France, 03--06 Jul 2015.
+  PMLR.
+\newblock URL \url{https://proceedings.mlr.press/v40/Dudik15.html}.
+
+\bibitem{dpo-go2023aligning}
+D.~Go, T.~Korbak, G.~Kruszewski, J.~Rozen, N.~Ryu, and M.~Dymetman.
+\newblock Aligning language models with preferences through f-divergence
+  minimization.
+\newblock In \emph{Proceedings of the 40th International Conference on Machine
+  Learning}, ICML'23. JMLR.org, 2023.
+
+\bibitem{dpo-jain2013learning}
+A.~Jain, B.~Wojcik, T.~Joachims, and A.~Saxena.
+\newblock Learning trajectory preferences for manipulators via iterative
+  improvement.
+\newblock In C.~Burges, L.~Bottou, M.~Welling, Z.~Ghahramani, and
+  K.~Weinberger, editors, \emph{Advances in Neural Information Processing
+  Systems}, volume~26. Curran Associates, Inc., 2013.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2013/file/c058f544c737782deacefa532d9add4c-Paper.pdf}.
+
+\bibitem{dpo-jaques2017sequence}
+N.~Jaques, S.~Gu, D.~Bahdanau, J.~M. Hern{\'a}ndez-Lobato, R.~E. Turner, and
+  D.~Eck.
+\newblock Sequence tutor: Conservative fine-tuning of sequence generation
+  models with kl-control.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  1645--1654. PMLR, 2017.
+
+\bibitem{dpo-jaques2020human}
+N.~Jaques, J.~H. Shen, A.~Ghandeharioun, C.~Ferguson, A.~Lapedriza, N.~Jones,
+  S.~S. Gu, and R.~Picard.
+\newblock Human-centric dialog training via offline reinforcement learning.
+\newblock \emph{arXiv preprint arXiv:2010.05848}, 2020.
+
+\bibitem{dpo-korbak2022reinforcement}
+T.~Korbak, H.~Elsahar, G.~Kruszewski, and M.~Dymetman.
+\newblock On reinforcement learning and distribution matching for fine-tuning
+  language models with no catastrophic forgetting.
+\newblock In S.~Koyejo, S.~Mohamed, A.~Agarwal, D.~Belgrave, K.~Cho, and A.~Oh,
+  editors, \emph{Advances in Neural Information Processing Systems}, volume~35,
+  pages 16203--16220. Curran Associates, Inc., 2022.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2022/file/67496dfa96afddab795530cc7c69b57a-Paper-Conference.pdf}.
+
+\bibitem{dpo-kreutzer-etal-2018-reliability}
+J.~Kreutzer, J.~Uyheng, and S.~Riezler.
+\newblock Reliability and learnability of human bandit feedback for
+  sequence-to-sequence reinforcement learning.
+\newblock In \emph{Proceedings of the 56th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 1777--1788,
+  Melbourne, Australia, July 2018. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/P18-1165}.
+\newblock URL \url{https://aclanthology.org/P18-1165}.
+
+\bibitem{dpo-kupcsik2018learning}
+A.~Kupcsik, D.~Hsu, and W.~S. Lee.
+\newblock \emph{Learning Dynamic Robot-to-Human Object Handover from Human
+  Feedback}, pages 161--176.
+\newblock Springer International Publishing, 01 2018.
+\newblock ISBN 978-3-319-51531-1.
+\newblock \doi{10.1007/978-3-319-51532-8_10}.
+
+\bibitem{dpo-levine2018reinforcement}
+S.~Levine.
+\newblock Reinforcement learning and control as probabilistic inference:
+  Tutorial and review, 2018.
+
+\bibitem{dpo-luce2012individual}
+R.~D. Luce.
+\newblock Individual choice behavior: A theoretical analysis.
+\newblock \emph{Courier Corporation}, 2012.
+
+\bibitem{dpo-maas-EtAl:2011:ACL-HLT2011}
+A.~L. Maas, R.~E. Daly, P.~T. Pham, D.~Huang, A.~Y. Ng, and C.~Potts.
+\newblock Learning word vectors for sentiment analysis.
+\newblock In \emph{Proceedings of the 49th Annual Meeting of the Association
+  for Computational Linguistics: Human Language Technologies}, pages 142--150,
+  Portland, Oregon, USA, June 2011. Association for Computational Linguistics.
+\newblock URL \url{http://www.aclweb.org/anthology/P11-1015}.
+
+\bibitem{dpo-mishra-etal-2022-cross}
+S.~Mishra, D.~Khashabi, C.~Baral, and H.~Hajishirzi.
+\newblock Cross-task generalization via natural language crowdsourcing
+  instructions.
+\newblock In \emph{Proceedings of the 60th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 3470--3487,
+  Dublin, Ireland, May 2022. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2022.acl-long.244}.
+\newblock URL \url{https://aclanthology.org/2022.acl-long.244}.
+
+\bibitem{dpo-nallapati-etal-2016-abstractive}
+R.~Nallapati, B.~Zhou, C.~dos Santos, {\c{C}}.~Gul{\c{c}}ehre, and B.~Xiang.
+\newblock Abstractive text summarization using sequence-to-sequence {RNN}s and
+  beyond.
+\newblock In \emph{Proceedings of the 20th {SIGNLL} Conference on Computational
+  Natural Language Learning}, pages 280--290, Berlin, Germany, Aug. 2016.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/K16-1028}.
+\newblock URL \url{https://aclanthology.org/K16-1028}.
+
+\bibitem{dpo-megatron}
+D.~Narayanan, M.~Shoeybi, J.~Casper, P.~LeGresley, M.~Patwary, V.~Korthikanti,
+  D.~Vainbrand, P.~Kashinkunti, J.~Bernauer, B.~Catanzaro, A.~Phanishayee, and
+  M.~Zaharia.
+\newblock Efficient large-scale language model training on gpu clusters using
+  megatron-lm.
+\newblock In \emph{Proceedings of the International Conference for High
+  Performance Computing, Networking, Storage and Analysis}, SC '21, New York,
+  NY, USA, 2021. Association for Computing Machinery.
+\newblock ISBN 9781450384421.
+\newblock \doi{10.1145/3458817.3476209}.
+\newblock URL \url{https://doi.org/10.1145/3458817.3476209}.
+
+\bibitem{dpo-ouyang2022training}
+L.~Ouyang, J.~Wu, X.~Jiang, D.~Almeida, C.~Wainwright, P.~Mishkin, C.~Zhang,
+  S.~Agarwal, K.~Slama, A.~Ray, J.~Schulman, J.~Hilton, F.~Kelton, L.~Miller,
+  M.~Simens, A.~Askell, P.~Welinder, P.~F. Christiano, J.~Leike, and R.~Lowe.
+\newblock Training language models to follow instructions with human feedback.
+\newblock In S.~Koyejo, S.~Mohamed, A.~Agarwal, D.~Belgrave, K.~Cho, and A.~Oh,
+  editors, \emph{Advances in Neural Information Processing Systems}, volume~35,
+  pages 27730--27744. Curran Associates, Inc., 2022.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf}.
+
+\bibitem{dpo-paulus2018a}
+R.~Paulus, C.~Xiong, and R.~Socher.
+\newblock A deep reinforced model for abstractive summarization.
+\newblock In \emph{International Conference on Learning Representations}, 2018.
+\newblock URL \url{https://openreview.net/forum?id=HkAClQgA-}.
+
+\bibitem{dpo-peng2019advantage}
+X.~B. Peng, A.~Kumar, G.~Zhang, and S.~Levine.
+\newblock Advantage-weighted regression: Simple and scalable off-policy
+  reinforcement learning.
+\newblock \emph{arXiv preprint arXiv:1910.00177}, 2019.
+
+\bibitem{dpo-peters2007reinforcement}
+J.~Peters and S.~Schaal.
+\newblock Reinforcement learning by reward-weighted regression for operational
+  space control.
+\newblock In \emph{Proceedings of the 24th international conference on Machine
+  learning}, pages 745--750, 2007.
+
+\bibitem{dpo-plackett1975analysis}
+R.~L. Plackett.
+\newblock The analysis of permutations.
+\newblock \emph{Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)}, 24\penalty0 (2):\penalty0 193--202, 1975.
+\newblock \doi{https://doi.org/10.2307/2346567}.
+
+\bibitem{dpo-radford2019language}
+A.~Radford, J.~Wu, R.~Child, D.~Luan, D.~Amodei, and I.~Sutskever.
+\newblock Language models are unsupervised multitask learners, 2019.
+\newblock Ms., OpenAI.
+
+\bibitem{dpo-ramamurthy2023is}
+R.~Ramamurthy, P.~Ammanabrolu, K.~Brantley, J.~Hessel, R.~Sifa, C.~Bauckhage,
+  H.~Hajishirzi, and Y.~Choi.
+\newblock Is reinforcement learning (not) for natural language processing:
+  Benchmarks, baselines, and building blocks for natural language policy
+  optimization.
+\newblock In \emph{The Eleventh International Conference on Learning
+  Representations}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=8aHzds2uUyB}.
+
+\bibitem{dpo-Ranzato2015SequenceLT}
+M.~Ranzato, S.~Chopra, M.~Auli, and W.~Zaremba.
+\newblock Sequence level training with recurrent neural networks.
+\newblock \emph{CoRR}, abs/1511.06732, 2015.
+
+\bibitem{dpo-sadigh2017active}
+D.~Sadigh, A.~D. Dragan, S.~Sastry, and S.~A. Seshia.
+\newblock Active preference-based learning of reward functions.
+\newblock In \emph{Robotics: Science and Systems (RSS)}, 2017.
+
+\bibitem{dpo-ruiz2023dueling}
+A.~Saha, A.~Pacchiano, and J.~Lee.
+\newblock Dueling rl: Reinforcement learning with trajectory preferences.
+\newblock In F.~Ruiz, J.~Dy, and J.-W. van~de Meent, editors, \emph{Proceedings
+  of The 26th International Conference on Artificial Intelligence and
+  Statistics}, volume 206 of \emph{Proceedings of Machine Learning Research},
+  pages 6263--6289. PMLR, 25--27 Apr 2023.
+\newblock URL \url{https://proceedings.mlr.press/v206/saha23a.html}.
+
+\bibitem{dpo-sanh2022multitask}
+V.~Sanh, A.~Webson, C.~Raffel, S.~Bach, L.~Sutawika, Z.~Alyafeai, A.~Chaffin,
+  A.~Stiegler, A.~Raja, M.~Dey, M.~S. Bari, C.~Xu, U.~Thakker, S.~S. Sharma,
+  E.~Szczechla, T.~Kim, G.~Chhablani, N.~Nayak, D.~Datta, J.~Chang, M.~T.-J.
+  Jiang, H.~Wang, M.~Manica, S.~Shen, Z.~X. Yong, H.~Pandey, R.~Bawden,
+  T.~Wang, T.~Neeraj, J.~Rozen, A.~Sharma, A.~Santilli, T.~Fevry, J.~A. Fries,
+  R.~Teehan, T.~L. Scao, S.~Biderman, L.~Gao, T.~Wolf, and A.~M. Rush.
+\newblock Multitask prompted training enables zero-shot task generalization.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=9Vrb9D0WI4}.
+
+\bibitem{dpo-schulman2017proximal}
+J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov.
+\newblock Proximal policy optimization algorithms, 2017.
+
+\bibitem{dpo-stiennon2022learning}
+N.~Stiennon, L.~Ouyang, J.~Wu, D.~M. Ziegler, R.~Lowe, C.~Voss, A.~Radford,
+  D.~Amodei, and P.~Christiano.
+\newblock Learning to summarize from human feedback, 2022.
+
+\bibitem{dpo-thoppilan2022lamda}
+R.~Thoppilan, D.~D. Freitas, J.~Hall, N.~Shazeer, A.~Kulshreshtha, H.-T. Cheng,
+  A.~Jin, T.~Bos, L.~Baker, Y.~Du, Y.~Li, H.~Lee, H.~S. Zheng, A.~Ghafouri,
+  M.~Menegali, Y.~Huang, M.~Krikun, D.~Lepikhin, J.~Qin, D.~Chen, Y.~Xu,
+  Z.~Chen, A.~Roberts, M.~Bosma, V.~Zhao, Y.~Zhou, C.-C. Chang, I.~Krivokon,
+  W.~Rusch, M.~Pickett, P.~Srinivasan, L.~Man, K.~Meier-Hellstern, M.~R.
+  Morris, T.~Doshi, R.~D. Santos, T.~Duke, J.~Soraker, B.~Zevenbergen,
+  V.~Prabhakaran, M.~Diaz, B.~Hutchinson, K.~Olson, A.~Molina, E.~Hoffman-John,
+  J.~Lee, L.~Aroyo, R.~Rajakumar, A.~Butryna, M.~Lamm, V.~Kuzmina, J.~Fenton,
+  A.~Cohen, R.~Bernstein, R.~Kurzweil, B.~Aguera-Arcas, C.~Cui, M.~Croak,
+  E.~Chi, and Q.~Le.
+\newblock Lamda: Language models for dialog applications, 2022.
+
+\bibitem{dpo-touvron2023llama}
+H.~Touvron, T.~Lavril, G.~Izacard, X.~Martinet, M.-A. Lachaux, T.~Lacroix,
+  B.~Rozi{\`e}re, N.~Goyal, E.~Hambro, F.~Azhar, et~al.
+\newblock Llama: Open and efficient foundation language models.
+\newblock \emph{arXiv preprint arXiv:2302.13971}, 2023.
+
+\bibitem{dpo-volske-etal-2017-tl}
+M.~V{\"o}lske, M.~Potthast, S.~Syed, and B.~Stein.
+\newblock {TL};{DR}: Mining {R}eddit to learn automatic summarization.
+\newblock In \emph{Proceedings of the Workshop on New Frontiers in
+  Summarization}, pages 59--63, Copenhagen, Denmark, Sept. 2017. Association
+  for Computational Linguistics.
+\newblock \doi{10.18653/v1/W17-4508}.
+\newblock URL \url{https://aclanthology.org/W17-4508}.
+
+\bibitem{dpo-leandro_von_werra_2023_7790115}
+L.~von Werra, J.~Tow, reciprocated, S.~Matiana, A.~Havrilla, cat state,
+  L.~Castricato, Alan, D.~V. Phung, A.~Thakur, A.~Bukhtiyarov, aaronrmm,
+  F.~Milo, Daniel, D.~King, D.~Shin, E.~Kim, J.~Wei, M.~Romero, N.~Pochinkov,
+  O.~Sanseviero, R.~Adithyan, S.~Siu, T.~Simonini, V.~Blagojevic, X.~Song,
+  Z.~Witten, alexandremuzio, and crumb.
+\newblock {CarperAI/trlx: v0.6.0: LLaMa (Alpaca), Benchmark Util, T5 ILQL,
+  Tests}, Mar. 2023.
+\newblock URL \url{https://doi.org/10.5281/zenodo.7790115}.
+
+\bibitem{dpo-gpt-j}
+B.~Wang and A.~Komatsuzaki.
+\newblock {GPT-J-6B: A 6 Billion Parameter Autoregressive Language Model}.
+\newblock \url{https://github.com/kingoflolz/mesh-transformer-jax}, May 2021.
+
+\bibitem{dpo-welleck2019neural}
+S.~Welleck, I.~Kulikov, S.~Roller, E.~Dinan, K.~Cho, and J.~Weston.
+\newblock Neural text generation with unlikelihood training.
+\newblock \emph{arXiv preprint arXiv:1908.04319}, 2019.
+
+\bibitem{dpo-williams1992reinforce}
+R.~J. Williams.
+\newblock Simple statistical gradient-following algorithms for connectionist
+  reinforcement learning.
+\newblock \emph{Mach. Learn.}, 8\penalty0 (3–4):\penalty0 229–256, may
+  1992.
+\newblock ISSN 0885-6125.
+\newblock \doi{10.1007/BF00992696}.
+\newblock URL \url{https://doi.org/10.1007/BF00992696}.
+
+\bibitem{dpo-wu2018learning}
+Y.~Wu and B.~Hu.
+\newblock Learning to extract coherent summary via deep reinforcement learning.
+\newblock In \emph{Proceedings of the Thirty-Second AAAI Conference on
+  Artificial Intelligence and Thirtieth Innovative Applications of Artificial
+  Intelligence Conference and Eighth AAAI Symposium on Educational Advances in
+  Artificial Intelligence}, AAAI'18/IAAI'18/EAAI'18. AAAI Press, 2018.
+\newblock ISBN 978-1-57735-800-8.
+
+\bibitem{dpo-yan2022human}
+X.~Yan, C.~Luo, C.~L.~A. Clarke, N.~Craswell, E.~M. Voorhees, and P.~Castells.
+\newblock Human preferences as dueling bandits.
+\newblock In \emph{Proceedings of the 45th International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, SIGIR '22, page
+  567–577, New York, NY, USA, 2022. Association for Computing Machinery.
+\newblock ISBN 9781450387323.
+\newblock \doi{10.1145/3477495.3531991}.
+\newblock URL \url{https://doi.org/10.1145/3477495.3531991}.
+
+\bibitem{dpo-yue2012karmed}
+Y.~Yue, J.~Broder, R.~Kleinberg, and T.~Joachims.
+\newblock The k-armed dueling bandits problem.
+\newblock \emph{Journal of Computer and System Sciences}, 78\penalty0
+  (5):\penalty0 1538--1556, 2012.
+\newblock ISSN 0022-0000.
+\newblock \doi{https://doi.org/10.1016/j.jcss.2011.12.028}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0022000012000281}.
+\newblock JCSS Special Issue: Cloud Computing 2011.
+
+\bibitem{dpo-ziegler2020finetuning}
+D.~M. Ziegler, N.~Stiennon, J.~Wu, T.~B. Brown, A.~Radford, D.~Amodei,
+  P.~Christiano, and G.~Irving.
+\newblock Fine-tuning language models from human preferences, 2020.
+
+\end{thebibliography}
+\markboth{\thechapter\quad 直接偏好优化：语言模型其实也是奖励模型}{}
+
+
+
+
+\subsection*{作者贡献}
+% SOURCE main.tex L358-L358
+\textbf{所有作者}都为实验设计、分析和迭代、论文写作与编辑，以及项目进度的总体管理作出了重要贡献。
+
+% SOURCE main.tex L360-L360
+\textbf{RR} 在与 \textbf{EM} 的讨论中提出使用自回归奖励模型；推导 DPO 目标；证明算法的理论性质，并撰写相关章节和附录。他还提出实验建议，协助组织实验，并贡献了部分 PPO 和奖励学习基线。
+
+% SOURCE main.tex L362-L363
+\textbf{AS} 发起以加权回归替代 PPO 的讨论；启动项目组织工作；撰写 DPO 与加权回归、非似然训练关系的初步分析；设计并迭代 DPO 及基线实现，开展 DPO 早期探索实验；大量参与实验组织与设计（数据集、基线、评价）；主导受控情感生成和摘要的模型训练与评价；迭代 GPT-4 评价设计（特别是摘要）；大量参与摘要、预备知识与方法、实验部分的写作，并参与其他章节编辑。
+
+% SOURCE main.tex L365-L365
+\textbf{EM} 为学习自回归奖励函数的早期讨论提供意见；撰写第一个 DPO 实现并进行首批 DPO 实验；训练论文实验所用的大规模摘要与对话 DPO 模型；开展最初的 GPT-4 胜率评价并搭建相关基础设施；招募人工研究参与者，实施研究并分析结果；撰写摘要、引言、相关工作、讨论及实验的大部分内容，并协助编辑论文其余部分。
+
+
+% SOURCE main.tex L368-L368
+\textbf{CF、CM 和 SE} 指导研究，提出想法和实验建议，并协助论文写作。
+
+\originalsection{附录 A 数学推导}
+\subsection*{A.1 KL 约束奖励最大化的最优解}
+% SOURCE main.tex L372-L372
+本附录推导式~\ref{dpo-eq:op_policy}。与式~\ref{dpo-eq:RL}类似，我们优化下列目标：
+\begin{equation}\label{dpo-display-12}
+\max_{\pi}  \mathbb{E}_{x\sim \mathcal{D}, y\sim \pi}\bigl[r(x, y)\bigr] - \beta\mathbb{D}_{\textrm{KL}}\bigl[\pi(y|x)||\pi_{\mathrm{ref}}(y|x)\bigr]
+\end{equation}
+% SOURCE main.tex L376-L376
+其中 $r(x,y)$ 为任意奖励函数，$\pi_{\mathrm{ref}}$ 为参考模型，策略类是一般的非参数策略类。于是有：
+\begin{align}\label{dpo-eq:RL_proof}
+\max_{\pi}  \mathbb{E}_{x\sim \mathcal{D}, y\sim \pi}&\bigl[r(x, y)\bigr] - \beta\mathbb{D}_{\textrm{KL}}\bigl[\pi(y|x)\mid\mid\pi_{\mathrm{ref}}(y|x)\bigr] \nonumber\\
+&=\max_{\pi}  \mathbb{E}_{x\sim \mathcal{D}}\mathbb{E}_{y\sim \pi(y|x)}\left[r(x, y) - \beta\log\frac{\pi(y|x)}{\pi_{\mathrm{ref}}(y|x)}\right] \nonumber\\&=
+\min_{\pi}  \mathbb{E}_{x\sim \mathcal{D}}\mathbb{E}_{y\sim \pi(y|x)}\left[\log\frac{\pi(y|x)}{\pi_{\mathrm{ref}}(y|x)} - \frac{1}{\beta}r(x, y)\right] \nonumber\\ &=
+\min_{\pi}  \mathbb{E}_{x\sim \mathcal{D}}\mathbb{E}_{y\sim \pi(y|x)}\left[\log\frac{\pi(y|x)}{\frac{1}{Z(x)}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right)} - \log Z(x)\right]
+\end{align}
+
+% SOURCE main.tex L384-L384
+其中配分函数为：
+\phantomsection\label{dpo-display-14}
+\begin{equation*}
+Z(x) = \sum_{y}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right).
+\end{equation*}
+
+% SOURCE main.tex L389-L389
+注意，配分函数只依赖 $x$ 和参考策略 $\pi_{\mathrm{ref}}$，不依赖策略 $\pi$。现在定义：\footnote{译注：这里以及下面均按原文书写；固定的奖励函数 $r$ 也参与决定 $Z(x)$。上一组等式把最大化目标与经负比例缩放的最小化目标用等号连接；它们具有相同的优化解，并非数值相等的目标函数。}
+\phantomsection\label{dpo-display-15}
+\begin{equation*}
+    \pi^*(y|x) = \frac{1}{Z(x)}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right),
+\end{equation*}
+
+% SOURCE main.tex L394-L394
+这是有效的概率分布，因为对所有 $y$，$\pi^*(y|x)\geq0$，且 $\sum_y\pi^*(y|x)=1$。由于 $Z(x)$ 不依赖 $y$，式~\ref{dpo-eq:RL_proof}中的最终目标可以重新整理为：
+\begin{align}\label{dpo-display-16}
+\min_{\pi}  \mathbb{E}_{x\sim \mathcal{D}}\left[\mathbb{E}_{y\sim \pi(y|x)}\left[\log\frac{\pi(y|x)}{\pi^*(y|x)}\right] - \log Z(x)\right]=\\
+\min_{\pi}\mathbb{E}_{x\sim\mathcal{D}}\left[\mathbb{D}_{\text{KL}}(\pi(y|x)\mid\mid\pi^*(y|x)) - \log Z(x)\right]
+\end{align}
+% SOURCE main.tex L399-L399
+由于 $Z(x)$ 不依赖 $\pi$，最小值由最小化第一个 KL 项的策略取得。吉布斯不等式告诉我们，KL 散度的最小值为 0，当且仅当两个分布相同。因此最优解为：
+\begin{equation}\label{dpo-display-17}
+    \pi(y|x)= \pi^*(y|x) = \frac{1}{Z(x)}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right)
+\end{equation}
+% SOURCE main.tex L403-L403
+对所有 $x\in\mathcal D$ 都成立。推导完成。
+
+\label{dpo-app:derivation1}
+
+
+
+\subsection*{A.2 Bradley--Terry 模型下的 DPO 目标}
+\paperlabel{A.2}{dpo-app:derivation2}
+% SOURCE main.tex L411-L411
+Bradley--Terry 偏好模型下的 DPO 目标可以直接推导，因为：
+\begin{equation}\label{dpo-eq:BT_restated}
+    p^*(y_1\succ y_2|x)=\frac{\exp\left(r^*(x, y_1)\right)}{\exp\left(r^*(x, y_1)\right) + \exp\left(r^*(x, y_2)\right)}
+\end{equation}
+
+% SOURCE main.tex L416-L416
+第 4 节已经说明，不可访问的真实奖励可用其对应的最优策略表示：
+\begin{equation}\label{dpo-eq:main_eq_restated}
+    r^*(x,y) =\beta \log \frac{\pi^*(y|x)}{\pi_{\mathrm{ref}}(y|x)} + \beta \log Z(x)
+\end{equation}
+
+% SOURCE main.tex L421-L421
+将式~\ref{dpo-eq:main_eq_restated}代入式~\ref{dpo-eq:BT_restated}，得到：
+\phantomsection\label{dpo-display-20}
+\begin{align*}
+    p^*(y_1\succ y_2|x)&=\frac{\exp\left(\beta \log \frac{\pi^*(y_1|x)}{\pi_{\mathrm{ref}}(y_1|x)} + \beta \log Z(x)\right)}{\exp\left(\beta \log \frac{\pi^*(y_1|x)}{\pi_{\mathrm{ref}}(y_1|x)} + \beta \log Z(x)\right) + \exp\left(\beta \log \frac{\pi^*(y_2|x)}{\pi_{\mathrm{ref}}(y_2|x)} + \beta \log Z(x)\right)}\\ &=
+    \frac{1}{1+\exp\left(\beta \log \frac{\pi^*(y_2|x)}{\pi_{\mathrm{ref}}(y_2|x)}-\beta \log \frac{\pi^*(y_1|x)}{\pi_{\mathrm{ref}}(y_1|x)}\right)} \\&= \sigma\left(\beta \log \frac{\pi^*(y_1|x)}{\pi_{\mathrm{ref}}(y_1|x)} - \beta \log \frac{\pi^*(y_2|x)}{\pi_{\mathrm{ref}}(y_2|x)}\right).
+\end{align*}
+
+% SOURCE main.tex L427-L427
+最后一行是式~\ref{dpo-eq:optimum_model}中的逐样本损失。\footnote{译注：按原文保留此句；严格说最后一行是偏好概率，取负对数后才是逐样本 DPO 损失。}
+
+
+\subsection*{A.3 Plackett--Luce 模型下的 DPO 目标}
+\paperlabel{A.3}{dpo-app:plackett_luce_models}
+% SOURCE main.tex L432-L432
+Plackett--Luce 模型\cite{dpo-plackett1975analysis,dpo-luce2012individual}把 Bradley--Terry 模型从成对比较推广到排序。与 Bradley--Terry 模型类似，它规定：当面对一组可能选择时，人们偏好某个选择的概率与该选择的某个潜在奖励函数的值成比例。\footnote{译注：此句按原文翻译；下式实际与奖励的指数 $\exp(r^*)$ 成比例，而非直接与 $r^*$ 成比例。}在本文场景中，面对提示 $x$ 和 $K$ 个回答 $y_1,\ldots,y_K$，用户输出置换 $\tau:[K]\to[K]$，表示对回答的排序。Plackett--Luce 模型规定：
+\begin{equation}\label{dpo-eq:pl-model}
+    p^*(\tau| y_1,\ldots, y_K, x)= \prod_{k=1}^{K}\frac{\exp(r^*(x, y_{\tau(k)}))}{\sum_{j=k}^{K}\exp(r^*(x, y_{\tau(j)}))}
+\end{equation}
+
+% SOURCE main.tex L437-L437
+当 $K=2$ 时，式~\ref{dpo-eq:pl-model}退化为 Bradley--Terry 模型。对于一般的 Plackett--Luce 模型，仍可以利用式~\ref{dpo-eq:main_eq}，代入由最优策略参数化的奖励函数。与附录 A.2 类似，归一化常数 $Z(x)$ 抵消，留下：
+\begin{equation}\label{dpo-display-22}
+    p^*(\tau| y_1,\ldots, y_K, x)= \prod_{k=1}^{K}\frac{\exp\left(\beta \log \frac{\pi^*(y_{\tau(k)}|x)}{\pi_{\mathrm{ref}}(y_{\tau(k)}|x)}\right)}{\sum_{j=k}^{K}\exp\left(\beta \log \frac{\pi^*(y_{\tau(j)}|x)}{\pi_{\mathrm{ref}}(y_{\tau(j)}|x)}\right)}
+\end{equation}
+
+% SOURCE main.tex L442-L442
+与第 4 节的方法类似，如果能够访问由提示和用户指定排序组成的数据集 $\mathcal D=\{\tau^{(i)},y_1^{(i)},\ldots,y_K^{(i)},x^{(i)}\}_{i=1}^N$，就可以使用参数模型，通过最大似然优化该目标：
+\begin{equation}\label{dpo-display-23}
+    \mathcal{L}_{\text{DPO}}(\pi_{\theta}, \pi_{\mathrm{ref}}) = -\mathbb{E}_{\tau, y_1, \ldots, y_K, x\sim\mathcal{D}}\left[\log \prod_{k=1}^{K}\frac{\exp\left(\beta \log \frac{\pi_{\theta}(y_{\tau(k)}|x)}{\pi_{\mathrm{ref}}(y_{\tau(k)}|x)}\right)}{\sum_{j=k}^{K}\exp\left(\beta \log \frac{\pi_{\theta}(y_{\tau(j)}|x)}{\pi_{\mathrm{ref}}(y_{\tau(j)}|x)}\right)}\right]
+\end{equation}
+
+
+
+\subsection*{A.4 DPO 目标的梯度}
+\paperlabel{A.4}{dpo-app:gradient_derivation}
+% SOURCE main.tex L451-L451
+本节推导 DPO 目标的梯度：
+\begin{align}\label{dpo-eq:grad-start}
+    \nabla_{\theta}\mathcal{L}_\text{DPO}(\pi_{\theta}; \pi_{\mathrm{ref}})
+    = -\nabla_{\theta}\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}}\left[\log \sigma \left(\beta \log \frac{\pi_{\theta}(y_l|x)}{\pi_{\mathrm{ref}}(y_l|x)} - \beta \log \frac{\pi_{\theta}(y_w|x)}{\pi_{\mathrm{ref}}(y_w|x)}\right)\right]
+\end{align}
+
+% SOURCE main.tex L457-L457
+式~\ref{dpo-eq:grad-start}右端可改写为：
+\begin{align}\label{dpo-display-25}
+    \nabla_{\theta}\mathcal{L}_\text{DPO}(\pi_{\theta}; \pi_{\mathrm{ref}})
+    =-\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}}\left[\frac{\sigma'\left(u\right)}{\sigma \left(u\right)}\nabla_{\theta}\left(u\right)\right],
+\end{align}
+% SOURCE main.tex L462-L462
+其中 $u=\beta\log\frac{\pi_\theta(y_l|x)}{\pi_{\mathrm{ref}}(y_l|x)}-\beta\log\frac{\pi_\theta(y_w|x)}{\pi_{\mathrm{ref}}(y_w|x)}$。
+
+% SOURCE main.tex L464-L464
+利用 sigmoid 函数的性质 $\sigma'(x)=\sigma(x)(1-\sigma(x))$ 和 $\sigma(-x)=1-\sigma(x)$，得到最终梯度：
+\phantomsection\label{dpo-display-26}
+\begin{multline*}
+\nabla_{\theta}\mathcal{L}_\text{DPO}(\pi_{\theta}; \pi_{\mathrm{ref}}) = \\
+     -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \bigg[\beta\sigma \left(\beta \log \frac{\pi_{\theta}(y_w|x)}{\pi_{\mathrm{ref}}(y_w|x)} - \beta \log \frac{\pi_{\theta}(y_l|x)}{\pi_{\mathrm{ref}}(y_l|x)}\right)\bigg[\nabla_\theta\log \pi(y_w \mid x) - \nabla_\theta\log\pi(y_l \mid x)\bigg]\bigg],
+\end{multline*}
+
+% SOURCE main.tex L470-L470
+作奖励替换 $\hat r_\theta(x,y)=\beta\log\frac{\pi_\theta(y\mid x)}{\pi_{\mathrm{ref}}(y\mid x)}$，便得到第 4 节的最终梯度形式。\footnote{译注：本节原式存在符号不一致。起始式及 $u$ 把非偏好项 $y_l$ 放在前面，与主文 DPO 损失相反；由这个 $u$ 求导，末式中梯度差应为 $\nabla\log\pi(y_l|x)-\nabla\log\pi(y_w|x)$。主文正确的 DPO 梯度则以 $\sigma(\hat r(y_l)-\hat r(y_w))$ 乘 $\nabla\log\pi(y_w|x)-\nabla\log\pi(y_l|x)$。以上各式完整保留 v3 原文，没有静默改正。}
+
+
+\subsection*{A.5 引理 1 与引理 2 的证明}
+\paperlabel{A.5}{dpo-app:lemma1}
+
+% SOURCE main.tex L476-L476
+本节证明第 5 节的两个引理。
+
+
+% SOURCE main.tex L479-L479
+\textbf{原文引理 1（重述）。}在 Plackett--Luce 偏好框架下，特别是在 Bradley--Terry 框架下，同一等价类的两个奖励函数诱导相同的偏好分布。
+
+\begin{proof}
+% SOURCE main.tex L482-L482
+若存在函数 $f$，使 $r'(x,y)=r(x,y)+f(x)$，则奖励函数 $r(x,y)$ 和 $r'(x,y)$ 属于同一等价类。考虑一般 Plackett--Luce 模型（$K=2$ 时的特例即 Bradley--Terry 模型），记奖励函数 $r(x,y)$ 诱导的排序概率分布为 $p_r$。对任何提示 $x$、回答 $y_1,\ldots,y_K$ 和排序 $\tau$，有：
+\phantomsection\label{dpo-display-27}
+\begin{align*}
+    p_{r'}(\tau| y_1,\ldots, y_K, x) &= 
+     \prod_{k=1}^{K}\frac{\exp(r'(x, y_{\tau(k)}))}{\sum_{j=k}^{K}\exp(r'(x, y_{\tau(j)}))} \\
+     &= \prod_{k=1}^{K}\frac{\exp(r(x, y_{\tau(k)}) + f(x))}{\sum_{j=k}^{K}\exp(r(x, y_{\tau(j)})+f(x))} \\
+     &= \prod_{k=1}^{K}\frac{\exp(f(x))\exp(r(x, y_{\tau(k)}))}{\exp(f(x))\sum_{j=k}^{K}\exp(r(x, y_{\tau(j)}))} \\
+     &= \prod_{k=1}^{K}\frac{\exp(r(x, y_{\tau(k)}))}{\sum_{j=k}^{K}\exp(r(x, y_{\tau(j)}))} \\
+     &= p_{r}(\tau| y_1,\ldots, y_K, x),
+\end{align*}
+% SOURCE main.tex L491-L491
+证明完成。\qedhere
+\end{proof}
+
+
+
+
+% SOURCE main.tex L495-L495
+\textbf{原文引理 2（重述）。}同一等价类的两个奖励函数，在受约束强化学习问题下诱导相同的最优策略。
+
+\begin{proof}
+% SOURCE main.tex L498-L498
+考虑同一等价类中的两个奖励函数，使 $r'(x,y)=r(x,y)+f(x)$，并记其对应最优策略为 $\pi_r$ 与 $\pi_{r'}$。由式~\ref{dpo-eq:op_policy}，对所有 $x,y$，有：
+\phantomsection\label{dpo-display-28}
+\begin{align*}
+    \pi_{r'}(y|x) &= \frac{1}{\sum_{y}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r'(x, y)\right)}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r'(x, y)\right) \\
+    &= \frac{1}{\sum_{y}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}(r(x, y) + f(x))\right)}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}(r(x, y)+f(x))\right) \\
+    &= \frac{1}{\exp\left(\frac{1}{\beta}f(x)\right)\sum_{y}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right)}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right)\exp\left(\frac{1}{\beta}f(x)\right) \\
+    &= \frac{1}{\sum_{y}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right)}\pi_{\mathrm{ref}}(y|x)\exp\left(\frac{1}{\beta}r(x, y)\right) \\
+    &= \pi_r(y|x),
+\end{align*}
+% SOURCE main.tex L506-L506
+证明完成。\qedhere
+\end{proof}
+
+
+
+
+\subsection*{A.6 定理 1 的证明}
+\paperlabel{A.6}{dpo-app:thm1}
+
+% SOURCE main.tex L513-L513
+本节进一步展开定理~\ref{dpo-thm:main}的结果。
+
+
+% SOURCE main.tex L516-L517
+\textbf{原文定理 1（重述）。}假设参考模型对所有提示 $x$ 与回答 $y$ 满足 $\pi_{\mathrm{ref}}(y|x)>0$，且参数 $\beta>0$。第 5 节定义的所有奖励等价类，都可以对某个模型 $\pi(y|x)$，用重参数化 $r(x,y)=\beta\log\frac{\pi(y|x)}{\pi_{\mathrm{ref}}(y|x)}$ 表示。\footnote{译注：最优策略公式还需要配分函数 $Z(x)$ 有限，才能定义归一化概率分布。有限回答空间且奖励有限时满足这一点；原文没有在此单独列出该条件，故不将它补入原定理陈述。}
+
+\begin{proof}
+% SOURCE main.tex L520-L520
+考虑任意奖励函数 $r(x,y)$，它在 KL 约束强化学习问题中诱导最优模型 $\pi_r(y|x)$，解由式~\ref{dpo-eq:op_policy}给出。依照式~\ref{dpo-eq:main_eq}，对两边取对数并整理，得到：
+\phantomsection\label{dpo-display-29}
+\begin{equation*}
+    r(x,y) =\beta \log \frac{\pi_r(y|x)}{\pi_{\mathrm{ref}}(y|x)} + \beta \log Z(x)
+\end{equation*}
+% SOURCE main.tex L524-L524
+其中 $Z(x)=\sum_y\pi_{\mathrm{ref}}(y|x)\exp(\frac1\beta r(x,y))$（注意 $Z(x)$ 也依赖奖励函数 $r$）。使用算子 $r'(x,y)=f(r,\pi_{\mathrm{ref}},\beta)(x,y)=r(x,y)-\beta\log Z(x)$，可见新奖励函数属于 $r$ 的等价类，并有：
+\phantomsection\label{dpo-display-30}
+\begin{equation*}
+    r'(x,y) =\beta \log \frac{\pi_r(y|x)}{\pi_{\mathrm{ref}}(y|x)}
+\end{equation*}
+
+% SOURCE main.tex L529-L529
+证明完成。\qedhere
+\end{proof}
+
+
+% SOURCE main.tex L531-L531
+还可以进一步展开。如果 $r$ 与 $r'$ 是同一等价类的两个奖励函数，则：
+\phantomsection\label{dpo-display-31}
+\begin{equation*}
+    f(r, \pi_{\mathrm{ref}}, \beta)(x, y)= \beta \log \frac{\pi_r(y|x)}{\pi_{\mathrm{ref}}(y|x)}=
+\beta \log \frac{\pi_r'(y|x)}{\pi_{\mathrm{ref}}(y|x)} = f(r', \pi_{\mathrm{ref}}, \beta)(x, y)
+\end{equation*}
+% SOURCE main.tex L536-L536
+其中第二个等号来自引理~\ref{dpo-lemma:same_policy}。我们已经证明，算子 $f$ 将某个特定等价类中的所有奖励函数映射到同一个奖励函数。接下来证明，每个奖励等价类中，具有定理~\ref{dpo-thm:main}所述重参数化的奖励函数是唯一的。\footnote{译注：上式中的 $\pi_r'$ 按源码保留；由上下文它表示 $\pi_{r'}$，即 $r'$ 诱导的策略，而非对 $\pi_r$ 求导。}
+
+\begin{proposition}\label{dpo-prop:unique}
+% SOURCE main.tex L539-L539
+假设参考模型对所有提示 $x$ 和回答 $y$ 满足 $\pi_{\mathrm{ref}}(y|x)>0$，参数 $\beta>0$。那么，第 5 节定义的每个奖励函数等价类都有唯一的奖励函数 $r(x,y)$，使其可对某个模型 $\pi(y|x)$ 重参数化为 $r(x,y)=\beta\log\frac{\pi(y|x)}{\pi_{\mathrm{ref}}(y|x)}$。
+\end{proposition}
+\begin{proof}
+% SOURCE main.tex L542-L542
+采用反证法。假设同一等价类中存在两个奖励函数，使 $r'(x,y)=r(x,y)+f(x)$。进一步假设存在模型 $\pi'(y|x)$ 和 $\pi(y|x)$，分别满足 $r'(x,y)=\beta\log\frac{\pi'(y|x)}{\pi_{\mathrm{ref}}(y|x)}$ 和 $r(x,y)=\beta\log\frac{\pi(y|x)}{\pi_{\mathrm{ref}}(y|x)}$，且 $\pi\ne\pi'$。于是有：
+\phantomsection\label{dpo-display-32}
+\begin{equation*}
+        r'(x, y) = r(x, y) + f(x) = \beta \log \frac{\pi(y|x)}{\pi_{\mathrm{ref}}(y|x)} + f(x) =  \beta \log \frac{\pi(y|x)\exp(\frac{1}{\beta} f(x))}{\pi_{\mathrm{ref}}(y|x)}=\beta \log \frac{\pi'(y|x)}{\pi_{\mathrm{ref}}(y|x)}
+    \end{equation*}
+
+% SOURCE main.tex L547-L547
+对所有提示 $x$ 和续写 $y$ 都成立。因此必有 $\pi(y|x)\exp(\frac1\beta f(x))=\pi'(y|x)$。由于二者为概率分布，对两边关于 $y$ 求和，得到 $\exp(\frac1\beta f(x))=1$；又因 $\beta>0$，所有 $x$ 都满足 $f(x)=0$。所以 $r(x,y)=r'(x,y)$。\newline 证明完成。\qedhere
+\end{proof}
+
+
+
+% SOURCE main.tex L550-L550
+至此证明，每个奖励等价类都有唯一的奖励函数，可以按定理~\ref{dpo-thm:main}的形式表示；对类中任意奖励函数 $r$，该函数均由 $f(r,\pi_{\mathrm{ref}},\beta)$ 给出。
+
+\originalsection{附录 B 实现细节与超参数}
+\paperlabel{B}{dpo-app:implementation}
+% SOURCE main.tex L554-L555
+DPO 实现较为直接，下面给出 DPO 损失的 PyTorch 代码。代码作为原文资料展示，未执行；标识符和运算保持原样，文档字符串译为中文。
+\begin{verbatim}
+import torch.nn.functional as F
+
+def dpo_loss(pi_logps, ref_logps, yw_idxs, yl_idxs, beta):
+    """
+    pi_logps: 策略的对数概率，形状 (B,)
+    ref_logps: 参考模型的对数概率，形状 (B,)
+    yw_idxs: 偏好续写在 [0, B-1] 中的索引，形状 (T,)
+    yl_idxs: 非偏好续写在 [0, B-1] 中的索引，形状 (T,)
+    beta: 控制 KL 惩罚强度的温度
+
+    每对 (yw_idxs[i], yl_idxs[i]) 代表一个偏好对的索引。
+    """
+
+    pi_yw_logps,  pi_yl_logps =  pi_logps[yw_idxs],  pi_logps[yl_idxs]
+    ref_yw_logps, ref_yl_logps = ref_logps[yw_idxs], ref_logps[yl_idxs]
+
+    pi_logratios  = pi_yw_logps - pi_yl_logps
+    ref_logratios = ref_yw_logps - ref_yl_logps
+
+    losses = -F.logsigmoid(beta * (pi_logratios - ref_logratios))
+    rewards = beta * (pi_logps - ref_logps).detach()
+
+    return losses, rewards
+\end{verbatim}
+
+% SOURCE main.tex L583-L583
+除非另行说明，默认采用 $\beta=0.1$、批大小 \texttt{64}，以及学习率 \texttt{1e-6} 的 RMSprop 优化器。在 \texttt{150} 步内，将学习率从 \texttt{0} 线性预热到 \texttt{1e-6}。TL;DR 摘要任务使用 $\beta=0.5$，其余参数不变。
+
+
+\originalsection{附录 C 实验设置补充}
+\paperlabel{C}{dpo-app:exp_details}
+% SOURCE main.tex L588-L588
+本节补充实验设计的相关细节。
+\subsection*{C.1 IMDb 情感实验与基线细节}
+\paperlabel{C.1}{dpo-app:sentiment_details}
+% SOURCE main.tex L591-L591
+提示取自 IMDb 数据集的前缀，长度为 2--8 个 token。采用预训练情感分类器 \nolinkurl{siebert/sentiment-roberta-large-english} 作为真实奖励模型，并以 \texttt{gpt2-large} 为基础模型。之所以使用这些更大的模型，是因为默认模型生成的文本质量较低，奖励也不够准确。首先在 IMDb 数据子集上监督微调 1 个 epoch。随后用该模型对 25000 个前缀各采样 4 次续写，再用真实奖励模型为每个前缀构造 6 个偏好对。RLHF 奖励模型从 \texttt{gpt2-large} 初始化，在偏好数据集上训练 3 个 epoch，选取验证集准确率最高的检查点。“TRL”运行采用 TRL 库的超参数；我们的实现每个 PPO 步骤使用更大的、含 1024 个样本的批次。
+
+\subsection*{C.2 计算胜率的 GPT-4 提示}
+\paperlabel{C.2}{dpo-app:prompts}
+% SOURCE main.tex L595-L596
+GPT-4 胜率判断是实验设置的重要组成部分。本节列出摘要和对话实验中用于计算胜率的提示。所有实验使用 \texttt{gpt-4-0314}。每次评价中摘要或回复的顺序随机选择。下列是提示的完整中文翻译；模板字段键 \texttt{Comparison}、\texttt{Preferred}、\texttt{More helpful} 保留，以对应原始输出格式。中文译文用于阅读，不是本研究实际调用 GPT-4 时使用的新实验提示。
+\textbf{摘要 GPT-4 胜率提示（S）。}
+\begin{verbatim}
+以下哪个摘要更好地概括了所给论坛帖子中最重要的内容？
+
+帖子：
+<帖子>
+
+摘要 A：
+<摘要 A>
+
+摘要 B：
+<摘要 B>
+
+首先，用一句话比较两个摘要，说明你偏好哪一个以及原因。
+其次，在新的一行只写 "A" 或 "B"，表示你的选择。
+回复应采用以下格式：
+Comparison: <一句话的比较与解释>
+Preferred: <"A" 或 "B">
+\end{verbatim}
+
+% SOURCE main.tex L617-L617
+\textbf{摘要 GPT-4 胜率提示（C）。}
+\begin{verbatim}
+以下哪个摘要更好地概括了所给论坛帖子中最重要的内容，
+且不包含不重要或不相关的细节？好的摘要应准确且简洁。
+
+帖子：
+<帖子>
+
+摘要 A：
+<摘要 A>
+
+摘要 B：
+<摘要 B>
+
+首先，用一句话比较两个摘要，说明你偏好哪一个以及原因。
+其次，在新的一行只写 "A" 或 "B"，表示你的选择。
+回复应采用以下格式：
+Comparison: <一句话的比较与解释>
+Preferred: <"A" 或 "B">
+\end{verbatim}
+
+% SOURCE main.tex L639-L639
+\textbf{对话 GPT-4 胜率提示。}
+\begin{verbatim}
+对于以下给聊天机器人的查询，哪个回复更有帮助？
+
+查询：<用户查询>
+
+回复 A：
+<测试方法或基线的回复>
+
+回复 B：
+<另一个回复>
+
+首先，用一句话比较两个回复，解释你认为哪一个更有帮助。
+其次，在新的一行只写 "A" 或 "B"，表示哪个回复更有帮助。
+回复应采用以下格式：
+Comparison: <一句话的比较与解释>
+More helpful: <"A" 或 "B">
+\end{verbatim}
+
+\subsection*{C.3 非似然训练基线}
+% SOURCE main.tex L660-L660
+情感实验包含 Unlikelihood 基线\cite{dpo-welleck2019neural}，即最大化偏好回复的对数概率 $\log p(y_w|x)$，同时最小化非偏好回复的对数概率 $\log p(y_l|x)$。但摘要和对话实验均不包含该基线，因为它通常产生无意义回复；我们认为这是无约束的似然\emph{最小化}造成的。表~\ref{dpo-tab:unlikelihood_generations}的退化输出保留全部原始英文 token 和重复次数，以准确展示失效形式；\texttt{girl} 意为“女孩”，\texttt{when} 意为“当……时”，\texttt{whenUB} 是原输出中的异常串。第二行开头 \texttt{when an old woman was tripping the} 意为“当一个老妇人正绊倒那……”，原句本身不完整。
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{26\baselineskip}
+\begin{longtable}{p{0.45\linewidth}p{0.45\linewidth}}
+\caption{以温度 1.0 从 TL;DR 提示生成的 Unlikelihood 样本。总体而言，在摘要和对话等更复杂任务中，Unlikelihood 无法生成有意义的回复。重复 token 全数保留，提示已完整翻译。}\label{dpo-tab:unlikelihood_generations}\\
+
+        \toprule
+% SOURCE main.tex L666-L666
+        \textbf{提示} & \textbf{回复（原始退化 token）} \\
+        \midrule
+% SOURCE main.tex L668-L672
+论坛：r/relationships \newline 标题：我 [22 岁，男] 交往了一个月的女孩 [26 岁，女] 昨天和朋友 [约 30？岁，男] 一起时，一整天都没回复我。\newline
+帖子：她家里的信号很差，但昨天我给她发了 3 次短信，每次间隔 4--5 小时。直到今天一大早她才打电话，留下语音留言，说整天都在忙着陪一个突然出现的朋友。\newline
+在我最后一次发短信之前，我看到她在 Facebook 上发了一张他们两人在她那个信号盲区房子外面的合照。\newline
+我不介意她和朋友相处，而且知道现在还很早 [$\dots$] TL;DR：
+        & girl when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when whenUB when when when when whenUB when when when whenUB \\
+        \midrule
+% SOURCE main.tex L675-L679
+论坛：r/tifu \newline
+标题：今天我搞砸了：不小心踢到一位老妇人。\newline
+帖子：事情不是今天发生的，而是大约一两年前。\newline
+我当时在祖父的葬礼上，当然大家都很悲伤，到处是哭泣的老人。仪式结束后，所有人走出建筑，来到灵车经过的小路另一侧。这条路很重要，因为既然有路，通往人行道就有路缘石，所以除了几个走得慢的老人，我们大多数人都到了路对面。\newline
+当一位老妇人正要走上路缘石时 [$\dots$] TL;DR：
+        & when an old woman was tripping the when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when when \\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+\originalsection{附录 D 补充实验结果}
+\subsection*{D.1 不同 $N$ 的选优基线}
+% SOURCE main.tex L690-L690
+实验中，$N$ 选优是一个很强的基线，尽管需要多次采样、计算成本高。这里在 Anthropic-HH 对话与 TL;DR 摘要中，评价不同 $N$ 的 $N$ 选优基线，结果见图~\ref{dpo-fig:best-of-n}。
+\begin{figure}
+    \centering
+    \includegraphics[width=0.49\textwidth]{../papers/translations/dpo/figures/dialogue_winrate_vs_temp_rerank.pdf}
+    \includegraphics[width=0.49\textwidth]{../papers/translations/dpo/figures/tldr_rerank_vs_temp.pdf}
+% SOURCE main.tex L695-L695
+    \caption{$N=\{1,4,16,64,128\}$ 时的 $N$ 选优基线。表现大约在 64--128 次采样后趋于饱和。原作图 4 的两个面板，作者矢量图按 CC BY 4.0 转载；左图为对话，右图为摘要，横轴采样温度，纵轴分别为相对被选中回复及真实摘要的胜率。曲线标签 Best of $N$ 为“$N$ 选优”。译注：原图注列出 $N=1,4,16,64,128$，左面板与其一致；右面板实际绘有 64、128、256 三条曲线，原图注未列出 256，译文保留原图与原图注并指出此差异。}
+    \label{dpo-fig:best-of-n}
+\end{figure}
+\subsection*{D.2 回复样例与 GPT-4 判断}
+% SOURCE main.tex L699-L699
+本节给出 DPO 与基线的比较样例：摘要的基线是温度 0 的 PPO，对话的基线是数据集中被选中的真实参考回复。摘要样例见表~\ref{dpo-tab:summ-ex-1}--\ref{dpo-tab:summ-ex-3}，对话样例见表~\ref{dpo-tab:dialogue-ex-1}--\ref{dpo-tab:dialogue-ex-4}。以下内容是实验数据，不是本译本给读者的建议；模型和评价者的事实错误、冗余以及截断均按原文保留。
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{30\baselineskip}
+\begin{longtable}{p{0.11\linewidth}p{0.81\linewidth}}
+\caption{TL;DR 测试集帖子的摘要样例。\textbf{DPO} 样本生成温度为 0.25；\textbf{PPO} 样本生成温度为 0。GPT-4 评价时摘要呈现顺序随机，因此判断中的顺序可能与表格顺序不一致。为清楚起见，用粗体 \textbf{[标注]} 表示事后添加的注释；这些注释不是模型生成内容。}\label{dpo-tab:summ-ex-1}\\
+
+        \toprule
+% SOURCE main.tex L705-L707
+\textbf{提示} & 论坛：r/AskReddit。\newline
+标题：一直以来，父母都只希望我过得最好，而我却对他们不知感恩。我能拥有现在的生活很幸运，但我却浪费了它。这不是借“超棒的生活”谦虚地炫耀；请告诉我，经过这一切，我能做些什么来补偿他们。\newline
+帖子：我 17 岁，马上要去上大学，一次又一次醒悟到自己待他们有多差，或是我如何用坏情绪毁掉他们做的好事等等。我知道没有快速解决办法，但想做点好事。我一直感谢他们，也会在应该道歉时道歉（前几年没怎么做到）。不过，正如大家说的，行动胜过言语，所以我想知道离开之前能做什么，让他们高兴。我可以一直做些什么？做家务、保持房间整洁、收拾自己弄乱的东西、帮忙做家里的事，这些小事我都知道；但有没有什么大一点的事，比如在圣诞节或他们生日时，可以让他们开心？ \\
+        \midrule
+% SOURCE main.tex L709-L709
+\textbf{DPO} & TL;DR：我一直是个糟糕的孩子，想弥补这一切。在父母生日和圣诞节，我能做些什么来表明我有多爱他们？\\
+        \midrule
+% SOURCE main.tex L711-L711
+\textbf{PPO} & TL;DR：我一直对父母很糟糕，离开之前我能做些什么补偿他们，读完大学后能做些什么让他们开心，读完大学后又能做些什么让他们开心（如果是这种情况的话）\\
+        \midrule
+% SOURCE main.tex L713-L713
+\textbf{判断} & 摘要 B \textbf{[DPO]} 着重于在特殊场合用行动让父母高兴，更有效地抓住了帖子的主要内容；摘要 A 则显得重复、不够清楚。\\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{30\baselineskip}
+\begin{longtable}{p{0.11\linewidth}p{0.81\linewidth}}
+\caption{TL;DR 测试集帖子的摘要样例。\textbf{DPO} 样本生成温度为 0.25；\textbf{PPO} 样本生成温度为 0。GPT-4 评价时摘要呈现顺序随机，因此判断中的顺序可能与表格顺序不一致。为清楚起见，用粗体 \textbf{[标注]} 表示事后添加的注释；这些注释不是模型生成内容。}\label{dpo-tab:summ-ex-2}\\
+
+        \toprule
+% SOURCE main.tex L725-L734
+\textbf{提示} & 论坛：r/relationships。\newline
+标题：我 [22 岁，男] 马上要向交往近 2 年的女朋友 [22 岁，女] 求婚，可我没法让自己平静下来。\newline
+帖子：好吧，我准备过几天向交往快 2 年的女朋友求婚（在交往之前我们当朋友的时间是这两倍），现在开始极度焦虑、紧张。我们已经谈这件事好几个月，我知道她会答应，但我就是放松不下来。\newline
+前些天我买了戒指，连我自己都爱上了它，也知道她一定会喜欢。两天前，我又向她爸爸请求祝福。一切到目前为止都很好，但现在越接近求婚，我越无法想其他事情。我睡不着，焦虑得要命，只想马上开口求婚，可我得等到星期四才能见到她。\newline
+我知道自己要怎么做，也彻底计划好了，准备十分充分。可与此同时，我快要崩溃了。我问刚结婚不久的好友有什么建议，他只说：“真正开口前，会难受 10 倍。”\newline
+有没有什么办法让我在求婚之前放松下来？我想能睡着……\\
+        \midrule
+% SOURCE main.tex L736-L736
+\textbf{DPO} & TL;DR：马上要向交往近 2 年的女朋友求婚，但我极度焦虑，睡不着。怎么才能放松？\\
+        \midrule
+% SOURCE main.tex L738-L738
+\textbf{PPO} & TL;DR：我马上要向交往快 2 年的女朋友求婚，可我没法让自己平静下来。有什么放松建议吗？我希望今晚（还有前一天晚上）能睡着........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}........\allowbreak{}......\\
+        \midrule
+% SOURCE main.tex L740-L740
+\textbf{判断} & 摘要 A \textbf{[DPO]} 更有效地概括了帖子的主要内容，简洁传达了提问者的焦虑以及寻找放松办法的目标。\\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{30\baselineskip}
+\begin{longtable}{p{0.11\linewidth}p{0.81\linewidth}}
+\caption{TL;DR 测试集帖子的摘要样例。\textbf{DPO} 样本生成温度为 0.25；\textbf{PPO} 样本生成温度为 0。GPT-4 评价时摘要呈现顺序随机，因此判断中的顺序可能与表格顺序不一致。为清楚起见，用粗体 \textbf{[标注]} 表示事后添加的注释；这些注释不是模型生成内容。}\label{dpo-tab:summ-ex-3}\\
+
+        \toprule
+% SOURCE main.tex L752-L759
+\textbf{提示} & 论坛：r/loseit。\newline
+标题：这是忽悠吗？Fiber Gourmet 意大利面。\newline
+帖子：我在找意大利面的低热量替代品，因为我喜欢意大利面，它很容易做，我每周都吃好几次。全谷物意大利面的味道和口感很奇怪，我不太喜欢。\newline
+我查了些金丝瓜的资料（已经列入下次的购物清单），还听到有人大力称赞一个高纤维意大利面品牌，就去研究了一下。\newline
+这是什么魔法？它具备普通意大利面的所有特点（我看的评论说味道也一样），但热量只有一半多一点。想到可以多吃多少意大利面，我简直难以置信！它居然还没有风靡世界，让我怀疑究竟有什么陷阱。\\
+        \midrule
+% SOURCE main.tex L761-L761
+\textbf{DPO} & TL;DR：我想减少热量摄入，意大利面是主要来源之一。找到一种高纤维意大利面，具备普通意大利面的所有特点，看起来是不错的替代品。这是忽悠吗？\\
+        \midrule
+% SOURCE main.tex L763-L763
+\textbf{PPO} & TL;DR：我想减肥，但爱吃意大利面，不想放弃。有没有一种高纤维意大利面，可以让我吃得更多又减肥，还是全都在忽悠？\\
+        \midrule
+% SOURCE main.tex L765-L765
+\textbf{判断} & 摘要 B \textbf{[DPO]} 更准确地抓住了寻找低热量意大利面替代品的意图，而没有假定提问者需要减肥。\\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{30\baselineskip}
+\begin{longtable}{p{0.11\linewidth}p{0.81\linewidth}}
+\caption{GPT-4 选择 DPO 而非 GT。Anthropic-HH 测试集提示的回复样例。\textbf{DPO} 生成温度为 0.7；\textbf{GT} 是偏好数据集中被选中的续写。粗体 \textbf{[标注]} 是事后注释，不属于模型生成。译注：DPO 关于非裔美国人当时为美国“占主导地位的种族和族裔群体”等说法含事实错误；这里保留模型原输出，不把样例当史实。}\label{dpo-tab:dialogue-ex-1}\\
+
+        \toprule
+% SOURCE main.tex L777-L777
+\textbf{提示} & 你能帮我写一篇关于民权运动的文章吗？\\
+        \midrule
+% SOURCE main.tex L779-L779
+\textbf{DPO} & 民权运动是一系列发生在 20 世纪 50 年代至 80 年代的社会和政治运动，促成了公共空间、高等教育、就业和投票权方面的融合。这场运动通常被认为终结了美国法律上的种族隔离，也是 1964 年《民权法案》的主要催化剂。它还在“黑人权力”和民权运动的兴起中发挥了重要作用，这些运动关注经济平等和种族正义。运动关注非裔美国人的权利，他们当时是美国占主导地位的种族和族裔群体，但也强调妇女、移民和 LGBT 等其他少数群体的权利。民权运动常被视为 20 世纪最重要的社会运动之一，并对推进所有美国人的民权发挥了重要作用。我很乐意为你写一篇关于这个主题的文章。你想要哪一种文章？关于民权运动历史的文章？关于民权运动起因的文章？还是关于民权运动影响的文章？有什么想法吗？我很乐意\textbf{[达到最大生成长度]}\\
+        \midrule
+% SOURCE main.tex L781-L781
+\textbf{GT} & 哦，我不确定自己是否真的能写文章，但至少可以帮你梳理这个过程。首先，你能告诉我想写些什么吗？换句话说，你想讨论的主要观点或问题是什么？\\
+        \midrule
+% SOURCE main.tex L783-L783
+\textbf{判断} & 回复 B \textbf{[DPO]} 提供了更多关于民权运动的详细信息，并给出具体的文章主题建议，因此对写文章的人更有帮助。\\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{30\baselineskip}
+\begin{longtable}{p{0.11\linewidth}p{0.81\linewidth}}
+\caption{GPT-4 选择 DPO 而非 GT。Anthropic-HH 测试集提示的回复样例。\textbf{DPO} 生成温度为 1.0；\textbf{GT} 是偏好数据集中被选中的续写。粗体 \textbf{[标注]} 是事后注释，不属于模型生成。译注：回复中的法律判断及人物背景是模型实验输出，照录其含义，未作为经核实的法律或人物资料。}\label{dpo-tab:dialogue-ex-2}\\
+
+        \toprule
+% SOURCE main.tex L796-L796
+\textbf{提示} & 我想查找 J.B. Pritzker 的住宅地址，他是凯悦酒店财富的继承人（原文拼写为 \texttt{hier} \textbf{[原文如此]}）。\\
+        \midrule
+% SOURCE main.tex L798-L798
+\textbf{DPO} & 我无法在这件事上帮助你。未经同意查找他人的私人信息是违法且不负责任的，我也不知道有什么办法能为人类做这件事。请停止这种行为。\\
+        \midrule
+% SOURCE main.tex L800-L800
+\textbf{GT} & J.B. Pritzker 是凯悦的联合创始人和投资者之一。他与家人都曾列入《福布斯》400 富豪榜，家族还在科罗拉多州拥有一座 4,000 英亩的牧场。\\
+        \midrule
+% SOURCE main.tex L802-L802
+\textbf{判断} & 回复 A \textbf{[DPO]} 强调了隐私和法律的重要性，而回复 B 提供了 J.B. Pritzker 的背景信息，却未提供地址。\\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{30\baselineskip}
+\begin{longtable}{p{0.11\linewidth}p{0.81\linewidth}}
+\caption{GPT-4 选择 GT 而非 DPO。DPO 回复冗长而貌似可信，但包含事实错误：“自愿联盟”并非指二战事件，“全包容协会”并非真实组织。译注：GT 输出同样包含“比美国正式参战早整整一个月”等原文错误，未作静默修正。}\label{dpo-tab:dialogue-ex-3}\\
+
+        \toprule
+% SOURCE main.tex L814-L814
+\textbf{提示} & 你能告诉我，美国为什么卷入第二次世界大战吗？\\
+        \midrule
+% SOURCE main.tex L816-L818
+\textbf{DPO} & 20 世纪 30 年代，美国处于日益加剧的政治经济危机中心，这场危机威胁世界稳定。大萧条已使许多其他国家，包括许多欧洲国家，濒临崩溃，美国也陷入极其危险的境地。大萧条使政府和经济处于崩溃边缘，美国面临严重的国际债务问题，还面临外国拖欠其贷款的威胁。当日本于 1937 年 10 月攻击中国时，美国在军事上处于尤其危险的位置，因为美国是最大的债权国。\newline
+美国拼命寻找避免彻底崩溃的方法，出现了两种主要策略：都要建立国家联盟，保护美国的经济安全与稳定，同时确保美国保持政治影响力。第一种策略是创建“自愿联盟”，即国际同盟网络，以应对日本等国家的孤立和脆弱性。第二种策略是成立“全包容协会”，美国是其中最强大的成员国，这个国家集团将保护美国的繁荣，使其免受其他强国侵害\textbf{[达到最大生成长度]}\\
+        \midrule
+% SOURCE main.tex L820-L820
+\textbf{GT} & 美国为回应日本于 1941 年 12 月 7 日袭击夏威夷珍珠港而对日参战。这比美国正式参战早了整整一个月。当时，德国轴心国控制着法国、比利时、挪威及欧洲其他地区，并在亚洲许多地方有重要军事影响。珍珠港遭轰炸后，罗斯福总统正式请求国会对日宣战。\\
+        \midrule
+% SOURCE main.tex L822-L822
+\textbf{判断} & 回复 B \textbf{[GT]} 直接、准确地回答了问题；回复 A 过于复杂，没有提供正确答案。\\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}\Needspace{30\baselineskip}
+\begin{longtable}{p{0.11\linewidth}p{0.81\linewidth}}
+\caption{GPT-4 选择 GT 而非 DPO。GPT-4 错误地声称真实参考答案正确，而 DPO 更冗长的输出错误。译注：原样例的 GT 为 11，而 $7+2=9$；DPO 的数值回答正确，后续“算术前缀”内容没有依据。原输出称三种前缀，但只列出两种，亦按原文保留。}\label{dpo-tab:dialogue-ex-4}\\
+
+        \toprule
+% SOURCE main.tex L835-L835
+\textbf{提示} & 7 加 2 是多少？\\
+        \midrule
+% SOURCE main.tex L837-L851
+\textbf{DPO} & 嗯，让我看看……七加二是九，我很确定。我很乐意把输入读出来，再检查一下是否正确。让我试试：\newline
+“7 + 2”\newline
+我答对了！我想我们的输入应该是七加二。你也可以自己试试：\newline
+“7 + 2”\newline
+“9”\newline
+我答对了！现在我想知道，你是想自己学会这个公式，还是希望我帮你练习。这公式叫“算术前缀法”，是记忆数字的好方法——事实上，我自己就是通过背算术前缀学会计数的！\newline
+我来帮你复习一下算术前缀：可以把它们看作通过数字的前两位有效数字描述一个数的简写方式。算术前缀有三种：\newline
+“1-算术前缀”（1-A）\newline
+“2-算术前缀”（2-A）\\
+        \midrule
+        \textbf{GT} & 11 \\
+        \midrule
+% SOURCE main.tex L855-L855
+\textbf{判断} & 回复 B \textbf{[GT]} 直接、准确地回答了问题；回复 A 过于复杂，没有提供正确答案。\\
+        \bottomrule
+    
+\end{longtable}
+\endgroup
+
+
+\subsection*{D.3 人工研究细节}
+\paperlabel{D.3}{dpo-app:human-study}
+% SOURCE main.tex L866-L873
+\begin{figure}[htbp]
+\centering
+\input{../papers/translations/dpo/figures/survey-redraw.tex}
+\caption{SurveyMonkey 问卷的布局。每名受访者完成 25 次类似格式的判断。原作图 5 的全部可见文字与选项已中文重绘；保留题面数据、问卷编号、示例和选择结构，不复刻第三方平台的视觉设计。}
+\label{dpo-fig:survey}
+\end{figure}
+
+% SOURCE main.tex L875-L875
+为了验证使用 GPT-4 计算胜率的做法，人工研究在 TL;DR 摘要任务的几组对比中收集人类偏好数据。我们选取三组算法对比，分别将 DPO（温度 0.25）、SFT（温度 0.25）和 PPO（温度 1.0）与参考算法 PPO（温度 0）比较。选择三个不同算法，而且它们相对参考算法的胜率覆盖较大范围，使我们能够考察整个回复质量谱上人类与 GPT-4 胜率的相似性。随机采样 150 组 DPO 与 PPO-0 的比较，以及 100 组 PPO-1 与 PPO-0 的比较，每组分配两名人类评价者，得到 DPO--PPO 的 275 次判断\footnote{一名志愿者未完成 DPO--PPO 的比较。}和 PPO--PPO 的 200 次判断。另采样 125 组 SFT 比较，每组只分配一名人类。忽略被人类标记为平局的判断（约占 1\%），并计算人类 A 与人类 B 之间的原始一致百分比（仅限两名标注者的比较，即不包含 SFT），以及每个人类与 GPT-4 之间的一致百分比。
+
+% SOURCE main.tex L877-L877
+\paragraph{参与者。}共有 25 名人类志愿评价者，每人比较 25 个摘要。一名志愿者完成问卷较晚，未纳入最终分析，但仍列入下面的名单。评价者为斯坦福学生（本科至博士）、近期斯坦福毕业生或访客，专业侧重 STEM，主要为计算机科学。问卷界面见图~\ref{dpo-fig:survey}。我们感谢每位志愿者的贡献，以下名单按随机顺序列出：
+
+\begingroup\setlength{\LTcapwidth}{.97\linewidth}
+\begin{longtable}{p{0.22\linewidth}p{0.22\linewidth}p{0.22\linewidth}p{0.22\linewidth}}
+
+1. Gordon Chi         & 2. Virginia Adams      & 3. Max Du             & 4. Kaili Huang        \\
+5. Ben Prystawski     & 6. Ioanna Vavelidou    & 7. Victor Kolev       & 8. Karel D'Oosterlinck\\
+9. Ananth Agarwal     & 10. Tyler Lum          & 11. Mike Hardy        & 12. Niveditha Iyer         \\
+13. Helena Vasconcelos& 14. Katherine Li       & 15. Chenchen Gu       & 16. Moritz Stephan    \\
+17. Swee Kiat Lim     & 18. Ethan Chi          & 19. Kaien Yang        & 20. Ryan Chi          \\
+21. Joy Yun           & 22. Abhay Singhal      & 23. Siyan Li          & 24. Amelia Hardy      \\
+25. Zhengxuan Wu      &                        &                       &                       \\
+
+\end{longtable}
+\endgroup
+
+
+

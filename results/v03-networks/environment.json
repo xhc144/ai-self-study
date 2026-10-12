@@ -1,0 +1,61 @@
+{
+  "seed": 144,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "processor": "",
+  "dtype": "float64",
+  "backend": "CPU NumPy",
+  "script": "/workspace/ai-self-study/experiments/v03_networks.py",
+  "code_sha256": "59077da0ca9b6d38fbdd0c13af1e722df63b3ec3bddb8c785d5b2c464f0bca83",
+  "command": [
+    "/workspace/ai-self-study/experiments/v03_networks.py",
+    "--out",
+    "/workspace/ai-self-study/results/v03-networks",
+    "--seed",
+    "144"
+  ],
+  "elapsed_seconds": 0.10657578700011072,
+  "executed_parameters": {
+    "batch": {
+      "seed": 144,
+      "shape": {
+        "B": 2,
+        "T": 3,
+        "D": 3,
+        "hidden": 4,
+        "classes": 3
+      },
+      "checked_coordinates": 64,
+      "learning_rate": 0.05,
+      "finite_difference_step": 1e-05
+    },
+    "attention": {
+      "seed": 144,
+      "T": 37,
+      "dk": 5,
+      "dv": 7,
+      "checked_coordinates": 68
+    },
+    "layernorm": {
+      "seed": 144,
+      "eps": 1e-05,
+      "shape": [
+        2,
+        3,
+        4
+      ]
+    },
+    "calibration": {
+      "seed": 144,
+      "n_validation": 800,
+      "n_test": 5000
+    },
+    "selection": {
+      "seed": 144,
+      "repetitions": 400,
+      "n_validation": 32,
+      "n_test": 2000
+    }
+  }
+}

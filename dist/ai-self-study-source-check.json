@@ -1,190 +1,33 @@
 {
-  "release": "0.2.1",
   "status": "PASS",
-  "at_utc": "2026-10-11T17:45:24.154211+00:00",
-  "reviewer": "Author agent delta verification; independent full v0.2 AI-agent review retained below",
-  "archive_sha256": "6d4dbfdc4ea968b2a32aa5d2bd6669ec2fab9a7381d915188c8b283670ba2e73",
-  "archive_bytes": 1083385,
-  "archive_members": 74,
-  "manifest_files": 73,
-  "manifest_all_hashes_and_sizes_match": true,
-  "manifest_matches_current_files": true,
-  "unsafe_archive_paths": [],
-  "tests_passed": 14,
-  "pages": 41,
-  "pdf_sha256": "53795a888ab79e1160c8ed08c7fd0820c892c1497692fc54fc596908fffea690",
-  "pdf_binary_identical_to_independently_reviewed_v02": true,
-  "pdf_recompiled_this_patch": false,
-  "book_results_research_tracked_files_unchanged": 38,
-  "default15_verification_this_patch": {
-    "command": [
-      "python",
-      "experiments/run_all.py",
-      "--experiment",
-      "micro_research",
-      "--out",
-      "temporary-directory"
-    ],
-    "actual_runs": 15,
-    "metrics_bytes_identical": true,
-    "metrics_sha256": "ddaa16e4a9fe47fc18fb091c921c5a8a4db7a94e5c936295778b71e6194b8c4f",
-    "design_sha256": "ada4758c7bd7b5d039803716f0ea4fc166d66560bd9bf7ab14776c1ca4e4bbbb",
-    "exploratory_overrides": {}
+  "release": "0.3.0",
+  "archive_sha256": "8633d6bc81e57e7675e2840b693c5fb16b2c632746a5a294fa319d73a0094f84",
+  "manifest_files": 464,
+  "all_component_pdfs": 13,
+  "component_text_pixels_toc_links_identical": true,
+  "collection_text_pixels_toc_links_identical": true,
+  "pages": {
+    "book": 99,
+    "papers": 393,
+    "complete": 492
   },
-  "original7_rerun_this_patch": false,
-  "scope": "CLI provenance fix only. Current ZIP manifest and 14 tests verified after clean extraction. PDF/source unchanged; prior full PDF rebuild and original7 reproduction are historical v0.2 evidence, not rerun claims.",
-  "current_delta_review": "qa/v021-cli-review.json",
-  "prior_independent_v02_verification": {
-    "status": "PASS",
-    "release": "0.2",
-    "reviewer": "independent AI agent; not human peer review",
-    "at_utc": "2026-10-11T17:36:28.528033+00:00",
-    "archive_sha256": "19d1d51db9fde3bdde8ea71b7557f58d390bae612515e472720a04f4fd398edb",
-    "archive_bytes": 1079579,
-    "archive_members": 73,
-    "manifest_files": 72,
-    "manifest_all_hashes_match": true,
-    "unsafe_archive_paths": [],
-    "font_files_in_archive": [],
-    "git_files_in_archive": [],
-    "clean_temporary_directory": true,
-    "removed_cached_build_inputs": [
-      "dist/ai-self-study.pdf"
-    ],
-    "pdf_sha256": "53795a888ab79e1160c8ed08c7fd0820c892c1497692fc54fc596908fffea690",
-    "pages": 41,
-    "recompiled_pages": 41,
-    "pdf_text_toc_destinations_annotations_and_96dpi_pixels_identical": true,
-    "pixel_mismatch_pages": [],
-    "compile_problems": [],
-    "tests_passed": 13,
-    "experiments": [
-      {
-        "entry": "original7",
-        "actual_command": [
-          "python",
-          "experiments/run_all.py",
-          "--out",
-          "/tmp/ai-self-study-zip-review-tlp0fu6l/independent-reruns/original7"
-        ],
-        "executed_parameters": {
-          "ridge": {
-            "seed": 144,
-            "steps": 6000
-          },
-          "mlp": {
-            "seed": 144,
-            "steps": 4000,
-            "lr": 0.1
-          },
-          "language_model": {
-            "seed": 144,
-            "steps": 1400,
-            "lr": 0.01,
-            "width": 16
-          },
-          "spurious": {
-            "seed": 144,
-            "steps": 1800,
-            "lr": 0.1
-          },
-          "search_verifier": {
-            "seed": 144
-          },
-          "injection": {},
-          "preference": {
-            "seed": 144,
-            "steps": 3500,
-            "lr": 0.3
-          }
-        },
-        "seconds": 1.093,
-        "metrics_sha256": "7423b006e93853409e08793b246db281cf1df3df2f3dd7346a1779798d07dafe",
-        "reference_bytes_identical": true
-      },
-      {
-        "entry": "attention_walkthrough",
-        "actual_command": [
-          "python",
-          "experiments/run_all.py",
-          "--experiment",
-          "attention_walkthrough",
-          "--out",
-          "/tmp/ai-self-study-zip-review-tlp0fu6l/independent-reruns/attention_walkthrough"
-        ],
-        "executed_parameters": {
-          "attention_walkthrough": {
-            "lr": 0.1
-          }
-        },
-        "seconds": 0.105,
-        "metrics_sha256": "a52e4ee5453a03504a7715d5a3c2fbdc21ef7542ca462be147b5220f839a3257",
-        "reference_bytes_identical": true
-      },
-      {
-        "entry": "residual_debug",
-        "actual_command": [
-          "python",
-          "experiments/run_all.py",
-          "--experiment",
-          "residual_debug",
-          "--seed",
-          "19",
-          "--out",
-          "/tmp/ai-self-study-zip-review-tlp0fu6l/independent-reruns/residual_debug"
-        ],
-        "executed_parameters": {
-          "residual_debug": {
-            "seed": 19
-          }
-        },
-        "seconds": 0.24,
-        "metrics_sha256": "7620e2080450ae36ad9f149286d39b41cbe6cc893ce7fcb8b26e51986097fa67",
-        "reference_bytes_identical": true
-      },
-      {
-        "entry": "micro_research",
-        "actual_command": [
-          "python",
-          "experiments/run_all.py",
-          "--experiment",
-          "micro_research",
-          "--out",
-          "/tmp/ai-self-study-zip-review-tlp0fu6l/independent-reruns/micro_research"
-        ],
-        "executed_parameters": {
-          "micro_research": {
-            "design": null,
-            "seeds": null,
-            "steps": null,
-            "lr": null,
-            "width": null
-          }
-        },
-        "seconds": 7.477,
-        "metrics_sha256": "ddaa16e4a9fe47fc18fb091c921c5a8a4db7a94e5c936295778b71e6194b8c4f",
-        "reference_bytes_identical": true
-      }
-    ],
-    "micro_research_actual_runs": 15,
-    "micro_research_exploratory_overrides": {},
-    "numeric_fragments_and_research_report_regenerated_identically": [
-      "book/generated/summary.tex",
-      "book/generated/v02-attention.tex",
-      "book/generated/v02-research-effects.tex",
-      "book/generated/v02-research-positions.tex",
-      "book/generated/v02-research-runs.tex",
-      "book/generated/v02-research-summary.tex",
-      "book/generated/v02-residual.tex",
-      "research/micro-study-v02.md"
-    ],
-    "original_plot_contents_regenerated_identically": [
-      "book/generated/mlp.pdf",
-      "book/generated/language_model.pdf",
-      "book/generated/spurious.pdf"
-    ],
-    "environment_scope": "same installed XeLaTeX/fonts; Python3.12.14 NumPy2.3.5; CPU float64; OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=1; PYTHONDONTWRITEBYTECODE=1. Exact JSON in this environment, not a cross-platform guarantee.",
-    "elapsed_tests_experiments_and_regeneration_seconds": 10.278,
-    "archive_hash_unchanged_after_test": true
-  }
+  "tests_run": 58,
+  "tests_skipped": 0,
+  "actual_metrics_byte_comparisons": [
+    "original seven",
+    "attention_walkthrough",
+    "residual_debug",
+    "micro_research",
+    "v03-foundations",
+    "v03-networks",
+    "v03-language",
+    "v03-research",
+    "research-bridges-v03",
+    "standard-transformer-v03",
+    "public-models-v03 cached only"
+  ],
+  "model_runs_included": true,
+  "model_downloads": false,
+  "numeric_fragments_regenerated_identically": true,
+  "scope": "Fresh extraction; same recorded fonts/TeX, Python/NumPy/Torch and recorded script-specific CPU thread settings. PDF time/IDs may differ; content pixels/text/bookmarks/links compared. No code inside translated papers executed."
 }

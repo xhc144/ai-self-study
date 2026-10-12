@@ -1,0 +1,901 @@
+{
+  "source_version": "Version of Record 2026-03-13",
+  "source_pdf_pages": 25,
+  "source_pdf_sha256": "ef6ea043c1acd4712c43369a294f6c8581d47c8f3dc2c660f69f5dd2a7c96f30",
+  "source_html_sha256": "13a77ca5edaea0047ba5f618b2adcb9ac1005db2ce069b338aae25312e0be5f9",
+  "sections": [
+    {
+      "source_section": "Abstract",
+      "source_id": "Abs1",
+      "source_subheadings": [],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-abstract",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Main",
+      "source_id": "Sec1",
+      "source_subheadings": [],
+      "source_paragraph_count": 5,
+      "translated_anchor": "alphaproof-main",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "AlphaProof",
+      "source_id": "Sec2",
+      "source_subheadings": [
+        "The Lean RL environment",
+        "Prover agent",
+        "Training",
+        "Inference"
+      ],
+      "source_paragraph_count": 9,
+      "translated_anchor": "alphaproof-system",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Benchmarks",
+      "source_id": "Sec7",
+      "source_subheadings": [],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-benchmarks",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Main RL progress",
+      "source_id": "Sec8",
+      "source_subheadings": [],
+      "source_paragraph_count": 2,
+      "translated_anchor": "alphaproof-main-rl",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Inference-time scaling",
+      "source_id": "Sec9",
+      "source_subheadings": [],
+      "source_paragraph_count": 2,
+      "translated_anchor": "alphaproof-inference-scaling",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Final benchmark evaluation",
+      "source_id": "Sec10",
+      "source_subheadings": [],
+      "source_paragraph_count": 2,
+      "translated_anchor": "alphaproof-final-evaluation",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Performance at the 2024 IMO",
+      "source_id": "Sec11",
+      "source_subheadings": [],
+      "source_paragraph_count": 4,
+      "translated_anchor": "alphaproof-imo",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Discussion and conclusion",
+      "source_id": "Sec12",
+      "source_subheadings": [],
+      "source_paragraph_count": 5,
+      "translated_anchor": "alphaproof-discussion",
+      "status": "translated",
+      "translated_files": [
+        "body.tex"
+      ]
+    },
+    {
+      "source_section": "Methods",
+      "source_id": "Sec13",
+      "source_subheadings": [
+        "Related work",
+        "Interactive theorem proving",
+        "Machine learning for theorem proving",
+        "Auto-formalization of mathematics",
+        "Reasoning with LLMs",
+        "TTRL",
+        "AlphaProof",
+        "Lean environment",
+        "Prover agent",
+        "Training",
+        "Inference",
+        "Evaluation",
+        "Standard benchmarks",
+        "Data separation and generalization",
+        "IMO-style geometry",
+        "IMO 2024 evaluation protocol and methods"
+      ],
+      "source_paragraph_count": 76,
+      "translated_anchor": "alphaproof-methods-related",
+      "status": "translated",
+      "translated_files": [
+        "methods.tex"
+      ]
+    },
+    {
+      "source_section": "Data availability",
+      "source_id": "data-availability",
+      "source_subheadings": [],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-availability",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "Code availability",
+      "source_id": "code-availability",
+      "source_subheadings": [],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-availability",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "References",
+      "source_id": "Bib1",
+      "source_subheadings": [],
+      "source_paragraph_count": 104,
+      "translated_anchor": "alphaproof-ref1",
+      "status": "translated",
+      "translated_files": [
+        "references.tex"
+      ]
+    },
+    {
+      "source_section": "Acknowledgements",
+      "source_id": "Ack1",
+      "source_subheadings": [],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "Author information",
+      "source_id": "author-information",
+      "source_subheadings": [
+        "Authors and Affiliations",
+        "Contributions",
+        "Corresponding authors"
+      ],
+      "source_paragraph_count": 43,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "Ethics declarations",
+      "source_id": "ethics",
+      "source_subheadings": [
+        "Competing interests"
+      ],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "Peer review",
+      "source_id": "peer-review",
+      "source_subheadings": [
+        "Peer review information"
+      ],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "Additional information",
+      "source_id": "additional-information",
+      "source_subheadings": [],
+      "source_paragraph_count": 1,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "Extended data figures and tables",
+      "source_id": "Sec31",
+      "source_subheadings": [
+        "Extended Data Fig. 1 The Lean tactic environment and its framing for tree search.",
+        "Extended Data Fig. 2 An example of the auto-formalization process.",
+        "Extended Data Fig. 3 TTRL ablations when varying the quantity of synthetic variants and with different variant generator LLMs.",
+        "Extended Data Fig. 4 AlphaProof inference scaling dynamics by mathematical subject on formal-imo and PutnamBench-test benchmarks.",
+        "Extended Data Fig. 5 Example synthetic variant problems generated by AlphaProof automatically for the IMO 2024 P1 problem.",
+        "Extended Data Fig. 6 Problems solved either at the end of the TTRL phase or by main RL on the formal-imo and PutnamBench-test benchmarks.",
+        "Extended Data Fig. 7 A complete proof of IMO 2024 P1 found by AlphaProof.",
+        "Extended Data Fig. 8 A complete proof of IMO 2024 P2 found by AlphaProof.",
+        "Extended Data Fig. 9 A complete proof of IMO 2024 P6 found by AlphaProof."
+      ],
+      "source_paragraph_count": 9,
+      "translated_anchor": "alphaproof-extended-data",
+      "status": "translated",
+      "translated_files": [
+        "extended-data.tex",
+        "extended-tables.tex"
+      ]
+    },
+    {
+      "source_section": "Supplementary information",
+      "source_id": "Sec32",
+      "source_subheadings": [
+        "Supplementary Information (download PDF )",
+        "Supplementary Data 1 (download ZIP )"
+      ],
+      "source_paragraph_count": 2,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "Rights and permissions",
+      "source_id": "rightslink",
+      "source_subheadings": [],
+      "source_paragraph_count": 2,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    },
+    {
+      "source_section": "About this article",
+      "source_id": "article-info",
+      "source_subheadings": [
+        "Cite this article",
+        "Share this article"
+      ],
+      "source_paragraph_count": 12,
+      "translated_anchor": "alphaproof-backmatter",
+      "status": "translated",
+      "translated_files": [
+        "backmatter.tex",
+        "authors.tex"
+      ]
+    }
+  ],
+  "methods_paragraphs": [
+    {
+      "index": 1,
+      "source_start": "Our research is grounded in the field of interactive theorem proving, where humans formalize theorems and cons",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 2,
+      "source_start": "The intersection of machine learning and theorem proving has seen significant advancements, particularly with ",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 3,
+      "source_start": "An automated feedback signal from theorem provers for correct proofs has been pivotal for applying large-scale",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 4,
+      "source_start": "A critical component of bridging the gap between human-written mathematics and formal theorem provers is auto-",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 5,
+      "source_start": "Beyond dedicated theorem provers, the broader field of reasoning with LLMs has seen substantial progress. Tech",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 6,
+      "source_start": "Our methodology extends on trends in test-time compute scaling9,61,62,63 and adaptation64,65,66, including ear",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 7,
+      "source_start": "AlphaProof is an RL agent designed to discover formal mathematical proofs by interacting with a verifiable env",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 8,
+      "source_start": "Formal mathematics as the RL environment. Formal mathematics provides a rigorous framework for expressing math",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 9,
+      "source_start": "States (st): a state represents the complete logical context within the Lean prover at a given step t of a pro",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 10,
+      "source_start": "Observations: the agent observes the state as a pretty-printed string representation of the Lean tactic state.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 11,
+      "source_start": "Actions (at): an action is a Lean tactic, represented as a text string.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 12,
+      "source_start": "Transitions: applying an action at to state st involves the Lean environment attempting to execute the tactic.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 13,
+      "source_start": "Episodes: each episode commences with a new mathematical statement (the initial state) to be proven. An episod",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 14,
+      "source_start": "Reward signal and objective: to incentivize the discovery of the shortest proof, a reward of rt = −1 accompani",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 15,
+      "source_start": "Return definition: the return Gt from a state st is the sum of rewards until termination. For states that deco",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 16,
+      "source_start": "Interfacing with Lean. To enable RL, AlphaProof interacts with a custom environment built upon the Lean 4 inte",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 17,
+      "source_start": "Core Lean and Mathlib integration. The environment utilizes Lean 4 as its foundational proof assistant. The ex",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 18,
+      "source_start": "Environment operations. To support the demands of AlphaProof, our environment enables the following.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 19,
+      "source_start": "Parallel execution and state management. The environment is designed to manage and operate on multiple Lean pr",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 20,
+      "source_start": "Tactic validation and execution. When the proof network proposes a tactic (as a text string), the environment ",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 21,
+      "source_start": "Goal decomposition (AND-node state splitting). If a tactic application successfully decomposes the current goa",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 22,
+      "source_start": "Disproving mechanism. To enable the agent to disprove statements (that is, prove their negation), the environm",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 23,
+      "source_start": "Performance and stability considerations. Several modifications were implemented to ensure that the Lean envir",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 24,
+      "source_start": "Key Mathlib tactics frequently used by the agent (for example, linarith) were compiled to C code. This results",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 25,
+      "source_start": "A wall-clock time limit was imposed on individual tactic executions, complementing Lean’s internal ‘heartbeat’",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 26,
+      "source_start": "Lean’s internal checkSystem function, which monitors resource consumption, was invoked more frequently within ",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 27,
+      "source_start": "The multi-precision integer library within Lean was modified to enforce a hard cap on the size of numerals, pr",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 28,
+      "source_start": "Proof verification final check. To provide absolute assurance of correctness (assuming the soundness of the Le",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 29,
+      "source_start": "Proof network. The proof network is a 3-billion-parameter encoder–decoder transformer model15, similar to ref.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 30,
+      "source_start": "Tree search algorithm. The proof network guides a tree search algorithm to explore the space of possible proof",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 31,
+      "source_start": "Standard tree search framework.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 32,
+      "source_start": "Selection. Starting from the root state, a path is traversed to a leaf node by recursively selecting an action",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 33,
+      "source_start": "Here, N(s, a) is the visit count for action a from state s. The prior π1/τ(a∣s) is derived from the proof netw",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 34,
+      "source_start": "Whereas in previous work72, the values Q(s, a) were normalized to [0, 1] using the maximum and minimum estimat",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 35,
+      "source_start": "where γ is a discounting factor and V(s, a) is the aggregated search value, which has the semantic of the nega",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 36,
+      "source_start": "Expansion. When a simulation reaches a leaf node sL not previously expanded, K tactics are sampled from the pr",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 37,
+      "source_start": "Backpropagation. The value estimate from the expanded leaf node is backed up along the selected path, updating",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 38,
+      "source_start": "Key adaptations for AlphaProof.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 39,
+      "source_start": "Progressive sampling. To dynamically broaden the search in promising regions, progressive sampling is used. If",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 40,
+      "source_start": "AND nodes for multi-goal states. To manage proof states with multiple independent subgoals (a logical AND cond",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 41,
+      "source_start": "The prior π(a∣sAND) is set to be uniform over all subgoals, and cAND is an additional multiplier.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 42,
+      "source_start": "During backpropagation through an AND node, the value passed up is the minimum V(sAND, a) of its children subg",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 43,
+      "source_start": "Single search. For each proof attempt on an initial problem statement, AlphaProof executes a single search tha",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 44,
+      "source_start": "Pretraining and supervised fine-tuning. Before RL, the AlphaProof proof network is initialized through a multi",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 45,
+      "source_start": "First, the network is pre-trained on large datasets consisting of approximately 300 billion tokens of publicly",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 46,
+      "source_start": "Following pretraining, the model undergoes supervised fine-tuning (SFT). This stage utilizes a much smaller bu",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 47,
+      "source_start": "Auto-formalization. To provide a sufficiently large and diverse curriculum for RL, AlphaProof relies on an aut",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 48,
+      "source_start": "Model and training data. The auto-formalization system is built upon a specialized Gemini 1.5 Pro language mod",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 49,
+      "source_start": "Iterative refinement. To further enhance the formalization model’s accuracy, we used an iterative refinement s",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 50,
+      "source_start": "Evaluation and benchmarking. The performance of the auto-formalization model was regularly monitored through A",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 51,
+      "source_start": "Before the IMO 2024 competition, the final auto-formalization process achieved a 60% pass@1 success rate on th",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 52,
+      "source_start": "Dataset generation. Several key methods facilitated the generation of a training dataset suitable for formaliz",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 53,
+      "source_start": "Main RL. The main RL phase further trains the proof network, initialized from pretraining and SFT. The RL trai",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 54,
+      "source_start": "Start positions dataset. The training curriculum for this RL phase primarily comprised the approximately 80 mi",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 55,
+      "source_start": "Matchmaker system. The matchmaker orchestrates the training process by assigning tasks to available actors. Fo",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 56,
+      "source_start": "Actor experience generation. Each actor, upon receiving a problem statement and simulation budget from the mat",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 57,
+      "source_start": "Learner and network updates. The learner continuously updates the proof network parameters by training on batc",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 58,
+      "source_start": "Computational budget summary. The AlphaProof-specific training pipeline, which follows a general pretraining p",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 59,
+      "source_start": "Following main RL training, AlphaProof possesses general proof-finding capabilities for a wide range of mathem",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 60,
+      "source_start": "Scaling with tree search. The primary method for applying more computation at inference, common in the AlphaZe",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 61,
+      "source_start": "Scaling with TTRL. For problems that remain intractable even with extensive tree search, AlphaProof uses TTRL ",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 62,
+      "source_start": "Variant generation for TTRL curriculum. The TTRL phase commences with the generation of a problem-specific cur",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 63,
+      "source_start": "Focused RL. Following variant generation, AlphaProof executes its core AlphaZero-inspired RL loop, initializin",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 64,
+      "source_start": "The TTRL phase thus enables AlphaProof to dedicate substantial, targeted computational resources at inference.",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 65,
+      "source_start": "We evaluated AlphaProof on a comprehensive suite of formal mathematics benchmarks, spanning advanced high-scho",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 66,
+      "source_start": "We introduce formal-imo, a benchmark of all non-geometry historical IMO problems that were internally formaliz",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 67,
+      "source_start": "To ensure a rigorous evaluation of AlphaProof’s generalization capabilities, we carefully managed data separat",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 68,
+      "source_start": "Handling IMO-style planar geometry within Lean for AlphaProof presented challenges owing to specific gaps exis",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 69,
+      "source_start": "For the IMO 2024 competition, a specific, predefined evaluation protocol was followed to ensure a rigorous ass",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 70,
+      "source_start": "Pre-competition freeze. The main RL training of AlphaProof was halted, and all system hyperparameters were fro",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 71,
+      "source_start": "Problem formalization. Immediately upon release, the five non-geometry IMO 2024 problems were manually formali",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 72,
+      "source_start": "Notably, P5 (combinatorics) proved exceptionally challenging to formalize, with initial attempts by experts be",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 73,
+      "source_start": "For problems requiring an answer (for example, ‘Find all…’), placeholders (sorry) were used for the answer com",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 74,
+      "source_start": "Answer guessing. Answer generation was specifically optimized to maximize the likelihood of including the corr",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 75,
+      "source_start": "Geometry problem. For reasons described in ‘IMO-style geometry’, the geometry problem (IMO 2024 P4) was addres",
+      "status": "translated in methods.tex"
+    },
+    {
+      "index": 76,
+      "source_start": "Verification and judging. Solutions generated by AlphaProof (P1, P2 and P6, shown in Extended Data Figs. 7–9) ",
+      "status": "translated in methods.tex"
+    }
+  ],
+  "figures": [
+    {
+      "source_id": "Fig. 1",
+      "translated_anchor": "alphaproof-fig1",
+      "asset": "assets/fig1.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Fig. 2",
+      "translated_anchor": "alphaproof-fig2",
+      "asset": "assets/fig2.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Fig. 3",
+      "translated_anchor": "alphaproof-fig3",
+      "asset": "assets/fig3.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Fig. 4",
+      "translated_anchor": "alphaproof-fig4",
+      "asset": "assets/fig4.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Fig. 5",
+      "translated_anchor": "alphaproof-fig5",
+      "asset": "assets/fig5.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 1",
+      "translated_anchor": "alphaproof-edfig1",
+      "asset": "assets/edfig1.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 2",
+      "translated_anchor": "alphaproof-edfig2",
+      "asset": "assets/edfig2.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 3",
+      "translated_anchor": "alphaproof-edfig3",
+      "asset": "assets/edfig3.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 4",
+      "translated_anchor": "alphaproof-edfig4",
+      "asset": "assets/edfig4.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 5",
+      "translated_anchor": "alphaproof-edfig5",
+      "asset": "assets/edfig5.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 6",
+      "translated_anchor": "alphaproof-edfig6",
+      "asset": "assets/edfig6.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 7",
+      "translated_anchor": "alphaproof-edfig7",
+      "asset": "assets/edfig7.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 8",
+      "translated_anchor": "alphaproof-edfig8",
+      "asset": "assets/edfig8.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    },
+    {
+      "source_id": "Extended Data Fig. 9",
+      "translated_anchor": "alphaproof-edfig9",
+      "asset": "assets/edfig9.pdf",
+      "status": "Entire original diagram including all codes, states, formula marks, numerical labels and highlights retained; full captions and natural-language correspondences translated."
+    }
+  ],
+  "tables": [
+    {
+      "source_id": "Table 1",
+      "translated_anchor": "alphaproof-table1",
+      "translated_file": "table1.tex",
+      "data_file": "table-data.json",
+      "status": "All original rows, numerical cells, dashes, cited systems and full comparison footnote retained."
+    },
+    {
+      "source_id": "Extended Data Table 1",
+      "source_pdf_page": 24,
+      "translated_anchor": "alphaproof-edtable1",
+      "translated_file": "extended-tables.tex",
+      "status": "All image-only values manually transcribed and visually checked; entire caption and footnote translated; source image also retained in assets/edtable1.pdf."
+    },
+    {
+      "source_id": "Extended Data Table 2",
+      "source_pdf_page": 25,
+      "translated_anchor": "alphaproof-edtable2",
+      "translated_file": "extended-tables.tex",
+      "status": "All image-only values manually transcribed and visually checked; entire caption and footnote translated; source image also retained in assets/edtable2.pdf."
+    }
+  ],
+  "display_formulas": [
+    {
+      "source_id": "Equa",
+      "translated_anchor": "alphaproof-equ-a",
+      "status": "retained as unnumbered source display"
+    },
+    {
+      "source_id": "Equb",
+      "translated_anchor": "alphaproof-equ-b",
+      "status": "retained as unnumbered source display"
+    },
+    {
+      "source_id": "Equc",
+      "translated_anchor": "alphaproof-equ-c",
+      "status": "retained as unnumbered source display"
+    },
+    {
+      "source_id": "Equd",
+      "translated_anchor": "alphaproof-equ-d",
+      "status": "retained as unnumbered source display"
+    }
+  ],
+  "in_figure_formulas_and_code": {
+    "fig1": "Complete infinity-of-primes Lean states and sampled tactic examples retained.",
+    "edfig1": "Complete conjunction-symmetry proof, all intermediate states and search diagram retained.",
+    "edfig2": "Full source IMO shortlist inequality and all formalization code retained; natural statement translated separately.",
+    "edfig5": "Target and all ten variant codes retained; every natural-language description translated.",
+    "edfig7": "Complete source IMO 2024 P1 proof code and statement retained unchanged; natural comments fully translated.",
+    "edfig8": "Complete source IMO 2024 P2 proof code and statement retained unchanged; natural comments fully translated. Original comment comparison glyph appears incomplete; transcript explicitly uses >= from adjacent source Lean code.",
+    "edfig9": "Complete source IMO 2024 P6 proof code and statement retained unchanged, including maxHeartbeats 2000000, all proof branches and highlighted construction. Natural comments fully translated."
+  },
+  "references": 80,
+  "authors": 39,
+  "excluded": [
+    {
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-025-09833-y/MediaObjects/41586_2025_9833_MOESM1_ESM.pdf",
+      "source_attachment_name": "41586_2025_9833_MOESM1_ESM.pdf",
+      "included": false,
+      "reason": "Independent attachment outside the requested 25-page Version of Record. No separate Creative Commons licence located during inspection.",
+      "pages": 9
+    },
+    {
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-025-09833-y/MediaObjects/41586_2025_9833_MOESM2_ESM.zip",
+      "source_attachment_name": "41586_2025_9833_MOESM2_ESM.zip",
+      "included": false,
+      "reason": "Independent attachment outside the requested 25-page Version of Record. No separate Creative Commons licence located during inspection.",
+      "archive_members": [
+        "2025-06-13867A-s2/",
+        "2025-06-13867A-s2/pseudocode.py"
+      ],
+      "licence_text_matches": [],
+      "source_filename_note": "Article Code availability calls file alphaproof_pseudocode.py; supplied archive actually contains 2025-06-13867A-s2/pseudocode.py. Article statement retained unchanged; no source code executed or redistributed."
+    },
+    {
+      "id": "website interface",
+      "reason": "Recommendations, live metrics, author search widgets and sharing UI are not scientific article content."
+    }
+  ],
+  "source_anomalies_retained": [
+    "AND node text says largest V or smallest Q despite negative remaining-steps convention; apparent sign relation flagged without changing source.",
+    "12-TPU-hour PutnamBench-test is 39.4% in main table and 39.5% in extended table/Fig.4; both original values retained.",
+    "Some miniF2F-valid chart annotations differ from the extended table; each source value retained.",
+    "P2 natural-language comment has an incomplete comparison glyph; original figure preserved and recovery basis stated.",
+    "Article pseudocode basename differs from independent ZIP member basename; recorded without rewriting source."
+  ],
+  "review_role": "Translator author checks only; independent reviewer delegated by parent.",
+  "translation_file_sha256": {
+    "assets/edfig1.pdf": "24cb671f14ce5955263cf9551eecb9c05d0a76d7a90d12b2d30369480e2ba7f0",
+    "assets/edfig2.pdf": "e38ab1f2c7048a8891f6d010e6b93fe7ccf864683a9127a4bbe87a22845a0129",
+    "assets/edfig3.pdf": "4c2be9b0db64851a45e0b89c69f0ca9f796380d518c7499315a4e7107d58fadb",
+    "assets/edfig4.pdf": "d5c99f5366032dc8017eb959fcc35ff4419ffbd7de3e476c4ba73963f8e296a0",
+    "assets/edfig5.pdf": "ef21c09c5944b4d2231311e934f1069c3886ce56c85a644f7e682d06fca7a420",
+    "assets/edfig6.pdf": "e9acad30348f812fb0337f8718102fe9b707a73632655450281183c4b2dca408",
+    "assets/edfig7.pdf": "49d3d10db14aa77e99283d031570a1e7d7a2727a93d7c5917fb522709cf95340",
+    "assets/edfig8.pdf": "9dede847e3fbfb75c6fdd67473329ada1c5df1ecc7ffb31024c879ec7fcfe63d",
+    "assets/edfig9.pdf": "6f548276d4a77f7f6d6d89bf41157dda138d5eb81f6f81f72dc7f8611e3c2314",
+    "assets/edtable1.pdf": "dc41a857929ebd7f2908719120ac748f5bb0c4469b386d20c641cae3e3197048",
+    "assets/edtable2.pdf": "90ef0677a97cf21ddc756e12841325e7b97936dbf1b85003754c97ca088f8bbc",
+    "assets/fig1.pdf": "6400e73185984ed615faa76fb61c58230845f7c9081434ba761cd26fda3dda76",
+    "assets/fig2.pdf": "a0ad0d703f28eea8929666491aa058464804622ac91af43e8ee7c8a1e030d8e6",
+    "assets/fig3.pdf": "b9294ac6ce61750e4702757e37bb7169cb1d779ba55969db18dc1a7e71a44388",
+    "assets/fig4.pdf": "62cdddba39a9f7a6e0de43bbd0730d49d07e19a063987cdf9233db54da552cf8",
+    "assets/fig5.pdf": "d62ad83d8c7bd38b916e7083d439e8fd04e5a3b4822035e43fdb19b008011c92",
+    "authors.tex": "b2f3bd72eca092578fcbbc31bd825523fc9f151809a3095de4991d03e02749b5",
+    "backmatter.tex": "e5968da5e3187cb8a820b05b677c5bec542192f4933982cd0327038e8f2a8f5a",
+    "body.tex": "fbe6e3db3479cf9c0132ba5dd8e8cd2b2641a51c6776d3b3af958c3aee82d23f",
+    "extended-data.tex": "655940801c9d39db4e2adec2b73b4a620c61d56852f14452070cdfba901228d2",
+    "extended-tables.tex": "3264f9d663eaeba75e62366d932984d86bfe0adf9840bedf6dd400e834bc015e",
+    "fig1.tex": "39a20ec47d7d7f732d6ae2b3c99846989a6de132ff4ba345b7d02c2ae3ea8327",
+    "fig2.tex": "54a147f49129091c366c6b8ec7625f75e28ed873dae57021e5da684067465d8f",
+    "fig3.tex": "3f7f9ae08d74126c5a1dbf8536971f9750a95fbd5d1cd99d1ea5670ebd012cd7",
+    "fig4.tex": "59696c84848686355c114567d4c92e0ce21c627484bf639826b4c01ae955a231",
+    "fig5.tex": "f6d76c85afa18902dd283c3b2f1fee1a6f1b2a18dda6060e2c3da3155f8222ca",
+    "glossary.json": "e45c4ddfafcf1b2f5fd935ebc2156fefb19c4b958eb036e9aa4dca46824558c3",
+    "metadata.json": "1a5347f8ea1a2ddb5367379fe8dcc59eb1775255869bcf0abc2159b7f8d085dc",
+    "methods.tex": "4e2288b57aa64d00882da997ee272732bff4b80a73d2acbccb110fb8f2a6e5d2",
+    "references.tex": "07a4f5a495f83e1ad6abf2feb85bb4412dda038fd4b937eed361f1ba5dce1732",
+    "source-reading.md": "c493f1cdf46013bf19731b89e27fbb5702102d042615b387ac90b5437c133b49",
+    "table-data.json": "fbac36db9af4b4fb4bc8d51a865be24002783beeea18cf9ac145f3c5fd4fea3c",
+    "table1.tex": "c5ce37b6617f6d0e12dbd57374bd68f88b9bcef52c3f58ca2712682f5e0e19d3",
+    "verification.json": "2394856bd396f2c0ba2a87dd2fb39efb00d10d113a41df039f61ce90974b897f"
+  },
+  "author_verification": "verification.json; 38-page isolated build, every page visually viewed; no independent review claimed."
+}

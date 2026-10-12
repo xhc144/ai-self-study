@@ -1,0 +1,61 @@
+{
+  "title": "Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision",
+  "chinese_title": "计算即教师：将推理计算转为无参考监督",
+  "authors": [
+    "Dulhan Jayalath",
+    "Shashwat Goel",
+    "Thomas Foster",
+    "Parag Jain",
+    "Suchin Gururangan",
+    "Cheng Zhang",
+    "Anirudh Goyal",
+    "Alan Schelten"
+  ],
+  "version": "arXiv:2509.14234v3",
+  "version_date": "2026-05-09",
+  "first_submission_date": "2025-09-17",
+  "original_url": "https://arxiv.org/abs/2509.14234v3",
+  "pdf_url": "https://arxiv.org/pdf/2509.14234v3",
+  "source_url": "https://arxiv.org/src/2509.14234v3",
+  "original_pdf_pages": 23,
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_verification": "Actually followed view-license on exact official v3 page to CC BY 4.0 on 2026-10-12.",
+  "conference_cross_reference": {
+    "url": "https://proceedings.mlr.press/v306/jayalath26a.html",
+    "venue": "ICML 2026, PMLR 306:50945--50967",
+    "policy": "Metadata cross-check only. Conference version and license are not used to authorize or supply this arXiv-v3 translation."
+  },
+  "translator": "ai-self-study contributors",
+  "translation_status": "Unofficial machine-assisted Chinese translation; no independent human bilingual review claimed.",
+  "changes": [
+    "Translated all substantive main and A--I appendix prose, complete algorithm, 12 numbered formulas, five prompts, all three rubric examples and worked complex-number example.",
+    "Preserved every original table numeric cell and emphasis marker; translated headers and full captions.",
+    "Preserved all 46 bibliographic entries and prefixed labels/citations with cat-.",
+    "Reformatted into the authorized fixed template; converted table layout to longtable, removed source tcolorbox framing without dropping content.",
+    "Exported the two author TikZ diagrams in isolation with system fonts; retained four original result PDFs; original figure English labels retained.",
+    "Did not copy original document class, company logo or any font file.",
+    "Added separately marked translator notes on pseudo-reference truth, judge limits, original numerical inconsistency, degenerate group standard deviation and original argmin notation."
+  ],
+  "original_hashes": {
+    "pdf_sha256": "8ecdf6975bb2de90f1353ac0b919ac41d9664e0f4f0564bbe710f7b268ed0d3e",
+    "source_archive_sha256": "7686dfce9ffaa3c6475c5661e201a00b0653ba7a328d301883580de27bcec5c6",
+    "paper_tex_sha256": "22973053e2ce06f5188edaf83b0dafc6c5f288d4b7531dc0c3022f9aa4be7919",
+    "paper_bbl_sha256": "0eed84dadfc83b15402092960a581af0e7e5db717385c066d88f11191ec3ccd6"
+  },
+  "dependencies": [
+    "authorized fixed book template",
+    "graphicx",
+    "booktabs",
+    "longtable",
+    "fvextra"
+  ],
+  "integration_input": "../papers/translations/cat/body.tex",
+  "arxiv_version_date": "2026-05-09",
+  "source_internal_date": {
+    "downloaded_pdf_first_page": "May 12, 2026",
+    "official_v3_html": "August 24, 2026",
+    "tex_source_date_macro": "\\date{\\today}",
+    "interpretation": "Internal rendered dates differ from each other and from the fixed arXiv version date; the source uses a build-time date macro. Neither internal date is used as the v3 publication date."
+  }
+}

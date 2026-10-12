@@ -1,0 +1,1 @@
+Generated v0.2 fragments and research report from real JSON.

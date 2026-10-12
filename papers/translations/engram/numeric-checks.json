@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "pretraining_all_data_rows": 34,
+  "benchmark_names": "preserved",
+  "long_context_transposed_cells": 48,
+  "long_context_bold_underline_markers": "preserved",
+  "architecture_data_rows": 33,
+  "patchscopes_complete_literal_outputs": 5,
+  "throughput_values": [
+    "9,031.62",
+    "8,858.28",
+    "6,315.52",
+    "6,140.02"
+  ],
+  "tokenizer_rows": 5,
+  "token_order_accents_control_spellings": "identical",
+  "reference_entries": 135,
+  "missing_citations": [],
+  "uncited_source_entries": [],
+  "source_generated_bibliography": "identical after citation-key prefix and natbib-label removal",
+  "unchanged_vector_assets": 8,
+  "numbered_equations": 9,
+  "scope": "Mechanical checks complement source reading and visual review; they do not certify translation semantics or scientific correctness."
+}

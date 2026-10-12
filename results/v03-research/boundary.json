@@ -1,0 +1,70 @@
+{
+  "scope": "symbolic source-routing and capability-executor simulation; no LLM",
+  "parameters": {
+    "clean_cases": 240,
+    "attack_cases": 120,
+    "attack_families": [
+      "export",
+      "private",
+      "wrong_public"
+    ]
+  },
+  "rows": [
+    {
+      "policy": "source_blind",
+      "clean_total": 240,
+      "clean_completed": 240,
+      "clean_refused": 0,
+      "attack_total": 120,
+      "unauthorized_proposals": 80,
+      "unauthorized_executions": 80,
+      "semantic_attack_successes": 120,
+      "blocked_proposals": 0,
+      "clean_completion_rate": 1.0,
+      "clean_false_refusal_rate": 0.0,
+      "semantic_attack_success_rate": 1.0
+    },
+    {
+      "policy": "source_blind_with_executor",
+      "clean_total": 240,
+      "clean_completed": 240,
+      "clean_refused": 0,
+      "attack_total": 120,
+      "unauthorized_proposals": 80,
+      "unauthorized_executions": 0,
+      "semantic_attack_successes": 40,
+      "blocked_proposals": 80,
+      "clean_completion_rate": 1.0,
+      "clean_false_refusal_rate": 0.0,
+      "semantic_attack_success_rate": 0.3333333333333333
+    },
+    {
+      "policy": "keyword_refusal",
+      "clean_total": 240,
+      "clean_completed": 120,
+      "clean_refused": 120,
+      "attack_total": 120,
+      "unauthorized_proposals": 0,
+      "unauthorized_executions": 0,
+      "semantic_attack_successes": 0,
+      "blocked_proposals": 0,
+      "clean_completion_rate": 0.5,
+      "clean_false_refusal_rate": 0.5,
+      "semantic_attack_success_rate": 0.0
+    },
+    {
+      "policy": "trusted_source_router",
+      "clean_total": 240,
+      "clean_completed": 240,
+      "clean_refused": 0,
+      "attack_total": 120,
+      "unauthorized_proposals": 0,
+      "unauthorized_executions": 0,
+      "semantic_attack_successes": 0,
+      "blocked_proposals": 0,
+      "clean_completion_rate": 1.0,
+      "clean_false_refusal_rate": 0.0,
+      "semantic_attack_success_rate": 0.0
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "original_display_count": 32,
+  "translated_display_count": 32,
+  "comparison_method": "Exact token comparison with whitespace removed, labels omitted, reference macro expanded and documented Chinese annotation replacements applied. No formula sign corrections applied.",
+  "results": [
+    {
+      "display_index": 1,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 2,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 3,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 4,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 5,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 6,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 7,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 8,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 9,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 10,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 11,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 12,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 13,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 14,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 15,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 16,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 17,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 18,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 19,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 20,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 21,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 22,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 23,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 24,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 25,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 26,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 27,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 28,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 29,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 30,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 31,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    },
+    {
+      "display_index": 32,
+      "equivalent_exact_source_tokens_after_declared_annotation_and_macro_changes": true
+    }
+  ],
+  "original_tex_sha256": "c670b679a12b1a9316ffe38540bc8bd2d744e49d6b115da64aded587c9bf96d8",
+  "translation_tex_sha256": "3ba5c8f3532ad262e7defe5ccce82f6f570324200fad20befaa7fb5423581880"
+}

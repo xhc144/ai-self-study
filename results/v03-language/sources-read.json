@@ -1,0 +1,90 @@
+[
+  {
+    "id": "dpo",
+    "url": "https://arxiv.org/html/2305.18290v3",
+    "read_level": "relevant_sections",
+    "locator": "Sections 3–4: reward model, KL objective, policy reparameterization, DPO loss and gradient",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "chinchilla",
+    "url": "https://arxiv.org/html/2203.15556v1",
+    "read_level": "relevant_sections",
+    "locator": "Table 1; Sections 3.1–3.3: compute budget and fitted loss",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "testcompute",
+    "url": "https://arxiv.org/html/2408.03314v1",
+    "read_level": "relevant_sections",
+    "locator": "Section 3.2 and Appendix C: oracle/predicted difficulty and uncounted difficulty estimation cost",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "cot",
+    "url": "https://arxiv.org/abs/2201.11903",
+    "read_level": "abstract_only",
+    "locator": "Abstract",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "gpt3",
+    "url": "https://arxiv.org/abs/2005.14165",
+    "read_level": "abstract_only",
+    "locator": "Abstract: few-shot examples without weight updates",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "iclbayes",
+    "url": "https://arxiv.org/abs/2111.02080",
+    "read_level": "abstract_only",
+    "locator": "Abstract: latent task inference under specified pretraining model",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "lora",
+    "url": "https://arxiv.org/abs/2106.09685",
+    "read_level": "abstract_only",
+    "locator": "Abstract: frozen weights and low-rank updates; chapter gradient derivation is original",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "kaplan",
+    "url": "https://arxiv.org/abs/2001.08361",
+    "read_level": "abstract_only",
+    "locator": "Abstract: empirical scaling laws",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "r1nature",
+    "url": "https://www.nature.com/articles/s41586-025-09422-z",
+    "read_level": "relevant_sections",
+    "locator": "Published date; DeepSeek-R1-Zero, DeepSeek-R1; Methods GRPO and reward design; Figure 1 reported results",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "fineweb",
+    "url": "https://arxiv.org/html/2406.17557v2",
+    "read_level": "relevant_sections",
+    "locator": "Sections 3.3–3.4; Appendix D model size and E.2–E.3 deduplication contrasts",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  },
+  {
+    "id": "rlvrboundary",
+    "url": "https://arxiv.org/html/2504.13837v5",
+    "read_level": "relevant_sections",
+    "locator": "Sections 4.3–4.5, Appendix C.5–C.7, Tables 3–4; measured coverage is not infinite-support proof",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures"
+  }
+]

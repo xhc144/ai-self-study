@@ -1,0 +1,177 @@
+\originalsection{方法: 相关工作}\label{alphaproof-methods-related}
+\noindent\textbf{交互式定理证明.} 本研究立足于交互式定理证明领域. 人类利用 Isabelle\cite{alphaproof-ref29}、HOL Light\cite{alphaproof-ref30}、Rocq\cite{alphaproof-ref31}、Lean\cite{alphaproof-ref1}等证明助手, 形式化定理并构造可验证证明. 这些工具促成四色定理的形式验证\cite{alphaproof-ref32}、CompCert C 编译器\cite{alphaproof-ref33}等关键软件的验证等重要成就. 但这类成功通常需要领域专家大量工作. AlphaProof 希望通过自动化定理形式化和证明的某些环节, 缓解瓶颈, 减少所需劳动和专业知识.
+
+\noindent\textbf{定理证明中的机器学习.} 机器学习与定理证明的交叉领域已取得重要进展, 尤其是 LLM\cite{alphaproof-ref34,alphaproof-ref35,alphaproof-ref36}出现, 以及 MiniF2F\cite{alphaproof-ref20}、ProofNet\cite{alphaproof-ref37}、PutnamBench\cite{alphaproof-ref21}、LISA\cite{alphaproof-ref38}、HOList\cite{alphaproof-ref39}等形式数学基准可用之后. 本工作建立在这些进展上.
+
+证明器对正确证明给出的自动反馈, 对大规模机器学习用于定理证明至关重要. 早期研究\cite{alphaproof-ref13,alphaproof-ref24,alphaproof-ref40,alphaproof-ref41}探索自动定理证明的生成式语言建模, 从人工证明学习, 并结合专家迭代或 RL. 同期, 若干研究\cite{alphaproof-ref14,alphaproof-ref42,alphaproof-ref43,alphaproof-ref44}关注 tactic 预测与前提选择的联合训练. 不同于逐步及搜索方法, Baldur\cite{alphaproof-ref45}率先使用 LLM 一次生成完整证明. 文献\cite{alphaproof-ref46}提出用非形式证明指导形式证明的“草稿、提纲与证明”方法; 子目标分解工作\cite{alphaproof-ref47}进一步扩展该路线. 神经定理证明还探索了更复杂搜索, 如 HyperTree Proof Search\cite{alphaproof-ref17}及蒙特卡洛树搜索变体\cite{alphaproof-ref48,alphaproof-ref49}. 最近, Kimina\cite{alphaproof-ref25}与 DeepSeek-Prover\cite{alphaproof-ref26}探索用 LLM 交错生成自然语言解释和形式证明.
+
+\noindent\textbf{数学的自动形式化.} 弥合人工数学与形式证明器差距的关键组成是自动形式化, 即自动将自然语言数学命题译成形式证明或形式命题. 进展包括早期工作\cite{alphaproof-ref50,alphaproof-ref51}, 以及较近的基于 LLM 的方法\cite{alphaproof-ref52,alphaproof-ref53,alphaproof-ref54}. 后续研究用合成数据微调 LLM, 增强自动形式化\cite{alphaproof-ref49,alphaproof-ref55,alphaproof-ref56}; 更近的工作关注其评估\cite{alphaproof-ref57,alphaproof-ref58}. 我们开发自动形式化专门模型, 为证明智能体生成数百万形式命题, 扩展这些研究方向.
+
+\noindent\textbf{LLM 推理.} 除专门证明器外, LLM 推理领域也有巨大进展. 思维链提示\cite{alphaproof-ref59}及常与规划结合的 RL, 显著增强了 LLM 推理, 尤其数学和编程任务\cite{alphaproof-ref60}. 最近, OpenAI O1\cite{alphaproof-ref61}和 DeepSeek R1\cite{alphaproof-ref9}展示扩展 RL 对 LLM 推理的有效性, 观察到训练时、测试时相对于计算的对数缩放. 这种方法在国际信息学奥林匹克达到相当于金牌的表现\cite{alphaproof-ref62}, 并在 AIME 表现强劲. 但 IMO 至今仍超出现有 LLM 的能力, 近期研究指出了它们有限的证明能力\cite{alphaproof-ref11,alphaproof-ref12}.
+
+\noindent\textbf{TTRL.} 我们的方法扩展测试时计算缩放\cite{alphaproof-ref9,alphaproof-ref61,alphaproof-ref62,alphaproof-ref63}和适应\cite{alphaproof-ref64,alphaproof-ref65,alphaproof-ref66}趋势, 包括早期游戏中的 TTRL\cite{alphaproof-ref67,alphaproof-ref68}. 不同于这些方法, 也不同于同期用多数票奖励学习无标签非形式数学\cite{alphaproof-ref69}、或用数值验证学习递归简化积分变式\cite{alphaproof-ref70}的 TTRL, AlphaProof 的 TTRL (最初见文献\cite{alphaproof-ref28}) 专门处理顶尖形式数学问题, 尤其竞赛数学. 它在 Lean 中为困难 IMO、Putnam 级问题生成多样相关形式变式课程, 利用 Lean 严格验证指导学习, 最终在这个形式环境发现复杂、经过验证的证明.
+
+\begin{remark}
+译注: 上段“至今”“最近”均是原作研究时点的说法, 不是对读者阅读当天最新系统表现的重新判断.
+\end{remark}
+
+\originalsection{方法: 系统组成}\label{alphaproof-methods-system}
+AlphaProof 是与基于 Lean 证明器\cite{alphaproof-ref1}的可验证环境交互、发现形式数学证明的 RL 智能体. 系统整合处理此复杂领域所需的核心技术: 定义定理证明任务的 RL 环境 (Lean 环境), 表示证明状态、建议证明后续步骤的深度网络 (证明网络), 面向形式证明的专门树搜索, 生成大规模训练问题集的翻译过程 (自动形式化), 发现一般证明策略的大规模 RL (主 RL), 以及处理困难实例的集中学习程序 (TTRL). 各组成详述如下.
+
+\originalsection{方法: Lean 环境}\label{alphaproof-methods-lean}
+\noindent\textbf{作为 RL 环境的形式数学.} 形式数学提供严格框架, 表达数学命题及其证明, 允许自动验证正确性. 我们使用 Lean 交互证明器\cite{alphaproof-ref1}, 它建立在称为归纳构造演算\cite{alphaproof-ref71}的依赖类型理论上. 在此范式中, 数学命题表示为类型, 证明对应于构造属于 (居留于) 该类型的项. 例如, 定理 $\forall P,Q,\ P\land Q\to Q\land P$ 可由函数项 \texttt{fun P Q }$\langle\texttt{hp, hq}\rangle\mapsto\langle\texttt{hq, hp}\rangle$ 证明, 该项属于对应类型. 最终由 Lean 可信内核检查正确性的, 正是这种“项模式”内容; Lean 也提供更高级“tactic 模式”, 使用户不必手工构造这些项. Tactic 通过操作含当前假设和目标的证明状态, 构造底层证明项. 例如, 上述定理也可用 \texttt{intro P Q h; simp [h]} 等 tactic 序列证明. 在 tactic 模式中, Lean 以 tactic 状态显示提供上下文, 呈现当前目标与关联假设 (原文图 1a、扩展数据图 1a). 正是这个模式被我们表述为 RL 环境 (扩展数据图 1b).
+
+\noindent\textbf{状态 ($s_t$).} 状态表示证明尝试在时间步 $t$ 的完整 Lean 逻辑上下文, 包括全部活跃假设和剩余目标.
+
+\noindent\textbf{观测.} 智能体观测到 Lean tactic 状态经过美化打印后的字符串表示.
+
+\noindent\textbf{动作 ($a_t$).} 动作是一个用文本字符串表示的 Lean tactic.
+
+\noindent\textbf{转移.} 将 $a_t$ 用于 $s_t$, 即让环境尝试执行 tactic. 若成功且有效 (见“tactic 验证和执行”), 得到假设和/或目标更新的新状态 $s_{t+1}$.
+
+\noindent\textbf{回合.} 每回合从待证的新数学命题 (初始状态) 开始. 当找到初始命题的完整、经 Lean 验证的证明, 或预设计算预算耗尽时, 回合结束.
+
+\noindent\textbf{奖励与目标.} 为激励发现最短证明, 每次应用 tactic 伴随 $r_t=-1$ 的奖励.
+
+\noindent\textbf{回报定义.} 从 $s_t$ 起的 $G_t$ 为直到终止的奖励之和. 对分解为多个独立子目标的状态 (AND 节点, 见“与 Lean 对接”中“目标分解”), 回报以及价值函数目标, 定义为各子目标的最小回报, 即最长、最难证明分支对应的回报. 定义递归应用于这些多目标状态的祖先. 将所有子目标回报相加、从而最小化整个证明的 tactic 总数, 也是自然选择; 但取最小回报鼓励把目标分成难度平衡的子目标, 提供了有趣激励. 因而状态价值对应 $-T_{\rm steps}$, 其中 $T_{\rm steps}$ 是解决所有子目标所需证明最长分支中的 tactic 数.
+
+\noindent\textbf{与 Lean 对接.} 为实现 RL, AlphaProof 与基于 Lean 4\cite{alphaproof-ref1}构建的定制环境交互. 它支持执行 tactic、处理证明状态、实现所需附加操作, 并为大规模树搜索作优化.
+
+\noindent\textbf{Lean 核心与 Mathlib 集成.} 环境以 Lean 4 为基础证明助手, 加载广泛的 Mathlib\cite{alphaproof-ref4}, 提供大量数学定义、既有定理及高层 tactic, 例如线性算术求解器 \texttt{linarith}, 供智能体使用. 为支持遇到的具体领域 (如 IMO 风格问题) 的形式化, 并提供开发时主库尚缺的通用 tactic, 我们开发一组有限定制补充: 少量自定义定义、约 100 个初等定理以及针对常见符号操作的专门可复用 tactic, 如把 \texttt{(3/4).num} 简化为 3 的数值与列表简化. 补充旨在通用地处理常见模式或缺失低层基础设施. 其中许多后来被接纳进公开 Mathlib, 突出其广泛用途和与库发展目标的一致性.
+
+\noindent\textbf{环境操作.} 为支持 AlphaProof 需求, 环境实现以下功能.
+
+\noindent\textbf{并行执行与状态管理.} 环境设计为能在多线程同时管理和操作多个 Lean 证明状态, 允许树搜索并行模拟并高效批量查询网络. 实现了保存、恢复、唯一识别 tactic 状态的机制, 使树搜索可从任意此前访问状态继续.
+
+\noindent\textbf{Tactic 验证与执行.} 网络提出文本 tactic 后, 环境尝试在当前状态执行. 成功应用不仅要求无错误执行, 还要求产生的证明项不使用不完整证明占位符 \texttt{sorry}, 且类型正确. 为评估类型正确性, 用一个私有 \texttt{internalSorry} 公理临时“关闭”未被该 tactic 直接处理的目标, 并捕捉 \texttt{have} 等 tactic 生成的中间主张. \texttt{private} 限制公理可见性, 避免在此 tactic 外使用. 最终健全性由 Lean 内核验证得到的闭合项保证, 见“与 Lean 对接”.
+
+\noindent\textbf{目标分解 (AND 节点状态拆分).} 若 tactic 成功将当前目标分解为 $N>1$ 个独立子目标, 如把 $P\land Q$ 分为证 $P$ 与证 $Q$, 环境将当前 tactic 状态拆为 $N$ 个独立子状态. 每个子状态中, 除一个目标外全部赋予 \texttt{internalSorry}, 只留下一个开放目标. 这样每个子目标能在树搜索中当作独立问题, 构成搜索算法处理 AND 节点的基础, 见“树搜索算法”.
+
+\noindent\textbf{反驳机制.} 为让智能体反驳命题, 即证明其否定, 环境提供将目标转为否定的操作. 它通过自定义 tactic 使用私有公理
+\[
+\texttt{internal\_true\_if\_false}: (\alpha\to\mathrm{False})\to\alpha.
+\]
+该 tactic 撤回全部局部假设, 应用公理并整理否定量词, 建立反驳原命题的新上下文: 它恰含此前完全量化目标的否定, 并以仍允许内核检查最终证明类型的方式实现, 见“与 Lean 对接”.
+
+\noindent\textbf{性能与稳定性.} 为使环境在 RL 高吞吐需求下高效、稳健运行, 作了若干修改. 智能体常用的关键 Mathlib tactic, 如 \texttt{linarith}, 编译为 C 代码, 使某些 tactic 的执行 (生成证明项) 快六倍. 对单次 tactic 执行施加实际经过时间限制, 补充 Lean 内部按计算步计的 heartbeat 限制. 在关键代码路径更频繁调用监测资源消耗的 \texttt{checkSystem}, 提前安全终止耗时或耗资源的 tactic. 修改 Lean 的多精度整数库, 对数值大小设硬上限, 防止极大数引起失控计算.
+
+\noindent\textbf{最终证明验证.} 为绝对保证正确性 (前提是 Lean 内核和所声明公理健全), AlphaProof 找到的每个证明或反证, 都经过最后独立验证. 在含完整定理命题和智能体证明的 \texttt{.lean} 文件上执行标准 Lean 命令行工具. 自定义命令也检查证明只依赖 Lean 内置三个常被接受的公理: 命题外延性、全局选择和商类型健全性.
+
+\begin{remark}
+译注: 搜索内部临时使用的 \texttt{internalSorry} 与 \texttt{internal\_true\_if\_false} 不应误读为最终证明获准依赖的额外公理. 原文明确另有完整证明的独立内核检查及公理依赖检查. 同时, 上述保证仍以形式命题、公理与内核健全性为前提, 不直接证明自然语言形式化的忠实性.
+\end{remark}
+
+\originalsection{方法: 证明智能体}\label{alphaproof-methods-agent}
+\noindent\textbf{证明网络.} 网络是类似文献\cite{alphaproof-ref16}的 30 亿参数编码器--解码器 Transformer\cite{alphaproof-ref15}. 编码器接收美化打印的 Lean tactic 状态, 输出当前证明状态的潜在表示. 该表示送入两个不同的头: 解码器作为策略, 在推断时并行生成 $K$ 个 tactic; 价值头位于编码器之上. 与此前工作\cite{alphaproof-ref72}一致, 价值头将价值参数化为类别分布, 估计预期回报. 关键架构超参数汇总见补充表 2.
+
+\noindent\textbf{树搜索算法.} 证明网络指导树搜索探索可能的证明构造. 搜索改编自 AlphaZero\cite{alphaproof-ref2}和 Sampled MuZero\cite{alphaproof-ref18}, 为形式证明作若干关键修改. 节点表示 Lean tactic 状态, 边表示该状态可用的 tactic (扩展数据图 1c). 每次搜索迭代有选择、扩展和反向回传三阶段. 关键超参数见补充表 3.
+
+\noindent\textbf{标准树搜索框架. 选择.} 从根状态开始, 在每个状态 $s$ 递归选择使一个改编自文献\cite{alphaproof-ref2}的概率上置信树 (PUCT) 界\cite{alphaproof-ref73,alphaproof-ref74}最大的动作 $a$, 沿路径到叶节点:
+\phantomsection\label{alphaproof-equ-a}
+\[
+Q(s,a)+c(s)\pi^{1/\tau}(a\mid s)
+\frac{\sqrt{\sum_bN(s,b)}}{N(s,a)+1}.
+\]
+其中 $N(s,a)$ 是从 $s$ 访问 $a$ 的次数. 先验 $\pi^{1/\tau}(a\mid s)$ 来自网络策略输出, 经温度 $\tau$ 调整. 探索因子为
+\phantomsection\label{alphaproof-equ-b}
+\[
+c(s)=c_{\rm init}+\log\left(\frac{N(s)+c_{\rm base}+1}{c_{\rm base}}\right).
+\]
+此前工作\cite{alphaproof-ref72}用状态 $s$ 全部子节点估计值的最大、最小值, 将 $Q(s,a)$ 归一化到 $[0,1]$; AlphaProof 则设置
+\phantomsection\label{alphaproof-equ-c}
+\[
+Q(s,a)=\gamma^{-V(s,a)-1},
+\]
+其中 $\gamma$ 是折扣因子, $V(s,a)$ 是汇总搜索价值, 语义为解决当前目标剩余步骤数的负值. 对搜索中尚未访问的状态--动作对, 将 $V(s,a)$ 设为父节点网络预测 $V(s)$ 减一个固定惩罚.
+
+\noindent\textbf{扩展.} 一次模拟到达尚未扩展的叶节点 $s_L$ 时, 从策略 $\pi(\cdot\mid s_L)$ 采样 $K$ 个 tactic. 在 Lean 环境验证每一个, 丢弃无效者; 将通往同一 Lean 状态的 tactic 合并 (允许对语法相同的假设改名或重排), 保留使一个关于字符串长度、执行时间线性依赖的成本函数最小者. 新扩展节点价值 $V(s_L)$ 由网络估计.
+
+\noindent\textbf{反向回传.} 将扩展叶节点的价值估计沿选择路径回传, 更新所有经过的状态--动作对的 $N(s,a)$ 和 $V(s,a)$ 统计.
+
+\noindent\textbf{AlphaProof 的关键适配. 渐进采样.} 为动态拓宽有潜力区域的搜索, 使用渐进采样. 若模拟路径上的节点 $s$ 满足 $n(s)\le C N(s)^\alpha$, 其中 $n(s)$ 是此前在 $s$ 采样 tactic 的次数、$N(s)$ 是总访问数, 再从 $\pi(\cdot\mid s)$ 采样 $K$ 个 tactic, 作为新边加到 $s$. 这使智能体能在关键路径上探索更广证明策略.
+
+\noindent\textbf{多目标状态的 AND 节点.} 为管理多个独立子目标 (逻辑 AND 条件), 树搜索纳入概念上类似文献\cite{alphaproof-ref17}的 AND 节点. Tactic 将目标分解为多个独立子目标时引入 AND 节点, 见扩展数据图 1. AND 节点的动作对应选择一个子目标集中处理. 选择时, 仅考虑未证明子目标. 修改 PUCT, 优先处理被认为最困难的未证明子目标, 即具有最大 $V(s,a)$ 或最小 $Q(s,a)$ 的子目标. 实现方式是在标准 PUCT 中以 $1-Q(s,a)$ 替换 $Q(s,a)$. AND 节点 $s_{\rm AND}$ 对子目标 $a$ 的修改选择式为
+\phantomsection\label{alphaproof-equ-d}
+\[
+\begin{aligned}
+(1-Q(s_{\rm AND},a))
+&+c_{\rm AND}c(s_{\rm AND})\pi(a\mid s_{\rm AND})
+\frac{\sqrt{\sum_bN(s_{\rm AND},b)}}{N(s_{\rm AND},a)+1}.
+\end{aligned}
+\]
+先验 $\pi(a\mid s_{\rm AND})$ 在全部子目标上均匀, $c_{\rm AND}$ 是额外乘子. 经 AND 节点回传时, 向上发送各子目标的最小 $V(s_{\rm AND},a)$, 与回报定义一致, 见“作为 RL 环境的形式数学”.
+
+\begin{remark}
+译注: 原文称最困难子目标有“最大 $V(s,a)$ 或最小 $Q(s,a)$”, 同时将 $V$ 定义为剩余步骤数的负值, 并给出上面的 $Q=\gamma^{-V-1}$ 及最小 $V$ 回传规则. 这些表述存在需要进一步澄清的符号关系; 本译文完整保留, 没有把 largest 静默改成 smallest. 四个显示搜索公式在原文 HTML 的定位 ID 为 Equa--Equd, 本文对应标签为 alphaproof-equ-a--d.
+\end{remark}
+
+\noindent\textbf{单次搜索.} 每次对初始问题的证明尝试, 执行一次搜索, 找到证明或反证、或模拟预算耗尽时结束. 不同于此前 AlphaZero 应用, AlphaProof 不承诺执行中间动作, 也不在一次尝试中从后续状态重新启动搜索. 这是因为形式系统中的定理证明类似完美模拟环境中的单人游戏. 智能体能在整个尝试期间保存并扩展一棵搜索树, 跨全部潜在证明路径全局分配计算资源, 无须先承诺某个中间步骤.
+
+\originalsection{方法: 训练}\label{alphaproof-methods-training}
+\noindent\textbf{预训练与监督微调.} RL 前, 证明网络通过多阶段训练初始化. 首先在约 3000 亿 token 的公开代码和数学文本上预训练, 使用下一 token 预测, 以 dropout 和掩码片段重建作正则化. 编码器处理约 12 万亿 token, 解码器重建约 3 万亿 token, 合计约遍历数据集 50 个 epoch. 这一阶段赋予策略头 (解码器) 对编程语法、逻辑结构与数学语言的广泛理解.
+
+随后进行 SFT, 使用小得多但更专门的语料: 从 Mathlib\cite{alphaproof-ref4}人工证明提取约 300,000 个状态--tactic 对, tactic 约含 500 万 token. 该过程细化策略头的 Lean 专用 tactic 生成, 并根据 Mathlib 证明结构, 初始化价值头以估计证明剩余步数. 预训练和 SFT 超参数详见补充表 4.
+
+\noindent\textbf{自动形式化.} 为向 RL 提供足够庞大、多样的课程, AlphaProof 依靠自动形式化, 将自然语言数学命题译为 Lean 形式语言 (扩展数据图 2), 从约 100 万条自然语言命题生成约 8000 万 Lean 问题.
+
+\noindent\textbf{模型与训练数据.} 自动形式化系统基于专门微调的 Gemini 1.5 Pro, 训练三元组为自然语言题面、形式化思维链、Lean 形式命题. 初始数据约 2,500 个问题, 难度从代数预备到 IMO, 由专家人工形式化. 其中约 50 题, 专家还提供详述形式化步骤的思维链. 用专家标注示例提示公开 Gemini 1.5 Pro, 为既有翻译生成更多思维链, 将种子集扩至约 7,000 个三元组; 通过临时制定的格式规则检查识别并丢弃低质量合成思维链.
+
+\noindent\textbf{迭代改进.} 为增强模型准确性, 使用类似 Self-Taught Reasoner (STaR)\cite{alphaproof-ref60}的策略. 对具有标准 (“golden”) Lean 形式化的问题子集, 当前微调模型反复生成思维链和 Lean 形式化, 过程见补充数据 1. 将生成命题与标准命题交给低计算预算 AlphaProof, 证明两者等价, 自动评估输出. 具体检查的 Lean 命题为
+\[
+\texttt{type\_of\% @generated = type\_of\% @golden}.
+\]
+获得等价的轨迹加入后续微调数据, 最终高质量三元组扩至约 70,000 个.
+
+\noindent\textbf{评估与基准比较.} 通过 A/B 研究定期监测形式化模型: 在两个内部自然语言基准上比较基线与测试模型, 一个为 50 道代表性 IMO 题, 另一个为 50 道 Putnam 题 (补充表 5). 对每题, 两模型用标准化过程各生成一个形式化候选, 过程结合多数票、语法检查、循环一致性和 AlphaProof 快速反驳/证明尝试, 见补充数据 1. 随后由约三位内部 Lean 专家评估这些成对输出的逐项正确性与并列偏好.
+
+2024 年 IMO 之前, 最终自动形式化过程在 50 道代表性 IMO 题上 pass@1 为 $60\%$, 代数 $81.3\%$、数论 $76.9\%$ 较强, 组合为较低的 $33.3\%$. 50 道 Putnam 题上 pass@1 为 $64\%$, 数论 $72.7\%$、代数 $61.9\%$、几何 $54.6\%$ 较强. 细节见扩展数据表 1.
+
+\noindent\textbf{数据集生成.} 若干关键方法支持生成适合广泛数学问题形式化的训练数据. 对“找出所有 $n$……”等需要答案的题, 与问题一起收集合理答案, 在形式化时注入. 持续用改进流程重新处理来源题目, 扩充数据. 最后, 采样为每个自然语言问题生成多个不同形式翻译, 提高包含正确形式化的机会; 错误者常在主 RL 迅速判定, 有时本身也成为有趣问题. 最终获得有效 RL 训练所需的庞大多样数据集, 约 8000 万形式数学问题.
+
+\noindent\textbf{主 RL.} 主 RL 从预训练与 SFT 初始化的网络继续训练. 架构包括集中任务匹配系统、分布式执行者和集中学习者. RL 共训练约 100 万步, 见补充表 6.
+
+\noindent\textbf{起始状态数据集.} 课程主要是自动形式化生成的约 8000 万问题命题. 另补充小部分、约 3,500 个人工形式化问题, 来自 (1) miniF2F-curriculum\cite{alphaproof-ref24}; (2) 训练形式化模型时人工形式化的问题; (3) 我们的 Putnam 训练划分 PutnamBench-train, 由文献\cite{alphaproof-ref21}排除 PutnamBench-test 得到.
+
+\noindent\textbf{任务匹配系统.} 它向可用执行者分配任务, 为每项任务从起始数据选择形式命题, 随机指定证明或反驳目标. 问题按最近 $N$ 次尝试结果确定的“趣味性”优先选择. 以下情况被认为很有趣: 尚未尝试; 尝试少于 \texttt{trust\_count}; 或次数超过 \texttt{trust\_count}, 但最近 $N$ 次有成功也有失败. 相反, 达到 \texttt{trust\_count} 次后始终未解, 或连续 \texttt{trust\_count\_proved} 次已证明、显示掌握的题, 优先级降低. 已成功反驳的命题不重试. 每次尝试的模拟预算自适应确定: 从基础值开始, 按该题最近 $N$ 次中的失败数乘法增加, 直到预定义上限, 从而给困难命题更多计算. 超参数见补充表 7.
+
+\noindent\textbf{执行者生成经验.} 收到命题和预算后, 执行者在 Lean 环境交互, 用当前证明网络指导树搜索, 见“证明智能体”和“树搜索算法”. 不同于此前工作\cite{alphaproof-ref2}, 智能体从不承诺某个动作, 而是搜索至找到 Lean 验证的证明或反证, 或耗尽模拟预算. 将验证结果报给任务匹配系统, 更新问题统计. 搜索发现的证明、反证被提取并发送给学习者; 失败尝试被筛除, 不参与网络更新.
+
+\noindent\textbf{学习者与网络更新.} 学习者持续以状态--tactic 对批量更新参数. 固定比例为 $10\%$ 来自 Mathlib SFT 数据, $90\%$ 来自保存执行者证明与反证的重放缓冲区. 策略头用交叉熵预测 tactic; 价值头预测当前证明 (子)目标所得回报. 经验生成和网络更新迭代进行, 逐步增强数学推理能力. 超参数见补充表 6.
+
+\noindent\textbf{计算预算汇总.} 通用预训练之后的 AlphaProof 专门训练包含若干高计算阶段. Mathlib SFT 较便宜, 约 10 TPU 日. 后续投入很大: 整个项目生成约 8000 万问题课程的自动形式化, 共约 100,000 TPU 日, 例如相当于十次各使用 2,000 个 TPU、持续 5 日的运行. 从课程学习的主 RL 与之规模相近, 约 80,000 TPU 日, 例如 4,000 个 TPU 使用 20 日.
+
+\originalsection{方法: 推断}\label{alphaproof-methods-inference}
+主 RL 后, AlphaProof 具备对广泛数学问题寻找证明的一般能力. 推断时面对新、未见定理, 可用多种策略分配额外计算, 增强能力.
+
+\noindent\textbf{扩展树搜索.} AlphaZero 系列\cite{alphaproof-ref2,alphaproof-ref72}推断增加计算的主要方法, 是扩大树搜索并运行多次独立尝试. 增加模拟次数, 使智能体细化网络最初建议的 tactic, 跨更多、更深推理路径整合信息, 探索其他证明序列. 搜索增强使 tactic 选择更强, 找到证明的概率更高. 多次独立尝试也提高概率, 通过并行化改善延迟. 原文图 4a、表 1 的结果展示, 将树搜索计算 (通常按计算量或实际经过时间计) 扩展, 能提高留出基准表现.
+
+\noindent\textbf{使用 TTRL 扩展.} 对广泛树搜索仍难解决的题, AlphaProof 用 TTRL 进行更深的问题专属适应 (原文图 2b). 过程包含生成问题专属变式课程、在课程上集中 RL 两阶段.
+
+\noindent\textbf{生成 TTRL 课程变式.} 对每个目标 Lean 实例 $T$, 首先生成专属合成变式课程. 使用 Gemini LLM\cite{alphaproof-ref22}, 以整理的 791 个问题--变式 Lean 对作为少样本提示. 这些示例展示, LLM 可模仿建立在经典策略\cite{alphaproof-ref75}及证明工程形式对应物上的启发式生成变式, 如简化\cite{alphaproof-ref76}、推广\cite{alphaproof-ref77}、提出引理\cite{alphaproof-ref78}、探索类比\cite{alphaproof-ref79}和从既有证明学习\cite{alphaproof-ref80}. 基于采样提示策略, LLM 生成单个候选或相关候选集合, 如问题分解、模拟证明步骤. 此外用程序生成变式, 系统覆盖局部变化, 例如系统改变 $T$ 的假设或目标. 所有候选经 Lean 语法正确性验证.
+
+为丰富课程, 一个演化改进过程迭代扩充变式集合: 有潜力的已验证变式, 例如字符串与 $T$ 高度相似者, 递归作为进一步 LLM 生成的种子, 最多迭代 $N_{\rm evo}$ 次, 报告结果中 $N_{\rm evo}=15$. LLM 与程序生成、验证、演化改进的迭代, 再去重后, 为每个 $T$ 得到数十万独特、语法有效的 Lean 变式 $V_T$. 它们构成后续 RL 的局部、结构化课程, 过程详见补充数据 1, 样例见扩展数据图 5.
+
+\noindent\textbf{集中 RL.} 生成变式后, AlphaProof 执行受 AlphaZero 启发的核心 RL, 从主 RL 通用模型初始化专门智能体. 与主 RL 的关键差别是课程: 不再是一般自动形式化命题, 而是目标 $T$ 及其语法生成变式 $V_T$. 框架可同时用于多个目标, 将所有变式纳入任务匹配系统共享起始集, 实现原文图 4b 中的并行多题 TTRL. 后续学习与主 RL 一致: 任务匹配系统协调分布式执行者, 反复证明或反驳问题, 见“主 RL”、补充表 7 的 TTRL 超参数. 成功证明或反证的状态--tactic 对经验, 用于更新专门证明网络, 见“主 RL”、补充表 6. 为优化计算预算, 目标 $T$ 一旦成功证明, 任务匹配系统就不再为 $T$ 及其 $V_T$ 分配新尝试, 因为主目标已完成. 问题专属适应使智能体细化已有策略, 可能发现解决目标的关键见解.
+
+TTRL 因而允许推断时投入大量、有针对性的计算. 将完整 RL 机制策略性地重新用于特定问题适应, 使 AlphaProof 能解固定通用模型仅靠标准推断难解的定理. 系统生成、求解相关且常更简单的变式, 逐步走向复杂目标的解答, 正是波利亚\cite{alphaproof-ref75}著作强调的人类数学求解核心原则所启发的方法. 留出基准提升展示其效果, 见原文图 4b、表 1.
+
+\originalsection{方法: 评估}\label{alphaproof-methods-evaluation}
+我们使用覆盖高中进阶、顶尖奥林匹克和大学问题的完整形式数学基准评估 AlphaProof.
+
+\noindent\textbf{标准基准.} formal-imo 包含全部由内部专家形式化的历史 IMO 非几何题, 排除几何的理由见“IMO 风格几何”. 它有 258 题: 代数 107、组合 77、数论 74, 有官方主题时使用官方分类, 否则由领域专家分类. 逐题表现见扩展数据图 6. 我们也评估内部修订的 miniF2F\cite{alphaproof-ref20}, 将 test 和 valid 均作为留出测试集. 修订处理原数据的形式化错误, 如可反驳命题、或假设自相矛盾的命题. 同时评估包含困难本科题的 Putnam 基准\cite{alphaproof-ref21}. 留出集 PutnamBench-test 含 1990 年起偶数年份的 189 题, 每题可有一个或多个主题. 最常见主题为代数 78、分析 57、数论 33、几何 20、线性代数 18. 项目中发现原 PutnamBench 的若干形式化错误, 随后在上游修订.
+
+\noindent\textbf{数据隔离与推广.} 为严格评估推广能力, 我们精心管理各训练阶段数据隔离. 基础语言模型的初始预训练使用广泛网络语料, 可能偶然含某些历史题的自然语言讨论或解答, 但预训练流程明确排除所有 Lean 代码, 特别是评估基准对应的形式证明. SFT 仅训练 Mathlib, 它不含评估问题. 主 RL 只用自动形式化课程和人工补充题, 见“主 RL”. 关键是, 从自动形式化流程明确移除所有被判断与任一评估题过于相似的文档. 这一隔离协议旨在让表现反映学到的推理能力而非记忆.
+
+\noindent\textbf{IMO 风格几何.} 开发时 Mathlib 高层几何库存在具体缺口, 如内切圆、全等, 因而在 Lean 中处理 IMO 平面几何困难, 许多题连陈述都不实际. 所以专门奥林匹克几何题, 如 IMO 2024 P4, 使用专为现代奥林匹克几何设计的 AlphaGeometry 2\cite{alphaproof-ref3}. AlphaProof 则使用 Mathlib 可用几何, 处理几何--组合混合 IMO 题及全部 PutnamBench 题, 后者纯平面几何较少.
+
+\noindent\textbf{IMO 2024 评估协议与方法.} 为严格评估现场、分布外推广, 比赛遵循特定预定义协议. 事先与 Timothy Gowers 爵士教授和 Joseph Myers 博士约定, 由他们作为独立专家评委, 按官方 IMO 给分规则评估系统任何解答.
+
+\noindent\textbf{赛前冻结.} IMO 2024 正式题目发布前, 主 RL 停止, 全部系统超参数冻结.
+
+\noindent\textbf{问题形式化.} 公布后立即由专家人工将五道非几何题译为 Lean. 这一做法经指定 IMO 评委咨询后采用: 他们认为主要评估目标是系统解答已经形式陈述的问题的能力, 而非竞赛条件下从自然语言翻译题目的能力. 专家形式化也对应人类考生必要时可获得母语题目翻译的情形. P5 (组合) 尤其难以形式化, 专家最初尝试在第一日没有成功. 与人工工作并行, 我们作自动形式化侧面实验, 实际成功形式化 P1、P2、P6. 对“找出所有……”等需要答案的题, 形式化中答案部分用 \texttt{sorry} 占位, 系统负责生成候选, 见主文.
+
+\noindent\textbf{答案猜测.} 生成过程专门优化为尽可能在大量候选中包含正确答案, 即对很大 $k$ 的 pass@k 优化, 即使会产生许多合理但错误候选. 我们生成 $k=500$ 个答案, 在所有适用题成功猜出正确者. AlphaProof 随后在高效筛选这些提议中至关重要: 低计算反驳模式下, 每候选树搜索最多 10 分钟, 它反驳了 Gemini 错误候选中 P1 的 $99\%$、P2 的 $98\%$、P6 的 $7\%$, 筛出有潜力者作完整证明.
+
+\noindent\textbf{几何题.} 因“IMO 风格几何”说明的理由, P4 由 AlphaGeometry 2\cite{alphaproof-ref3}处理.
+
+\noindent\textbf{验证与评判.} AlphaProof 产生的 P1、P2、P6 解答 (扩展数据图 7--9), 先由 Lean 内核验证正确, 再由 Timothy Gowers 爵士教授和 Joseph Myers 博士按官方 IMO 给分规则评判. 他们给每道已解决题满分.

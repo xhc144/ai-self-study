@@ -1,0 +1,76 @@
+{
+  "version": "arXiv:2605.26733v1",
+  "date": "2026-05-26",
+  "accessed_on": "2026-10-12",
+  "primary_materials": [
+    "指定版PDF13页",
+    "指定版官方source全部发表输入文件",
+    "由官方source和icml2026.bst生成的41项实际bbl",
+    "全部10个作者图件,组成8幅发表图"
+  ],
+  "source_file_sha256": {
+    "example_paper.tex": "41d1343098328cb5f0d6ad1341e667a0f97f9c10ec7e1f85aae58791acd7af83",
+    "example_paper.bib": "96b160905ea79258e1055c50f162ee3d2b10b044306b705af9fc564c3934e2ca",
+    "example_paper.bbl": "04b50a33723d60a6a0241280541d60d4a0c308b7bb96670f4c3dc61516ecdf8f",
+    "tex/intro.tex": "595adb94e736e1c9e8870a1c43f756a407fbeb989b1e6fbdb4347b09581f375f",
+    "tex/relatedwork.tex": "36a18bbb023c4c3c53361276cc6773a0a2378f854fc51b769e16a1bd02b6b441",
+    "tex/pre.tex": "921effe1ceedb1be3f4c5b8cfad2664a3b126f4f00fb0bc682e0b5c7e1290bbe",
+    "tex/method.tex": "496fe6fa46307ad071b4df4e3eb4fbb2317f8e9e2a76468fce0c8dbde4cd2540",
+    "tex/jsrr.tex": "8fb41913f7a0a7f9257d935fff9d2302e920aa5a2d4de3883974e35ce754e7fa",
+    "tex/exp.tex": "15f635ad06b8eed73526377ed9c9ad4fd85eb4cd98c66ef4cb6011affce5542f",
+    "tex/con.tex": "d4b477af8e9f5e166332d78e621713964bc6d6ec2658c345d2dbdc5d8389fc57",
+    "tex/app.tex": "60cfa1719607ffcad4a5c621427bdffab68937014066284db40e86e16174354e"
+  },
+  "read_sections": "摘要、引言、相关工作、预备、循环动力学、JSRR全部理论说明、实验、结论、影响声明、致谢、A/B/C附录、训练算法、所有书目",
+  "formal_proof_check": {
+    "active_proof_environments": 0,
+    "active_theorem_environments": 0,
+    "result": "原文没有正式证明环境;没有遗漏作者证明,也没有把译者补充伪装成作者证明"
+  },
+  "numeric_audit": {
+    "four_tables": "全部数值序列相同",
+    "source_field_counts": [
+      20,
+      137,
+      20,
+      4
+    ],
+    "table_2_canonical_values": [
+      "70.46",
+      "52.97",
+      "74.18",
+      "65.55"
+    ],
+    "training": [
+      "400K",
+      "4 A800",
+      "1 epoch",
+      "mu1.7/sigma0.4/range1-16",
+      "lambda0.1",
+      "1e-6"
+    ],
+    "arithmetic": [
+      "100000",
+      "d512",
+      "heads8",
+      "ff1024",
+      "train4",
+      "mu2/sigma0.7/range1-100",
+      "1e-4"
+    ]
+  },
+  "original_issues_preserved": [
+    "正文式4与附录算法的SFT系数不同",
+    "正文式3向量v与后文v1记号不同",
+    "随机循环段Pre-Sandwich后的external类别与前述分类相反",
+    "引言指数增长与诊断线性放大不同",
+    "幂迭代缺少谱条件,单步估计一般不等于谱半径",
+    "已存在固定点附近的局部稳定结论不支持全输入全轨迹正确性",
+    "引言百分比差无法从主表直接恢复",
+    "效率相对值未明确单位",
+    "原文不动点/吸引子及局部渐近稳定定义比标准动力系统条件简略"
+  ],
+  "graphics_rights_note": "根代理已独立核验CC BY4.0;已查看图件和发表图注,未见单独第三方credit例外. 未复制参考文献所指的外部论文全文.",
+  "translation_check": "按源码段落逐节完成,关键术语、公式、算法循环和数值再核对. 同一代理复核,不冒充独立专家.",
+  "remaining_blockers": []
+}

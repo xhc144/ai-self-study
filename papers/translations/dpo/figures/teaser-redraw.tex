@@ -1,0 +1,18 @@
+% Chinese content redraw of original Figure 1; CC BY 4.0 attribution in caption and rights.json.
+\begin{minipage}[t]{.57\linewidth}
+\centering
+\textbf{基于人类反馈的强化学习（RLHF）}\par
+提示 $x$：“为我写一首关于爵士乐历史的诗”\par
+偏好数据：$y_w\succ y_l$\par
+$\displaystyle\text{偏好数据}\xrightarrow{\text{最大似然}}\text{奖励模型}$\par
+$\displaystyle\text{奖励模型}\xrightarrow{\text{标注奖励}}\text{语言模型策略}$\par
+$\displaystyle\text{语言模型策略}\xrightarrow{\text{采样续写}}\text{奖励模型}$\par
+\textbf{强化学习循环}
+\end{minipage}\hfill
+\begin{minipage}[t]{.40\linewidth}
+\centering
+\textbf{直接偏好优化（DPO）}\par
+提示 $x$：“为我写一首关于爵士乐历史的诗”\par
+偏好数据：$y_w\succ y_l$\par
+$\displaystyle\text{偏好数据}\xrightarrow{\text{最大似然}}\text{最终语言模型}$
+\end{minipage}

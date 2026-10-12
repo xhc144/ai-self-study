@@ -1,0 +1,145 @@
+{
+  "figures": [
+    {
+      "source_figure_id": "S1.F1",
+      "source_tex_label": "fig:teaser",
+      "original_work": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "attribution_authors": [
+        "Rafael Rafailov",
+        "Archit Sharma",
+        "Eric Mitchell",
+        "Stefano Ermon",
+        "Christopher D. Manning",
+        "Chelsea Finn"
+      ],
+      "source_url": "https://arxiv.org/html/2305.18290v3#S1.F1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "mode": "content_redraw",
+      "files": [
+        "figures/teaser-redraw.tex"
+      ],
+      "basis": "Author algorithm schematic; original icons and screenshot styling not copied.",
+      "translation_caption_label": "dpo-fig:teaser",
+      "changes": "Chinese caption and interpretive axis/legend translations; content redraw only where stated.",
+      "asset_sha256": {
+        "figures/teaser-redraw.tex": "371d2ec6b38a14cabfbbe27bbc16ccf495d5ab24ce2c1943db172c2389fdbc13"
+      }
+    },
+    {
+      "source_figure_id": "S6.F2",
+      "source_tex_label": "fig:frontier-tldr-main",
+      "original_work": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "attribution_authors": [
+        "Rafael Rafailov",
+        "Archit Sharma",
+        "Eric Mitchell",
+        "Stefano Ermon",
+        "Christopher D. Manning",
+        "Chelsea Finn"
+      ],
+      "source_url": "https://arxiv.org/html/2305.18290v3#S6.F2",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "mode": "author_plot_reproduction",
+      "files": [
+        "figures/frontier.pdf",
+        "figures/tldr_winrate_vs_temp.pdf"
+      ],
+      "basis": "Author-generated experimental curves; no third-party credit or separate exception found.",
+      "translation_caption_label": "dpo-fig:frontier-tldr-main",
+      "changes": "Chinese caption and interpretive axis/legend translations; content redraw only where stated.",
+      "asset_sha256": {
+        "figures/frontier.pdf": "701010dd5b9bb85c131eb7ac65e6e20e098ea7f149285c62e481eb2d348e3802",
+        "figures/tldr_winrate_vs_temp.pdf": "df97e295ecc29b8a9acdd42c5fbaf0b471b9e77ec62177b9e17b721eeec874a3"
+      }
+    },
+    {
+      "source_figure_id": "S6.F3",
+      "source_tex_label": "fig:dialogue-main",
+      "original_work": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "attribution_authors": [
+        "Rafael Rafailov",
+        "Archit Sharma",
+        "Eric Mitchell",
+        "Stefano Ermon",
+        "Christopher D. Manning",
+        "Chelsea Finn"
+      ],
+      "source_url": "https://arxiv.org/html/2305.18290v3#S6.F3",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "mode": "author_plot_reproduction",
+      "files": [
+        "figures/dialogue_winrate_vs_temp.pdf",
+        "figures/dialogue_winrate_vs_steps.pdf"
+      ],
+      "basis": "Author-generated experimental curves; no third-party credit or separate exception found.",
+      "translation_caption_label": "dpo-fig:dialogue-main",
+      "changes": "Chinese caption and interpretive axis/legend translations; content redraw only where stated.",
+      "asset_sha256": {
+        "figures/dialogue_winrate_vs_temp.pdf": "e0354ff7855be57c799dbfe390a87331173004bb9fc0da3bf5369dac222fdfcf",
+        "figures/dialogue_winrate_vs_steps.pdf": "010acdb64f1c20e37b391a1f3827d3e0b4948fd1c096081db2bc32abd1d863a4"
+      }
+    },
+    {
+      "source_figure_id": "A4.F4",
+      "source_tex_label": "fig:best-of-n",
+      "original_work": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "attribution_authors": [
+        "Rafael Rafailov",
+        "Archit Sharma",
+        "Eric Mitchell",
+        "Stefano Ermon",
+        "Christopher D. Manning",
+        "Chelsea Finn"
+      ],
+      "source_url": "https://arxiv.org/html/2305.18290v3#A4.F4",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "mode": "author_plot_reproduction",
+      "files": [
+        "figures/dialogue_winrate_vs_temp_rerank.pdf",
+        "figures/tldr_rerank_vs_temp.pdf"
+      ],
+      "basis": "Author-generated experimental curves; no third-party credit or separate exception found. Right panel includes N=256 not listed by original caption; explicitly noted.",
+      "translation_caption_label": "dpo-fig:best-of-n",
+      "changes": "Chinese caption and interpretive axis/legend translations; content redraw only where stated.",
+      "asset_sha256": {
+        "figures/dialogue_winrate_vs_temp_rerank.pdf": "b71c5bd7daef0a329e1539b361aee16ddfa8f33c2ee621abd4d23065dd843f75",
+        "figures/tldr_rerank_vs_temp.pdf": "ee55988408ab9d07ae1d69baab401730c01e6fe34e2d26c5fcb084fd3a052be8"
+      }
+    },
+    {
+      "source_figure_id": "A4.F5",
+      "source_tex_label": "fig:survey",
+      "original_work": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "attribution_authors": [
+        "Rafael Rafailov",
+        "Archit Sharma",
+        "Eric Mitchell",
+        "Stefano Ermon",
+        "Christopher D. Manning",
+        "Chelsea Finn"
+      ],
+      "source_url": "https://arxiv.org/html/2305.18290v3#A4.F5",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "mode": "content_redraw",
+      "files": [
+        "figures/survey-redraw.tex"
+      ],
+      "basis": "Original screenshot depicts SurveyMonkey; third-party UI styling is excluded. All visible scientific example text/options translated and typeset anew; not a pixel-faithful screenshot reproduction.",
+      "translation_caption_label": "dpo-fig:survey",
+      "changes": "Chinese caption and interpretive axis/legend translations; content redraw only where stated.",
+      "asset_sha256": {
+        "figures/survey-redraw.tex": "b0ae24facf33c0ea573f1a2191779ac3ce1ad8ca89f48d8b78a377c71faefffe"
+      }
+    }
+  ],
+  "license_evidence": {
+    "identifier": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "evidence": "Official arXiv v3 HTML header explicitly states License: CC BY 4.0. Source and paper have no visible separate exception for author-generated experimental plots; the SurveyMonkey screenshot is not redistributed."
+  }
+}

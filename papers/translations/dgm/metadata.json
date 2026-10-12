@@ -1,0 +1,82 @@
+{
+  "title": "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents",
+  "chinese_title": "达尔文哥德尔机：自我改进智能体的开放式演化",
+  "authors": [
+    "Jenny Zhang",
+    "Shengran Hu",
+    "Cong Lu",
+    "Robert Lange",
+    "Jeff Clune"
+  ],
+  "co_first_authors": [
+    "Jenny Zhang",
+    "Shengran Hu"
+  ],
+  "co_senior_authors": [
+    "Robert Lange",
+    "Jeff Clune"
+  ],
+  "version": "arXiv:2505.22954v3",
+  "version_date": "2026-03-12",
+  "original_pdf_pages": 72,
+  "original_url": "https://arxiv.org/abs/2505.22954v3",
+  "pdf_url": "https://arxiv.org/pdf/2505.22954v3",
+  "source_url": "https://arxiv.org/src/2505.22954v3",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_verification": "Parent agent independently verified the official v3 view-license link before delegation.",
+  "translator": "ai-self-study contributors",
+  "translation_status": "Unofficial machine-assisted Chinese translation; no independent human editorial review claimed.",
+  "changes": [
+    "Translated all substantive main-text and appendix prose, ethics/reproducibility/acknowledgments, captions and prompt/output examples.",
+    "Preserved program identifiers, executable code/diffs, task IDs and full 184-entry bibliographic metadata in their original language to keep exact semantics and traceability.",
+    "Reformatted into the authorized fixed originalchapter/originalsection template; prefixed labels and citations with dgm-.",
+    "Replaced generated appendix TOC with explicit translated index; represented all three algorithms as complete ordered steps.",
+    "Added separately marked translator notes on frozen model weights, finite benchmark evidence, and the original eligibility-normalization notation.",
+    "Preserved author-produced vector figures and English labels with individual CC BY 4.0 credit lines."
+  ],
+  "original_hashes": {
+    "pdf_sha256": "13ff4abe0c7ad4a7dd3b4876d19a8bf940e39e70dabbf06065aa774a6c3457de",
+    "source_archive_sha256": "9ce27273d9175badbb14d1181bc6166c7afd5e7989ac274d3d5187413e19b9ed",
+    "main_tex_sha256": "bb37979f54504d9824fbdc0a262915e60441b1ed6e20be0edb406a1e08415f01",
+    "main_bib_sha256": "b06c29c2899688045780301ce5b4fd133b2103b144854fc50dd931c1391d1433"
+  },
+  "dependencies": [
+    "fixed authorized book template",
+    "graphicx",
+    "booktabs",
+    "longtable",
+    "fvextra"
+  ],
+  "integration_input": "../papers/translations/dgm/body.tex",
+  "author_affiliations": {
+    "Jenny Zhang": [
+      1,
+      2
+    ],
+    "Shengran Hu": [
+      1,
+      2,
+      3
+    ],
+    "Cong Lu": [
+      1,
+      2,
+      3
+    ],
+    "Robert Lange": [
+      3
+    ],
+    "Jeff Clune": [
+      1,
+      2,
+      4
+    ]
+  },
+  "affiliations": {
+    "1": "University of British Columbia",
+    "2": "Vector Institute",
+    "3": "Sakana AI",
+    "4": "Canada CIFAR AI Chair"
+  }
+}

@@ -1,0 +1,17 @@
+% Unofficial Chinese translation of the exact arXiv:2509.14234v3 version.
+% Dependencies in integrating main: authorized fixed template, graphicx, booktabs, longtable, fvextra.
+\originalchapter{计算即教师：将推理计算转为无参考监督}\label{cat-paper}
+原作：Dulhan Jayalath\textsuperscript{1,\dag}、Shashwat Goel\textsuperscript{2,3,\dag}、Thomas Foster\textsuperscript{1,5}、Parag Jain\textsuperscript{5}；\par
+\noindent Suchin Gururangan\textsuperscript{4,\dag}、Cheng Zhang\textsuperscript{5}、Anirudh Goyal\textsuperscript{5}、Alan Schelten\textsuperscript{5}.
+单位：\textsuperscript{1}牛津大学；\textsuperscript{2}ELLIS Institute Tübingen；\textsuperscript{3}马克斯·普朗克智能系统研究所；\textsuperscript{4}Anthropic；\textsuperscript{5}Meta Superintelligence Labs. \textsuperscript{\dag}表示该工作在 Meta Superintelligence Labs 完成.
+通信地址：\texttt{dulhan@robots.ox.ac.uk}、\texttt{agi@meta.com}、\texttt{alanschelten@meta.com}.
+
+指定原文为 \url{https://arxiv.org/abs/2509.14234v3}，v3 日期 2026 年 5 月 9 日，首次提交日期 2025 年 9 月 17 日. 指定 PDF 首页面内日期为 2026 年 5 月 12 日，而同版本 HTML 的内部日期显示 2026 年 8 月 24 日；源文件使用排版时日期宏，二者均与固定的 arXiv 版本日期分开记录. 该版本官方页面的许可证链接指向 CC BY 4.0：\url{https://creativecommons.org/licenses/by/4.0/}. 本译稿由 ai-self-study contributors 以机器辅助方式译制，非官方译本. 改动包括完整中文翻译、授权固定版式重排、交叉引用与图表编号适配、术语表及单独标记的译者说明. 原书目元数据、模型与程序标识符、XML 标签和必要输出标记保留原文. 论文原图或由原作者 TikZ 代码导出的矢量图逐图署名，图内英文标注保留. 未复制原稿的公司标志、文档类或字体文件. 会议版本仅用于版本信息对照，本文翻译和许可依据不与它混用. 下文“我们”均指原作者.
+
+\begin{remark}
+译者说明：伪参考是由模型生成的监督估计，不等于外部真值. 二元评分细则由模型提议并由模型判别，仍可能有遗漏、错误和共同偏差. 数学领域的答案匹配奖励只检验与伪参考的一致性；医疗领域的实验分数也不能直接当作临床真实性或安全性的证明. 以下正文忠实保留原作的结论和数值，这些说明与正文分开.
+\end{remark}
+\input{../papers/translations/cat/sections/01-main.tex}
+\input{../papers/translations/cat/sections/02-appendices.tex}
+\input{../papers/translations/cat/glossary.tex}
+\input{../papers/translations/cat/references.tex}

@@ -1,0 +1,58 @@
+[
+  {
+    "source": "figs/Engram_system.pdf",
+    "output": "figures/engram_system.pdf",
+    "sha256": "84983d1c2e8bfdce8a512c303bfa7ad84064d4b5e91c1f7d0dfda6d7713869cc",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  },
+  {
+    "source": "figs/arch_ablation.pdf",
+    "output": "figures/arch_ablation.pdf",
+    "sha256": "04b38742900d9f7420f31835594ae8706df1a8e65c9136b33dd3333e8003b05e",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  },
+  {
+    "source": "figs/benchmark_curve.pdf",
+    "output": "figures/benchmark_curve.pdf",
+    "sha256": "f821aa95358e0e497e02bbd01042fada327ec4a754ef39d7f863fcdc1ab6c7fd",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  },
+  {
+    "source": "figs/engram_arch.pdf",
+    "output": "figures/engram_arch.pdf",
+    "sha256": "c3670417e213e0c29bfd10f14473cb44ca192640a183e046663245c1a5c7b9eb",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  },
+  {
+    "source": "figs/logitlens_and_cka.pdf",
+    "output": "figures/logitlens_and_cka.pdf",
+    "sha256": "d8496c7bf8cdca0e96457d2efdb5ed11b9c28cbaf6c50283152efe02ec2e39fd",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  },
+  {
+    "source": "figs/scaling_law.pdf",
+    "output": "figures/scaling_law.pdf",
+    "sha256": "56b62274513b51f98e7e4d80e11a5f4811479cee5e10f88120caa827019454ae",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  },
+  {
+    "source": "figs/sensitivity_analysis.pdf",
+    "output": "figures/sensitivity_analysis.pdf",
+    "sha256": "c325eed287e8a5130c64cf4723a3419f63d40253f2e14fdffdf9dc4ac3ff1ea4",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  },
+  {
+    "source": "figs/visualization.pdf",
+    "output": "figures/visualization.pdf",
+    "sha256": "73a6d1b5fd035a0928605768886d228483d495cc4f00b79d0312bdd9b5dabcee",
+    "change": "原始矢量PDF图保留,图内英文另附中文说明;系统图文件名大小写规范化",
+    "third_party_credit": null
+  }
+]

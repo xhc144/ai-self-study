@@ -1,0 +1,11 @@
+{
+  "all_labels_prefixed": true,
+  "all_bibliography_keys_prefixed": true,
+  "missing_reference_labels": [],
+  "missing_bibliography_keys": [],
+  "duplicate_labels": [],
+  "bibliography_count": 51,
+  "full_degeneration_strings_preserved": true,
+  "code_math_lines_preserved": true,
+  "source_model_examples_executed": false
+}

@@ -109,7 +109,18 @@
     "limitations": "原始翻译 encoder-decoder; 不是智能产生的充分理论。",
     "rights_note": "arXiv non-exclusive; 文首另有图表学术/新闻署名使用许可, 此项目不复用",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "key": "attention",
+      "title": "Attention Is All You Need",
+      "version": "arXiv:1706.03762v7",
+      "url": "https://arxiv.org/html/1706.03762v7",
+      "read_level": "relevant_sections",
+      "locator": "3.2--3.5",
+      "role": "attention architecture and scaling; all local derivatives are derived in the chapters",
+      "accessed_on": "2026-10-12",
+      "limitations": "Selected sections only; no full text or third-party source code packaged. Parent owns redistribution/license audit."
+    }
   },
   {
     "id": "adam",
@@ -141,7 +152,15 @@
     "limitations": "损失规律不直接推出意识、可靠性或所有下游能力。",
     "rights_note": "arXiv non-exclusive; 仅链接与原创解释",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "id": "kaplan",
+      "url": "https://arxiv.org/abs/2001.08361",
+      "read_level": "abstract_only",
+      "locator": "Abstract: empirical scaling laws",
+      "accessed_on": "2026-10-12",
+      "reuse": "original exposition; no copied paper text or figures"
+    }
   },
   {
     "id": "chinchilla",
@@ -157,7 +176,15 @@
     "limitations": "最优点随数据、架构、推理成本改变; 不把经验比值当永恒常数。",
     "rights_note": "arXiv non-exclusive; 不镜像",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "id": "chinchilla",
+      "url": "https://arxiv.org/html/2203.15556v1",
+      "read_level": "relevant_sections",
+      "locator": "Table 1; Sections 3.1–3.3: compute budget and fitted loss",
+      "accessed_on": "2026-10-12",
+      "reuse": "original exposition; no copied paper text or figures"
+    }
   },
   {
     "id": "flash",
@@ -173,7 +200,18 @@
     "limitations": "改进 IO 不等于一般精确稠密注意力算术复杂度线性。",
     "rights_note": "仅链接与原创解释; 不复用代码",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "key": "flash",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "version": "arXiv:2205.14135v2",
+      "url": "https://arxiv.org/html/2205.14135v2",
+      "read_level": "relevant_sections",
+      "locator": "3.1; forward algorithm and recomputation discussion",
+      "role": "tiling and IO distinction; CPU experiment is not a GPU performance reproduction",
+      "accessed_on": "2026-10-12",
+      "limitations": "Selected sections only; no full text or third-party source code packaged. Parent owns redistribution/license audit."
+    }
   },
   {
     "id": "instruct",
@@ -205,7 +243,15 @@
     "limitations": "低秩限制不适合所有目标, 不消除全部训练内存。",
     "rights_note": "论文non-exclusive; 微软代码MIT另许可, 本项目未复制",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "id": "lora",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "read_level": "abstract_only",
+      "locator": "Abstract: frozen weights and low-rank updates; chapter gradient derivation is original",
+      "accessed_on": "2026-10-12",
+      "reuse": "original exposition; no copied paper text or figures"
+    }
   },
   {
     "id": "dpo",
@@ -221,7 +267,15 @@
     "limitations": "有限数据、偏好假设与参数化误差限制效用。",
     "rights_note": "CC BY 4.0; 本项目独立推导和实现",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "id": "dpo",
+      "url": "https://arxiv.org/html/2305.18290v3",
+      "read_level": "relevant_sections",
+      "locator": "Sections 3–4: reward model, KL objective, policy reparameterization, DPO loss and gradient",
+      "accessed_on": "2026-10-12",
+      "reuse": "original exposition; no copied paper text or figures"
+    }
   },
   {
     "id": "cot",
@@ -237,7 +291,15 @@
     "limitations": "可见文字不等于内部完整因果过程; 不保证所有任务。",
     "rights_note": "论文许可见原页面; 不再分发全文",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "id": "cot",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "read_level": "abstract_only",
+      "locator": "Abstract",
+      "accessed_on": "2026-10-12",
+      "reuse": "original exposition; no copied paper text or figures"
+    }
   },
   {
     "id": "testcompute",
@@ -253,7 +315,15 @@
     "limitations": "模型、任务、选择器和预算需一起标记。",
     "rights_note": "CC BY 4.0; 仅原创摘要性解释",
     "accessed_on": "2026-10-11",
-    "role": "reference or further reading"
+    "role": "reference or further reading",
+    "v03_reading": {
+      "id": "testcompute",
+      "url": "https://arxiv.org/html/2408.03314v1",
+      "read_level": "relevant_sections",
+      "locator": "Section 3.2 and Appendix C: oracle/predicted difficulty and uncounted difficulty estimation cost",
+      "accessed_on": "2026-10-12",
+      "reuse": "original exposition; no copied paper text or figures"
+    }
   },
   {
     "id": "r1",
@@ -354,7 +424,7 @@
   {
     "id": "workspace",
     "title": "Verbalizable Representations Form a Global Workspace in Language Models",
-    "authors": "Jack Lindsey 等",
+    "authors": "Wes Gurnee 等",
     "year_or_version": "2026-07-06",
     "url": "https://transformer-circuits.pub/2026/workspace/index.html",
     "prerequisites": "表征、功能理论、干预",
@@ -526,5 +596,228 @@
     "rights_note": "仅链接与原创推导；不转载网页或其程序",
     "accessed_on": "2026-10-11",
     "role": "reference for v0.2 uncertainty method"
+  },
+  {
+    "key": "layernorm",
+    "title": "Layer Normalization",
+    "version": "arXiv:1607.06450",
+    "url": "https://arxiv.org/abs/1607.06450",
+    "read_level": "relevant_sections",
+    "locator": "pp. 2--3: layer statistics and shared gain/bias",
+    "role": "per-example layer normalization; epsilon-conditioned derivative is locally derived",
+    "accessed_on": "2026-10-12",
+    "limitations": "Selected sections only; no full text or third-party source code packaged. Parent owns redistribution/license audit.",
+    "id": "layernorm",
+    "authors": "Jimmy Lei Ba, Jamie Ryan Kiros, Geoffrey E. Hinton",
+    "year_or_version": "2016",
+    "question": "每个样本内的归一化与梯度"
+  },
+  {
+    "key": "calibration",
+    "title": "On Calibration of Modern Neural Networks",
+    "version": "ICML 2017",
+    "url": "https://proceedings.mlr.press/v70/guo17a.html",
+    "read_level": "relevant_sections",
+    "locator": "Section 2: definitions; Section 4.2 / printed p. 6: temperature scaling",
+    "role": "temperature scaling and top-label calibration distinction; probability calibration derivation and experiment locally produced",
+    "accessed_on": "2026-10-12",
+    "limitations": "Selected sections only; no full text or third-party source code packaged. Parent owns redistribution/license audit.",
+    "id": "calibration",
+    "authors": "Chuan Guo, Geoff Pleiss, Yu Sun, Kilian Q. Weinberger",
+    "year_or_version": "ICML 2017",
+    "question": "准确率与校准为何不同"
+  },
+  {
+    "key": "fineweb",
+    "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+    "version": "arXiv:2406.17557v2 (2024-10-31)",
+    "url": "https://arxiv.org/abs/2406.17557v2",
+    "read_level": "relevant_sections",
+    "locator": "3.1--3.4",
+    "role": "controlled data comparisons and deduplication counterexample; not reproduced here",
+    "accessed_on": "2026-10-12",
+    "limitations": "Selected sections only; no full text or third-party source code packaged. Parent owns redistribution/license audit.",
+    "id": "fineweb",
+    "v03_reading": {
+      "id": "fineweb",
+      "url": "https://arxiv.org/html/2406.17557v2",
+      "read_level": "relevant_sections",
+      "locator": "Sections 3.3–3.4; Appendix D model size and E.2–E.3 deduplication contrasts",
+      "accessed_on": "2026-10-12",
+      "reuse": "original exposition; no copied paper text or figures"
+    },
+    "authors": "Guilherme Penedo 等",
+    "year_or_version": "v2 2024-10-31",
+    "question": "受控数据过滤与去重消融"
+  },
+  {
+    "key": "rope",
+    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+    "version": "arXiv:2104.09864v5",
+    "url": "https://arxiv.org/abs/2104.09864v5",
+    "read_level": "relevant_sections",
+    "locator": "3.1--3.2",
+    "role": "rotary position encoding; two-dimensional rotation proof and counterexample derived locally",
+    "accessed_on": "2026-10-12",
+    "limitations": "Selected sections only; no full text or third-party source code packaged. Parent owns redistribution/license audit.",
+    "id": "rope",
+    "authors": "Jianlin Su 等",
+    "year_or_version": "2021; v5 2023",
+    "question": "相对位置与旋转内积"
+  },
+  {
+    "id": "gpt3",
+    "url": "https://arxiv.org/abs/2005.14165",
+    "read_level": "abstract_only",
+    "locator": "Abstract: few-shot examples without weight updates",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures",
+    "title": "Language Models are Few-Shot Learners",
+    "authors": "Tom B. Brown 等",
+    "year_or_version": "2020",
+    "question": "上下文学习的实验入口",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "iclbayes",
+    "url": "https://arxiv.org/abs/2111.02080",
+    "read_level": "abstract_only",
+    "locator": "Abstract: latent task inference under specified pretraining model",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures",
+    "title": "An Explanation of In-context Learning as Implicit Bayesian Inference",
+    "authors": "Sang Michael Xie, Aditi Raghunathan, Percy Liang, Tengyu Ma",
+    "year_or_version": "2021; ICLR 2022",
+    "question": "潜变量更新作为受条件限制的解释",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "r1nature",
+    "url": "https://www.nature.com/articles/s41586-025-09422-z",
+    "read_level": "relevant_sections",
+    "locator": "Published date; DeepSeek-R1-Zero, DeepSeek-R1; Methods GRPO and reward design; Figure 1 reported results",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures",
+    "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning",
+    "authors": "DeepSeek-AI 等",
+    "year_or_version": "Nature 645, 633–638, 2025-09-17",
+    "question": "可验证奖励、冷启动与后训练证据",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "rlvrboundary",
+    "url": "https://arxiv.org/abs/2504.13837v5",
+    "read_level": "relevant_sections",
+    "locator": "Sections 4.3–4.5, Appendix C.5–C.7, Tables 3–4; measured coverage is not infinite-support proof",
+    "accessed_on": "2026-10-12",
+    "reuse": "original exposition; no copied paper text or figures",
+    "title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+    "authors": "Yang Yue 等",
+    "year_or_version": "v5 2025-11-24; NeurIPS 2025",
+    "question": "pass@k覆盖与分布重加权的边界",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "ig",
+    "title": "Axiomatic Attribution for Deep Networks",
+    "authors": "Mukund Sundararajan, Ankur Taly, Qiqi Yan",
+    "year_or_version": "ICML 2017",
+    "url": "https://arxiv.org/abs/1703.01365",
+    "question": "积分梯度与完整性",
+    "accessed_on": "2026-10-12",
+    "read_level": "official_metadata_and_selected_sections",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "patching",
+    "title": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods",
+    "authors": "Fred Zhang, Neel Nanda",
+    "year_or_version": "v2 2024-01-17",
+    "url": "https://arxiv.org/abs/2309.16042v2",
+    "question": "干预分布与指标敏感性",
+    "accessed_on": "2026-10-12",
+    "read_level": "official_metadata_and_selected_sections",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "superposition",
+    "title": "Toy Models of Superposition",
+    "authors": "Nelson Elhage 等",
+    "year_or_version": "2022",
+    "url": "https://arxiv.org/abs/2209.10652",
+    "question": "稀疏特征共享维度的模型",
+    "accessed_on": "2026-10-12",
+    "read_level": "official_metadata_and_selected_sections",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "sae",
+    "title": "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+    "authors": "Trenton Bricken 等",
+    "year_or_version": "2023-10-04",
+    "url": "https://transformer-circuits.pub/2023/monosemantic-features/index.html",
+    "question": "字典学习分解与忠实性边界",
+    "accessed_on": "2026-10-12",
+    "read_level": "official_metadata_and_selected_sections",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。",
+    "root_reading": "Official web fetch too large; author selected sections reading separately logged; no root full-read claim"
+  },
+  {
+    "id": "ihblog",
+    "title": "Improving instruction hierarchy in frontier LLMs",
+    "authors": "OpenAI",
+    "year_or_version": "2026-03-10",
+    "url": "https://openai.com/index/instruction-hierarchy-challenge/",
+    "question": "指令层级训练与不误拒",
+    "accessed_on": "2026-10-12",
+    "read_level": "official_metadata_and_selected_sections",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "browserdefenses",
+    "title": "Mitigating the risk of prompt injections in browser use",
+    "authors": "Anthropic",
+    "year_or_version": "2025-11-24",
+    "url": "https://www.anthropic.com/research/prompt-injection-defenses",
+    "question": "自适应浏览器注入评价与系统防护",
+    "accessed_on": "2026-10-12",
+    "read_level": "official_metadata_and_selected_sections",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。"
+  },
+  {
+    "id": "engram",
+    "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+    "authors": "Xin Cheng 等",
+    "year_or_version": "v2 2026-07-12",
+    "url": "https://arxiv.org/abs/2601.07372v2",
+    "question": "条件记忆如何改变参数与计算分配",
+    "accessed_on": "2026-10-12",
+    "read_level": "full_translation_source",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。",
+    "locator": "See papers/translations/engram/coverage.json and source-reading records"
+  },
+  {
+    "id": "cat",
+    "title": "Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision",
+    "authors": "Dulhan Jayalath 等",
+    "year_or_version": "v3 2026-05-09",
+    "url": "https://arxiv.org/abs/2509.14234v3",
+    "question": "推理预算生成无参考监督的收益与偏差",
+    "accessed_on": "2026-10-12",
+    "read_level": "full_translation_source",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。",
+    "locator": "See papers/translations/cat/coverage.json and source-reading records"
+  },
+  {
+    "id": "alphaproof",
+    "title": "Olympiad-level formal mathematical reasoning with reinforcement learning",
+    "authors": "Thomas Hubert 等",
+    "year_or_version": "Nature 651, 607–613; VOR 2026-03-13",
+    "url": "https://www.nature.com/articles/s41586-025-09833-y",
+    "question": "形式验证、搜索与测试时强化学习",
+    "accessed_on": "2026-10-12",
+    "read_level": "full_translation_source",
+    "limitations": "原创解释引用来源；完整译文仅适用于明确选定许可版本。详见 papers/rights.json 与逐篇覆盖记录。",
+    "locator": "See papers/translations/alphaproof/coverage.json and source-reading records"
   }
 ]

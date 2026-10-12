@@ -1,0 +1,362 @@
+{
+  "icl": {
+    "seed": 144,
+    "support_inputs": [
+      [
+        1.0
+      ],
+      [
+        2.0
+      ]
+    ],
+    "support_targets": [
+      2.0,
+      4.0
+    ],
+    "prior_mean": [
+      0.0
+    ],
+    "prior_covariance": [
+      [
+        1.0
+      ]
+    ],
+    "noise_variance": 1.0,
+    "posterior_mean": [
+      1.6666666666666667
+    ],
+    "posterior_covariance": [
+      [
+        0.16666666666666666
+      ]
+    ],
+    "query": [
+      3.0
+    ],
+    "predictive_mean": 5.0,
+    "predictive_variance": 2.5,
+    "prior_predictive_mean": 0.0,
+    "prior_predictive_variance": 10.0,
+    "trainable_weight_updates": 0,
+    "note": "An exact fixed conditional predictor illustrates task inference; no LLM or universal Bayesian-mechanism claim."
+  },
+  "cache": {
+    "seed": 144,
+    "batch": 3,
+    "length": 12,
+    "width": 8,
+    "vocab": 10,
+    "per_position_max_logit_error": [
+      0.0,
+      1.5959455978986625e-16,
+      1.6653345369377348e-16,
+      2.220446049250313e-16,
+      1.942890293094024e-16,
+      1.6653345369377348e-16,
+      1.1102230246251565e-16,
+      2.220446049250313e-16,
+      8.326672684688674e-17,
+      1.3183898417423734e-16,
+      1.1102230246251565e-16,
+      2.220446049250313e-16
+    ],
+    "max_logit_error": 2.220446049250313e-16,
+    "future_edit_prefix_error": 0.0,
+    "cache_shape": [
+      3,
+      12,
+      8
+    ],
+    "cache_elements": 576,
+    "full_prefix_score_pairs": 1950,
+    "cached_score_pairs": 234,
+    "note": "Counts are dense score entries for repeated prefixes, not measured wall-clock speedups."
+  },
+  "sampling": {
+    "seed": 144,
+    "logits": [
+      -0.916290731874155,
+      -1.2039728043259361,
+      -1.6094379124341003,
+      -2.3025850929940455
+    ],
+    "samples_per_setting": 50000,
+    "rows": [
+      {
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "top_k": null,
+        "probabilities": [
+          0.4000000000000001,
+          0.3,
+          0.20000000000000004,
+          0.10000000000000003
+        ],
+        "sampled_frequencies": [
+          0.39778,
+          0.29934,
+          0.20288,
+          0.1
+        ],
+        "entropy": 1.2798542258336676
+      },
+      {
+        "temperature": 0.5,
+        "top_p": 1.0,
+        "top_k": null,
+        "probabilities": [
+          0.5333333333333333,
+          0.2999999999999999,
+          0.13333333333333333,
+          0.03333333333333335
+        ],
+        "sampled_frequencies": [
+          0.53346,
+          0.29636,
+          0.13682,
+          0.03336
+        ],
+        "entropy": 1.0784767751174207
+      },
+      {
+        "temperature": 2.0,
+        "top_p": 1.0,
+        "top_k": null,
+        "probabilities": [
+          0.32540090689572504,
+          0.2818054517861928,
+          0.2300931878702196,
+          0.16270045344786255
+        ],
+        "sampled_frequencies": [
+          0.32688,
+          0.28144,
+          0.22658,
+          0.1651
+        ],
+        "entropy": 1.355752068184263
+      },
+      {
+        "temperature": 1.0,
+        "top_p": 0.65,
+        "top_k": null,
+        "probabilities": [
+          0.5714285714285715,
+          0.4285714285714285,
+          0.0,
+          0.0
+        ],
+        "sampled_frequencies": [
+          0.56906,
+          0.43094,
+          0.0,
+          0.0
+        ],
+        "entropy": 0.6829081047004716
+      },
+      {
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "top_k": 2,
+        "probabilities": [
+          0.5714285714285715,
+          0.4285714285714285,
+          0.0,
+          0.0
+        ],
+        "sampled_frequencies": [
+          0.57046,
+          0.42954,
+          0.0,
+          0.0
+        ],
+        "entropy": 0.6829081047004716
+      }
+    ],
+    "note": "Distribution changes only; no claim that lower entropy gives more correct answers."
+  },
+  "lora": {
+    "seed": 144,
+    "batch": 7,
+    "input_width": 5,
+    "output_width": 4,
+    "rank": 2,
+    "scale": 0.75,
+    "loss": 43.816443139712035,
+    "finite_difference_relative_errors": {
+      "A": 4.0216002750170787e-10,
+      "B": 6.605303736677751e-11
+    },
+    "update_rank": 2,
+    "trainable_parameters": 18,
+    "full_matrix_parameters": 20,
+    "zero_B_A_gradient_norm": 0.0,
+    "zero_B_B_gradient_norm": 6.239303468249688,
+    "note": "For these tiny dimensions r(m+d)=18 versus md=20; savings require r<md/(m+d)."
+  },
+  "reward": {
+    "seed": 144,
+    "reference": [
+      0.1,
+      0.1,
+      0.77,
+      0.03
+    ],
+    "beta": 0.3,
+    "steps": 30000,
+    "learning_rate": 0.2,
+    "rows": [
+      {
+        "reward": [
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "learned_probabilities": [
+          0.43756169449876653,
+          0.43756169449876653,
+          0.1201937028415217,
+          0.004682908160945332
+        ],
+        "analytic_probabilities": [
+          0.4375617063890574,
+          0.4375617063890574,
+          0.12019371520106441,
+          0.00468287202082069
+        ],
+        "true_success": 0.8751233889975331,
+        "proxy_reward": 0.8844892053194238,
+        "objective_gap": 4.207745263329343e-14,
+        "max_probability_error": 3.614012464205757e-08
+      },
+      {
+        "reward": [
+          1.0,
+          1.0,
+          0.0,
+          2.0
+        ],
+        "learned_probabilities": [
+          0.09359635091006499,
+          0.09359635091006499,
+          0.025709958117638456,
+          0.7870973400622314
+        ],
+        "analytic_probabilities": [
+          0.09359635091006699,
+          0.09359635091006699,
+          0.025709958117634782,
+          0.7870973400622312
+        ],
+        "true_success": 0.18719270182012998,
+        "proxy_reward": 1.7613873819445929,
+        "objective_gap": 2.220446049250313e-16,
+        "max_probability_error": 3.6741443221188774e-15
+      }
+    ],
+    "baseline": 0.2,
+    "gradient_expectation": [
+      0.08000000000000002,
+      0.08000000000000002,
+      -0.15400000000000003,
+      -0.006
+    ],
+    "centered_gradient_expectation": [
+      0.08,
+      0.08,
+      -0.15400000000000003,
+      -0.006
+    ],
+    "variance_without_baseline": 0.24620800000000004,
+    "variance_with_mean_reward_baseline": 0.14855200000000007,
+    "note": "Exact finite-action expectations; mean reward is useful here but is not universally variance optimal."
+  },
+  "verifier": {
+    "seed": 144,
+    "candidates": [
+      [
+        1,
+        8
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "action_probabilities": [
+      0.1,
+      0.1,
+      0.77,
+      0.03
+    ],
+    "exact_validity": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "proxy_scores": [
+      1,
+      1,
+      0,
+      2
+    ],
+    "rows": [
+      {
+        "budget": 1,
+        "trials": 20000,
+        "coverage": 0.19475,
+        "coverage_exact": 0.19999999999999996,
+        "selected_accuracy": 0.19475,
+        "selected_accuracy_exact": 0.19999999999999996,
+        "selection_standard_error": 0.0028002003276551483
+      },
+      {
+        "budget": 4,
+        "trials": 20000,
+        "coverage": 0.592,
+        "coverage_exact": 0.5903999999999999,
+        "selected_accuracy": 0.53285,
+        "selected_accuracy_exact": 0.5337623999999999,
+        "selection_standard_error": 0.0035278951054417704
+      },
+      {
+        "budget": 16,
+        "trials": 20000,
+        "coverage": 0.97215,
+        "coverage_exact": 0.9718525023289344,
+        "selected_accuracy": 0.5985,
+        "selected_accuracy_exact": 0.5989832116402053,
+        "selection_standard_error": 0.003466249774612326
+      },
+      {
+        "budget": 64,
+        "trials": 20000,
+        "coverage": 1.0,
+        "coverage_exact": 0.9999993722898265,
+        "selected_accuracy": 0.13875,
+        "selected_accuracy_exact": 0.1423609335089574,
+        "selection_standard_error": 0.0024443653317374634
+      },
+      {
+        "budget": 256,
+        "trials": 20000,
+        "coverage": 1.0,
+        "coverage_exact": 1.0,
+        "selected_accuracy": 0.00045,
+        "selected_accuracy_exact": 0.000410737137549332,
+        "selection_standard_error": 0.00014996624620227048
+      }
+    ],
+    "note": "IID synthetic actions with replacement; exact coverage is achievable only with exact verification and abstention."
+  }
+}

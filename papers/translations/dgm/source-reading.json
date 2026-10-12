@@ -1,0 +1,70 @@
+{
+  "source_version": "arXiv:2505.22954v3",
+  "retrieved_on": "2026-10-12",
+  "official_metadata": {
+    "url": "https://arxiv.org/abs/2505.22954v3",
+    "confirmed": [
+      "version date 2026-03-12",
+      "five authors",
+      "official PDF/source links"
+    ],
+    "license_scope": "Parent separately verified official view-license as CC BY 4.0; this agent did not audit unrelated papers."
+  },
+  "source_reading": [
+    {
+      "path": "main.tex",
+      "scope": "All substantive prose, captions, formulas and three algorithms; all A--J appendix prose translated in order."
+    },
+    {
+      "path": "iclr_things/ethics_statement.tex",
+      "scope": "All prose translated."
+    },
+    {
+      "path": "iclr_things/reproducibility_statement.tex",
+      "scope": "All prose translated."
+    },
+    {
+      "path": "initial_agent/*.tex",
+      "scope": "Tool schemas retained verbatim; complete descriptions and task prompt translated."
+    },
+    {
+      "path": "selfimprove_prompts/swebench.tex",
+      "scope": "Complete diagnosis prompt translated, all placeholders and JSON keys preserved."
+    },
+    {
+      "path": "diff_implementations/*_feature.tex",
+      "scope": "Both complete two-paragraph feature proposals translated."
+    },
+    {
+      "path": "solve_halluc/halluc_example.tex",
+      "scope": "Entire active example translated, escaped newlines rendered as real lines; source-commented alternative is not part of published text."
+    },
+    {
+      "path": "best_discovered_agent/*.tex; best_discovered_agent_polyglot/*.tex; diff_implementations/*_implementation.tex; solve_halluc/halluc_hack.tex",
+      "scope": "All active code listings extracted and byte-for-byte matched; identifiers, strings and comments kept in original code. No execution or comprehensive code correctness review claimed."
+    },
+    {
+      "path": "swebench_tasks/*.tex; polyglot_tasks/*.tex",
+      "scope": "All 200 SWE task IDs and 60 Polyglot IDs retained and counted."
+    },
+    {
+      "path": "main.bib",
+      "scope": "All 184 cited entries typeset with original author-supplied bibliography style, then bibkeys prefixed. Independent correctness of every cited publication not claimed."
+    }
+  ],
+  "checks": {
+    "source_labelled_objects": 47,
+    "numbered_parent_selection_equations": 7,
+    "algorithms": 3,
+    "task_ids": 260,
+    "bibliography_entries": 184,
+    "source_figure_assets": 10,
+    "source_figure_containers": 8
+  },
+  "review_limits": [
+    "Not an official translation.",
+    "No independent bilingual human review claimed.",
+    "Structural coverage is not proof of semantic fidelity.",
+    "Parent integrates and performs final PDF review."
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "language": "zh-Hans",
+  "terms": [
+    {
+      "en": "test-time compute",
+      "zh": "推理时计算",
+      "note": "亦称测试时计算；与 inference-time compute 统一"
+    },
+    {
+      "en": "compute-optimal",
+      "zh": "计算最优",
+      "note": "本文针对预算和提示、在比较方法范围内选择策略"
+    },
+    {
+      "en": "question difficulty",
+      "zh": "问题难度",
+      "note": "基础模型相关的 pass@1 难度，不等同于 MATH 人工等级"
+    },
+    {
+      "en": "difficulty bin",
+      "zh": "难度分箱",
+      "note": "五个分位组"
+    },
+    {
+      "en": "oracle difficulty",
+      "zh": "预言机难度",
+      "note": "需真实正确性检查"
+    },
+    {
+      "en": "model-predicted difficulty",
+      "zh": "模型预测难度",
+      "note": "以验证器预测替代真实正确性"
+    },
+    {
+      "en": "proposal distribution",
+      "zh": "提议分布",
+      "note": "产生候选响应的分布"
+    },
+    {
+      "en": "proposer",
+      "zh": "提议器",
+      "note": "产生候选的模型"
+    },
+    {
+      "en": "verifier",
+      "zh": "验证器",
+      "note": "对解答或步骤评分"
+    },
+    {
+      "en": "PRM / process reward model",
+      "zh": "过程奖励模型",
+      "note": "逐步估计"
+    },
+    {
+      "en": "ORM / outcome reward model",
+      "zh": "结果奖励模型",
+      "note": "完整答案估计"
+    },
+    {
+      "en": "best-of-N",
+      "zh": "best-of-N",
+      "note": "从N个候选中择优，保留通用名称"
+    },
+    {
+      "en": "best-of-N weighted",
+      "zh": "加权 best-of-N",
+      "note": "对相同最终答案的验证器分数求和"
+    },
+    {
+      "en": "majority voting",
+      "zh": "多数投票",
+      "note": "按最终答案频次聚合"
+    },
+    {
+      "en": "beam search",
+      "zh": "束搜索",
+      "note": "本文正文保留N/M候选，每个扩展M"
+    },
+    {
+      "en": "lookahead search",
+      "zh": "前瞻搜索",
+      "note": "向前续采样k步，预算N(k+1)"
+    },
+    {
+      "en": "rollout",
+      "zh": "续采样",
+      "note": "从某一步继续生成至更后步骤/末尾"
+    },
+    {
+      "en": "reward-to-go",
+      "zh": "未来累计奖励",
+      "note": "当前步骤后回报"
+    },
+    {
+      "en": "on-policy / off-policy",
+      "zh": "同策略／异策略",
+      "note": "数据生成策略相对正在训练的策略"
+    },
+    {
+      "en": "sequential revisions",
+      "zh": "顺序修订",
+      "note": "每次以此前响应为条件"
+    },
+    {
+      "en": "parallel sampling",
+      "zh": "并行采样",
+      "note": "独立采样完整响应"
+    },
+    {
+      "en": "pass@1",
+      "zh": "pass@1",
+      "note": "一次作答正确率，由多样本估计"
+    },
+    {
+      "en": "FLOPs",
+      "zh": "浮点运算次数",
+      "note": "计算量，区别于每秒运算性能"
+    },
+    {
+      "en": "pretraining / finetuning",
+      "zh": "预训练／微调",
+      "note": "分别保留训练阶段"
+    },
+    {
+      "en": "Monte Carlo",
+      "zh": "蒙特卡洛",
+      "note": "随机续采样估计价值"
+    },
+    {
+      "en": "distribution shift",
+      "zh": "分布偏移",
+      "note": "训练输出分布与测试输出分布变化"
+    },
+    {
+      "en": "generation budget",
+      "zh": "生成预算",
+      "note": "本文规定的答案/束/前瞻成本度量"
+    },
+    {
+      "en": "SFT",
+      "zh": "监督微调",
+      "note": "supervised finetuning"
+    },
+    {
+      "en": "MCTS",
+      "zh": "蒙特卡洛树搜索",
+      "note": "Monte Carlo tree search"
+    },
+    {
+      "en": "ReST^EM",
+      "zh": "ReST^EM",
+      "note": "保留方法名"
+    }
+  ]
+}

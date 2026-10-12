@@ -1,0 +1,16 @@
+\Needspace{12\baselineskip}
+\begin{longtable}{lc}
+\caption{共享 SFT 训练超参数.}\label{cat-tab:SFTtrainingparams}\\
+
+        \toprule
+        参数 & 取值 \\
+        \midrule
+        批量大小 & 32 \\
+        上下文中轨迹数 & 8 \\
+        学习率 & $5 \times 10^{-5}$ \\
+        学习率计划 & 带预热的余弦计划 \\
+        LoRA \cite{cat-hu2022lora} 秩 & 32 \\
+        优化器 & AdamW \cite{cat-loschilov2019decoupled} \\
+        \bottomrule
+    
+\end{longtable}

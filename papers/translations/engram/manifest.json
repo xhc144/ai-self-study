@@ -1,0 +1,102 @@
+{
+  "paper_id": "arXiv:2601.07372v2",
+  "generated_utc": "2026-10-12T02:14:45.317342+00:00",
+  "sha256_files": [
+    {
+      "file": "audit_source.py",
+      "sha256": "6470ab398abc5f37f3499d295f45876775622a3dcbd08149aa72b8907c4bee38"
+    },
+    {
+      "file": "bibliography-build.log",
+      "sha256": "d7267d6641ecee2fb8fcc51460d174c84fc6e2652e5d2f56d973ef52363b76ab"
+    },
+    {
+      "file": "body.tex",
+      "sha256": "b52f9755c8e1e237c7364fd5e39354238b90f42a028d078968dfe329c1f02370"
+    },
+    {
+      "file": "build-final.log",
+      "sha256": "45c5039c3f5cfc778ddea12b79e2f73bf106ff320be922d2d6d3443b33b36457"
+    },
+    {
+      "file": "build-first.log",
+      "sha256": "2efe7dd7d56ae2cfbb0229814486b2268889082d71acb8c87bc3baab962d43dd"
+    },
+    {
+      "file": "coverage.json",
+      "sha256": "31e2dbf33e3630b69286212782cb74545bf028b6d1a7ae44651963298acd6f48"
+    },
+    {
+      "file": "figures/arch_ablation.pdf",
+      "sha256": "04b38742900d9f7420f31835594ae8706df1a8e65c9136b33dd3333e8003b05e"
+    },
+    {
+      "file": "figures/benchmark_curve.pdf",
+      "sha256": "f821aa95358e0e497e02bbd01042fada327ec4a754ef39d7f863fcdc1ab6c7fd"
+    },
+    {
+      "file": "figures/engram_arch.pdf",
+      "sha256": "c3670417e213e0c29bfd10f14473cb44ca192640a183e046663245c1a5c7b9eb"
+    },
+    {
+      "file": "figures/engram_system.pdf",
+      "sha256": "84983d1c2e8bfdce8a512c303bfa7ad84064d4b5e91c1f7d0dfda6d7713869cc"
+    },
+    {
+      "file": "figures/logitlens_and_cka.pdf",
+      "sha256": "d8496c7bf8cdca0e96457d2efdb5ed11b9c28cbaf6c50283152efe02ec2e39fd"
+    },
+    {
+      "file": "figures/scaling_law.pdf",
+      "sha256": "56b62274513b51f98e7e4d80e11a5f4811479cee5e10f88120caa827019454ae"
+    },
+    {
+      "file": "figures/sensitivity_analysis.pdf",
+      "sha256": "c325eed287e8a5130c64cf4723a3419f63d40253f2e14fdffdf9dc4ac3ff1ea4"
+    },
+    {
+      "file": "figures/visualization.pdf",
+      "sha256": "73a6d1b5fd035a0928605768886d228483d495cc4f00b79d0312bdd9b5dabcee"
+    },
+    {
+      "file": "figures-manifest.json",
+      "sha256": "bf2b891c2b9aeaa25ed91a9ead1edccd6c9f2a698557f635dfc85f856469d9ae"
+    },
+    {
+      "file": "glossary.json",
+      "sha256": "b0a681ca46070ae05e356b09e4bca8c9d5ab0a0411e35cbe907b98d2b46b1850"
+    },
+    {
+      "file": "metadata.json",
+      "sha256": "7244978feba60ec63fc59e42d78a683e42806810ce1c0c25dd4df6e9be0b0b66"
+    },
+    {
+      "file": "numeric-checks.json",
+      "sha256": "80224b57c4a59f5c8e0ae51442da99df057482ac5587a625c0972b0b3dc75194"
+    },
+    {
+      "file": "references.tex",
+      "sha256": "5e841071edab1dc5b10f958b9e6a5a8eebff2acfba04a88101724d741096eb93"
+    },
+    {
+      "file": "source-reading.json",
+      "sha256": "0532e970159dd1f022cc3d3c9f97ec726bbcd769ad6ccf657abfe5b46b83a0a8"
+    },
+    {
+      "file": "tables/architecture.tex",
+      "sha256": "d651a92451a067d8e5238e4ec092f7d461776d86bd6bbb347c57aaf85a18d942"
+    },
+    {
+      "file": "tables/long_context.tex",
+      "sha256": "5b0389f572cb1802b16e762bd05112e78ed8c0fdc08f3bc4a547d0ac21d6ce1a"
+    },
+    {
+      "file": "tables/pretraining.tex",
+      "sha256": "0cb6bb313c6c7846904234a1282bf3a433c46602094e25d8042c5ce8ead4037f"
+    },
+    {
+      "file": "validation.json",
+      "sha256": "165eb522c85b3a07c6b60ac125e549c69648f27e1462c1c42c65bc50900a10c3"
+    }
+  ]
+}

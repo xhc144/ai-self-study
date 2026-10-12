@@ -1,0 +1,86 @@
+{
+  "role": "chapter author; not independent reviewer",
+  "tests": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_v03_foundations.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "output": "test_adam_initialization_correction_and_loss_increase (test_v03_foundations.FoundationsChecks.test_adam_initialization_correction_and_loss_increase) ... ok\ntest_cli_provenance_and_determinism (test_v03_foundations.FoundationsChecks.test_cli_provenance_and_determinism) ... ok\ntest_exact_interval_boundaries_and_coverage (test_v03_foundations.FoundationsChecks.test_exact_interval_boundaries_and_coverage) ... ok\ntest_gd_strict_step_boundary (test_v03_foundations.FoundationsChecks.test_gd_strict_step_boundary) ... ok\ntest_kl_support_and_independent_formula (test_v03_foundations.FoundationsChecks.test_kl_support_and_independent_formula) ... ok\ntest_matrix_gradients_and_shared_embedding_accumulation (test_v03_foundations.FoundationsChecks.test_matrix_gradients_and_shared_embedding_accumulation) ... ok\ntest_rank_deficient_projection_and_minimum_norm (test_v03_foundations.FoundationsChecks.test_rank_deficient_projection_and_minimum_norm) ... ok\ntest_ridge_diagonal_closed_form_including_null_direction (test_v03_foundations.FoundationsChecks.test_ridge_diagonal_closed_form_including_null_direction) ... ok\ntest_sgd_variance_recurrence_by_enumerating_noise (test_v03_foundations.FoundationsChecks.test_sgd_variance_recurrence_by_enumerating_noise) ... ok\ntest_softmax_gradient_and_curvature (test_v03_foundations.FoundationsChecks.test_softmax_gradient_and_curvature) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.925s\n\nOK\n"
+  },
+  "static_checks": {
+    "environment_nesting": "passed",
+    "end_labels": "passed"
+  },
+  "isolated_pdf_compile": {
+    "status": "passed",
+    "passes": 2,
+    "environment": {
+      "TEXMFHOME": "/workspace/.local/texmf",
+      "OSFONTDIR": "/workspace/.local/texmf/fonts/opentype",
+      "XDG_CACHE_HOME": "/tmp/ai-cache"
+    },
+    "scratch_main": "/tmp/ai-v03-foundations-build/foundations.tex",
+    "scratch_main_sha256": "9f4c3e703ec265f7a3c2b4ef64cb2713144b22e905a69777035196e6ee2dc1f1",
+    "pdf": "/tmp/ai-v03-foundations-build/foundations.pdf",
+    "pdf_sha256": "407ead30f71ebd87631abc5e8e214057f6155b818f48866fcf513273ce6c1ab6",
+    "total_pages": 17,
+    "authored_content_pages": "1–15 (page 15 also begins unchanged full bibliography)",
+    "log_errors": [],
+    "visual_review": {
+      "status": "author visually inspected",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "scope": "isolated authored text, not final integrated PDF",
+      "render_scale": 1.4,
+      "images": {
+        "1": "30269b93e4fe01639d8014344491af70178e8d352a66a528e1ec9674cc95a103",
+        "2": "7a6ff17562ab4dfc5e7ca71ebc0849a7196f18669b924797fac919e581785acb",
+        "3": "967cb21c57f7b4838a70618596a3412640884db27071be9b98d150d4d091bfa8",
+        "4": "5b016f6ff12344d4544448491c5986f3084c74737ef45cb323da7033f7f48a91",
+        "5": "a2a0e4d12da81fc0c4998fba8326cadf7c4e75bac210b85c4478acf1dd2249a1",
+        "6": "d04ad244839fcfc990df3f16aa9ad24e7e9a9d16160c357eeff61ca5da3e3d21",
+        "7": "6bd86cf73125ffe609cd6a86822809e824b2eb9f38bd44e63841cc0f80a3e8fd",
+        "8": "16bf6f0856a040fda8355a8a2addeed3e1dfa9a6e26f12f5f8f7c5faf1a9b71b",
+        "9": "874792a671541de68f5d821288c1f3eb0750e32c3e42b31fdbcc3208732baba3",
+        "10": "12af79372b237bb131ac61ef82676375ccbb51229ee7ebc1c8240719352a9a8e",
+        "11": "00c78e85b64a7ec2738ef8303eaecd8cf3aa1a5f7a7411bde737d3bd5aa30d32",
+        "12": "dacac92aa7e88165cbd0b85d259be5641783c2b72eaca728896d2ffe24158a8b",
+        "13": "eeabc4184db5aa98c6a99f60e6b9460a93c3a4f984276551735e3405f87ba3d1",
+        "14": "337132b9c81dc3782b3b51227d281a912e6cc5c786b4f3507986e41344fe60ae",
+        "15": "3470872aec46266249d7879d45c57e48aa2e846204253feb8ef4f324ecb88774"
+      }
+    }
+  },
+  "file_sha256": {
+    "book/chapters/02.tex": "9fdbf5ff16efb0b2883e93c91649b0a616e7559fcb2310eac938190ba8f7accf",
+    "book/chapters/03.tex": "db77613bd0d3a8ffd788aef0fd00d00994938fb8eb5e9b863386decd88be4dea",
+    "book/chapters/04.tex": "b23179240e0f090be6874934ab8dc36981069fb1147d84cf1c8ab0d5561418df",
+    "experiments/v03_foundations.py": "b406f1f9bc0f24f3c407f4c676c3b201bcf0ce6e013ff76caa3b2c2fbb87af34",
+    "tests/test_v03_foundations.py": "8ffbdf31d9e601dfbbed259127b9ea8ed9710ce0f0c72f8396a5839dd1da89fe",
+    "results/v03-foundations/metrics.json": "076f2092f541ffebbc22d26f2bd7623745093428ac0e72952807c93808db9c9f",
+    "results/v03-foundations/environment.json": "0738de7f31ff830b66f038cb63d6dd1e4c3a6c6e48214161f688899ea46bb796"
+  }
+}

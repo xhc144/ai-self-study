@@ -1,0 +1,146 @@
+{
+  "paper_id": "arXiv:2601.07372v2",
+  "version": "v2",
+  "version_date": "2026-07-12",
+  "version_submission_time_utc": "2026-07-12 07:41:31",
+  "title_original": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+  "title_zh": "通过可扩展查找实现条件记忆: 大语言模型的新稀疏轴",
+  "authors_pdf_source": [
+    "Xin Cheng",
+    "Rui Tian",
+    "Wangding Zeng",
+    "Damai Dai",
+    "Qinyu Chen",
+    "Bingxuan Wang",
+    "Zhenda Xie",
+    "Kezhao Huang",
+    "Xingkai Yu",
+    "Chengqi Deng",
+    "Shangyan Zhou",
+    "Chenggang Zhao",
+    "Zhewen Hao",
+    "Yukun Li",
+    "Han Zhang",
+    "Zhengyan Zhang",
+    "Yixuan Wei",
+    "M.Y Xu",
+    "Huishuai Zhang",
+    "Dongyan Zhao",
+    "Wenfeng Liang"
+  ],
+  "authors_arxiv_abs": [
+    "Xin Cheng",
+    "Rui Tian",
+    "Wangding Zeng",
+    "Damai Dai",
+    "Qinyu Chen",
+    "Bingxuan Wang",
+    "Zhenda Xie",
+    "Kezhao Huang",
+    "Xingkai Yu",
+    "Chengqi Deng",
+    "Shangyan Zhou",
+    "Chenggang Zhao",
+    "Zhewen Hao",
+    "Yukun Li",
+    "Han Zhang",
+    "Zhengyan Zhang",
+    "Yixu Wei",
+    "M.Y Xu",
+    "Huishuai Zhang",
+    "Dongyan Zhao",
+    "Wenfeng Liang"
+  ],
+  "equal_contribution": [
+    "Xin Cheng",
+    "Rui Tian"
+  ],
+  "affiliations": {
+    "Peking University": [
+      "Xin Cheng",
+      "Huishuai Zhang",
+      "Dongyan Zhao"
+    ],
+    "DeepSeek-AI": [
+      "Xin Cheng",
+      "Rui Tian",
+      "Wangding Zeng",
+      "Damai Dai",
+      "Qinyu Chen",
+      "Bingxuan Wang",
+      "Zhenda Xie",
+      "Kezhao Huang",
+      "Xingkai Yu",
+      "Chengqi Deng",
+      "Shangyan Zhou",
+      "Chenggang Zhao",
+      "Zhewen Hao",
+      "Yukun Li",
+      "Han Zhang",
+      "Zhengyan Zhang",
+      "Yixuan Wei",
+      "M.Y Xu",
+      "Wenfeng Liang"
+    ]
+  },
+  "source_urls": {
+    "abstract": "https://arxiv.org/abs/2601.07372v2",
+    "pdf": "https://arxiv.org/pdf/2601.07372v2",
+    "source": "https://arxiv.org/src/2601.07372v2"
+  },
+  "license": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "verification": "Actually opened the specified official arXiv version and clicked its view-license link; date and license confirmed.",
+    "verified_on": "2026-10-12"
+  },
+  "translation": {
+    "attribution": "ai-self-study contributors",
+    "language": "zh-Hans",
+    "method": "machine-assisted translation with complete source reading, mechanical cell/asset checks and visual review",
+    "official": false,
+    "modifications": [
+      "Chinese translation and separate translator annotations",
+      "Fixed project Wangzhe layout, without editing the base template",
+      "All labels/citations prefixed engram-",
+      "Wide original Table 2 transposed with every value and bold/underline retained",
+      "Tables 1 and 5 made longtables without shrinking body fonts",
+      "Original vector figures unchanged; Chinese explanations added to captions",
+      "Appendices placed before original bibliography",
+      "Original automatic English outputs retained alongside Chinese; complete displayed examples retained",
+      "Figure system filename case normalized; obvious caption punctuation corrected and noted"
+    ]
+  },
+  "source_artifacts": {
+    "pdf": {
+      "temporary_path": "/tmp/engram-source/paper.pdf",
+      "sha256": "8eab2dd35e4557d4142e5959697836f6cf926d0fbc29016257f1eea5be73df5d",
+      "pages": 35
+    },
+    "source_archive": {
+      "temporary_path": "/tmp/engram-source/source.tar",
+      "sha256": "236bae5bc2751849113bb1b4e44dd303bb02d589b9f54ebf2577e4a5f87bb889"
+    }
+  },
+  "third_party_content": [
+    {
+      "item": "Original Table 3, reproduced Patchscopes entity-resolution example",
+      "attribution": [
+        "Asma Ghandeharioun",
+        "Avi Caciularu",
+        "Adam Pearce",
+        "Lucas Dixon",
+        "Mor Geva"
+      ],
+      "original_paper": "Patchscopes: A Unifying Framework for Inspecting Hidden Representations of Language Models",
+      "official_publication": "https://proceedings.mlr.press/v235/ghandeharioun24a.html",
+      "license_check_source": "https://arxiv.org/abs/2401.06102",
+      "version_checked": "v4, 2024-06-06",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "check": "Separate official arXiv view-license link actually opened; attribution retained in Table 3. Engram license alone was not assumed to cover this material."
+    }
+  ],
+  "raw_source_distribution": "Raw paper PDF/source archive are kept only in /tmp; repository contains translated TeX and licensed extracted figure assets."
+}

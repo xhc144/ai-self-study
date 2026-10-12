@@ -1,0 +1,84 @@
+{
+  "source_sha256": "3ba5c8f3532ad262e7defe5ccce82f6f570324200fad20befaa7fb5423581880",
+  "direct_build": {
+    "engine": "XeLaTeX",
+    "template": "book/main.tex fixed preamble",
+    "template_modified": false,
+    "working_directory": "book/",
+    "pdf_pages": 35,
+    "pdf_page_size_bp": [
+      612,
+      792
+    ],
+    "final_runs": 2,
+    "temporary_pdf_sha256": "1aca4b198f1fef401997464047ea097e245176c5acc19a74956b4fe7ebc4946a",
+    "overfull_boxes": 0,
+    "missing_characters": 0,
+    "undefined_references_or_citations": 0,
+    "tex_errors": 0
+  },
+  "typesetting_skill": {
+    "status": "PASS",
+    "report": "typesetting-report.json",
+    "snapshot_note": "Private project-contained snapshot changed only ../papers/ relative path prefix to papers/ for checker project containment. Direct compilation separately used unchanged public body.tex from book working directory.",
+    "reviewed_warning_categories": [
+      "heading-style: original fine subsections explicitly authorized by parent/user task",
+      "inline-height-review: Chinese content-only algorithm diagram arrows; visually legible without overflow"
+    ]
+  },
+  "source_comparison": {
+    "display_formula_count": 32,
+    "all_display_formula_tokens_preserved": true,
+    "bibliography_items": 51,
+    "all_degenerate_tokens_preserved": true,
+    "all_reference_and_citation_keys_resolved": true
+  },
+  "visual_review": {
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "status": "completed_by_AI",
+    "findings": "No clipping, missing Chinese glyphs, duplicated bibliography heading, unresolved references or math overflow observed. Long sample tables are breakable and complete; some tables span pages and the final study page has natural whitespace.",
+    "method": "Individual rendered pages viewed during build iterations; all changed pages rerendered and inspected."
+  },
+  "limitations": [
+    "Independent human expert review has not been performed.",
+    "Original experimental plot PDFs retain English axis/legend lettering; all corresponding text is translated in adjacent captions.",
+    "Final single-paper PDF and compiled anthology are owned by root agent and not included here."
+  ],
+  "fonts_bundled": false
+}

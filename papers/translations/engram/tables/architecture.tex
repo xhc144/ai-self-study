@@ -1,0 +1,45 @@
+\begingroup\setlength{\tabcolsep}{3pt}
+\begin{longtable}{p{.36\textwidth}cccc}
+\caption{原文表5: 完整模型架构和训练超参数.}\label{engram-tab-5}\\
+\toprule
+ & \shortstack{Dense\\4B} & \shortstack{MoE\\27B} & \shortstack{Engram\\27B} & \shortstack{Engram\\40B} \\
+\midrule
+总参数 & 4.1B & 26.7B & 26.7B & 39.5B \\
+激活参数 & \multicolumn{4}{c}{3.8B} \\
+训练token数 & \multicolumn{4}{c}{262B} \\
+\midrule
+层数 & \multicolumn{4}{c}{30} \\
+隐层维度 & \multicolumn{4}{c}{2560} \\
+开头稠密层数 & - & 1 &1 &1 \\
+路由专家数 & - & 72& 55 & 55 \\
+激活专家数 & - & 6 & 6 & 6 \\
+共享专家数 & - &2 & 2& 2\\
+负载均衡方式 & - & \multicolumn{3}{c}{无辅助损失~\cite{engram-wang2024auxiliarylossfreeloadbalancingstrategy}} \\
+\midrule
+注意力模块 & \multicolumn{4}{c}{MLA~\cite{engram-deepseekai2024deepseekv2strongeconomicalefficient}} \\ 
+RoPE $\theta$ & \multicolumn{4}{c}{10000} \\
+mHC扩张率 & \multicolumn{4}{c}{4} \\
+序列长度 & \multicolumn{4}{c}{4096} \\
+词表大小 & \multicolumn{4}{c}{129280} \\
+批量大小 & \multicolumn{4}{c}{1280} \\
+训练步数 & \multicolumn{4}{c}{50000} \\
+骨干优化器 & \multicolumn{4}{c}{Muon~\cite{engram-jordan2024muon}} \\
+嵌入优化器 & \multicolumn{4}{c}{Adam~\cite{engram-kingma2014adam}} \\
+基础学习率 & \multicolumn{4}{c}{4e-4} \\
+学习率调度 & \multicolumn{4}{c}{分段衰减~\cite{engram-bi2024deepseek}} \\
+权重衰减 & \multicolumn{4}{c}{0.1}  \\
+\midrule
+Engram维度 $d_{\text{mem}}$ & - & - & 1280 & 1280 \\
+Engram槽数 & - & - & 2262400 & 7239680 \\
+Engram头数 & - & - & 8 & 8 \\
+Engram插入层 & - & - & [2,15] & [2,15] \\
+Engram $N$-gram & - & - & [2,3] & [2,3] \\
+Engram结合mHC & - & - & 是 & 是 \\
+Engram分词器压缩  & - & - & 是 & 是 \\
+Engram卷积零初始化  & - & - & 是 & 是 \\
+Engram学习率倍数  & - & - & x5 & x5 \\
+Engram权重衰减  & - & - & 0.0 & 0.0 \\
+Engram优化器(仅嵌入)  & - & - & \multicolumn{2}{c}{Adam~\cite{engram-kingma2014adam}}  \\
+\bottomrule
+\end{longtable}
+\endgroup

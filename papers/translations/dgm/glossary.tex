@@ -1,0 +1,29 @@
+\originalsection{译者术语表}\label{dgm-glossary}
+下表为译者附加，不属于原论文正文.
+\begin{longtable}{p{.30\textwidth}p{.22\textwidth}p{.40\textwidth}}\toprule
+原术语&译法&说明\\\midrule
+foundation model&基础模型&本文缩写 FM；实验中冻结其参数\\
+coding agent&编码智能体&可以读写执行代码的系统\\
+self-referential&自指&系统以自身实现作为修改对象\\
+self-improvement&自我改进&本文主要指修改智能体系统代码\\
+self-modification&自我修改&修改自身代码库的具体操作\\
+open-endedness&开放式&按原文使用，不等同于已证明无限进步\\
+open-ended exploration&开放式探索&保留多样垫脚石、从档案继续分支\\
+archive&档案&已生成且仍具基本代码编辑功能的智能体集合\\
+stepping stone&垫脚石&可能支持之后改进的中间解\\
+parent / offspring&父代／子代&智能体版本的生成谱系\\
+meta-agent&元智能体&负责产生或修改其他智能体的智能体\\
+meta-utility&元效用&根据生成解评价元层行为的效用\\
+scaffolding&系统支架&围绕基础模型的工具、记忆与工作流\\
+quality-diversity&质量多样性&兼顾解的质量与多样性的搜索\\
+objective hacking&目标投机&提高量化目标却没有实现任务意图\\
+reward hacking&奖励投机&强化学习中利用奖励度量缺口\\
+tool-use hallucination&工具使用幻觉&以文本虚构工具输入输出而未实际调用\\
+checked solution&经核验方案&基准团队获准访问并复现生成结果\\
+pass@1 / pass@2&pass@1／pass@2&原文保留；Polyglot对比允许测试反馈次数不同\\
+held-out benchmark&留出基准&智能体优化中未访问的评价基准\\
+codebase-editing functionality&代码库编辑功能&智能体能够继续改动目标代码库的基本功能\\
+staged evaluation&分阶段评价&先少量任务，再扩展到更多任务\\
+foundation-model workflow&基础模型工作流&组织模型调用与任务执行的流程\\
+program synthesis&程序合成&根据外部规范生成程序\\
+\bottomrule\end{longtable}

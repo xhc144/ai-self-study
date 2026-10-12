@@ -1,0 +1,51 @@
+\begingroup\setlength{\tabcolsep}{3pt}
+\begin{longtable}{p{.32\textwidth}lrrrr}
+\caption{原文表1: 稠密、MoE与Engram模型的预训练比较. 全部训练262B token,激活参数均为3.8B. Engram-27B将路由专家72减为55,换成5.7B参数的Engram记忆,与MoE-27B总参数相同. Engram-40B把记忆增到18.5B,激活预算不变. 完整末段训练曲线见附录B. EM为精确匹配,Pass@1为一次生成通过率.}\label{engram-tab-1}\\
+\toprule
+ 基准(指标) & 示例数 & \shortstack{Dense\\4B} & \shortstack{MoE\\27B} & \shortstack{Engram\\27B} & \shortstack{Engram\\40B} \\
+\midrule
+ 总参数 &  & 4.1B & 26.7B & 26.7B & 39.5B \\
+ 激活参数(不含词嵌入) &  & 3.8B & 3.8B & 3.8B & 3.8B \\
+ 训练token &  & 262B & 262B & 262B &  262B \\
+ 专家(共享+路由,top-$k$) &  & - & $2+72$ (top-6) & $2+55$ (top-6) & $2+55$ (top-6) \\
+ Engram参数 &  & - & - & 5.7B & 18.5B \\
+ \midrule
+\multicolumn{6}{c}{语言建模}\\
+Pile {(损失)} & - & 2.091 & 1.960 & \textbf{1.950} & 1.942 \\
+ 验证集 {(损失)} & - & 1.768 & 1.634 & \textbf{1.622} & 1.610 \\
+ \midrule
+\multicolumn{6}{c}{知识与推理}\\
+MMLU {(准确率)} & 5-shot & 48.6 & 57.4 & \textbf{60.4} &  60.6 \\
+ MMLU-Redux {(准确率)} & 5-shot & 50.7 & 60.6 & \textbf{64.0} & 64.5 \\
+ MMLU-Pro {(准确率)} & 5-shot & 21.1 & 28.3 & \textbf{30.1} & 31.3  \\
+ CMMLU {(准确率)} & 5-shot & 47.9 & 57.9 & \textbf{61.9} &  63.4 \\
+ C-Eval {(准确率)} & 5-shot & 46.9 & 58.0 & \textbf{62.7} & 63.3 \\
+ AGIEval {(准确率)} & 0-shot & 29.1 & 38.6 & \textbf{41.8} & 45.9 \\
+ ARC-Easy {(准确率)} & 25-shot & 76.8 & 86.5 & \textbf{89.0} & 90.1 \\
+ ARC-Challenge {(准确率)} & 25-shot & 59.3 & 70.1 & \textbf{73.8} &  76.4 \\
+ TriviaQA {(EM)} & 5-shot & 33.0 & 48.8 & \textbf{50.7} & 51.8 \\
+ TriviaQA-ZH {(EM)} & 5-shot & 62.8 & 74.8 & \textbf{76.3} & 77.9 \\
+ PopQA {(EM)} & 15-shot & 15.1 & 19.2 & \textbf{19.4} & 21.2 \\
+ CCPM {(准确率)} & 0-shot & 72.2 & 79.6 & \textbf{87.1} &  87.7 \\
+ BBH {(EM)} & 3-shot & 42.8 & 50.9 & \textbf{55.9} &  57.5 \\
+ HellaSwag {(准确率)} & 0-shot & 64.3 & 71.8 & \textbf{72.7} & 73.1 \\
+ PIQA {(准确率)} & 0-shot & 63.8 & 71.9 & \textbf{73.5} &  76.5 \\
+ WinoGrande {(准确率)} & 5-shot & 64.0 & 67.6 & \textbf{67.8} &  68.1 \\
+ \midrule
+\multicolumn{6}{c}{阅读理解}\\
+DROP {(F1)} & 1-shot & 41.6 & 55.7 & \textbf{59.0} & 60.7 \\
+ RACE-Middle {(准确率)} & 5-shot & 72.4 & 80.9 & \textbf{82.8} & 83.3 \\
+ RACE-High {(准确率)} & 5-shot & 66.0 & 75.4 & \textbf{78.2} & 79.2 \\
+ C3 {(准确率)} & 0-shot & 57.7 & 60.1 & \textbf{63.6} &  61.8 \\
+ \midrule
+\multicolumn{6}{c}{代码与数学}\\
+HumanEval {(Pass@1)} & 0-shot & 26.8 & 37.8 & \textbf{40.8} & 38.4  \\
+ MBPP {(Pass@1)} & 3-shot & 35.4 & 46.6 & \textbf{48.2} & 46.2 \\
+ CruxEval-i {(EM)} & 0-shot &27.6&30.7 & \textbf{32.2} & 36.2 \\
+ CruxEval-o {(EM)} & 0-shot &28.7&34.1 & \textbf{35.0} & 35.3 \\
+ GSM8K {(EM)} & 8-shot & 35.5 & 58.4 & \textbf{60.6} & 62.6 \\
+ MGSM {(EM)} & 8-shot & 27.0 & 46.8 & \textbf{49.4} &  52.4 \\
+ MATH {(EM)} & 4-shot & 15.2 & 28.3 & \textbf{30.7} & 30.6 \\
+\bottomrule
+\end{longtable}
+\endgroup

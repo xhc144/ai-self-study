@@ -1,0 +1,46 @@
+{
+  "micro_research": {
+    "summary": [
+      {
+        "split": "mismatch_blue_red",
+        "seeds": 5,
+        "all_test_sounds_correct_runs": 5,
+        "conditional_95pct_interval": [
+          0.4781762498950185,
+          1.0
+        ],
+        "mean_sound_accuracy": 1.0,
+        "mean_token_nll": 1.4741482193603894,
+        "mean_distractor_accuracy": 1.0,
+        "mean_speaker_flip_accuracy": 1.0
+      },
+      {
+        "split": "mismatch_red_blue",
+        "seeds": 5,
+        "all_test_sounds_correct_runs": 5,
+        "conditional_95pct_interval": [
+          0.4781762498950185,
+          1.0
+        ],
+        "mean_sound_accuracy": 1.0,
+        "mean_token_nll": 1.450168583493986,
+        "mean_distractor_accuracy": 1.0,
+        "mean_speaker_flip_accuracy": 1.0
+      },
+      {
+        "split": "match_red_blue",
+        "seeds": 5,
+        "all_test_sounds_correct_runs": 5,
+        "conditional_95pct_interval": [
+          0.4781762498950185,
+          1.0
+        ],
+        "mean_sound_accuracy": 1.0,
+        "mean_token_nll": 1.4400725330897415,
+        "mean_distractor_accuracy": 1.0,
+        "mean_speaker_flip_accuracy": 1.0
+      }
+    ]
+  }
+}
+Written /tmp/ai-source-v03-rebuild-nofm5xup/micro_research; elapsed 7.08s

@@ -1,0 +1,16 @@
+\begin{longtable}{lcc}
+\caption{合成可能与选择方法不一致，并在不一致时给出正确答案. MATH-500 上 7 个种子的平均结果；平均而言，这些分歧有助于改进.}\label{cat-tab:disagreement}\\
+
+        \toprule
+        \textbf{比较} & $p$(不一致) & $p$(正确 $\mid$ 不一致) \\
+        \midrule
+        \multicolumn{3}{l}{\textit{Qwen 3 4B}} \\
+        Synth. vs Maj. vote & $4.8\%$ & $\mathbf{86.3\%}$ \\
+        Synth. vs Self-BoN & $6.5\%$ & $\mathbf{81.7\%}$ \\
+        \midrule
+        \multicolumn{3}{l}{\textit{Gemma 3 4B}} \\
+        Synth. vs Maj. vote & $7.4\%$ & $\mathbf{81.5\%}$ \\
+        Synth. vs Self-BoN & $9.9\%$ & $\mathbf{70.2\%}$ \\
+        \bottomrule
+    
+\end{longtable}

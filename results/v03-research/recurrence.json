@@ -1,0 +1,112 @@
+{
+  "scope": "scalar contraction counterexample and exact two-token denoising expectation; no trained looped LLM",
+  "parameters": {
+    "rho": 0.5,
+    "initial_state": 0.0,
+    "true_answer": 1.0,
+    "readout": "int(h>0)",
+    "steps": 64
+  },
+  "rows": [
+    {
+      "fixed_point": -1.0,
+      "steps": 1,
+      "state": -0.5,
+      "successive_difference": 0.5,
+      "fixed_point_error": 0.5,
+      "contraction_error_bound": 0.5,
+      "answer": 0,
+      "correct": false
+    },
+    {
+      "fixed_point": -1.0,
+      "steps": 4,
+      "state": -0.9375,
+      "successive_difference": 0.0625,
+      "fixed_point_error": 0.0625,
+      "contraction_error_bound": 0.0625,
+      "answer": 0,
+      "correct": false
+    },
+    {
+      "fixed_point": -1.0,
+      "steps": 16,
+      "state": -0.9999847412109375,
+      "successive_difference": 1.52587890625e-05,
+      "fixed_point_error": 1.52587890625e-05,
+      "contraction_error_bound": 1.52587890625e-05,
+      "answer": 0,
+      "correct": false
+    },
+    {
+      "fixed_point": -1.0,
+      "steps": 64,
+      "state": -1.0,
+      "successive_difference": 0.0,
+      "fixed_point_error": 0.0,
+      "contraction_error_bound": 5.421010862427522e-20,
+      "answer": 0,
+      "correct": false
+    },
+    {
+      "fixed_point": 1.0,
+      "steps": 1,
+      "state": 0.5,
+      "successive_difference": 0.5,
+      "fixed_point_error": 0.5,
+      "contraction_error_bound": 0.5,
+      "answer": 1,
+      "correct": true
+    },
+    {
+      "fixed_point": 1.0,
+      "steps": 4,
+      "state": 0.9375,
+      "successive_difference": 0.0625,
+      "fixed_point_error": 0.0625,
+      "contraction_error_bound": 0.0625,
+      "answer": 1,
+      "correct": true
+    },
+    {
+      "fixed_point": 1.0,
+      "steps": 16,
+      "state": 0.9999847412109375,
+      "successive_difference": 1.52587890625e-05,
+      "fixed_point_error": 1.52587890625e-05,
+      "contraction_error_bound": 1.52587890625e-05,
+      "answer": 1,
+      "correct": true
+    },
+    {
+      "fixed_point": 1.0,
+      "steps": 64,
+      "state": 1.0,
+      "successive_difference": 0.0,
+      "fixed_point_error": 0.0,
+      "contraction_error_bound": 5.421010862427522e-20,
+      "answer": 1,
+      "correct": true
+    }
+  ],
+  "two_token_denoising": [
+    {
+      "mask_probability": 0.25,
+      "expected_masked_tokens": 0.5,
+      "expected_unweighted_loss": 0.08664339756999316,
+      "expected_inverse_t_weighted_loss": 0.34657359027997264
+    },
+    {
+      "mask_probability": 0.5,
+      "expected_masked_tokens": 1.0,
+      "expected_unweighted_loss": 0.34657359027997264,
+      "expected_inverse_t_weighted_loss": 0.6931471805599453
+    },
+    {
+      "mask_probability": 1.0,
+      "expected_masked_tokens": 2.0,
+      "expected_unweighted_loss": 1.3862943611198906,
+      "expected_inverse_t_weighted_loss": 1.3862943611198906
+    }
+  ]
+}

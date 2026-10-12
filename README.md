@@ -1,91 +1,71 @@
-# 人工智能自学与研究入门
+# 现代人工智能研究学习
 
-一份从数学基础走向可检验研究问题的中文自学教材。v0.2 共41页、13章、30道习题及解答，包含基础推导、手算例子、每章习题与答案、10 个已实际运行的 CPU 实验入口，以及区分证据与猜想的前沿导论。新增矩阵梯度—张量—代码的桥接、两位置注意力完整更新、残差故障诊断和三划分×五种子的微研究。
+从语言模型的数学与训练出发，读懂近年的基础模型论文，完成可复核的小研究。教材以问题、推导、实验与失败案例连成学习路线；配套中文论文资料保留原文的公式、图表、附录和版本边界。
 
-**开始阅读：[教材 PDF](dist/ai-self-study.pdf) · [完整源码 ZIP](dist/ai-self-study-source.zip) · [依赖路线](docs/roadmap.md) · [33 项论文与教材索引](docs/papers.md)**
+## 直接阅读与下载
 
-[内容范围与章节页数](docs/scope.md) 列明可复算推导、所调用的先修工具、简化模型的实现范围及尚属导读的前沿内容。
+- [中文教材 PDF](https://raw.githubusercontent.com/xhc144/ai-self-study/main/dist/ai-self-study.pdf)：11 个现代 AI 学习单元、3 个按需数学工具附录，例题、实验、习题及解答。
+- [中文论文资料 PDF](https://raw.githubusercontent.com/xhc144/ai-self-study/main/dist/ai-papers-zh.pdf)：九篇指定许可版本的非官方全文译文，以及三份原创研究说明。
+- [教材与论文合订 PDF](https://raw.githubusercontent.com/xhc144/ai-self-study/main/dist/ai-self-study-complete.pdf)。
+- [完整可编辑源码 ZIP](https://raw.githubusercontent.com/xhc144/ai-self-study/main/dist/ai-self-study-source.zip)：LaTeX、论文图件及署名、实验代码、实际结果、研究记录、构建和测试脚本。字体与下载模型不捆绑。
+- [逐篇阅读入口与页码](papers/README.md)、[路线及先修关系](docs/roadmap.md)、[公式—代码对应](docs/code-bridge.md)。
 
-先修是高中代数、单变量导数和基本 Python。多变量微分、概率、信息论和矩阵计算按后文需要引入；积分基本定理、谱定理与欧氏空间完备性明确作为工具调用。它是一份有内容的研究入门首版，完整强化学习理论、分布式训练和前沿大模型复现仍需后续课程。
+这些译文由机器辅助制作并经过独立 AI 对照审查，不是作者官方译本，也不声称完成了人工专家审校。原作者实验与本项目 CPU 实验分开标识。
 
-## 学习路线
+## 按这条路线学
 
-|阶段|章节|完成后应能做到|
-|---|---|---|
-|数学基础|1 路线与研究问题；2 向量与最小二乘；3 概率与预测损失；4 微分与优化|自己推导正规方程、交叉熵梯度、链式法则与步长条件|
-|机器学习与网络|5 统计学习与评估；6 神经网络与反传；7 注意力与 Transformer|正确划分数据、实现反传、检查张量维度和因果掩码|
-|语言模型与推理|8 训练、推理、LoRA 与 DPO；9 进步与资源；10 推理与验证|区分训练与推理预算，理解采样、KV缓存、偏好优化和验证器|
-|走向研究|11 安全与提示词注入；12 可解释性；13 AI辅助研究与新范式|提出有基线、干预、评价和失败判据的小研究问题|
+1. **问题与证据 → 文本预测**：条件概率、token 损失、生成、上下文学习；区分训练、提示和搜索。
+2. **参数学习 → 注意力**：批量反向传播、归一化、残差、因果多头、位置、缓存与在线 softmax；从一次手算到完整小 Transformer。
+3. **评价 → 数据与算力**：校准、污染、留出、数据去重和缩放；问比较是否匹配预算、指标是否忠实。
+4. **后训练 → 推理预算**：SFT、奖励、DPO、可验证 RL、采样与验证器；结合 DPO、R1、Snell、CaT 译文。
+5. **工具与信任 → 机制解释**：多步错误、RAG、指令层级、浏览器注入、探针、归因与反事实；结合原创安全研究说明和 CHIVE。
+6. **可核验研究 → 新结构**：评估器投机、程序搜索、DGM、形式证明、条件记忆、循环潜在状态；结合 AlphaProof、Engram、STARS。
 
-每节建议：先复算，再运行实验，写出改变量后的预测，最后比较实际结果。练习答案紧随题目，第一次尝试时遮住答案。
+矩阵、概率和微分附录按公式需要回查。每一阶段都先重建一个推导，再运行实验，最后提出能被反例或留出结果推翻的小问题；不用先把传统 ML 算法目录全部学完。
 
-## 运行实验
+## 真正运行实验
 
-Python 3.11+，只有 NumPy 是实验依赖；无需收费 API、GPU、模型下载或外部数据。
+默认 NumPy 实验无 API、无模型下载，Python 3.12：
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
+. .venv/bin/activate
 python -m pip install -r requirements.txt
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/run_all.py
+python experiments/run_all.py --out /tmp/ai-basics
+python experiments/v03_foundations.py --out /tmp/ai-foundations
+python experiments/v03_networks.py --out /tmp/ai-networks
+python experiments/v03_language.py --out /tmp/ai-language
+python experiments/v03_research.py --out /tmp/ai-research
+python experiments/research_bridges.py --out /tmp/ai-bridges
 python -m unittest discover -s tests -v
 ```
 
-结果写入 `results/metrics.json`，环境、线程、种子、时间和源码哈希写入 `results/environment.json`。若希望保留首版参考结果，用 `--out /tmp/my-ai-results` 指定另一目录。
+结果与实际执行环境在 [results](results/)。所有数据是原创有限任务。输出目录用 `/tmp` 可保留仓库中的参考结果。基础套件还包含注意力逐步更新、残差漏梯度调试与 15 次小研究；[实验说明](docs/experiments.md)列出精确命令和证据范围。
 
-|实验|学习问题|
-|---|---|
-|ridge|相关特征、条件数、正则化、SVD参考与梯度下降|
-|mlp|XOR非线性表示、手写反传与有限差分|
-|language_model|2,538参数因果注意力、完整组合划分、训练推理与泄漏检查|
-|spurious|同分布高分与快捷特征偏移失败|
-|search_verifier|候选覆盖、精确验证、预算和pass@N边界|
-|injection|合成资料如何越过信任边界，执行器怎样限制动作|
-|preference|八动作DPO、带噪偏好、真实奖励与KL解析最优策略|
-|attention_walkthrough|T=2、D=1因果注意力，前向→标量损失→完整反向→一次更新|
-|residual_debug|故意漏掉恒等残差梯度，206坐标差分定位E/P|
-|micro_research|三组预冻组合划分×五初始化、两个基线、逐文档干预与不确定性|
-
-`all` 保留原七项实验；新增入口按名称选择。保留参考结果时指定独立输出目录：
+另有两类可选的真实模型实验：完整 **18,026 参数标准因果 Transformer** 的六次 CPU 配对训练，以及两份固定版本 **SmolLM2-135M** 的 54 条 CPU 诊断。使用独立环境：
 
 ```bash
-python experiments/run_all.py --experiment attention_walkthrough --out /tmp/my-attention
-python experiments/run_all.py --experiment residual_debug --seed 19 --out /tmp/my-residual
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python experiments/run_all.py --experiment micro_research --out /tmp/my-study
-python experiments/run_all.py --experiment language_model --seed 145 --steps 200 --lr .01 --width 8 --out /tmp/my-lm
+python -m venv .venv-models
+. .venv-models/bin/activate
+python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install numpy==2.3.5 transformers==4.57.3
+python experiments/standard_transformer_study.py --out /tmp/ai-standard
+# 首次显式允许约 538 MB 权重下载；以后去掉 --allow-download 只读缓存。
+python experiments/public_model_diagnostics.py --allow-download --cache /tmp/ai-hf-cache --out /tmp/ai-public
 ```
 
-单实验支持其适用的 `--seed --steps --lr --width`，微研究支持 `--design --seeds` 并标记探索性覆盖。v0.2.1 修复了显式 `--design` 的记录：即使没有其他命令行覆盖，也会在 `exploratory_overrides.design` 中保存设计的绝对路径与文件 SHA-256；显式指定冻结设计文件也保留这一探索标记。参数、环境和代码哈希自动记录。教材 PDF 仍为 v0.2。详见 [公式—变量—形状—代码](docs/code-bridge.md) 与 [实验报告](docs/experiments.md)。
+这些实验也保留失败：重复数据组的加权训练损失下降而留出损失上升；公开模型两选项评分全选 A，严格字母格式全部失败。前者没有匹配 FLOPs，后者不是能力榜单或 RLVR 复现。完整输出与冻结设计供读者检查，不用新提示替换不理想结果。
 
-[首个已完成微研究](research/micro-study-v02.md) 报告全部15次训练：叫声全对，但完整测试NLL仍高；每个固定划分的5/5整次成功只给出条件性95%区间[0.4782,1]。干预全部回到训练组合，三个划分重叠；没有把文档/token当IID或用bootstrap缩小误差。原单种子语言模型实验仍单列。候选搜索与玩具注入路由器不能当成大模型能力或安全评测。
+## 从读论文走向小研究
 
-## 编译与复现
+[研究问题](research/questions.md)提供可在现有代码上继续的入口；[研究记录](research/notebook.md)和[真实模型研究记录](research/model-study-v03.md)展示如何冻结问题、保存全部运行、解释失败和限制结论。建议先做来源角色交换、同预算数据重加权、错误验证器、相关伪参考或机制干预；先写判定标准，再看测试结果。
 
-源码是可编辑 LaTeX，不是页面截图。需要 XeLaTeX、ctex、Fandol 与 Computer Modern Unicode 字体及常见 LaTeX 宏包。项目不捆绑字体。
+引用以官方课程、教材、论文与研究团队报告为主。[来源账本](docs/sources.json)记录读到哪里；[逐版本许可](papers/rights.json)决定全文翻译或原创解释，不以免费阅读、模型许可或代码许可代替论文许可。
 
-```bash
-# 仅重编译教材；已包含来自实际结果的图和数值片段
-bash scripts/build_pdf.sh
+## 构建、许可证与版本
 
-# 重新生成原创实验图，再编译
-python -m pip install -r requirements-build.txt
-python scripts/plot_results.py
-bash scripts/build_pdf.sh
+[构建说明](docs/build.md)提供 XeLaTeX、所需字体和源码 ZIP 重编译流程；源码不用截图拼贴，不捆绑字体。正文采用固定王者数学版式，适配类的来源权利另记。
 
-# PDF结构、目录、超链接、逐页渲染与来源/文件哈希
-python scripts/audit_delivery.py
-```
+原创教学文本和数据用 CC BY 4.0，原创实验代码用 MIT。九篇译文及论文图件按逐篇 CC BY 4.0 署名，DGM 论文内代码属于其论文许可范围；外部软件、模型、数据和继承模板保留各自权利，详见 [LICENSE](LICENSE) 与[权利说明](docs/third-party.md)。
 
-系统安装示例和干净目录重编译方法见 [构建说明](docs/build.md)。机械检查、独立 AI 读者审查和实际视觉检查分别记录在 `qa/`；它们不代表人类同行评审或全书无误证明。
-
-## 研究专题
-
-- [研究起点](research/questions.md)：主语检索与近邻捷径、可解码表征与因果使用。
-- [证据笔记](research/notebook.md)：优化和泛化的分离、DPO奖励与KL权衡、验证器与权限边界。
-- 前沿配读：规模规律与Chinchilla；R1与可验证奖励；2026 IH-Challenge；2025局部电路与2026 CHIVE负结果；FunSearch、AlphaEvolve与系统级自改进；Mamba、扩散语言模型、2026循环动力学。
-
-[扩大语法与表征研究方案](research/questions.md) 仍未执行并明确标为方案。论文只提供官方链接和原创中文解释，不镜像全文、课程整章、数据集或第三方图。
-
-## 许可
-
-原创教材、研究笔记和实验图采用 **CC BY 4.0**；原创 Python、Shell 与测试代码采用 **MIT**。排版适配模板单列来源与适用范围，第三方论文、教材、字体和软件的许可保留各自权利。详见 [LICENSE](LICENSE) 与 [来源说明](docs/third-party.md)。
+本版为 **0.3.0**。旧版源码与 PDF 保留在 Git 历史及 `v0.2.1` 标签；采用新增提交更新，保留原始版本。[独立审查与复现证据](qa/README.md)区分内容核对、编译、全页布局巡视与可读抽查。

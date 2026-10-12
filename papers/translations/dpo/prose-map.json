@@ -1,0 +1,2214 @@
+[
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      75,
+      83
+    ],
+    "translation_marker": "SOURCE main.tex L75-L83",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 8
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      87,
+      88
+    ],
+    "translation_marker": "SOURCE main.tex L87-L88",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 15
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      94,
+      94
+    ],
+    "translation_marker": "SOURCE main.tex L94-L94",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 22
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      99,
+      99
+    ],
+    "translation_marker": "SOURCE main.tex L99-L99",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 27
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      101,
+      103
+    ],
+    "translation_marker": "SOURCE main.tex L101-L103",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 30
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      105,
+      105
+    ],
+    "translation_marker": "SOURCE main.tex L105-L105",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 33
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      115,
+      117
+    ],
+    "translation_marker": "SOURCE main.tex L115-L117",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 44
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      119,
+      119
+    ],
+    "translation_marker": "SOURCE main.tex L119-L119",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 47
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      125,
+      125
+    ],
+    "translation_marker": "SOURCE main.tex L125-L125",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 54
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      127,
+      127
+    ],
+    "translation_marker": "SOURCE main.tex L127-L127",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 57
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      129,
+      129
+    ],
+    "translation_marker": "SOURCE main.tex L129-L129",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 60
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      133,
+      133
+    ],
+    "translation_marker": "SOURCE main.tex L133-L133",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 65
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      137,
+      137
+    ],
+    "translation_marker": "SOURCE main.tex L137-L137",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 70
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      139,
+      139
+    ],
+    "translation_marker": "SOURCE main.tex L139-L139",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 73
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      143,
+      144
+    ],
+    "translation_marker": "SOURCE main.tex L143-L144",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 78
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      148,
+      150
+    ],
+    "translation_marker": "SOURCE main.tex L148-L150",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 83
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      153,
+      153
+    ],
+    "translation_marker": "SOURCE main.tex L153-L153",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 87
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      157,
+      157
+    ],
+    "translation_marker": "SOURCE main.tex L157-L157",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 92
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      161,
+      161
+    ],
+    "translation_marker": "SOURCE main.tex L161-L161",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 97
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      165,
+      165
+    ],
+    "translation_marker": "SOURCE main.tex L165-L165",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 102
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      167,
+      168
+    ],
+    "translation_marker": "SOURCE main.tex L167-L168",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 105
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      172,
+      172
+    ],
+    "translation_marker": "SOURCE main.tex L172-L172",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 110
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      174,
+      174
+    ],
+    "translation_marker": "SOURCE main.tex L174-L174",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 113
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      178,
+      178
+    ],
+    "translation_marker": "SOURCE main.tex L178-L178",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 119
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      180,
+      182
+    ],
+    "translation_marker": "SOURCE main.tex L180-L182",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 122
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      187,
+      187
+    ],
+    "translation_marker": "SOURCE main.tex L187-L187",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 129
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      191,
+      191
+    ],
+    "translation_marker": "SOURCE main.tex L191-L191",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 134
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      194,
+      194
+    ],
+    "translation_marker": "SOURCE main.tex L194-L194",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 139
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      196,
+      196
+    ],
+    "translation_marker": "SOURCE main.tex L196-L196",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 142
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      198,
+      198
+    ],
+    "translation_marker": "SOURCE main.tex L198-L198",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 145
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      202,
+      202
+    ],
+    "translation_marker": "SOURCE main.tex L202-L202",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 150
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      204,
+      204
+    ],
+    "translation_marker": "SOURCE main.tex L204-L204",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 153
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      206,
+      206
+    ],
+    "translation_marker": "SOURCE main.tex L206-L206",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 156
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      209,
+      209
+    ],
+    "translation_marker": "SOURCE main.tex L209-L209",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 160
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      213,
+      213
+    ],
+    "translation_marker": "SOURCE main.tex L213-L213",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 165
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      215,
+      215
+    ],
+    "translation_marker": "SOURCE main.tex L215-L215",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 170
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      219,
+      221
+    ],
+    "translation_marker": "SOURCE main.tex L219-L221",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 175
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      224,
+      224
+    ],
+    "translation_marker": "SOURCE main.tex L224-L224",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 179
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      228,
+      229
+    ],
+    "translation_marker": "SOURCE main.tex L228-L229",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 184
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      233,
+      233
+    ],
+    "translation_marker": "SOURCE main.tex L233-L233",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 189
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      236,
+      237
+    ],
+    "translation_marker": "SOURCE main.tex L236-L237",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 193
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      243,
+      243
+    ],
+    "translation_marker": "SOURCE main.tex L243-L243",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 200
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      249,
+      249
+    ],
+    "translation_marker": "SOURCE main.tex L249-L249",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 206
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      253,
+      253
+    ],
+    "translation_marker": "SOURCE main.tex L253-L253",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 211
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      261,
+      261
+    ],
+    "translation_marker": "SOURCE main.tex L261-L261",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 220
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      266,
+      266
+    ],
+    "translation_marker": "SOURCE main.tex L266-L266",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 225
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      271,
+      272
+    ],
+    "translation_marker": "SOURCE main.tex L271-L272",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 231
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      274,
+      274
+    ],
+    "translation_marker": "SOURCE main.tex L274-L274",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 234
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      283,
+      283
+    ],
+    "translation_marker": "SOURCE main.tex L283-L283",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 244
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      285,
+      285
+    ],
+    "translation_marker": "SOURCE main.tex L285-L285",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 247
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      291,
+      291
+    ],
+    "translation_marker": "SOURCE main.tex L291-L291",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 241
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      296,
+      296
+    ],
+    "translation_marker": "SOURCE main.tex L296-L296",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 257
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      300,
+      300
+    ],
+    "translation_marker": "SOURCE main.tex L300-L300",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 262
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      308,
+      308
+    ],
+    "translation_marker": "SOURCE main.tex L308-L308",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 271
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      310,
+      316
+    ],
+    "translation_marker": "SOURCE main.tex L310-L316",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 274
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      320,
+      320
+    ],
+    "translation_marker": "SOURCE main.tex L320-L320",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 266
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      323,
+      323
+    ],
+    "translation_marker": "SOURCE main.tex L323-L323",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 286
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      338,
+      338
+    ],
+    "translation_marker": "SOURCE main.tex L338-L338",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 301
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      340,
+      340
+    ],
+    "translation_marker": "SOURCE main.tex L340-L340",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 304
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      343,
+      343
+    ],
+    "translation_marker": "SOURCE main.tex L343-L343",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 308
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      358,
+      358
+    ],
+    "translation_marker": "SOURCE main.tex L358-L358",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 745
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      360,
+      360
+    ],
+    "translation_marker": "SOURCE main.tex L360-L360",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 748
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      362,
+      363
+    ],
+    "translation_marker": "SOURCE main.tex L362-L363",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 751
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      365,
+      365
+    ],
+    "translation_marker": "SOURCE main.tex L365-L365",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 754
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      368,
+      368
+    ],
+    "translation_marker": "SOURCE main.tex L368-L368",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 758
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      372,
+      372
+    ],
+    "translation_marker": "SOURCE main.tex L372-L372",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 763
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      376,
+      376
+    ],
+    "translation_marker": "SOURCE main.tex L376-L376",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 768
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      384,
+      384
+    ],
+    "translation_marker": "SOURCE main.tex L384-L384",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 777
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      389,
+      389
+    ],
+    "translation_marker": "SOURCE main.tex L389-L389",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 784
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      394,
+      394
+    ],
+    "translation_marker": "SOURCE main.tex L394-L394",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 791
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      399,
+      399
+    ],
+    "translation_marker": "SOURCE main.tex L399-L399",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 797
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      403,
+      403
+    ],
+    "translation_marker": "SOURCE main.tex L403-L403",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 802
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      411,
+      411
+    ],
+    "translation_marker": "SOURCE main.tex L411-L411",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 811
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      416,
+      416
+    ],
+    "translation_marker": "SOURCE main.tex L416-L416",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 817
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      421,
+      421
+    ],
+    "translation_marker": "SOURCE main.tex L421-L421",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 823
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      427,
+      427
+    ],
+    "translation_marker": "SOURCE main.tex L427-L427",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 831
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      432,
+      432
+    ],
+    "translation_marker": "SOURCE main.tex L432-L432",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 837
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      437,
+      437
+    ],
+    "translation_marker": "SOURCE main.tex L437-L437",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 843
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      442,
+      442
+    ],
+    "translation_marker": "SOURCE main.tex L442-L442",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 849
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      451,
+      451
+    ],
+    "translation_marker": "SOURCE main.tex L451-L451",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 859
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      457,
+      457
+    ],
+    "translation_marker": "SOURCE main.tex L457-L457",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 866
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      462,
+      462
+    ],
+    "translation_marker": "SOURCE main.tex L462-L462",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 872
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      464,
+      464
+    ],
+    "translation_marker": "SOURCE main.tex L464-L464",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 875
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      470,
+      470
+    ],
+    "translation_marker": "SOURCE main.tex L470-L470",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 883
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      476,
+      476
+    ],
+    "translation_marker": "SOURCE main.tex L476-L476",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 890
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      479,
+      479
+    ],
+    "translation_marker": "SOURCE main.tex L479-L479",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 894
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      482,
+      482
+    ],
+    "translation_marker": "SOURCE main.tex L482-L482",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 898
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      491,
+      491
+    ],
+    "translation_marker": "SOURCE main.tex L491-L491",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 909
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      495,
+      495
+    ],
+    "translation_marker": "SOURCE main.tex L495-L495",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 916
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      498,
+      498
+    ],
+    "translation_marker": "SOURCE main.tex L498-L498",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 920
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      506,
+      506
+    ],
+    "translation_marker": "SOURCE main.tex L506-L506",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 930
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      513,
+      513
+    ],
+    "translation_marker": "SOURCE main.tex L513-L513",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 940
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      516,
+      517
+    ],
+    "translation_marker": "SOURCE main.tex L516-L517",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 944
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      520,
+      520
+    ],
+    "translation_marker": "SOURCE main.tex L520-L520",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 948
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      524,
+      524
+    ],
+    "translation_marker": "SOURCE main.tex L524-L524",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 954
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      529,
+      529
+    ],
+    "translation_marker": "SOURCE main.tex L529-L529",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 961
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      531,
+      531
+    ],
+    "translation_marker": "SOURCE main.tex L531-L531",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 966
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      536,
+      536
+    ],
+    "translation_marker": "SOURCE main.tex L536-L536",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 973
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      539,
+      539
+    ],
+    "translation_marker": "SOURCE main.tex L539-L539",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 977
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      542,
+      542
+    ],
+    "translation_marker": "SOURCE main.tex L542-L542",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 981
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      547,
+      547
+    ],
+    "translation_marker": "SOURCE main.tex L547-L547",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 988
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      550,
+      550
+    ],
+    "translation_marker": "SOURCE main.tex L550-L550",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 994
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      554,
+      555
+    ],
+    "translation_marker": "SOURCE main.tex L554-L555",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 999
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      561,
+      568
+    ],
+    "translation_marker": "SOURCE main.tex L561-L568",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1006
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      583,
+      583
+    ],
+    "translation_marker": "SOURCE main.tex L583-L583",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1027
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      588,
+      588
+    ],
+    "translation_marker": "SOURCE main.tex L588-L588",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1033
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      591,
+      591
+    ],
+    "translation_marker": "SOURCE main.tex L591-L591",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1037
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      595,
+      596
+    ],
+    "translation_marker": "SOURCE main.tex L595-L596",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1042
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      598,
+      614
+    ],
+    "translation_marker": "SOURCE main.tex L598-L614",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1046
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      617,
+      617
+    ],
+    "translation_marker": "SOURCE main.tex L617-L617",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1064
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      619,
+      636
+    ],
+    "translation_marker": "SOURCE main.tex L619-L636",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1067
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      639,
+      639
+    ],
+    "translation_marker": "SOURCE main.tex L639-L639",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1086
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      641,
+      656
+    ],
+    "translation_marker": "SOURCE main.tex L641-L656",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1089
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      660,
+      660
+    ],
+    "translation_marker": "SOURCE main.tex L660-L660",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1107
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      666,
+      666
+    ],
+    "translation_marker": "SOURCE main.tex L666-L666",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1115
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      668,
+      672
+    ],
+    "translation_marker": "SOURCE main.tex L668-L672",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1118
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      675,
+      679
+    ],
+    "translation_marker": "SOURCE main.tex L675-L679",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1125
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      684,
+      684
+    ],
+    "translation_marker": "SOURCE main.tex L684-L684",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1112
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      690,
+      690
+    ],
+    "translation_marker": "SOURCE main.tex L690-L690",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1139
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      695,
+      695
+    ],
+    "translation_marker": "SOURCE main.tex L695-L695",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1145
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      699,
+      699
+    ],
+    "translation_marker": "SOURCE main.tex L699-L699",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1150
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      705,
+      707
+    ],
+    "translation_marker": "SOURCE main.tex L705-L707",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1158
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      709,
+      709
+    ],
+    "translation_marker": "SOURCE main.tex L709-L709",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1163
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      711,
+      711
+    ],
+    "translation_marker": "SOURCE main.tex L711-L711",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1166
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      713,
+      713
+    ],
+    "translation_marker": "SOURCE main.tex L713-L713",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1169
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      717,
+      717
+    ],
+    "translation_marker": "SOURCE main.tex L717-L717",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1155
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      725,
+      734
+    ],
+    "translation_marker": "SOURCE main.tex L725-L734",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1181
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      736,
+      736
+    ],
+    "translation_marker": "SOURCE main.tex L736-L736",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1189
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      738,
+      738
+    ],
+    "translation_marker": "SOURCE main.tex L738-L738",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1192
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      740,
+      740
+    ],
+    "translation_marker": "SOURCE main.tex L740-L740",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1195
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      744,
+      744
+    ],
+    "translation_marker": "SOURCE main.tex L744-L744",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1178
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      752,
+      759
+    ],
+    "translation_marker": "SOURCE main.tex L752-L759",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1207
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      761,
+      761
+    ],
+    "translation_marker": "SOURCE main.tex L761-L761",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1214
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      763,
+      763
+    ],
+    "translation_marker": "SOURCE main.tex L763-L763",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1217
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      765,
+      765
+    ],
+    "translation_marker": "SOURCE main.tex L765-L765",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1220
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      769,
+      769
+    ],
+    "translation_marker": "SOURCE main.tex L769-L769",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1204
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      777,
+      777
+    ],
+    "translation_marker": "SOURCE main.tex L777-L777",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1232
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      779,
+      779
+    ],
+    "translation_marker": "SOURCE main.tex L779-L779",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1235
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      781,
+      781
+    ],
+    "translation_marker": "SOURCE main.tex L781-L781",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1238
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      783,
+      783
+    ],
+    "translation_marker": "SOURCE main.tex L783-L783",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1241
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      787,
+      787
+    ],
+    "translation_marker": "SOURCE main.tex L787-L787",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1229
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      796,
+      796
+    ],
+    "translation_marker": "SOURCE main.tex L796-L796",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1254
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      798,
+      798
+    ],
+    "translation_marker": "SOURCE main.tex L798-L798",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1257
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      800,
+      800
+    ],
+    "translation_marker": "SOURCE main.tex L800-L800",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1260
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      802,
+      802
+    ],
+    "translation_marker": "SOURCE main.tex L802-L802",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1263
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      806,
+      806
+    ],
+    "translation_marker": "SOURCE main.tex L806-L806",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1251
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      814,
+      814
+    ],
+    "translation_marker": "SOURCE main.tex L814-L814",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1275
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      816,
+      818
+    ],
+    "translation_marker": "SOURCE main.tex L816-L818",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1278
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      820,
+      820
+    ],
+    "translation_marker": "SOURCE main.tex L820-L820",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1282
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      822,
+      822
+    ],
+    "translation_marker": "SOURCE main.tex L822-L822",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1285
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      826,
+      826
+    ],
+    "translation_marker": "SOURCE main.tex L826-L826",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1272
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      835,
+      835
+    ],
+    "translation_marker": "SOURCE main.tex L835-L835",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1298
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      837,
+      851
+    ],
+    "translation_marker": "SOURCE main.tex L837-L851",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1301
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      855,
+      855
+    ],
+    "translation_marker": "SOURCE main.tex L855-L855",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1314
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      859,
+      859
+    ],
+    "translation_marker": "SOURCE main.tex L859-L859",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1295
+    },
+    "source_comment_present": false
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      866,
+      873
+    ],
+    "translation_marker": "SOURCE main.tex L866-L873",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1324
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      875,
+      875
+    ],
+    "translation_marker": "SOURCE main.tex L875-L875",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1332
+    },
+    "source_comment_present": true
+  },
+  {
+    "source_file": "main.tex",
+    "source_lines": [
+      877,
+      877
+    ],
+    "translation_marker": "SOURCE main.tex L877-L877",
+    "status": "translated",
+    "translation": {
+      "file": "body.tex",
+      "line": 1335
+    },
+    "source_comment_present": true
+  }
+]

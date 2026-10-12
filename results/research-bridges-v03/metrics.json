@@ -1,0 +1,79 @@
+{
+  "consensus": {
+    "assumed_marginal_error": 0.3,
+    "rows": [
+      {
+        "dependence": "independent",
+        "groups": 20000,
+        "marginal_sample_error": 0.2952,
+        "n": 1,
+        "pseudo_reference_error": 0.2952,
+        "unanimous_group_fraction": 1.0
+      },
+      {
+        "dependence": "shared_error",
+        "groups": 20000,
+        "marginal_sample_error": 0.2971,
+        "n": 1,
+        "pseudo_reference_error": 0.2971,
+        "unanimous_group_fraction": 1.0
+      },
+      {
+        "dependence": "independent",
+        "groups": 20000,
+        "marginal_sample_error": 0.3005388888888889,
+        "n": 9,
+        "pseudo_reference_error": 0.10055,
+        "unanimous_group_fraction": 0.0394
+      },
+      {
+        "dependence": "shared_error",
+        "groups": 20000,
+        "marginal_sample_error": 0.30045,
+        "n": 9,
+        "pseudo_reference_error": 0.30045,
+        "unanimous_group_fraction": 1.0
+      },
+      {
+        "dependence": "independent",
+        "groups": 20000,
+        "marginal_sample_error": 0.3004136363636364,
+        "n": 33,
+        "pseudo_reference_error": 0.00795,
+        "unanimous_group_fraction": 0.0
+      },
+      {
+        "dependence": "shared_error",
+        "groups": 20000,
+        "marginal_sample_error": 0.2957,
+        "n": 33,
+        "pseudo_reference_error": 0.2957,
+        "unanimous_group_fraction": 1.0
+      }
+    ],
+    "truth_label": false,
+    "warning": "Known synthetic oracle used only to audit pseudo-reference accuracy, not available to aggregator; independent vs shared errors are imposed by generator"
+  },
+  "lookup": {
+    "active_rows": [
+      2,
+      7,
+      11
+    ],
+    "finite_difference_max_error": 4.944489262470597e-11,
+    "hash_collisions": {
+      "keys": 1000,
+      "scope": "Deterministic integer-key addressing example; not semantic N-grams, cryptographic hashing or Engram performance",
+      "single_distinct": 257,
+      "table_sizes": [
+        257,
+        263
+      ],
+      "two_head_distinct": 1000
+    },
+    "loss": 3.6977625548999624,
+    "repeated_key_count": 3
+  },
+  "scope": "Original numeric mechanism experiment, no LLM, training data or medical task",
+  "seed": 144
+}

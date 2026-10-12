@@ -1,0 +1,20 @@
+{
+  "body.tex": "00c8741df7f15fe1ae987afb4c327dc6285626c68cbdf650bce8093a4ac05ff0",
+  "coverage.json": "8db4deb6dc70de7accf52faa9c538328e1548171f286edf9d04106dd43e1fa3c",
+  "figures/ablation_with_compare.pdf": "a973cec39613644974a26cba6be2938bc44c9bb471b212e38c6b988413ed5fd8",
+  "figures/amc23_ablation.pdf": "e53d613a5a003b996c372545722df34d07abc50f1f4f9779bd0615f8ae820fc7",
+  "figures/intro.pdf": "5469de3732324e8fa6b8d8a3a045f6feaf4d80caa2856ebdd78ca40a199fef6d",
+  "figures/main_addition.pdf": "2ff4d04d269f987db3ed289fbbe7a3b8351d033f733c752bf1372872a653e599",
+  "figures/norm.pdf": "a68687d2ebc056439aaa134f7c5b6c82907ddae835615c512b5e9d99da148fd7",
+  "figures/norm_anal.pdf": "e5d235e7bbd050796bc20e7606730357f15d7284de834f75dada65e41528a3b8",
+  "figures/pre_post_random.pdf": "3625cab3dcfe9219bfe1f8a496a2c45daa90b10855cebbe08283d66659fda9b5",
+  "figures/prelude_coda.pdf": "7cc1b87cf0aaa4017e30eb4e74a193a23b654d4a4985b93a223236dcb1d3472c",
+  "figures/random.pdf": "f4e1cb5729179f34c7d9e4eb65f06e16987eb23af0a7ea7d87d8c44c3fdeec27",
+  "figures/weight.pdf": "c2e72f7e63a0ac05f73db00fe0c967d3da71b0e816769b56aeb055df0f71a0c3",
+  "glossary.json": "f192e0bbc8023358410f0582862e9294fcda30adb61690ba341b0260537be207",
+  "isolated-build.log": "c29d80d75a488b483b16c418cfdf3a3dc2650b97dc41a8a4cddcb0125b5a52c3",
+  "metadata.json": "8fbcc5455e30afac625d4621594e1c957022667771a872839e0a477492505285",
+  "references.tex": "3d8104490f9d9156426de4795e33472e2ef678ec57879aedb2ef76de471cc0fb",
+  "source-reading.json": "71f6aae21999cc64638559e0d69e7540998500a70e1b3582f23dacbeac677db5",
+  "validation.json": "04baee122aba85a923470459ae7e6a34c00c164d566e10b4aee465044d6e976d"
+}

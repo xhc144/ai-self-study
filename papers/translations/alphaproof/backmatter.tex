@@ -1,0 +1,31 @@
+\originalsection{数据与代码可用性}\label{alphaproof-availability}
+\noindent\textbf{数据可用性.} 用于 SFT 的人工形式证明来自公开 Mathlib\cite{alphaproof-ref4}. 修订的 miniF2F 与 formal-imo 分别见 \url{https://github.com/google-deepmind/miniF2F}、\url{https://github.com/google-deepmind/formal-imo}. Putnam 题来自公开 PutnamBench\cite{alphaproof-ref21} 的提交 \url{https://github.com/trishullab/PutnamBench/tree/02b2cff66d7ac8e9372c778c4ab9ec80082ecbd8}. 主 RL 主要课程中的形式命题及 TTRL 变式, 分别由自动形式化和变式生成组件合成, 详见“方法”中的“自动形式化”“使用 TTRL 扩展”. RL 训练所用证明也由系统自身在 Lean 环境交互生成, 见“Lean 环境”“主 RL”.
+
+\noindent\textbf{代码可用性.} 算法伪代码见补充数据 1 的 \texttt{alphaproof\_pseudocode.py}. 训练和搜索详细超参数分散于“方法”, 并汇总于补充表. 构成交互环境的 Lean 4 为开源, 见 \url{https://lean-lang.org/}. 广泛使用的 Mathlib 也是开源社区项目, 见 \url{https://github.com/leanprover-community/mathlib4}. 我们通过与 Google 服务器通信的交互工具, 向科学界成员提供 AlphaProof 能力. 感兴趣的研究者可在 \url{https://deepmind.google/alphaproof} 申请访问.
+
+\originalsection{作者、致谢与出版信息}\label{alphaproof-backmatter}
+\noindent\textbf{致谢.} 感谢 T. Eccles、E. Aygün、Z. Gong、R. Evans、S. Mokrá、A. Barekatain、W. Shang、H. Openshaw、F. Gimeno 在 AlphaProof 早期阶段的贡献; 感谢 A. Yang、L. Wu、L. Massacci、T. Murrills、M. Firsching、D. Shved、B. Georgiev 的 Lean 专业知识、形式化工作和审阅. 感谢活跃的 Lean 与 Mathlib 开源社区, 开发并维护使研究成为可能的基础工具和库. 最后, 感谢整个 Google DeepMind 团队在工作全程的支持、鼓励和讨论.
+
+\noindent\textbf{作者所属机构.} 全部作者属于英国伦敦 Google DeepMind. 完整署名见下节及元数据.
+
+\noindent\textbf{作者贡献.} T.H.、J.S. 构思并启动项目. T.H.、R.M.、L.S. 全程提供主要科学、技术和战略领导. H. Masoom、O.B. 领导项目管理与运营. D.H.、P.K.、D.S. 提供总体项目支持与高层战略建议. L.S.、E.W. 领导 Lean 环境开发集成, A.M.、V.V.、J.Y. 作重要贡献. E.W.、O.N.、P.L.、S.M.、C.S.、B.M.、M.Z.H.、T.Z.、V.V. 整理管理形式基准. M.Z.H.、R.M.、G.Z.、T.Z.、V.V.、A.V.、H. Michalewski 整理非形式数据集. J.S. 领导证明网络设计和预训练. J.S.、T.H.、A.H.、M.R. 开发树搜索设计与适配. G.Z.、R.M. 领导自动形式化研究, J.Y.、I.B.、L.S.、L.Y.、T.Z.、V.V.、Y.S.、A.D.、D.Z.、E.W. 作重要贡献. O.N.、P.L.、S.M.、C.S.、B.M. 进行自动形式化输出专家评估. T.H.、R.M. 领导主 RL 框架, Y.S.、J.S.、A.H.、B.I.、E.L.、E.H. 作重要贡献. M.Z.H. 构思开发 TTRL, T.Z.、R.M.、T.H.、G.Z.、I.B.、N.S.、S.A.、S.S. 作重要贡献.
+
+IMO 2024 工作中, O.B. 领导组织与利益相关者关系; E.W.、O.N.、P.L.、S.M.、C.S.、B.M. 领导形式化与审阅. A.D.、D.Z.、Y.L.、F.P.、I.v.G. 开发答案猜测. T.H.、R.M.、L.S. 领导整体系统和协调. T.H. 领导论文准备, M.Z.H.、L.S.、G.Z.、E.W.、M.R.、L.Y.、P.L. 作重要贡献. 全部作者参与论文审阅编辑.
+
+\noindent\textbf{通讯作者.} Thomas Hubert、Eric Wieser 或 Pushmeet Kohli. 原文 PDF 通讯邮箱依次为 \texttt{tkhubert@google.com}、\texttt{efw@google.com}、\texttt{pushmeet@google.com}.
+
+\noindent\textbf{利益冲突.} 作者声明没有利益冲突.
+
+\noindent\textbf{同行评审信息.} Nature 感谢 Matthew England、Talia Ringer、Armando Solar-Lezama 及其他匿名审稿人对本工作同行评审的贡献.
+
+\noindent\textbf{出版者声明.} Springer Nature 对已发表地图中的管辖权主张及机构所属关系保持中立.
+
+\noindent\textbf{独立补充材料条目.} Supplementary Information 的 PDF 包含扩展数据图 4 的数值解题率补充、超参数、自动形式化基准题细节及主要来自 PutnamBench 的智能体样例证明, 含补充表 1--7、补充图 1--6. Supplementary Data 1 的 ZIP 含 Python 伪代码, 展开 AlphaProof 的 RL、自动形式化及变式生成的高层结构. 本译文保留这两项原描述及正文引用, 不将独立附件自动纳入再分发范围. 原文页面附件入口见 \url{https://www.nature.com/articles/s41586-025-09833-y#MOESM1}.
+
+\noindent\textbf{权利与许可.} 本文开放获取, 采用 Creative Commons Attribution 4.0 International License. 该许可允许以任何媒介和格式使用、分享、改编、分发和复制, 条件是适当署名原作者与来源、提供许可链接、说明是否修改. 文内图像及第三方材料纳入文章 Creative Commons 许可, 除非该材料署名说明另有声明. 若材料未纳入许可, 且预期使用不受法律允许或超出允许范围, 则须直接向著作权人取得许可. 许可副本见 \url{https://creativecommons.org/licenses/by/4.0/}.
+
+\noindent\textbf{原作版权声明.} © The Author(s) 2025（© 原作者 2025）.
+
+\noindent\textbf{文章元信息.} 投稿: 2025 年 6 月 3 日. 接受: 2025 年 10 月 30 日. 初次在线发表: 2025 年 11 月 12 日. 正式记录版本: 2026 年 3 月 13 日. 期次日期: 2026 年 3 月 19 日. 正式引文: Hubert, T., Mehta, R., Sartran, L. et al. \textit{Olympiad-level formal mathematical reasoning with reinforcement learning}. \textit{Nature} 651, 607--613 (2026). \url{https://doi.org/10.1038/s41586-025-09833-y}.
+
+\input{../papers/translations/alphaproof/authors.tex}

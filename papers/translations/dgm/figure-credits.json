@@ -1,0 +1,102 @@
+[
+  {
+    "file": "figures/transfer_model_polyglot.pdf",
+    "source": "figures/transfer_model_polyglot.pdf",
+    "sha256": "fa91916ed2ed643f65a856a5962d69c665202f10bfa13243d07cda29d0beca87",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/transfer_model_task.pdf",
+    "source": "figures/transfer_model_task.pdf",
+    "sha256": "3ef51e7a589f873948f07c3b2c9562ce51a15f684cb03d1830be5f5e4e6e8ed9",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/dgm_comparisons.pdf",
+    "source": "figures/dgm_comparisons.pdf",
+    "sha256": "b690aa8ba0aeb46017f24e4325374f4f4431ca8321a3874fb4bcaab2a752b052",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/dgm_wo_selfimprove.pdf",
+    "source": "figures/dgm_wo_selfimprove.pdf",
+    "sha256": "5c32b597ec31123a0f0f375f0c12a0127ac7a60c4f3da63892019df3bebfd02e",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/dgm_comparisons_polyglot.pdf",
+    "source": "figures/dgm_comparisons_polyglot.pdf",
+    "sha256": "d398cefeb0fa64988be8efa9ece39f6931344dd092e2826de97fceb7645e1b19",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/dgm_archive.pdf",
+    "source": "figures/dgm_archive.pdf",
+    "sha256": "7fc99dade151b046e0855336036737d81c641cacb0b18bb1635ac2a7f02a9efe",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/conceptual.pdf",
+    "source": "figures/conceptual.pdf",
+    "sha256": "04e1bf794e235eefbe56aa282b587315da6837d2eb7a93c890def5da2dbb7522",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/dgm_wo_openended.pdf",
+    "source": "figures/dgm_wo_openended.pdf",
+    "sha256": "7adee890a3c403aa24fe3d0a9ab7bd6d2fc451ffcb817e510cf910cba280a645",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/dgm_progress.pdf",
+    "source": "figures/dgm_progress.pdf",
+    "sha256": "eb341f3c0a1d71f19786c86275873b10c801e1b08ec94d2b28a0b39c9200f7f2",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  },
+  {
+    "file": "figures/dgm_halluc.pdf",
+    "source": "solve_halluc/dgm_halluc.pdf",
+    "sha256": "9c169ca6de3f8314e5046e8481bb00cc1ba20e2362bc15de02b642b78e32c1d9",
+    "credit": "Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, Jeff Clune",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "third_party_credit_found": false,
+    "check": "Source captions inspected; article-authored conceptual schematic and result plots, no separate third-party figure credit identified. Original English graphic labels retained."
+  }
+]

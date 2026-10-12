@@ -1,0 +1,361 @@
+{
+  "source_version": "Nature Version of Record 2025-09-17, official 11-page PDF",
+  "source_pdf_sha256": "916fdaafc3b44143a9744481d079744f773d73d06372f82b1dba1076525927f2",
+  "source_html_sha256": "3a99f19b58a480e518f7db0a7db61b9eae4343fbc958fc0f6e6ebfbd18203f8d",
+  "sections": [
+    {
+      "source_section": "Abstract",
+      "source_heading_id": "Abs1",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-abstract",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Main",
+      "source_heading_id": "Sec1",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-main",
+      "source_paragraph_count": 4,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "DeepSeek-R1-Zero",
+      "source_heading_id": "Sec2",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-zero",
+      "source_paragraph_count": 8,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "DeepSeek-R1",
+      "source_heading_id": "Sec3",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-r1",
+      "source_paragraph_count": 6,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Ethics and safety statement",
+      "source_heading_id": "Sec4",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-ethics-safety",
+      "source_paragraph_count": 2,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Conclusion, limitation and future work",
+      "source_heading_id": "Sec5",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-conclusion",
+      "source_paragraph_count": 12,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Methods",
+      "source_heading_id": "Sec12",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-methods-grpo",
+      "source_paragraph_count": 21,
+      "status": "translated",
+      "notes": [],
+      "translated_anchors": [
+        "r1n-methods-grpo",
+        "r1n-methods-rewards",
+        "r1n-methods-helpful",
+        "r1n-methods-safety",
+        "r1n-methods-training"
+      ],
+      "source_subheadings": [
+        "GRPO",
+        "Reward design",
+        "Rule-based rewards",
+        "Model-based rewards",
+        "Helpful reward model",
+        "Safety reward model",
+        "Training details",
+        "Training details of DeepSeek-R1-Zero",
+        "Training details of the first RL stage",
+        "Training details of the second RL stage"
+      ]
+    },
+    {
+      "source_section": "Data availability",
+      "source_heading_id": "data-availability",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-availability",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Code availability",
+      "source_heading_id": "code-availability",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-availability",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "References",
+      "source_heading_id": "Bib1",
+      "translated_file": "references.tex",
+      "translated_anchor": "r1n-ref1",
+      "source_paragraph_count": 38,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Acknowledgements",
+      "source_heading_id": "Ack1",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Author information",
+      "source_heading_id": "author-information",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 210,
+      "status": "translated",
+      "notes": [
+        "194 complete names retained in authors.tex and metadata.json; affiliations, all present-address notes, contributions and correspondence translated. Website author search/publication widgets excluded."
+      ]
+    },
+    {
+      "source_section": "Ethics declarations",
+      "source_heading_id": "ethics",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Peer review",
+      "source_heading_id": "peer-review",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Additional information",
+      "source_heading_id": "additional-information",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Extended data figures and tables",
+      "source_heading_id": "Sec22",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-extended-data",
+      "source_paragraph_count": 2,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "Supplementary information",
+      "source_heading_id": "Sec23",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 1,
+      "status": "translated",
+      "notes": [
+        "Attachment descriptions and scope translated; separate PDF attachments not mirrored or fully translated."
+      ]
+    },
+    {
+      "source_section": "Rights and permissions",
+      "source_heading_id": "rightslink",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 2,
+      "status": "translated",
+      "notes": []
+    },
+    {
+      "source_section": "About this article",
+      "source_heading_id": "article-info",
+      "translated_file": "body.tex",
+      "translated_anchor": "r1n-author-info",
+      "source_paragraph_count": 12,
+      "status": "translated",
+      "notes": [
+        "Citation, submission/acceptance/publication/version-of-record/issue dates and DOI retained; website sharing UI and live usage metrics excluded."
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "source_id": "Fig. 1",
+      "translated_anchor": "r1n-fig1",
+      "asset": "assets/fig1.pdf",
+      "caption": "fully translated",
+      "labels": "source preserved with complete Chinese label correspondence",
+      "status": "included"
+    },
+    {
+      "source_id": "Fig. 2",
+      "translated_anchor": "r1n-fig2",
+      "asset": "assets/fig2.pdf",
+      "caption": "fully translated",
+      "labels": "source preserved with complete Chinese label correspondence",
+      "status": "included"
+    },
+    {
+      "source_id": "Extended Data Fig. 1",
+      "translated_anchor": "r1n-edfig1",
+      "asset": "assets/edfig1.pdf",
+      "caption": "fully translated",
+      "labels": "source preserved with complete Chinese label correspondence",
+      "status": "included"
+    },
+    {
+      "source_id": "Extended Data Fig. 2",
+      "translated_anchor": "r1n-edfig2",
+      "asset": "assets/edfig2.pdf",
+      "caption": "fully translated",
+      "labels": "source preserved with complete Chinese label correspondence",
+      "status": "included"
+    }
+  ],
+  "tables": [
+    {
+      "source_id": "Table 1",
+      "translated_anchor": "r1n-table1",
+      "status": "fully translated including original ellipses and note",
+      "notes": "Model output is an intentionally abbreviated excerpt; no answer invented."
+    },
+    {
+      "source_id": "Table 2",
+      "translated_anchor": "r1n-table2",
+      "translated_file": "table2.tex",
+      "source_numeric_cells": 105,
+      "status": "all cells and original bold markings retained; caption, statistical footnote and metric labels translated"
+    },
+    {
+      "source_id": "Extended Data Table 1",
+      "translated_anchor": "r1n-edtable1",
+      "status": "full image-only prompt, evaluation procedure and caption translated after official PDF visual inspection",
+      "source_pdf_page": 11,
+      "credit_review": "Original caption credits 2024 AIME; no separate licence exclusion is printed. Mathematical question and evaluation text translated, not the third-party AIME paper as a whole."
+    }
+  ],
+  "equations": [
+    {
+      "source_number": 1,
+      "translated_anchor": "r1n-eq1",
+      "status": "retained",
+      "layout_changes": "Ratio named rho only to wrap equation 1; change declared in translator note."
+    },
+    {
+      "source_number": 2,
+      "translated_anchor": "r1n-eq2",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 3,
+      "translated_anchor": "r1n-eq3",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 4,
+      "translated_anchor": "r1n-eq4",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 5,
+      "translated_anchor": "r1n-eq5",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 6,
+      "translated_anchor": "r1n-eq6",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 7,
+      "translated_anchor": "r1n-eq7",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 8,
+      "translated_anchor": "r1n-eq8",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 9,
+      "translated_anchor": "r1n-eq9",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    },
+    {
+      "source_number": 10,
+      "translated_anchor": "r1n-eq10",
+      "status": "retained",
+      "layout_changes": "none beyond typesetting"
+    }
+  ],
+  "reference_count": 36,
+  "author_count": 194,
+  "in_article_appendices": "No additional appendix occurs in the official 11-page PDF beyond Methods and the listed Extended Data.",
+  "excluded": [
+    {
+      "id": "Supplementary Information",
+      "extent": "83 pages; sections 1–11, tables 1–29, figures 1–16",
+      "reason": "No separate explicit Creative Commons grant located during file inspection; do not presume main-article grant for independent attachment. Main-text references retained."
+    },
+    {
+      "id": "Peer Review file",
+      "reason": "Separate attachment; not part of translated 11-page scientific article."
+    },
+    {
+      "id": "arXiv 2501.12948v2",
+      "reason": "Different version and permission status; not used to replace or complete this formal article."
+    },
+    {
+      "id": "Website chrome",
+      "reason": "Recommendations, live metrics, author-search widgets and share UI are not article content."
+    }
+  ],
+  "review_scope": "Translator author checks; no independent translation review asserted.",
+  "translation_file_sha256": {
+    "references.tex": "a8d64defeef9efda890762bf797ca2dfc82b9e076e7e23113b55b4e7a914f36a",
+    "glossary.json": "16ab6f9d506b10cfd7300a6f63f75b6195981f355cc75f0e1b3a6ceab5aa3d22",
+    "authors.tex": "661f3c6689830f2694ce96ee92a9fcd8e04aad52bfaa0cd58c9da17903aa3186",
+    "table2.tex": "8b472e7956ae6887a207e928188e1fb23fda93c54e31aef6dd1bee91fd132720",
+    "verification.json": "48422491ce3f0cd04189956e312fa5dc84e58c5efd6691da5c8baf4f5f7fe859",
+    "body.tex": "b85f9c9a65e035422b1cc78686326bf47334ef178ae1f9ca2455199941ea2b56",
+    "table2-data.json": "39ef0b2d67f1c2ffef38688f13bf45f1fb8f9dae6fd6837b10468684bbad6e59",
+    "source-reading.md": "ffdcca589862139c49f14b614b0ccf79e33f60c237941cd19c53b8801f4fbb2a",
+    "metadata.json": "d65c2698bcb80917a77622dfd14fd758e7413c57cc80c6d41bf95d6ad214c8dd",
+    "assets/fig2.pdf": "977278afc2ea5bbb1ee41d5982cf7d211fc78039e7a80bf6ed22968ea34d7918",
+    "assets/fig1.pdf": "7fae7e44651af3e20112b549ceea3a3a8a2dc445dc337a783e7abb0976997bc8",
+    "assets/edfig1.pdf": "b576aeeb26cd351f746489ecdb99f15fe16ee609649734b4aef09e7dfab1c7b8",
+    "assets/edfig2.pdf": "1f81b0efbbfc6ccca4f0c639a26ccab48316927425a16d13f159bcb5bee93b19"
+  },
+  "verification_file": "verification.json",
+  "isolated_pdf_pages": 17
+}

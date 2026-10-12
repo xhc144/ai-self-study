@@ -1,0 +1,1153 @@
+{
+  "version": "arXiv:2608.16747v1",
+  "elements": [
+    {
+      "source_id": "sec:intro",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 87,
+      "translated_id": "chive-sec:intro",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 4
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:datapoint",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 137,
+      "translated_id": "chive-fig:datapoint",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 27
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:pipeline",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 161,
+      "translated_id": "chive-sec:pipeline",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 42
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:pipeline_description",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 164,
+      "translated_id": "chive-sec:pipeline_description",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 43
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:qa_examples",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 194,
+      "translated_id": "chive-fig:qa_examples",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 63
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:pipeline_claims",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 202,
+      "translated_id": "chive-sec:pipeline_claims",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 70
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:targets",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 238,
+      "translated_id": "chive-fig:targets",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 83
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:pipeline_quality",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 245,
+      "translated_id": "chive-sec:pipeline_quality",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 88
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:interp_eval",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 252,
+      "translated_id": "chive-sec:interp_eval",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 93
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:interp_eval_main",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 259,
+      "translated_id": "chive-fig:interp_eval_main",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 96
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:interp_eval_background",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 263,
+      "translated_id": "chive-sec:interp_eval_background",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 99
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:interp_eval_tools",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 268,
+      "translated_id": "chive-sec:interp_eval_tools",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 102
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:interp_eval_results",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 286,
+      "translated_id": "chive-sec:interp_eval_results",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 113
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:training",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 297,
+      "translated_id": "chive-sec:training",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 122
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:training_background",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 303,
+      "translated_id": "chive-sec:training_background",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 125
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:hint_direct",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 319,
+      "translated_id": "chive-fig:hint_direct",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 134
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:training_setup",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 324,
+      "translated_id": "chive-sec:training_setup",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 137
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:training_hint",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 335,
+      "translated_id": "chive-sec:training_hint",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 146
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:training_heldout",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 343,
+      "translated_id": "chive-sec:training_heldout",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 151
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:heldout_direct",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 350,
+      "translated_id": "chive-fig:heldout_direct",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 156
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:training_privileged",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 358,
+      "translated_id": "chive-sec:training_privileged",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 163
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:discussion",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 365,
+      "translated_id": "chive-sec:discussion",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 168
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "sec:conclusion",
+      "kind": "body_section",
+      "source_file": "main.tex",
+      "source_line": 378,
+      "translated_id": "chive-sec:conclusion",
+      "translated_location": {
+        "file": "parts/main.tex",
+        "line": 179
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:extended_discussion",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 404,
+      "translated_id": "chive-app:extended_discussion",
+      "translated_location": {
+        "file": "parts/appendix-a.tex",
+        "line": 1
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:proxy",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 407,
+      "translated_id": "chive-app:proxy",
+      "translated_location": {
+        "file": "parts/appendix-a.tex",
+        "line": 2
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:hypothesis_discrimination",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 418,
+      "translated_id": "chive-app:hypothesis_discrimination",
+      "translated_location": {
+        "file": "parts/appendix-a.tex",
+        "line": 11
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:hypothesis_generation",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 455,
+      "translated_id": "chive-tab:hypothesis_generation",
+      "translated_location": {
+        "file": "parts/appendix-a.tex",
+        "line": 36
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:pipeline_datasets",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 459,
+      "translated_id": "chive-app:pipeline_datasets",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 1
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:pipeline_detail",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 462,
+      "translated_id": "chive-app:pipeline_detail",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 2
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:prompt_sources",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 481,
+      "translated_id": "chive-app:prompt_sources",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 19
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:eval_dataset",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 492,
+      "translated_id": "chive-app:eval_dataset",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 28
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:eval_dataset_funnel",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 530,
+      "translated_id": "chive-tab:eval_dataset_funnel",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 55
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:eval_claim_format",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 535,
+      "translated_id": "chive-app:eval_claim_format",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 58
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:costs",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 588,
+      "translated_id": "chive-app:costs",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 87
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:datagen_costs",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 612,
+      "translated_id": "chive-tab:datagen_costs",
+      "translated_location": {
+        "file": "parts/appendix-b.tex",
+        "line": 102
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:interp_details",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 622,
+      "translated_id": "chive-app:interp_details",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 1
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:toolcalls",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 625,
+      "translated_id": "chive-app:toolcalls",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 2
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:toolsweep",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 651,
+      "translated_id": "chive-tab:toolsweep",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 21
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:qwen_interp",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 655,
+      "translated_id": "chive-app:qwen_interp",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 24
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:qwen_interp",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 663,
+      "translated_id": "chive-fig:qwen_interp",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 28
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:crossmodel",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 667,
+      "translated_id": "chive-app:crossmodel",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 31
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:crossmodel",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 684,
+      "translated_id": "chive-tab:crossmodel",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 41
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:representability",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 690,
+      "translated_id": "chive-app:representability",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 45
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:flipgrid",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 717,
+      "translated_id": "chive-tab:flipgrid",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 61
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:worked_examples",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 723,
+      "translated_id": "chive-app:worked_examples",
+      "translated_location": {
+        "file": "parts/appendix-c.tex",
+        "line": 65
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:selfexpl_details",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 754,
+      "translated_id": "chive-app:selfexpl_details",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 1
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:training_details",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 757,
+      "translated_id": "chive-app:training_details",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 2
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:training_formats",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 762,
+      "translated_id": "chive-app:training_formats",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 5
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:training_datasets",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 768,
+      "translated_id": "chive-app:training_datasets",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 8
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:training_data",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 783,
+      "translated_id": "chive-tab:training_data",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 16
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:training_hparams",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 787,
+      "translated_id": "chive-app:training_hparams",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 19
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:training_hparams",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 812,
+      "translated_id": "chive-tab:training_hparams",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 36
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:hint_datasets",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 816,
+      "translated_id": "chive-app:hint_datasets",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 39
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:hint_accuracy",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 829,
+      "translated_id": "chive-app:hint_accuracy",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 50
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:hint_accuracy",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 851,
+      "translated_id": "chive-tab:hint_accuracy",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 63
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:privileged",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 855,
+      "translated_id": "chive-app:privileged",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 66
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:privileged",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 869,
+      "translated_id": "chive-fig:privileged",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 74
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:kl_training",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 873,
+      "translated_id": "chive-app:kl_training",
+      "translated_location": {
+        "file": "parts/appendix-d.tex",
+        "line": 77
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:selfexpl_freeform",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 885,
+      "translated_id": "chive-app:selfexpl_freeform",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 1
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:selfexpl_format",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 892,
+      "translated_id": "chive-app:selfexpl_format",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 6
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:selfexpl_hint",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 1021,
+      "translated_id": "chive-app:selfexpl_hint",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 83
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:hint_selfexpl",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 1031,
+      "translated_id": "chive-fig:hint_selfexpl",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 89
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "tab:selfexpl_hint_fpr",
+      "kind": "table",
+      "source_file": "main.tex",
+      "source_line": 1052,
+      "translated_id": "chive-tab:selfexpl_hint_fpr",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 102
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:selfexpl_simulatability",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 1056,
+      "translated_id": "chive-app:selfexpl_simulatability",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 105
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:heldout_selfexpl",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 1066,
+      "translated_id": "chive-fig:heldout_selfexpl",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 111
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:selfexpl_397b",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 1073,
+      "translated_id": "chive-fig:selfexpl_397b",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 115
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:selfexpl_discussion",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 1077,
+      "translated_id": "chive-app:selfexpl_discussion",
+      "translated_location": {
+        "file": "parts/appendix-e.tex",
+        "line": 118
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:allruns",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 1086,
+      "translated_id": "chive-app:allruns",
+      "translated_location": {
+        "file": "parts/appendix-fg.tex",
+        "line": 1
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:unfiltered_tools",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 1098,
+      "translated_id": "chive-fig:unfiltered_tools",
+      "translated_location": {
+        "file": "parts/appendix-fg.tex",
+        "line": 9
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:unfiltered_trained",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 1107,
+      "translated_id": "chive-fig:unfiltered_trained",
+      "translated_location": {
+        "file": "parts/appendix-fg.tex",
+        "line": 15
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "app:cot",
+      "kind": "appendix_section",
+      "source_file": "main.tex",
+      "source_line": 1111,
+      "translated_id": "chive-app:cot",
+      "translated_location": {
+        "file": "parts/appendix-fg.tex",
+        "line": 18
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    },
+    {
+      "source_id": "fig:cot_interp",
+      "kind": "figure",
+      "source_file": "main.tex",
+      "source_line": 1123,
+      "translated_id": "chive-fig:cot_interp",
+      "translated_location": {
+        "file": "parts/appendix-fg.tex",
+        "line": 26
+      },
+      "coverage": "complete translation supplied",
+      "structural_presence_checked": true,
+      "content_review": "reviewed by translating agent; not independent review"
+    }
+  ],
+  "front_and_back_matter": [
+    {
+      "source_id": "abstract",
+      "translated_id": "chive-abstract",
+      "file": "parts/main.tex",
+      "line": 1,
+      "coverage": "complete translation supplied"
+    },
+    {
+      "source_id": "authors_and_affiliations",
+      "translated_id": "chive-paper",
+      "file": "body.tex",
+      "line": 2,
+      "coverage": "complete translation supplied"
+    },
+    {
+      "source_id": "acknowledgments",
+      "translated_id": "chive-sec:conclusion",
+      "file": "parts/main.tex",
+      "line": 179,
+      "coverage": "complete translation supplied"
+    },
+    {
+      "source_id": "author_contribution_statement",
+      "translated_id": "chive-sec:conclusion",
+      "file": "parts/main.tex",
+      "line": 179,
+      "coverage": "complete translation supplied"
+    },
+    {
+      "source_id": "appendix_contents",
+      "translated_id": "chive-appendix-contents",
+      "file": "body.tex",
+      "line": 9,
+      "coverage": "complete translation supplied"
+    },
+    {
+      "source_id": "printed_bibliography",
+      "translated_id": "chive-references",
+      "file": "parts/references.tex",
+      "line": 1,
+      "coverage": "complete translation supplied"
+    }
+  ],
+  "numbered_equations": [],
+  "numbered_equation_note": "Original source contains no numbered equation, equation*, align or align* environments; inline mathematics and numerical thresholds are translated in their original sections.",
+  "figures": [
+    {
+      "file": "figures/self_explanation_hint_pooled_accuracy.png",
+      "sha256": "6b4032512d9506930c67ff5f4e50c1079de680570693012f278d39233eb29d92",
+      "original_sha256": "6b4032512d9506930c67ff5f4e50c1079de680570693012f278d39233eb29d92",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/figure_selfexpl_397b.png",
+      "sha256": "f340bde7d19d9cd398d2055f6d6e4f336753d9a3042300e26e49540ae15e3494",
+      "original_sha256": "f340bde7d19d9cd398d2055f6d6e4f336753d9a3042300e26e49540ae15e3494",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/unfiltered_direct_cf_auroc.png",
+      "sha256": "ddc3e31a596b34da3629d2555ba74e99a0b43dcf6b1e5cb4bb7ab9610dd46755",
+      "original_sha256": "ddc3e31a596b34da3629d2555ba74e99a0b43dcf6b1e5cb4bb7ab9610dd46755",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/gemma_unfiltered_overall_score.png",
+      "sha256": "b8c27e0962fbd3c7aa22decf4c95ccbd7d4140569b5db7716bb4e9ece6f86ca2",
+      "original_sha256": "b8c27e0962fbd3c7aa22decf4c95ccbd7d4140569b5db7716bb4e9ece6f86ca2",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/thinking_overall_score.png",
+      "sha256": "f26e38a218f3f35c288508b4c708c69821e7dffbc36c96204374dd77cdf3f15b",
+      "original_sha256": "f26e38a218f3f35c288508b4c708c69821e7dffbc36c96204374dd77cdf3f15b",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/gemma_overall_score.png",
+      "sha256": "c1bb11794814b950c96bd1d2fed0978f7637564b7d9156926dee650f4a74ecfa",
+      "original_sha256": "c1bb11794814b950c96bd1d2fed0978f7637564b7d9156926dee650f4a74ecfa",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/qwen8b_overall_score.png",
+      "sha256": "e4fb4fa2252736ba5fd13e690ab39b603e1ac711785e96d2c3bb59507d1b5435",
+      "original_sha256": "e4fb4fa2252736ba5fd13e690ab39b603e1ac711785e96d2c3bb59507d1b5435",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/direct_counterfactual_hint_pooled_fig.png",
+      "sha256": "fcdd6f783945c3bee9195ddb8382de466c47a721af418e56fe50cd1e5d9b2522",
+      "original_sha256": "fcdd6f783945c3bee9195ddb8382de466c47a721af418e56fe50cd1e5d9b2522",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/direct_counterfactual_evaluation_fig_auroc.png",
+      "sha256": "908c06b6ea298bb1dacc61289c14d836c5b7b952fa4427c3f64002f2121f882f",
+      "original_sha256": "908c06b6ea298bb1dacc61289c14d836c5b7b952fa4427c3f64002f2121f882f",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/privileged_access_traditional.png",
+      "sha256": "d48796f7e0e031cbe317be1931c0edeb43ded689c8d739dff12ba314b357631c",
+      "original_sha256": "d48796f7e0e031cbe317be1931c0edeb43ded689c8d739dff12ba314b357631c",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    },
+    {
+      "file": "figures/figure_selfexpl_by_target.png",
+      "sha256": "3c8d694393a1c9411c53d0106c8a217e99ed173ac602d9345e2e3f75dc248315",
+      "original_sha256": "3c8d694393a1c9411c53d0106c8a217e99ed173ac602d9345e2e3f75dc248315",
+      "byte_identical": true,
+      "caption_and_key_legend_translation": "in corresponding figure caption"
+    }
+  ],
+  "summary": {
+    "source_labels": 72,
+    "covered_labels": 72,
+    "figures": 14,
+    "tables": 10,
+    "printed_bibliography_items": 35,
+    "missing_source_labels": []
+  },
+  "mechanical_checks_limits": "Label presence and numeric table-cell checks do not certify semantic completeness. Source-to-translation content review was performed by the translating agent.",
+  "omitted_content": [],
+  "typographic_adaptations": [
+    "Article-specific colored boxes and font macros replaced by fixed book typography; all contained text retained.",
+    "Full author names and publication fields are retained in translated bibliography.",
+    "Source bibliography includes an uncited biology record, absent from the printed original; bibliography-map.json records it as printed_in_paper=false."
+  ]
+}

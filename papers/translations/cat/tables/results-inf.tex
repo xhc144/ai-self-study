@@ -1,0 +1,33 @@
+\Needspace{24\baselineskip}
+\begin{longtable}{llcc}
+\caption{各模型与基准上的推理时方法比较. 最佳结果加粗，次佳结果加下划线.}\label{cat-tab:results-inf}\\
+
+        \toprule
+        模型 & 方法 & HealthBench 分数 & MATH-500 准确率 \\
+        \midrule
+        Gemma 3 4B 
+        & 单样本 & $0.36 \pm 0.01$ & $0.70 \pm 0.02$ \\
+        & min(PPL) & $0.36 \pm 0.01$ & $0.68 \pm 0.02$ \\
+        & MP & $0.37 \pm 0.01$ & $0.71 \pm 0.02$ \\
+        & 多数投票 & 不适用 & $\underline{0.74} \pm 0.02$ \\
+        & Self-BoN & $\underline{0.37} \pm 0.01$ & ${0.72} \pm 0.02$ \\
+        & 合成 & $\mathbf{0.42} \pm 0.01$ & $\mathbf{0.75} \pm 0.02$ \\
+        \midrule
+        Qwen 3 4B 
+        & 单样本 & $0.39 \pm 0.01$ & $0.79 \pm 0.02$ \\
+        & min(PPL) & $0.36 \pm 0.01$ & $0.77 \pm 0.02$ \\
+        & MP & $0.38 \pm 0.01$ & $0.80 \pm 0.02$ \\
+        & 多数投票 & 不适用 & $0.81 \pm 0.02$ \\
+        & Self-BoN & $\underline{0.40} \pm 0.01$ & $\underline{0.82} \pm 0.02$ \\
+        & 合成 & $\mathbf{0.44} \pm 0.01$ & $\mathbf{0.86} \pm 0.02$ \\
+        \midrule
+        Llama 3.1 8B
+        & 单样本 & $0.29 \pm 0.01$ & $0.42 \pm 0.02$ \\
+        & min(PPL) & $0.30 \pm 0.01$ & $0.40 \pm 0.02$ \\
+        & MP & $0.28 \pm 0.01$ & $0.46 \pm 0.02$ \\
+        & 多数投票 & 不适用 & $\underline{0.53} \pm 0.02$ \\
+        & Self-BoN & $\underline{0.32} \pm 0.01$ & $\mathbf{0.54} \pm 0.02$ \\
+        & 合成 & $\mathbf{0.35} \pm 0.01$ & $\underline{0.53} \pm 0.02$ \\
+        \bottomrule
+    
+\end{longtable}

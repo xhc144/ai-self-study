@@ -1,0 +1,977 @@
+{
+  "source_version": "arXiv:2505.22954v3",
+  "source_pdf_pages": 72,
+  "labels": [
+    {
+      "type": "section",
+      "source_id": "sec:intro",
+      "target_label": "dgm-sec:intro",
+      "file": "sections/01-main.tex",
+      "line": 4,
+      "standalone_page": "2"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:conceptual",
+      "target_label": "dgm-fig:conceptual",
+      "file": "sections/01-main.tex",
+      "line": 9,
+      "standalone_page": "2"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:related",
+      "target_label": "dgm-sec:related",
+      "file": "sections/01-main.tex",
+      "line": 18,
+      "standalone_page": "3"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:methods",
+      "target_label": "dgm-sec:methods",
+      "file": "sections/01-main.tex",
+      "line": 25,
+      "standalone_page": "4"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:experiments",
+      "target_label": "dgm-sec:experiments",
+      "file": "sections/01-main.tex",
+      "line": 32,
+      "standalone_page": "4"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:experiment-setup",
+      "target_label": "dgm-sec:experiment-setup",
+      "file": "sections/01-main.tex",
+      "line": 35,
+      "standalone_page": "5"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:benchmarks",
+      "target_label": "dgm-sec:benchmarks",
+      "file": "sections/01-main.tex",
+      "line": 38,
+      "standalone_page": "5"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:baselines",
+      "target_label": "dgm-sec:baselines",
+      "file": "sections/01-main.tex",
+      "line": 47,
+      "standalone_page": "6"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:results",
+      "target_label": "dgm-sec:results",
+      "file": "sections/01-main.tex",
+      "line": 52,
+      "standalone_page": "6"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-comparisons-swe",
+      "target_label": "dgm-fig:dgm-comparisons-swe",
+      "file": "sections/01-main.tex",
+      "line": 55,
+      "standalone_page": "6"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-comparisons-polyglot",
+      "target_label": "dgm-fig:dgm-comparisons-polyglot",
+      "file": "sections/01-main.tex",
+      "line": 56,
+      "standalone_page": "6"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-comparisons",
+      "target_label": "dgm-fig:dgm-comparisons",
+      "file": "sections/01-main.tex",
+      "line": 57,
+      "standalone_page": "6"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-archive",
+      "target_label": "dgm-fig:dgm-archive",
+      "file": "sections/01-main.tex",
+      "line": 63,
+      "standalone_page": "7"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-progress",
+      "target_label": "dgm-fig:dgm-progress",
+      "file": "sections/01-main.tex",
+      "line": 63,
+      "standalone_page": "7"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:transfer-overview",
+      "target_label": "dgm-fig:transfer-overview",
+      "file": "sections/01-main.tex",
+      "line": 76,
+      "standalone_page": "8"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:safety",
+      "target_label": "dgm-sec:safety",
+      "file": "sections/01-main.tex",
+      "line": 83,
+      "standalone_page": "8"
+    },
+    {
+      "type": "section",
+      "source_id": "sec:conclusion",
+      "target_label": "dgm-sec:conclusion",
+      "file": "sections/01-main.tex",
+      "line": 92,
+      "standalone_page": "9"
+    },
+    {
+      "type": "section",
+      "source_id": "app:add-results",
+      "target_label": "dgm-app:add-results",
+      "file": "sections/02-appendices.tex",
+      "line": 4,
+      "standalone_page": "10"
+    },
+    {
+      "type": "section",
+      "source_id": "app:plots-swe",
+      "target_label": "dgm-app:plots-swe",
+      "file": "sections/02-appendices.tex",
+      "line": 5,
+      "standalone_page": "10"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-no-selfimprove",
+      "target_label": "dgm-fig:dgm-no-selfimprove",
+      "file": "sections/02-appendices.tex",
+      "line": 8,
+      "standalone_page": "11"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-no-openended",
+      "target_label": "dgm-fig:dgm-no-openended",
+      "file": "sections/02-appendices.tex",
+      "line": 12,
+      "standalone_page": "12"
+    },
+    {
+      "type": "section",
+      "source_id": "app:polyglot-model",
+      "target_label": "dgm-app:polyglot-model",
+      "file": "sections/02-appendices.tex",
+      "line": 15,
+      "standalone_page": "10"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:transfer-model-polyglot",
+      "target_label": "dgm-fig:transfer-model-polyglot",
+      "file": "sections/02-appendices.tex",
+      "line": 18,
+      "standalone_page": "13"
+    },
+    {
+      "type": "table",
+      "source_id": "tab:DGM-greedy",
+      "target_label": "dgm-tab:DGM-greedy",
+      "file": "sections/02-appendices.tex",
+      "line": 25,
+      "standalone_page": "11"
+    },
+    {
+      "type": "table",
+      "source_id": "tab:code_editing",
+      "target_label": "dgm-tab:code_editing",
+      "file": "sections/02-appendices.tex",
+      "line": 38,
+      "standalone_page": "12"
+    },
+    {
+      "type": "section",
+      "source_id": "app:related",
+      "target_label": "dgm-app:related",
+      "file": "sections/02-appendices.tex",
+      "line": 44,
+      "standalone_page": "12"
+    },
+    {
+      "type": "section",
+      "source_id": "app:initial-agent",
+      "target_label": "dgm-app:initial-agent",
+      "file": "sections/02-appendices.tex",
+      "line": 52,
+      "standalone_page": "13"
+    },
+    {
+      "type": "section",
+      "source_id": "app:parent-select",
+      "target_label": "dgm-app:parent-select",
+      "file": "sections/02-appendices.tex",
+      "line": 57,
+      "standalone_page": "16"
+    },
+    {
+      "type": "section",
+      "source_id": "app:selfimprove-prompts",
+      "target_label": "dgm-app:selfimprove-prompts",
+      "file": "sections/02-appendices.tex",
+      "line": 80,
+      "standalone_page": "17"
+    },
+    {
+      "type": "section",
+      "source_id": "app:pseudocode",
+      "target_label": "dgm-app:pseudocode",
+      "file": "sections/02-appendices.tex",
+      "line": 88,
+      "standalone_page": "20"
+    },
+    {
+      "type": "algorithm",
+      "source_id": "alg:dgm",
+      "target_label": "dgm-alg:dgm",
+      "file": "sections/02-appendices.tex",
+      "line": 90,
+      "standalone_page": "20"
+    },
+    {
+      "type": "algorithm",
+      "source_id": "alg:dgm-wo-selfimprove",
+      "target_label": "dgm-alg:dgm-wo-selfimprove",
+      "file": "sections/02-appendices.tex",
+      "line": 100,
+      "standalone_page": "20"
+    },
+    {
+      "type": "algorithm",
+      "source_id": "alg:dgm-wo-openended",
+      "target_label": "dgm-alg:dgm-wo-openended",
+      "file": "sections/02-appendices.tex",
+      "line": 110,
+      "standalone_page": "20"
+    },
+    {
+      "type": "section",
+      "source_id": "app:fm-hyperparam",
+      "target_label": "dgm-app:fm-hyperparam",
+      "file": "sections/02-appendices.tex",
+      "line": 120,
+      "standalone_page": "20"
+    },
+    {
+      "type": "table",
+      "source_id": "tab:fm-hyperparam",
+      "target_label": "dgm-tab:fm-hyperparam",
+      "file": "sections/02-appendices.tex",
+      "line": 123,
+      "standalone_page": "21"
+    },
+    {
+      "type": "section",
+      "source_id": "app:cost-estimate",
+      "target_label": "dgm-app:cost-estimate",
+      "file": "sections/02-appendices.tex",
+      "line": 130,
+      "standalone_page": "21"
+    },
+    {
+      "type": "section",
+      "source_id": "app:swebench-tasks",
+      "target_label": "dgm-app:swebench-tasks",
+      "file": "sections/02-appendices.tex",
+      "line": 142,
+      "standalone_page": "21"
+    },
+    {
+      "type": "section",
+      "source_id": "app:polyglot-tasks",
+      "target_label": "dgm-app:polyglot-tasks",
+      "file": "sections/02-appendices.tex",
+      "line": 150,
+      "standalone_page": "27"
+    },
+    {
+      "type": "section",
+      "source_id": "app:swebench-sota",
+      "target_label": "dgm-app:swebench-sota",
+      "file": "sections/02-appendices.tex",
+      "line": 156,
+      "standalone_page": "29"
+    },
+    {
+      "type": "section",
+      "source_id": "app:polyglot-sota",
+      "target_label": "dgm-app:polyglot-sota",
+      "file": "sections/02-appendices.tex",
+      "line": 159,
+      "standalone_page": "29"
+    },
+    {
+      "type": "section",
+      "source_id": "app:best-agent-dgm",
+      "target_label": "dgm-app:best-agent-dgm",
+      "file": "sections/02-appendices.tex",
+      "line": 163,
+      "standalone_page": "30"
+    },
+    {
+      "type": "section",
+      "source_id": "app:best-agent-dgm-polyglot",
+      "target_label": "dgm-app:best-agent-dgm-polyglot",
+      "file": "sections/02-appendices.tex",
+      "line": 178,
+      "standalone_page": "63"
+    },
+    {
+      "type": "section",
+      "source_id": "app:supp-dgm-diffimpl",
+      "target_label": "dgm-app:supp-dgm-diffimpl",
+      "file": "sections/02-appendices.tex",
+      "line": 188,
+      "standalone_page": "85"
+    },
+    {
+      "type": "section",
+      "source_id": "app:dgm-halluc",
+      "target_label": "dgm-app:dgm-halluc",
+      "file": "sections/02-appendices.tex",
+      "line": 208,
+      "standalone_page": "106"
+    },
+    {
+      "type": "figure",
+      "source_id": "fig:dgm-halluc",
+      "target_label": "dgm-fig:dgm-halluc",
+      "file": "sections/02-appendices.tex",
+      "line": 212,
+      "standalone_page": "107"
+    },
+    {
+      "type": "section",
+      "source_id": "app:safety",
+      "target_label": "dgm-app:safety",
+      "file": "sections/02-appendices.tex",
+      "line": 227,
+      "standalone_page": "111"
+    },
+    {
+      "type": "section",
+      "source_id": "app:future-work",
+      "target_label": "dgm-app:future-work",
+      "file": "sections/02-appendices.tex",
+      "line": 230,
+      "standalone_page": "111"
+    },
+    {
+      "type": "equation",
+      "source_id": "numbered-equation-1",
+      "target_label": "dgm-equation-1",
+      "file": "sections/02-appendices.tex",
+      "line": 66,
+      "standalone_page": "16"
+    },
+    {
+      "type": "equation",
+      "source_id": "numbered-equation-2",
+      "target_label": "dgm-equation-2",
+      "file": "sections/02-appendices.tex",
+      "line": 67,
+      "standalone_page": "16"
+    },
+    {
+      "type": "equation",
+      "source_id": "numbered-equation-3",
+      "target_label": "dgm-equation-3",
+      "file": "sections/02-appendices.tex",
+      "line": 68,
+      "standalone_page": "16"
+    },
+    {
+      "type": "equation",
+      "source_id": "numbered-equation-4",
+      "target_label": "dgm-equation-4",
+      "file": "sections/02-appendices.tex",
+      "line": 69,
+      "standalone_page": "16"
+    },
+    {
+      "type": "equation",
+      "source_id": "numbered-equation-5",
+      "target_label": "dgm-equation-5",
+      "file": "sections/02-appendices.tex",
+      "line": 70,
+      "standalone_page": "16"
+    },
+    {
+      "type": "equation",
+      "source_id": "numbered-equation-6",
+      "target_label": "dgm-equation-6",
+      "file": "sections/02-appendices.tex",
+      "line": 71,
+      "standalone_page": "16"
+    },
+    {
+      "type": "equation",
+      "source_id": "numbered-equation-7",
+      "target_label": "dgm-equation-7",
+      "file": "sections/02-appendices.tex",
+      "line": 73,
+      "standalone_page": "16"
+    },
+    {
+      "type": "unnumbered_equation",
+      "source_id": "display-archive",
+      "target_label": "dgm-equation-archive",
+      "file": "sections/02-appendices.tex",
+      "line": 61,
+      "standalone_page": "16"
+    },
+    {
+      "type": "unnumbered_equation",
+      "source_id": "display-eligible",
+      "target_label": "dgm-equation-eligible",
+      "file": "sections/02-appendices.tex",
+      "line": 63,
+      "standalone_page": "16"
+    },
+    {
+      "type": "table",
+      "source_id": "unlabelled-cost-table",
+      "target_label": "dgm-table-cost",
+      "file": "sections/02-appendices.tex",
+      "line": 133,
+      "standalone_page": "21"
+    }
+  ],
+  "headings": [
+    {
+      "source_heading": "Introduction",
+      "level": "section",
+      "target_label": "dgm-sec:intro",
+      "file": "sections/01-main.tex",
+      "line": 4,
+      "standalone_page": "2"
+    },
+    {
+      "source_heading": "Related Work",
+      "level": "section",
+      "target_label": "dgm-sec:related",
+      "file": "sections/01-main.tex",
+      "line": 18,
+      "standalone_page": "3"
+    },
+    {
+      "source_heading": "Darwin G\\\"odel Machine",
+      "level": "section",
+      "target_label": "dgm-sec:methods",
+      "file": "sections/01-main.tex",
+      "line": 25,
+      "standalone_page": "4"
+    },
+    {
+      "source_heading": "Experiments",
+      "level": "section",
+      "target_label": "dgm-sec:experiments",
+      "file": "sections/01-main.tex",
+      "line": 32,
+      "standalone_page": "4"
+    },
+    {
+      "source_heading": "Experiment Setup",
+      "level": "subsection",
+      "target_label": "dgm-sec:experiment-setup",
+      "file": "sections/01-main.tex",
+      "line": 35,
+      "standalone_page": "5"
+    },
+    {
+      "source_heading": "Benchmarks",
+      "level": "subsection",
+      "target_label": "dgm-sec:benchmarks",
+      "file": "sections/01-main.tex",
+      "line": 38,
+      "standalone_page": "5"
+    },
+    {
+      "source_heading": "Baselines",
+      "level": "subsection",
+      "target_label": "dgm-sec:baselines",
+      "file": "sections/01-main.tex",
+      "line": 47,
+      "standalone_page": "6"
+    },
+    {
+      "source_heading": "Results",
+      "level": "subsection",
+      "target_label": "dgm-sec:results",
+      "file": "sections/01-main.tex",
+      "line": 52,
+      "standalone_page": "6"
+    },
+    {
+      "source_heading": "Safety Discussion",
+      "level": "section",
+      "target_label": "dgm-sec:safety",
+      "file": "sections/01-main.tex",
+      "line": 83,
+      "standalone_page": "8"
+    },
+    {
+      "source_heading": "Conclusion and Limitations",
+      "level": "section",
+      "target_label": "dgm-sec:conclusion",
+      "file": "sections/01-main.tex",
+      "line": 92,
+      "standalone_page": "9"
+    },
+    {
+      "source_heading": "Acknowledgments",
+      "level": "subsubsection",
+      "target_label": "dgm-acknowledgments",
+      "file": "sections/01-main.tex",
+      "line": 117,
+      "standalone_page": "10"
+    },
+    {
+      "source_heading": "\\LARGE Appendix",
+      "level": "section",
+      "target_label": "dgm-appendix-contents",
+      "file": "sections/02-appendices.tex",
+      "line": 1,
+      "standalone_page": "10"
+    },
+    {
+      "source_heading": "Table of Contents",
+      "level": "section",
+      "target_label": "dgm-app:add-results",
+      "file": "sections/02-appendices.tex",
+      "line": 4,
+      "standalone_page": "10"
+    },
+    {
+      "source_heading": "Additional Results",
+      "level": "section",
+      "target_label": "dgm-app:add-results",
+      "file": "sections/02-appendices.tex",
+      "line": 4,
+      "standalone_page": "10"
+    },
+    {
+      "source_heading": "Baselines on SWE-bench",
+      "level": "subsection",
+      "target_label": "dgm-app:plots-swe",
+      "file": "sections/02-appendices.tex",
+      "line": 5,
+      "standalone_page": "10"
+    },
+    {
+      "source_heading": "Generality across models on Polyglot",
+      "level": "subsection",
+      "target_label": "dgm-app:polyglot-model",
+      "file": "sections/02-appendices.tex",
+      "line": 15,
+      "standalone_page": "10"
+    },
+    {
+      "source_heading": "Ablation of Parent Selection",
+      "level": "subsection",
+      "target_label": "dgm-app:parent-ablation",
+      "file": "sections/02-appendices.tex",
+      "line": 22,
+      "standalone_page": "11"
+    },
+    {
+      "source_heading": "Additional Statistics of DGM runs",
+      "level": "subsection",
+      "target_label": "dgm-app:additional-statistics",
+      "file": "sections/02-appendices.tex",
+      "line": 35,
+      "standalone_page": "11"
+    },
+    {
+      "source_heading": "Additional Related Work",
+      "level": "section",
+      "target_label": "dgm-app:related",
+      "file": "sections/02-appendices.tex",
+      "line": 44,
+      "standalone_page": "12"
+    },
+    {
+      "source_heading": "Algorithmic Details",
+      "level": "section",
+      "target_label": "dgm-app:initial-agent",
+      "file": "sections/02-appendices.tex",
+      "line": 52,
+      "standalone_page": "13"
+    },
+    {
+      "source_heading": "Initial Coding Agent",
+      "level": "subsection",
+      "target_label": "dgm-app:initial-agent",
+      "file": "sections/02-appendices.tex",
+      "line": 52,
+      "standalone_page": "13"
+    },
+    {
+      "source_heading": "Parent Selection",
+      "level": "subsection",
+      "target_label": "dgm-app:parent-select",
+      "file": "sections/02-appendices.tex",
+      "line": 57,
+      "standalone_page": "16"
+    },
+    {
+      "source_heading": "Self-Improve Prompts",
+      "level": "subsection",
+      "target_label": "dgm-app:selfimprove-prompts",
+      "file": "sections/02-appendices.tex",
+      "line": 80,
+      "standalone_page": "17"
+    },
+    {
+      "source_heading": "Pseudocode",
+      "level": "subsection",
+      "target_label": "dgm-app:pseudocode",
+      "file": "sections/02-appendices.tex",
+      "line": 88,
+      "standalone_page": "20"
+    },
+    {
+      "source_heading": "Experiment Details",
+      "level": "section",
+      "target_label": "dgm-app:fm-hyperparam",
+      "file": "sections/02-appendices.tex",
+      "line": 120,
+      "standalone_page": "20"
+    },
+    {
+      "source_heading": "Hyperparameters for Foundation Models",
+      "level": "subsection",
+      "target_label": "dgm-app:fm-hyperparam",
+      "file": "sections/02-appendices.tex",
+      "line": 120,
+      "standalone_page": "20"
+    },
+    {
+      "source_heading": "Benchmark Details",
+      "level": "section",
+      "target_label": "dgm-app:cost-estimate",
+      "file": "sections/02-appendices.tex",
+      "line": 130,
+      "standalone_page": "21"
+    },
+    {
+      "source_heading": "Cost Estimate",
+      "level": "subsection",
+      "target_label": "dgm-app:cost-estimate",
+      "file": "sections/02-appendices.tex",
+      "line": 130,
+      "standalone_page": "21"
+    },
+    {
+      "source_heading": "SWE-bench Tasks",
+      "level": "subsection",
+      "target_label": "dgm-app:swebench-tasks",
+      "file": "sections/02-appendices.tex",
+      "line": 142,
+      "standalone_page": "21"
+    },
+    {
+      "source_heading": "Polyglot Tasks",
+      "level": "subsection",
+      "target_label": "dgm-app:polyglot-tasks",
+      "file": "sections/02-appendices.tex",
+      "line": 150,
+      "standalone_page": "27"
+    },
+    {
+      "source_heading": "SWE-bench State-of-The-Art",
+      "level": "subsection",
+      "target_label": "dgm-app:swebench-sota",
+      "file": "sections/02-appendices.tex",
+      "line": 156,
+      "standalone_page": "29"
+    },
+    {
+      "source_heading": "Polyglot Representative Agent",
+      "level": "subsection",
+      "target_label": "dgm-app:polyglot-sota",
+      "file": "sections/02-appendices.tex",
+      "line": 159,
+      "standalone_page": "29"
+    },
+    {
+      "source_heading": "Best-Discovered Agents",
+      "level": "section",
+      "target_label": "dgm-app:best-agent-dgm",
+      "file": "sections/02-appendices.tex",
+      "line": 163,
+      "standalone_page": "30"
+    },
+    {
+      "source_heading": "DGM on SWE-bench",
+      "level": "subsection",
+      "target_label": "dgm-app:best-agent-dgm",
+      "file": "sections/02-appendices.tex",
+      "line": 163,
+      "standalone_page": "30"
+    },
+    {
+      "source_heading": "DGM on Polyglot",
+      "level": "subsection",
+      "target_label": "dgm-app:best-agent-dgm-polyglot",
+      "file": "sections/02-appendices.tex",
+      "line": 178,
+      "standalone_page": "63"
+    },
+    {
+      "source_heading": "Similar Target Functionality, Different Implementations",
+      "level": "section",
+      "target_label": "dgm-app:supp-dgm-diffimpl",
+      "file": "sections/02-appendices.tex",
+      "line": 188,
+      "standalone_page": "85"
+    },
+    {
+      "source_heading": "Case Study: Solving Hallucination",
+      "level": "section",
+      "target_label": "dgm-app:dgm-halluc",
+      "file": "sections/02-appendices.tex",
+      "line": 208,
+      "standalone_page": "106"
+    },
+    {
+      "source_heading": "Additional Safety Discussion",
+      "level": "section",
+      "target_label": "dgm-app:safety",
+      "file": "sections/02-appendices.tex",
+      "line": 227,
+      "standalone_page": "111"
+    },
+    {
+      "source_heading": "Additional Future Work Directions",
+      "level": "section",
+      "target_label": "dgm-app:future-work",
+      "file": "sections/02-appendices.tex",
+      "line": 230,
+      "standalone_page": "111"
+    },
+    {
+      "source_heading": "ethics",
+      "target_label": "dgm-ethics",
+      "file": "sections/01-main.tex",
+      "line": 101,
+      "standalone_page": "9"
+    },
+    {
+      "source_heading": "reproducibility",
+      "target_label": "dgm-reproducibility",
+      "file": "sections/01-main.tex",
+      "line": 114,
+      "standalone_page": "10"
+    },
+    {
+      "source_heading": "abstract",
+      "target_label": "dgm-abstract",
+      "file": "sections/01-main.tex",
+      "line": 1,
+      "standalone_page": "1"
+    }
+  ],
+  "payloads": [
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent/diff0.tex",
+      "target_file": "code/best_discovered_agent-diff0.txt",
+      "sha256": "610b454ee26aff0b950c04a626f3fdc56786eb69cfab3d0e41201824186ad0ee",
+      "lines": 228,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent/diff1.tex",
+      "target_file": "code/best_discovered_agent-diff1.txt",
+      "sha256": "d6731220d8b377547a63ceb89d97135257d1421d7016ead5c4e587bf3bb887bf",
+      "lines": 204,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent/diff3.tex",
+      "target_file": "code/best_discovered_agent-diff3.txt",
+      "sha256": "2e930cca08ba53b884401bd6cdde162a8a896eb9dfb3e0ebcb1ac2202e46d60a",
+      "lines": 124,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent/diff2.tex",
+      "target_file": "code/best_discovered_agent-diff2.txt",
+      "sha256": "b1efeca707b2a47acc4bbcfbf4f96ba0185bbb8bd3e1e797c30a8213534135ed",
+      "lines": 201,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent/diff5.tex",
+      "target_file": "code/best_discovered_agent-diff5.txt",
+      "sha256": "dde5daae82e0c40896c1c93f236ad50e6211c788c7e92c55dc55841d10367c33",
+      "lines": 138,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent/diff4.tex",
+      "target_file": "code/best_discovered_agent-diff4.txt",
+      "sha256": "aea61dda66665a9737a83a076a133089f4129bbe9213b2f3cf791359d26a5760",
+      "lines": 128,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent_polyglot/diff0.tex",
+      "target_file": "code/best_discovered_agent_polyglot-diff0.txt",
+      "sha256": "600ca4181a7ad08c25900f3bb88e9d59dface49d2667c99c599f63d5dc399659",
+      "lines": 191,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent_polyglot/diff1.tex",
+      "target_file": "code/best_discovered_agent_polyglot-diff1.txt",
+      "sha256": "303d249b269ff5c07e63494b399146424981483a4f38de54b94fc226f138f8cf",
+      "lines": 220,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent_polyglot/diff3.tex",
+      "target_file": "code/best_discovered_agent_polyglot-diff3.txt",
+      "sha256": "a8a1d65164dff77e3ff11cbec48cb79c578fe275600a765188cb94781b38cc9c",
+      "lines": 255,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "best_discovered_agent_polyglot/diff2.tex",
+      "target_file": "code/best_discovered_agent_polyglot-diff2.txt",
+      "sha256": "c917dcc06ee44c3dc8e3905771d82d5e6dcdf2a5cf4bf09e51b767e5f3567beb",
+      "lines": 57,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "diff_implementations/node24_implementation.tex",
+      "target_file": "code/diff_implementations-node24_implementation.txt",
+      "sha256": "b1efeca707b2a47acc4bbcfbf4f96ba0185bbb8bd3e1e797c30a8213534135ed",
+      "lines": 201,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "diff_implementations/node6_implementation.tex",
+      "target_file": "code/diff_implementations-node6_implementation.txt",
+      "sha256": "960ceb9209200f435c55042becf012a5559c6af5d026441fa2f8ab4fe1724e8c",
+      "lines": 458,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "initial_agent/bash_tool.tex",
+      "target_file": "code/initial_agent-bash_tool.txt",
+      "sha256": "5f6b9ad75ab2004615ff13b8b950ab57159eb29b2cfe288203d7975589d6017f",
+      "lines": 22,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "initial_agent/edit_tool.tex",
+      "target_file": "code/initial_agent-edit_tool.txt",
+      "sha256": "ca05c69b149072ab212bbcb84e13efc27a475d2237ba8bdef77375fd3226727e",
+      "lines": 30,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "code",
+      "source_file": "solve_halluc/halluc_hack.tex",
+      "target_file": "code/solve_halluc-halluc_hack.txt",
+      "sha256": "472f1c3b12fee1a02ccb276c3bea3b40fb9637a1a46b2f5dc871b1f6bf5c1ac8",
+      "lines": 42,
+      "translation_policy": "Original code/diff retained verbatim; surrounding prose translated."
+    },
+    {
+      "type": "task_ids",
+      "target_file": "tasks/swebench-small.txt",
+      "count": 10,
+      "sha256": "20211f0014b528ad73f313a9c301a5fc3772505d9d4fbeb8d034145b1265ef36"
+    },
+    {
+      "type": "task_ids",
+      "target_file": "tasks/polyglot-small.txt",
+      "count": 10,
+      "sha256": "44a98400e045f3c032e5d199485ba3433072a1e25c59cf9dc9822af6e3687217"
+    },
+    {
+      "type": "task_ids",
+      "target_file": "tasks/polyglot-medium.txt",
+      "count": 50,
+      "sha256": "ddc9f42f00ce8bc7f1355698d5f2db9bdf8b073b98a6260a048e33e7724de1a1"
+    },
+    {
+      "type": "task_ids",
+      "target_file": "tasks/swebench-medium.txt",
+      "count": 50,
+      "sha256": "0d2775562ca0320e2febac58b4918af97d06ad2ee95d63763a2a5a44d81e0d9a"
+    },
+    {
+      "type": "task_ids",
+      "target_file": "tasks/swebench-big.txt",
+      "count": 140,
+      "sha256": "3bb6b01e516ba5d3793e8cf02e8bbed85d8c5c33badbce187669daf06a3b8cbb"
+    },
+    {
+      "type": "translated_prompt_or_output",
+      "target_file": "prompts/selfimprove-swebench-zh.txt",
+      "sha256": "954ef4fa5e893237cc9dcc958bd8860e10a0034a266e18f049ec658d78e5f015"
+    },
+    {
+      "type": "translated_prompt_or_output",
+      "target_file": "prompts/polyglot-additional-zh.txt",
+      "sha256": "dd2a4c9a1cfc3d58c347b104de7f0ba487b08dfb03a5eb437a9cf26d757c762c"
+    },
+    {
+      "type": "translated_prompt_or_output",
+      "target_file": "prompts/initial-task-zh.txt",
+      "sha256": "03692473b5f8137dafb4fb030f0ba7165b34fca66756f16167e320c42d205459"
+    },
+    {
+      "type": "translated_prompt_or_output",
+      "target_file": "prompts/halluc-example-zh.txt",
+      "sha256": "9e8e245e89c20521ef2cf2bfacbebea34e288ad35f9b3a9afb1b46b4e2e6aa88"
+    }
+  ],
+  "bibliography": {
+    "entries": 184,
+    "file": "references.tex",
+    "policy": "Full original cited bibliography retained, citation keys prefixed; metadata not translated to avoid mistaken titles/identities."
+  },
+  "limits": "Structural coverage and exact code/task payload checks do not certify semantic translation accuracy; parent owns independent review and final PDF checks.",
+  "status": "all original labelled objects mapped; all original main/appendix headings mapped",
+  "standalone_pages": 127
+}

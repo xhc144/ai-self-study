@@ -1,0 +1,12 @@
+test_baseline_unbiased_and_proxy_failure (test_v03_language.LanguageMechanisms.test_baseline_unbiased_and_proxy_failure) ... ok
+test_cached_prefix_equivalence (test_v03_language.LanguageMechanisms.test_cached_prefix_equivalence) ... ok
+test_fixed_icl_linear_predictor (test_v03_language.LanguageMechanisms.test_fixed_icl_linear_predictor) ... ok
+test_kl_identity_and_gradient (test_v03_language.LanguageMechanisms.test_kl_identity_and_gradient) ... ok
+test_lora_all_coordinates_and_initialization (test_v03_language.LanguageMechanisms.test_lora_all_coordinates_and_initialization) ... ok
+test_top_p_minimal_prefix_and_temperature (test_v03_language.LanguageMechanisms.test_top_p_minimal_prefix_and_temperature) ... ok
+test_verifier_budget_matches_iid_formula (test_v03_language.LanguageMechanisms.test_verifier_budget_matches_iid_formula) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.732s
+
+OK

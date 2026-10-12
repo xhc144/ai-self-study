@@ -1,0 +1,101 @@
+{
+  "release": "0.3.0",
+  "date": "2026-10-12",
+  "scope": "11 modern core units +3 math toolkits; 9 exact-version full translations; 3 original studies; no separately unlicensed supplementary files",
+  "previous_public_commit": "b239828c8b5199c0faf10e34c899e97e49b1e0a6",
+  "history_policy": "One new root integration commit, no amend or force push",
+  "tests": {
+    "run": 58,
+    "skipped": 0,
+    "environment": "CPU torch2.8.0+cpu numpy2.3.5 transformers4.57.3 PyMuPDF1.26.6 Python3.12"
+  },
+  "public_model_cached_repeat_metrics_identical": true,
+  "actual_standard_transformer_runs": 6,
+  "actual_public_model_records": 54,
+  "license_decisions": "papers/rights.json",
+  "pdfs": {
+    "dist/ai-self-study.pdf": {
+      "pages": 99,
+      "bytes": 1396404,
+      "sha256": "c9bdf9aa359158ce80fea766aabb35d3796adefa36364283b3bdb03491edd4d9"
+    },
+    "dist/papers/alphaproof.pdf": {
+      "pages": 39,
+      "bytes": 9848599,
+      "sha256": "59b2f6ddfcc8c75fb30c28edf25ed30e6dfeb6f36702dcb8b7d5363e43470193"
+    },
+    "dist/papers/cat.pdf": {
+      "pages": 31,
+      "bytes": 1701055,
+      "sha256": "d2bf4e3ed62fac3eaa5823480bf5c185c0719979043d11079ed516dbff1e2039"
+    },
+    "dist/papers/chive.pdf": {
+      "pages": 34,
+      "bytes": 1433743,
+      "sha256": "02bd760d1e1681c5d7a91f7032d07a2fd4d06cff0d6425968513829c863e355e"
+    },
+    "dist/papers/dgm.pdf": {
+      "pages": 128,
+      "bytes": 3657798,
+      "sha256": "ec10565950209ebfd70a8d73908ec5efbb8ae864fe030267f50747914ea6f7a0"
+    },
+    "dist/papers/dpo.pdf": {
+      "pages": 36,
+      "bytes": 878089,
+      "sha256": "0a81f624e502bb93c0365c14cd0d5f0a856fc9d6f1346ffb696ee7f596d2e0c9"
+    },
+    "dist/papers/engram.pdf": {
+      "pages": 34,
+      "bytes": 954803,
+      "sha256": "f9d5ed12246ea59f27a528fb8838295c65c699263cf075ea7d3a5f6c7c2f046e"
+    },
+    "dist/papers/r1-nature.pdf": {
+      "pages": 18,
+      "bytes": 3093094,
+      "sha256": "682aea649c1bfae85f5422c2444d3af0e901f113b92049d2e5596e850dc9c9bf"
+    },
+    "dist/papers/stars.pdf": {
+      "pages": 19,
+      "bytes": 5941172,
+      "sha256": "31a853ab98ec68d74fd763679b33a8efefa8b21c2b32db0fa2d104af5e493443"
+    },
+    "dist/papers/study-browser-injection.pdf": {
+      "pages": 4,
+      "bytes": 267916,
+      "sha256": "0a6efedc3f747c5352af34977975219cac6b7c3ccd1b5966e228cf04c01651f0"
+    },
+    "dist/papers/study-ih-challenge.pdf": {
+      "pages": 4,
+      "bytes": 247847,
+      "sha256": "093f8c958dcf4770f475074b519c1b19f0f37003ba19f6ed074a1e36160734fd"
+    },
+    "dist/papers/study-r1-reading.pdf": {
+      "pages": 3,
+      "bytes": 240483,
+      "sha256": "db9301f9d3195169740cc63852a60daae1e92e7c19592289c5ef1797a582694b"
+    },
+    "dist/papers/testcompute.pdf": {
+      "pages": 43,
+      "bytes": 4891184,
+      "sha256": "2def43e5ed63b670ae9fb929f5e38bf5965b69ad1ccadf4d40d2bd6642d265e1"
+    },
+    "dist/ai-papers-zh.pdf": {
+      "pages": 393,
+      "bytes": 28833527,
+      "sha256": "6ef0f34f73319afc812d94437a29d94eafd1e0fc8d9edc9597f7bc381ab5564d"
+    },
+    "dist/ai-self-study-complete.pdf": {
+      "pages": 492,
+      "bytes": 30300112,
+      "sha256": "eb54cb65241e16780d4f964cc66edeccab70df470c93226c086a0c2028028635"
+    }
+  },
+  "important_corrected_attempts": [
+    "Main document edit initially matched a class macro; locked class restored exactly from HEAD before final build",
+    "Original-heading regexp initially mistook four English prefixes as source section numbers; corrected and independent rechecked",
+    "Normal PyMuPDF insert_pdf discarded named internal links; replaced by resolved explicit links with offsets, two regression tests pass",
+    "DGM patch orphan heading and near-empty reference tail corrected without deleting source content",
+    "No model prompt retuning after failed outputs; all frozen runs retained"
+  ],
+  "validation_closure": "Archive-bound clean rebuild and replay is recorded separately in qa/v03-reproducibility.json and dist/ai-self-study-source-check.json; keeping the archive hash outside itself avoids a recursive manifest."
+}

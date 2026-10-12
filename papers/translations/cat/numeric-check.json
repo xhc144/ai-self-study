@@ -1,0 +1,100 @@
+{
+  "table_checks": [
+    {
+      "table_id": "tab:disagreement",
+      "target": "tables/disagreement.tex",
+      "numeric_tokens": 14,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:results-table",
+      "target": "tables/results-table.tex",
+      "numeric_tokens": 43,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:healthbench-rubrics",
+      "target": "tables/healthbench-rubrics.tex",
+      "numeric_tokens": 24,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:healthbench-cat",
+      "target": "tables/healthbench-cat.tex",
+      "numeric_tokens": 18,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:results-inf",
+      "target": "tables/results-inf.tex",
+      "numeric_tokens": 73,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:rlbaselines",
+      "target": "tables/rlbaselines.tex",
+      "numeric_tokens": 11,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:sqrubric",
+      "target": "tables/sqrubric.tex",
+      "numeric_tokens": 4,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:judge-sensitivity",
+      "target": "tables/judge-sensitivity.tex",
+      "numeric_tokens": 6,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:cat-qual",
+      "target": "tables/cat-qual.tex",
+      "numeric_tokens": 15,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:RLtrainingparams",
+      "target": "tables/RLtrainingparams.tex",
+      "numeric_tokens": 19,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:SFTtrainingparams",
+      "target": "tables/SFTtrainingparams.tex",
+      "numeric_tokens": 8,
+      "numeric_sequence_identical": true
+    },
+    {
+      "table_id": "tab:samplingparams",
+      "target": "tables/samplingparams.tex",
+      "numeric_tokens": 15,
+      "numeric_sequence_identical": true
+    }
+  ],
+  "worked_example": {
+    "z0": "1/137+i",
+    "computed_z1_real": 1.0,
+    "computed_z1_imag": 274.0,
+    "expected": "1+274i",
+    "correct_first_step_verified": true,
+    "original_wrong_chains_retained_with_explicit_wrong_labels": true
+  },
+  "rubric_example_reward": {
+    "satisfied": 4,
+    "total": 5,
+    "reward": 0.8
+  },
+  "claimed_compute_ratio": {
+    "rollouts": 8,
+    "synthesis_generations": 1,
+    "single_trained_generation": 1,
+    "generation_count_ratio": 9,
+    "limit": "Count ratio only; not an independent FLOP/token/latency measurement."
+  },
+  "notes": [
+    "Original source Qwen MATH main-text ordering and table values differ; both preserved with separate translator note.",
+    "Original absolute/relative wording for 37% and 9.3% stylistic cues retained; no redefinition."
+  ]
+}

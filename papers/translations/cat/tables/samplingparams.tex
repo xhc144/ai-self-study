@@ -1,0 +1,21 @@
+\Needspace{16\baselineskip}
+\begin{longtable}{lcc}
+\caption{模型采样参数. 若有可用建议，采用模型作者推荐的标准参数. 所有 Qwen 3 4B 提示加前缀 \texttt{/no\_think}，禁用思考模式.}\label{cat-tab:samplingparams}\\
+
+        \toprule
+        模型 & 参数 & 取值 \\
+        \midrule
+        Gemma 3 4B & 温度 & $1.0$ \\
+        & Top-$k$ & $64$ \\
+        & Top-$p$ & $0.95$ \\
+        \midrule
+        Qwen 3 4B & 温度 & $0.7$ \\
+        & Top-$k$ & $20$ \\
+        & Top-$p$ & $0.8$ \\
+        \midrule
+        Llama 3.1 8B & 温度 & $0.7$ \\
+        & Top-$k$ & $50$ \\
+        & Top-$p$ & $0.9$ \\
+        \bottomrule
+    
+\end{longtable}
